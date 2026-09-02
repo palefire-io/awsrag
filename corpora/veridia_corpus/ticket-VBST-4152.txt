@@ -1,0 +1,83 @@
+Ticket ID: VBST-4152
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-08-06 09:20 UTC
+Product: VeriConnect
+Customer: Synlab Nordwest GmbH (ACC-1206)
+Reported by: Bernd Kaltenbrunner, Laborleiter
+Assigned to: Yusuf Demir (Cloud Operations)
+VeriConnect tenant: synlab-nw.vericonnect.veridiabio.com
+Tier: Enterprise
+
+--- Thread ---
+
+[2025-08-06 09:20] Bernd Kaltenbrunner (Laborleiter):
+The VeriConnect fleet dashboard has become very slow. Loading takes 25-40
+seconds where it used to be 2-3. The results search is also slow but less so.
+
+This has been getting worse over perhaps two months. All users, all our sites,
+different networks, different browsers. So it is not local to us.
+
+[2025-08-06 11:45] Yusuf Demir (Cloud Operations):
+Bernd - thank you, and the detail that it's across networks and browsers saves
+me from asking.
+
+Looking at your tenant now. Initial observation: your fleet dashboard is
+querying 12 instruments with full scattergram upload enabled and a 400-day
+default date range. That's a large query and it's got larger as your data has
+accumulated, which fits the gradual worsening.
+
+Give me a day to look properly rather than guess.
+
+[2025-08-07 14:30] Yusuf Demir (Cloud Operations):
+Confirmed. Two things are happening.
+
+1. Your fleet dashboard default date range is 400 days. Most tenants run 30 or
+   90. At 400 days across 12 instruments with scattergrams, the query returns
+   about 340 MB before aggregation. That is the 25-40 seconds.
+
+2. Separately, there is a genuine inefficiency on our side: the dashboard
+   aggregation query doesn't use the instrument index when the date range
+   exceeds 180 days, so it falls back to a scan. That's our bug and it's why
+   the degradation is non-linear - under 180 days you'd not have noticed.
+
+What I can do today: change your dashboard default to 90 days. You can still
+select longer ranges when you need them; they'll just be slow until we fix (2).
+
+What we'll do: the query fix is going into the next VeriConnect release. I'll
+give you a version number when I have one rather than a date.
+
+[2025-08-07 15:10] Bernd Kaltenbrunner (Laborleiter):
+Please change the default to 90 days. We rarely need more and when we do we
+can wait.
+
+I would like to know why the default was 400 days in the first place.
+
+[2025-08-07 16:00] Yusuf Demir (Cloud Operations):
+Changed, and it should be immediate.
+
+On your question: 400 days was set on your tenant during a migration in 2023
+so that a historical data verification could be done, and it was never changed
+back. That's a housekeeping failure on our side. I've checked the other
+tenants that went through the same migration - four others have the same
+setting, and I'm contacting them.
+
+[2025-08-07 16:30] Bernd Kaltenbrunner (Laborleiter):
+Dashboard now loads in about 3 seconds. Thank you.
+
+I appreciate you checking the other tenants without being asked.
+
+[2025-09-04 10:00] Yusuf Demir (Cloud Operations):
+Follow-up: the aggregation query fix shipped in VeriConnect 6.1.2 last week.
+Long date ranges on your tenant should now be usable - I tested 400 days on a
+copy of your data at 6 seconds against 38 before.
+
+Closing.
+
+--- Resolution ---
+Root cause: (a) tenant fleet dashboard default date range left at 400 days
+after a 2023 migration; (b) dashboard aggregation query not using the
+instrument index above a 180-day range, falling back to a table scan.
+Actions: tenant default reset to 90 days; four other tenants with the same
+migration artefact identified and contacted; query fix shipped in VeriConnect
+6.1.2.

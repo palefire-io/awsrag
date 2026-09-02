@@ -1,0 +1,103 @@
+Ticket ID: VBST-4200
+Status: Resolved
+Priority: P2-High
+Created: 2025-09-16 08:05 UTC
+Product: VeriScan 400 / VeriConnect
+Customer: Greater Manchester Pathology Network (ACC-1042)
+Reported by: Danielle Frost, Pathology Systems Analyst
+             danielle.frost@gmpn.nhs.uk | 0161 276 1234 ext 8802
+Assigned to: Aisha Rahman (Support Engineering L2)
+Serial: multiple (VS4-0771, VS4-0779, VS4-0784)
+Firmware: 4.3.0
+Middleware: Integrated Pathology Gateway v7.2, host lims-gw-02.gmpn.nhs.uk
+            (10.88.4.19)
+
+--- Thread ---
+
+[2025-09-16 08:05] Danielle Frost (Pathology Systems Analyst):
+E-503 HL7 ACK not received on three VeriScan 400s at the MRI site, starting
+overnight. Roughly 15% of messages. The other eleven analysers across the
+network are fine.
+
+Gateway logs show it's rejecting the messages with "duplicate message control
+ID". Same MSH-10 appearing from more than one source.
+
+Nothing changed on the gateway. We did move three analysers between subnets
+on Friday as part of a network refresh.
+
+[2025-09-16 09:40] Aisha Rahman (Support Engineering L2):
+Duplicate MSH-10 across a multi-instrument site is a known pattern and the
+network move is almost certainly relevant, though not in the way you might
+expect.
+
+The instrument generates MSH-10 as SERIAL-YYYYMMDD-NNNN, where SERIAL is the
+instrument serial number. That guarantees uniqueness across instruments
+because the serial differs. If something in the path strips or rewrites the
+serial prefix, you get collisions as soon as two instruments produce the same
+sequence number on the same day - which they will, constantly.
+
+Question: does your gateway apply any transformation to MSH-10, and did the
+three moved analysers get pointed at a different gateway interface or a
+different inbound channel?
+
+[2025-09-16 11:20] Danielle Frost (Pathology Systems Analyst):
+Checking... yes. The three moved analysers are now hitting inbound channel
+HAEM-B instead of HAEM-A. HAEM-B has a message control ID rewrite rule that
+HAEM-A doesn't - it truncates MSH-10 to the last 12 characters.
+
+SERIAL-YYYYMMDD-NNNN truncated to 12 characters is YYYYMMDD-NNNN. Which drops
+the serial.
+
+That's it, isn't it.
+
+[2025-09-16 11:45] Aisha Rahman (Support Engineering L2):
+That's it. Three instruments, same date, sequence numbers overlapping, and the
+one thing that made them unique has been truncated away.
+
+The rule on HAEM-B was presumably added for a different instrument type with a
+longer control ID. It's not wrong in itself; it's just wrong for ours.
+
+Options, in order of preference:
+1. Remove the truncation rule from HAEM-B, or exempt the VeriScan feeds from
+   it.
+2. Point the three analysers back at HAEM-A.
+3. If you must truncate, take the FIRST 12 characters rather than the last -
+   that keeps the serial and drops sequence digits, which is the wrong
+   trade-off but at least fails differently.
+
+Not an option: changing the MSH-10 format on the instrument. It isn't
+configurable, and for good reason.
+
+[2025-09-16 14:30] Danielle Frost (Pathology Systems Analyst):
+Exempted the VeriScan feeds from the truncation rule on HAEM-B. E-503 stopped
+within a minute.
+
+We'd been chasing this as a network problem since Friday because the network
+change was the obvious suspect. It was the network change, just not the part
+we were looking at.
+
+[2025-09-16 15:00] Aisha Rahman (Support Engineering L2):
+Very common pattern - the change is the cause but the mechanism is two steps
+away from the change.
+
+For your documentation: the MSH-10 format and the uniqueness requirement are
+in lookup-hl7-message-mapping.csv and in the integration spec
+(spec-vericonnect-integration-v6.txt section 4, "Common causes of E-503"). It's
+the first item on that list, which tells you how often this happens.
+
+Two other things worth checking while you're in there, since they're the other
+two common E-503 causes:
+- whether HAEM-B validates OBR-7 against its own clock (relevant if you ever
+  run an instrument on old firmware)
+- whether the character set is set consistently across both channels
+
+[2025-09-17 09:00] Danielle Frost (Pathology Systems Analyst):
+Both checked, both fine. Closing. Thanks - fast and precise.
+
+--- Resolution ---
+Root cause: middleware inbound channel HAEM-B truncating MSH-10 to the last 12
+characters, removing the instrument serial prefix that guarantees uniqueness.
+Three analysers moved to that channel during a network refresh.
+Actions: VeriScan feeds exempted from the truncation rule.
+See also: spec-vericonnect-integration-v6.txt s.4,
+lookup-hl7-message-mapping.csv

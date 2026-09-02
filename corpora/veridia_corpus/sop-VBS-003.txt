@@ -1,0 +1,180 @@
+=================================================================
+VERIDIA BIOSYSTEMS - STANDARD OPERATING PROCEDURE
+=================================================================
+SOP Number:      SOP-VBS-003
+Title:           VeriPrep SP-1 Decontamination and Jam Clearance
+Revision:        3
+Effective Date:  2025-08-04
+Supersedes:      Revision 2 (2024-05-16)
+Author:          Priya Anand, Head of Field Service Engineering
+Reviewed by:     James Okafor, VP Customer Support
+Approved by:     Simone Buehler, QA Manager
+Review due:      2027-08-04
+
+CHANGE SUMMARY (rev 2 -> rev 3)
+  - Section 6 (jam clearance) expanded following the volume of P-112 reports
+    during 2024-2025. Cross-referenced to VBB-0038.
+  - Section 3.4 added: hypochlorite prohibition made explicit.
+  - Section 7 amended for SP-1r2 gripper jaw service interval.
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+To define the weekly decontamination cycle for the VeriPrep SP-1 and the
+procedure for safely clearing a tube feed jam.
+
+-----------------------------------------------------------------
+2. SCOPE
+-----------------------------------------------------------------
+All VeriPrep SP-1 stations, hardware revisions r1 and r2.
+
+-----------------------------------------------------------------
+3. SAFETY
+-----------------------------------------------------------------
+3.1  The SP-1 tube path handles uncapped primary blood tubes. Treat every
+     surface within the enclosure as contaminated.
+
+3.2  PPE: laboratory coat, disposable nitrile gloves, eye protection to
+     EN 166.
+
+3.3  Do not place hands inside the enclosure while the instrument is running.
+     Opening the lid raises P-501 and stops motion, but the gripper may
+     complete an in-progress movement.
+
+3.4  DO NOT USE HYPOCHLORITE (bleach) IN OR ON THE SP-1 FLUID PATH. The
+     aliquot path contains components that degrade on hypochlorite exposure,
+     producing P-201 aliquot volume errors within weeks. Use RGT-CL only.
+     External surfaces may be wiped with a 70 per cent alcohol wipe or with a
+     chlorine-releasing agent at the manufacturer's stated dilution, avoiding
+     the barcode window and the optical sensors.
+
+3.5  Sharps: the aliquot needle is not user-accessible in normal operation. If
+     a jam clearance exposes it, stop and call service.
+
+-----------------------------------------------------------------
+4. FREQUENCY
+-----------------------------------------------------------------
+  Daily     Empty cap waste bin; visual inspection of the tube path
+  Weekly    Full decontamination cycle (this SOP, section 5)
+  Weekly    Barcode window clean
+  Monthly   Gripper jaw inspection
+  Annual    Preventive maintenance visit by Veridia
+  Immediately after any spill of sample within the enclosure
+
+-----------------------------------------------------------------
+5. WEEKLY DECONTAMINATION CYCLE
+-----------------------------------------------------------------
+5.1  Confirm no tubes remain in the input, output or exception racks. Remove
+     all racks.
+
+5.2  Confirm the RGT-CL reservoir contains at least 200 mL. The cycle
+     consumes approximately 180 mL. An interrupted cycle raises P-505 and must
+     be repeated in full - a partial cycle provides no assurance.
+
+5.3  Empty the cap waste bin and fit a fresh liner (SP1-BIN-CAP).
+
+5.4  Select Service > Maintenance > Decontamination Cycle. Confirm.
+
+5.5  The cycle takes approximately 34 minutes and comprises:
+       a) flush of the aliquot fluid path with RGT-CL;
+       b) 12-minute static soak;
+       c) purified water rinse x3;
+       d) gripper and carrier wash sequence;
+       e) dry cycle;
+       f) self-test.
+
+5.6  Do not open the lid during the cycle. P-501 will abort it and P-505 will
+     be logged.
+
+5.7  On completion, review the self-test report. Any failure must be resolved
+     before the instrument is returned to service.
+
+5.8  Wipe the enclosure interior surfaces, the carrier rails and the rack
+     seats with a lint-free cloth dampened with 70 per cent alcohol. Do not
+     spray directly onto the barcode window or the tube height sensor; dampen
+     the cloth.
+
+5.9  Record the cycle in the maintenance log.
+
+-----------------------------------------------------------------
+6. CLEARING A TUBE FEED JAM (P-112)
+-----------------------------------------------------------------
+6.1  Background. P-112 indicates that a tube has failed to index through the
+     feed mechanism and has wedged. On SP-1r1 units the most common cause by
+     a wide margin is a 5 mL tube with a short-profile cap sitting low in the
+     carrier. See VBB-0038 for the full explanation and mitigations. On r2
+     units the mechanical cause is largely eliminated and a P-112 should be
+     treated as a genuine fault.
+
+6.2  Stop the run if it has not already stopped. Do not press Resume before
+     clearing the jam; resuming drives the feed pawl against the wedged tube
+     and can shear the pawl.
+
+6.3  Open the lid. P-501 will be raised. This is expected.
+
+6.4  Release the carrier lock (the grey lever at the left of the feed
+     assembly). Pull it toward you until it clicks.
+
+6.5  Withdraw the wedged tube VERTICALLY, without rotating it. Rotating a
+     wedged tube is how caps get sheared off and how the guide rail gets
+     scored.
+
+6.6  If the tube will not move by hand, do not force it and do not use metal
+     tools in the tube path. Call service. A scored guide rail is a
+     chargeable repair; a stuck tube is not.
+
+6.7  Inspect for:
+       - shed cap material (rubber crumb or plastic flake) in the feed pawl
+         and the guide rail;
+       - a bent or worn feed pawl tip;
+       - liquid in the carrier from a tube that has leaked;
+       - damage to the gripper jaws.
+
+6.8  Remove any debris with tweezers (plastic) or a lint-free swab. Wipe any
+     spilled sample and disinfect the affected area.
+
+6.9  Close the lid. Run Service > Diagnostics > Gripper Home. This re-datums
+     the gripper, which is frequently left off-position by a jam and will
+     otherwise raise P-115 on the next run.
+
+6.10 Run a 10-tube verification batch with known-good tubes before resuming
+     production work.
+
+6.11 Record the jam: date, time, tube type and nominal volume, whether the cap
+     was short-profile, the rack position, and the action taken. This record is
+     what allows a pattern to be demonstrated when requesting an r2 retrofit
+     or an adapter supply, and several sites lost time in 2025 because they
+     had not kept it.
+
+-----------------------------------------------------------------
+7. GRIPPER JAW INSPECTION AND REPLACEMENT
+-----------------------------------------------------------------
+7.1  Inspect monthly for glazing, flattening of the textured contact face, or
+     cracking.
+
+7.2  Replacement interval:
+       SP-1r1 (acetal jaws)        12 months, or on wear
+       SP-1r2 (glass-filled PPS)   24 months, or on wear
+
+7.3  Part number SP1-MEC-160. Replacement is a user-serviceable task but
+     requires a torque driver; if one is not available, schedule the change
+     with the annual PM visit.
+
+-----------------------------------------------------------------
+8. ESCALATION
+-----------------------------------------------------------------
+8.1  Raise a support ticket if:
+       - a jam recurs more than twice in one week on an r1 unit despite
+         adapters or a raised label position;
+       - any jam occurs on an r2 unit;
+       - the decontamination self-test fails;
+       - P-201 aliquot volume errors appear (consider whether hypochlorite has
+         ever been used - see 3.4);
+       - the guide rail is visibly scored.
+
+8.2  Include: serial number, firmware version, the jam record from 6.11, tube
+     supplier and nominal volume, and photographs of the feed area.
+
+=================================================================
+END OF SOP-VBS-003 REVISION 3
+=================================================================

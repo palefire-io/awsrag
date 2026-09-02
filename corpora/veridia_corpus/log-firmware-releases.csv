@@ -1,0 +1,17 @@
+version,platform,release_date,channel,changelog_summary,known_issues,superseded_by
+3.8.4,VeriScan 400,2023-09-12,General,Maintenance release. Fluidics prime timing adjusted; E-118 detection threshold raised.,None recorded,4.0.0
+3.9.1,VeriScan 400 Pro,2023-11-30,General,Retic channel gain linearisation. Adds E-601 diagnostics detail.,Retic CV marginally high above 32 C ambient,4.0.0
+4.0.0,Both,2024-03-04,General,Unified platform build for 400 and 400 Pro. New flagging engine. HL7 v2.5.1 export added.,"Initial HL7 export omits OBX-14 when LIS profile is 'Generic'",4.1.0
+4.1.0,Both,2024-07-22,General,Adds body fluid mode (Pro). Westgard rule set expanded to 1-3s/2-2s/R-4s. E-307 lot pairing check added.,Body fluid background carryover if <3 background cycles run,4.1.2
+4.1.2,Both,2024-10-08,General,Adds W-031 ambient temperature warning. Optics calibration stability improvements.,W-031 threshold based on superseded 15-35 C range; see VBB-0052,4.2.0
+4.2.0,Both,2025-01-15,General,QC export scheduling; VeriConnect fleet enrolment via QR; SP-1 LAN handshake v2.,None recorded at release,4.2.1
+4.2.1,Both,2025-02-03,General,Hotfix for E-302 RFID read reliability. Refactored HL7 timestamp assembly.,"TIMESTAMP DRIFT: OBR-7 and OBX-14 emitted with drifting offset on 400 Pro; up to 47 min by day 14. See VBI-0091 and VBB-0041",4.2.3
+4.2.2,Both,2025-02-27,Withdrawn,Intended partial fix for timestamp drift. Withdrawn after 4 days - incomplete correction and introduced E-507 false positives.,Withdrawn 2025-03-03. Do not deploy.,4.2.3
+4.2.3,Both,2025-03-19,General,Full fix for HL7 timestamp drift (VBI-0091). RTC resync on every result transmission. Adds drift telemetry to VeriConnect.,None recorded,4.3.0
+4.3.0,Both,2025-09-02,General,Extended flagging algorithms for Pro; reagent on-board countdown; support for VeriPrep SP-1 firmware 2.3.x.,Requires SP-1 firmware >= 2.3.0 or P-407 raised,4.3.1
+4.3.1,Both,2025-11-14,General,Patch. Fixes rare E-512 during OTA update over slow links.,,4.4.0
+4.4.0,Both,2026-04-21,General,IVDR labelling data in result header; FHIR R4 result bundle export (beta); revised ambient temperature enforcement 18-32 C.,FHIR export beta - not for diagnostic use,
+2.1.4,VeriPrep SP-1,2024-06-11,General,Barcode decoder tuning for low-contrast labels.,Does not mitigate P-105 on short-cap tubes,2.2.0
+2.2.0,VeriPrep SP-1,2025-01-28,General,Adds gripper retry logic and P-112 recovery routine.,Retry logic reduces but does not eliminate short-cap jams,2.3.0
+2.3.0,VeriPrep SP-1,2025-07-30,General,SP-1r2 feed mechanism support; tube height tolerance widened; host protocol v2.,r1 units gain partial benefit only,2.3.1
+2.3.1,VeriPrep SP-1,2026-02-10,General,Liquid level detection improvements for lipaemic samples (P-207).,,

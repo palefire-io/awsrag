@@ -1,0 +1,97 @@
+From: Dr Aled Pritchard <aled.pritchard@gmpn.nhs.uk>
+To: James Okafor <james.okafor@veridiabio.com>
+CC: Peter Doyle <peter.doyle@veridiabio.com>, Suneet Kaur <suneet.kaur@gmpn.nhs.uk>, Dr Elena Marchetti <elena.marchetti@veridiabio.com>
+Date: Mon, 24 Feb 2025 17:42:11 +0000
+Subject: FSN-2025-003 - operational impact across GMPN and what we need from you
+X-Mailer: Microsoft Outlook 16.0
+Importance: High
+
+James,
+
+I am writing formally on behalf of the Greater Manchester Pathology Network
+regarding Field Safety Notice FSN-2025-003.
+
+I want to start by acknowledging that your technical people have been good
+throughout. Marcus Chen in particular has been straight with us and has not
+tried to minimise anything. This email is not about them.
+
+It is about the operational consequences of the notice landing on a network of
+our size, and about two things I think Veridia has got wrong.
+
+THE SCALE OF WHAT YOU HAVE ASKED US TO DO
+
+We operate fourteen instruments across six sites. Between us we had affected
+stock at four of those sites. The notice requires a retrospective review of WBC
+results reported while affected reagent was on board.
+
+Working out our exposure took my team eleven days. Not because the work is
+hard, but because the information needed to do it is scattered across the
+instruments, the LIS and the reagent goods-in records, and none of those
+systems talks to the others in a way that lets you ask "which samples ran while
+cartridge X was on instrument Y". We ended up reconciling by hand.
+
+The final figure is 9,412 patient episodes across the network. Our consultants
+have reviewed the flagged subset and are working through the unflagged results
+with an elevated WBC. To date nothing clinically significant has emerged, which
+is a relief but is not the same as it having been costless.
+
+I estimate the direct cost to us at somewhere between 180 and 220 scientist
+hours, plus consultant time.
+
+THE TWO THINGS I THINK YOU GOT WRONG
+
+First, the notice was hard to apply to a mixed fleet. It says the VeriScan 400
+Pro is not affected, and it says the affected lots must be withdrawn from all
+instruments. Those two statements sit in different sections and several of my
+site leads read the first and stopped. One site quarantined two Pro instruments
+unnecessarily and lost a day of capacity. Another continued using affected
+stock on a VeriScan 400 for three days after the notice because the person who
+read it had a Pro in front of them. Both of those are on us to some degree, but
+a notice that produces opposite errors at two sites in the same network is a
+notice that could be written more clearly.
+
+Second, and more importantly: you had no way for us to answer the retrospective
+question. You have built a cloud platform that knows which instrument ran which
+sample and which cartridge was on board at the time. It should have been able
+to produce that list in a minute. Instead we did it with spreadsheets.
+
+WHAT WE NEED
+
+1. A written summary of the investigation findings when VBI-0087 closes,
+   suitable for our clinical governance committee. Not the full report if that
+   is commercially sensitive, but enough that the committee can see the root
+   cause was identified and addressed.
+
+2. A commitment, with a date, on a retrospective reagent lot exposure report in
+   VeriConnect. We are an Enterprise customer with VeriGuard. If this
+   capability does not exist for us it does not exist for anyone.
+
+3. A conversation about the cost. I am not sending you an invoice and I am not
+   threatening anything. But we have absorbed a substantial amount of work
+   caused by a defect in your product, and the free replacement reagent does
+   not touch it. I would like that acknowledged in whatever form Veridia thinks
+   appropriate.
+
+4. Clearer scope statements in future field safety notices. Say what is NOT
+   affected as prominently as what is.
+
+I would like to discuss this rather than exchange letters. I am available most
+of next week.
+
+Regards,
+
+Dr Aled Pritchard
+Network Clinical Lead, Haematology
+Greater Manchester Pathology Network
+aled.pritchard@gmpn.nhs.uk
+0161 276 1234
+
+--
+This email and any attachments are confidential and intended solely for the
+addressee. If you have received this email in error please notify the sender
+and delete it from your system. Any unauthorised use, disclosure, copying or
+distribution is prohibited. Whilst reasonable precautions have been taken to
+ensure this email is virus free, the recipient should carry out their own virus
+checks. The Greater Manchester Pathology Network is a collaboration of NHS
+Foundation Trusts. Views expressed are those of the sender and do not
+necessarily represent the views of any constituent Trust.

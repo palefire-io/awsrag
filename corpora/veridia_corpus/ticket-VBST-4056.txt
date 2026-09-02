@@ -1,0 +1,114 @@
+Ticket ID: VBST-4056
+Status: Resolved
+Priority: P2-High
+Created: 2025-04-29 07:50 UTC
+Product: VeriScan 400 Pro
+Customer: Hopitaux Universitaires de Geneve (ACC-1198)
+Reported by: Dr Amelie Fournier, Medecin responsable
+Assigned to: Hannah Bright (Support Engineer) -> Nils Berger (FSE)
+Serial: VS4P-0559
+Firmware: 4.2.3
+
+--- Thread ---
+
+[2025-04-29 07:50] Dr Amelie Fournier (Medecin responsable):
+E-607 retic flow cell temperature out of range, several times a day since
+about a week. The reticulocyte channel then refuses to run and we must repeat
+the sample later.
+
+Always in the afternoon. Never in the morning.
+
+[2025-04-29 09:30] Hannah Bright (Support Engineer):
+Dr Fournier - "always in the afternoon, never in the morning" is a very strong
+clue. That is almost certainly ambient temperature rather than a heater fault.
+
+The retic flow cell is regulated to 37.0 +/- 0.5 C. Above about 32 C ambient
+the heater has no headroom to control and E-607 follows.
+
+Please measure the temperature at the instrument - not the room thermostat,
+but at the instrument itself, ideally on top of the chassis - at 09:00 and
+again at 15:00 tomorrow.
+
+[2025-04-30 15:30] Dr Amelie Fournier (Medecin responsable):
+09:00: 24.8 C at the instrument, 23.1 C room.
+15:00: 34.1 C at the instrument, 27.9 C room.
+
+The difference is larger than I expected.
+
+[2025-04-30 16:15] Hannah Bright (Support Engineer):
+That's your answer. 34.1 C is above the specified operating range and well
+above the point where the retic heater loses control.
+
+Two things worth knowing:
+
+1. The published operating range was revised this month from 15-35 C to
+   18-32 C (bulletin VBB-0052). Your afternoon reading is outside the revised
+   range, and would also have been marginal against the old one.
+
+2. Your firmware is 4.2.3, which raises the W-031 ambient warning against the
+   OLD 15-35 C thresholds. So the instrument has not been warning you, because
+   34.1 C is inside 15-35. Firmware 4.4.0 will align the warning with the
+   revised range. Until then, the absence of a W-031 does not mean the ambient
+   is acceptable.
+
+Where is the instrument sited? A 6 C rise between the room and the instrument
+usually means direct sun, a heat source underneath or beside it, or restricted
+airflow at the rear.
+
+[2025-05-02 10:20] Dr Amelie Fournier (Medecin responsable):
+The instrument is beside a west-facing window and there is a centrifuge on the
+adjacent bench. In the afternoon the sun is directly on that side of the
+laboratory.
+
+I had not thought about the window. It has been there longer than the
+instrument.
+
+[2025-05-07 16:45] Nils Berger (Field Service Engineer):
+Attended (FSV-2025-0238). Confirmed the diagnosis on site.
+
+Measurements at 15:20: 34.3 C on top of the chassis, 33.8 C at the rear vent,
+27.6 C at the room thermostat 4 m away. Direct sun on the instrument from
+approximately 13:30.
+
+Instrument itself: retic heater control verified across a full cycle in the
+morning when ambient was 25 C - regulation held 37.0 +/- 0.2 C, well within
+spec. No fault.
+
+Recommendations left with the site:
+1. Fit a blind or solar film to the west window. Cheapest and most effective.
+2. Move the instrument 2 m to the position currently holding a centrifuge, and
+   move the centrifuge to the window position. Centrifuges tolerate heat
+   better than optical benches.
+3. Ensure 150 mm clearance at the rear - currently about 60 mm because the
+   bench is against the wall.
+
+Left a copy of VBB-0052 with the laboratory and with the site's estates
+contact.
+
+Time on site 2.5 hours.
+
+[2025-05-20 09:00] Dr Amelie Fournier (Medecin responsable):
+We have moved the instrument as suggested and estates have fitted a blind.
+Temperature at the instrument now 26-28 C through the day.
+
+No E-607 since 8 May.
+
+Thank you. I would note that nothing in the original documentation prepared us
+for the fact that the ambient at the instrument could be six degrees above the
+room. That is the thing we did not know.
+
+[2025-05-20 11:30] Hannah Bright (Support Engineer):
+That's fair feedback and I've passed it to Applications. SOP-VBS-001 revision
+6 now says "measure at the instrument, not at the room thermostat" explicitly
+for exactly this reason, but it went out after your problem started.
+
+Closing.
+
+--- Resolution ---
+Root cause: ambient temperature at the instrument reaching 34.3 C in the
+afternoon (direct sun plus restricted rear clearance), above the revised
+18-32 C operating range. No instrument fault.
+Actions: instrument relocated, window blind fitted, rear clearance corrected
+(FSV-2025-0238). VBB-0052 supplied.
+NOTE: firmware 4.2.3 does not warn at this ambient because W-031 still uses
+the superseded 15-35 C thresholds until 4.4.0.

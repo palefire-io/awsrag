@@ -1,0 +1,83 @@
+Ticket ID: VBST-3878
+Status: Resolved
+Priority: P2-High
+Created: 2025-02-06 07:55 UTC
+Product: VeriScan 400 Pro
+Customer: Synlab Nordwest GmbH (ACC-1206)
+Reported by: Bernd Kaltenbrunner, Laborleiter
+Assigned to: Hannah Bright (Support Engineer) -> Ingrid Sorensen (FSE)
+Serial: VS4P-0311
+Firmware: 4.2.0
+
+--- Thread ---
+
+[2025-02-06 07:55] Bernd Kaltenbrunner (Laborleiter):
+E-215 laser current out of tolerance on VS4P-0311. Instrument will not
+complete startup. We have five other analysers so this is not an emergency,
+but this instrument carries our reticulocyte workload and we cannot move that
+to the 400s.
+
+[2025-02-06 08:40] Hannah Bright (Support Engineer):
+E-215 is a hardware fault - the laser diode has degraded past the point where
+the drive current can compensate. It is not user-repairable and the enclosure
+must not be opened.
+
+Can you send me the laser hours and drive current from
+Service > Diagnostics > Optics? It will help Ingrid come prepared.
+
+[2025-02-06 09:05] Bernd Kaltenbrunner (Laborleiter):
+Laser hours 14,220. Drive current 128mA, limit shown as 120mA.
+
+[2025-02-06 09:30] Hannah Bright (Support Engineer):
+That's a laser at end of life rather than a premature failure - 14,220 hours
+is a good run. Module VS4-OPT-118, lead time 21 days normally, but I've
+checked and we have one in Basel stock.
+
+Ingrid Sorensen can attend on the 25th. That's the earliest with the module
+and her availability. Is that workable, or do you need us to look at a loan
+instrument?
+
+[2025-02-06 10:15] Bernd Kaltenbrunner (Laborleiter):
+The 25th is acceptable. We will refer reticulocytes to our Hamburg site until
+then. Please confirm the module is reserved.
+
+[2025-02-06 10:40] Hannah Bright (Support Engineer):
+Reserved against this ticket.
+
+One thing worth flagging for the future: the drive current trend is visible in
+the diagnostics long before the limit is reached. If you check it at each PM
+and note the value, you get months of warning rather than a morning of
+surprise. Ingrid will show your team where to find it.
+
+[2025-02-25 18:30] Ingrid Sorensen (Field Service Engineer):
+Attended (FSV-2025-0163). Laser diode module VS4-OPT-118 replaced. Optical
+bench realigned and recalibrated.
+
+Post-repair:
+- Laser drive current 71mA (fresh module, well within the 120mA limit)
+- Optical calibration passed
+- Background counts 0.05-0.07 x10^9/L
+- QC all levels in range including retic
+- 20-sample comparison against VS4P-0316 (site's other Pro): WBC slope 1.001,
+  RET% slope 0.998, both acceptable
+
+Showed Bernd and two staff where to read the laser drive current and advised
+recording it at each PM and each quarter. He is going to add it to their
+internal instrument log.
+
+Old module returned to Basel for failure analysis as routine.
+
+Time on site 6.0 hours.
+
+[2025-02-26 08:15] Bernd Kaltenbrunner (Laborleiter):
+Running normally. Reticulocyte workload returned from Hamburg.
+
+Thank you, particularly for the advice about monitoring the drive current. We
+have four Pro instruments across two sites and now record it monthly.
+
+--- Resolution ---
+Root cause: laser diode module at end of life (14,220 hours), drive current
+exceeded tolerance.
+Actions: VS4-OPT-118 replaced and optics recalibrated (FSV-2025-0163);
+comparison against sister instrument passed; customer advised on drive current
+trending as a predictive measure.

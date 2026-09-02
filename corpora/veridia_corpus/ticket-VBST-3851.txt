@@ -1,0 +1,122 @@
+Ticket ID: VBST-3851
+Status: Resolved
+Priority: P2-High
+Created: 2025-01-30 16:52 UTC
+Product: VeriScan 400
+Customer: Alderley Diagnostics Ltd (ACC-1152)
+Reported by: Marcus Ollerenshaw, Laboratory Director
+             m.ollerenshaw@alderleydx.co.uk | 07700 900 214
+Assigned to: Owen Trask (Support Engineer L1) -> Kasia Nowak (FSE Midlands)
+Serial: VS4-0918
+Firmware: 4.2.0
+
+--- Thread ---
+
+[2025-01-30 16:52] Marcus Ollerenshaw (Laboratory Director):
+Instrument is flagging everything. We are a small private lab, we do not have
+the staff to review a film on a third of our samples. This started about a
+week ago and it is costing us real money in reporting delays.
+
+I want an engineer on site tomorrow. We pay for a support contract.
+
+[2025-01-31 08:15] Owen Trask (Support Engineer L1):
+Good morning Mr Ollerenshaw. I understand the urgency and I'm sorry this is
+disrupting your reporting.
+
+Your contract is Bronze, which is a next-business-day remote response and
+engineer attendance within 5 business days. I'll be honest with you about that
+up front rather than promise something I can't deliver. That said, I think
+there's a good chance we can sort this remotely today, because we are seeing
+something very similar at another site.
+
+Please can you tell me, quickly:
+- the RGT-L3 lot number on board and the date it was first pierced
+- your last three background WBC counts
+- whether the flags are specifically WBC abnormal scatter
+
+[2025-01-31 08:31] Marcus Ollerenshaw (Laboratory Director):
+L3-2025-0452, pierced 22/01.
+Backgrounds this morning 0.28, 0.31, 0.27.
+Yes, WBC abn scatter, and we get W-042 warnings.
+
+[2025-01-31 09:05] Owen Trask (Support Engineer L1):
+Thank you. That's the same picture as the other site.
+
+Do you have any RGT-L3 stock from a lot number below L3-2025-0440? If so
+please swap it in, run a prime, three backgrounds and both QC levels, and let
+me know the numbers. I think that will fix it.
+
+[2025-01-31 09:50] Marcus Ollerenshaw (Laboratory Director):
+We have nothing older. We only hold two cartridges at a time, we do not have
+the space.
+
+So what do I do, stop testing?
+
+[2025-01-31 10:20] Owen Trask (Support Engineer L1):
+No. Give me an hour.
+
+[2025-01-31 11:10] Owen Trask (Support Engineer L1):
+Arranged. Kasia Nowak is in the North West on Monday 10th and will bring
+unaffected RGT-L3 stock from van inventory and swap it for you at no charge.
+That's the soonest I can get a person to you, but I've also arranged a
+courier delivery of two cartridges from an unaffected lot for Monday 3rd, so
+you'll have the reagent a week before the visit and can swap it yourself -
+it's a five minute job and I'll walk you through it on the phone.
+
+The visit will still happen, so the instrument gets checked over properly.
+
+[2025-01-31 11:22] Marcus Ollerenshaw (Laboratory Director):
+That is a much better answer. Thank you.
+
+[2025-02-03 15:40] Marcus Ollerenshaw (Laboratory Director):
+Cartridges arrived, swapped over on the phone with Owen. Backgrounds 0.07,
+0.06, 0.08. Flag rate back to normal this afternoon. Night and day.
+
+[2025-02-10 14:15] Kasia Nowak (Field Service Engineer):
+Attended (FSV-2025-0149). Customer had been convinced the optics were failing.
+Ran full optical calibration - passed, gain values normal, lamp at 890 hours.
+Flow cell clean. No instrument fault of any kind.
+
+Showed the customer the background counts on the new reagent versus his own
+records from the affected period. He is satisfied it was the reagent.
+
+Collected the removed L3-2025-0452 cartridge for return.
+
+Discussed his stock holding - two cartridges at a time gives him no buffer at
+all when something like this happens. Suggested three. He's thinking about it.
+
+Time on site 2.5 hours.
+
+[2025-02-14 09:30] Owen Trask (Support Engineer L1):
+FSN-2025-003 issued today covering L3-2025-0440 to 0460. Your lot L3-2025-0452
+is in scope. Formal notice will reach you through your registered contact;
+copy attached.
+
+You'll need to complete and return the reply form. Your exposure window is 22
+January to 3 February on VS4-0918.
+
+[2025-02-14 10:02] Marcus Ollerenshaw (Laboratory Director):
+Noted. I'll say this - the handling once you understood the problem was good.
+The first response, quoting my contract tier at me while my lab was
+struggling, was not. Something to think about.
+
+Reply form will come back this week.
+
+[2025-02-18 11:00] James Okafor (VP Customer Support):
+Mr Ollerenshaw, James Okafor, VP of Support. Owen passed on your comment and
+he was right to.
+
+You're correct. Setting expectations about a contract tier is legitimate;
+leading with it when a customer is telling you their lab is in trouble is not.
+I've fed that back, and it's going into how we train first-line response.
+
+For what it's worth, Owen then found you reagent within two hours, which is
+the part I'd want you to weigh as well.
+
+The reply form has been received. Thank you.
+
+--- Resolution ---
+Root cause: RGT-L3 lot L3-2025-0452, affected by FSN-2025-003.
+Actions: unaffected stock couriered 2025-02-03; instrument verified fault-free
+under FSV-2025-0149; affected cartridge returned; FSN reply form received.
+Customer feedback on first-line response escalated to VP Support.

@@ -1,0 +1,14 @@
+reagent_code,reagent_name,analyser_model,min_firmware,max_firmware,formulation_rev,compatible,notes
+RGT-D5,VeriLyse Standard Diluent,VeriScan 400,3.8.0,,C,Yes,
+RGT-D5,VeriLyse Standard Diluent,VeriScan 400 Pro,3.8.0,,C,Yes,
+RGT-D5,VeriLyse Standard Diluent,VeriScan 200,3.4.0,3.7.9,B,Yes,VeriScan 200 end-of-life 2025-12-31 see VBB-0049
+RGT-L3,VeriLyse Lyse Reagent,VeriScan 400,4.0.0,,D,Yes,Formulation rev D introduced 2025-03; rev C lots subject to FSN-2025-003
+RGT-L3,VeriLyse Lyse Reagent,VeriScan 400 Pro,4.0.0,,D,Yes,
+RGT-L3,VeriLyse Lyse Reagent,VeriScan 200,,,D,No,Rev D not validated on VeriScan 200
+RGT-CL,VeriLyse Cleaning Solution,VeriScan 400,3.8.0,,A,Yes,
+RGT-CL,VeriLyse Cleaning Solution,VeriScan 400 Pro,3.8.0,,A,Yes,
+RGT-CL,VeriLyse Cleaning Solution,VeriPrep SP-1,2.0.0,,A,Yes,Used in SP-1 decontamination cycle
+RGT-RT,VeriLyse Reticulocyte Stain,VeriScan 400,,,B,No,Retic channel not present on VeriScan 400
+RGT-RT,VeriLyse Reticulocyte Stain,VeriScan 400 Pro,4.0.0,,B,Yes,Requires retic module firmware 4.0.0+
+RGT-RT,VeriLyse Reticulocyte Stain,VeriScan 400 Pro,,3.9.9,A,No,Rev A withdrawn 2024-11
+RGT-D5X,VeriLyse Extended Diluent (trial),VeriScan 400 Pro,4.3.0,,A,Conditional,Limited release; evaluation sites only

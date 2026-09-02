@@ -1,0 +1,37 @@
+grant_id,employee_id,full_name,job_title,level,grant_date,scheme,options_granted,exercise_price_gbp,vesting_start,cliff_months,vesting_months,options_vested_at_2026_06_30,options_exercised,options_lapsed,status,leaver_exercise_deadline,notes
+EMI-2019-0007,VB-0018,Elena Marchetti,Chief Scientific Officer,L6,2019-04-01,EMI,180000,0.42,2019-04-01,12,48,180000,0,0,Fully vested,,Founder-adjacent grant
+EMI-2019-0011,VB-0042,James Okafor,VP Customer Support,L5,2019-09-16,EMI,95000,0.42,2019-09-16,12,48,95000,0,0,Fully vested,,
+EMI-2020-0024,VB-0071,Priya Anand,Head of Field Service Engineering,L4,2020-06-02,EMI,42000,0.68,2020-06-02,12,48,42000,0,0,Fully vested,,
+EMI-2021-0038,VB-0088,Sarah Lindgren,Regulatory Affairs Manager,L3,2021-02-15,EMI,18000,1.15,2021-02-15,12,48,18000,0,0,Fully vested,,
+EMI-2021-0044,VB-0055,Simone Buehler,QA Manager,L4,2021-05-10,Unapproved,36000,1.15,2021-05-10,12,48,36000,0,0,Fully vested,,CH resident - EMI not available; unapproved scheme used
+EMI-2021-0051,VB-0119,Marcus Chen,QC Applications Specialist,L3,2021-08-23,EMI,16000,1.15,2021-08-23,12,48,16000,0,0,Fully vested,,
+EMI-2022-0063,VB-0103,Tom Reeves,Product Manager VeriConnect,L4,2022-01-17,EMI,34000,1.84,2022-01-17,12,48,34000,0,0,Fully vested,,
+EMI-2022-0070,VB-0127,Gavin Tuck,Firmware Lead,L4,2022-03-07,EMI,32000,1.84,2022-03-07,12,48,32000,0,0,Fully vested,,
+EMI-2022-0081,VB-0134,Rob Ellery,Senior Field Service Engineer,L3,2022-07-11,EMI,12000,1.84,2022-07-11,12,48,12000,0,0,Fully vested,,
+EMI-2022-0089,VB-0145,Yusuf Demir,Cloud Operations Lead,L4,2022-10-03,EMI,30000,1.84,2022-10-03,12,48,26875,0,0,Vesting,,
+EMI-2023-0102,VB-0029,Naomi Okonjo-Bright,Chief People Officer,L6,2023-01-09,EMI,120000,2.60,2023-01-09,12,48,87500,0,0,Vesting,,
+EMI-2023-0110,VB-0036,Gary Pemberton,Chief Financial Officer,L6,2023-02-20,EMI,110000,2.60,2023-02-20,12,48,78833,0,0,Vesting,,
+EMI-2023-0118,VB-0156,Aisha Rahman,Support Engineering Lead,L3,2023-04-17,EMI,9000,2.60,2023-04-17,12,48,6187,0,0,Vesting,,Additional grant on promotion Nov 2025 - see EMI-2025-0201
+EMI-2023-0127,VB-0182,Rachel Duffy,HR Business Partner,L3,2023-06-05,EMI,8000,2.60,2023-06-05,12,48,5333,0,0,Vesting,,
+EMI-2023-0134,VB-0230,Ruth Amankwah,Data Protection Officer,L3,2023-09-11,EMI,8000,2.60,2023-09-11,12,48,4666,0,0,Vesting,,
+EMI-2024-0148,VB-0067,Sunita Raval,General Counsel,L5,2024-01-15,EMI,60000,3.35,2024-01-15,12,48,36250,0,0,Vesting,,
+EMI-2024-0155,VB-0206,Denise Kaur,Reward and Benefits Manager,L3,2024-03-04,EMI,8000,3.35,2024-03-04,12,48,4500,0,0,Vesting,,
+EMI-2024-0163,VB-0294,Tunde Bakare,Firmware Engineer,L2,2024-05-20,EMI,6000,3.35,2024-05-20,12,48,3125,0,0,Vesting,,
+EMI-2024-0171,VB-0288,Maya Rothbury,Software Engineer,L2,2024-07-08,EMI,6000,3.35,2024-07-08,12,48,2875,0,0,Vesting,,
+EMI-2024-0179,VB-0198,Marta Oliveira,Field Service Engineer,L2,2024-09-16,EMI,5000,3.35,2024-09-16,12,48,2187,0,0,Vesting,,
+EMI-2024-0186,VB-0221,Nils Berger,Field Service Engineer,L2,2024-11-04,Unapproved,5000,3.35,2024-11-04,12,48,1770,0,0,Vesting,,CH resident
+EMI-2025-0194,VB-0274,Helena Nkemelu,Regulatory Affairs Specialist,L2,2025-02-10,EMI,5000,4.10,2025-02-10,12,48,1458,0,0,Vesting,,
+EMI-2025-0201,VB-0156,Aisha Rahman,Support Engineering Lead,L3,2025-11-03,EMI,7000,4.10,2025-11-03,12,48,0,0,0,In cliff,,Promotion grant
+EMI-2025-0208,VB-0251,Farida Bello,Support Engineer,L2,2025-06-16,EMI,4000,4.10,2025-06-16,12,48,1000,0,0,Vesting,,
+EMI-2025-0215,VB-0301,Clare Ballantyne,Field Service Engineer,L1,2025-05-12,EMI,3000,4.10,2025-05-12,12,48,750,0,0,Vesting,,
+EMI-2026-0223,VB-0247,Owen Trask,Support Engineer,L1,2026-02-02,EMI,3000,4.85,2026-02-02,12,48,0,0,0,In cliff,,
+EMI-2026-0229,VB-0255,Ollie Kettering,People Operations Coordinator,L1,2026-02-02,EMI,3000,4.85,2026-02-02,12,48,0,0,0,In cliff,,
+EMI-2021-0047,VB-0312,Duncan Threlfall,Senior Software Engineer,L3,2021-06-14,EMI,18000,1.15,2021-06-14,12,48,18000,18000,0,Exercised,,Leaver 2025-08-29. Exercised in window.
+EMI-2022-0076,VB-0319,Neve Carmichael,Support Engineer,L2,2022-05-09,EMI,6000,1.84,2022-05-09,12,48,6000,0,6000,Lapsed,2025-06-12,LEAVER - 90 day window missed. See note below.
+EMI-2023-0121,VB-0326,Adaeze Nwankwo,Field Service Engineer,L2,2023-05-22,EMI,5000,2.60,2023-05-22,12,48,2812,0,2812,Lapsed,2026-01-18,LEAVER - window missed
+EMI-2024-0159,VB-0333,Bartosz Wysocki,QC Analyst,L2,2024-04-02,Unapproved,5000,3.35,2024-04-02,12,48,2291,0,2291,Lapsed,2026-04-30,LEAVER - CH resident - window missed
+,,,,,,,,,,,,,,,,,
+SCHEME: EMI (Enterprise Management Incentive) where the employee and the company qualify. Unapproved options for Swiss-resident employees, for whom EMI is not available and whose tax treatment differs materially - Swiss recipients are advised in writing to take personal tax advice at grant.,,,,,,,,,,,,,,,,
+VALUATION: exercise prices reflect the HMRC-agreed unrestricted market value at each funding round. Series C 2023 GBP 2.60; Series D 2024 GBP 3.35; 2025 secondary reference GBP 4.10; 2026 GBP 4.85.,,,,,,,,,,,,,,,,,
+ACTION REQUIRED - RECURRING PROBLEM: three leavers in eighteen months have allowed vested options to lapse by missing the 90-day exercise window. In each case the leaver had been told at their exit interview and in the leaver pack. Denise Kaur has recommended (a) a reminder at 30 days and 14 days before the deadline, (b) the deadline stated in the final pay letter, and (c) the People team contacting the leaver directly rather than relying on the pack. Approved by the CPO 2026-05-06, implementation with the next PeopleHub release.,,,,,,,,,,,,,,
+CONFIDENTIALITY: individual equity holdings. Restricted to the People team, the CFO and the Executive Committee. Not visible to line managers.,,,,,,,,,,,,,,,,

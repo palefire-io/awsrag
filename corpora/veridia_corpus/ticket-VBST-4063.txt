@@ -1,0 +1,81 @@
+Ticket ID: VBST-4063
+Status: Resolved
+Priority: P1-Critical
+Created: 2025-05-13 06:20 UTC
+Product: VeriScan 400 Pro
+Customer: Norfolk and Norwich University Hospitals NHS FT (ACC-1129)
+Reported by: Claire Bettinson, Laboratory Manager
+             claire.bettinson@nnuh.nhs.uk | 01603 286 286 ext 4471
+Assigned to: Danny Whitcombe (Support Engineer) -> Marta Oliveira (FSE)
+Serial: VS4P-0668
+Firmware: 4.3.0
+
+--- Thread ---
+
+[2025-05-13 06:20] Claire Bettinson (Laboratory Manager):
+E-412 mixer motor overcurrent, instrument down. Started making a grinding noise
+on Friday which we reported to our own maintenance team and not to you, which
+in hindsight was a mistake.
+
+We have two Pro analysers and the other one is in for PM today. So we are down
+to nothing for haematology. P1.
+
+[2025-05-13 06:44] Danny Whitcombe (Support Engineer):
+Claire - first thing, I'm going to get your PM stopped so the other instrument
+goes back into service today rather than tomorrow. Give me ten minutes.
+
+[2025-05-13 06:58] Danny Whitcombe (Support Engineer):
+Done. Marta was on site for the PM and is putting VS4P-0674 back into service
+now - it needs QC before you can use it, which she's running.
+
+On VS4P-0668: E-412 after a grinding noise is a seized mixer bearing. That's
+the mixer assembly VS4-MEC-047, not a field-serviceable part, and it's a
+14-day lead time normally.
+
+I'm checking van and depot stock.
+
+[2025-05-13 07:40] Danny Whitcombe (Support Engineer):
+There's one in the Midlands depot. Marta can collect tomorrow and fit on the
+15th. Two working days rather than fourteen.
+
+[2025-05-13 08:15] Claire Bettinson (Laboratory Manager):
+Thank you, that's a relief. VS4P-0674 QC passed and we're running on that.
+
+Can I ask - is there anything we should have done differently? The noise on
+Friday was noticeable.
+
+[2025-05-13 09:30] Danny Whitcombe (Support Engineer):
+Honestly, yes, and it's a useful thing to take away.
+
+A new mechanical noise from a haematology analyser is worth a call even if the
+instrument is still working. Mixer bearings give days of warning and a planned
+part swap is a fraction of the disruption of an unplanned one. It's in the PM
+checklist for our engineers to listen for exactly this.
+
+Not a criticism - most sites do the same thing.
+
+[2025-05-15 16:50] Marta Oliveira (Field Service Engineer):
+Attended (FSV-2025-0246). Mixer assembly VS4-MEC-047 replaced. Old assembly:
+outer bearing race pitted and dry, consistent with lubricant breakdown. Run
+hours 19,400.
+
+Post-repair: mixer current draw nominal, no noise. Background counts within
+limits. QC all levels including retic in range. 15-sample comparison against
+VS4P-0674: WBC slope 0.999, PLT slope 1.002.
+
+Instrument returned to service. Rescheduled the interrupted PM on VS4P-0674
+for 2 June.
+
+Time on site 3.0 hours.
+
+[2025-05-16 08:30] Claire Bettinson (Laboratory Manager):
+Both running. Thank you for pulling the PM engineer off and getting us going
+again - that made the difference on Tuesday.
+
+--- Resolution ---
+Root cause: mixer motor bearing seizure at 19,400 run hours (lubricant
+breakdown).
+Actions: PM on the second instrument interrupted to restore capacity; mixer
+assembly VS4-MEC-047 sourced from depot stock and fitted 2025-05-15
+(FSV-2025-0246); comparison against sister instrument passed.
+Customer advised to report new mechanical noise before failure.

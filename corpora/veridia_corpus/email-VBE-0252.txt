@@ -1,0 +1,50 @@
+From: Dawn Ackroyd <dawn.ackroyd@nuffieldhealth.com>
+To: Peter Doyle <peter.doyle@veridiabio.com>
+Date: Fri, 13 Mar 2026 11:18:05 +0000
+Subject: Renewal April 2027 - early conversation about tiers
+X-Mailer: Microsoft Outlook 16.0
+
+Peter,
+
+I know our renewal is not until April 2027 but our budget cycle means I need
+indicative numbers by June this year, so I am starting early.
+
+Current position: 2 x VeriScan 400 Pro, VeriConnect Professional, Gold support.
+
+Three things I want to explore.
+
+1. DOWNGRADING SUPPORT. We have had one engineer visit in two years (the
+   display cable in April 2025, which took Rob ninety minutes). Gold feels like
+   insurance we are not claiming on. What would Silver cost and what would we
+   actually be giving up? Please give me the honest version - if Silver would
+   leave us exposed as a private hospital with no second site to fall back on,
+   say so and I will keep Gold.
+
+2. UPGRADING VERICONNECT. Conversely, I am interested in Enterprise, mostly for
+   SSO. Our group IT are moving everything to single sign-on and VeriConnect is
+   on their list of exceptions, which is not a list I want to be on. What does
+   Enterprise cost for two instruments, and is SSO available any other way?
+
+   I should say that I read your bulletin about the SSO outage in March 2025
+   and it did not fill me with confidence. I would want to understand what has
+   changed before I made VeriConnect dependent on our identity provider.
+
+3. VERIGUARD. Our group compliance team have started asking about audit trails
+   and data residency across all our systems. I do not know whether we need
+   VeriGuard or whether Professional is sufficient. Could someone who knows the
+   product talk to our compliance lead directly? I am not the right person to
+   translate.
+
+One other thing. We are a Nuffield Health site and the group has fourteen
+hospitals with laboratories, of which we are one of three running Veridia. If
+there is a group-level conversation to be had about standardising, I can make
+an introduction. I mention it because you would get more out of that
+conversation than out of squeezing our two-instrument renewal.
+
+Best regards,
+
+Dawn Ackroyd
+Laboratory Manager
+Nuffield Health Leeds Hospital
+2 Leighton Street, Leeds LS1 3EB
+dawn.ackroyd@nuffieldhealth.com | 0113 388 2000

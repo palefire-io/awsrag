@@ -1,0 +1,165 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PRODUCT SPECIFICATION SHEET
+=================================================================
+Product: VeriPrep SP-1 Automated Sample Preparation Station
+Model: SP1-100
+Document Ref: DS-SP1-004
+Revision: v4
+Revision Date: 2025-08-14
+Supersedes: DS-SP1-003 (2024-09-02)
+Classification: Accessory to an in-vitro diagnostic medical device.
+                Not itself an IVD. CE and UKCA marked under the applicable
+                machinery, EMC and low voltage directives/regulations.
+
+-----------------------------------------------------------------
+INTENDED USE
+-----------------------------------------------------------------
+The VeriPrep SP-1 is an automated pre-analytical sample preparation station
+intended to decap, identify by barcode, aliquot and sort evacuated blood
+collection tubes prior to analysis. It is intended for use with the VeriScan
+400 and VeriScan 400 Pro haematology analysers and with third-party analysers
+supporting the documented host protocols.
+
+The SP-1 does not measure any analyte and does not produce a diagnostic result.
+
+-----------------------------------------------------------------
+FUNCTIONS
+-----------------------------------------------------------------
+  Decapping     Automated cap removal and disposal for screw and push caps
+  Identification Barcode read of primary tube label (1D and 2D symbologies)
+  Aliquoting    Volumetric transfer into secondary tubes or plates
+  Sorting       Routing of primary tubes to destination racks by rule
+  Handoff       Direct presentation to a connected VeriScan analyser
+
+-----------------------------------------------------------------
+TECHNICAL SPECIFICATIONS
+-----------------------------------------------------------------
+Parameter                    | Value
+-----------------------------|-----------------------------------------
+Throughput                   | 120 tubes/hr (decap + identify + sort)
+                             | 90 tubes/hr (with aliquoting)
+Input capacity               | 5 racks x 20 tubes = 100 tubes
+Output capacity              | 4 destination racks x 20 = 80 tubes
+Supported tube diameters     | 12.0 to 16.5 mm
+Supported tube heights       | r1: 73.5 - 80.0 mm capped
+(capped, overall)            | r2: 68.0 - 82.5 mm capped
+Supported tube volumes       | 2 mL, 3 mL, 4 mL, 5 mL, 6 mL, 9 mL
+Barcode symbologies          | Code 128, Code 39, Interleaved 2 of 5,
+                             | Codabar, Data Matrix, QR
+Minimum barcode print quality| ANSI grade C, 300 dpi thermal recommended
+Aliquot volume range         | 100 uL to 2000 uL
+Aliquot accuracy             | +/- 3% or +/- 10 uL, whichever is greater
+Aliquot precision (CV)       | <= 2% at 500 uL
+Carryover (aliquot path)     | < 0.1% with disposable tips
+Dimensions (W x D x H)       | 860 x 640 x 720 mm
+Mass                         | 118 kg
+Power                        | 100-240 V AC, 50/60 Hz, 700 VA
+Air supply                   | Not required
+Waste                        | Solid cap waste bin (approx 400 caps);
+                             | tip waste chute
+Noise                        | < 66 dB(A) at 1 m
+Current firmware at issue     | 2.3.0
+-----------------------------|-----------------------------------------
+
+-----------------------------------------------------------------
+HARDWARE REVISIONS
+-----------------------------------------------------------------
+SP-1r1  Serial prefix SP1-R1-. Shipped 2021 to Q2 2025.
+SP-1r2  Serial prefix SP1-R2-. Shipping from Q3 2025.
+
+The r2 revision introduces a redesigned tube feed mechanism (SP1-MEC-141), a
+repositioned and widened barcode scanner window, revised gripper jaw material
+and a relocated lid interlock. The functional specification is otherwise
+identical. See VBB-0055 for validation data and VBB-0038 for the background to
+the change.
+
+KNOWN LIMITATION (r1 only): 5 mL tubes with a short-profile cap, giving an
+overall capped height below approximately 75.5 mm, sit low in the carrier.
+This produces barcode read failures (P-101/P-103), tube height errors (P-105)
+and, in a minority of presentations, a feed jam (P-112). Mitigations are the
+SP1-ADP-05 tube adapter, a raised label position, or retrofit to the r2 feed
+mechanism (SP1-KIT-R2UP). This limitation does not apply to r2 units.
+
+-----------------------------------------------------------------
+INTEGRATION WITH VERISCAN ANALYSERS
+-----------------------------------------------------------------
+Two physical options:
+
+  Serial (RS-232)
+    Cable: SP1-CBL-232, 3 m shielded, DB9 female to DB9 female
+    Settings: 115200 baud, 8 data bits, no parity, 1 stop bit, no flow control
+    Maximum cable length 15 m
+    Suitable for a single analyser directly adjacent to the SP-1
+
+  LAN (Ethernet)
+    100BASE-TX, static IP strongly recommended
+    Analyser and SP-1 must be on the same subnet or have a route with UDP
+    discovery relayed
+    Supports up to 4 analysers from one SP-1
+    DHCP is supported but a lease change on the analyser will produce P-405.
+    Use a DHCP reservation if static addressing is not permitted locally.
+
+Host protocol versions
+    v1  SP-1 firmware 2.0.0 - 2.2.x with VeriScan firmware up to 4.2.3
+    v2  SP-1 firmware 2.3.0+ with VeriScan firmware 4.3.0+
+    Mixing v1 and v2 across the link raises P-407 and the SP-1 will not hand
+    off samples. Plan analyser and SP-1 firmware updates together.
+
+Handoff sequence (v2, summarised)
+    1. SP-1 reads primary tube barcode
+    2. SP-1 queries analyser for pending order matching the accession
+    3. Analyser responds with test profile or NO_ORDER
+    4. On NO_ORDER the SP-1 routes the tube to the exception rack
+    5. On order match the SP-1 decaps and presents the tube to the analyser
+       aspiration position, or aliquots to a secondary tube as configured
+    6. Analyser acknowledges aspiration complete; SP-1 sorts the primary tube
+
+Full protocol documentation: DS-SP1-PROTO-002, available under NDA.
+
+-----------------------------------------------------------------
+CONSUMABLES
+-----------------------------------------------------------------
+  SP1-TIP-1000    Disposable pipette tips, 1000 uL, rack of 96, 10 racks/case
+  SP1-TIP-200     Disposable pipette tips, 200 uL, rack of 96, 10 racks/case
+  SP1-BIN-CAP     Cap waste bin liners, 50/pack
+  RGT-CL          VeriLyse Cleaning Solution - used in the decontamination
+                  cycle. Do not substitute a generic disinfectant; the SP-1
+                  fluid path is not compatible with hypochlorite.
+
+-----------------------------------------------------------------
+OPERATING CONDITIONS
+-----------------------------------------------------------------
+Ambient temperature       | 18 C to 30 C
+Relative humidity         | 30% to 80% non-condensing
+Bench loading             | 118 kg over 860 x 640 mm; check bench rating
+Clearance required        | 150 mm rear, 300 mm above for lid opening
+Indoor use only           | Yes
+
+-----------------------------------------------------------------
+MAINTENANCE
+-----------------------------------------------------------------
+Daily        Empty cap waste bin; visual inspection of tube path
+Weekly       Decontamination cycle per SOP-VBS-003
+Monthly      Gripper jaw inspection; barcode window clean
+Annual       Preventive maintenance visit; gripper jaw set replacement
+             (r1: 12 months; r2: 24 months)
+
+-----------------------------------------------------------------
+ORDERING INFORMATION
+-----------------------------------------------------------------
+Part Number    | Description
+---------------|------------------------------------------------
+SP1-100        | VeriPrep SP-1 station (current revision r2)
+SP1-100-INST   | Installation and 1-day operator training
+SP1-ADP-05     | Short-cap 5 mL tube adapter, set of 10
+SP1-KIT-R2UP   | SP-1r2 feed mechanism retrofit kit for r1 units
+SP1-CBL-232    | RS-232 interface cable, 3 m
+SP1-MEC-140    | Tube feed mechanism, r1 (service part)
+SP1-MEC-141    | Tube feed mechanism, r2 (service part)
+SP1-MEC-160    | Gripper jaw set
+SP1-TIP-1000   | Disposable tips 1000 uL, case
+SP1-SVC-GOLD   | Gold service contract, 12 months
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

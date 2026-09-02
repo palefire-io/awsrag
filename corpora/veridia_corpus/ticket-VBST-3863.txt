@@ -1,0 +1,149 @@
+Ticket ID: VBST-3863
+Status: Resolved
+Priority: P1-Critical
+Created: 2025-02-03 07:48 UTC
+Product: VeriScan 400
+Customer: Betsi Cadwaladr University Health Board (ACC-1263)
+Reported by: Eleri Wyn Jones, Lead BMS Haematology
+             eleri.wynjones@wales.nhs.uk | 01248 384 112
+Assigned to: Hannah Bright (Support Engineer) -> Dev Patel (FSE)
+Serial: VS4-0655
+Firmware: 4.2.0
+
+--- Thread ---
+
+[2025-02-03 07:48] Eleri Wyn Jones (Lead BMS):
+E-208 baseline absorbance out of range on VS4-0655, instrument has stopped and
+will not complete a run. We are a single-analyser site out of hours and we have
+an ED backlog building. Raising as P1.
+
+Tried: power cycle, Extended Clean, recalibration attempt (calibration
+failed with E-211).
+
+[2025-02-03 08:02] Hannah Bright (Support Engineer):
+Eleri, hello, I have this. First thing: do you have a second analyser or a
+referral arrangement for the next few hours?
+
+Second: what RGT-L3 lot is on board and when was it pierced?
+
+[2025-02-03 08:09] Eleri Wyn Jones (Lead BMS):
+We can send to Ysbyty Gwynedd but it's an hour each way and it will not help
+the ED.
+
+L3-2025-0448, pierced 26/01.
+
+[2025-02-03 08:14] Hannah Bright (Support Engineer):
+Right. Do you have any other RGT-L3 cartridge on site, any lot, opened or
+unopened?
+
+[2025-02-03 08:19] Eleri Wyn Jones (Lead BMS):
+One unopened, L3-2025-0433.
+
+[2025-02-03 08:21] Hannah Bright (Support Engineer):
+Fit it now. Remove the current cartridge, fit the 0433, run Reagent Prime for
+L3, then three backgrounds, then calibration, then both QC levels.
+
+I'm fairly confident this will clear it. Stay on the line if it's easier -
+0800 118 4477 and ask for me.
+
+[2025-02-03 09:05] Eleri Wyn Jones (Lead BMS):
+Backgrounds 0.08, 0.07, 0.09. Calibration passed first time. QC both levels
+in range. We are running again.
+
+That was reagent then. What on earth is going on with your reagent?
+
+[2025-02-03 09:30] Hannah Bright (Support Engineer):
+Glad you're running.
+
+Straight answer: we have an active investigation into a specific range of
+RGT-L3 lots. Yours is in that range. The picture is elevated baseline
+absorbance developing after the cartridge has been on board for several days.
+Your cartridge was on day eight.
+
+I can't yet tell you it's confirmed, or what the formal outcome will be,
+because the investigation is a few days old. What I can tell you:
+- do not use any RGT-L3 cartridge with a lot number between L3-2025-0440 and
+  L3-2025-0460 until you hear from us;
+- quarantine the one you just removed, label it with the pierce date, do not
+  discard it;
+- keep a note of which samples ran on it, because you may need that.
+
+I'm escalating your site for priority replacement stock.
+
+[2025-02-03 09:41] Eleri Wyn Jones (Lead BMS):
+Doing all of that. We have three more unopened from 0448 and two from 0455.
+They're going in the quarantine cupboard now.
+
+I need to tell my head of department something. Are our results safe?
+
+[2025-02-03 11:20] Marcus Chen (QC Applications Specialist):
+Eleri, Marcus Chen from Applications. Hannah has looped me in.
+
+What we understand at this point: the effect is a positive bias on the WBC
+count, on the order of a few tenths up to about 0.9 x10^9/L at the extreme,
+plus an increase in false abnormal-scatter flags. RBC, HGB and platelets are
+not affected. Most affected results flag, so they should have reached a
+scientist for review before authorisation.
+
+Your instrument went to a hard E-208 stop, which means it detected the drift
+and refused to produce results rather than producing biased ones. That's the
+protective behaviour working. The results that concern us are the ones from
+the days before the stop, when the drift was present but below the error
+threshold.
+
+Your exposure window is 26 January to 3 February on VS4-0655.
+
+I would tell your head of department: a reagent problem is under
+investigation, the failure mode is a positive WBC bias with increased
+flagging, red cells and haemoglobin are unaffected, and a retrospective review
+of WBC results from that window is prudent. I'd rather you said that than
+something more reassuring that I then have to correct.
+
+[2025-02-03 12:15] Eleri Wyn Jones (Lead BMS):
+Thank you, that's the kind of answer I can actually use.
+
+[2025-02-18 16:30] Dev Patel (Field Service Engineer):
+Attended (FSV-2025-0155). Site had been running on L3-2025-0433 without issue
+since the 3rd.
+
+Full check of VS4-0655: optics calibration passed, lamp 1,610 hours (noted for
+replacement at next PM), flow cell clean, fluidics normal. No instrument
+fault.
+
+Observation worth recording: this site has two VeriScan 400s. VS4-0655 went to
+a hard E-208 stop and VS4-0661 did not, and both were on affected lots. The
+difference is that 0655's cartridge had been on board eleven days and 0661's
+had been fitted four days earlier. The severity tracks with days on board, not
+with the instrument.
+
+I've flagged this to Applications because I think it's the pattern they're
+looking for.
+
+Collected quarantined stock (1 pierced, 5 unopened) for return.
+
+Time on site 2.0 hours.
+
+[2025-02-19 09:10] Marcus Chen (QC Applications Specialist):
+Dev's observation has gone straight into VBI-0087. It is the clearest
+demonstration we have that this is an on-board ageing effect rather than an
+as-manufactured defect, and it redirected the laboratory investigation.
+
+Eleri - FSN-2025-003 was issued on the 14th and should have reached your
+trust's contact. Let me know if it hasn't.
+
+[2025-02-19 10:05] Eleri Wyn Jones (Lead BMS):
+It reached us, thank you. Reply form returned Monday. Retrospective review
+done - 1,203 samples in the window, 156 flagged and reviewed at the time, the
+rest checked by the consultant. Nothing clinically significant found.
+
+Closing from our side. I'll say the support on the day of the P1 was
+excellent.
+
+--- Resolution ---
+Root cause: RGT-L3 lot L3-2025-0448 (FSN-2025-003). Instrument protective
+E-208 stop functioned correctly.
+Actions: reagent swapped same morning; site verified fault-free
+(FSV-2025-0155); affected stock returned; retrospective review completed by
+customer.
+Engineer observation from this visit (severity tracks days on board) was a key
+input to VBI-0087.

@@ -1,0 +1,112 @@
+=================================================================
+VERIDIA BIOSYSTEMS - STANDARD OPERATING PROCEDURE
+=================================================================
+SOP Number:      SOP-VBS-009
+Title:           VeriPrep SP-1 Aliquot Volume Gravimetric Verification
+Revision:        2
+Effective Date:  2024-11-20
+Author:          Priya Anand, Head of Field Service Engineering
+Approved by:     Simone Buehler, QA Manager
+Review due:      2026-11-20   *** REVIEW OVERDUE - see note below ***
+
+NOTE: this document passed its review date. It remains in force pending
+revision 3, which will incorporate SP-1r2 and firmware 2.3.x. The procedure
+itself is unchanged for r2 units. - P. Anand, 2026-01-08
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+To verify that the VeriPrep SP-1 delivers aliquot volumes within the specified
+tolerance of +/- 3 per cent or +/- 10 uL, whichever is greater, with a
+precision (CV) of 2 per cent or better at 500 uL.
+
+-----------------------------------------------------------------
+2. WHEN TO PERFORM
+-----------------------------------------------------------------
+  - At installation, as part of OQ.
+  - At each annual preventive maintenance visit.
+  - After replacement of the syringe, syringe seal or aliquot needle.
+  - On investigation of P-201 (aliquot volume out of tolerance).
+  - Where downstream analysers report systematically low or high results on
+    aliquoted samples but correct results on primary tubes.
+
+-----------------------------------------------------------------
+3. EQUIPMENT
+-----------------------------------------------------------------
+  - Analytical balance, readability 0.1 mg, calibrated within 12 months,
+    with a valid calibration certificate.
+  - Draught shield.
+  - Purified water at ambient temperature, equilibrated in the room for at
+    least 1 hour.
+  - Calibrated thermometer and barometer (or the room's environmental
+    monitoring record).
+  - Secondary tubes of the type in routine use.
+  - Disposable tips of the type in routine use (SP1-TIP-1000 or SP1-TIP-200).
+
+-----------------------------------------------------------------
+4. PROCEDURE
+-----------------------------------------------------------------
+4.1  Record ambient temperature, relative humidity and barometric pressure.
+
+4.2  Determine the density of water at the recorded temperature (Z factor).
+     Use the table at Appendix A.
+
+4.3  Run a Syringe Prime (Service > Maintenance > Syringe Prime) and confirm
+     no air is visible in the syringe or the line. Air in the syringe is by
+     far the most common cause of a failed verification and is not a fault in
+     itself; prime again.
+
+4.4  Configure a run of 10 aliquots at the target volume into pre-weighed
+     secondary tubes.
+
+4.5  Weigh each tube before and after. Record to 0.1 mg.
+
+4.6  Compute delivered volume: V = (m_after - m_before) x Z.
+
+4.7  Compute mean, standard deviation and CV.
+
+4.8  Repeat at 200 uL, 500 uL and 1000 uL, or at the volumes in routine use if
+     different.
+
+-----------------------------------------------------------------
+5. ACCEPTANCE
+-----------------------------------------------------------------
+  Target      Mean must be within        CV must be
+  ----------  -------------------------  ----------
+  200 uL      194.0 - 206.0 uL           <= 3.0%
+  500 uL      485.0 - 515.0 uL           <= 2.0%
+  1000 uL     970.0 - 1030.0 uL          <= 2.0%
+
+If the mean is out of tolerance but the CV is acceptable, the fault is
+calibration or a syringe seal. If the CV is out of tolerance, the fault is
+usually air, a worn seal, or tip seating.
+
+-----------------------------------------------------------------
+6. ACTION ON FAILURE
+-----------------------------------------------------------------
+6.1  Repeat the prime and the verification once.
+
+6.2  Inspect the tip cone O-ring and the syringe seal. Replace if worn.
+
+6.3  Check that hypochlorite has never been used in the fluid path. Degraded
+     seals from hypochlorite exposure present exactly as a slowly worsening
+     aliquot CV. See SOP-VBS-003 section 3.4.
+
+6.4  If failure persists, adjust the volume calibration factor
+     (Service > Calibration > Aliquot) and repeat the full verification. Do
+     not adjust the factor by more than 5 per cent without investigating the
+     mechanical cause.
+
+6.5  Escalate to Veridia if the required adjustment exceeds 5 per cent.
+
+-----------------------------------------------------------------
+APPENDIX A - Z FACTORS (uL/mg) FOR PURIFIED WATER AT 101.3 kPa
+-----------------------------------------------------------------
+  18 C  1.0025      22 C  1.0033      26 C  1.0043
+  19 C  1.0027      23 C  1.0035      27 C  1.0046
+  20 C  1.0029      24 C  1.0038      28 C  1.0048
+  21 C  1.0031      25 C  1.0040      29 C  1.0051
+
+=================================================================
+END OF SOP-VBS-009 REVISION 2
+=================================================================

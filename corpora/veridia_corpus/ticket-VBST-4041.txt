@@ -1,0 +1,49 @@
+Ticket ID: VBST-4041
+Status: Resolved
+Priority: P4-Low
+Created: 2025-04-17 14:20 UTC
+Product: VeriScan 400 Pro
+Customer: Nuffield Health Leeds Hospital (ACC-1171)
+Reported by: Dawn Ackroyd, Laboratory Manager
+Assigned to: Owen Trask (Support Engineer L1) -> Rob Ellery (FSE)
+Serial: VS4P-0712
+Firmware: 4.2.3
+
+--- Thread ---
+
+[2025-04-17 14:20] Dawn Ackroyd (Laboratory Manager):
+The screen on our Pro keeps flickering. Comes and goes, worse if you touch the
+front of the instrument. Not stopping us working but it's annoying and the
+staff are convinced it's about to die.
+
+[2025-04-17 15:00] Owen Trask (Support Engineer L1):
+Almost certainly the display ribbon cable rather than the panel. Flicker that
+responds to physical contact with the chassis is the signature.
+
+Part is VS4-DIS-142, GBP 26. It's user-replaceable in principle but it means
+opening the front panel and I'd rather an engineer did it.
+
+Rob Ellery is in Leeds on the 24th for another visit. Shall I add you?
+
+[2025-04-17 15:30] Dawn Ackroyd (Laboratory Manager):
+Yes please. Is it a warranty job or are we paying?
+
+[2025-04-17 15:45] Owen Trask (Support Engineer L1):
+You're on Gold, so parts and labour are covered. No charge.
+
+[2025-04-24 12:15] Rob Ellery (Field Service Engineer):
+Attended (FSV-2025-0225). Ribbon cable VS4-DIS-142 replaced. Original cable
+showed a crease near the connector where it had been pinched during a previous
+panel refit. Flicker gone.
+
+Touchscreen calibration re-run. QC not required for this repair (no fluidic or
+optical intervention) but ran a background count as a courtesy - within limits.
+
+Time on site 1.5 hours.
+
+[2025-04-24 16:00] Dawn Ackroyd (Laboratory Manager):
+Sorted. Thanks.
+
+--- Resolution ---
+Root cause: creased display ribbon cable. Replaced under Gold contract at no
+charge (FSV-2025-0225).

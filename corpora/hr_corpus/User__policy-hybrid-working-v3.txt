@@ -1,0 +1,173 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Hybrid and Flexible Working Policy
+=================================================================
+Document:      HR-POL-015
+Version:       3
+Effective:     2025-06-01
+Supersedes:    Version 2 (2023-09-01)
+Owner:         Naomi Okonjo-Bright, Chief People Officer
+
+-----------------------------------------------------------------
+1. THE SHORT VERSION
+-----------------------------------------------------------------
+Most office-based roles work two days a week on site and the rest wherever
+they choose. Which two days is agreed within your team, not dictated by the
+company.
+
+Many roles cannot work this way and we are honest about that rather than
+pretending otherwise.
+
+-----------------------------------------------------------------
+2. WHO CAN WORK HOW
+-----------------------------------------------------------------
+FULLY FLEXIBLE (2 days on site as a team norm)
+  Software, firmware, cloud operations, marketing, finance, legal, People
+  team, commercial office-based roles, regulatory affairs (with exceptions
+  during audits and submissions).
+
+SITE-DEPENDENT (mostly or entirely on site)
+  Manufacturing and QC (Basel). The work is physical, the equipment is here,
+  and the quality system requires it.
+  Laboratory and applications roles requiring instrument access.
+  Facilities.
+
+FIELD-BASED (neither, really)
+  Field service engineering. You are at customer sites. Your "office" days are
+  administrative and can be anywhere, but your working pattern is driven by
+  the visit schedule. Field engineers get a home working allowance and an
+  equipment budget on the same basis as everyone else.
+
+FULLY REMOTE
+  A small number of roles are contractually remote, mostly where we hired
+  someone excellent who lives nowhere near Cambridge or Basel. These are
+  agreed individually and stated in the contract.
+
+-----------------------------------------------------------------
+3. WHY TWO DAYS AND NOT ZERO OR FIVE
+-----------------------------------------------------------------
+We are asked this often enough to answer it properly.
+
+Two days is a compromise and we know it satisfies nobody completely. The
+reasoning:
+
+  - Our products are physical. A firmware engineer who has never watched a
+    VeriScan run a sample writes worse firmware. That access is not
+    replicable remotely.
+  - New starters onboard measurably faster with in-person contact. Our day 30
+    survey data is unambiguous on this.
+  - Cross-team problems get solved in corridors. The reagent recall
+    investigation moved fastest in a room.
+  - Against that: forcing attendance for its own sake produces people sitting
+    on video calls in an open-plan office, which is the worst of both worlds
+    and which we did in 2022.
+
+We review this annually. If the evidence changes, so will the policy.
+
+-----------------------------------------------------------------
+4. HOW TEAMS DECIDE
+-----------------------------------------------------------------
+4.1  Each team agrees its own anchor days and writes them down. Most teams
+     land on Tuesday and Wednesday or Wednesday and Thursday.
+
+4.2  The point of anchor days is that people overlap. Two people in the office
+     on different days is not hybrid working, it is two people alone in an
+     office.
+
+4.3  Teams may vary the pattern by week where it makes sense - a design
+     sprint, a customer visit, a quiet period.
+
+4.4  Managers should not require attendance beyond the team norm without a
+     reason they are willing to say out loud.
+
+-----------------------------------------------------------------
+5. FLEXIBLE HOURS
+-----------------------------------------------------------------
+5.1  Core hours are 10:00 to 15:00 local time. Outside those, work when you
+     work best, provided your commitments are met.
+
+5.2  Compressed hours, term-time working, annualised hours and part-time are
+     all available and all in use somewhere in the company.
+
+5.3  Switzerland: working time recording remains a legal requirement whatever
+     your pattern. This is not negotiable and is not a signal of distrust.
+
+-----------------------------------------------------------------
+6. FORMAL FLEXIBLE WORKING REQUESTS
+-----------------------------------------------------------------
+6.1  You have a statutory right in the UK to request flexible working from day
+     one, twice in any 12 months. Veridia treats a request from anyone,
+     anywhere, the same way.
+
+6.2  We will meet you within 2 weeks and decide within 4, against a statutory
+     limit of 2 months. Refusals must be for one of the statutory business
+     reasons and must be explained in writing with a right of appeal.
+
+6.3  In 2025 we received 18 formal requests and approved 17. The one refusal
+     was a request for fully remote working in a role requiring instrument
+     access; we offered a different role instead and the person took it.
+
+-----------------------------------------------------------------
+7. WORKING FROM ELSEWHERE
+-----------------------------------------------------------------
+7.1  ANOTHER VERIDIA SITE. Just go. Book a desk.
+
+7.2  ANOTHER COUNTRY, SHORT PERIOD. Up to 20 working days a year from another
+     country, subject to approval from your manager and the People team.
+     The approval is not about trust, it is about tax and social security -
+     an employee working from an EU country can create a permanent
+     establishment risk and a personal tax liability, and neither of us wants
+     to discover that afterwards.
+
+     Tell us at least 4 weeks in advance. Some countries we will decline, and
+     we will explain why.
+
+7.3  MOVING PERMANENTLY. Talk to us early. We can employ people in the UK and
+     Switzerland directly. Elsewhere is complicated and sometimes impossible.
+     We have made it work three times and been unable to twice.
+
+-----------------------------------------------------------------
+8. YOUR HOME WORKSTATION
+-----------------------------------------------------------------
+8.1  GBP 400 (UK) or CHF 450 (CH) on joining towards desk, chair and
+     accessories. Refreshed every 3 years.
+
+8.2  Display screen equipment self-assessment on joining and annually. If it
+     flags a problem, we fund an assessment and the equipment.
+
+8.3  Veridia provides laptop, monitor, keyboard, mouse and headset. You are
+     not expected to use your own.
+
+8.4  We do not contribute to household bills beyond the statutory allowance
+     you can claim yourself. Ask Finance how.
+
+-----------------------------------------------------------------
+9. WHAT WE ASK OF YOU
+-----------------------------------------------------------------
+  - Be contactable during core hours, or say when you will not be.
+  - Keep your calendar accurate. It is the only way a distributed team works.
+  - Do not work from a location where you cannot take a confidential call. A
+    field engineer discussing a customer's instrument fault from a train
+    carriage is a confidentiality problem.
+  - Secure your workspace. Customer data and regulated documents do not go on
+    kitchen tables in shared houses.
+  - Come in when it matters, even if it is not your day: a new starter's first
+    week, a workshop, a colleague's last day.
+
+-----------------------------------------------------------------
+10. WHAT WE WILL NOT DO
+-----------------------------------------------------------------
+  - Monitor your keyboard, mouse or screen. We do not use activity tracking
+    software and we will not.
+  - Measure your performance by attendance.
+  - Require a camera on for internal calls.
+  - Ask you to justify a day at home.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+people@veridiabio.com | rachel.duffy@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

@@ -1,0 +1,20 @@
+function,headcount,total_absence_days,absence_rate_pct,bradford_factor_mean,short_term_episodes,long_term_cases_over_28_days,top_reason_1,top_reason_2,top_reason_3,mental_health_days,mental_health_pct_of_total,oh_referrals,commentary
+Field Service,36,412,4.7,187,94,2,Musculoskeletal,Stress and fatigue,Respiratory infection,118,28.6,4,Highest absence rate in the company. Driving hours and manual handling are the two mechanisms. Stress component concentrated in Q1-Q2 2025 coinciding with the FSN-2025-003 recall response and the SP-1 escalation volume. Subject of a formal stress risk assessment - see HR-Manager__stress-risk-assessment-field-service-2025.txt
+Support,32,268,3.4,142,71,1,Respiratory infection,Mental health,Musculoskeletal,96,35.8,3,Mental health share is the highest in the company as a proportion of absence. Escalation load and out-of-hours contact identified as contributory. Rota changes made Q3 2025.
+Manufacturing (Basel),41,352,3.5,131,88,2,Musculoskeletal,Respiratory infection,Gastrointestinal,42,11.9,2,Absence rate close to Swiss manufacturing norm. Musculoskeletal reflects standing work and manual handling. Ergonomic review completed Nov 2025.
+Quality,26,198,3.1,118,52,1,Respiratory infection,Musculoskeletal,Mental health,38,19.2,1,One long-term case opened Jan 2026 falls outside this reporting period.
+Engineering,38,201,2.2,96,58,0,Respiratory infection,Musculoskeletal,Migraine,44,21.9,2,Lowest absence rate. Note this population is also the one most able to work from home while mildly unwell which may suppress the recorded figure rather than reflect better health.
+Commercial,29,164,2.3,104,46,0,Respiratory infection,Musculoskeletal,Mental health,31,18.9,0,
+Regulatory,10,58,2.4,88,17,0,Respiratory infection,Mental health,Migraine,16,27.6,0,Small population - interpret with caution
+Applications,11,71,2.7,109,21,0,Respiratory infection,Musculoskeletal,Mental health,14,19.7,0,
+People Finance Legal IT,24,143,2.4,101,39,0,Respiratory infection,Mental health,Musculoskeletal,34,23.8,0,
+R&D,21,118,2.3,92,32,0,Respiratory infection,Migraine,Musculoskeletal,21,17.8,0,
+Executive,9,31,1.6,52,9,0,Respiratory infection,Musculoskeletal,,4,12.9,0,Low reported absence at executive level is a known reporting artefact across most organisations and should not be read as a health finding
+COMPANY TOTAL,277,2016,3.0,124,527,6,Respiratory infection,Musculoskeletal,Mental health,458,22.7,12,
+,,,,,,,,,,,,,
+NOTE ON HEADCOUNT: 277 is the average headcount over the calendar year 2025 for absence-rate purposes and differs from the 318 point-in-time figure at 31 December.,,,,,,,,,,,,,
+NOTE ON MENTAL HEALTH: 22.7% of all absence days company-wide were attributed to mental ill health. This is close to the UK national average of approximately 22%. The figure is presented without alarm and without complacency. The concentration in Support (35.8%) and Field Service (28.6%) is the finding worth acting on.,,,,,,,,,,,,,
+NOTE ON THE BRADFORD FACTOR: reported for information only. VERIDIA DOES NOT USE BRADFORD FACTOR TRIGGERS AND MANAGERS MUST NOT REFER TO IT WITH EMPLOYEES. It is included here because occupational health providers and insurers request it. Using it as a disciplinary trigger disadvantages employees with disabilities and fluctuating conditions and we do not do it.,,,,,,,,,,,,,
+NOTE ON LONG-TERM CASES: 6 cases exceeded 28 days in 2025. All 6 received an occupational health referral. 5 returned to work; 1 remained absent at year end.,,,,,,,,,,,,,
+DATA SOURCE: PeopleHub absence records, extracted 2026-01-14. Individual-level data is not included in this file. Function-level only.,,,,,,,,,,,,
+ACCESS: People team, Directors (own function only), Executive Committee, and the occupational health provider. Not shared with line managers below Director level.,,,,,,,,,,

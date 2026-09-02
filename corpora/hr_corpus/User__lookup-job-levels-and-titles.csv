@@ -1,0 +1,21 @@
+level_code,level_name,job_family,example_titles,typical_scope,typical_years_experience,people_management,uk_band,ch_band
+L1,Associate,Engineering,Associate Engineer; Graduate Software Engineer,Works on well-defined tasks with close guidance,0-2,No,B1,C1
+L1,Associate,Laboratory,Associate Scientist; Laboratory Technician,Runs defined protocols under supervision,0-2,No,B1,C1
+L1,Associate,Commercial,Sales Development Representative,Supports a named territory,0-2,No,B1,C1
+L1,Associate,Support,Support Engineer L1,First-line ticket triage against documented runbooks,0-2,No,B1,C1
+L2,Engineer,Engineering,Software Engineer; Firmware Engineer; Field Service Engineer,Owns defined components end to end,2-4,No,B2,C2
+L2,Engineer,Laboratory,Scientist; QC Analyst,Owns a method or assay area,2-4,No,B2,C2
+L2,Engineer,Commercial,Account Executive,Owns a territory or segment,2-4,No,B2,C2
+L2,Engineer,Support,Support Engineer L2,Second-line diagnosis and escalation ownership,2-4,No,B2,C2
+L3,Senior,Engineering,Senior Engineer; Senior Field Service Engineer,Owns a subsystem; sets technical direction within it,4-8,Optional,B3,C3
+L3,Senior,Laboratory,Senior Scientist; QC Applications Specialist,Owns a technical domain across products,4-8,Optional,B3,C3
+L3,Senior,Commercial,Senior Account Manager; Sales Manager,Owns a region or major account set,4-8,Optional,B3,C3
+L3,Senior,Support,Support Engineering Lead,Owns escalation process and L2 quality,4-8,Optional,B3,C3
+L3,Senior,Corporate,Regulatory Affairs Manager; HR Business Partner; Finance Manager,Owns a functional area,4-8,Optional,B3,C3
+L4,Staff / Principal,Engineering,Staff Engineer; Firmware Lead; Principal Scientist,Owns a system or a cross-team technical problem,8+,Optional,B4,C4
+L4,Staff / Principal,Laboratory,Principal Scientist,Sets scientific direction for a product line,8+,Optional,B4,C4
+L4,Staff / Principal,Corporate,Head of Field Service Engineering; Head of Reward,Owns a department,8+,Usually,B4,C4
+L5,Director,All,VP Customer Support; Director of Engineering; Head of Regulatory,Owns a function and its budget,10+,Yes,B5,C5
+L6,Executive,All,Chief Scientific Officer; Chief People Officer; CFO,Executive Committee member,15+,Yes,B6,C6
+,,,,,,,,
+NOTE: L4 has two tracks. The individual contributor track (Staff / Principal) and the management track (Head of) are paid on the same band. Moving between them is lateral and is not a promotion or a demotion. See User__career-framework-overview-v5.txt section 4.,,,,,,,,

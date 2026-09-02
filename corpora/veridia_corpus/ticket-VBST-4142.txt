@@ -1,0 +1,99 @@
+Ticket ID: VBST-4142
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-07-24 10:05 UTC
+Product: VeriScan 400 (customer believed VeriScan 400 Pro)
+Customer: Countess of Chester Hospital NHS Foundation Trust (ACC-1090)
+Reported by: Rachel Okon, BMS
+             rachel.okon@coch.nhs.uk
+Assigned to: Owen Trask (Support Engineer L1)
+Serial: VS4-0402
+Firmware: 4.2.3
+
+--- Thread ---
+
+[2025-07-24 10:05] Rachel Okon (BMS):
+We're trying to set up reticulocyte counting on our VeriScan 400 Pro and
+there's no Reticulocyte option on the run menu. We've looked through Settings
+and can't find anything to enable it.
+
+Also we ordered RGT-RT stain and the cartridge won't go in - the instrument
+throws E-302 and says the cartridge isn't recognised.
+
+Has something been disabled?
+
+[2025-07-24 11:30] Owen Trask (Support Engineer L1):
+Rachel - I think there may be a misunderstanding about which model you have,
+and I want to check that gently before we go further.
+
+Serial VS4-0402 is registered on our system as a VeriScan 400, not a VeriScan
+400 Pro. The VeriScan 400 doesn't have a reticulocyte channel at all - it isn't
+a setting that can be enabled, the hardware isn't there.
+
+Could you check two things for me:
+1. Settings > About. What does the platform string say - "VeriScan 400" or
+   "VeriScan 400 Pro"?
+2. How many reagent cartridge bays does the instrument have? The 400 has
+   three; the Pro has four.
+
+[2025-07-24 12:15] Rachel Okon (BMS):
+Settings > About says "VeriScan 400".
+Three bays.
+
+Oh. So we don't have a Pro.
+
+I feel a bit daft. We've been calling it "the Pro" since I started here because
+that's what everyone calls it.
+
+[2025-07-24 13:00] Owen Trask (Support Engineer L1):
+Please don't - this comes up regularly and it's completely understandable. The
+two models share the same chassis, the same screen and the same badge position,
+and the difference is one word on a small plate. We have a section in the Pro
+datasheet specifically about telling them apart because of how often it
+happens.
+
+For what it's worth, "the Pro" as an informal name for whichever analyser is
+the newer one is something I've heard at several sites.
+
+Where does that leave you:
+- You can't do reticulocytes on this instrument. The E-302 is the instrument
+  correctly refusing a cartridge it has no bay or channel for.
+- The RGT-RT stain you've ordered can be returned. I'll raise that - it's
+  unopened and within date, so a full credit.
+- If reticulocyte counting is something you need, that's a conversation with
+  your account manager about a 400 Pro, either as an additional instrument or
+  as a replacement. Peter Doyle covers you.
+
+[2025-07-24 14:20] Rachel Okon (BMS):
+That's helpful, thank you. I'll speak to Ian about whether we actually need
+retics - I think the assumption was that we could just turn it on.
+
+Please do raise the return.
+
+[2025-07-24 15:00] Owen Trask (Support Engineer L1):
+Return raised, RMA-2025-0884. Courier will collect. Credit note to follow.
+
+I've also asked Peter Doyle to give Ian a call, and I've noted on the account
+record that this site's instrument is sometimes referred to locally as "the
+Pro" so that the next person to pick up a ticket from you doesn't go down the
+same path.
+
+One suggestion that costs nothing: put a label on the instrument saying
+"VeriScan 400 - serial VS4-0402 - no reticulocyte channel". Sites that do this
+save themselves a surprising amount of confusion, particularly with agency and
+rotating staff.
+
+[2025-07-25 09:30] Rachel Okon (BMS):
+Label made and on the instrument. Ian has spoken to Peter.
+
+Thanks for not making me feel stupid about it.
+
+--- Resolution ---
+No fault. Customer believed they operated a VeriScan 400 Pro; instrument
+VS4-0402 is a VeriScan 400 with no reticulocyte channel. E-302 was correct
+behaviour rejecting an RGT-RT cartridge.
+Actions: RGT-RT stock returned for full credit (RMA-2025-0884); account
+manager engaged regarding a Pro; instrument labelled locally; account record
+annotated.
+See also: spec-veriscan-400-pro-v3.txt "Relationship to the VeriScan 400",
+lookup-error-codes-veriscan-400.csv applies_to column.

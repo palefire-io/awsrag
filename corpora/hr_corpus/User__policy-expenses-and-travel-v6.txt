@@ -1,0 +1,201 @@
+=================================================================
+VERIDIA BIOSYSTEMS - FINANCE AND PEOPLE TEAM
+Expenses and Business Travel Policy
+=================================================================
+Document:      FIN-POL-005
+Version:       6
+Effective:     2026-01-01
+Owner:         Gary Pemberton, Chief Financial Officer
+Co-owner:      Priya Anand, Head of Field Service Engineering (travel sections)
+Applies to:    All employees and contractors claiming through Veridia
+
+-----------------------------------------------------------------
+1. THE PRINCIPLE
+-----------------------------------------------------------------
+Spend Veridia's money as you would spend your own, if you were reasonably
+well off and in a hurry. Do not be extravagant. Do not be miserly at the
+expense of your own health or safety, particularly if you are a field engineer
+driving home at nine at night.
+
+Where this policy is silent, apply that test and expect to be supported.
+
+-----------------------------------------------------------------
+2. SUBMITTING A CLAIM
+-----------------------------------------------------------------
+2.1  Through Expensify, within 60 days of the expense. Claims older than 90
+     days need CFO approval and are sometimes refused.
+
+2.2  Receipts required for everything over GBP 25 / CHF 25. Photograph them at
+     the time; a fortnight later you will not have them.
+
+2.3  Approved by your manager, then Finance. Reimbursed with the next payroll
+     run, or within 10 working days for claims over GBP 500 where you ask.
+
+2.4  IF YOU ARE LEAVING, SUBMIT EVERYTHING BEFORE YOUR LAST DAY. Claims after
+     departure are genuinely difficult.
+
+-----------------------------------------------------------------
+3. TRAVEL - GETTING THERE
+-----------------------------------------------------------------
+RAIL
+  Standard class as default. First class permitted where it is cheaper than
+  standard on the day (which happens more than people expect), or on a journey
+  over 3 hours where you need to work, or where you are travelling to a
+  customer meeting starting within an hour of arrival.
+  Book in advance where you can. Field service: we know you cannot.
+  Season tickets and railcards funded where they pay back within a year.
+
+AIR
+  Economy for flights under 5 hours.
+  Premium economy permitted over 5 hours, or where you land and work the same
+  day.
+  Business class needs Director approval and is rarely given. It has been
+  given for a 14-hour flight to a customer escalation.
+  Book 14 days ahead where possible.
+
+CAR
+  Field service engineers have company vehicles. Fuel card provided. Personal
+  mileage must be declared monthly.
+  Own car on business: 45p per mile for the first 10,000 miles, 25p after
+  (UK, HMRC rates); CHF 0.70 per km (CH).
+  YOU MUST HAVE BUSINESS USE ON YOUR INSURANCE. Check. Commuting cover is not
+  business cover and your insurer will decline a claim.
+  Taxis and ride-hailing: fine for airport transfers, late-night travel,
+  heavy equipment, or where public transport is impractical.
+
+DRIVING SAFETY - NOT NEGOTIABLE
+  Do not drive more than 4 hours without a 30-minute break.
+  Do not drive more than 8 hours in a day on business.
+  Do not start a drive home after 21:00 following a full working day. Stay
+  over. Veridia pays. This is a standing instruction from Priya Anand and it
+  overrides any cost consideration and any customer's convenience.
+  Do not take a call while driving, hands-free or otherwise, if it requires
+  concentration. Pull over.
+  Report every incident, however minor, the same day.
+
+-----------------------------------------------------------------
+4. ACCOMMODATION
+-----------------------------------------------------------------
+  UK, outside London        up to GBP 140 per night
+  London                    up to GBP 210 per night
+  Switzerland               up to CHF 220 per night
+  Rest of Europe            up to EUR 190 per night
+  US                        up to USD 260 per night
+
+Room and breakfast. Book through the travel system where you can.
+
+Over the cap because of an event or a city with nothing available? Book it,
+explain it in the claim, and it will be approved. The cap is guidance, not a
+wall.
+
+Staying with friends or family instead of a hotel: claim GBP 30 / CHF 30 per
+night as a thank-you, no receipt needed.
+
+-----------------------------------------------------------------
+5. MEALS
+-----------------------------------------------------------------
+Actual cost, receipted, within these guides per day when away overnight:
+
+  UK          GBP 45     (breakfast 10, lunch 12, dinner 30 if not provided)
+  Switzerland CHF 60
+  Europe      EUR 50
+  US          USD 65
+
+Alcohol: one drink with an evening meal is claimable. Beyond that, no. Rounds
+at a bar are not claimable.
+
+Meals while not staying overnight are not claimable unless you are entertaining
+a customer or the journey exceeds 8 hours.
+
+Team meals need manager approval. Anything over GBP 500 needs Director
+approval.
+
+-----------------------------------------------------------------
+6. CUSTOMER ENTERTAINMENT - READ THIS CAREFULLY
+-----------------------------------------------------------------
+6.1  Most of our customers are publicly funded healthcare organisations. The
+     rules for them are stricter than for commercial customers and the
+     reputational risk runs one way.
+
+6.2  Acceptable: modest hospitality directly attached to a legitimate business
+     purpose. Lunch at a customer meeting. Refreshments at a user group.
+     Dinner with a customer team at a conference.
+
+6.3  Requires prior approval from your Director AND Sunita Raval (General
+     Counsel): anything beyond a meal, anything involving travel or
+     accommodation for a customer, anything at a sporting or entertainment
+     event, anything over GBP 75 per head.
+
+6.4  NEVER acceptable: cash or vouchers; anything to an individual involved in
+     an active procurement decision; anything at all while a tender is live;
+     anything you would be uncomfortable seeing described in a freedom of
+     information response.
+
+6.5  All customer entertainment is recorded in the hospitality register held
+     by the General Counsel, regardless of value.
+
+6.6  If in doubt, ask before. Nobody has ever been criticised for asking.
+
+-----------------------------------------------------------------
+7. OTHER CLAIMABLE THINGS
+-----------------------------------------------------------------
+  Professional body membership     Funded separately, not from expenses
+  Conference fees                  With manager approval
+  Home broadband                   Not claimable
+  Mobile phone                     Company phone provided for field and
+                                   customer-facing roles; otherwise not
+                                   claimable
+  Home office equipment            Separate allowance, see the hybrid working
+                                   policy
+  Eye tests and glasses            Where display screen use requires a
+                                   correction
+  Visas and vaccinations           Required for business travel, fully funded
+  Airport lounge                   Where a delay or connection exceeds 3 hours
+  Laundry                          Trips of 5 nights or more
+  Parking and tolls                Yes. Parking fines, no.
+  Speeding fines                   No. Ever. Under any circumstances.
+
+-----------------------------------------------------------------
+8. TRAVEL SAFETY AND WELFARE
+-----------------------------------------------------------------
+8.1  Lone working: field engineers use the check-in system for any visit
+     outside normal hours or to an unfamiliar site.
+
+8.2  Travel insurance covers all business travel including medical
+     repatriation. Card in your wallet; policy number on the intranet.
+
+8.3  You may decline to travel somewhere you consider unsafe. Say so. This has
+     never been questioned.
+
+8.4  If you feel unsafe at a customer site - equipment, environment or
+     behaviour - leave. Ring your manager afterwards, not before. This
+     includes harassment by customer staff, which is covered by
+     User__policy-grievance-and-dignity-at-work-v4.txt section 6.5.
+
+8.5  Overnight travel counts as working time for the purpose of rest periods
+     even where it is not paid time.
+
+-----------------------------------------------------------------
+9. WHAT GETS REJECTED
+-----------------------------------------------------------------
+The genuinely common ones:
+  - No receipt over the threshold
+  - Personal items bought on a company card
+  - Alcohol beyond one drink
+  - Parking and speeding fines
+  - Commuting to your normal place of work
+  - Claims over 90 days old
+  - Customer entertainment without prior approval
+
+If your claim is rejected you will be told why by a person, not by the system.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+expenses@veridiabio.com
+Gary Pemberton, CFO - gary.pemberton@veridiabio.com
+Travel safety, field service - priya.anand@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

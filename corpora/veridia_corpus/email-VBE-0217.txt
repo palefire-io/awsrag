@@ -1,0 +1,55 @@
+From: Helen Tarbuck <helen.tarbuck@nhs.net>
+To: Rob Ellery <rob.ellery@veridiabio.com>
+CC: support@veridiabio.com
+Date: Mon, 11 Aug 2025 08:15:33 +0100
+Subject: Post-install questions - VS4-1002
+X-Mailer: Microsoft Outlook 16.0
+
+Hi Rob,
+
+Thanks for last week, the install went smoothly and the team liked the
+training.
+
+A few things have come up now we're using it properly. None urgent.
+
+1. The autoloader occasionally skips a position and we can't work out why. It
+   goes 1, 2, 4, 5 and then comes back for 3 at the end. Is that a fault or is
+   it doing something clever?
+
+2. We're not sure how often we should be running the Extended Clean. The
+   training said "as needed" but that's not much use for writing an SOP. What
+   do comparable sites do?
+
+3. Where do we find the reagent lot numbers to write in our QC record? We've
+   been reading them off the cartridge label but someone said the instrument
+   shows them somewhere.
+
+4. Our QC is passing but the L-J charts on the instrument only show 30 days.
+   Can we get longer? We're on Essentials.
+
+5. The IQ/OQ report you left - do we need to keep the original or is a scan
+   fine? Our quality manager asked and I didn't know.
+
+6. Two of the staff who couldn't make the training day are asking for a
+   catch-up session. Is that something we pay for or is it covered?
+
+Also, a slightly awkward one. In the training pack there's a datasheet that
+mentions body fluid mode and reticulocytes, and we can't find either of those
+on the instrument. Are they options we haven't bought?
+
+Thanks
+
+Helen
+
+Helen Tarbuck
+Senior Biomedical Scientist
+Haematology
+Wirral University Teaching Hospital NHS Foundation Trust
+Arrowe Park Hospital, Upton, Wirral CH49 5PE
+helen.tarbuck@nhs.net | 0151 678 5111 ext 2214
+
+--
+This message may contain confidential information. If you are not the intended
+recipient please inform the sender that you have received the message in error
+before deleting it. Please do not disclose, copy or distribute information in
+this email or take any action in reliance on its contents.

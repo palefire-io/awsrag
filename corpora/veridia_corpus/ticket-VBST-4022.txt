@@ -1,0 +1,95 @@
+Ticket ID: VBST-4022
+Status: Resolved
+Priority: P2-High
+Created: 2025-03-26 08:40 UTC
+Product: VeriScan 400
+Customer: NHS Lothian - Royal Infirmary of Edinburgh (ACC-1078)
+Reported by: Fiona Sutherland, Chief BMS
+             fiona.sutherland@nhslothian.scot.nhs.uk | 0131 536 1000 ext 24418
+Assigned to: Danny Whitcombe (Support Engineer) -> Callum Frazer (FSE)
+Serial: VS4-0733
+Firmware: 4.2.3
+
+--- Thread ---
+
+[2025-03-26 08:40] Fiona Sutherland (Chief BMS):
+Recurring E-104 sample probe blockage on VS4-0733. Three times yesterday, twice
+this morning. Probe Unblock cycle clears it each time but it comes back within
+a couple of hours.
+
+We've done the probe soak in Appendix B twice this week.
+
+[2025-03-26 09:55] Danny Whitcombe (Support Engineer):
+E-104 recurring after a soak usually means the probe itself, the seal kit, or
+something in the sample presentation.
+
+Questions:
+- Is it happening on particular samples, or randomly?
+- Any pattern with sample type - are the blocking samples from a particular
+  ward or a particular collection route?
+- Have you inspected the probe tip under magnification for a burr?
+
+[2025-03-26 11:30] Fiona Sutherland (Chief BMS):
+Random as far as we can tell. No ward pattern.
+
+Looked at the tip under the bench magnifier. There's a slight lip on one side
+of the aperture that I don't think should be there.
+
+[2025-03-26 12:10] Danny Whitcombe (Support Engineer):
+That'll be it. A burr on the aperture catches fibrin and builds a nucleus for
+the next blockage, which is why the soak works temporarily and the problem
+returns.
+
+Probe and seal kit need replacing - VS4-MEC-011 and VS4-SP-021. Both are
+field-replaceable but the probe alignment afterwards is fiddly and I'd rather
+an engineer did it on a single-analyser critical site.
+
+Callum Frazer can attend on 2 April. Can you manage until then with the unblock
+cycle?
+
+[2025-03-26 13:05] Fiona Sutherland (Chief BMS):
+We can manage. It's an irritation rather than a crisis.
+
+Out of interest - what causes a burr? We've had this probe since install.
+
+[2025-03-26 14:20] Danny Whitcombe (Support Engineer):
+Most often repeated piercing of caps from a tube type with a harder stopper
+than the probe was designed around, or occasionally a single event where the
+probe met the rim of a mis-seated tube. Two years of routine use shouldn't do
+it on its own.
+
+Worth asking whether your tube type changed. It's caught out a few sites.
+
+[2025-04-02 15:40] Callum Frazer (Field Service Engineer):
+Attended (FSV-2025-0203). Probe assembly VS4-MEC-011 replaced, seal kit
+VS4-SP-021 replaced. Old probe has a visible burr at the 4 o'clock position on
+the aperture, consistent with a strike rather than wear - photographed for the
+returns record.
+
+Alignment set and verified. Fluidics primed. 40-sample run with no E-104.
+Carryover check 0.2%. QC both levels in range.
+
+Asked about tube types: site changed from a 4mL to a 3mL tube in January for
+a paediatric-heavy workload. The 3mL tube has a slightly domed stopper and
+sits marginally higher. Advised that this is within specification but that the
+site should watch for a repeat, and showed them how to check the probe tip
+monthly.
+
+Also demonstrated the clot check procedure - two of their staff were running
+the Probe Unblock cycle without first checking whether the sample was clotted,
+which means a clotted sample can go straight back in and block it again.
+
+Time on site 3.5 hours.
+
+[2025-04-03 09:15] Fiona Sutherland (Chief BMS):
+No further E-104 since. The clot check point was well made - we'd got sloppy
+about it.
+
+Thanks both.
+
+--- Resolution ---
+Root cause: burr on the sample probe aperture (strike damage) causing repeated
+fibrin accumulation.
+Actions: probe and seal kit replaced (FSV-2025-0203); alignment verified; staff
+retrained on clot check before running Probe Unblock; monthly probe tip
+inspection advised.

@@ -1,0 +1,176 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Performance Review Cycle
+=================================================================
+Document:      HR-POL-018
+Version:       6
+Effective:     2026-01-01
+Owner:         Denise Kaur, Reward and Benefits Manager
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+
+WHAT CHANGED IN VERSION 6
+  - Numeric ratings removed. Replaced with four descriptive outcomes.
+  - Forced distribution abolished. There is no curve and no quota.
+  - Self-assessment shortened from eleven questions to three.
+  - Peer feedback made optional rather than mandatory.
+
+-----------------------------------------------------------------
+1. THE CYCLE
+-----------------------------------------------------------------
+  Continuous     One-to-one at least fortnightly. This is where performance
+                 is actually managed. Everything below is administration on
+                 top of it.
+  April          Mid-year check-in. No paperwork. A conversation about
+                 trajectory.
+  October        Year-end review. Written.
+  November        Calibration.
+  December       Outcomes and pay review communicated.
+  1 January      Pay changes effective.
+
+Promotion decisions run on their own two windows - March and September - and
+are described in User__career-framework-overview-v5.txt section 6.
+
+-----------------------------------------------------------------
+2. WHAT IS ASSESSED
+-----------------------------------------------------------------
+Two things, weighted equally.
+
+  WHAT       Did you deliver what your role and level require? Measured
+             against goals agreed at the start of the year and adjusted
+             honestly when circumstances changed - and they always change.
+
+  HOW        Did you work in a way consistent with the code of conduct? This
+             is not a soft factor. Sustained delivery achieved by making
+             colleagues' lives worse does not produce a good review at
+             Veridia, and we have acted on this at senior levels.
+
+-----------------------------------------------------------------
+3. THE FOUR OUTCOMES
+-----------------------------------------------------------------
+  EXCEPTIONAL
+    Performance well beyond the expectations of the level, sustained across
+    the year. Typically 5-10% of people. There is no cap.
+
+  STRONG
+    Doing the job well. Meeting the expectations of the level consistently.
+    THIS IS THE NORMAL OUTCOME AND IT IS A GOOD OUTCOME. The majority of
+    people at Veridia are here and should be. Version 5 called this "meets
+    expectations" and people read it as a criticism, which is why the words
+    changed.
+
+  DEVELOPING
+    Not yet consistently meeting the expectations of the level. Common and
+    entirely appropriate for someone recently promoted or recently joined.
+    Not a warning.
+
+  BELOW EXPECTATIONS
+    Sustained shortfall against the level. Triggers a documented support plan
+    with a defined period and clear success criteria. It should never be a
+    surprise - if this appears in your written review and you have not been
+    told before, your manager has failed.
+
+3.1  Numeric ratings were removed because six years of data showed managers
+     were calibrating to the number rather than describing the performance,
+     and because a 3 out of 5 reads as a failure to most people no matter
+     what the definition says.
+
+3.2  There is no forced distribution. If everyone in a team is genuinely
+     strong, everyone gets Strong. Calibration exists to make the bar
+     consistent, not to ration outcomes.
+
+-----------------------------------------------------------------
+4. WHAT YOU WRITE
+-----------------------------------------------------------------
+Three questions. That is all.
+
+  1. What are you most proud of this year, and why did it matter?
+  2. What did not go as you hoped, and what did you take from it?
+  3. What do you want to be doing differently in a year, and what do you need
+     from us to get there?
+
+Version 5 asked eleven questions across four competency dimensions. It took
+people a working day to complete and produced worse conversations, not better
+ones.
+
+-----------------------------------------------------------------
+5. FEEDBACK FROM OTHERS
+-----------------------------------------------------------------
+5.1  You may nominate up to five colleagues. Your manager may add up to two,
+     and must tell you who.
+
+5.2  Optional from version 6. If you would rather not, say so and it will not
+     be held against you.
+
+5.3  Feedback is shared with you in substance. It is not anonymous to your
+     manager. We do not run anonymous peer review; it produces sharper
+     comments and worse outcomes.
+
+5.4  Feedback should be specific and about work. "Sometimes difficult in
+     meetings" is not usable. "In the March design review, interrupted three
+     times before the proposal was finished" is.
+
+-----------------------------------------------------------------
+6. CALIBRATION
+-----------------------------------------------------------------
+6.1  Managers within a function meet to compare outcomes, chaired by a
+     Director with the People team present.
+
+6.2  Purpose: the bar is the same across teams. A Strong in support should
+     mean what a Strong in firmware means.
+
+6.3  The People team checks for patterns by gender, ethnicity, part-time
+     status, and family leave taken during the year. Where a pattern appears,
+     the panel is asked to justify it. This has changed two outcomes since
+     2023.
+
+6.4  Your manager must tell you if calibration changed your proposed outcome,
+     and why.
+
+-----------------------------------------------------------------
+7. HOW THIS CONNECTS TO PAY
+-----------------------------------------------------------------
+7.1  Your review outcome is one input to your pay review. The others are where
+     you sit in your band, market movement for your role, and the total budget.
+
+7.2  A Strong outcome does not guarantee an increase, and this is the thing
+     people find hardest. Someone at the top of their band performing strongly
+     may receive little or nothing, while someone lower in the band performing
+     equally strongly receives more. This is how bands work and we would
+     rather explain it than obscure it.
+
+7.3  A Below Expectations outcome normally means no increase.
+
+7.4  Bonus, where your role has one, is governed separately.
+
+7.5  Pay outcomes are communicated in December by your manager, in person,
+     with the reasoning. Not by email and not by a number in a system.
+
+-----------------------------------------------------------------
+8. IF YOU DISAGREE
+-----------------------------------------------------------------
+Talk to your manager first, then ask the People team for a review. A review
+looks at the evidence with fresh eyes and can change the outcome. If you
+believe the outcome was affected by discrimination, that is a grievance.
+
+-----------------------------------------------------------------
+9. FOR MANAGERS
+-----------------------------------------------------------------
+9.1  Nothing in a year-end review should be new. If it is, that is your
+     failure, not theirs.
+
+9.2  Write about behaviour and evidence, not personality.
+
+9.3  Deliver a difficult outcome in person, early in the day, with time
+     afterwards. Do not do it on a Friday afternoon by video call.
+
+9.4  Do not use "budget" as the explanation for a pay outcome you have not
+     understood. Ask Denise Kaur to explain it to you first.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+denise.kaur@veridiabio.com | people@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

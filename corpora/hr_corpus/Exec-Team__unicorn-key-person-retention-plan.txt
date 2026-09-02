@@ -1,0 +1,278 @@
+=================================================================
+*** STRICTLY CONFIDENTIAL - PROJECT UNICORN ***
+*** EXECUTIVE COMMITTEE ONLY - NOT FOR THE WIDER DEAL TEAM ***
+=================================================================
+PROJECT UNICORN
+Key Person Analysis and Retention Plan
+=================================================================
+Report reference: UNI-DD-HR-007
+Date:             2026-06-26
+Prepared by:      Naomi Okonjo-Bright, Chief People Officer
+                  Denise Kaur, Reward and Benefits Manager
+Approved by:      Gary Pemberton, CFO (budget), Dr Alistair Vance, CEO
+Classification:   Strictly Confidential - Inside Information
+
+*** THIS DOCUMENT NAMES INDIVIDUALS AND ASSESSES THEIR LIKELIHOOD OF LEAVING.
+*** IT IS RESTRICTED TO THE EXECUTIVE COMMITTEE. IT MUST NOT BE SHOWN TO ANY
+*** NAMED INDIVIDUAL, TO ANY LINE MANAGER, OR TO ANY ADVISER.
+
+-----------------------------------------------------------------
+1. THE PROBLEM
+-----------------------------------------------------------------
+1.1  Veridia is acquiring capability, not revenue. The capability lives in
+     people. If the people leave in the first eighteen months, we will have
+     paid GBP 62M to GBP 68M for an installed base and a factory.
+
+1.2  Narwhal's overall voluntary turnover is 22 per cent. Its R&D turnover is
+     8 per cent, and R&D is where the capability sits. That is reassuring
+     until you consider that an acquisition is precisely the event that moves
+     an 8 per cent population.
+
+1.3  Industry evidence on acquisitions: senior target-company departures run
+     at roughly double the base rate in the two years following completion,
+     concentrated in months 6 to 18 once earn-outs and initial retention
+     periods expire.
+
+-----------------------------------------------------------------
+2. NARWHAL KEY PEOPLE
+-----------------------------------------------------------------
+Assessed on: criticality (what breaks if they go), replaceability, and flight
+risk. Flight risk is assessed from tenure, equity position, age, market
+demand, and what they have said in the process.
+
+  2.1  GARETH STANDISH - Founder and Chief Executive, 61
+       Shareholding 42%. Proceeds on completion approximately GBP 26M.
+       CRITICALITY  Medium. Symbolically very high, operationally moderate -
+                    he has not run day-to-day operations since 2021.
+       FLIGHT RISK  Certain to leave eventually. Has indicated willingness to
+                    stay 12 months.
+       ASSESSMENT   We do not need him for three years. We need him for
+                    twelve months and we need him VISIBLE, because his
+                    employees trust him and their willingness to give Veridia
+                    a chance will be substantially determined by whether he
+                    appears to have sold them or joined them.
+       PLAN         12-month transition agreement. Non-executive role
+                    thereafter if he wants it. Title: Executive Chair,
+                    Narwhal, reporting to Vance. No retention payment - he is
+                    receiving GBP 26M. Ask him to stand on the platform on day
+                    one and say he chose this.
+
+  2.2  DR ISOBEL HARTLAND-VOSE - Chief Technology Officer, 47
+       Shareholding via management/EBT approximately 3.1%, proceeds
+       approximately GBP 1.9M.
+       CRITICALITY  VERY HIGH. THE SINGLE MOST IMPORTANT PERSON IN THIS
+                    TRANSACTION.
+                    She has led Narwhal's mechanical engineering since 2013
+                    and holds four of the six patents underpinning the
+                    SortLine tolerance mechanism. The capability we are
+                    buying is substantially her and the 26-person team she
+                    built.
+       REPLACEABLE  No. Not within three years and not at any price we would
+                    pay.
+       FLIGHT RISK  MEDIUM-HIGH. GBP 1.9M is enough to leave with. She is 47,
+                    highly regarded, and would be hired within a week by any
+                    of four competitors. She has been notably quiet in the
+                    process.
+       ASSESSMENT   If she leaves in year one, the transaction fails on its
+                    stated rationale.
+       PLAN         Retention agreement: GBP 250,000 over 24 months, 40 per
+                    cent at 12 months and 60 per cent at 24. Veridia equity
+                    grant of 45,000 options on a 3-year vest. A seat on the
+                    Veridia Executive Committee as Chief Technology Officer of
+                    the combined group - which is not a retention device but a
+                    genuine role, and is what she should have.
+                    ALISTAIR VANCE TO MEET HER PERSONALLY BEFORE SIGNING. Not
+                    after. Not with lawyers present. The CPO's view is that
+                    this is the highest-leverage hour available to the CEO in
+                    the whole transaction.
+
+  2.3  MARIUSZ ZALEWSKI - Site Director, Wroclaw, 53
+       CRITICALITY  HIGH. 22 years in Polish precision manufacturing, 11 at
+                    Narwhal. The Solidarnosc relationship is substantially
+                    personal to him. Turnover at the site is 31 per cent and
+                    would be worse without him.
+       FLIGHT RISK  LOW-MEDIUM. Deeply rooted in Wroclaw. Would leave if he
+                    concluded the site was being run down.
+       PLAN         Retention GBP 80,000 over 24 months. More importantly, an
+                    explicit and public commitment that Wroclaw is not being
+                    consolidated, backed by a capital investment commitment.
+                    He will believe capital, not words.
+
+  2.4  BERNADETTE ASTLEY-QUINN - HR Director, 44
+       CRITICALITY  MEDIUM-HIGH, and rising.
+                    Joined January 2026 to fix a neglected HR function and is
+                    doing it. She volunteered the IR35 exposure, the holiday
+                    pay exposure and several other findings to our diligence
+                    team before we found them.
+       FLIGHT RISK  MEDIUM. Joined for a turnaround; an acquisition changes
+                    the job she took. No meaningful equity.
+       ASSESSMENT   The synergy model shows a 1-role reduction in HR. That is
+                    wrong. A 728-person combined group with 10 HR staff is
+                    already thin, and the Narwhal population is the one
+                    needing the most HR attention.
+       PLAN         Retention GBP 60,000 over 18 months. Role as HR Director,
+                    Narwhal, reporting to the CPO, with an explicit remit and
+                    budget to continue the remediation she started. The CPO
+                    has asked to meet her within two weeks of signing.
+
+  2.5  DECLAN FAIRHURST-OYELARAN - Commercial Director, 39
+       CRITICALITY  MEDIUM. Owns the top 5 customer relationships (31 per
+                    cent of revenue).
+       FLIGHT RISK  MEDIUM-HIGH. Young, ambitious, and would be a candidate
+                    for a bigger role elsewhere. Also the person most likely
+                    to be unsettled by a combined commercial structure in
+                    which he does not run it.
+       PLAN         Retention GBP 90,000 over 18 months. Honest early
+                    conversation about the combined commercial structure. Do
+                    not promise him a role that Michael Ashworth intends to
+                    hold.
+
+  2.6  THE MECHANICAL ENGINEERING TEAM - 26 people, Warrington
+       CRITICALITY  VERY HIGH IN AGGREGATE.
+                    Average tenure 7.4 years. Turnover 6 per cent.
+       FLIGHT RISK  Individually low, collectively material - engineering
+                    teams leave in clusters following a leader.
+       PLAN         No individual retention payments; they would be divisive
+                    and would signal insecurity. Instead:
+                      - Retain Hartland-Vose (2.2). This is the plan.
+                      - Harmonise their terms to Veridia's at completion
+                        rather than over 36 months. Their pension goes from
+                        4 per cent to 8 per cent and they gain 5 days' leave
+                        and family private medical on day one. For a
+                        26-person team this costs approximately GBP 310,000
+                        a year and buys more goodwill than any retention
+                        bonus.
+                      - Give them work. The SP-1r2 tolerance problem is
+                        exactly what they are good at and it is a live
+                        Veridia problem. Put them on it in month one.
+
+-----------------------------------------------------------------
+3. VERIDIA KEY PEOPLE - THE RISK NOBODY MODELS
+-----------------------------------------------------------------
+3.1  Acquisition retention planning almost always looks only at the target.
+     The acquirer's own key people are equally exposed, and in this case more
+     so, because Veridia's employees did not ask for this and will experience
+     it as disruption rather than as a liquidity event.
+
+3.2  PRIYA ANAND - Head of Field Service Engineering, L4
+     CRITICALITY  VERY HIGH. Named unprompted and warmly by three of the four
+                  field service leavers in H2 2025 as the reason they stayed
+                  as long as they did. Holds the field service function
+                  together through a documented understaffing problem.
+     FLIGHT RISK  MEDIUM-HIGH AND RISING. Approached by executive search in
+                  Q2 2026 for a Head of Service role at a larger competitor;
+                  an off-cycle adjustment of 6.6 per cent was made in June
+                  2026 in response (OCA-2026-011).
+     RISK EVENT   Field service is the largest people workstream in the
+                  integration, it is the area with a live stress risk
+                  assessment, and it is being planned WITHOUT HER because she
+                  has not been told. If she discovers that a 34-role synergy
+                  model was built touching her function while she was outside
+                  the tent, the CPO's assessment is that she may well leave.
+     PLAN         BRING HER INSIDE BEFORE GATE 2. This is recommendation R8 of
+                  the HR due diligence report and it is repeated here in
+                  stronger terms. The CFO has not yet approved it. The CPO's
+                  position is that the disclosure risk of telling her is
+                  materially lower than the retention risk of not telling her.
+
+3.3  MARCUS CHEN - QC Applications Specialist, L3
+     CRITICALITY  HIGH. Disproportionate knowledge concentration; central to
+                  the FSN-2025-003 response; the customer-facing technical
+                  voice.
+     FLIGHT RISK  MEDIUM. Approached in 2026 by a customer and by a
+                  competitor; off-cycle adjustment made (OCA-2026-008).
+     PLAN         Additional equity grant at Gate 3. Explicit role in the
+                  integration as applications lead for the combined portfolio.
+
+3.4  DR ELENA MARCHETTI - Chief Scientific Officer
+     CRITICALITY  VERY HIGH. Founding-era, holds the scientific credibility of
+                  the company externally and internally.
+     FLIGHT RISK  LOW. Substantial vested equity, deep commitment.
+     WATCH        Her stated concern in steering group is that the transaction
+                  is a distraction from IVDR certification. If certification
+                  slips and she attributes it to Unicorn, that changes.
+
+3.5  NAOMI OKONJO-BRIGHT - Chief People Officer
+     CRITICALITY  HIGH, and specifically for this transaction.
+     NOTE         Recorded by the CEO rather than by the author. Naomi has
+                  been the most consistently sceptical voice in the steering
+                  group and has put her reservations in writing at every
+                  stage. That is what she is for. The CEO records that her
+                  continued challenge is an asset and that she should not be
+                  managed out of it.
+
+-----------------------------------------------------------------
+4. BUDGET
+-----------------------------------------------------------------
+  Narwhal retention payments
+    Hartland-Vose (CTO)                    GBP 250,000
+    Fairhurst-Oyelaran (Commercial)        GBP  90,000
+    Zalewski (Wroclaw)                     GBP  80,000
+    Astley-Quinn (HR)                      GBP  60,000
+    Contingency - 3 further individuals
+      identified post-completion           GBP 120,000
+    -------------------------------------  -----------
+    Sub-total                              GBP 600,000
+
+  Veridia retention
+    Additional equity grants (non-cash)              -
+    Off-cycle adjustments already made
+      (OCA-2026-008, OCA-2026-011)        GBP  8,800 annualised
+    Contingency                            GBP 100,000
+    -------------------------------------  -----------
+    Sub-total                              GBP 108,800
+
+  Early harmonisation, mech eng team       GBP 310,000 per annum
+                                           (within the GBP 3.13M
+                                            harmonisation figure)
+
+  TOTAL ONE-OFF RETENTION                  GBP 708,800
+
+4.1  Not in the transaction model. To be added at Gate 2.
+
+-----------------------------------------------------------------
+5. PRINCIPLES
+-----------------------------------------------------------------
+5.1  Retention payments buy time, not commitment. They stop someone leaving in
+     month six. They do not stop them leaving in month twenty-five. What stops
+     that is the job being good.
+
+5.2  Do not pay retention to someone whose departure you would not actually
+     mind. It is expensive and it tells everyone else what you value.
+
+5.3  Do not make a retention offer conditional on silence about the
+     transaction. It reads as hush money and would be indefensible if it
+     surfaced.
+
+5.4  Tell people the truth about their role in the combined structure before
+     they sign a retention agreement. A retention payment obtained by allowing
+     someone to believe they will run something they will not is a
+     twelve-month problem that becomes a claim.
+
+5.5  The single most effective retention measure in this transaction is not on
+     this list. It is harmonising terms upwards quickly and visibly. A Narwhal
+     engineer whose pension doubles and who gains family private medical on
+     day one has been told something about the acquirer that no announcement
+     can convey.
+
+-----------------------------------------------------------------
+6. THE CPO'S CLOSING NOTE
+-----------------------------------------------------------------
+Every acquisition I have seen fails or succeeds on whether the acquired people
+believe the acquirer is better than what they had. Narwhal's people have worse
+terms, no career framework, no learning budget, a 22 per cent turnover rate
+and a manager with three grievances against him still in post.
+
+We can be better than that easily and quickly, and if we are, most of this
+retention budget will turn out to have been unnecessary. If we spend eighteen
+months running two sets of terms while we model synergies, we will spend the
+money and lose the people anyway.
+
+                                Naomi Okonjo-Bright
+                                Chief People Officer
+                                2026-06-26
+
+=================================================================
+STRICTLY CONFIDENTIAL - PROJECT UNICORN - INSIDE INFORMATION
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

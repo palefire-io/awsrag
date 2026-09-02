@@ -1,0 +1,63 @@
+=====================================================
+FIELD SAFETY NOTICE
+=====================================================
+Reference: FSN-2024-006
+Date Issued: 2024-11-08
+Urgency: Standard
+Issued by: Veridia BioSystems Ltd., Cambridge, United Kingdom
+Signatory: Sarah Lindgren, Regulatory Affairs Manager
+
+Affected Product(s):
+  VeriLyse RGT-RT Reticulocyte Stain (formulation revision A)
+  Catalogue number: VL-RT-250
+
+Affected Lot(s):
+  All revision A lots (RT-2023-0001 through RT-2024-0028 inclusive)
+
+Affected Instruments:
+  VeriScan 400 Pro only (reticulocyte channel)
+
+-----------------------------------------------------
+DESCRIPTION OF ISSUE
+-----------------------------------------------------
+Revision A of the RGT-RT stain shows accelerated dye precipitation when stored
+above 25 C for extended periods. Precipitate carried into the reticulocyte flow
+cell produces a negative bias on the reticulocyte percentage and, in severe
+cases, an E-601 reticulocyte channel calibration failure.
+
+The effect was first observed at customer sites in the DACH region during the
+summer of 2024 and reproduced internally under accelerated storage conditions.
+
+-----------------------------------------------------
+RISK ASSESSMENT
+-----------------------------------------------------
+Reticulocyte counts are used to assess erythropoietic response, most commonly in
+the monitoring of anaemia treatment and post-transplant recovery. An
+underestimated reticulocyte count could delay recognition of marrow recovery.
+Because reticulocyte results are typically interpreted in a trend rather than
+in isolation, and because affected instruments frequently fail calibration
+outright rather than producing plausible-but-wrong results, the residual risk
+is assessed as LOW.
+
+Four complaints were received. No adverse patient outcome reported.
+
+-----------------------------------------------------
+ACTION REQUIRED
+-----------------------------------------------------
+1. Discontinue use of revision A RGT-RT stain. Revision A is identified by the
+   suffix "/A" following the lot number on the vial label.
+2. Order replacement revision B stock (catalogue number unchanged).
+3. Recalibrate the reticulocyte channel after changeover and verify with both
+   levels of retic QC material.
+4. Return the enclosed reply form within 15 working days.
+
+Revision B has been available since 2024-10-14 and is supplied in an amber vial
+with a revised storage statement (2-8 C, do not freeze).
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+James Okafor, VP Customer Support - james.okafor@veridiabio.com - +44 1223 496 100
+Sarah Lindgren, Regulatory Affairs - sarah.lindgren@veridiabio.com
+
+=====================================================

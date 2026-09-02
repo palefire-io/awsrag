@@ -1,0 +1,76 @@
+From: Dr Rebecca Aylesworth <rebecca.aylesworth@ncauh.nhs.uk>
+To: sales@veridiabio.com
+Date: Wed, 15 Oct 2025 14:33:02 +0100
+Subject: Request for information - haematology analyser replacement programme
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Sir or Madam,
+
+North Cumbria and Ayrshire Unified Health Partnership is undertaking a
+replacement programme for haematology analysers across four laboratory sites.
+We expect to go to formal tender in Q1 2026 and are currently gathering
+information to inform the specification.
+
+I would be grateful for the following:
+
+1. Current product specification sheets for the VeriScan 400 and VeriScan 400
+   Pro, at the latest revision. Please confirm the revision number and date, as
+   we have been sent superseded documents by other suppliers and it has caused
+   confusion.
+
+2. Indicative pricing for:
+   - 4 x VeriScan 400 Pro with 50-position autoloader
+   - 2 x VeriScan 400
+   - 2 x VeriPrep SP-1
+   - VeriConnect at Professional tier, 8 instruments
+   - Five-year consumable projection at 180,000 CBC and 9,000 reticulocyte
+     counts per annum across the group
+   - Five-year service contract at Gold and at Platinum for comparison
+
+3. Your current position on IVDR conformity for both analyser models. We need
+   to know whether the devices will be CE marked under IVDR at the point of
+   contract award, and if not, what the transitional position is and what
+   assurance you can give.
+
+4. UKCA marking status.
+
+5. Confirmation of throughput figures under realistic conditions. I will be
+   direct: we have been burned before by throughput figures quoted from
+   open-tube bench testing. Please quote sustained closed-tube throughput with
+   the autoloader running, and say so explicitly.
+
+6. Details of any known issues, field safety notices or field safety corrective
+   actions affecting either model in the last 36 months. We ask every supplier
+   this and we do check. A supplier who discloses openly scores better with our
+   evaluation panel than one who does not and is later found out.
+
+7. Reference sites in the UK, ideally an NHS trust of comparable size running a
+   mixed 400 and 400 Pro fleet with VeriPrep integration.
+
+8. Your data protection position for VeriConnect, including hosting location
+   and whether an NHS-standard DPA is available.
+
+Our timetable is:
+  Information gathering        to 30 November 2025
+  Specification drafting       December 2025
+  Tender issue                 February 2026
+  Award                        June 2026
+  Installation                 September to December 2026
+
+I should say that we are not currently a Veridia customer and have no
+incumbent advantage in play here.
+
+Yours faithfully,
+
+Dr Rebecca Aylesworth
+Consultant Clinical Scientist
+Head of Blood Sciences
+North Cumbria and Ayrshire Unified Health Partnership
+rebecca.aylesworth@ncauh.nhs.uk | 01228 814 000 ext 41120
+
+--
+The information in this email is confidential and may be legally privileged.
+It is intended solely for the addressee. Access to this email by anyone else is
+unauthorised. If you are not the intended recipient, any disclosure, copying,
+distribution or any action taken or omitted to be taken in reliance on it, is
+prohibited and may be unlawful.

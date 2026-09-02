@@ -1,0 +1,212 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** RESTRICTED - PEOPLE MANAGERS, PEOPLE TEAM AND EXCO ONLY ***
+Annual Pay Review 2026 - Guidance for Managers
+=================================================================
+Document:      HR-MGR-014
+Version:       2026.1
+Issued:        2025-11-03
+Owner:         Denise Kaur, Reward and Benefits Manager
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+               Gary Pemberton, Chief Financial Officer
+Effective:     Pay changes effective 1 January 2026
+
+DO NOT FORWARD. Do not share the band tables with your team. Do not discuss
+another person's outcome with anyone other than the People team.
+
+-----------------------------------------------------------------
+1. THE BUDGET
+-----------------------------------------------------------------
+1.1  Total budget: 3.4% of the UK salary bill and 2.1% of the Swiss salary
+     bill.
+
+1.2  This is lower than 2025 (4.1% UK) and you will be asked why. The honest
+     answer, which you may give: revenue grew more slowly than planned in
+     FY2025, the FSN-2025-003 recall carried a direct cost of approximately
+     GBP 1.4M in replacement stock, credit notes and field service time, and
+     the Board approved a smaller reward envelope as a result.
+
+1.3  You may say all of that. Do not say "there is no money" - it is not true
+     and people can see the funding announcements.
+
+1.4  The budget is NOT distributed evenly. It is allocated by function based
+     on market movement and on where we have retention risk. Field service and
+     firmware received above-average allocations; corporate functions received
+     below-average.
+
+1.5  Separately funded and NOT drawn from your budget:
+       - Promotion increases (spring and autumn windows)
+       - Statutory minimum uplifts (National Living Wage, Swiss minimums)
+       - Equal pay corrections identified in the gap analysis (section 6)
+       - Off-cycle retention adjustments approved by the CPO
+
+-----------------------------------------------------------------
+2. HOW TO ALLOCATE
+-----------------------------------------------------------------
+Three inputs, in this order of weight.
+
+2.1  POSITION IN BAND. The single largest driver. Someone at 0.85 compa-ratio
+     performing well should receive more than someone at 1.15 performing
+     equally well. This is how bands work.
+
+       Compa-ratio       Guide range for a Strong performer
+       ---------------   ----------------------------------
+       Below 0.85        4.5% to 7.0%
+       0.85 to 0.95      3.5% to 5.0%
+       0.95 to 1.05      2.5% to 3.5%
+       1.05 to 1.15      1.0% to 2.5%
+       Above 1.15        0% to 1.0%
+
+2.2  PERFORMANCE OUTCOME.
+       Exceptional         multiply the guide range by 1.5, capped at band max
+       Strong              guide range as above
+       Developing          lower half of the guide range
+       Below Expectations  normally 0%. Must be discussed with the People team
+                           before you communicate it.
+
+2.3  MARKET AND RETENTION. Where a specific role has moved in the market, or
+     where you have a genuine retention concern, flag it to Denise Kaur with
+     reasoning. Do not solve it silently by over-allocating from your budget.
+
+-----------------------------------------------------------------
+3. THINGS YOU MUST NOT DO
+-----------------------------------------------------------------
+3.1  Do not spread the budget evenly. A flat 3.4% to everyone is an
+     abdication, it rewards nobody, and it is visible in the data.
+
+3.2  Do not allocate on the basis of who asked. Every year the correlation
+     between "asked for a rise" and "received above-average" is checked, and
+     every year it correlates with gender. In 2025 it correlated at r = 0.31.
+
+3.3  Do not reduce an allocation because someone is on family leave, has been
+     on long-term sick leave, or works part-time. People on family leave
+     receive the review on the same basis as everyone else. This is a legal
+     requirement as well as a policy.
+
+3.4  Do not use pay to resolve a performance conversation you have avoided
+     having.
+
+3.5  Do not promise anything before calibration. Managers who pre-announce
+     outcomes create problems that land on the People team.
+
+3.6  Do not describe an outcome as "what the system gave me". You made the
+     recommendation.
+
+-----------------------------------------------------------------
+4. TIMETABLE
+-----------------------------------------------------------------
+  2025-11-03   Guidance and budgets issued to managers
+  2025-11-14   Manager recommendations due in PeopleHub
+  2025-11-17
+    to 11-21   Function-level calibration sessions
+  2025-11-26   People team equality analysis
+  2025-12-01   Executive Committee review and sign-off
+  2025-12-08
+    to 12-12   Managers communicate outcomes in person
+  2025-12-15   Written confirmation issued
+  2026-01-01   Effective date
+  2026-01-31   Payroll reflects new salaries (January payslip)
+
+-----------------------------------------------------------------
+5. CALIBRATION
+-----------------------------------------------------------------
+5.1  Chaired by the function Director with the People team present.
+
+5.2  Bring your reasoning, not just your numbers. You will be asked to justify
+     any allocation above 6% or at 0%.
+
+5.3  The People team runs an equality analysis after calibration and before
+     sign-off, checking distribution by gender, ethnicity, disability
+     disclosure, part-time status, and family leave taken during the year.
+     Anomalies are returned to the panel with a question, not with an
+     instruction.
+
+5.4  In the 2025 cycle, three allocations were revised following that analysis
+     and one function was asked to redo its distribution entirely.
+
+-----------------------------------------------------------------
+6. EQUAL PAY CORRECTIONS
+-----------------------------------------------------------------
+6.1  The 2025 gender pay gap analysis identified a within-band mean difference
+     of 1.1% across the company, and larger differences in two specific
+     populations: Regulatory Affairs (women 3.2% below men at the same level)
+     and Support Engineering (women 2.4% below).
+
+6.2  Nine individual corrections have been identified and are funded centrally.
+     Affected managers have been contacted individually by Denise Kaur.
+
+6.3  If you are one of them: the correction is applied IN ADDITION to the
+     normal review allocation, and it does not come from your budget. You will
+     be given specific wording. Do not improvise an explanation.
+
+6.4  The correct framing to the employee is that a pay review analysis
+     identified their salary as below where it should be for their level and
+     performance, and it has been corrected. Do not say "we found a gender pay
+     gap and you were on the wrong side of it" - it is true in aggregate but
+     it is not an accurate statement about that individual's history and it
+     invites a question you cannot answer.
+
+6.5  A regulatory affairs premium has been added to B3 and B4 for 2026 in
+     response to the same analysis and to two resignations citing pay.
+
+-----------------------------------------------------------------
+7. COMMUNICATING THE OUTCOME
+-----------------------------------------------------------------
+7.1  In person, or by video for remote colleagues. Never by email and never by
+     leaving a number in a system for someone to find.
+
+7.2  Give the number, then the reasoning, then take questions. Do not lead
+     with fifteen minutes of context.
+
+7.3  If the outcome is 0% or near it, say so directly at the start and explain
+     why. Almost always it is band position, and almost always the person does
+     not know where they sit in their band. Tell them. They are entitled to
+     know.
+
+7.4  Expect: "Is that it?" Be ready for it. The honest answer for someone high
+     in band is that their pay is already ahead of the market for their level
+     and that further movement requires a change of level.
+
+7.5  Do not compare to anyone else, even anonymously.
+
+7.6  If someone reacts badly, do not defend. Listen, note it, and offer a
+     follow-up conversation with the People team. About four people a year
+     take that up.
+
+-----------------------------------------------------------------
+8. IF SOMEONE CHALLENGES THEIR OUTCOME
+-----------------------------------------------------------------
+8.1  They may ask for a People team review. Denise Kaur handles these.
+
+8.2  A review can change an outcome and has done so twice in three years.
+
+8.3  If someone alleges the outcome was discriminatory, that is a grievance
+     and must be routed to Rachel Duffy immediately. Do not attempt to resolve
+     it yourself.
+
+-----------------------------------------------------------------
+9. WHAT TO DO ABOUT A COMPETING OFFER
+-----------------------------------------------------------------
+9.1  Tell Denise Kaur before you say anything to the employee.
+
+9.2  Veridia does not routinely counter-offer, and a promotion will never be
+     created to retain someone.
+
+9.3  Where a person's pay is genuinely below where it should be, we correct it
+     regardless of whether they have an offer - and if you only discovered
+     that because they got an offer, that is a signal about your management,
+     not about them.
+
+9.4  Do not tell anyone that a counter-offer is being considered until it is
+     approved.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Denise Kaur, Reward and Benefits Manager - denise.kaur@veridiabio.com
+                                            +44 1223 496 197
+Naomi Okonjo-Bright, Chief People Officer
+
+=================================================================
+RESTRICTED. Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

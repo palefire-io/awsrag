@@ -1,0 +1,46 @@
+From: Sean McAllister <sean.mcallister@belfasttrust.hscni.net>
+To: support@veridiabio.com
+Date: Wed, 18 Jun 2025 09:50:22 +0100
+Subject: VeriConnect tenant setup - who does what
+X-Mailer: Microsoft Outlook 16.0
+
+Morning,
+
+We've had VeriConnect Essentials since the analysers went in but honestly we've
+only ever used it to look at results. Our new lab manager wants us using it
+properly and I've been given the job.
+
+Can someone talk me through what I actually need to set up? Specifically:
+
+- We have 14 people who need access. At the moment there are three logins and
+  everyone shares them. I know that's bad. How do I do it properly without
+  creating 14 accounts one at a time?
+- What roles should people have? We have BMS staff, a couple of support
+  workers, the lab manager and me. I've looked at the role list and I'm not
+  confident I'd pick right.
+- Do we need SSO? We're on Essentials so I think not, but our IT department
+  asked.
+- What's the difference between what we've got and Professional? I don't want
+  to be sold anything, I just want to know what we're missing so I can decide
+  whether to ask for budget.
+- Is there anything we should be doing that we're not? Assume we're doing
+  nothing and tell me what a well-run site looks like.
+
+I'd rather have a call than a document if that's possible. I'm not an IT
+person, I'm a BMS who happens to be the youngest one here.
+
+Cheers
+
+Sean McAllister
+Senior Biomedical Scientist
+Haematology
+Belfast Health and Social Care Trust
+Royal Victoria Hospital, 274 Grosvenor Road, Belfast BT12 6BA
+sean.mcallister@belfasttrust.hscni.net | 028 9024 0503 ext 3318
+
+--
+The information contained in this email and any attachments is confidential and
+intended solely for the use of the individual to whom it is addressed. If you
+have received this email in error please notify the sender immediately. Belfast
+Health and Social Care Trust cannot accept responsibility for any loss or damage
+arising from the use of this email or attachments.

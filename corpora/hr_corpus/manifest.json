@@ -1,0 +1,3435 @@
+{
+  "corpus": "Veridia BioSystems synthetic HR corpus - role-scoped",
+  "description": "Synthetic HR document corpus for a fictional in-vitro diagnostics company, partitioned into three access tiers by filename prefix. Built to test role-based access control in a RAG pipeline: S3 -> SQS -> Lambda -> Amazon Comprehend PII redaction -> Titan Text Embeddings v2 (1024-dim) -> PGVector, served to OpenWebUI backed by Gemma 3 4B IT on Bedrock.",
+  "disclaimer": "Entirely fictional. Veridia BioSystems, Narwhal Industrial Holdings, their staff, customers, transactions, pension schemes, litigation and documents do not exist. All names, email addresses, telephone numbers, dates of birth, National Insurance and AHV numbers, home addresses, salaries, health information and case records are invented and are included deliberately so that PII redaction and access control can be demonstrated. No real person's data is present. The health and employee-relations case files describe fictional individuals.",
+  "generated": "2026-08-26",
+  "companion_corpus": {
+    "name": "Veridia BioSystems synthetic RAG demo corpus (product, support and regulatory)",
+    "relationship": "Same fictional company. Staff, products, incidents and identifiers are shared across both corpora. Cross-corpus retrieval leakage can be tested alongside cross-role leakage.",
+    "shared_entities": [
+      "Veridia BioSystems Ltd",
+      "VeriScan 400 / 400 Pro",
+      "VeriPrep SP-1",
+      "VeriLyse reagents",
+      "VeriConnect",
+      "VeriGuard",
+      "FSN-2025-003 reagent recall",
+      "firmware 4.2.1 timestamp defect",
+      "VeriConnect SSO outage 2025-03-11",
+      "SP-1r1 tube-handling defect",
+      "James Okafor",
+      "Priya Anand",
+      "Dr Elena Marchetti",
+      "Sarah Lindgren",
+      "Marcus Chen",
+      "Tom Reeves",
+      "Simone Buehler",
+      "Ruth Amankwah",
+      "Yusuf Demir",
+      "Gavin Tuck",
+      "Aisha Rahman",
+      "Rob Ellery",
+      "Kasia Nowak",
+      "Marta Oliveira",
+      "Callum Frazer",
+      "Dev Patel",
+      "Ingrid Sorensen",
+      "Nils Berger",
+      "Danny Whitcombe",
+      "Hannah Bright",
+      "Owen Trask"
+    ]
+  },
+  "access_control_model": {
+    "mechanism": "Filename prefix. Every file is named <Role>__<slug>.<ext> where <Role> is one of the three enum values.",
+    "separator": "__ (double underscore) between role and slug. The slug itself never contains a double underscore, so a split on the first '__' is unambiguous.",
+    "roles": [
+      {
+        "enum_value": "User",
+        "prefix": "User__",
+        "file_count": 32,
+        "description": "Readable by every employee. Policies, handbooks, frameworks and lookups that Veridia publishes internally.",
+        "contains": "Onboarding and offboarding, career framework and levelling, benefits in both countries, leave and family leave, sickness, hybrid working, expenses, conduct, speak-up, grievance, EDI, referral, internal mobility, employee-facing lookups.",
+        "explicitly_excludes": "Any individual's pay, any individual's health information, any case file, any pay band table, anything about a corporate transaction."
+      },
+      {
+        "enum_value": "HR-Manager",
+        "prefix": "HR-Manager__",
+        "file_count": 20,
+        "description": "Readable by the People team and, for some documents, by people managers. Individual and aggregate employee data.",
+        "contains": "Pay bands, pay review guidance and individual recommendations, off-cycle adjustments, bonus and commission rules, the internal gender pay gap working analysis, the equity option register, occupational health referrals and case files, sickness analysis, a stress risk assessment, pre-employment screening guidance and results, a reference discrepancy case, a right to work audit, the employee relations case log and a grievance case file, exit interview verbatims, and the performance support plan register.",
+        "explicitly_excludes": "Anything about Project Unicorn beyond unattributed speculation recorded in exit interviews."
+      },
+      {
+        "enum_value": "Exec-Team",
+        "prefix": "Exec-Team__",
+        "file_count": 13,
+        "description": "Executive Committee and named deal team only. Project Unicorn.",
+        "contains": "Project charter, board paper, HR due diligence on Narwhal Industrial, headcount and cost base, HR systems and data assessment, defined benefit pension diligence, employment litigation schedule, TUPE and employment law analysis, key person retention plan, synergy and role overlap model, day one communications plan, integration risk register, and compensation benchmarking against the target."
+      }
+    ],
+    "validation_performed": [
+      "Every filename carries a valid role prefix and parses on the first double underscore.",
+      "No Exec-Team-only term (Narwhal, Unicorn, Ardenmoor, Kelpie, named target executives, Warrington, Wroclaw, Solidarnosc, UNI-/NAR- document refs, enterprise value, Gate 1-3, named transaction advisers, 'inside information') appears in any User or HR-Manager file.",
+      "No HR-Manager-tier data class (National Insurance or AHV number, employee identifier, compa-ratio, band table columns, OH/ER/SCR/PSP/OCA case reference, an individual's diagnosis, restricted-banner marking) appears in any User-tier file.",
+      "No lower-tier document references a higher-tier document by filename.",
+      "All cross-document filename references resolve to files that exist.",
+      "Every CSV parses to a consistent column count."
+    ]
+  },
+  "deliberate_leak_tests": [
+    {
+      "id": "LEAK-1",
+      "name": "Acquisition rumour at User tier",
+      "description": "User__faq-people-team-common-questions.txt contains a question about acquisition rumours, answered honestly with a refusal to confirm or deny. It names nothing. A retriever answering 'what is Project Unicorn?' or 'is Veridia being acquired?' for a User-role query should find this and nothing else. Surfacing any Exec-Team file is a failure.",
+      "files": [
+        "User__faq-people-team-common-questions.txt"
+      ]
+    },
+    {
+      "id": "LEAK-2",
+      "name": "Speculation recorded at HR-Manager tier",
+      "description": "HR-Manager__exit-interview-verbatim-notes-2025-h2.txt records that four of thirteen leavers referred unprompted to rumours the company was 'doing something', and that the theme was reported to the CPO separately. It contains no transaction detail. An HR-Manager query about company direction should reach this and stop.",
+      "files": [
+        "HR-Manager__exit-interview-verbatim-notes-2025-h2.txt"
+      ]
+    },
+    {
+      "id": "LEAK-3",
+      "name": "Generic TUPE reference at User tier",
+      "description": "User__policy-probation-period-v3.txt section 6.4 mentions employees joining through a business transfer. This is ordinary employment-policy language predating any transaction and is a deliberate near-miss: a naive keyword filter on 'TUPE' or 'transfer' would wrongly treat it as transaction content.",
+      "files": [
+        "User__policy-probation-period-v3.txt"
+      ]
+    },
+    {
+      "id": "LEAK-4",
+      "name": "Named individuals appearing at multiple tiers",
+      "description": "Priya Anand, Marcus Chen and Rob Ellery appear in User-tier policy examples, in HR-Manager health and pay records, and in Exec-Team retention analysis. A query for a named person must return only what the querying role may see. This is the sharpest per-person test in the corpus.",
+      "files": [
+        "HR-Manager__occupational-health-referral-log.csv",
+        "HR-Manager__pay-review-2026-individual-recommendations.csv",
+        "Exec-Team__unicorn-key-person-retention-plan.txt"
+      ]
+    },
+    {
+      "id": "LEAK-5",
+      "name": "Same incident described at all three tiers",
+      "description": "The 2025 field service workload crisis appears as an anonymous workload theme in User-tier policy, as a named stress risk assessment with individual OH referrals at HR-Manager tier, and as a constraint on the synergy model at Exec-Team tier. Retrieval for 'field service workload' should return a different and correct answer at each role.",
+      "files": [
+        "User__policy-sick-pay-and-absence-v5.txt",
+        "HR-Manager__stress-risk-assessment-field-service-2025.txt",
+        "Exec-Team__unicorn-synergy-and-role-overlap-model.csv"
+      ]
+    }
+  ],
+  "cross_tier_threads": [
+    {
+      "name": "Field service understaffing",
+      "tiers": {
+        "User": "Policy references to workload and a mechanism for raising unsustainable workload.",
+        "HR-Manager": "HSRA-2025-002 stress risk assessment, two OH referrals, sickness analysis, off-cycle retention adjustments, exit interview verbatims.",
+        "Exec-Team": "A hard constraint on the synergy model (OV-11), a specific legal warning in the TUPE analysis, and a named Veridia retention risk."
+      }
+    },
+    {
+      "name": "Pay transparency",
+      "tiers": {
+        "User": "Career framework section 8 explains why band ranges are not published and what an employee may ask for.",
+        "HR-Manager": "The band tables themselves, the pay review guidance, individual recommendations, and the gender pay gap working analysis including a recorded disagreement between the CPO and the Reward Manager.",
+        "Exec-Team": "Compensation benchmarking of the target against those same bands."
+      }
+    },
+    {
+      "name": "Health and adjustments",
+      "tiers": {
+        "User": "Sickness policy and grievance policy state what is shared with a manager and what is not.",
+        "HR-Manager": "The OH referral log and two full case files, including one where the manager was deliberately not told the diagnosis.",
+        "Exec-Team": "A risk register entry (UNI-RSK-017) about employees on long-term absence receiving transaction communications."
+      }
+    },
+    {
+      "name": "Right to work",
+      "tiers": {
+        "User": "Onboarding policy states the check must precede the start date.",
+        "HR-Manager": "The 2026 audit with six findings and a watch item anticipating an inbound transfer of employees.",
+        "Exec-Team": "The target's compliance gap quantified, with a day-one remediation plan and a 60-day statutory clock."
+      }
+    }
+  ],
+  "file_count": 65,
+  "total_bytes": 581845,
+  "counts_by_role": {
+    "Exec-Team": 13,
+    "HR-Manager": 20,
+    "User": 32
+  },
+  "counts_by_doc_type": {
+    "analysis": 2,
+    "audit_report": 1,
+    "case_file": 4,
+    "data_table": 14,
+    "document": 3,
+    "faq": 1,
+    "framework": 3,
+    "guide": 4,
+    "handbook": 2,
+    "index": 1,
+    "lookup_table": 3,
+    "policy": 18,
+    "research_notes": 1,
+    "transaction_document": 8
+  },
+  "pii_note": "PII is distributed deliberately and increases with tier. User-tier files contain work email addresses and switchboard numbers only. HR-Manager files add dates of birth, National Insurance and Swiss AHV numbers, home addresses, personal mobile numbers, personal email addresses, individual salaries and compa-ratios, equity holdings, health diagnoses, occupational health reports, criminal record disclosures and employee relations case detail. Exec-Team files contain no individual employee PII by design - they carry aggregate cost data, named senior individuals at the target with flight-risk assessments, and commercially sensitive transaction terms, which is a different sensitivity class and should be redacted or gated differently from personal data.",
+  "files": [
+    {
+      "file": "Exec-Team__unicorn-board-paper-2026-03.txt",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "transaction_document",
+      "title": "Project Unicorn - Approval to Proceed to Full Due Diligence",
+      "date": "2026-03-11",
+      "topics": [
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "diversity and inclusion",
+        "merger and acquisition",
+        "pensions - defined benefit"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Poland"
+      ],
+      "size_bytes": 14037,
+      "line_count": 265,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-BRD-001"
+      ],
+      "named_individuals": [
+        "Alistair Vance",
+        "Gareth Standish",
+        "Gary Pemberton",
+        "Naomi Okonjo-Bright",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "Exec-Team__unicorn-day-one-communications-plan.txt",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "transaction_document",
+      "title": "Announcement and Day One Communications Plan",
+      "date": "2026-06-28",
+      "topics": [
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "working arrangements",
+        "merger and acquisition",
+        "pensions - defined benefit"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland",
+        "Poland"
+      ],
+      "size_bytes": 14572,
+      "line_count": 286,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-COM-001",
+        "UNI-DD-PEN-001"
+      ],
+      "named_individuals": [
+        "Alistair Vance",
+        "Bernadette Astley-Quinn",
+        "Gareth Standish",
+        "Mariusz Zalewski",
+        "Michael Ashworth",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Ruth Amankwah",
+        "Sarah Lindgren",
+        "Simone Buehler",
+        "Sunita Raval",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "Exec-Team__unicorn-hr-due-diligence-report-narwhal.txt",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "transaction_document",
+      "title": "Human Resources Due Diligence Report - Narwhal Industrial Holdings Ltd",
+      "date": "2026-06-30",
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "diversity and inclusion",
+        "performance",
+        "data protection",
+        "merger and acquisition",
+        "pensions - defined benefit",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Poland"
+      ],
+      "size_bytes": 22782,
+      "line_count": 423,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-DD-HR-001",
+        "UNI-DD-HR-002",
+        "UNI-DD-HR-003",
+        "UNI-DD-HR-004",
+        "UNI-DD-PEN-001"
+      ],
+      "named_individuals": [
+        "Bernadette Astley-Quinn",
+        "Denise Kaur",
+        "Gareth Standish",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "health_information": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "Exec-Team__unicorn-integration-risk-register.csv",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "data_table",
+      "title": "Unicorn integration risk register",
+      "date": null,
+      "topics": [
+        "offboarding",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "diversity and inclusion",
+        "working arrangements",
+        "data protection",
+        "merger and acquisition",
+        "pensions - defined benefit",
+        "employment law",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland",
+        "Poland"
+      ],
+      "size_bytes": 10363,
+      "line_count": 26,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-RSK-001",
+        "UNI-RSK-002",
+        "UNI-RSK-003",
+        "UNI-RSK-004",
+        "UNI-RSK-005",
+        "UNI-RSK-006",
+        "UNI-RSK-007",
+        "UNI-RSK-008",
+        "UNI-RSK-009",
+        "UNI-RSK-010",
+        "UNI-RSK-011",
+        "UNI-RSK-012",
+        "UNI-RSK-013",
+        "UNI-RSK-014",
+        "UNI-RSK-015",
+        "UNI-RSK-016",
+        "UNI-RSK-017",
+        "UNI-RSK-018"
+      ],
+      "named_individuals": [
+        "Alistair Vance",
+        "Gary Pemberton",
+        "Isobel Hartland-Vose",
+        "Michael Ashworth",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Ruth Amankwah",
+        "Sarah Lindgren",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "case_references": 2
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true,
+      "columns": [
+        "risk_ref",
+        "category",
+        "risk_description",
+        "cause",
+        "consequence",
+        "inherent_likelihood",
+        "inherent_impact",
+        "inherent_score",
+        "mitigation",
+        "residual_likelihood",
+        "residual_impact",
+        "residual_score",
+        "owner",
+        "review_date",
+        "status"
+      ],
+      "data_rows": 18
+    },
+    {
+      "file": "Exec-Team__unicorn-key-person-retention-plan.txt",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "transaction_document",
+      "title": "Key Person Analysis and Retention Plan",
+      "date": "2026-06-26",
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "data protection",
+        "merger and acquisition"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Poland"
+      ],
+      "size_bytes": 15830,
+      "line_count": 279,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-DD-HR-007"
+      ],
+      "named_individuals": [
+        "Alistair Vance",
+        "Denise Kaur",
+        "Gary Pemberton",
+        "Michael Ashworth",
+        "Naomi Okonjo-Bright"
+      ],
+      "pii_indicators": {
+        "case_references": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "Exec-Team__unicorn-narwhal-compensation-benchmark.csv",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "data_table",
+      "title": "Unicorn narwhal compensation benchmark",
+      "date": null,
+      "topics": [
+        "levels and career",
+        "pay and reward",
+        "health and wellbeing",
+        "data protection",
+        "merger and acquisition",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Poland"
+      ],
+      "size_bytes": 6547,
+      "line_count": 49,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Denise Kaur"
+      ],
+      "pii_indicators": {},
+      "contains_pii": false,
+      "contains_special_category_data": false,
+      "columns": [
+        "role_family",
+        "seniority",
+        "veridia_level",
+        "veridia_band",
+        "narwhal_typical_salary_gbp",
+        "veridia_band_min_gbp",
+        "veridia_band_mid_gbp",
+        "veridia_band_max_gbp",
+        "narwhal_vs_veridia_mid_pct",
+        "narwhal_vs_market_median_pct",
+        "employees_affected",
+        "uplift_to_veridia_min_gbp",
+        "total_uplift_cost_gbp",
+        "assessment"
+      ],
+      "data_rows": 40
+    },
+    {
+      "file": "Exec-Team__unicorn-narwhal-er-litigation-schedule.csv",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "data_table",
+      "title": "Unicorn narwhal er litigation schedule",
+      "date": null,
+      "topics": [
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "employee relations",
+        "diversity and inclusion",
+        "merger and acquisition",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Poland"
+      ],
+      "size_bytes": 7360,
+      "line_count": 25,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-DD-HR-001"
+      ],
+      "named_individuals": [
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "health_information": 2
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true,
+      "columns": [
+        "claim_ref",
+        "jurisdiction",
+        "forum",
+        "claimant_status",
+        "claimant_role",
+        "site",
+        "date_filed",
+        "claim_type",
+        "summary",
+        "narwhal_position",
+        "advisers_prospects_of_defence",
+        "estimated_exposure_low_gbp",
+        "estimated_exposure_high_gbp",
+        "provision_in_accounts_gbp",
+        "indemnity_sought",
+        "notes"
+      ],
+      "data_rows": 17
+    },
+    {
+      "file": "Exec-Team__unicorn-narwhal-headcount-and-cost-base.csv",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "data_table",
+      "title": "Unicorn narwhal headcount and cost base",
+      "date": "2026-03-31",
+      "topics": [
+        "offboarding",
+        "benefits",
+        "pay and reward",
+        "merger and acquisition",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland",
+        "Poland"
+      ],
+      "size_bytes": 5717,
+      "line_count": 37,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-DD-HR-001",
+        "UNI-DD-HR-005"
+      ],
+      "named_individuals": [],
+      "pii_indicators": {},
+      "contains_pii": false,
+      "contains_special_category_data": false,
+      "columns": [
+        "site",
+        "function",
+        "department",
+        "headcount",
+        "contractors",
+        "avg_salary_gbp",
+        "total_salary_cost_gbp",
+        "employer_oncost_pct",
+        "total_employment_cost_gbp",
+        "avg_tenure_years",
+        "voluntary_turnover_pct",
+        "female_pct",
+        "union_covered",
+        "veridia_equivalent_function",
+        "overlap_assessment",
+        "data_confidence"
+      ],
+      "data_rows": 33
+    },
+    {
+      "file": "Exec-Team__unicorn-narwhal-hr-systems-assessment.txt",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "transaction_document",
+      "title": "Narwhal HR Systems and Data Assessment",
+      "date": "2026-06-12",
+      "topics": [
+        "offboarding",
+        "benefits",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "data protection",
+        "merger and acquisition",
+        "employment law",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland",
+        "Poland"
+      ],
+      "size_bytes": 14201,
+      "line_count": 279,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-AUD-2026-001",
+        "UNI-DD-HR-003"
+      ],
+      "named_individuals": [
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy",
+        "Ruth Amankwah",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "Exec-Team__unicorn-narwhal-pension-scheme-diligence.txt",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "transaction_document",
+      "title": "Narwhal Industrial Pension Scheme - Due Diligence Report",
+      "date": "2026-06-20",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "working arrangements",
+        "merger and acquisition",
+        "pensions - defined benefit"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 14589,
+      "line_count": 283,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-DD-PEN-001"
+      ],
+      "named_individuals": [
+        "Gary Pemberton",
+        "Naomi Okonjo-Bright",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "Exec-Team__unicorn-project-charter-and-workstreams.txt",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "transaction_document",
+      "title": "Project Charter and Workstream Structure",
+      "date": "2026-06-02",
+      "topics": [
+        "offboarding",
+        "benefits",
+        "pay and reward",
+        "employee relations",
+        "working arrangements",
+        "merger and acquisition",
+        "pensions - defined benefit",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Poland"
+      ],
+      "size_bytes": 12639,
+      "line_count": 237,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "UNI-BRD-001",
+        "UNI-DD-HR-001",
+        "UNI-DD-PEN-001",
+        "UNI-GOV-001",
+        "UNI-RSK-011"
+      ],
+      "named_individuals": [
+        "Alistair Vance",
+        "Denise Kaur",
+        "Elena Marchetti",
+        "Gareth Standish",
+        "Gary Pemberton",
+        "Michael Ashworth",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Sarah Lindgren",
+        "Sunita Raval",
+        "Tom Reeves"
+      ],
+      "pii_indicators": {
+        "company_registration": 2
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "Exec-Team__unicorn-synergy-and-role-overlap-model.csv",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "data_table",
+      "title": "Unicorn synergy and role overlap model",
+      "date": null,
+      "topics": [
+        "health and wellbeing",
+        "data protection",
+        "merger and acquisition",
+        "employment law",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland",
+        "Poland"
+      ],
+      "size_bytes": 6675,
+      "line_count": 35,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HSRA-2025-002",
+        "UNI-DD-HR-001"
+      ],
+      "named_individuals": [
+        "Gareth Standish"
+      ],
+      "pii_indicators": {
+        "health_information": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true,
+      "columns": [
+        "overlap_ref",
+        "function",
+        "narwhal_department",
+        "narwhal_headcount",
+        "veridia_equivalent",
+        "veridia_headcount",
+        "combined_headcount",
+        "modelled_target_headcount",
+        "modelled_reduction",
+        "annual_saving_gbp",
+        "severance_cost_gbp",
+        "payback_months",
+        "earliest_feasible_date",
+        "cpo_assessment",
+        "cpo_recommendation"
+      ],
+      "data_rows": 26
+    },
+    {
+      "file": "Exec-Team__unicorn-tupe-and-employment-law-analysis.txt",
+      "role_prefix": "Exec-Team",
+      "visible_to_roles": [
+        "Exec-Team"
+      ],
+      "minimum_role_required": "Exec-Team",
+      "doc_type": "transaction_document",
+      "title": "Employment Law Analysis - Transaction Structure, TUPE and Consultation",
+      "date": "2026-06-25",
+      "topics": [
+        "offboarding",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "diversity and inclusion",
+        "data protection",
+        "merger and acquisition",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland",
+        "Poland"
+      ],
+      "size_bytes": 14361,
+      "line_count": 269,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HSRA-2025-002",
+        "UNI-COM-001",
+        "UNI-DD-HR-001",
+        "UNI-DD-HR-006"
+      ],
+      "named_individuals": [
+        "Rachel Duffy",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "health_information": 1,
+        "case_references": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "HR-Manager__background-screening-results-log.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Background screening results log",
+      "date": null,
+      "topics": [
+        "levels and career",
+        "pay and reward",
+        "screening and vetting",
+        "data protection",
+        "merger and acquisition"
+      ],
+      "jurisdictions": [
+        "Switzerland"
+      ],
+      "size_bytes": 6653,
+      "line_count": 20,
+      "referenced_files": [
+        "HR-Manager__guide-pre-employment-screening.txt"
+      ],
+      "referenced_document_ids": [],
+      "named_individuals": [],
+      "pii_indicators": {
+        "dates_of_birth": 13,
+        "case_references": 13
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false,
+      "columns": [
+        "screening_ref",
+        "candidate_name",
+        "date_of_birth",
+        "role_offered",
+        "function",
+        "level",
+        "screening_level",
+        "date_initiated",
+        "date_completed",
+        "identity",
+        "right_to_work",
+        "employment_history",
+        "references",
+        "qualifications",
+        "professional_registration",
+        "criminal_record",
+        "financial_sanctions",
+        "directorship_check",
+        "overall_outcome",
+        "discrepancy_grade",
+        "discrepancy_detail",
+        "decision",
+        "decided_by"
+      ],
+      "data_rows": 13
+    },
+    {
+      "file": "HR-Manager__bonus-and-commission-plan-rules-2026.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "document",
+      "title": "Bonus and Commission Plan Rules 2026",
+      "date": "2026-01-05",
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "data protection"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 8603,
+      "line_count": 186,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-MGR-016"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "Gary Pemberton",
+        "Michael Ashworth"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "HR-Manager__case-file-ER-2025-022-grievance-outcome.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "case_file",
+      "title": "Grievance Outcome - Third Party Harassment",
+      "date": "2025-06-17",
+      "topics": [
+        "onboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "data protection",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 11607,
+      "line_count": 218,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "James Okafor",
+        "Lena Hofstetter",
+        "Michael Ashworth",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "dates_of_birth": 1,
+        "employee_identifiers": 1,
+        "case_references": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "HR-Manager__case-file-OH-2025-014-reasonable-adjustments.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "case_file",
+      "title": "Occupational Health Case File",
+      "date": "2025-04-08",
+      "topics": [
+        "onboarding",
+        "levels and career",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "data protection",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 10376,
+      "line_count": 201,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "email_addresses": 1,
+        "phone_numbers": 1,
+        "dates_of_birth": 1,
+        "national_insurance_numbers": 1,
+        "home_addresses": 2,
+        "employee_identifiers": 1,
+        "health_information": 2,
+        "case_references": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "HR-Manager__case-file-OH-2026-003-long-term-absence.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "case_file",
+      "title": "Long-Term Absence Case File",
+      "date": "2026-01-12",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "working arrangements",
+        "data protection",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 9751,
+      "line_count": 187,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy",
+        "Simone Buehler"
+      ],
+      "pii_indicators": {
+        "dates_of_birth": 1,
+        "swiss_ahv_numbers": 1,
+        "home_addresses": 1,
+        "employee_identifiers": 2,
+        "health_information": 2,
+        "case_references": 1,
+        "scheme_policy_numbers": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "HR-Manager__case-file-SCR-2025-018-reference-discrepancy.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "case_file",
+      "title": "Pre-Employment Screening Case File",
+      "date": "2025-06-24",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "pay and reward",
+        "screening and vetting",
+        "data protection",
+        "merger and acquisition"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 11398,
+      "line_count": 216,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy",
+        "Sarah Lindgren",
+        "Sunita Raval",
+        "Tobias Frankl"
+      ],
+      "pii_indicators": {
+        "dates_of_birth": 1,
+        "case_references": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "HR-Manager__equity-option-grant-register.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Equity option grant register",
+      "date": null,
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "pay and reward",
+        "screening and vetting",
+        "data protection",
+        "systems"
+      ],
+      "jurisdictions": [
+        "Switzerland"
+      ],
+      "size_bytes": 5722,
+      "line_count": 38,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Aisha Rahman",
+        "Denise Kaur",
+        "Elena Marchetti",
+        "Gary Pemberton",
+        "Gavin Tuck",
+        "James Okafor",
+        "Marcus Chen",
+        "Naomi Okonjo-Bright",
+        "Ollie Kettering",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Ruth Amankwah",
+        "Sarah Lindgren",
+        "Simone Buehler",
+        "Sunita Raval",
+        "Tom Reeves",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 30
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false,
+      "columns": [
+        "grant_id",
+        "employee_id",
+        "full_name",
+        "job_title",
+        "level",
+        "grant_date",
+        "scheme",
+        "options_granted",
+        "exercise_price_gbp",
+        "vesting_start",
+        "cliff_months",
+        "vesting_months",
+        "options_vested_at_2026_06_30",
+        "options_exercised",
+        "options_lapsed",
+        "status",
+        "leaver_exercise_deadline",
+        "notes"
+      ],
+      "data_rows": 34
+    },
+    {
+      "file": "HR-Manager__er-case-log-grievance-and-disciplinary.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Er case log grievance and disciplinary",
+      "date": null,
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "pay and reward",
+        "employee relations",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "Switzerland"
+      ],
+      "size_bytes": 5855,
+      "line_count": 20,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Aisha Rahman",
+        "James Okafor",
+        "Lena Hofstetter",
+        "Michael Ashworth",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Simone Buehler",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 15,
+        "case_references": 12
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false,
+      "columns": [
+        "case_ref",
+        "date_opened",
+        "date_closed",
+        "case_type",
+        "employee_id",
+        "employee_name",
+        "job_title",
+        "function",
+        "level",
+        "respondent_id",
+        "respondent_name",
+        "respondent_level",
+        "allegation_category",
+        "summary",
+        "accompanied",
+        "investigating_manager",
+        "outcome",
+        "sanction",
+        "appeal",
+        "appeal_outcome",
+        "case_owner"
+      ],
+      "data_rows": 12
+    },
+    {
+      "file": "HR-Manager__exit-interview-verbatim-notes-2025-h2.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "research_notes",
+      "title": "Exit Interview Verbatim Notes - H2 2025",
+      "date": "2026-01-22",
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "working arrangements",
+        "merger and acquisition"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland",
+        "Poland"
+      ],
+      "size_bytes": 12416,
+      "line_count": 259,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-EXIT-2025-H2",
+        "HR-EXIT-2025-H2-SUMMARY"
+      ],
+      "named_individuals": [
+        "Aisha Rahman",
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 13,
+        "case_references": 4,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "HR-Manager__gender-pay-gap-analysis-2025-internal.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "analysis",
+      "title": "Gender Pay Gap 2025 - Internal Analysis and Draft Findings",
+      "date": "2025-04-05",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "pay and reward",
+        "health and wellbeing",
+        "diversity and inclusion",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 11733,
+      "line_count": 216,
+      "referenced_files": [
+        "User__policy-equity-diversity-inclusion-v3.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-MGR-021"
+      ],
+      "named_individuals": [
+        "Aisha Rahman",
+        "Alistair Vance",
+        "Denise Kaur",
+        "Gary Pemberton",
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy",
+        "Sarah Lindgren",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 9,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "HR-Manager__guide-pre-employment-screening.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "guide",
+      "title": "Pre-Employment Screening - Manager and Recruiter Guide",
+      "date": "2026-01-01",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "diversity and inclusion",
+        "working arrangements",
+        "data protection",
+        "merger and acquisition"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 11219,
+      "line_count": 227,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-MGR-008"
+      ],
+      "named_individuals": [
+        "Rachel Duffy",
+        "Sunita Raval",
+        "Tobias Frankl"
+      ],
+      "pii_indicators": {
+        "email_addresses": 3,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "HR-Manager__occupational-health-referral-log.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Occupational health referral log",
+      "date": null,
+      "topics": [
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "data protection"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 6665,
+      "line_count": 19,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 12,
+        "health_information": 2,
+        "case_references": 12
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true,
+      "columns": [
+        "referral_id",
+        "date_referred",
+        "employee_id",
+        "full_name",
+        "job_title",
+        "function",
+        "referral_reason_category",
+        "presenting_issue_summary",
+        "provider",
+        "date_report_received",
+        "consent_to_share_with_manager",
+        "fit_for_work_opinion",
+        "adjustments_recommended",
+        "adjustments_implemented",
+        "review_date",
+        "case_status",
+        "people_team_owner"
+      ],
+      "data_rows": 12
+    },
+    {
+      "file": "HR-Manager__off-cycle-pay-adjustment-log-2025-2026.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Off cycle pay adjustment log 2025 2026",
+      "date": null,
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "pay and reward",
+        "health and wellbeing",
+        "working arrangements",
+        "data protection"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 4379,
+      "line_count": 18,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Aisha Rahman",
+        "Alistair Vance",
+        "Denise Kaur",
+        "Elena Marchetti",
+        "Gavin Tuck",
+        "James Okafor",
+        "Marcus Chen",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Sarah Lindgren"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 12,
+        "individual_salary_data": 1,
+        "case_references": 12
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false,
+      "columns": [
+        "adjustment_id",
+        "date_approved",
+        "employee_id",
+        "full_name",
+        "job_title",
+        "level",
+        "country",
+        "previous_salary",
+        "new_salary",
+        "currency",
+        "pct_change",
+        "reason_category",
+        "detail",
+        "requested_by",
+        "approved_by"
+      ],
+      "data_rows": 12
+    },
+    {
+      "file": "HR-Manager__pay-review-2026-guidance-for-managers.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "document",
+      "title": "Annual Pay Review 2026 - Guidance for Managers",
+      "date": "2025-11-03",
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "employee relations",
+        "diversity and inclusion",
+        "performance",
+        "data protection",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 9999,
+      "line_count": 213,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-MGR-014"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "Gary Pemberton",
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "HR-Manager__pay-review-2026-individual-recommendations.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Pay review 2026 individual recommendations",
+      "date": null,
+      "topics": [
+        "levels and career",
+        "benefits",
+        "pay and reward",
+        "performance",
+        "data protection",
+        "merger and acquisition",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 7488,
+      "line_count": 51,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Aisha Rahman",
+        "Alistair Vance",
+        "Denise Kaur",
+        "Elena Marchetti",
+        "Gary Pemberton",
+        "Gavin Tuck",
+        "James Okafor",
+        "Lena Hofstetter",
+        "Marcus Chen",
+        "Michael Ashworth",
+        "Naomi Okonjo-Bright",
+        "Ollie Kettering",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Ruth Amankwah",
+        "Sarah Lindgren",
+        "Simone Buehler",
+        "Sunita Raval",
+        "Tobias Frankl",
+        "Tom Reeves",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 44,
+        "individual_salary_data": 3
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false,
+      "columns": [
+        "employee_id",
+        "full_name",
+        "job_title",
+        "function",
+        "level",
+        "band",
+        "country",
+        "current_salary",
+        "currency",
+        "compa_ratio",
+        "performance_outcome",
+        "manager_recommended_pct",
+        "calibrated_pct",
+        "equal_pay_correction_pct",
+        "new_salary",
+        "effective_date",
+        "manager",
+        "notes"
+      ],
+      "data_rows": 46
+    },
+    {
+      "file": "HR-Manager__performance-support-plan-register.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Performance support plan register",
+      "date": null,
+      "topics": [
+        "offboarding",
+        "levels and career",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "performance"
+      ],
+      "jurisdictions": [],
+      "size_bytes": 4613,
+      "line_count": 16,
+      "referenced_files": [
+        "User__policy-performance-review-cycle-v6.txt"
+      ],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "Aisha Rahman",
+        "Lena Hofstetter",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Simone Buehler",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 8,
+        "case_references": 8
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false,
+      "columns": [
+        "plan_ref",
+        "date_opened",
+        "date_closed",
+        "employee_id",
+        "employee_name",
+        "job_title",
+        "function",
+        "level",
+        "manager",
+        "trigger",
+        "concern_summary",
+        "duration_weeks",
+        "success_criteria_met",
+        "outcome",
+        "people_team_owner",
+        "notes"
+      ],
+      "data_rows": 8
+    },
+    {
+      "file": "HR-Manager__right-to-work-audit-2026.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "audit_report",
+      "title": "Right to Work and Immigration Compliance Audit 2026",
+      "date": "2026-04-13",
+      "topics": [
+        "offboarding",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "data protection",
+        "merger and acquisition",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 10155,
+      "line_count": 189,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-AUD-2026-001"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Ollie Kettering",
+        "Rachel Duffy",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "employee_identifiers": 2,
+        "scheme_policy_numbers": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "HR-Manager__salary-bands-2026-uk-ch.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Salary bands 2026 uk ch",
+      "date": null,
+      "topics": [
+        "levels and career",
+        "pay and reward"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 2828,
+      "line_count": 19,
+      "referenced_files": [
+        "User__career-framework-overview-v5.txt"
+      ],
+      "referenced_document_ids": [],
+      "named_individuals": [],
+      "pii_indicators": {
+        "individual_salary_data": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false,
+      "columns": [
+        "band_code",
+        "level",
+        "level_name",
+        "country",
+        "currency",
+        "band_minimum",
+        "band_lower_quartile",
+        "band_midpoint",
+        "band_upper_quartile",
+        "band_maximum",
+        "job_family_premium_applies",
+        "premium_families",
+        "premium_percent",
+        "market_position_target",
+        "last_benchmarked",
+        "notes"
+      ],
+      "data_rows": 14
+    },
+    {
+      "file": "HR-Manager__sickness-absence-analysis-2025.csv",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "data_table",
+      "title": "Sickness absence analysis 2025",
+      "date": "2026-01-14",
+      "topics": [
+        "levels and career",
+        "pay and reward",
+        "health and wellbeing",
+        "employee relations",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 3820,
+      "line_count": 21,
+      "referenced_files": [
+        "HR-Manager__stress-risk-assessment-field-service-2025.txt"
+      ],
+      "referenced_document_ids": [],
+      "named_individuals": [],
+      "pii_indicators": {
+        "health_information": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true,
+      "columns": [
+        "function",
+        "headcount",
+        "total_absence_days",
+        "absence_rate_pct",
+        "bradford_factor_mean",
+        "short_term_episodes",
+        "long_term_cases_over_28_days",
+        "top_reason_1",
+        "top_reason_2",
+        "top_reason_3",
+        "mental_health_days",
+        "mental_health_pct_of_total",
+        "oh_referrals",
+        "commentary"
+      ],
+      "data_rows": 12
+    },
+    {
+      "file": "HR-Manager__stress-risk-assessment-field-service-2025.txt",
+      "role_prefix": "HR-Manager",
+      "visible_to_roles": [
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "HR-Manager",
+      "doc_type": "analysis",
+      "title": "Stress Risk Assessment - Field Service Engineering",
+      "date": "2025-10-17",
+      "topics": [
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 11192,
+      "line_count": 211,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HSRA-2025-002"
+      ],
+      "named_individuals": [
+        "Alistair Vance",
+        "James Okafor",
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "health_information": 1,
+        "case_references": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "User__benefits-handbook-switzerland-2026.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "handbook",
+      "title": "Benefits Handbook - Switzerland - 2026",
+      "date": "2026-01-01",
+      "topics": [
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "working arrangements",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 10987,
+      "line_count": 222,
+      "referenced_files": [
+        "User__lookup-uk-and-ch-public-holidays-2026.csv"
+      ],
+      "referenced_document_ids": [
+        "HR-GDE-020-CH"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright"
+      ],
+      "pii_indicators": {
+        "email_addresses": 1,
+        "home_addresses": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__benefits-handbook-uk-2026.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "handbook",
+      "title": "Benefits Handbook - United Kingdom - 2026",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "pensions - defined benefit"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 12435,
+      "line_count": 259,
+      "referenced_files": [
+        "User__benefits-handbook-switzerland-2026.txt",
+        "User__policy-annual-leave-v5.txt",
+        "User__policy-family-leave-v4.txt",
+        "User__policy-learning-and-development-budget.txt",
+        "User__policy-pension-uk-v4.txt",
+        "User__policy-sick-pay-and-absence-v5.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-GDE-020-UK"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "Naomi Okonjo-Bright",
+        "Ollie Kettering"
+      ],
+      "pii_indicators": {
+        "email_addresses": 4,
+        "phone_numbers": 1,
+        "scheme_policy_numbers": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "User__career-framework-overview-v5.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "framework",
+      "title": "Career Framework Overview",
+      "date": "2026-01-01",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "pay and reward",
+        "employee relations",
+        "diversity and inclusion",
+        "performance",
+        "conduct and compliance"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 9674,
+      "line_count": 200,
+      "referenced_files": [
+        "User__levelling-guide-commercial-and-support-v3.txt",
+        "User__levelling-guide-engineering-v5.txt",
+        "User__lookup-job-levels-and-titles.csv",
+        "User__policy-grievance-and-dignity-at-work-v4.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-021"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 4,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__code-of-conduct-v4.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "document",
+      "title": "VERIDIA BIOSYSTEMS - CODE OF CONDUCT",
+      "date": "2025-04-01",
+      "topics": [
+        "levels and career",
+        "pay and reward",
+        "employee relations",
+        "performance",
+        "conduct and compliance"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 11159,
+      "line_count": 225,
+      "referenced_files": [
+        "User__policy-whistleblowing-speak-up-v3.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-001"
+      ],
+      "named_individuals": [
+        "Naomi Okonjo-Bright",
+        "Sarah Lindgren",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "email_addresses": 3,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__employee-handbook-index-v6.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "index",
+      "title": "Index and Reading Guide",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "diversity and inclusion",
+        "performance",
+        "working arrangements",
+        "conduct and compliance",
+        "data protection",
+        "merger and acquisition"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 7892,
+      "line_count": 147,
+      "referenced_files": [
+        "User__benefits-handbook-switzerland-2026.txt",
+        "User__benefits-handbook-uk-2026.txt",
+        "User__career-framework-overview-v5.txt",
+        "User__code-of-conduct-v4.txt",
+        "User__faq-people-team-common-questions.txt",
+        "User__levelling-guide-commercial-and-support-v3.txt",
+        "User__levelling-guide-engineering-v5.txt",
+        "User__lookup-benefits-summary-by-location.csv",
+        "User__lookup-job-levels-and-titles.csv",
+        "User__lookup-uk-and-ch-public-holidays-2026.csv",
+        "User__offboarding-exit-checklist-employee.txt",
+        "User__onboarding-first-90-days-guide.txt",
+        "User__onboarding-induction-agenda-week-1.txt",
+        "User__policy-annual-leave-v5.txt",
+        "User__policy-employee-referral-scheme.txt",
+        "User__policy-equity-diversity-inclusion-v3.txt",
+        "User__policy-expenses-and-travel-v6.txt",
+        "User__policy-family-leave-v4.txt",
+        "User__policy-grievance-and-dignity-at-work-v4.txt",
+        "User__policy-hybrid-working-v3.txt",
+        "User__policy-internal-mobility-and-secondments.txt",
+        "User__policy-learning-and-development-budget.txt",
+        "User__policy-offboarding-leavers-v3.txt",
+        "User__policy-onboarding-new-starter-v4.txt",
+        "User__policy-pension-uk-v4.txt",
+        "User__policy-performance-review-cycle-v6.txt",
+        "User__policy-private-medical-insurance-v3.txt",
+        "User__policy-probation-period-v3.txt",
+        "User__policy-promotion-and-progression-v4.txt",
+        "User__policy-sick-pay-and-absence-v5.txt",
+        "User__policy-whistleblowing-speak-up-v3.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-GDE-001"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Ollie Kettering",
+        "Priya Anand",
+        "Rachel Duffy",
+        "Ruth Amankwah",
+        "Simone Buehler",
+        "Sunita Raval",
+        "Tobias Frankl",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "email_addresses": 1,
+        "home_addresses": 1,
+        "company_registration": 2
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__faq-people-team-common-questions.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "faq",
+      "title": "Frequently Asked Questions",
+      "date": "2026-06-30",
+      "topics": [
+        "onboarding",
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "working arrangements",
+        "merger and acquisition",
+        "employment law",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8430,
+      "line_count": 195,
+      "referenced_files": [
+        "User__career-framework-overview-v5.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-GDE-030"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "Lena Hofstetter",
+        "Ollie Kettering",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 4,
+        "health_information": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "User__levelling-guide-commercial-and-support-v3.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "framework",
+      "title": "Levelling Guide - Commercial, Support and Corporate Functions",
+      "date": "2026-01-01",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "pay and reward",
+        "performance"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 6750,
+      "line_count": 130,
+      "referenced_files": [
+        "User__career-framework-overview-v5.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-GDE-012"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "James Okafor",
+        "Michael Ashworth",
+        "Sarah Lindgren"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "health_information": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "User__levelling-guide-engineering-v5.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "framework",
+      "title": "Levelling Guide - Engineering, Firmware, Software and Field Service",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "performance"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 10002,
+      "line_count": 184,
+      "referenced_files": [
+        "User__career-framework-overview-v5.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-GDE-011"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "Gavin Tuck",
+        "Priya Anand",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__lookup-benefits-summary-by-location.csv",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "lookup_table",
+      "title": "Lookup benefits summary by location",
+      "date": null,
+      "topics": [
+        "onboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "Switzerland"
+      ],
+      "size_bytes": 4352,
+      "line_count": 34,
+      "referenced_files": [
+        "User__benefits-handbook-switzerland-2026.txt",
+        "User__benefits-handbook-uk-2026.txt",
+        "User__policy-annual-leave-v5.txt",
+        "User__policy-employee-referral-scheme.txt",
+        "User__policy-family-leave-v4.txt",
+        "User__policy-hybrid-working-v3.txt",
+        "User__policy-learning-and-development-budget.txt",
+        "User__policy-pension-uk-v4.txt",
+        "User__policy-private-medical-insurance-v3.txt",
+        "User__policy-sick-pay-and-absence-v5.txt"
+      ],
+      "referenced_document_ids": [],
+      "named_individuals": [],
+      "pii_indicators": {},
+      "contains_pii": false,
+      "contains_special_category_data": false,
+      "columns": [
+        "benefit",
+        "uk_entitlement",
+        "switzerland_entitlement",
+        "available_from",
+        "taxable_benefit",
+        "policy_document"
+      ],
+      "data_rows": 32
+    },
+    {
+      "file": "User__lookup-job-levels-and-titles.csv",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "lookup_table",
+      "title": "Lookup job levels and titles",
+      "date": null,
+      "topics": [
+        "levels and career",
+        "pay and reward"
+      ],
+      "jurisdictions": [],
+      "size_bytes": 2484,
+      "line_count": 22,
+      "referenced_files": [
+        "User__career-framework-overview-v5.txt"
+      ],
+      "referenced_document_ids": [],
+      "named_individuals": [],
+      "pii_indicators": {
+        "health_information": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true,
+      "columns": [
+        "level_code",
+        "level_name",
+        "job_family",
+        "example_titles",
+        "typical_scope",
+        "typical_years_experience",
+        "people_management",
+        "uk_band",
+        "ch_band"
+      ],
+      "data_rows": 18
+    },
+    {
+      "file": "User__lookup-uk-and-ch-public-holidays-2026.csv",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "lookup_table",
+      "title": "Lookup uk and ch public holidays 2026",
+      "date": null,
+      "topics": [
+        "leave",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 2186,
+      "line_count": 28,
+      "referenced_files": [],
+      "referenced_document_ids": [],
+      "named_individuals": [
+        "James Okafor",
+        "Priya Anand"
+      ],
+      "pii_indicators": {},
+      "contains_pii": false,
+      "contains_special_category_data": false,
+      "columns": [
+        "date",
+        "day_of_week",
+        "holiday_name",
+        "location",
+        "statutory",
+        "veridia_office_closed",
+        "notes"
+      ],
+      "data_rows": 22
+    },
+    {
+      "file": "User__offboarding-exit-checklist-employee.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "guide",
+      "title": "Leaver Checklist - Your Copy",
+      "date": "2026-01-01",
+      "topics": [
+        "offboarding",
+        "benefits",
+        "pay and reward",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 6979,
+      "line_count": 140,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-CHK-009"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Ollie Kettering",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 4,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__onboarding-first-90-days-guide.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "guide",
+      "title": "Your First 90 Days",
+      "date": "2025-09-01",
+      "topics": [
+        "onboarding",
+        "levels and career",
+        "leave",
+        "working arrangements",
+        "conduct and compliance"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 6786,
+      "line_count": 140,
+      "referenced_files": [
+        "User__policy-annual-leave-v5.txt",
+        "User__policy-probation-period-v3.txt",
+        "User__policy-whistleblowing-speak-up-v3.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-GDE-005"
+      ],
+      "named_individuals": [
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__onboarding-induction-agenda-week-1.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "guide",
+      "title": "Induction Agenda - Week One",
+      "date": "2026-02-01",
+      "topics": [
+        "onboarding",
+        "levels and career",
+        "leave",
+        "pay and reward",
+        "screening and vetting",
+        "working arrangements",
+        "conduct and compliance",
+        "data protection"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8641,
+      "line_count": 178,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-GDE-004"
+      ],
+      "named_individuals": [
+        "Alistair Vance",
+        "James Okafor",
+        "Lena Hofstetter",
+        "Marcus Chen",
+        "Ollie Kettering",
+        "Rachel Duffy",
+        "Ruth Amankwah",
+        "Sarah Lindgren",
+        "Simone Buehler",
+        "Sunita Raval",
+        "Yusuf Demir"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-annual-leave-v5.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Annual Leave Policy",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8890,
+      "line_count": 195,
+      "referenced_files": [
+        "User__policy-family-leave-v4.txt",
+        "User__policy-sick-pay-and-absence-v5.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-007"
+      ],
+      "named_individuals": [
+        "James Okafor",
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Ollie Kettering",
+        "Priya Anand"
+      ],
+      "pii_indicators": {
+        "email_addresses": 3,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-employee-referral-scheme.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Employee Referral Scheme",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "pay and reward",
+        "diversity and inclusion",
+        "data protection",
+        "merger and acquisition",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 5369,
+      "line_count": 117,
+      "referenced_files": [
+        "User__code-of-conduct-v4.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-026"
+      ],
+      "named_individuals": [
+        "Tobias Frankl"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-equity-diversity-inclusion-v3.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Equity, Diversity and Inclusion Policy",
+      "date": "2026-01-01",
+      "topics": [
+        "levels and career",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "employee relations",
+        "diversity and inclusion",
+        "performance",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8583,
+      "line_count": 179,
+      "referenced_files": [
+        "User__policy-grievance-and-dignity-at-work-v4.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-017"
+      ],
+      "named_individuals": [
+        "Naomi Okonjo-Bright"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-expenses-and-travel-v6.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Expenses and Business Travel Policy",
+      "date": "2026-01-01",
+      "topics": [
+        "benefits",
+        "pay and reward",
+        "employee relations",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 9312,
+      "line_count": 202,
+      "referenced_files": [
+        "User__policy-grievance-and-dignity-at-work-v4.txt"
+      ],
+      "referenced_document_ids": [
+        "FIN-POL-005"
+      ],
+      "named_individuals": [
+        "Gary Pemberton",
+        "Priya Anand",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "email_addresses": 3,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-family-leave-v4.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Family Leave Policy",
+      "date": "2026-01-01",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8504,
+      "line_count": 186,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-POL-009"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-grievance-and-dignity-at-work-v4.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Grievance and Dignity at Work Policy",
+      "date": "2025-04-01",
+      "topics": [
+        "benefits",
+        "pay and reward",
+        "health and wellbeing",
+        "employee relations",
+        "conduct and compliance"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8861,
+      "line_count": 180,
+      "referenced_files": [
+        "User__policy-whistleblowing-speak-up-v3.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-010"
+      ],
+      "named_individuals": [
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 3,
+        "phone_numbers": 1,
+        "health_information": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "User__policy-hybrid-working-v3.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Hybrid and Flexible Working Policy",
+      "date": "2025-06-01",
+      "topics": [
+        "onboarding",
+        "pay and reward",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8049,
+      "line_count": 174,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-POL-015"
+      ],
+      "named_individuals": [
+        "Naomi Okonjo-Bright"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-internal-mobility-and-secondments.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Internal Mobility and Secondments",
+      "date": "2025-06-01",
+      "topics": [
+        "onboarding",
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "performance",
+        "working arrangements",
+        "merger and acquisition",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 6338,
+      "line_count": 133,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-POL-027"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Rachel Duffy",
+        "Tobias Frankl"
+      ],
+      "pii_indicators": {
+        "email_addresses": 3,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-learning-and-development-budget.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Learning and Development",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "levels and career",
+        "leave",
+        "pay and reward",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 6327,
+      "line_count": 140,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-POL-019"
+      ],
+      "named_individuals": [
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-offboarding-leavers-v3.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Leavers and Offboarding Policy",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "screening and vetting",
+        "performance",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 10825,
+      "line_count": 216,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-POL-012"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 4,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-onboarding-new-starter-v4.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "New Starter and Onboarding Policy",
+      "date": "2025-09-01",
+      "topics": [
+        "onboarding",
+        "levels and career",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "working arrangements",
+        "conduct and compliance",
+        "data protection"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 9894,
+      "line_count": 190,
+      "referenced_files": [
+        "User__onboarding-first-90-days-guide.txt",
+        "User__onboarding-induction-agenda-week-1.txt",
+        "User__policy-grievance-and-dignity-at-work-v4.txt",
+        "User__policy-probation-period-v3.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-003"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Ollie Kettering",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 4,
+        "home_addresses": 1,
+        "health_information": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "User__policy-pension-uk-v4.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Pension Policy - United Kingdom",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "screening and vetting",
+        "pensions - defined benefit",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8508,
+      "line_count": 181,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-POL-024"
+      ],
+      "named_individuals": [
+        "Denise Kaur"
+      ],
+      "pii_indicators": {
+        "email_addresses": 1,
+        "phone_numbers": 1,
+        "scheme_policy_numbers": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-performance-review-cycle-v6.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Performance Review Cycle",
+      "date": "2026-01-01",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "employee relations",
+        "performance",
+        "conduct and compliance"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 7951,
+      "line_count": 177,
+      "referenced_files": [
+        "User__career-framework-overview-v5.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-018"
+      ],
+      "named_individuals": [
+        "Denise Kaur",
+        "Naomi Okonjo-Bright"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-private-medical-insurance-v3.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Private Medical Insurance - United Kingdom",
+      "date": "2026-01-01",
+      "topics": [
+        "onboarding",
+        "benefits",
+        "health and wellbeing",
+        "working arrangements"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 7521,
+      "line_count": 160,
+      "referenced_files": [
+        "User__benefits-handbook-switzerland-2026.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-025"
+      ],
+      "named_individuals": [
+        "Denise Kaur"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "phone_numbers": 3,
+        "scheme_policy_numbers": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "User__policy-probation-period-v3.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Probationary Period Policy",
+      "date": "2025-09-01",
+      "topics": [
+        "onboarding",
+        "offboarding",
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "screening and vetting",
+        "employee relations",
+        "employment law"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 7049,
+      "line_count": 145,
+      "referenced_files": [],
+      "referenced_document_ids": [
+        "HR-POL-004"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "health_information": 1,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-promotion-and-progression-v4.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Promotion and Progression Policy",
+      "date": "2026-01-01",
+      "topics": [
+        "levels and career",
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "performance",
+        "data protection"
+      ],
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "size_bytes": 6389,
+      "line_count": 144,
+      "referenced_files": [
+        "User__career-framework-overview-v5.txt",
+        "User__policy-internal-mobility-and-secondments.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-022"
+      ],
+      "named_individuals": [
+        "Denise Kaur"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    },
+    {
+      "file": "User__policy-sick-pay-and-absence-v5.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Sickness Absence and Sick Pay Policy",
+      "date": "2026-01-01",
+      "topics": [
+        "benefits",
+        "leave",
+        "pay and reward",
+        "health and wellbeing",
+        "employee relations",
+        "working arrangements",
+        "employment law",
+        "systems"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 10088,
+      "line_count": 200,
+      "referenced_files": [
+        "User__benefits-handbook-uk-2026.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-008"
+      ],
+      "named_individuals": [
+        "Lena Hofstetter",
+        "Naomi Okonjo-Bright",
+        "Priya Anand",
+        "Rachel Duffy"
+      ],
+      "pii_indicators": {
+        "email_addresses": 3,
+        "phone_numbers": 1,
+        "health_information": 3,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": true
+    },
+    {
+      "file": "User__policy-whistleblowing-speak-up-v3.txt",
+      "role_prefix": "User",
+      "visible_to_roles": [
+        "User",
+        "HR-Manager",
+        "Exec-Team"
+      ],
+      "minimum_role_required": "User",
+      "doc_type": "policy",
+      "title": "Speak Up (Whistleblowing) Policy",
+      "date": "2025-04-01",
+      "topics": [
+        "levels and career",
+        "pay and reward",
+        "employee relations",
+        "performance",
+        "conduct and compliance",
+        "data protection"
+      ],
+      "jurisdictions": [
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "size_bytes": 8485,
+      "line_count": 177,
+      "referenced_files": [
+        "User__policy-family-leave-v4.txt"
+      ],
+      "referenced_document_ids": [
+        "HR-POL-002"
+      ],
+      "named_individuals": [
+        "Naomi Okonjo-Bright",
+        "Sarah Lindgren",
+        "Simone Buehler",
+        "Sunita Raval"
+      ],
+      "pii_indicators": {
+        "email_addresses": 2,
+        "phone_numbers": 2,
+        "company_registration": 1
+      },
+      "contains_pii": true,
+      "contains_special_category_data": false
+    }
+  ]
+}

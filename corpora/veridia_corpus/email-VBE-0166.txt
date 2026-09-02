@@ -1,0 +1,68 @@
+From: Steve Ogden <steve.ogden@midyorks.nhs.uk>
+To: James Okafor <james.okafor@veridiabio.com>
+CC: Priya Anand <priya.anand@veridiabio.com>, Peter Doyle <peter.doyle@veridiabio.com>
+Date: Tue, 3 Jun 2025 16:20:07 +0100
+Subject: VeriPrep SP-1 - eighty seven jams and counting
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Mr Okafor,
+
+I am escalating to you because I have run out of patience with the process
+rather than with any individual.
+
+Since December 2024 our VeriPrep SP-1 (SP1-R1-0219) has jammed 87 times. I have
+the log, it is attached, and I have kept it because your Danny Whitcombe asked
+me to in January and told me it would be the evidence I needed. I have done
+what was asked.
+
+In that time we have:
+- bought a set of tube adapters, which helped for about three months
+- had an engineer visit in January who replaced the gripper jaws
+- been told repeatedly that the underlying problem is a tolerance interaction
+  between the r1 feed mechanism and the tubes our trust procurement has us
+  contracted to until December
+- been told a hardware revision is coming "in Q3"
+
+What we have not had is a resolution. We are now back to three or four jams a
+day. Each one takes a scientist away from the bench for ten minutes and puts a
+sample at risk of being mishandled during recovery.
+
+I want to be fair to your people. Danny has been responsive and honest. Rob
+Ellery has been out and did good work. Nobody has fobbed me off. But the
+cumulative effect of a series of reasonable individual responses is that six
+months have passed and my laboratory is still fighting a machine every day.
+
+What I would like:
+
+1. A date for the r2 retrofit being available, not a quarter.
+
+2. A serious conversation about who pays for it. Veridia's position, as I
+   understand it, is that our tubes are outside the specification. My position
+   is that a specification that excludes a large fraction of the 5mL EDTA tubes
+   on the European market is a specification that was drawn too narrowly, and
+   that the redesign you are shipping is an admission of exactly that. If the
+   r1 tolerance band were adequate you would not be widening it.
+
+3. In the meantime, some acknowledgement that this is costing us. I have not
+   costed it and I am not going to, because I would rather have the machine
+   working than have an argument about money.
+
+I would rather resolve this with you than through procurement, but I should
+tell you that our contract manager has started asking questions and I am
+running out of ways to answer them.
+
+Regards,
+
+Steve Ogden
+Laboratory Manager, Haematology and Blood Transfusion
+Mid Yorkshire Teaching NHS Trust
+Pinderfields Hospital, Aberford Road, Wakefield WF1 4DG
+steve.ogden@midyorks.nhs.uk | 01924 541 000 ext 26618
+
+--
+This email and any files transmitted with it are confidential and intended
+solely for the use of the individual or entity to whom they are addressed. If
+you have received this email in error please notify the system manager. This
+message contains confidential information and is intended only for the
+individual named. Mid Yorkshire Teaching NHS Trust monitors email traffic data
+and content for the purposes of security and staff training.

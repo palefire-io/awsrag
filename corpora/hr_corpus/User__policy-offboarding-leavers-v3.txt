@@ -1,0 +1,215 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Leavers and Offboarding Policy
+=================================================================
+Document:      HR-POL-012
+Version:       3
+Effective:     2026-01-01
+Supersedes:    Version 2 (2024-03-01)
+Owner:         Rachel Duffy, HR Business Partner
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+Review due:    2028-01-01
+Applies to:    All employees, all leaving reasons
+
+-----------------------------------------------------------------
+1. PRINCIPLE
+-----------------------------------------------------------------
+1.1  People leave. Most of the people who leave Veridia will work in this
+     industry for another twenty years, will meet our staff at conferences,
+     and may become customers, partners or colleagues again. How we handle the
+     last four weeks is disproportionately what they will remember.
+
+1.2  This policy applies whatever the reason for leaving. Resignation,
+     redundancy, end of a fixed term, retirement, dismissal, or the sad ones.
+
+-----------------------------------------------------------------
+2. RESIGNING
+-----------------------------------------------------------------
+2.1  Tell your manager first, in a conversation, and confirm in writing to
+     your manager copying people@veridiabio.com. The written notice is what
+     starts the clock.
+
+2.2  Your notice period is in your contract. Standard periods:
+
+       Level        UK notice        Switzerland notice
+       -----------  ---------------  ------------------------------
+       L1 to L2     1 month          1 month (after probation)
+       L3           2 months         2 months (from 2nd year)
+       L4 to L5     3 months         3 months (from 10th year)
+       L6           6 months         3 months
+
+     Swiss notice periods are the statutory minima under the Code of
+     Obligations unless your contract states longer. Notice runs to the end of
+     a calendar month in Switzerland.
+
+2.3  Your manager cannot refuse a resignation and cannot require you to stay
+     longer than your notice period. Equally, we can agree a shorter notice
+     period by mutual consent and often do where it suits both sides.
+
+2.4  You do not have to say where you are going. Most people do. We ask
+     because it helps us understand the market, not because we intend to do
+     anything about it.
+
+2.5  COUNTER-OFFERS. Veridia does not make counter-offers as a matter of
+     course. Where a manager wants to make one they need Chief People Officer
+     approval. This is deliberate: a counter-offer usually addresses the
+     symptom and rarely the reason, and the industry data on how long
+     counter-offered employees stay is poor. If your pay is wrong, we would
+     rather fix it before you resign, which means telling us before you
+     resign.
+
+-----------------------------------------------------------------
+3. GARDEN LEAVE AND RESTRICTIVE COVENANTS
+-----------------------------------------------------------------
+3.1  We may place you on garden leave for some or all of your notice. You
+     remain employed, remain paid, retain your benefits, and must remain
+     available. You must not work for anyone else during it.
+
+3.2  Garden leave is used where there is a genuine commercial concern - most
+     often a move to a direct competitor from a commercial, regulatory or R&D
+     role. It is not used as a punishment for resigning and it is not the
+     default. In 2025, 3 of 41 leavers were placed on garden leave.
+
+3.3  Restrictive covenants, where your contract contains them, survive your
+     employment. They are in your contract; if you cannot find them or do not
+     understand them, ask the People team and we will explain them plainly,
+     including what we would and would not seek to enforce.
+
+-----------------------------------------------------------------
+4. THE LAST FOUR WEEKS
+-----------------------------------------------------------------
+Week -4   People team sends you a leaver pack. Manager agrees a handover plan
+          with you and starts recruitment or cover.
+Week -3   Handover documents written. Not verbal handover. Written.
+Week -2   Knowledge transfer sessions with whoever picks up your work.
+          Customer-facing roles: introduce your successor to your accounts.
+Week -1   Exit interview (section 6). Equipment return arranged. Final
+          expenses submitted - after your last day this becomes painful for
+          everyone.
+Last day  Accounts disabled at 18:00 local time, not at 09:00. You should be
+          able to say goodbye to people.
+
+-----------------------------------------------------------------
+5. WHAT YOU MUST RETURN
+-----------------------------------------------------------------
+  - Laptop, phone, monitors and peripherals
+  - Building access card, keys, lockers emptied
+  - Company credit card
+  - Vehicle, fuel card and its documentation (field service)
+  - Test instruments, service tools, calibration equipment
+  - Any customer documentation, controlled documents or samples
+
+Return in person where you can. Where you cannot, IT arranges a courier with
+prepaid packaging. Do not put a laptop in the post uninsured.
+
+If something is genuinely lost we deal with it sensibly. Repeated failure to
+return equipment after reminders may result in a deduction from final pay
+where your contract permits it, which we have done twice in nine years.
+
+-----------------------------------------------------------------
+6. EXIT INTERVIEWS
+-----------------------------------------------------------------
+6.1  Offered to every leaver. Voluntary. Conducted by the People team, never
+     by your manager.
+
+6.2  Held in your last week, or up to four weeks after leaving if you would
+     rather have the distance. Some of the most useful ones we have had were
+     six weeks after the person left.
+
+6.3  What happens to what you say:
+     - Themes are reported quarterly to the Executive Committee in aggregate.
+     - Nothing attributable to you is shared with your manager without your
+       explicit agreement.
+     - If you tell us something that discloses a safeguarding issue, a
+       regulatory concern, discrimination or unlawful conduct, we will act on
+       it, and we will tell you at the time that we are going to.
+
+6.4  You may decline, and you may also do it in writing instead. About a
+     quarter of leavers decline and that is entirely their right.
+
+6.5  We will not ask you to sign anything at your exit interview.
+
+-----------------------------------------------------------------
+7. YOUR FINAL PAY
+-----------------------------------------------------------------
+7.1  Paid on the normal pay date for the month in which you leave, not
+     earlier.
+
+7.2  It includes: salary to your leaving date; accrued untaken annual leave;
+     any bonus or commission you have contractually earned; approved expenses.
+
+7.3  It may deduct: annual leave taken in excess of accrual; outstanding
+     season ticket or cycle-to-work balances; training costs where a repayment
+     agreement was signed and applies; unreturned equipment per section 5.
+
+7.4  You will receive a P45 (UK) or the equivalent exit documentation and
+     Arbeitszeugnis (Switzerland). Swiss employees are entitled to a full
+     qualified reference (qualifiziertes Arbeitszeugnis) and we will provide
+     one; it is a legal entitlement and not a favour.
+
+-----------------------------------------------------------------
+8. WHAT HAPPENS TO YOUR BENEFITS
+-----------------------------------------------------------------
+  Pension (UK)         Contributions stop with your final pay. Your pot stays
+                       with the provider; they will write to you.
+  BVG (Switzerland)    Vested benefit transfers to your new employer's fund or
+                       to a vested benefits account. The pension fund writes
+                       to you directly and you must respond.
+  Private medical      Cover ends on your last day. Continuation on a personal
+                       policy is available directly from the insurer at your
+                       cost; ask the People team for the contact.
+  Life assurance       Ends on your last day.
+  Share options        Governed by the option agreement. Generally 90 days to
+                       exercise vested options for a good leaver. READ YOUR
+                       AGREEMENT and speak to the People team early - this is
+                       the single thing leavers most often get wrong, and the
+                       deadline is not extendable.
+  EAP                  Available to you for three months after you leave.
+
+-----------------------------------------------------------------
+9. REFERENCES
+-----------------------------------------------------------------
+9.1  Veridia gives factual references as standard: job title, dates of
+     employment, and confirmation of the reason for leaving where asked and
+     where accurate.
+
+9.2  Managers may give a personal reference in a personal capacity, on
+     personal paper, making clear they are not writing on behalf of the
+     company. Many do.
+
+9.3  We do not give negative references. We answer factually and we do not
+     volunteer more than we are asked.
+
+9.4  Reference requests go to people@veridiabio.com. Managers should not
+     answer employment reference requests directly.
+
+-----------------------------------------------------------------
+10. STAYING IN TOUCH
+-----------------------------------------------------------------
+10.1 The Veridia alumni list is opt-in. Ask at your exit interview.
+
+10.2 We rehire. In 2025 four of our hires were former employees, and one of
+     them is now a Head of. There is no policy against it and no waiting
+     period.
+
+-----------------------------------------------------------------
+11. IF YOU ARE LEAVING FOR A DIFFICULT REASON
+-----------------------------------------------------------------
+11.1 Redundancy, ill health, or a dismissal are covered by their own
+     procedures. This policy still applies to the mechanics of leaving.
+
+11.2 Where an employee dies in service, the People team leads on contacting
+     the family, death in service benefit and pension arrangements. Managers
+     should not attempt to handle this alone. Contact
+     naomi.okonjo-bright@veridiabio.com directly.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Rachel Duffy (UK) - rachel.duffy@veridiabio.com
+Lena Hofstetter (Switzerland) - lena.hofstetter@veridiabio.com
+people@veridiabio.com | +44 1223 496 190
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

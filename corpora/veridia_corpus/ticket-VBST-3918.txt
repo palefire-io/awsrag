@@ -1,0 +1,106 @@
+Ticket ID: VBST-3918
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-02-26 15:44 UTC
+Product: VeriScan 400 Pro
+Customer: Universitaetsspital Basel - Haematologie (ACC-1190)
+Reported by: Dr Stefan Ruettimann, Leitender Arzt
+Assigned to: Aisha Rahman (Support Engineering L2)
+Serial: VS4P-0288
+Firmware: 4.2.2
+
+--- Thread ---
+
+[2025-02-26 15:44] Dr Stefan Ruettimann (Leitender Arzt):
+We installed firmware 4.2.2 yesterday, which was offered to us as a fix for
+the timestamp problem described to us by your engineer.
+
+Since installing it the instrument raises E-507 "internal clock not
+synchronised" continuously - approximately every eight minutes. The clock is
+synchronised. Our NTP server is reachable and the instrument confirms sync.
+
+Also the timestamps in the HL7 output are still wrong, although the message
+header time now appears correct.
+
+[2025-02-26 16:30] Aisha Rahman (Support Engineering L2):
+Dr Ruettimann - I am sorry. 4.2.2 was released on 27 February as a partial fix
+and it is not correct. We are in the process of withdrawing it.
+
+What 4.2.2 actually did: it restored the direct clock read for the message
+header (MSH-7) only. The other three timestamp fields still use the faulty
+counter. And it added a comparison between the counter and the clock which
+raises E-507 whenever they disagree - which, since the counter is still
+drifting, is constantly.
+
+So you have the original defect plus a new false alarm. That is entirely our
+fault.
+
+Please roll back to 4.2.0 today. Instructions:
+Service > Firmware > Rollback > select 4.2.0. Full QC afterwards per
+SOP-VBS-001 section 9.
+
+If you would prefer, Ingrid Sorensen can attend tomorrow.
+
+[2025-02-26 17:10] Dr Stefan Ruettimann (Leitender Arzt):
+We will roll back ourselves, it is straightforward.
+
+I would like to know how firmware for a Class C device in conformity
+assessment is released and withdrawn within four days. I ask as a customer and
+also because our quality manager will ask me.
+
+[2025-02-27 09:15] Gavin Tuck (Firmware Lead):
+Dr Ruettimann, Gavin Tuck, firmware lead. Your question deserves an answer
+from me rather than from support.
+
+4.2.2 went through our hotfix release path, which is abbreviated compared with
+the path for a major version: it omits the extended soak test. That is the same
+path 4.2.1 took, and it is the reason both defects reached you.
+
+The abbreviated path exists because a hotfix is, in principle, a small and
+well-understood change. In this case the change was neither, because we scoped
+it from customer ticket summaries rather than from the defect analysis, which
+was not complete when we shipped.
+
+What we are changing, and I will put this in writing formally once the
+investigation closes:
+- a 72-hour continuous-uptime soak with an independent time reference is being
+  added to the hotfix path, not just the major version path;
+- no hotfix ships before the investigation identifying the defect is complete;
+- any change touching a time source gets a second reviewer.
+
+The device's conformity assessment is not affected by a firmware withdrawal as
+such - software changes are managed under our change control and the technical
+documentation is updated accordingly - but I would not want to leave you with
+the impression that this was a good process. It was not.
+
+4.2.2 reached 23 instruments. Yours is one of them. All 23 have been contacted
+directly.
+
+[2025-02-27 11:40] Dr Stefan Ruettimann (Leitender Arzt):
+Thank you. That is a straight answer and I will pass it on.
+
+Rolled back to 4.2.0 this morning. E-507 has stopped. QC accepted. Timestamps
+correct.
+
+We will wait for the proper fix and we will not be an early adopter of it.
+
+[2025-03-20 08:50] Aisha Rahman (Support Engineering L2):
+4.2.3 released yesterday with bulletin VBB-0041. It has been through the
+extended soak - 14 days continuous uptime with timestamp assertion against an
+NTP reference, maximum observed drift 1.2 seconds.
+
+No pressure to take it immediately. When you do, Ingrid can attend if you'd
+prefer someone on site.
+
+[2025-04-14 10:20] Dr Stefan Ruettimann (Leitender Arzt):
+We updated to 4.2.3 last week after monitoring reports from other sites.
+Uptime now 9 days, timestamps within 2 seconds. Satisfactory.
+
+Closing.
+
+--- Resolution ---
+Root cause: firmware 4.2.2, an incomplete fix for VBI-0091, which corrected
+MSH-7 only and introduced spurious E-507 warnings. Withdrawn 2025-03-03.
+Actions: rollback to 4.2.0; subsequent update to 4.2.3.
+Process failure acknowledged to the customer in writing by the firmware lead.
+See also: VBI-0091 section 6, VBB-0041.

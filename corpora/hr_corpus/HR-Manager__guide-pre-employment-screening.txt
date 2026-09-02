@@ -1,0 +1,226 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** RESTRICTED - HIRING MANAGERS, PEOPLE TEAM, EXCO ***
+Pre-Employment Screening - Manager and Recruiter Guide
+=================================================================
+Document:      HR-MGR-008
+Version:       5
+Effective:     2026-01-01
+Owner:         Tobias Frankl, Talent Acquisition Lead
+Co-owner:      Rachel Duffy, HR Business Partner
+Legal review:  Sunita Raval, General Counsel, 2025-11-27
+Screening
+provider:      Vetted Assurance Ltd (UK), Sicherheitsprüfung Nord AG (CH)
+
+The candidate-facing summary of this process is in the offer pack. This
+document is the operational guide and contains the decision framework, which
+is not published to candidates.
+
+-----------------------------------------------------------------
+1. PRINCIPLES
+-----------------------------------------------------------------
+1.1  Every offer is conditional on satisfactory screening. Every one, at every
+     level, including executive appointments and including internal
+     candidates moving into a regulated role.
+
+1.2  We screen because we make medical devices under a regulated quality
+     system, because our staff enter NHS premises and handle patient data, and
+     because a falsified qualification in a regulatory or quality role is a
+     genuine patient safety exposure. We do not screen to find reasons to
+     withdraw offers.
+
+1.3  A discrepancy is a conversation, not a verdict. The overwhelming majority
+     of discrepancies are innocent - a wrong month, a job title the candidate
+     remembers differently from how the employer recorded it, a gap they were
+     embarrassed to explain.
+
+1.4  Proportionality. The screening level is set by the role, not by seniority
+     for its own sake.
+
+-----------------------------------------------------------------
+2. SCREENING LEVELS
+-----------------------------------------------------------------
+LEVEL 1 - STANDARD. All roles.
+  - Identity verification
+  - Right to work (UK) or permit status (CH)
+  - Employment history, 3 years, with gaps over 31 days accounted for
+  - Two references, at least one from the most recent employer
+  - Basic financial sanctions and adverse media check
+  - Qualifications where claimed and material to the role
+
+LEVEL 2 - ENHANCED. Regulated roles: Quality, Regulatory Affairs, R&D,
+Manufacturing, Applications, Field Service, Support engineering.
+  - Everything in Level 1, plus
+  - Employment history, 5 years
+  - Professional registration verification (IBMS, HCPC, chartered status)
+  - Basic criminal record check (DBS Basic in the UK; Strafregisterauszug in
+    Switzerland)
+  - Regulatory debarment check (MHRA, FDA, EU EudraGMDP)
+
+LEVEL 3 - FINANCIAL AND EXECUTIVE. Finance, Legal, People team with pay
+access, all L5 and L6.
+  - Everything in Level 2, plus
+  - Directorship and disqualification search
+  - Credit and insolvency check (UK: with explicit consent, and see 4.4)
+  - Adverse media, extended
+
+LEVEL 4 - CUSTOMER SITE ACCESS. Roles requiring routine unaccompanied access
+to NHS clinical areas.
+  - Everything in Level 2, plus
+  - Enhanced DBS where the trust requires it and the role meets the statutory
+    eligibility criteria. NOTE: most of our field roles do NOT meet the
+    eligibility criteria for Enhanced DBS. Where a trust asks for one and the
+    role is not eligible, we say so and offer a Basic check instead. Applying
+    for a check the role is not eligible for is an offence.
+  - Occupational health clearance where the trust requires immunisation
+    evidence
+  - Trust-specific requirements as they arise
+
+-----------------------------------------------------------------
+3. WHAT WE DO NOT DO
+-----------------------------------------------------------------
+3.1  We do not ask about salary history. Anywhere, at any stage, for any role.
+     This was stopped in 2023 and the gender pay gap analysis subsequently
+     identified starting-salary negotiation as a principal driver of the
+     within-band residual gap.
+
+3.2  We do not ask about health at any point before an offer is made, other
+     than to ask what adjustments a candidate needs for the recruitment
+     process itself. Post-offer health enquiries are limited to what is
+     necessary for the role.
+
+3.3  We do not credit check candidates for roles outside Level 3.
+
+3.4  We do not check social media as part of screening. Adverse media checks
+     are conducted by the provider against defined criteria and do not include
+     personal social accounts.
+
+3.5  We do not use spent convictions in decision-making. Under the
+     Rehabilitation of Offenders Act 1974 a spent conviction generally may not
+     be taken into account, and Basic DBS certificates do not disclose them.
+
+3.6  We do not contact a candidate's current employer without their written
+     permission, ever, including where they have listed a manager as a
+     referee.
+
+-----------------------------------------------------------------
+4. THE DECISION FRAMEWORK FOR DISCREPANCIES
+-----------------------------------------------------------------
+4.1  This is the part of the guide that matters. A discrepancy is graded, and
+     the grade determines the route.
+
+  GRADE A - IMMATERIAL. Resolve and proceed.
+    Dates out by up to 3 months. Job title variance. A referee who has left
+    the employer. A qualification grade misremembered. An unexplained gap that
+    turns out to be travel, caring, illness or unemployment.
+    Action: note it, resolve it, proceed. No escalation. No record beyond the
+    screening file.
+
+  GRADE B - MATERIAL BUT EXPLICABLE. Escalate to the People team.
+    Dates out by more than 6 months. An omitted employer. A qualification
+    claimed at a higher classification than achieved. A professional
+    registration lapsed rather than held.
+    Action: the People team puts it to the candidate directly and in writing,
+    with the evidence, and gives them a fair opportunity to respond. Decision
+    by the People team with the hiring manager. Most Grade B findings end in
+    the offer proceeding.
+
+  GRADE C - SERIOUS. Escalate to the Chief People Officer.
+    A qualification that does not exist. An employer that does not exist or
+    denies the employment. A directorship disqualification. A regulatory
+    debarment. A criminal record disclosure relevant to the role.
+    Action: CPO decision, with the General Counsel where there is any legal
+    dimension. The candidate is told what has been found and given an
+    opportunity to respond before any decision is taken. This is not optional
+    and it is not a courtesy - a decision taken without putting the finding to
+    the candidate is indefensible.
+
+4.2  IN EVERY CASE the candidate is told what has been found and is given a
+     fair opportunity to respond before a decision is made. There is no
+     circumstance in which we withdraw an offer on a screening finding the
+     candidate has not seen.
+
+4.3  A criminal record disclosure is assessed against the role: what the
+     offence was, how long ago, its relevance to the duties, and what the
+     candidate says about it. A conviction is not an automatic bar and has not
+     been treated as one in any case to date.
+
+4.4  Adverse credit is relevant only to Level 3 roles and only where it
+     indicates a specific risk. Financial difficulty is not evidence of
+     dishonesty and treating it as such is both wrong and, in a company where
+     a fifth of staff used the EAP's debt guidance service last year,
+     hypocritical.
+
+-----------------------------------------------------------------
+5. WITHDRAWING AN OFFER
+-----------------------------------------------------------------
+5.1  Only with Chief People Officer approval. Never by a hiring manager
+     acting alone and never by the recruiter.
+
+5.2  The candidate is told the reason, in writing, and given the evidence.
+
+5.3  Where the finding is Grade C and the candidate has an existing employer
+     they may be about to resign from, we tell them BEFORE they resign
+     wherever we possibly can. Recruiters must flag any candidate who has
+     given notice while screening is outstanding.
+
+5.4  Three offers withdrawn since 2022, all Grade C, all approved by the CPO:
+     one fabricated degree, one undisclosed regulatory debarment, one where
+     the named employer confirmed no record of the individual.
+
+-----------------------------------------------------------------
+6. TIMESCALES AND START DATES
+-----------------------------------------------------------------
+6.1  Target 10 working days from offer acceptance. Median actual in 2025 was
+     14 days. The bottleneck is almost always a previous employer's HR
+     department, not the provider.
+
+6.2  A CANDIDATE MAY NOT START BEFORE RIGHT TO WORK IS VERIFIED. No exceptions
+     and no manager discretion. This is a legal obligation on Veridia with
+     civil penalties of up to GBP 60,000 per illegal worker.
+
+6.3  Other elements of screening may be outstanding at start date with People
+     team approval, with a written note of what is outstanding and by when.
+     This is used two or three times a year, usually for a reference from an
+     employer who has gone into administration.
+
+6.4  If screening cannot be completed at all, the People team decides. It has
+     never resulted in a withdrawal where the failure was the previous
+     employer's rather than the candidate's.
+
+-----------------------------------------------------------------
+7. INTERNAL MOVES
+-----------------------------------------------------------------
+7.1  Existing employees moving into a regulated or Level 3 role are screened
+     for the incremental elements only - professional registration, DBS,
+     directorship search as applicable. We do not re-verify employment history
+     for someone who already works here.
+
+7.2  Right to work is re-checked where the employee's permission to work is
+     time-limited. See the right to work audit.
+
+-----------------------------------------------------------------
+8. DATA PROTECTION
+-----------------------------------------------------------------
+8.1  Legal basis: legitimate interests for most checks, with the substantial
+     public interest condition under Schedule 1 Part 2 of the Data Protection
+     Act 2018 for criminal record data.
+
+8.2  Retention: screening files for unsuccessful candidates are destroyed
+     after 6 months. For employees, retained for the duration of employment
+     plus 6 years. Criminal record certificate details are recorded as a
+     yes/no outcome and the certificate itself is NOT retained.
+
+8.3  Candidates are told what will be checked, by whom, and on what basis,
+     before screening begins.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Tobias Frankl - tobias.frankl@veridiabio.com - +44 1223 496 193
+Rachel Duffy - rachel.duffy@veridiabio.com
+Escalations: naomi.okonjo-bright@veridiabio.com
+
+=================================================================
+RESTRICTED. Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

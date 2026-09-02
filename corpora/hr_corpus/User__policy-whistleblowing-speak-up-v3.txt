@@ -1,0 +1,176 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Speak Up (Whistleblowing) Policy
+=================================================================
+Document:      HR-POL-002
+Version:       3
+Effective:     2025-04-01
+Supersedes:    Version 2 (2022-11-01)
+Owner:         Sunita Raval, General Counsel and Company Secretary
+Approved by:   Board Audit Committee, 2025-03-18
+Board sponsor: Sir Nigel Broadhurst, Non-Executive Chair
+Applies to:    Employees, contractors, agency workers, interns, former
+               employees, job applicants and suppliers.
+
+-----------------------------------------------------------------
+1. WHAT THIS IS FOR
+-----------------------------------------------------------------
+1.1  If you know or suspect something is wrong, this policy tells you how to
+     say so, what will happen, and what protects you.
+
+1.2  Use it for serious concerns about wrongdoing. Use the grievance procedure
+     for concerns about your own treatment. If you are not sure which, use
+     either - we will route it correctly rather than send you away.
+
+-----------------------------------------------------------------
+2. WHAT TO RAISE
+-----------------------------------------------------------------
+  - A Veridia product being unsafe or not performing as claimed
+  - A quality, regulatory or vigilance obligation not being met
+  - Falsification of records - quality, training, calibration, clinical,
+    financial
+  - Concealment of a product problem, a complaint or an adverse event
+  - Danger to health and safety
+  - Fraud, theft, bribery or corruption
+  - Breach of competition law
+  - Discrimination, harassment or victimisation, including of others
+  - Misuse of personal or patient data
+  - Damage to the environment
+  - Deliberate concealment of any of the above
+  - A criminal offence, or a failure to comply with a legal obligation
+
+You do not need proof. You need a reasonable belief. Investigating is our job,
+not yours, and you should not attempt to gather evidence yourself.
+
+-----------------------------------------------------------------
+3. HOW TO RAISE IT
+-----------------------------------------------------------------
+There is no order you must follow. Pick whichever you are most comfortable
+with.
+
+  1. YOUR MANAGER. Fine for most things and usually fastest.
+
+  2. A NAMED INTERNAL CONTACT.
+       Sunita Raval, General Counsel - sunita.raval@veridiabio.com
+       Naomi Okonjo-Bright, Chief People Officer
+       Sarah Lindgren, Regulatory Affairs (product and regulatory concerns)
+       Simone Buehler, QA Manager (quality system concerns)
+
+  3. THE INDEPENDENT SPEAK-UP LINE. Operated by Safecall, independent of
+     Veridia, 24 hours a day, in multiple languages.
+       UK freephone      0800 915 1571
+       Switzerland       0800 564 733
+       Web               veridiabio.safecall.co.uk
+     You may give your name or remain anonymous.
+
+  4. THE NON-EXECUTIVE CHAIR. For concerns involving the Executive Committee.
+       Sir Nigel Broadhurst - chair.speakup@veridiabio.com
+     This mailbox is not accessible to Veridia management or IT.
+
+  5. EXTERNALLY. You may go directly to a regulator without telling us first.
+     For product and safety concerns that is the MHRA in the UK and Swissmedic
+     in Switzerland. For data protection, the ICO. We will not treat going
+     externally as disloyalty, and you do not lose any protection by doing it.
+
+-----------------------------------------------------------------
+4. ANONYMITY AND CONFIDENTIALITY
+-----------------------------------------------------------------
+4.1  You may report anonymously through Safecall or the web form.
+
+4.2  We would rather you gave your name, because it lets us ask follow-up
+     questions and tell you the outcome. But anonymous reports are
+     investigated with the same seriousness, and two of the five reports in
+     2025 were anonymous.
+
+4.3  If you give your name, we keep it confidential as far as we can. We
+     cannot always guarantee it - occasionally the nature of a concern makes
+     the source obvious, and in rare cases a legal process compels disclosure.
+     We will tell you honestly if we think that applies rather than promise
+     something we cannot deliver.
+
+-----------------------------------------------------------------
+5. WHAT HAPPENS NEXT
+-----------------------------------------------------------------
+  Within 3 working days   Acknowledgement (where we can reach you)
+  Within 10 working days  Initial assessment complete; you are told whether
+                          it will be investigated and by whom
+  Investigation           Timescale depends on complexity. You are updated at
+                          least every 4 weeks.
+  Conclusion              You are told the outcome in as much detail as we
+                          can lawfully give. We may not be able to tell you
+                          what happened to another individual.
+
+5.1  The investigator is always independent of the concern. A concern about a
+     Director is not investigated by that Director's function.
+
+5.2  Concerns involving the Executive Committee go to the Board Audit
+     Committee.
+
+5.3  Serious concerns are reported to the Audit Committee in summary,
+     quarterly, whatever their outcome.
+
+-----------------------------------------------------------------
+6. PROTECTION FROM RETALIATION
+-----------------------------------------------------------------
+6.1  You are protected. No dismissal, no disciplinary action, no effect on
+     pay, promotion, appraisal, work allocation, shift pattern or selection in
+     a restructure.
+
+6.2  Retaliation is gross misconduct. This includes subtle retaliation -
+     exclusion, cold-shouldering, sudden reassignment - which is what
+     retaliation usually actually looks like.
+
+6.3  Protection applies even if your concern turns out to be mistaken,
+     provided you raised it honestly.
+
+6.4  Protection does not apply to a knowingly false report made maliciously.
+     We have never had one.
+
+6.5  If you think you are being retaliated against, tell Sunita Raval or the
+     Chair directly. This is treated as a new and serious concern in its own
+     right.
+
+-----------------------------------------------------------------
+7. LEGAL PROTECTION
+-----------------------------------------------------------------
+UK: the Public Interest Disclosure Act 1998 gives statutory protection to
+qualifying disclosures. You do not need to have exhausted internal routes to
+be protected, and dismissal for making a protected disclosure is automatically
+unfair with no qualifying service requirement.
+
+Switzerland: protection is less codified but Veridia applies this policy
+identically to Swiss employees as a matter of company commitment.
+
+Nothing in your contract, in a settlement agreement, or in any confidentiality
+undertaking prevents you from making a protected disclosure or from speaking
+to a regulator. Any clause that appeared to do so would be unenforceable and
+we do not use them.
+
+-----------------------------------------------------------------
+8. WHAT WE HAVE LEARNED FROM THIS
+-----------------------------------------------------------------
+Included because a speak-up policy that has never produced anything is a
+policy nobody believes in.
+
+  2023   3 reports. One led to a change in how a distributor was managed.
+  2024   4 reports. One led to a manager leaving the company.
+  2025   5 reports, 2 anonymous. One led to the change in pregnancy loss leave
+         now in User__policy-family-leave-v4.txt - the previous policy applied
+         only from 24 weeks and only to the person who had been pregnant, and
+         someone affected by it told us it was wrong. It was.
+         One concerned a quality record and was investigated and not upheld;
+         we told the person why, in detail, and they agreed with the
+         conclusion.
+
+-----------------------------------------------------------------
+9. CONTACT
+-----------------------------------------------------------------
+Speak-up line UK          0800 915 1571
+Speak-up line Switzerland 0800 564 733
+Web                       veridiabio.safecall.co.uk
+General Counsel           sunita.raval@veridiabio.com
+Non-Executive Chair       chair.speakup@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

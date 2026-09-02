@@ -1,0 +1,33 @@
+benefit,uk_entitlement,switzerland_entitlement,available_from,taxable_benefit,policy_document
+Annual leave,27 days rising to 30 plus 8 bank holidays,25 days rising to 30 plus Basel-Stadt cantonal holidays,Day one,No,User__policy-annual-leave-v5.txt
+Birthday off,1 day not deducted,1 day not deducted,Day one,No,User__policy-annual-leave-v5.txt
+Pension employer contribution,8% to 10% of full base salary,60% of total BVG contribution (6.6% to 13.2% by age),Day one,No,User__policy-pension-uk-v4.txt
+Pension employee minimum,4%,40% of total BVG contribution,Day one,No,User__policy-pension-uk-v4.txt
+Private medical insurance,Bupa family cover no excess medical history disregarded,Not applicable - CHF 400/month contribution to compulsory insurance,Day one,Yes,User__policy-private-medical-insurance-v3.txt
+Accident insurance,Covered within PMI and employers liability,Full UVG cover including non-occupational paid by employer,Day one,No,User__benefits-handbook-switzerland-2026.txt
+Life assurance,4 x base salary,Covered via BVG death benefits,Day one,No,User__benefits-handbook-uk-2026.txt
+Income protection,75% of salary after 26 weeks,KTG 90% for up to 720 days after 60 days at 100%,Day one,No,User__benefits-handbook-uk-2026.txt
+Company sick pay,4 to 13 weeks full pay by service then equal period half pay,100% for first 60 days then KTG at 90%,Day one,No,User__policy-sick-pay-and-absence-v5.txt
+Primary carer leave,26 weeks full pay then 13 weeks statutory,20 weeks full pay (maternity),Day one,No,User__policy-family-leave-v4.txt
+Secondary carer leave,8 weeks full pay,8 weeks full pay,Day one,No,User__policy-family-leave-v4.txt
+Pregnancy loss leave,2 weeks paid either parent any gestation,2 weeks paid either parent any gestation,Day one,No,User__policy-family-leave-v4.txt
+Neonatal care leave,Up to 12 weeks paid,Up to 12 weeks paid,Day one,No,User__policy-family-leave-v4.txt
+Kinship care leave,8 weeks full pay,8 weeks full pay,Day one,No,User__policy-family-leave-v4.txt
+Fertility treatment leave,Up to 5 days paid per cycle,Up to 5 days paid per cycle,Day one,No,User__policy-family-leave-v4.txt
+Bereavement leave,Up to 10 days paid,Up to 10 days paid,Day one,No,User__policy-annual-leave-v5.txt
+Learning budget,GBP 1500 per year plus 5 days,CHF 1800 per year plus 5 days,Day one,No,User__policy-learning-and-development-budget.txt
+Professional body membership,Funded separately one body,Funded separately one body,Day one,No,User__policy-learning-and-development-budget.txt
+Employee Assistance Programme,24/7 free confidential includes household,24/7 free confidential includes household,Day one,No,User__benefits-handbook-uk-2026.txt
+Home working allowance,GBP 400 on joining refreshed every 3 years,CHF 450 on joining refreshed every 3 years,Day one,No,User__policy-hybrid-working-v3.txt
+Cycle to work,Up to GBP 3000 salary sacrifice,Not offered,Day one,No,User__benefits-handbook-uk-2026.txt
+Electric vehicle scheme,Salary sacrifice including insurance and maintenance,Not offered,After probation,Yes,User__benefits-handbook-uk-2026.txt
+Half-fare travelcard,Not applicable,Funded annually,Day one,Yes,User__benefits-handbook-switzerland-2026.txt
+Lunch allowance,Not offered,CHF 12 per working day on site,Day one,Yes,User__benefits-handbook-switzerland-2026.txt
+Season ticket loan,Interest free repaid over 12 months,Not applicable,After probation,No,User__benefits-handbook-uk-2026.txt
+Volunteering days,2 paid days per year,2 paid days per year,Day one,No,User__benefits-handbook-uk-2026.txt
+Long service leave,Extra week at 5 and 10 years,Extra week at 5 and 10 years,At milestone,No,User__benefits-handbook-uk-2026.txt
+Employee referral award,GBP 2000 or GBP 3500 hard to fill,CHF 2200 or CHF 3800 hard to fill,Day one,Yes,User__policy-employee-referral-scheme.txt
+Share options,Discretionary EMI grants on joining and promotion,Discretionary grants - different tax treatment applies,On grant,Varies,User__benefits-handbook-uk-2026.txt
+Sabbatical,Up to 3 months unpaid after 4 years service,Up to 3 months unpaid after 4 years service,4 years,No,User__policy-annual-leave-v5.txt
+Eye tests and glasses,Funded where DSE use requires correction,Funded where DSE use requires correction,Day one,No,User__benefits-handbook-uk-2026.txt
+Flu vaccination,Funded annually,Funded annually,Day one,No,User__benefits-handbook-uk-2026.txt

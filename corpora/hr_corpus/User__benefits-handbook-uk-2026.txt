@@ -1,0 +1,258 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Benefits Handbook - United Kingdom - 2026
+=================================================================
+Document:      HR-GDE-020-UK
+Version:       2026.1
+Effective:     2026-01-01
+Owner:         Denise Kaur, Reward and Benefits Manager
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+Applies to:    UK-employed staff. Swiss staff see
+               User__benefits-handbook-switzerland-2026.txt
+
+Everything here is available from day one unless stated otherwise. Nothing is
+withheld during probation.
+
+-----------------------------------------------------------------
+1. AT A GLANCE
+-----------------------------------------------------------------
+  Annual leave              27 days plus bank holidays, rising to 30
+  Pension                   Employer 8%, you 4% minimum, salary sacrifice
+  Private medical           Bupa, family cover, no excess
+  Life assurance            4x base salary
+  Income protection         Up to 75% of salary after 26 weeks
+  Company sick pay          Up to 13 weeks full pay by service
+  Enhanced family leave     26 weeks full pay for the primary carer
+  Learning budget           GBP 1,500 a year plus 5 days
+  Employee Assistance       24/7, free, confidential, includes family
+  Share options             Discretionary, on joining and on promotion
+  Cycle to work             Up to GBP 3,000
+  Electric vehicle          Salary sacrifice scheme
+  Eye tests and glasses     Funded where display screen use requires it
+  Flu vaccination           Funded annually
+  Enhanced bereavement      Up to 10 days paid
+
+-----------------------------------------------------------------
+2. PENSION
+-----------------------------------------------------------------
+Provider: Aviva Workplace Pension. Scheme reference VBS-AV-004871.
+
+Contributions on full base salary, not on qualifying earnings:
+
+  You contribute    Veridia contributes    Total
+  ---------------   -------------------    -----
+  4% (minimum)      8%                     12%
+  5%                9%                     14%
+  6% or more        10% (maximum)          16%+
+
+Veridia matches your additional contributions up to a 10% employer cap. If you
+contribute 6% you get 10%, which is the best-value point in the scheme. A
+surprising number of people contribute 4% and are unaware of this; if you can
+afford 6%, it is a 2% pay rise you are declining.
+
+Salary sacrifice by default, which saves you National Insurance and saves
+Veridia National Insurance - we pass 100% of the employer saving into your pot
+rather than keeping it. You may opt out of sacrifice; ask the People team.
+
+Auto-enrolment applies from day one. You may opt out entirely, and if you do
+we will ask you once, politely, whether you are sure.
+
+Full detail: User__policy-pension-uk-v4.txt
+
+-----------------------------------------------------------------
+3. PRIVATE MEDICAL INSURANCE
+-----------------------------------------------------------------
+Provider: Bupa. Policy 84471209. Effective from your start date.
+
+  - Full family cover included at no cost to you. Partner and children.
+  - No excess.
+  - Pre-existing conditions covered on a medical history disregarded basis -
+    this is unusual and expensive and we buy it deliberately, because a
+    scheme that excludes what you already have is of limited use to the people
+    who most need it.
+  - Includes mental health cover: up to 25 therapy sessions a year, plus
+    inpatient and day-patient psychiatric treatment.
+  - Includes a digital GP service, typically same-day.
+  - Dental and optical cash plan included.
+
+This is a taxable benefit. It appears on your P11D and the tax cost to you is
+typically GBP 20 to GBP 55 a month depending on your tax band and family
+composition. You may decline the benefit; you cannot exchange it for cash.
+
+Making a claim goes directly to Bupa. Veridia does not see your claims, your
+diagnoses or your treatment, and is not told when you claim. See section 12.
+
+-----------------------------------------------------------------
+4. LIFE ASSURANCE AND INCOME PROTECTION
+-----------------------------------------------------------------
+LIFE ASSURANCE (death in service)
+  4 x base salary, tax free, paid to your nominated beneficiaries.
+  YOU MUST COMPLETE AN EXPRESSION OF WISH FORM. Without one the trustees
+  decide, and that is slower and more painful for your family at the worst
+  possible time. It takes four minutes. As at January 2026, 71 of our 214 UK
+  employees had not completed one.
+
+INCOME PROTECTION
+  If you are unable to work through illness or injury for more than 26 weeks,
+  income protection pays 75% of base salary (less state benefits) until you
+  return, reach state pension age, or the policy ends.
+  Includes rehabilitation support and a return-to-work service.
+  Company sick pay runs first; income protection picks up after it.
+
+-----------------------------------------------------------------
+5. ANNUAL LEAVE
+-----------------------------------------------------------------
+  27 days plus 8 UK bank holidays on joining
+  +1 day at 3 years' service
+  +1 day at 5 years' service
+  +1 day at 8 years' service (maximum 30)
+
+  Pro-rated for part-time and for partial years.
+  Carry over up to 5 days to 31 March.
+  Buy up to 5 additional days in the January window.
+  Your birthday off, not deducted from your entitlement.
+
+Full detail: User__policy-annual-leave-v5.txt
+
+-----------------------------------------------------------------
+6. COMPANY SICK PAY
+-----------------------------------------------------------------
+  Service          Full pay      Then half pay
+  ---------------  ------------  -------------
+  Under 6 months   4 weeks       4 weeks
+  6 to 24 months   8 weeks       8 weeks
+  Over 24 months   13 weeks      13 weeks
+
+Inclusive of Statutory Sick Pay. Full detail:
+User__policy-sick-pay-and-absence-v5.txt
+
+-----------------------------------------------------------------
+7. FAMILY LEAVE
+-----------------------------------------------------------------
+  Primary carer     26 weeks at full pay, then 13 weeks at SMP rate
+  Secondary carer   8 weeks at full pay
+  Adoption          Same as birth, on the same terms
+  Surrogacy         Same as birth, on the same terms
+  Fertility treatment  Up to 5 days paid leave per cycle, for you or as a
+                    partner attending
+  Pregnancy loss    2 weeks paid leave regardless of gestation, for either
+                    parent. This applies from day one and does not require a
+                    doctor's note.
+  Neonatal care     Additional paid leave matching the period of neonatal
+                    care, up to 12 weeks
+  Kinship care      8 weeks at full pay
+
+"Primary carer" is not defined by gender or by biology. Full detail:
+User__policy-family-leave-v4.txt
+
+-----------------------------------------------------------------
+8. LEARNING AND DEVELOPMENT
+-----------------------------------------------------------------
+  GBP 1,500 per calendar year, plus 5 working days of learning time.
+  Rolls over one year only, to a maximum of GBP 3,000.
+  Professional body membership funded separately and does not count against
+  it - IBMS, RSC, IET, CIPD, ACCA and similar.
+  Professional qualifications funded case by case, usually with a repayment
+  agreement if you leave within two years. The agreement is explained and
+  signed before you start, never afterwards.
+
+Full detail: User__policy-learning-and-development-budget.txt
+
+-----------------------------------------------------------------
+9. SHARE OPTIONS
+-----------------------------------------------------------------
+Veridia is a private company. Most employees receive an option grant on
+joining and further grants on promotion or in recognition of exceptional
+contribution.
+
+  - EMI options where you qualify, which is most UK employees
+  - Four-year vesting, one-year cliff, then monthly
+  - Exercise window after leaving: 90 days for a good leaver
+  - Options have no value unless there is an exit event
+
+We will not tell you what your options are worth, because nobody knows. Anyone
+who tells you a number is guessing. What we will do is explain exactly how many
+you have, when they vest, what the exercise price is and what would have to
+happen for them to be worth anything. Ask Denise Kaur and you will get a
+straight explanation.
+
+READ YOUR OPTION AGREEMENT WHEN YOU LEAVE. The 90-day window is the single
+most common thing leavers get wrong.
+
+-----------------------------------------------------------------
+10. OTHER BENEFITS
+-----------------------------------------------------------------
+  Cycle to work         Up to GBP 3,000, salary sacrifice
+  Electric vehicle      Salary sacrifice, includes insurance and maintenance
+  Season ticket loan    Interest free, repaid over 12 months
+  Eye tests             Funded, plus GBP 100 towards glasses where display
+                        screen use requires a correction
+  Flu vaccination       Funded annually, on site or by voucher
+  Home working setup    GBP 400 on joining plus ergonomic assessment
+  Volunteering          2 paid days a year
+  Enhanced bereavement  Up to 10 days paid; more by agreement, and nobody has
+                        ever been refused more
+  Employee referral     GBP 2,000 for most roles, GBP 3,500 for roles on the
+                        hard-to-fill list
+  Long service          Additional week of leave at 5 and 10 years, taken in
+                        that year
+
+-----------------------------------------------------------------
+11. EMPLOYEE ASSISTANCE PROGRAMME
+-----------------------------------------------------------------
+Provider: Health Assured. 24 hours, 365 days.
+  Freephone 0800 028 0199
+  Available to you, your partner and dependants aged 16 to 24 in the same
+  household
+  Continues for 3 months after you leave Veridia
+
+Includes counselling (up to 8 structured sessions), legal information,
+financial and debt guidance, bereavement support, and a critical incident
+service.
+
+VERIDIA IS NOT TOLD THAT YOU HAVE USED IT. We receive quarterly usage
+statistics with no names, no departments and no identifying detail. This is
+the whole point of it. Usage in 2025 was 19% of UK headcount, which is above
+the sector norm and which we regard as a good sign rather than a worrying one.
+
+-----------------------------------------------------------------
+12. YOUR MEDICAL INFORMATION AND WHO SEES IT
+-----------------------------------------------------------------
+Asked often enough to deserve its own section.
+
+  - Bupa claims: Veridia sees aggregate scheme utilisation and cost. Not your
+    claims, not your diagnoses, not whether you claimed at all.
+  - EAP: Veridia sees anonymous aggregate numbers only.
+  - Occupational health: if you are referred, the report goes to the People
+    team and to your manager only with your consent, and you see it first and
+    may comment before it is released. You may refuse consent.
+  - Sickness absence: your manager knows your dates of absence and the reason
+    you give. Detailed medical information is held by the People team, not by
+    your manager.
+  - Adjustments: your manager is told what adjustment to make, not the
+    underlying medical reason, unless you choose to tell them.
+
+If you ever want to know exactly what is held about you, ask
+dpo@veridiabio.com. You are entitled to it.
+
+-----------------------------------------------------------------
+13. CHANGES FOR 2026
+-----------------------------------------------------------------
+  - Employer pension match raised from 9% to 10% at the top tier
+  - Bupa mental health sessions increased from 18 to 25 a year
+  - Pregnancy loss leave extended to either parent and to any gestation
+  - Neonatal care leave introduced
+  - Kinship care leave introduced
+  - Home working allowance raised from GBP 300 to GBP 400
+  - Referral bonus raised for hard-to-fill roles
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Denise Kaur, Reward and Benefits Manager - denise.kaur@veridiabio.com
+Ollie Kettering, People Operations - ollie.kettering@veridiabio.com
+people@veridiabio.com | +44 1223 496 190
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

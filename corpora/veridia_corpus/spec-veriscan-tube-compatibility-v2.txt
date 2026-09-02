@@ -1,0 +1,115 @@
+=================================================================
+VERIDIA BIOSYSTEMS - SUPPORTED CONSUMABLES SPECIFICATION
+=================================================================
+Document: Supported blood collection tubes and racks
+Applies to: VeriScan 400 (VS4-100), VeriScan 400 Pro (VS4-200P),
+            VeriPrep SP-1 (SP1-100, revisions r1 and r2)
+Document Ref: DS-CONS-002
+Revision: v2
+Revision Date: 2025-09-10
+Supersedes: DS-CONS-001 (2023-06-14)
+
+-----------------------------------------------------------------
+1. SAMPLE TUBE REQUIREMENTS - ANALYSERS
+-----------------------------------------------------------------
+Anticoagulant     K2 EDTA or K3 EDTA. Fill to the manufacturer's mark.
+                  Lithium heparin, citrate and fluoride oxalate are NOT
+                  acceptable for haematology on this platform.
+Minimum fill      1.0 mL in a nominal 4 mL tube. Underfilled tubes give a
+                  dilutional error and raise W-050.
+Maximum fill      To the tube mark. Overfilled tubes give inadequate
+                  anticoagulation and may clot (E-104).
+Mixing            Invert 8-10 times immediately after collection.
+Stability         Whole blood at 18-25 C: CBC 8 hours, differential 6 hours.
+                  At 2-8 C: CBC 24 hours, differential 8 hours.
+                  Reticulocyte (Pro): 24 hours at 2-8 C.
+                  Body fluid (Pro): analyse within 1 hour; refrigerate and
+                  analyse within 4 hours if delay is unavoidable.
+
+Closed-tube (cap-pierce) mode dimensional envelope
+  Diameter        12.0 to 16.5 mm
+  Height, capped  73.5 to 100.0 mm
+  Cap material    Rubber-lined polypropylene (Hemogard-style) or rubber
+                  stopper. Metal-crimped caps are not supported.
+
+-----------------------------------------------------------------
+2. TUBE REQUIREMENTS - VERIPREP SP-1
+-----------------------------------------------------------------
+The SP-1 envelope is narrower than the analyser envelope. A tube that runs
+without issue on the analyser in closed-tube mode may not be handled reliably
+by an SP-1r1.
+
+  Attribute            SP-1r1              SP-1r2
+  -------------------  ------------------  ------------------
+  Diameter             12.0 - 16.5 mm      12.0 - 16.5 mm
+  Height, capped       73.5 - 80.0 mm      68.0 - 82.5 mm
+  Label top position   within 1 mm of      within 4 mm of
+                       scanner window      scanner window
+  Short-cap 5 mL       NOT RELIABLE        Supported
+  tubes (< 75.5 mm)    see VBB-0038
+
+If your 5 mL tube measures less than 75.5 mm overall with the cap on, and you
+are running an SP-1r1, expect P-101, P-105 and eventually P-112. Mitigations:
+SP1-ADP-05 adapters, raised label position, or the SP1-KIT-R2UP retrofit.
+
+-----------------------------------------------------------------
+3. VERIFIED TUBE TYPES
+-----------------------------------------------------------------
+The following generic descriptions have been verified by Veridia. Supplier
+catalogue numbers are omitted deliberately: the same catalogue number may be
+filled at different manufacturing sites with different cap profiles, and
+Veridia cannot warrant a supplier's dimensional consistency.
+
+  Nominal    Diameter x Height    Analyser   SP-1r1   SP-1r2
+  ---------  -------------------  ---------  -------  -------
+  2 mL       13 x 75 mm           Yes        Yes      Yes
+  3 mL       13 x 75 mm           Yes        Yes      Yes
+  4 mL       13 x 75 mm           Yes        Yes      Yes
+  4 mL       13 x 100 mm          Yes        Yes      Yes
+  5 mL       13 x 75 mm std cap   Yes        Yes      Yes
+  5 mL       13 x 75 mm short cap Yes        NO (1)   Yes
+  6 mL       13 x 100 mm          Yes        Yes      Yes
+  9 mL       16 x 100 mm          Yes        Yes      Yes
+  Paediatric 10.25 x 47 mm        Open tube  No       No
+             (500 uL microtube)   mode only
+
+  (1) See section 2 and VBB-0038.
+
+Paediatric microtubes must be presented in open-tube mode. They cannot be
+cap-pierced and cannot be handled by the SP-1 in either revision. Minimum
+volume in open-tube mode is 130 uL (VeriScan 400) or 110 uL (400 Pro), which
+in practice means a microtube filled to at least 250 uL to allow for dead
+volume.
+
+-----------------------------------------------------------------
+4. LABELLING
+-----------------------------------------------------------------
+Symbologies       Code 128 (recommended), Code 39, Interleaved 2 of 5,
+                  Codabar, Data Matrix, QR
+Print quality     ANSI grade C minimum; 300 dpi direct thermal recommended
+Quiet zone        2.5 mm minimum either side
+Orientation       Vertical bars, label applied straight; skew above 5 degrees
+                  reduces read rate materially
+Position          Label top edge no more than 10 mm below the base of the cap
+                  for SP-1r1; no more than 14 mm for r2
+Overlabelling     One label only. A second label over the first is a common
+                  cause of P-103.
+Wrap              Leave a 20 mm vertical window unlabelled so the operator and
+                  the instrument clot detector can see the sample.
+
+-----------------------------------------------------------------
+5. RACKS
+-----------------------------------------------------------------
+  VS4-RACK-10    10-position analyser autoloader rack
+  VS4-RACK-50    50-position extended autoloader magazine (5 x 10)
+  SP1-RACK-IN    SP-1 input rack, 20 position
+  SP1-RACK-OUT   SP-1 destination rack, 20 position
+  SP1-RACK-EXC   SP-1 exception rack, 20 position, red
+
+Third-party racks are not supported. Rack RFID tags are read at load; an
+unrecognised rack raises P-304 on the SP-1 and is ignored by the analyser
+autoloader.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

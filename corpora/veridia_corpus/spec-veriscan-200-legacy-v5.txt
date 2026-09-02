@@ -1,0 +1,100 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PRODUCT SPECIFICATION SHEET (LEGACY)
+=================================================================
+Product: VeriScan 200 Benchtop Haematology Analyser
+Model: VS2-100 / VS2-100T
+Document Ref: DS-VS200-005
+Revision: v5
+Revision Date: 2025-04-08
+Status: END OF LIFE. See VBB-0049 for key dates.
+Classification: IVD Directive 98/79/EC, Annex III self-declared.
+                NOT transitioning to IVDR conformity.
+
+*** THIS DOCUMENT IS MAINTAINED FOR EXISTING USERS ONLY. THE VERISCAN 200
+*** IS NO LONGER AVAILABLE FOR SALE. NEW CUSTOMERS SHOULD SEE
+*** spec-veriscan-400-v3.txt.
+
+-----------------------------------------------------------------
+INTENDED USE
+-----------------------------------------------------------------
+Automated haematology analyser for the in-vitro quantitative determination of
+haematological parameters including a three-part leucocyte differential in
+whole blood collected into K2 or K3 EDTA. For professional laboratory use.
+
+NOTE: three-part differential only (granulocyte, lymphocyte, mid-cell). The
+five-part differential is available on the VeriScan 400 and 400 Pro.
+
+-----------------------------------------------------------------
+TECHNICAL SPECIFICATIONS
+-----------------------------------------------------------------
+Parameter                    | Value
+-----------------------------|-----------------------------------------
+Throughput                   | 40 samples/hr
+Sample volume                | 200 uL whole blood (open tube)
+                             | 25 uL (predilute, 1:10)
+Closed tube (cap-pierce)     | VS2-100T only
+Differential                 | 3-part (GRAN, LYMPH, MID)
+Measurement principles       | Impedance for WBC/RBC/PLT;
+                             | SLS colorimetry for HGB
+Result storage               | 3,000 results
+Display                      | 5.7-inch monochrome LCD with keypad
+Connectivity                 | 1x Ethernet 10/100, 1x RS-232, 1x parallel
+Protocols                    | HL7 v2.3.1, ASTM E1394. VeriConnect agent
+                             | available from firmware 3.6.0 (result upload
+                             | only; no fleet firmware management).
+Dimensions (W x D x H)       | 420 x 460 x 490 mm
+Mass                         | 31 kg
+Power                        | 100-240 V AC, 50/60 Hz, 200 VA
+Final firmware               | 3.7.9. No further releases.
+-----------------------------|-----------------------------------------
+
+-----------------------------------------------------------------
+REAGENT COMPATIBILITY - IMPORTANT
+-----------------------------------------------------------------
+  RGT-D5 revision B   Qualified. Production ends 2025-12-31.
+  RGT-D5 revision C   Backward compatible from firmware 3.4.0. Will be
+                      supplied against VeriScan 200 orders after revision B
+                      production ends.
+  RGT-L3 revision C   Qualified.
+  RGT-L3 revision D   NOT VALIDATED ON THIS PLATFORM. Do not use. A
+                      platform-specific lyse fill (VL-L3-200-VS2) is
+                      maintained until 2027-12-31.
+  RGT-CL              Qualified.
+  RGT-RT              Not applicable (no reticulocyte channel).
+
+Refer to lookup-reagent-compatibility.csv. This is the most frequent source of
+ordering errors at mixed-fleet sites.
+
+-----------------------------------------------------------------
+OPERATING CONDITIONS
+-----------------------------------------------------------------
+Ambient temperature       | 15 C to 32 C
+Relative humidity         | 20% to 85% non-condensing
+
+Note: the VeriScan 200 range was not revised by VBB-0052, which applies to the
+VeriScan 400 platform only.
+
+-----------------------------------------------------------------
+END OF LIFE SUMMARY
+-----------------------------------------------------------------
+  2025-06-30  Last order date for instruments
+  2025-12-31  End of sale for platform-specific consumable configurations
+  2026-12-31  End of software and firmware support
+  2027-12-31  End of service; last chargeable repair
+  2028-12-31  End of spare parts availability, subject to stock
+
+Trade-in allowance against a VeriScan 400 or 400 Pro is available until
+2026-12-31. Contact your account manager.
+
+-----------------------------------------------------------------
+REGULATORY NOTE
+-----------------------------------------------------------------
+The VeriScan 200 is a legacy device under the IVD Directive and will not be
+transitioned to IVDR conformity. Devices already placed on the EU market and
+put into service may continue in use subject to Article 110 conditions.
+Customers should confirm their own position with their regulatory function.
+See reg-ivdr-transition-summary.txt.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

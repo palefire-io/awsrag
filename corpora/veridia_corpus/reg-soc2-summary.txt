@@ -1,0 +1,182 @@
+=================================================================
+VERIDIA BIOSYSTEMS - SOC 2 TYPE II SUMMARY
+=================================================================
+Title:        SOC 2 Type II Report Summary - VeriConnect and VeriGuard
+Document Ref: REG-SOC2-SUM-003
+Revision:     3
+Date:         2026-05-11
+Prepared by:  Yusuf Demir, Cloud Operations, with Simone Buehler, QA Manager
+Approved by:  Tom Reeves, Product Manager VeriConnect
+Distribution: Customer-facing summary. The full report is available under NDA.
+
+*** THIS IS A SUMMARY PREPARED BY VERIDIA. IT IS NOT THE AUDITOR'S REPORT AND
+*** IT IS NOT ATTESTED BY THE AUDITOR. CUSTOMERS REQUIRING ASSURANCE SHOULD
+*** REQUEST THE FULL REPORT UNDER NDA.
+
+-----------------------------------------------------------------
+1. REPORT DETAILS
+-----------------------------------------------------------------
+Report type            SOC 2 Type II
+Trust Services         Security, Availability, Confidentiality
+Criteria in scope      (Processing Integrity and Privacy are NOT in scope -
+                       see section 5)
+Reporting period       1 April 2025 to 31 March 2026
+Prior period           1 April 2024 to 31 March 2025
+Service auditor        (independent CPA firm; named in the full report)
+System in scope        VeriConnect cloud platform including the VeriGuard
+                       module, the instrument cloud agent ingestion path, and
+                       the supporting infrastructure in AWS
+Out of scope           The VeriScan and VeriPrep instruments themselves,
+                       customer networks, customer LIS systems
+Report date            2026-05-06
+Opinion                Unqualified, with two exceptions noted (section 3)
+
+-----------------------------------------------------------------
+2. CONTROL AREAS COVERED
+-----------------------------------------------------------------
+  CC1  Control environment - governance, org structure, competence
+  CC2  Communication and information
+  CC3  Risk assessment
+  CC4  Monitoring activities
+  CC5  Control activities
+  CC6  Logical and physical access controls
+  CC7  System operations - detection, incident response
+  CC8  Change management
+  CC9  Risk mitigation - vendor management
+  A1   Availability - capacity, backup, recovery
+  C1   Confidentiality - identification, retention, disposal
+
+Total controls tested: 94. Tested effective: 92. Exceptions: 2.
+
+-----------------------------------------------------------------
+3. EXCEPTIONS NOTED
+-----------------------------------------------------------------
+
+EXCEPTION 1 (CC6.1 - Logical access)
+Description:  For 3 of 40 sampled privileged access grants to production, the
+              documented approval was recorded after the access was granted
+              rather than before. In all 3 cases the access was subsequently
+              approved by an appropriate authority, the activity performed
+              under the access was reviewed and found appropriate, and the
+              access was revoked within the expected window.
+Management
+response:     Accepted. All 3 occurred during the incident of 11 March 2025,
+              when engineers were granted production access to remediate the
+              SSO outage and the approval workflow was completed
+              retrospectively. The break-glass access procedure permitted
+              this but did not require the approval to be recorded within a
+              defined window.
+              Remediation: break-glass production access now generates an
+              approval request automatically at the point of grant, requiring
+              completion within 4 hours, with escalation to the CSO
+              thereafter. Implemented 2025-06-30.
+
+EXCEPTION 2 (CC8.1 - Change management)
+Description:  For 1 of 25 sampled production changes, the change record did
+              not evidence completion of the required pre-deployment testing.
+Management
+response:     Accepted. The change was a configuration change to a tenant's
+              dashboard default date range performed during the investigation
+              of a customer performance issue. The change was low risk,
+              correct and beneficial, but it was made as an operational action
+              and was recorded as a change afterwards without the testing
+              evidence the change process requires.
+              Remediation: tenant configuration changes performed by
+              operations are now made through a distinct workflow with its own
+              (lighter) evidence requirements, rather than being retrofitted
+              into the software change process where they do not fit.
+              Implemented 2025-11-14.
+
+Neither exception resulted in unauthorised access to, loss of, or alteration of
+customer data.
+
+-----------------------------------------------------------------
+4. AVAILABILITY PERFORMANCE
+-----------------------------------------------------------------
+Committed availability target: 99.9% monthly, excluding scheduled maintenance.
+
+  Month      Availability   Notes
+  ---------  -------------  ---------------------------------------------
+  Apr 2025   99.98%
+  May 2025   99.99%
+  Jun 2025   99.94%
+  Jul 2025   99.97%
+  Aug 2025   99.99%
+  Sep 2025   99.91%         Degraded performance for some tenants
+                            (dashboard query inefficiency; see below)
+  Oct 2025   99.98%
+  Nov 2025   99.99%
+  Dec 2025   100.00%
+  Jan 2026   99.96%
+  Feb 2026   99.98%
+  Mar 2026   99.99%
+
+  Period availability: 99.97%
+
+The target was met in every month of the reporting period.
+
+NOTE ON THE PRIOR PERIOD. The SAML single sign-on outage of 11 March 2025
+(3 hours 54 minutes, 17 tenants) falls in the PRIOR reporting period
+(1 April 2024 to 31 March 2025) and is not reflected in the figures above. It
+is described in the prior period report and in VBB-0044 and VBI-0094. We draw
+attention to it here because a customer reading only the current period's
+availability figures would not see it, and because we would rather point it out
+than have it discovered.
+
+The September 2025 figure reflects a query performance defect affecting
+tenants with long dashboard date ranges (see ticket VBST-4152). The service
+remained available; performance was degraded for a subset of tenants. It is
+recorded as availability degradation rather than as an outage.
+
+-----------------------------------------------------------------
+5. WHAT IS NOT IN SCOPE, AND WHY
+-----------------------------------------------------------------
+Customers frequently ask why Processing Integrity and Privacy are excluded.
+
+PROCESSING INTEGRITY is not in scope because the processing that matters
+clinically - the computation of analyte values from optical and impedance
+measurements - happens on the instrument, not in VeriConnect. The instrument's
+processing integrity is assured through the medical device conformity
+assessment route (IVDR / UK MDR), which is a substantially more rigorous
+regime than the Trust Services Criteria for this purpose. Including Processing
+Integrity in the SOC 2 scope would imply that the SOC 2 report speaks to result
+accuracy, which it would not.
+
+PRIVACY is not in scope because Veridia acts as processor rather than
+controller for patient data, and the Privacy criteria are framed around a
+controller's obligations. Customers requiring assurance on data protection
+should refer to the data processing agreement (reg-gdpr-dpa-template.txt), the
+ISO 27001 certification, and where applicable the NHS Data Security and
+Protection Toolkit submission.
+
+We would rather explain this than expand the scope to something that looks
+more comprehensive and means less.
+
+-----------------------------------------------------------------
+6. RELATED ASSURANCE
+-----------------------------------------------------------------
+  ISO 27001:2022        Certificate GB-ISMS-2024-0417. Scope includes
+                        VeriConnect development and operations. Surveillance
+                        audit completed 2026-02, no non-conformities.
+  Penetration testing   Annual third-party test of VeriConnect and VeriGuard.
+                        Most recent 2026-01. Executive summary under NDA.
+                        No critical or high findings in the 2026 test; three
+                        medium findings, all remediated by 2026-03.
+  NHS DSPT              Annual submission. Most recent: Standards Met.
+  ISO 13485:2016        Medical device quality management system, covering
+                        design and manufacture. Audited by Notified Body 0086.
+                        See reg-notified-body-audit-findings.txt.
+
+-----------------------------------------------------------------
+7. HOW TO OBTAIN THE FULL REPORT
+-----------------------------------------------------------------
+Request from security@veridiabio.com. A mutual non-disclosure agreement is
+required. Existing customers with an NDA in place under their services
+agreement do not need a separate one.
+
+Bridge letters covering the period between the report date and the current date
+are issued quarterly and are available on the same basis.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

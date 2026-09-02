@@ -1,0 +1,68 @@
+From: Jason Okonkwo <jason.okonkwo@uhb.nhs.uk>
+To: Tom Reeves <tom.reeves@veridiabio.com>
+CC: Dr Priyanka Vaidya <priyanka.vaidya@uhb.nhs.uk>, Sarah Lindgren <sarah.lindgren@veridiabio.com>
+Date: Mon, 31 Mar 2025 11:47:19 +0100
+Subject: Firmware auto-update on Class C devices - formal position request
+X-Mailer: Microsoft Outlook 16.0
+
+Tom,
+
+Following our exchange on ticket VBST-3910 and the change to manual approval
+on our tenant, I have been asked by our Medical Devices Safety Officer to get
+Veridia's formal position in writing.
+
+The question she wants answered is narrow and I will put it as plainly as she
+put it to me:
+
+"On what basis does the manufacturer consider a tenant configuration setting,
+made during onboarding in 2022 by a member of staff who has since left, to
+constitute authorisation for a software change to a Class C in-vitro
+diagnostic medical device deployed in an NHS trust in 2025?"
+
+She is not being difficult. Our trust's medical device management policy
+requires that changes to medical device software are subject to our change
+control process, and we did not know a change had occurred. That is a gap in
+our controls as much as anything, and she is quite properly asking how it
+arose.
+
+For completeness, our position is not that auto-update is wrong. There are
+good arguments for it, particularly for security fixes, and I would not want a
+policy that leaves instruments unpatched for months while a change board meets.
+Our position is that we should have known.
+
+What would help:
+
+1. Veridia's formal statement on the regulatory status of firmware updates
+   delivered through VeriConnect, and how consent is obtained and recorded.
+
+2. Confirmation of what notification exists today when a firmware update is
+   applied to an instrument under auto-update. My understanding from your
+   ticket response is that there is none. If that is right, please say so
+   plainly rather than describing what is planned.
+
+3. Whether Veridia's own technical documentation for the IVDR submission
+   addresses software update distribution, and whether the Notified Body has
+   commented on it. I ask because if they have, our MDSO would rather know now
+   than at our next inspection.
+
+I appreciate (3) may be commercially sensitive and I will accept a "we cannot
+share that" if that is the answer.
+
+Sarah, I have copied you as I understand this sits with Regulatory rather than
+Product.
+
+Best regards,
+
+Jason Okonkwo
+Pathology Informatics Manager
+University Hospitals Birmingham NHS Foundation Trust
+Queen Elizabeth Hospital, Mindelsohn Way, Birmingham B15 2GW
+jason.okonkwo@uhb.nhs.uk | 0121 371 2000 ext 18043
+
+--
+This e-mail and any attachments are confidential and may be legally privileged.
+It is intended solely for the addressee. If you are not the intended recipient
+any disclosure, copying, distribution or any action taken in reliance on it is
+prohibited and may be unlawful. University Hospitals Birmingham NHS Foundation
+Trust cannot accept liability for statements made which are clearly the
+sender's own and not made on behalf of the Trust.

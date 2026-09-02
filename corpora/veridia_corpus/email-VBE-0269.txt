@@ -1,0 +1,63 @@
+From: Vikram Sahota <vikram.sahota@sth.nhs.uk>
+To: support@veridiabio.com
+CC: Marcus Chen <marcus.chen@veridiabio.com>
+Date: Mon, 8 Sep 2025 15:02:38 +0100
+Subject: Feature request - QC CV trending and reagent exposure by patient
+X-Mailer: Microsoft Outlook 16.0
+
+Hi,
+
+Two feature requests, both arising from real situations we have had this year.
+Feel free to pass to whoever owns the roadmap.
+
+1. QC CV TRENDING WITH ALERTING
+
+VeriConnect charts QC values. It does not chart QC precision.
+
+We have eight analysers. Twice this year we have had a channel degrade slowly -
+the mean stayed put, every individual point passed, and the CV crept up over
+weeks. Both times we caught it because somebody happened to look at a run of
+numbers and thought "these are more scattered than they used to be". That is
+not a control, it is luck.
+
+What I would like: a rolling CV per analyte per level per instrument, charted,
+with an alert when it rises by more than a configurable amount over a
+configurable window. Something like "20-point rolling CV has increased by more
+than 50 per cent over 60 days".
+
+This would have caught our retic flow cell fouling months earlier and it would
+have caught a platelet channel issue at our Northern General site in March.
+
+2. REAGENT EXPOSURE BY PATIENT EPISODE
+
+I know the reagent lot exposure report is coming and I know it lists samples by
+lot. What I would also like is the inverse: given a patient identifier, tell me
+every reagent lot and instrument that has touched their samples.
+
+The use case is a query from a clinician. "You reported a white cell count of
+14 on my patient in January and I do not believe it." Today, answering that
+means finding the sample, finding the instrument, finding what was on board
+that day, and checking it against the notices. It takes half an hour and it is
+the kind of question that arrives on a Friday afternoon.
+
+Both of these are things the system already knows. Neither needs new data
+collection.
+
+I would also say, since Marcus is copied and has been good to us this year,
+that Veridia has been noticeably better than our other diagnostics suppliers at
+actually responding to this kind of thing. The QC chart annotation that turned
+up in 6.2 is something I asked for in 2024 and I did not expect it to happen.
+
+Cheers
+
+Vikram Sahota
+Senior Biomedical Scientist
+Haematology, Royal Hallamshire Hospital
+Sheffield Teaching Hospitals NHS Foundation Trust
+vikram.sahota@sth.nhs.uk | 0114 271 1900 ext 66214
+
+--
+This message is confidential and may contain privileged information. If you are
+not the intended recipient you must not use, disclose or copy it. Sheffield
+Teaching Hospitals NHS Foundation Trust cannot guarantee that this message or
+any attachment is virus free.

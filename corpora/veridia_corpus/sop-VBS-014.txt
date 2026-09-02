@@ -1,0 +1,198 @@
+=================================================================
+VERIDIA BIOSYSTEMS - STANDARD OPERATING PROCEDURE
+=================================================================
+SOP Number:      SOP-VBS-014
+Title:           Customer Complaint Handling and Vigilance Reporting
+Revision:        2
+Effective Date:  2025-04-28
+Author:          Sarah Lindgren, Regulatory Affairs Manager
+Reviewed by:     James Okafor, VP Customer Support
+Approved by:     Simone Buehler, QA Manager
+Review due:      2027-04-28
+Audience:        Veridia support, field service, regulatory and QA staff
+
+CHANGE SUMMARY (rev 1 -> rev 2)
+  - Section 5 timeline tightened following the FSN-2025-003 experience, in
+    which the interval between the first complaint and the health hazard
+    evaluation was 15 days. Target is now 5.
+  - Section 4.5 added: complaint clustering review.
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+To define how Veridia receives, records, investigates and closes customer
+complaints, and how a complaint is assessed for reportability to competent
+authorities.
+
+-----------------------------------------------------------------
+2. DEFINITIONS
+-----------------------------------------------------------------
+Complaint       Any written, electronic or oral communication alleging
+                deficiency in the identity, quality, durability, reliability,
+                usability, safety or performance of a device after release for
+                distribution. A support ticket is not automatically a
+                complaint; a support ticket alleging that the device did not
+                perform as intended is.
+
+Incident        An event that has led, might have led, or might lead to the
+                death of a patient or user, or to a serious deterioration in
+                their state of health.
+
+Field Safety    Corrective action taken by a manufacturer for technical or
+Corrective      medical reasons to prevent or reduce the risk of an incident.
+Action (FSCA)
+
+Field Safety    The communication sent to customers about an FSCA.
+Notice (FSN)
+
+-----------------------------------------------------------------
+3. WHAT IS AND IS NOT A COMPLAINT
+-----------------------------------------------------------------
+IS a complaint:
+  - "The WBC count is reading high on this instrument."
+  - "The reagent cartridge leaked."
+  - "Results reached the LIS with the wrong time on them."
+  - "The instrument jammed and crushed a sample tube."
+  - "The IFU says 15 to 35 degrees but the bulletin says 18 to 32; which is
+    right?" - a documentation discrepancy affecting use IS a complaint.
+
+Is NOT a complaint:
+  - A request for training.
+  - A request for a quotation.
+  - A feature request.
+  - A question answered by the IFU where the device performed correctly.
+  - A network fault at the customer site with no device deficiency.
+
+If in doubt, record it as a complaint. Under-recording is a finding; over-
+recording is merely noise.
+
+-----------------------------------------------------------------
+4. INTAKE AND RECORDING
+-----------------------------------------------------------------
+4.1  All complaints are recorded in the complaint register within 1 working
+     day of receipt, whatever channel they arrive on - ticket, email, phone,
+     an engineer's observation on site, or a comment at a user meeting.
+
+4.2  Minimum record: date received, channel, customer and account ID, product,
+     model, serial or lot number, firmware version, complainant name and role,
+     description in the complainant's own words, whether patient results were
+     affected, and whether any harm is alleged.
+
+4.3  An engineer who observes a device deficiency on site must record it even
+     if the customer has not complained. Several of the earliest signals in
+     the FSN-2025-003 sequence were engineer observations that were written in
+     visit reports and not carried into the complaint register.
+
+4.4  Link the complaint to the originating ticket number and to any related
+     complaints.
+
+4.5  COMPLAINT CLUSTERING REVIEW. Support reviews the register weekly for
+     clusters: the same symptom across more than two accounts, or the same lot
+     or firmware version appearing in more than two complaints, within a
+     rolling 30 days. A cluster is escalated to QA and Regulatory the same
+     week regardless of the severity of the individual complaints.
+
+     This control exists because the individual RGT-L3 complaints in January
+     2025 each looked minor and locally explicable. The pattern was only
+     visible in aggregate.
+
+-----------------------------------------------------------------
+5. TRIAGE AND TIMELINE
+-----------------------------------------------------------------
+5.1  Initial assessment within 1 working day: is harm alleged, and are patient
+     results potentially affected?
+
+5.2  If harm is alleged or a death or serious deterioration is reported:
+     escalate IMMEDIATELY to the Regulatory Affairs Manager. Do not wait for
+     the technical investigation. Reporting clocks under IVDR Article 82 and
+     the UK MDR run from the date Veridia becomes aware, which is today, not
+     the date the investigation concludes.
+
+5.3  Technical investigation opened within 3 working days.
+
+5.4  Health hazard evaluation, where a potential safety issue is identified:
+     within 5 working days of the trigger. (Revision 1 stated 15 working days.
+     The interval actually achieved during FSN-2025-003 was 15 days, and that
+     was 15 days during which affected product remained in use.)
+
+5.5  Complaint closure target: 30 calendar days. Complaints open beyond 60
+     days are reported to the management review.
+
+-----------------------------------------------------------------
+6. INVESTIGATION
+-----------------------------------------------------------------
+6.1  Investigations are conducted by the function best placed to do so:
+     support for use and configuration issues, field service for hardware,
+     R&D reagents for reagent performance, firmware for software.
+
+6.2  Where product is returned, follow the returned goods procedure. Preserve
+     the sample as received; do not run it, clean it or disassemble it before
+     photographing and logging.
+
+6.3  Where a root cause is established, the investigation report is issued
+     under a VBI number and the complaint record references it.
+
+6.4  Where no root cause is established, say so explicitly. "Cannot reproduce"
+     is a legitimate outcome and must be recorded as such, with a statement of
+     what was tried. It must not be recorded as "no fault found" if the
+     customer's observation was credible and simply could not be reproduced -
+     the two are different and the distinction matters when a pattern emerges
+     later.
+
+-----------------------------------------------------------------
+7. REPORTABILITY ASSESSMENT
+-----------------------------------------------------------------
+7.1  Regulatory Affairs assesses every complaint involving a potential
+     incident against the reporting criteria of IVDR Article 82 (EU), the UK
+     MDR and Swissmedic requirements.
+
+7.2  Decision and rationale are recorded whether or not the complaint is
+     reportable. A decision not to report requires the same rigour as a
+     decision to report.
+
+7.3  Reporting timelines (indicative, confirm current requirements before
+     relying on these):
+       Serious public health threat        immediately, not later than 2 days
+       Death or unanticipated serious      not later than 10 days
+       deterioration
+       Other reportable incidents          not later than 15 days
+       Trend reports                       as specified in the technical
+                                           documentation
+
+-----------------------------------------------------------------
+8. FIELD SAFETY CORRECTIVE ACTION
+-----------------------------------------------------------------
+8.1  Where an FSCA is decided, Regulatory Affairs drafts the FSN and notifies
+     the competent authorities of every member state and territory in which
+     affected product was distributed.
+
+8.2  The FSN template is at QA-TMP-011. It must state clearly which products
+     and lots are affected AND which are not - the FSN-2025-003 experience
+     showed that customers with mixed fleets could not readily tell whether
+     their VeriScan 400 Pro instruments were in scope, and the support team
+     fielded a large volume of avoidable questions as a result.
+
+8.3  Distribution list is generated from the shipping records, not from the
+     account list. Product transferred between customer sites must be traced;
+     the FSN instructs recipients to forward it onward.
+
+8.4  Reply form returns are tracked. Non-responders are chased at 10 working
+     days and at 20 working days, and escalated to the account manager
+     thereafter. Effectiveness of the FSCA is assessed on the response rate
+     and on the proportion of affected stock recovered.
+
+-----------------------------------------------------------------
+9. RECORDS AND REVIEW
+-----------------------------------------------------------------
+9.1  Complaint records are retained for the lifetime of the device plus 10
+     years.
+
+9.2  The complaint register is an input to the post-market surveillance plan,
+     the periodic safety update report and management review.
+
+9.3  Trends are reviewed quarterly by the CSO, the RA Manager and the VP
+     Customer Support.
+
+=================================================================
+END OF SOP-VBS-014 REVISION 2
+=================================================================

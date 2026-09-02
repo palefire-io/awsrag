@@ -1,0 +1,189 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+New Starter and Onboarding Policy
+=================================================================
+Document:      HR-POL-003
+Version:       4
+Effective:     2025-09-01
+Supersedes:    Version 3 (2023-11-15)
+Owner:         Rachel Duffy, HR Business Partner
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+Review due:    2027-09-01
+Audience:      All employees, hiring managers and new starters
+Applies to:    United Kingdom and Switzerland. Where the two differ it is
+               stated.
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+1.1  To set out what happens between an offer being accepted and a new
+     colleague being fully productive, and who is responsible for each part
+     of it.
+
+1.2  Onboarding at Veridia is deliberately longer than at most companies of
+     our size. We make regulated medical devices. A field service engineer who
+     has not understood why a quality record matters is a risk to patients and
+     to the company, and that understanding is not acquired in an afternoon.
+
+-----------------------------------------------------------------
+2. BEFORE YOUR FIRST DAY
+-----------------------------------------------------------------
+2.1  CONDITIONAL OFFER. Every offer is conditional on satisfactory
+     pre-employment screening. Screening covers identity and right to work,
+     employment history, professional qualifications where the role requires
+     them, and references. Roles with access to customer clinical data or to
+     regulated processes carry additional checks.
+
+     What screening involves from your side is set out in the pack sent with
+     your offer. If something in your history is likely to come up, tell your
+     recruiter before the check rather than after. A discrepancy that you have
+     already explained is almost never a problem. One discovered by a screening
+     provider always becomes one.
+
+2.2  RIGHT TO WORK. UK: we must see and verify your right to work before your
+     first day, without exception, and we cannot start you without it. This is
+     a legal requirement on Veridia, not a preference. Switzerland: permit
+     status must be confirmed and, where a permit application is required, the
+     start date is set by the cantonal authority and not by us.
+
+2.3  CONTRACT. Issued electronically. Please read it. If anything differs from
+     what you were told verbally, say so before you sign - it is far easier to
+     correct then.
+
+2.4  EQUIPMENT. IT ships your laptop to your home address to arrive two working
+     days before you start, or holds it at reception if you prefer. Tell your
+     recruiter which.
+
+2.5  WHAT YOU DO NOT NEED TO DO. You do not need to read anything, set anything
+     up, or join any calls before your start date. If someone asks you to,
+     tell the People team.
+
+-----------------------------------------------------------------
+3. YOUR FIRST DAY
+-----------------------------------------------------------------
+3.1  Start time is 10:00 in your local time zone, not 09:00, so that nobody is
+     travelling in rush hour on a day that is already stressful.
+
+3.2  Cambridge starters: reception at 41 Hurst Way. Ask for the People team.
+     Basel starters: reception at Klybeckstrasse 141. Fully remote starters:
+     your manager will send a calendar invite.
+
+3.3  The day is deliberately light. Laptop setup, accounts, a building tour
+     where relevant, lunch with your team, and one conversation with your
+     manager about what the first month looks like. You will not be given work.
+
+3.4  Mandatory day one items:
+     - Health and safety induction (site-based roles)
+     - Information security and acceptable use
+     - Code of conduct acknowledgement
+     - Confirmation of your emergency contact and, if you choose to share it,
+       any accessibility or health information you want us to know about
+
+     On that last point: sharing is entirely voluntary and what you share goes
+     to the People team, not to your manager, unless you say otherwise. If you
+     need an adjustment to do your job well, you do not have to justify it with
+     a diagnosis. See User__policy-grievance-and-dignity-at-work-v4.txt
+     section 9 and speak to Rachel Duffy or Lena Hofstetter.
+
+-----------------------------------------------------------------
+4. YOUR FIRST WEEK
+-----------------------------------------------------------------
+The induction agenda is in User__onboarding-induction-agenda-week-1.txt. In
+summary:
+
+  Day 1   Setup, team, manager conversation
+  Day 2   What Veridia makes and who buys it. Product overview: VeriScan 400
+          and 400 Pro, VeriPrep SP-1, VeriLyse reagents, VeriConnect,
+          VeriGuard. Non-technical; everybody attends this regardless of role.
+  Day 3   Quality and regulatory induction. Why we are regulated, what a
+          Field Safety Notice is, what your personal obligations are, and what
+          to do if you ever think something is wrong with a product. MANDATORY
+          FOR EVERY EMPLOYEE including finance, marketing and the People team.
+  Day 4   Information security, data protection and customer confidentiality.
+          Includes what patient data we do and do not hold.
+  Day 5   Your team. Systems, tools, ways of working, first task.
+
+-----------------------------------------------------------------
+5. THE BUDDY SCHEME
+-----------------------------------------------------------------
+5.1  Every starter is assigned a buddy: someone outside their reporting line,
+     usually 1 to 3 years in, whose job is to answer the questions you do not
+     want to ask your manager.
+
+5.2  A buddy is not a mentor and is not responsible for your training. The
+     commitment is a 30-minute conversation a week for the first eight weeks.
+
+5.3  Buddies volunteer. If you want to be one, tell the People team. It is
+     recognised in performance conversations as contribution, and being a good
+     buddy is legitimate evidence in a promotion case.
+
+-----------------------------------------------------------------
+6. THE FIRST 90 DAYS
+-----------------------------------------------------------------
+Detailed in User__onboarding-first-90-days-guide.txt. Checkpoints:
+
+  Day 7    Manager check-in. Is anything blocking you?
+  Day 30   Structured review against the goals set in week one. People team
+           sends you a short survey; the free-text answers are read and acted
+           on, and they have changed this policy twice.
+  Day 60   Manager review. Probation trajectory discussed honestly. If there
+           is a concern, you hear it here and not at day 90.
+  Day 90   Probation decision (see User__policy-probation-period-v3.txt).
+
+-----------------------------------------------------------------
+7. ROLE-SPECIFIC ONBOARDING
+-----------------------------------------------------------------
+7.1  FIELD SERVICE ENGINEERS. 12-week structured programme including
+     supervised customer visits. You will not attend a customer site
+     unaccompanied before week 8, and not before your competency sign-off in
+     any case. This is non-negotiable and applies regardless of prior
+     experience elsewhere.
+
+7.2  SUPPORT ENGINEERS. 6-week programme. Live tickets from week 2 under
+     review, independent from week 5.
+
+7.3  MANUFACTURING AND QC (BASEL). Training records are part of the regulated
+     quality system. You cannot perform a task unsigned; your trainer signs
+     you off per task and the record is auditable. This is not bureaucracy for
+     its own sake - it is inspected.
+
+7.4  ROLES TOUCHING THE QUALITY SYSTEM. Additional GxP training within the
+     first 30 days, refreshed annually.
+
+-----------------------------------------------------------------
+8. RESPONSIBILITIES
+-----------------------------------------------------------------
+  Hiring manager   Owns the outcome. Sets the first month's goals before day
+                   one, holds the check-ins, makes the probation decision.
+  People team      Owns the process, the paperwork, the week one agenda and
+                   the day 30 survey.
+  IT               Equipment and accounts, ready on day one.
+  Buddy            Weekly conversation for eight weeks.
+  You              Ask. Nobody at Veridia thinks less of a new starter for
+                   asking a question in week three. Several of us think less
+                   of people who guess.
+
+-----------------------------------------------------------------
+9. IF ONBOARDING GOES WRONG
+-----------------------------------------------------------------
+9.1  If your laptop has not arrived, your accounts do not work, your manager is
+     on holiday for your first week, or nobody has told you what you are meant
+     to be doing - tell the People team. These things happen and we would
+     rather fix them in week one than read about them in your day 30 survey.
+
+9.2  In 2025 we changed this policy because the day 30 survey told us that 4
+     starters in 12 months had a manager on leave during their first week. The
+     hiring manager is now required to be present for a starter's first three
+     days or to formally delegate to a named deputy.
+
+-----------------------------------------------------------------
+10. CONTACT
+-----------------------------------------------------------------
+Rachel Duffy, HR Business Partner (UK) - rachel.duffy@veridiabio.com
+Lena Hofstetter, HR Manager (Switzerland) - lena.hofstetter@veridiabio.com
+Ollie Kettering, People Operations Coordinator - ollie.kettering@veridiabio.com
+people@veridiabio.com | +44 1223 496 190
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

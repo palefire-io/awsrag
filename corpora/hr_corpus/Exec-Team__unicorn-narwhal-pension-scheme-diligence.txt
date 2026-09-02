@@ -1,0 +1,282 @@
+=================================================================
+*** STRICTLY CONFIDENTIAL - PROJECT UNICORN ***
+=================================================================
+PROJECT UNICORN
+Narwhal Industrial Pension Scheme - Due Diligence Report
+=================================================================
+Report reference: UNI-DD-PEN-001
+Date:             2026-06-20
+Prepared by:      Pilkington Rowe (pensions advisers)
+                  Partner: Cordelia Marchbanks-Hale
+Instructed by:    Gary Pemberton, Chief Financial Officer
+Internal owner:   Gary Pemberton, with Naomi Okonjo-Bright (CPO) and
+                  Sunita Raval (GC)
+Classification:   Strictly Confidential - Inside Information
+
+*** THIS IS THE LARGEST SINGLE RISK IN THE TRANSACTION AND IT IS CAPABLE OF
+*** PREVENTING IT. THE BOARD SHOULD READ SECTIONS 4 AND 7 IN FULL.
+
+-----------------------------------------------------------------
+1. THE SCHEME
+-----------------------------------------------------------------
+  Name              The Narwhal Industrial Pension Scheme
+  Type              Defined benefit, final salary
+  Established       1998 (by a predecessor entity acquired by Narwhal in 2011)
+  Closed to new
+    entrants        2009
+  Closed to future
+    accrual         2014
+  Principal
+    employer        Narwhal Industrial Holdings Ltd
+  Participating
+    employers       Narwhal Industrial Ltd (trading subsidiary) only
+  Members           312 total
+                      Pensioners                    148
+                      Deferred members              123
+                      Active (deferred, no accrual)  41
+  Trustee board     5 trustees: 2 employer-nominated, 2 member-nominated,
+                    1 independent professional trustee (chair) -
+                    Halberd Trustee Services Ltd, represented by
+                    Marcus Threadgold-Pyne
+  Scheme actuary    Ferrers Actuarial LLP
+  Investment
+    consultant      Ashgrove Advisory
+  Covenant adviser  None currently appointed. THIS WILL CHANGE - see 4.3.
+
+-----------------------------------------------------------------
+2. FUNDING POSITION
+-----------------------------------------------------------------
+  Basis                              Assets      Liabilities    Deficit
+  ---------------------------------  ----------  ------------  ----------
+  IAS 19 (accounting, 2025-12-31)    GBP 41.2M   GBP 48.0M     GBP  6.8M
+  Technical provisions (2025-04-05)  GBP 41.2M   GBP 50.4M     GBP  9.2M
+  Solvency / buyout (estimated)      GBP 41.2M   GBP 60.6M     GBP 19.4M
+
+  Funding level on technical provisions:  81.7%
+  Funding level on buyout:                68.0%
+
+2.1  Recovery plan agreed at the 2022 valuation: deficit contributions of
+     GBP 1.15M per annum to 31 March 2031, plus expenses of approximately
+     GBP 180,000 per annum.
+
+2.2  The 2025 valuation is IN PROGRESS. The actuary's preliminary results were
+     shared with the trustees in February 2026 and show the technical
+     provisions deficit at GBP 9.2M against GBP 11.4M at 2022 - an improvement
+     driven almost entirely by rising gilt yields rather than by contributions
+     or investment outperformance.
+
+2.3  IMPORTANT: the valuation must be agreed by 5 July 2026, being 15 months
+     after the effective date. It is not agreed. The trustees and Narwhal are
+     apart on the discount rate assumption, and the gap between their
+     positions is approximately GBP 2.8M of technical provisions.
+
+     A valuation being negotiated at the same time as a change of control is a
+     materially worse position for the buyer than a valuation already agreed.
+     The trustees have every incentive to conclude the valuation on prudent
+     assumptions while a transaction is in prospect.
+
+-----------------------------------------------------------------
+3. INVESTMENT AND RISK
+-----------------------------------------------------------------
+  Growth assets (equities, diversified growth)   38%
+  Liability-driven investment                    41%
+  Corporate bonds                                16%
+  Cash                                            5%
+
+3.1  Hedge ratios: approximately 72% of interest rate risk and 68% of
+     inflation risk hedged, measured against technical provisions.
+
+3.2  The scheme was affected by the September to October 2022 gilt market
+     event. It met its collateral calls without being forced to sell growth
+     assets at the bottom, which many schemes of this size did not. The
+     trustees handled that period well and it is a point in their favour.
+
+3.3  Longevity risk unhedged. A one-year increase in life expectancy adds
+     approximately GBP 1.6M to technical provisions.
+
+-----------------------------------------------------------------
+4. THE CHANGE OF CONTROL - WHAT WILL ACTUALLY HAPPEN
+-----------------------------------------------------------------
+4.1  A share purchase does not trigger a section 75 debt, because the
+     participating employers do not change. That is the good news and it is
+     the extent of the good news.
+
+4.2  The trustees will assess whether the transaction weakens the employer
+     covenant. On the facts they will conclude that it does, or at least that
+     it changes it in ways requiring mitigation, because:
+
+     (a) Veridia is SMALLER than Narwhal by revenue (GBP 42.1M against
+         GBP 58.2M) and by headcount. The covenant would move from a business
+         with GBP 58M of revenue to a group whose parent is smaller than the
+         scheme's current sponsor.
+
+     (b) The transaction introduces GBP 18M of new acquisition debt which
+         ranks AHEAD of the scheme. This is the point trustees care about most
+         and it is the point on which the 2025 process is understood to have
+         failed.
+
+     (c) Veridia is Series D venture-backed and not profitable at the level
+         Narwhal is. Our EBITDA is lower in absolute terms. A trustee looking
+         at our accounts will see a growth company, and growth companies are
+         not what a pension trustee wants standing behind a GBP 19.4M buyout
+         deficit.
+
+     (d) The scheme would become a materially larger liability relative to its
+         sponsor. Currently the buyout deficit is 33% of sponsor revenue.
+         Post-transaction it would be 19% of combined revenue but would sit
+         behind acquisition debt in a leveraged structure.
+
+4.3  The trustees will appoint a covenant adviser. They have not yet and they
+     will the moment they are told. Expect a covenant assessment taking six to
+     ten weeks and costing the scheme (and therefore ultimately the employer)
+     GBP 60,000 to GBP 90,000.
+
+4.4  LIKELY TRUSTEE ASKS, in Pilkington Rowe's assessment and in descending
+     order of likelihood:
+
+     (i)   A PARENT COMPANY GUARANTEE from Veridia BioSystems Ltd, capped at
+           some proportion of the section 75 debt. Near certain. Expect them
+           to open at 100% of buyout (GBP 19.4M) and to settle between 50%
+           and 75%.
+
+     (ii)  AN ACCELERATED RECOVERY PLAN. From GBP 1.15M to somewhere between
+           GBP 1.8M and GBP 2.4M per annum, and a shortened end date.
+           Very likely. Cost in NPV terms GBP 3.5M to GBP 5.5M.
+
+     (iii) A LUMP SUM CONTRIBUTION AT COMPLETION. GBP 3M to GBP 6M. Likely,
+           and often the cleanest thing to concede because it is finite.
+
+     (iv)  NEGATIVE PLEDGES AND INFORMATION RIGHTS - restrictions on further
+           leverage, on dividends, on disposals; quarterly management accounts
+           to the trustees. Certain, and cheap in cash terms but constraining.
+
+     (v)   SECURITY OVER ASSETS. Possible. Would conflict directly with the
+           acquisition lenders' security package and is the ask most likely to
+           break the financing structure. Resist.
+
+4.5  CENTRAL CASE for modelling: a lump sum of GBP 4M at completion, an
+     accelerated recovery plan adding GBP 0.75M per annum to 2031
+     (NPV approximately GBP 3.2M), and a parent company guarantee at 60% of
+     buyout. Total economic cost GBP 5.5M to GBP 7.2M.
+
+4.6  The GBP 5.5M figure carried in the HR due diligence report and in the
+     board paper is the LOW END of this range. The Board should be presented
+     with GBP 7.2M as the planning assumption at Gate 2.
+
+-----------------------------------------------------------------
+5. THE PENSIONS REGULATOR
+-----------------------------------------------------------------
+5.1  TPR's moral hazard powers - contribution notices and financial support
+     directions - are engaged by an act that is materially detrimental to the
+     likelihood of accrued benefits being received. A leveraged acquisition by
+     a smaller sponsor is squarely the kind of transaction TPR has in mind.
+
+5.2  Since the Pension Schemes Act 2021 there are also criminal offences of
+     avoidance of employer debt and of conduct risking accrued scheme
+     benefits, each carrying up to seven years' imprisonment and an unlimited
+     fine, and a civil penalty of up to GBP 1M. These apply to individuals as
+     well as to companies.
+
+     Pilkington Rowe's view is that a properly mitigated transaction with an
+     engaged trustee board carries no realistic criminal exposure. We record
+     the point because directors should be aware that the regime exists and
+     that the appropriate response to it is early and full engagement with the
+     trustees rather than a legal argument about whether the threshold is met.
+
+5.3  CLEARANCE. Voluntary. Provides statutory protection from the moral hazard
+     powers in respect of the cleared transaction.
+       Recommendation: SEEK CLEARANCE.
+       Cost: GBP 80,000 to GBP 120,000 in adviser fees.
+       Time: 3 to 4 months from application, and TPR will not engage until the
+       trustees are supportive.
+       Consequence: it puts the trustees on the critical path to completion.
+       They know that, and it strengthens their negotiating position.
+
+5.4  The alternative - completing without clearance - is lawful and is what
+     most mid-market transactions do. Pilkington Rowe recommend clearance here
+     specifically because the sponsor is getting smaller, which is the fact
+     pattern TPR looks at hardest.
+
+-----------------------------------------------------------------
+6. THE 2025 PROCESS
+-----------------------------------------------------------------
+6.1  Ardenmoor ran a sale process in 2025 which reached exclusivity and did not
+     complete. Ardenmoor's description to us is that the buyer withdrew "on
+     pension".
+
+6.2  We have not seen the 2025 buyer's diligence and will not. What we can
+     observe from the data room:
+       - The trustees appointed no covenant adviser in 2025, suggesting the
+         process did not reach the stage of formal covenant assessment.
+       - Trustee minutes from June 2025 (redacted, in the data room) record
+         the chair noting "the board's expectation that any change of control
+         would be accompanied by mitigation commensurate with the change in
+         covenant strength".
+       - There is no record of any mitigation offer having been made.
+
+6.3  The reasonable inference is that the 2025 buyer formed a view of the
+     likely mitigation and decided it exceeded what the asset was worth to
+     them. We should assume the trustees' expectations have hardened.
+
+6.4  Cordelia Marchbanks-Hale's assessment: "You are the second buyer at this
+     table in eighteen months. The trustees know that. It is not a strong
+     position and you should not open by testing how little they will accept."
+
+-----------------------------------------------------------------
+7. RECOMMENDATIONS
+-----------------------------------------------------------------
+  P1  Model GBP 7.2M of total pension cost as the PLANNING ASSUMPTION, not
+      GBP 5.5M. Present the range to the Board at Gate 2 with GBP 7.2M as
+      central.
+
+  P2  Approach the trustees EARLY - before signing, not after. A trustee board
+      that learns of a change of control from a press release becomes an
+      adversary. One that is engaged from the outset frequently becomes
+      constructive. The independent chair is experienced and reasonable and
+      should be approached first, privately.
+
+  P3  Seek clearance from TPR. Accept the timetable consequence.
+
+  P4  Get the 2025 valuation AGREED before signing if at all possible, or
+      alternatively obtain a specific price adjustment mechanism tied to the
+      agreed technical provisions figure. Signing into an unagreed valuation
+      transfers an open-ended risk to the buyer.
+
+  P5  Resist security over assets. Concede on the guarantee, the lump sum and
+      the negative pledges before conceding security, because security will
+      break the debt financing.
+
+  P6  Consider whether the debt quantum can be reduced. Every pound of
+      acquisition debt makes the covenant conversation harder, and there is a
+      point at which reducing leverage costs less than the mitigation it
+      avoids. Gary Pemberton to model.
+
+  P7  THE BOARD SHOULD DECIDE NOW what its walk-away number is on pension
+      mitigation, and record it, before entering trustee negotiations. Deciding
+      it in the room is how buyers end up paying more than the asset is worth.
+
+-----------------------------------------------------------------
+8. CONCLUSION
+-----------------------------------------------------------------
+The scheme is not in bad shape by the standards of closed DB schemes of its
+vintage. The trustees are competent and the investment strategy is sensible.
+
+The difficulty is not the scheme. It is that Veridia is a smaller, more
+leveraged, less profitable sponsor than the one the trustees currently have,
+and no amount of presentation changes that. The mitigation is the price of
+that fact, and it is real money that comes off what Veridia can pay for the
+business.
+
+Pilkington Rowe's view is that the transaction is achievable. It is achievable
+at a total pension cost of around GBP 7M and with a parent company guarantee
+that will sit on Veridia's balance sheet for a decade. Whether that is worth
+paying is a commercial judgement and not ours to make.
+
+                                Cordelia Marchbanks-Hale
+                                Partner, Pilkington Rowe
+                                2026-06-20
+
+=================================================================
+STRICTLY CONFIDENTIAL - PROJECT UNICORN - INSIDE INFORMATION
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

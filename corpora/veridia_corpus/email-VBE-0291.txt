@@ -1,0 +1,59 @@
+From: Daniel Osei-Bonsu <d.osei-bonsu@lumenpath.io>
+To: partnerships@veridiabio.com
+CC: Tom Reeves <tom.reeves@veridiabio.com>
+Date: Wed, 4 Feb 2026 16:48:02 +0000
+Subject: Partnership enquiry - morphology AI integration with VeriConnect
+X-Mailer: Superhuman
+
+Hello,
+
+I lead partnerships at Lumen Path, a UK company building deep learning models
+for peripheral blood film morphology. We are Class B CE marked under IVDR for
+our film review triage product and we work with three digital microscopy
+vendors today.
+
+I am writing because a mutual customer - a large NHS network in the North West
+- suggested we talk. Their situation is that VeriScan analysers flag samples
+for film review, a scientist decides whether to make a film, and our system
+then reviews the film. The handoff between those steps is a person retyping an
+accession number, and everyone involved thinks that is silly.
+
+What we would like to explore:
+
+1. An integration that takes the VeriScan flag set - including the advisory
+   flags in firmware 4.3.0 - and uses it as an input to our triage model, so
+   that our confidence estimate is informed by the analyser's scatter data
+   rather than by the image alone.
+
+2. A return path so that our morphology finding lands back in VeriConnect
+   against the same accession, visible to the scientist reviewing the result.
+
+3. Longer term, and more speculatively: the analyser's raw scattergram data is
+   a richer input than the flag set. If there were an API for it we think there
+   is a real research question about whether the combination outperforms either
+   alone.
+
+I am aware this raises questions on your side that I cannot answer:
+- whether exposing advisory flags to a third party is compatible with their
+  research use only status
+- whether a return path writing into VeriConnect creates a regulatory
+  entanglement between our device and yours
+- whether your API v2 supports what we need, which from the documentation I
+  think it partially does
+
+I would rather have a short exploratory call than send a formal proposal into a
+process. If there is no appetite, tell me and I will stop - I would rather a
+quick no than a slow maybe.
+
+For context on scale: we are 34 people, Series A, currently deployed at eleven
+UK laboratories and two in Ireland. I am not pretending we are a large company.
+But the customer who suggested this call is one of yours and is asking both of
+us the same question.
+
+Best,
+
+Daniel Osei-Bonsu
+Head of Partnerships
+Lumen Path Ltd
+d.osei-bonsu@lumenpath.io | +44 7700 900 733
+lumenpath.io | Registered in England No. 13884021

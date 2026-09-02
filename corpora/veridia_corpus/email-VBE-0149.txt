@@ -1,0 +1,79 @@
+From: James Okafor <james.okafor@veridiabio.com>
+To: Dr Aled Pritchard <aled.pritchard@gmpn.nhs.uk>
+CC: Peter Doyle <peter.doyle@veridiabio.com>, Dr Elena Marchetti <elena.marchetti@veridiabio.com>, Tom Reeves <tom.reeves@veridiabio.com>
+Date: Wed, 26 Feb 2025 09:15:44 +0000
+Subject: RE: FSN-2025-003 - operational impact across GMPN and what we need from you
+X-Mailer: Microsoft Outlook 16.0
+
+Aled,
+
+Thank you for writing this. I would rather have it than not, and I am not going
+to spend the first three paragraphs telling you how seriously we take it.
+
+Taking your four points in order.
+
+1. INVESTIGATION SUMMARY. Yes. Elena Marchetti has agreed that we will produce
+a governance-suitable summary of VBI-0087 when it closes, which we expect to be
+late March or early April. It will cover the root cause, the risk assessment,
+the corrective actions and the preventive actions. I would rather send you
+something with the actions in it than something that just says what went wrong.
+
+2. RETROSPECTIVE LOT EXPOSURE REPORT. Tom Reeves owns this and is copied.
+
+Tom's honest position, which I have asked him to give me rather than a
+comfortable one: the data is there, the report does not exist, and building it
+properly is a quarter of work rather than a fortnight. He can have a beta in
+VeriConnect 6.1 and general availability in 6.2. He will not commit to dates
+for those releases in an email to a customer and I am not going to make him.
+
+What I can commit to: if another notice of this kind lands before that ships,
+Veridia will produce the exposure list for you from our side, using the
+telemetry we hold, rather than leaving you to reconcile by hand. That is a
+manual process for us but it is our problem to have rather than yours.
+
+3. THE COST. I am not going to offer you money, because I do not think that is
+what you are asking for and because it would look like buying silence.
+
+What I will do:
+- Waive your VeriConnect renewal uplift for the coming year. That is worth
+  around GBP 11,000 to you and it is a real number rather than a gesture.
+- Fund two days of applications support from Marcus Chen to help you build a
+  standing process for this, so that the next time anyone asks you a
+  retrospective question about reagent exposure you are not starting from
+  nothing.
+
+If your governance committee wants something more formal than that, tell me and
+I will take it further internally.
+
+4. NOTICE SCOPE STATEMENTS. Accepted without reservation. This is the second
+piece of feedback we have had on it and yours is the clearest. Sarah Lindgren
+is revising the FSN template so that "products NOT affected" appears in the
+same section and the same weight as the affected list. It will be in the
+complaint handling SOP as a requirement, not a style preference.
+
+On your point about the two opposite errors at two of your sites - that is the
+most useful single sentence in your email and I have quoted it, anonymised, in
+the internal review. A document that produces opposite misreadings is a
+document problem, not a reader problem.
+
+Two things I want to add that you did not ask for.
+
+First: your team found this. Ian Bracewell at Countess of Chester raised the
+index complaint and did the cartridge swap that gave us our first hard
+evidence, and your own site at MRI gave us the storage and handling data that
+ruled out a manufacturing cause on a separate issue. You have been better
+diagnostic partners than we have been suppliers on this one.
+
+Second: the eleven days it took you to establish exposure is the number I am
+taking to our executive. It is a better argument for building the report than
+anything I could construct myself.
+
+I am free Tuesday or Thursday afternoon next week. Peter can set something up.
+
+James
+
+James Okafor
+VP Customer Support
+Veridia BioSystems Ltd
+james.okafor@veridiabio.com | +44 1223 496 100
+41 Hurst Way, Cambridge CB4 0WS

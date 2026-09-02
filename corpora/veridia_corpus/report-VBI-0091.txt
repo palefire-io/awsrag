@@ -1,0 +1,265 @@
+=================================================================
+VERIDIA BIOSYSTEMS - INVESTIGATION REPORT
+=================================================================
+Report Number:   VBI-0091
+Title:           HL7 result timestamp drift introduced by VeriScan firmware
+                 4.2.1
+Classification:  Product investigation - software
+Status:          CLOSED
+Opened:          2025-02-24
+Closed:          2025-05-09
+Investigator:    Gavin Tuck, Firmware Lead
+Contributors:    Tom Reeves, Product Manager VeriConnect
+                 Aisha Rahman, Support Engineering (L2)
+                 Marta Oliveira, Field Service Engineer
+                 Kasia Nowak, Field Service Engineer
+Approved:        Dr Elena Marchetti, Chief Scientific Officer, 2025-05-09
+Related:         VBB-0041, tickets VBST-3902, VBST-3910, VBST-3918,
+                 VBST-3925; field visits FSV-2025-0171, FSV-2025-0180
+
+-----------------------------------------------------------------
+1. SUMMARY
+-----------------------------------------------------------------
+VeriScan firmware 4.2.1, released 2025-02-03, emits HL7 timestamps that drift
+forward relative to wall-clock time. The drift accumulates with instrument
+uptime and resets on power cycle. Measured drift on the reference VeriScan 400
+Pro reached 47 minutes after 14 days of continuous uptime. VeriScan 400
+instruments running the same firmware drift by under 90 seconds over the same
+period.
+
+Root cause: the 4.2.1 refactor of the HL7 timestamp assembly replaced a direct
+read of the real-time clock with a monotonic accumulator seeded at boot and
+advanced by the result-cycle scheduler tick. The scheduler tick is nominally
+100 ms but is extended by optical integration on the Pro's reticulocyte and
+extended-flagging code paths. The accumulator therefore advanced faster than
+real time, and the excess accumulated without bound.
+
+Result values are not affected. Four timestamp fields are affected: OBR-7,
+OBX-14, OBR-22 and MSH-7.
+
+Firmware 4.2.2 was an incomplete correction and was withdrawn. Firmware 4.2.3
+(2025-03-19) corrects the defect and adds drift telemetry.
+
+-----------------------------------------------------------------
+2. TIMELINE
+-----------------------------------------------------------------
+2025-02-03  Firmware 4.2.1 released to the general channel.
+2025-02-19  VBST-3902 raised by Royal Free London NHS Foundation Trust
+            (ACC-1103): QC chart points in VeriConnect appearing ahead of the
+            time the QC was run. Initially triaged as a VeriConnect charting
+            defect.
+2025-02-21  VBST-3910 raised by University Hospitals Birmingham NHS FT
+            (ACC-1146): LIS reporting negative turnaround times. Middleware
+            rejecting some messages with an OBR-7 in the future.
+2025-02-24  Support links the two tickets. Investigation opened. Both sites
+            confirmed on firmware 4.2.1, both VeriScan 400 Pro.
+2025-02-25  Defect reproduced internally on a Pro left running for 6 days.
+            Drift measured at 19 minutes.
+2025-02-27  Firmware 4.2.2 released as a partial fix (see section 6).
+2025-03-01  4.2.2 found to correct only the MSH-7 path and to introduce false
+            E-507 warnings.
+2025-03-03  Firmware 4.2.2 withdrawn.
+2025-03-04  FSV-2025-0171: Royal Free instrument rolled back to 4.2.0.
+2025-03-12  FSV-2025-0180: two Birmingham instruments rolled back to 4.2.0.
+2025-03-19  Firmware 4.2.3 released. VBB-0041 issued the same day.
+2025-03-25  FSV-2025-0194: 4.2.3 deployed across the Greater Manchester Pro
+            fleet; drift telemetry confirms nominal.
+2025-05-09  Investigation closed.
+
+-----------------------------------------------------------------
+3. TECHNICAL DETAIL
+-----------------------------------------------------------------
+3.1  Before 4.2.1, the routine hl7_assemble_timestamp() called rtc_read()
+     directly for each of the four timestamp fields at the point of message
+     assembly. This was correct but was measured at 1.8 ms per call because
+     rtc_read() takes the I2C bus lock, and four calls per message on a
+     high-throughput instrument was identified during 4.2.0 profiling as a
+     contributor to the message assembly latency.
+
+3.2  In 4.2.1 the call was replaced by a read of a value maintained in the
+     result-cycle scheduler:
+
+       t_now = boot_epoch + (tick_count * TICK_MS)
+
+     where TICK_MS is the nominal scheduler period of 100 ms.
+
+3.3  The assumption that tick_count * TICK_MS approximates elapsed real time
+     holds only if every tick takes exactly TICK_MS. It does not. The
+     scheduler is cooperative; a tick completes when the work scheduled in it
+     completes. On the VeriScan 400 the work per tick is bounded and the mean
+     tick duration measured 100.4 ms, giving a drift of about 0.4 per cent -
+     approximately 84 seconds over 14 days.
+
+3.4  On the VeriScan 400 Pro the reticulocyte integration window and, on
+     4.3.0-precursor builds, the extended flagging computation extend the tick
+     substantially. Measured mean tick duration on the Pro under a mixed
+     workload was 123.3 ms, a 23.3 per cent excess. Over 14 days of continuous
+     uptime this is 47.0 minutes, which matches the field observation.
+
+3.5  Because the accumulator is seeded from the real-time clock at boot, a
+     power cycle resets the error to zero. This is why the drift correlates
+     with uptime and why sites that power down nightly saw a maximum error of
+     a few minutes and largely did not notice.
+
+3.6  The affected fields and the magnitude of the drift in each:
+
+       MSH-7   assembled at send time              full drift
+       OBR-7   specimen collected at, or, where    full drift where the
+               no order exists, aspiration time     instrument supplies it;
+                                                    UNAFFECTED where the
+                                                    collection time came from
+                                                    the order
+       OBR-22  result reported at                  full drift
+       OBX-14  observation made at                 full drift
+
+     The variation in OBR-7 behaviour explains why some sites saw the problem
+     in OBR-7 and others did not: sites whose LIS supplies a collection time
+     with the order were passing that value through unaltered.
+
+3.7  Not affected: the on-screen timestamp, the printed report, the instrument
+     audit log, and the VeriConnect-uploaded telemetry timestamp. All of these
+     read the RTC directly. This asymmetry is what made the defect visible to
+     customers as a mismatch between the instrument display and the LIS, and
+     is also why the instrument's own logs were of no help in diagnosing it.
+
+3.8  Analyte values are computed from the optical and impedance measurements
+     and have no dependency on the timestamp path. No result value was
+     altered. This was verified by re-analysis of 500 archived results from an
+     affected instrument against their original transmitted values.
+
+-----------------------------------------------------------------
+4. WHY VERIFICATION DID NOT CATCH IT
+-----------------------------------------------------------------
+4.1  The automated HL7 conformance suite runs 1,200 messages against a
+     freshly booted instrument and completes in 38 minutes. Maximum
+     accumulated drift at the end of the run on a Pro is approximately 8
+     seconds. The suite asserts that timestamps are well-formed, are in the
+     correct time zone, and are monotonically non-decreasing across the run.
+     All three assertions pass at 8 seconds of drift.
+
+4.2  There was no assertion comparing the instrument's emitted timestamp to
+     an independent time source.
+
+4.3  The soak test that would have caught it - a 14-day continuous run - is
+     part of the release process for major versions only. 4.2.1 was a hotfix
+     for an unrelated RFID read reliability problem (E-302) and went through
+     the abbreviated hotfix path.
+
+4.4  The refactor was not flagged as risky in review because the reviewer
+     understood the change as an optimisation of how the same value was read,
+     not as a change to what value was read. The commit message described it
+     as "avoid I2C lock contention in HL7 assembly", which is accurate and
+     entirely misses the point.
+
+-----------------------------------------------------------------
+5. IMPACT ASSESSMENT
+-----------------------------------------------------------------
+5.1  Instruments on 4.2.1 or 4.2.2 at any time: 604 across 88 accounts.
+     Of these, 197 are VeriScan 400 Pro.
+
+5.2  Instruments with more than 7 days of continuous uptime while on affected
+     firmware, and therefore with a drift likely to be noticeable: 141, of
+     which 118 are Pro.
+
+5.3  Reported operational impacts:
+       - QC chart misordering in VeriConnect (all Pro sites with Professional
+         tier or above).
+       - LIS turnaround time reporting invalid (11 sites).
+       - Middleware message rejection where the receiving system validates
+         OBR-7 against its own clock (4 sites). Presented to users as E-503.
+       - Delta check anomalies where the LIS orders by OBR-7 (2 sites).
+
+5.4  Clinical risk assessment (QA-HHE-2025-004, 2025-03-06): residual risk
+     LOW. Result values are unaffected. The credible harm pathway is a
+     clinician misjudging the recency of a result, which requires the
+     clinician to be reading the timestamp, the drift to be large enough to
+     matter, and the difference to be clinically material. In haematology the
+     window in which a CBC's exact minute of collection changes management is
+     narrow. No adverse outcome was reported.
+
+5.5  Reportability assessed under SOP-VBS-014 section 7. Determined not
+     reportable as an incident; the corrective action was communicated as a
+     technical bulletin (VBB-0041) rather than a field safety notice. The
+     rationale is recorded in the complaint register.
+
+     NOTE. This determination was queried by one customer's regulatory lead
+     (see VBST-3925) on the grounds that a wrong timestamp on a clinical
+     record is a data integrity defect regardless of the value being correct.
+     Regulatory Affairs reviewed and maintained the determination, on the
+     basis that the criterion is potential for harm rather than data
+     correctness in itself. The exchange is on file.
+
+-----------------------------------------------------------------
+6. THE 4.2.2 EPISODE
+-----------------------------------------------------------------
+6.1  4.2.2 was assembled and released within 4 days of the defect being
+     reproduced. It restored the direct RTC read for MSH-7 only, on the
+     mistaken understanding that MSH-7 was the field customers were
+     complaining about.
+
+6.2  It also introduced a comparison between the accumulator and the RTC that
+     raised E-507 (internal clock not synchronised) whenever they diverged -
+     which, since the accumulator was still drifting for the other three
+     fields, was constantly.
+
+6.3  4.2.2 was withdrawn after 4 days. 23 instruments received it.
+
+6.4  The 4.2.2 episode is the more instructive failure. The team responded to
+     the pressure of a live customer problem by shipping a fix that had been
+     scoped from the ticket summaries rather than from the defect. The
+     abbreviated hotfix path that let 4.2.1 through also let 4.2.2 through.
+
+-----------------------------------------------------------------
+7. CORRECTIVE AND PREVENTIVE ACTIONS
+-----------------------------------------------------------------
+  CAPA-2025-021  Firmware 4.2.3: restore direct RTC read for all four
+                 timestamp fields; resynchronise on every result
+                 transmission; report drift telemetry to VeriConnect daily.
+                 Status: complete, released 2025-03-19.
+
+  CAPA-2025-022  Add an absolute time assertion to the HL7 conformance suite,
+                 comparing emitted timestamps against an independent NTP
+                 reference with a tolerance of 2 seconds.
+                 Status: complete 2025-04-11.
+
+  CAPA-2025-023  Add a 72-hour continuous-uptime soak with timestamp
+                 assertion to the hotfix release path, not only to the major
+                 version path. Accepts a 3-day delay on hotfixes.
+                 Status: complete 2025-04-30.
+
+  CAPA-2025-024  Code review checklist: any change touching a time source, a
+                 clock read or a monotonic counter is flagged for a second
+                 reviewer and requires an explicit statement of what the
+                 change means, not only what it does.
+                 Status: complete 2025-04-18.
+
+  CAPA-2025-025  VeriConnect to surface instrument clock drift on the fleet
+                 dashboard and alert above 60 seconds.
+                 Status: complete, VeriConnect 6.1, 2025-06-24.
+
+  CAPA-2025-026  QC chart annotation for firmware changes, so that a
+                 discontinuity in a chart can be attributed.
+                 Status: delivered VeriConnect 6.2, 2026-04-21.
+
+-----------------------------------------------------------------
+8. OBSERVATIONS
+-----------------------------------------------------------------
+8.1  The defect was in the field for 16 days before the first ticket and 21
+     days before the two tickets were linked. Both original tickets were
+     triaged to the wrong component - one to VeriConnect charting, one to LIS
+     integration - because that is where the symptom appeared. Neither
+     mentioned firmware, because from the customer's position the firmware was
+     not the thing that had changed; it had updated itself weeks earlier
+     without incident.
+
+8.2  A first-line question of the form "what changed on this instrument in the
+     last 30 days" would have surfaced the firmware update in both cases. It
+     is now the second question on the L2 triage template for any complaint
+     whose symptom involves data appearing wrong in a downstream system.
+
+8.3  The performance optimisation that caused this saved 5.4 ms per message.
+     At a site running 400 messages a day this is 2.2 seconds a day.
+
+=================================================================
+END OF REPORT VBI-0091
+=================================================================

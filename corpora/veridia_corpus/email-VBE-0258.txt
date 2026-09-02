@@ -1,0 +1,74 @@
+From: Marcus Chen <marcus.chen@veridiabio.com>
+To: Tom Reeves <tom.reeves@veridiabio.com>
+CC: Dr Elena Marchetti <elena.marchetti@veridiabio.com>
+Date: Wed, 23 Apr 2025 17:22:31 +0100
+Subject: FW: QC chart annotation - consolidated customer requests (31 sites)
+X-Mailer: Microsoft Outlook 16.0
+
+Tom,
+
+I have been collecting these since January and there are now enough that I want
+to put them in front of you as one thing rather than as a trickle.
+
+Thirty-one customers have asked, in some form, for VeriConnect to annotate
+Levey-Jennings charts with the events that change the process being charted.
+Specifically:
+
+  reagent lot change        27 requests
+  firmware update           24 requests
+  calibration               22 requests
+  control lot change        19 requests
+  instrument service visit  11 requests
+  operator                   4 requests
+
+The firmware number jumped from 6 to 24 between February and April, for obvious
+reasons.
+
+The argument customers make, and I think it is right, is this. A QC chart is a
+picture of a process. When the chart shows a discontinuity, the first question
+is always "what changed" and the answer is always somewhere else - in a paper
+lot changeover record, in a service report, in a bulletin. The chart shows you
+that something happened and gives you no way to find out what.
+
+Representative quotes, anonymised:
+
+  "We spent two days establishing that a shift in our platelet mean coincided
+  with a reagent lot change, which the system already knew about." - Enterprise
+  customer, 12 instruments
+
+  "During the firmware timestamp business I had three charts with points in the
+  wrong order and no way to show my assessor why. A vertical line saying
+  'firmware 4.2.1 applied' would have saved me a fortnight." - Professional
+  customer
+
+  "Every other QC package I have used in twenty years does this." - Enterprise
+  customer, and I have checked, and they are right
+
+What I would ask for, in priority order:
+
+1. Vertical annotation lines on the L-J chart for reagent lot change, firmware
+   update, calibration and control lot change, with a hover or click showing
+   the detail. All four events are already in the data.
+
+2. The ability to add a manual annotation with free text. Sites want to record
+   "moved instrument", "new operator started", "air conditioning failed".
+
+3. Annotation visible in exported reports and PDFs, not just on screen. This is
+   the one that matters for accreditation and it is the one that will get
+   missed if we only do the interactive chart.
+
+I am aware you have a roadmap and I am not asking you to reorder it on my say
+so. But I would note that this is the single most requested VeriConnect feature
+I have seen in four years in this role, that the data already exists, and that
+the two product problems we have had this year would both have been easier for
+customers to live with if it had existed.
+
+Elena is copied because she asked me to keep her sighted on what customers are
+asking for after the recall.
+
+Marcus
+
+Marcus Chen
+QC Applications Specialist
+Veridia BioSystems Ltd
+marcus.chen@veridiabio.com | +44 1223 496 118

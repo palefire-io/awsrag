@@ -1,0 +1,118 @@
+Ticket ID: VBST-4345
+Status: Resolved (partially explained)
+Priority: P3-Medium
+Created: 2026-01-28 13:10 UTC
+Product: VeriConnect
+Customer: Mid Yorkshire Teaching NHS Trust (ACC-1117)
+Reported by: Steve Ogden, Laboratory Manager
+Assigned to: Tom Reeves (Product Manager, VeriConnect)
+Tier: Professional
+
+--- Thread ---
+
+[2026-01-28 13:10] Steve Ogden (Laboratory Manager):
+Our QC charts in VeriConnect don't match our instrument QC records for the
+period roughly February to April 2025. Some points are missing from the chart
+that are present on the instrument, and a few appear at times that don't match.
+
+We only noticed because we're pulling evidence together for a UKAS visit and
+someone actually compared the two.
+
+Current data is fine as far as we can tell. It's the historical period.
+
+[2026-01-28 16:00] Tom Reeves (Product Manager, VeriConnect):
+Steve - February to April 2025 is a period where I'd expect to find at least
+two contributing causes, and possibly three. Let me check your tenant rather
+than speculate.
+
+[2026-01-29 11:30] Tom Reeves (Product Manager, VeriConnect):
+Here's what I can establish.
+
+1. TIMESTAMP MISMATCH - explained.
+   Your two Pro instruments were on firmware 4.2.1 from 3 February to 19
+   March 2025. That firmware emitted drifting timestamps, up to tens of
+   minutes ahead of real time, growing with instrument uptime. The QC chart
+   x-axis uses the instrument-supplied report time, so charted points from
+   that period sit later than they actually occurred. This is documented in
+   VBB-0041 and investigation VBI-0091. Result values are unaffected - only
+   the times.
+   This explains the points that "appear at times that don't match".
+
+2. MISSING POINTS, 11 March - explained.
+   There is a gap on 11 March 2025 between roughly 07:00 and 11:00 UTC. That
+   is the SSO outage (VBB-0044, VBI-0094). Your staff could not log in, so QC
+   entered at the instrument during that window was uploaded, but QC that
+   would normally have been entered through VeriConnect was recorded on paper
+   and never entered. Those points aren't missing from the chart - they were
+   never in it.
+
+3. OTHER MISSING POINTS - NOT EXPLAINED.
+   You have 14 QC runs present on VS4-0812's local log between 24 February and
+   9 April 2025 that never reached VeriConnect. They are not clustered around
+   either of the above. I cannot account for them.
+
+[2026-01-29 14:00] Steve Ogden (Laboratory Manager):
+The first two I can work with. The third is the one UKAS will ask about.
+
+[2026-02-04 15:20] Tom Reeves (Product Manager, VeriConnect):
+I have spent a day on point 3 and I have a partial answer at best.
+
+What I can see: the instrument's upload queue holds results locally when the
+cloud agent can't reach us and transmits when it recovers. The queue is 2,000
+messages. Your MRI-site network had a series of short outages in that period -
+I can see the reconnection events in the agent telemetry.
+
+What I would expect: queued QC uploads to arrive late but to arrive.
+
+What actually happened to those 14: I don't know. The agent logs for that
+period have aged out (13-month telemetry retention, and we are now past it for
+February 2025). I cannot reconstruct it.
+
+What I am not going to do is offer you a theory dressed up as a finding. The
+honest position is that 14 QC runs were performed and recorded on the
+instrument, were not uploaded, and I cannot tell you why.
+
+What I can offer:
+- The instrument's local audit log and QC records for that period are intact
+  and exportable. They are the primary record and they are complete. For UKAS
+  purposes the instrument record is arguably the better evidence anyway.
+- A written statement from me, on Veridia letterhead, describing exactly what
+  I have described above including the unexplained part. If an assessor asks
+  why the cloud record is incomplete, "the manufacturer investigated and
+  provided this statement" is a more defensible position than a guess.
+- We have since added upload queue depth monitoring, so a queue that isn't
+  draining now raises an alert. That did not exist in early 2025.
+
+[2026-02-04 16:45] Steve Ogden (Laboratory Manager):
+I'd rather have that than a story. Please send the statement.
+
+Can you also confirm in it that the missing points are QC only and that no
+patient results were lost?
+
+[2026-02-05 12:00] Tom Reeves (Product Manager, VeriConnect):
+Checked before answering. Patient results from that period went instrument to
+LIS directly - you are on integration topology A - so they did not depend on
+the VeriConnect upload path at all. VeriConnect's copy of your patient results
+for that period is complete when reconciled against the instrument count, with
+no gaps.
+
+So yes: QC uploads only, and only those 14, and no patient result was affected
+or lost. That will be in the statement.
+
+[2026-02-09 10:00] Steve Ogden (Laboratory Manager):
+Statement received. Went to UKAS with it last week. The assessor read it,
+asked two questions, and accepted it. She commented that a vendor statement
+that says "we don't know" is unusual.
+
+Closing.
+
+--- Resolution ---
+Three contributing causes, two explained:
+(1) timestamp misalignment from firmware 4.2.1 (VBI-0091, VBB-0041);
+(2) a QC entry gap on 2025-03-11 from the SSO outage (VBI-0094, VBB-0044);
+(3) 14 QC uploads from VS4-0812 between 2025-02-24 and 2025-04-09 that never
+reached VeriConnect - NOT EXPLAINED. Agent telemetry for the period had aged
+out beyond the 13-month retention and could not be reconstructed.
+Patient results unaffected and complete (customer is on integration topology
+A). Written statement issued to the customer for their UKAS evidence pack.
+Upload queue depth monitoring has since been added.

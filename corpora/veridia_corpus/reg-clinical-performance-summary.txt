@@ -1,0 +1,226 @@
+=================================================================
+VERIDIA BIOSYSTEMS - CLINICAL PERFORMANCE SUMMARY
+=================================================================
+Title:        VeriScan 400 Pro - Clinical Performance Summary
+Document Ref: REG-CPS-VS400P-003
+Revision:     3
+Date:         2025-11-28
+Prepared by:  Dr Elena Marchetti, Chief Scientific Officer
+Reviewed by:  Marcus Chen, QC Applications Specialist
+Approved by:  Sarah Lindgren, Regulatory Affairs Manager
+
+Scope: Summary of the clinical performance evidence supporting the VeriScan
+400 Pro. Prepared for customer evaluation, tender response and accreditation
+purposes. This is a summary; the full study reports form part of the technical
+documentation.
+
+-----------------------------------------------------------------
+1. STUDY DESIGN
+-----------------------------------------------------------------
+Design            Prospective and retrospective method comparison using
+                  residual clinical specimens, conducted in accordance with
+                  EN ISO 20916:2019 and CLSI EP09-A3.
+Sites             5 (2 UK NHS teaching hospitals, 1 Swiss university
+                  hospital, 1 German reference laboratory, 1 UK private
+                  laboratory)
+Period            2023-03 to 2024-09, with supplementary reticulocyte data
+                  2025-02 to 2025-06 following the RGT-RT revision B change
+Ethics            Residual anonymised specimens; approvals held at each site.
+                  No specimen was collected for the purpose of the study.
+Instruments       6 VeriScan 400 Pro, firmware 4.0.0 to 4.1.2 during the
+                  study period
+Reference         Differential: ICSH-standardised 400-cell manual
+methods           differential by two independent morphologists, discordance
+                  adjudicated by a third
+                  Reticulocyte: ICSH reference method, manual new methylene
+                  blue, 1000 erythrocytes counted
+                  Body fluid: manual chamber count (Fuchs-Rosenthal),
+                  cytospin differential
+                  CBC parameters: predicate automated analyser with
+                  established traceability to reference materials
+
+-----------------------------------------------------------------
+2. SPECIMEN POPULATION
+-----------------------------------------------------------------
+Total specimens                        2,140 (differential)
+                                         220 (reticulocyte)
+                                         410 (body fluid)
+
+Differential specimen composition
+  Normal differential                  1,102   (51.5%)
+  Neutrophilia                           268   (12.5%)
+  Neutropenia                            141    (6.6%)
+  Lymphocytosis                          177    (8.3%)
+  Eosinophilia                            94    (4.4%)
+  Monocytosis                             82    (3.8%)
+  Blasts present                          71    (3.3%)
+  Immature granulocytes present          128    (6.0%)
+  Nucleated red cells present             77    (3.6%)
+  Platelet clumps                         64    (3.0%)
+  (categories not mutually exclusive)
+
+Age range 0 to 97 years; 118 specimens from patients under 16.
+Sex: 51.2% female, 48.8% male.
+
+-----------------------------------------------------------------
+3. DIFFERENTIAL - METHOD COMPARISON
+-----------------------------------------------------------------
+Passing-Bablok regression against the ICSH manual differential, percentages.
+
+  Analyte   n     Slope   95% CI          Intercept  95% CI         r
+  --------  ----  ------  --------------  ---------  -------------  -----
+  NEUT%     2140  0.994   0.988 - 1.001   +0.31      -0.08 - +0.70  0.978
+  LYMPH%    2140  1.008   1.000 - 1.016   -0.24      -0.56 - +0.09  0.981
+  MONO%     2140  0.971   0.951 - 0.992   +0.44      +0.22 - +0.66  0.902
+  EOS%      2140  1.012   0.995 - 1.030   -0.02      -0.09 - +0.05  0.964
+  BASO%     2140  0.918   0.871 - 0.968   +0.09      +0.04 - +0.14  0.741
+
+The basophil correlation is the weakest, which is expected and is common to
+every automated platform. Basophils are present at low absolute numbers and the
+manual reference method itself has poor precision at those counts. The
+practical consequence is that a basophil percentage from any automated
+haematology analyser, including this one, should not be relied upon in
+isolation. This is stated in the Instructions for Use.
+
+Monocyte correlation is also lower than neutrophil and lymphocyte, again
+consistent with the platform class and with the known difficulty of the
+monocyte/large-lymphocyte boundary.
+
+-----------------------------------------------------------------
+4. FLAGGING PERFORMANCE
+-----------------------------------------------------------------
+Against the manual differential as reference, for the validated flag set.
+
+  Flag                   Sensitivity  Specificity  PPV    NPV
+  ---------------------  -----------  -----------  -----  -----
+  Blast/abnormal cells   93.0%        88.4%        21.6%  99.7%
+  Immature granulocytes  89.8%        91.2%        39.8%  99.3%
+  Atypical lymphocytes   81.4%        93.1%        28.2%  99.4%
+  Nucleated RBC          96.1%        97.8%        61.9%  99.9%
+  Platelet clumps        84.4%        98.1%        59.3%  99.5%
+
+  Overall flag rate in the study population: 14.2%
+  Overall flag rate observed in routine use across the installed base
+  (VeriConnect telemetry, 2025): median 5.8%, interquartile range 3.5% to 9.1%
+
+The difference between the study flag rate and the routine flag rate is a
+consequence of the study population being deliberately enriched for abnormality.
+Laboratories should expect a flag rate in the routine range above, varying
+principally with case mix.
+
+The low positive predictive values are inherent to screening for rare events
+and are not a defect. A blast flag PPV of 21.6% means roughly four films
+reviewed for each true finding. The negative predictive value of 99.7% is the
+number that matters clinically.
+
+-----------------------------------------------------------------
+5. RETICULOCYTE
+-----------------------------------------------------------------
+Method comparison against the ICSH manual reference method, n = 220.
+
+  Parameter  Slope   95% CI          Intercept  r      Range covered
+  ---------  ------  --------------  ---------  -----  ----------------
+  RET%       1.021   1.004 - 1.039   -0.04      0.981  0.2 - 18.4%
+  RET#       1.014   0.996 - 1.033   -0.001     0.979  0.011 - 0.740
+                                                        x10^12/L
+  IRF        0.988   0.951 - 1.026   +0.008     0.931  0.02 - 0.61
+
+Precision, within-run CV, n = 31 replicates:
+  RET% at 0.8%     CV 8.4%
+  RET% at 2.1%     CV 5.2%
+  RET% at 6.7%     CV 3.1%
+  RET% at 14.2%    CV 2.4%
+
+The CV at low reticulocyte percentages is the limiting performance
+characteristic. At 0.8% the manual reference method's own CV is approximately
+20%, so the automated method is substantially more precise than the reference
+it is compared against - a well-recognised difficulty in evaluating
+reticulocyte methods.
+
+Subgroup: post-haematopoietic stem cell transplant specimens (n = 47).
+Slope 1.033, r 0.974. No systematic difference from the main population. This
+subgroup was analysed separately at the request of two study sites because
+engraftment monitoring is a principal use of the measurement.
+
+-----------------------------------------------------------------
+6. BODY FLUID MODE
+-----------------------------------------------------------------
+Against manual chamber count and cytospin differential, n = 410.
+
+  Fluid type              n     WBC-BF slope  r      Notes
+  ----------------------  ---   ------------  -----  ---------------------
+  Cerebrospinal fluid     186   1.008         0.972  See low-count note
+  Pleural                  94   0.994         0.988
+  Peritoneal/ascitic       81   1.002         0.991
+  Synovial                 49   0.978         0.964  Viscosity effects
+
+CSF low-count performance, which is the clinically critical region:
+
+  True count range   n    Sensitivity for   Mean bias
+  (manual, /uL)           count >5 /uL
+  -----------------  ---  ----------------  ----------
+  0 - 5               94  n/a               +0.4 /uL
+  6 - 20              41  95.1%             -0.9 /uL
+  21 - 100            31  100%              -2.1 /uL
+  >100                20  100%              -1.4%
+
+Two specimens in the 6-20 /uL band were reported by the instrument as below 5
+/uL. Both were reviewed: one had a delay to analysis of 3 hours 40 minutes
+(recommended maximum 1 hour), the other showed evidence of cellular
+degeneration on the cytospin. Neither is attributable to the instrument, but
+both are recorded because they illustrate the dominant preanalytical risk in
+body fluid counting.
+
+MN/PMN differentiation was assessed against cytospin (n = 268 specimens with
+adequate cellularity): MN% slope 0.981, r 0.943.
+
+The body fluid mode is not validated for fluids containing visible particulate
+matter, lavage specimens, or fluids with haematocrit above 5 per cent. These
+exclusions are stated in the Instructions for Use.
+
+-----------------------------------------------------------------
+7. LIMITATIONS
+-----------------------------------------------------------------
+Stated plainly because evaluators ask and because omitting them invites the
+assumption that there are more.
+
+  1. The study population, while large, contained 71 specimens with blasts.
+     Flag performance for blasts rests on that number. It is adequate for the
+     claim made but it is not a large number.
+
+  2. Paediatric representation (118 specimens under 16, of which 21 under 1
+     year) is limited. Neonatal specimens in particular are under-represented
+     relative to their analytical difficulty.
+
+  3. Body fluid specimens came predominantly from two of the five sites,
+     reflecting where those specimens are analysed.
+
+  4. The reticulocyte data was generated substantially on RGT-RT formulation
+     revision A. The supplementary 2025 dataset (n = 96) on revision B showed
+     no significant difference (slope ratio 1.004, p = 0.61), but the primary
+     dataset predates the reformulation.
+
+  5. Firmware during the study period was 4.0.0 to 4.1.2. The extended
+     flagging algorithms introduced in 4.3.0 are NOT covered by this study and
+     are labelled research use only for that reason.
+
+  6. Method comparison against a manual reference method inherits the manual
+     method's imprecision. For low-frequency cell types and low reticulocyte
+     counts this dominates the apparent disagreement.
+
+-----------------------------------------------------------------
+8. REFERENCES TO FULL REPORTS
+-----------------------------------------------------------------
+  CPR-VS400P-001   Differential method comparison, final report, 2024-11-18
+  CPR-VS400P-002   Reticulocyte method comparison, final report, 2024-12-04
+  CPR-VS400P-003   Body fluid method comparison, final report, 2025-01-22
+  CPR-VS400P-004   Reticulocyte supplementary study, revision B stain,
+                   2025-07-30
+  CPR-VS400-001    VeriScan 400 differential method comparison, 2024-10-30
+
+Full reports available to competent authorities, notified bodies and, under
+NDA, to customers evaluating the product.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

@@ -1,0 +1,267 @@
+=================================================================
+VERIDIA BIOSYSTEMS - POST-INCIDENT REVIEW
+=================================================================
+Report Number:   VBI-0094
+Title:           VeriConnect SAML single sign-on outage, 11 March 2025
+Classification:  Service incident - post-incident review
+Severity:        SEV-2 (major service degradation, no data loss)
+Status:          CLOSED
+Incident window: 2025-03-11 07:12 UTC to 2025-03-11 11:06 UTC (3h 54m)
+Opened:          2025-03-11
+Closed:          2025-04-15
+Incident lead:   Yusuf Demir, Cloud Operations
+Review author:   Tom Reeves, Product Manager VeriConnect
+Contributors:    Ruth Amankwah, Data Protection Officer
+                 James Okafor, VP Customer Support
+                 Aisha Rahman, Support Engineering (L2)
+Approved:        Dr Elena Marchetti, Chief Scientific Officer, 2025-04-15
+Related:         VBB-0044, SOP-VBS-004 rev 5, tickets VBST-4001, VBST-4003,
+                 VBST-4007, VBST-4011; field visit FSV-2025-0312
+
+-----------------------------------------------------------------
+1. SUMMARY
+-----------------------------------------------------------------
+Between 07:12 and 11:06 UTC on Tuesday 11 March 2025, users at 17 VeriConnect
+tenants configured for SAML single sign-on were unable to authenticate.
+Approximately 1,340 named users were affected. The failure was fail-closed:
+VeriConnect refused assertions it could not verify.
+
+The trigger was a scheduled rotation of the SAML signing certificate at the
+identity provider. VeriConnect held identity provider metadata cached from
+tenant onboarding and never refreshed it, so it continued to trust only the
+previous signing certificate.
+
+Analyser operation, HL7 result transmission to laboratory LIS systems, and
+data integrity were unaffected. This was an availability incident, not a
+security breach. No unauthorised access occurred and no data was lost or
+exposed.
+
+-----------------------------------------------------------------
+2. TIMELINE (ALL TIMES UTC)
+-----------------------------------------------------------------
+2025-03-04  Identity provider publishes notice of scheduled certificate
+            rotation for 11 March. The notice is published to the IdP's own
+            change channel. Veridia is not subscribed to it.
+
+2025-03-11
+  07:12  Identity provider begins signing assertions with the new
+         certificate. First failed authentication recorded.
+  07:19  Automated alerting does not fire. The SSO failure rate was not a
+         monitored signal at this time.
+  07:26  VBST-4001 raised by Royal Free London NHS Foundation Trust
+         (ACC-1103), P1. "Nobody can log into VeriConnect."
+  07:31  VBST-4003 raised by Guy's and St Thomas' NHS Foundation Trust
+         (ACC-1270), P1.
+  07:38  L1 support escalates to L2. Aisha Rahman picks up.
+  07:44  Third and fourth tickets arrive. L2 recognises a pattern across
+         tenants and escalates to Cloud Operations.
+  07:52  Yusuf Demir joins. Incident declared SEV-2. Incident channel opened.
+  08:05  Initial hypothesis: VeriConnect authentication service fault.
+         Service health is checked and found nominal. Non-SSO tenants confirm
+         they can log in.
+  08:21  Hypothesis revised to an identity provider problem. Error
+         SSO_ASSERTION_INVALID (VC-4412) traced to signature verification
+         failure rather than to assertion content.
+  08:40  Team retrieves the current IdP metadata and compares the certificate
+         fingerprint against the cached copy. They differ. Root cause
+         identified.
+  08:47  Status page updated. First customer communication issued.
+  08:55  Decision taken to refresh metadata per tenant manually rather than to
+         ship a code change. Manual refresh is a supported operation; a code
+         change would require a deployment under incident conditions.
+  09:10  Manual refresh begins. Each tenant requires the metadata to be
+         fetched, validated and applied, then a login tested. Approximately 8
+         minutes per tenant with the tooling available at the time.
+  09:38  First three tenants restored. Customers notified individually.
+  10:24  Twelve tenants restored.
+  11:06  All 17 tenants restored. Incident declared resolved.
+  11:20  Status page updated. Customer communication issued.
+  14:00  Incident review scheduled.
+
+2025-03-12  Work begins on automatic metadata refresh.
+2025-03-14  Automatic refresh deployed to production. Refresh interval 6
+            hours. Validation accepts both current and next-signing
+            certificates where the IdP publishes them.
+2025-03-18  Monitoring added: metadata staleness alert at 24 hours; SSO
+            authentication failure rate alert at 5 per cent over 5 minutes.
+2025-03-19  Break-glass account provisioning made a mandatory step in tenant
+            onboarding.
+2025-03-21  VBB-0044 issued to all customers.
+2025-03-24  SOP-VBS-004 revision 4 issued as an emergency revision.
+2025-04-15  Post-incident review closed.
+2025-07-22  FSV-2025-0312: SSO re-integration at Guy's and St Thomas'
+            following a separate planned IdP migration, using the new
+            auto-refresh path. No issues.
+2025-09-15  SOP-VBS-004 revision 5 issued, superseding the emergency revision.
+
+-----------------------------------------------------------------
+3. ROOT CAUSE
+-----------------------------------------------------------------
+3.1  Immediate cause: VeriConnect could not verify assertion signatures
+     because it held a stale copy of the identity provider's signing
+     certificate.
+
+3.2  Underlying cause: the SAML integration was implemented with metadata
+     fetched once at tenant onboarding and persisted indefinitely. There was
+     no refresh mechanism, no staleness monitoring, and no support for
+     multiple valid signing certificates during a rotation window.
+
+3.3  This is not an exotic omission. SAML metadata refresh is a standard part
+     of a mature implementation and its absence should have been caught in
+     design review. The integration was built in 2022 for a single pilot
+     customer whose IdP certificate had a five-year validity, and the question
+     of rotation was deferred and never revisited when the feature was
+     generalised.
+
+3.4  Contributing cause: no alerting on authentication failure rate. The
+     first Veridia knew of the outage was a customer ticket 14 minutes after
+     it began. With alerting, the team would have been engaged before the
+     first customer noticed.
+
+3.5  Contributing cause: only 4 of the 17 affected tenants had break-glass
+     local administrator accounts. Those four could have restored
+     administrative access themselves within minutes; in fact only one did,
+     because the credentials for the other three were not readily accessible
+     out of hours. Even where the control existed it had not been tested.
+
+3.6  Contributing cause: manual per-tenant remediation was slow because there
+     was no bulk operation. Restoring 17 tenants took 116 minutes of the
+     235-minute incident. A bulk refresh tool would have compressed this to
+     minutes.
+
+-----------------------------------------------------------------
+4. WHAT WENT WELL
+-----------------------------------------------------------------
+4.1  Fail-closed behaviour was correct. VeriConnect refused assertions it
+     could not verify rather than accepting them. An availability incident is
+     the right outcome here; the alternative would have been far worse.
+
+4.2  Diagnosis took 88 minutes from the first ticket to root cause. Given
+     that the symptom pointed at Veridia's own service and the cause was
+     external, this is reasonable.
+
+4.3  The clinical result path was unaffected. Instruments continued to
+     analyse samples and to transmit results to laboratory LIS systems
+     throughout. This is a direct consequence of the architectural decision
+     to keep the instrument-to-LIS path independent of VeriConnect. Sites on
+     integration topology A (see spec-vericonnect-integration-v6.txt) had no
+     clinical impact at all.
+
+4.4  Support handled 9 tickets and a substantially larger volume of phone
+     traffic without losing track of any of it.
+
+4.5  The decision not to deploy a code change under incident conditions was
+     correct and was made deliberately rather than by default.
+
+-----------------------------------------------------------------
+5. WHAT WENT BADLY
+-----------------------------------------------------------------
+5.1  Veridia learned of the outage from a customer.
+
+5.2  Customers learned of the outage from their own users. The first Veridia
+     communication went out at 08:47, 95 minutes after the first failure and
+     81 minutes after the first ticket. That is too late.
+
+5.3  The status page was not updated until 08:47 either. Several customers
+     reported checking it early in the incident and being reassured by an
+     all-green status that was wrong.
+
+5.4  Break-glass accounts existed in name at four tenants and worked at one.
+     A control that is not tested is not a control.
+
+5.5  Laboratories lost access to the QC review and authorisation workflow for
+     nearly four hours during a Tuesday morning. Several reverted to
+     instrument-local review and paper QC records. Two sites reported a
+     backlog that took the rest of the day to clear. The absence of clinical
+     harm should not obscure the operational cost.
+
+-----------------------------------------------------------------
+6. CUSTOMER IMPACT DETAIL
+-----------------------------------------------------------------
+  Tenants affected                    17
+  Named users affected (estimate)     1,340
+  Failed authentication attempts      6,208
+  Tickets raised during the window    9
+  Tickets raised after the window     4 (assurance and evidence requests)
+  Longest single tenant outage        3h 54m
+  Shortest single tenant outage       2h 26m
+  Tenants with working break-glass    1
+  Instruments affected                0
+  Results lost                        0
+  Results delayed to LIS              0
+  Data exposed                        0
+
+Two customers (ACC-1103 and ACC-1270) requested formal incident documentation
+for their own governance. Both were supplied with VBB-0044 and, under NDA, a
+redacted copy of this review.
+
+One customer (ACC-1146) asked whether the audit trail gap during the window
+would be a finding at their next ISO 15189 assessment. The answer given: the
+gap is an absence of user activity because users could not log in, not an
+absence of logging; failed authentications are themselves logged with reason
+code VC-4412; and VBB-0044 exists precisely so that the gap can be explained
+in an evidence pack. This is now standard guidance.
+
+-----------------------------------------------------------------
+7. ACTIONS
+-----------------------------------------------------------------
+  ACT-2025-031  Automatic IdP metadata refresh, default 6 hours, with support
+                for multiple valid signing certificates.
+                Owner: Y. Demir. Complete 2025-03-14.
+
+  ACT-2025-032  Alert on SSO authentication failure rate above 5 per cent
+                over 5 minutes, paging Cloud Operations.
+                Owner: Y. Demir. Complete 2025-03-18.
+
+  ACT-2025-033  Alert on metadata staleness above 24 hours.
+                Owner: Y. Demir. Complete 2025-03-18.
+
+  ACT-2025-034  Break-glass account creation mandatory at tenant onboarding;
+                6-monthly test required and tracked.
+                Owner: T. Reeves. Complete 2025-03-19; tracking live 2025-05.
+
+  ACT-2025-035  Bulk tenant metadata refresh tool for operations.
+                Owner: Y. Demir. Complete 2025-04-02.
+
+  ACT-2025-036  Status page automation: SEV-2 or above updates the status
+                page within 10 minutes of declaration, from the incident
+                channel, without requiring a separate manual step.
+                Owner: Y. Demir. Complete 2025-04-09.
+
+  ACT-2025-037  Customer communication template and a 30-minute target for
+                first communication on any SEV-2 or above.
+                Owner: J. Okafor. Complete 2025-04-11.
+
+  ACT-2025-038  Metadata refresh interval configurable per tenant.
+                Owner: T. Reeves. Delivered VeriConnect 6.2, 2026-04-21.
+
+  ACT-2025-039  Review every other external integration for the same class of
+                defect: cached credential or certificate material with no
+                refresh path. Findings: two further instances (the LIS TLS
+                trust store and the VeriConnect-to-Bedrock service
+                credential), both remediated by 2025-06.
+                Owner: Y. Demir. Complete 2025-06-18.
+
+-----------------------------------------------------------------
+8. LESSONS
+-----------------------------------------------------------------
+8.1  A dependency you do not refresh is a dependency you have decided to let
+     expire at a time of someone else's choosing.
+
+8.2  Fail-closed is correct and expensive. The cost is borne by the customer,
+     which obliges us to make the failure short and to tell them about it
+     quickly. We did neither well enough.
+
+8.3  Untested controls are decorative. Break-glass accounts existed at four
+     tenants and functioned at one, and the difference was entirely whether
+     anyone had ever tried.
+
+8.4  The architectural separation between the clinical result path and the
+     cloud platform is the single most valuable design decision in this
+     product. It converted what could have been a patient safety incident
+     into an operational inconvenience. It should be defended in future
+     roadmap discussions, including when it is inconvenient.
+
+=================================================================
+END OF REPORT VBI-0094
+=================================================================

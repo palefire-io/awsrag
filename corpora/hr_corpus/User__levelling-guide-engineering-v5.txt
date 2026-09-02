@@ -1,0 +1,183 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Levelling Guide - Engineering, Firmware, Software and Field Service
+=================================================================
+Document:      HR-GDE-011
+Version:       5
+Effective:     2026-01-01
+Owner:         Denise Kaur, Reward and Benefits Manager
+Contributors:  Gavin Tuck (Firmware Lead), Priya Anand (Head of Field Service
+               Engineering), Yusuf Demir (Cloud Operations)
+Review due:    2028-01-01
+Companion to:  User__career-framework-overview-v5.txt
+
+How to read this. Each level describes what someone at that level typically
+does. It is not a checklist and you do not need to satisfy every line. The
+question a calibration panel asks is "does the overall shape of this person's
+work look like this level", not "have they ticked eleven of fourteen boxes".
+
+-----------------------------------------------------------------
+L1 - ASSOCIATE ENGINEER
+-----------------------------------------------------------------
+Scope        Tasks that have been defined for you, with a known approach.
+Autonomy     Checks in frequently. Work is reviewed before it lands.
+Impact       Your team's output is slightly higher because you are on it.
+
+Typical      Fixes a defect in a component someone else owns. Writes a test.
+             Runs a defined diagnostic on a returned instrument. Shadows
+             customer visits.
+Judgement    Knows when to ask. This is the single most important L1 skill and
+             the one that most distinguishes a strong L1 from a struggling one.
+Communication Can describe what they did and whether it worked.
+
+Field service specifics: works under supervision. Does not attend a customer
+site unaccompanied. Building the diagnostic vocabulary - what E-104 means, what
+a background count is, what a Field Safety Notice is.
+
+Moving to L2: you are consistently finishing defined work without needing the
+approach handed to you, and people have stopped checking everything.
+
+-----------------------------------------------------------------
+L2 - ENGINEER
+-----------------------------------------------------------------
+Scope        Owns defined components or defined customer situations end to
+             end. Problems arrive without a solution attached.
+Autonomy     Works independently within an area. Raises risks rather than
+             discovering them at the end.
+Impact       A part of the system works because you look after it.
+
+Typical      Owns a module through design, implementation, test and release.
+             Diagnoses an unfamiliar instrument fault to root cause. Handles a
+             P2 support escalation without help. Writes the runbook nobody had
+             written.
+Judgement    Knows what "done" means, including the documentation and the
+             regulated records. Recognises when a fix addresses a symptom.
+Communication Can explain a technical problem to a customer or to a
+             non-engineer without either patronising them or losing them.
+Quality      Understands why the quality system exists and works with it
+             rather than around it. Knows what a controlled document is.
+
+Field service specifics: attends sites unaccompanied, competency signed off.
+Manages their own diary and parts. Writes visit reports that another engineer
+could act on twelve months later.
+
+Moving to L3: your judgement in your area has become something other people
+rely on, and you are being asked about things outside what you were assigned.
+
+-----------------------------------------------------------------
+L3 - SENIOR ENGINEER
+-----------------------------------------------------------------
+Scope        Owns an area - a subsystem, a product surface, a customer region.
+             Ambiguous problems. You decide what the problem is, not just how
+             to solve it.
+Autonomy     Sets the approach. Consulted before decisions in your area are
+             made elsewhere.
+Impact       An area works, and would visibly degrade if you stopped.
+
+Typical      Owns the fluidics firmware, or the HL7 integration surface, or
+             field service for the north of England. Leads the technical
+             response to a customer problem that spans teams. Reviews others'
+             designs and improves them.
+Judgement    Distinguishes the problem worth solving from the problem in front
+             of you. Knows when the right answer is "do not build this".
+             Understands the regulatory consequence of a technical decision -
+             for example that a change to how a result timestamp is derived is
+             not merely an optimisation.
+Communication Writes things other people read by choice. Can hold a difficult
+             conversation with a customer under pressure without escalating it.
+Others       Reviews, mentors, and raises the standard of people around them.
+             Not necessarily managing anyone.
+
+Field service specifics: the engineer other engineers ring. Handles the
+politically difficult sites. Their visit reports change company decisions -
+the observation at FSV-2025-0155 that reagent fault severity tracked days on
+board redirected an entire investigation.
+
+Moving to L4: your work has started to shape how other teams work, and the
+problems you are given have no obvious owner.
+
+-----------------------------------------------------------------
+L4 - STAFF ENGINEER (IC TRACK) / HEAD OF (MANAGEMENT TRACK)
+-----------------------------------------------------------------
+Both tracks sit on the same band. Neither is senior to the other.
+
+STAFF ENGINEER
+Scope        A system, or a technical problem that crosses teams and has no
+             owner. Often the problem nobody has managed to define.
+Autonomy     Chooses what to work on, within a direction agreed with a
+             Director.
+Impact       Multiple teams work differently because of decisions you made.
+
+Typical      Owns the firmware platform across two product lines. Leads the
+             technical investigation into a field failure that could become a
+             safety notice. Sets the integration architecture. Says the
+             uncomfortable thing in the design review that saves six months.
+Judgement    Thinks in years and in consequences. Understands the difference
+             between a decision that is reversible and one that is not, and
+             spends effort accordingly. Can hold "we should ship this" and "we
+             are not ready" simultaneously and resolve it honestly.
+Influence    Changes what people do without instructing them. This is the
+             defining L4 IC skill and it cannot be faked.
+
+HEAD OF
+Scope        A department: its people, its work, its budget, its plan.
+Autonomy     Accountable for outcomes, not activities.
+Impact       A function performs, and its people grow.
+
+Typical      Runs field service engineering across two countries. Owns support
+             engineering including the escalation process and its quality.
+             Hires, develops, and where necessary exits people.
+Judgement    Allocates scarce people to competing demands and defends the
+             decision. Distinguishes a struggling person from a person in the
+             wrong role from a person being failed by their environment.
+People       Gives feedback that lands. Runs honest probation and performance
+             conversations. Their people say they have grown.
+
+Moving to L5: you are accountable for a function rather than a department, and
+you are shaping what the company does rather than how it does it.
+
+-----------------------------------------------------------------
+L5 - DIRECTOR / VP
+-----------------------------------------------------------------
+Scope        A function. Its strategy, its budget, its structure, its
+             leadership bench.
+Autonomy     Sets direction within the company plan. Held to outcomes over
+             quarters and years.
+Impact       The company can do something it otherwise could not.
+
+Typical      Owns customer support globally. Owns engineering. Accountable for
+             a function's contribution to the company plan, and for its cost.
+Judgement    Makes decisions with incomplete information and owns them
+             publicly when they turn out wrong. Balances what a customer needs
+             now against what the product needs to become.
+Leadership   Builds leaders. Their function keeps working when they are on
+             holiday, and that is deliberate.
+
+-----------------------------------------------------------------
+THINGS THAT DO NOT MOVE YOU UP A LEVEL
+-----------------------------------------------------------------
+Stated plainly because these come up in calibration panels every cycle.
+
+  - Time served. Four years at L2 is four years at L2.
+  - Being busy. Volume is not scope.
+  - Being the only person who understands something, where that is a situation
+    you have maintained rather than resolved. Hoarding is not seniority.
+  - Working long hours. If anything this is a signal we look at
+    uncomfortably, because it often indicates a scoping problem.
+  - Being liked, or being difficult. Neither is evidence either way.
+  - A competing offer. Pay may be addressed; a level is not.
+
+-----------------------------------------------------------------
+A NOTE FOR FIELD SERVICE
+-----------------------------------------------------------------
+Field service progression was, before version 4, badly served by a guide
+written around software engineering. The 2024 engagement survey said so
+bluntly. This version was written with Priya Anand and three field engineers
+and the level descriptors above include field-specific text at every level.
+
+If it still does not describe your job, tell us. Denise Kaur and Priya Anand
+would both rather hear it than not.
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

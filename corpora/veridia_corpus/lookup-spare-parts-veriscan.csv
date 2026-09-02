@@ -1,0 +1,23 @@
+part_number,description,fits_model,list_price_gbp,lead_time_days,field_replaceable,notes
+VS4-SP-021,Sample probe seal kit (3 seals + O-rings),VeriScan 400 / 400 Pro,84.00,3,Yes,Recommended annual PM item
+VS4-MEC-011,Piercing needle assembly,VeriScan 400 / 400 Pro,212.50,5,Yes,
+VS4-MEC-033,Rotor home position sensor,VeriScan 400 / 400 Pro,146.00,7,Yes,
+VS4-MEC-047,Mixer motor assembly,VeriScan 400 / 400 Pro,498.00,14,No,FSE fitting required
+VS4-OPT-104,Halogen lamp assembly,VeriScan 400,268.00,7,Yes,Not used on 400 Pro (laser optics)
+VS4-OPT-118,Laser diode module,VeriScan 400 Pro,1340.00,21,No,FSE fitting and optical recalibration required
+VS4-OPT-220,Flow cell assembly (whole blood),VeriScan 400 / 400 Pro,725.00,10,No,
+VS4-OPT-224,Retic flow cell assembly,VeriScan 400 Pro,880.00,14,No,
+VS4-FLU-060,Diluent pump head,VeriScan 400 / 400 Pro,315.00,7,Yes,
+VS4-FLU-072,Waste pump,VeriScan 400 / 400 Pro,289.00,7,Yes,
+VS4-ELE-090,RTC battery (CR2032 holder assembly),VeriScan 400 / 400 Pro,18.50,2,Yes,Replace if E-507 recurs
+VS4-ELE-115,Fluidics control board,VeriScan 400 / 400 Pro,1120.00,21,No,
+VS4-DIS-140,7-inch touchscreen display,VeriScan 400 / 400 Pro,392.00,10,Yes,
+VS4-DIS-142,Display ribbon cable,VeriScan 400 / 400 Pro,26.00,3,Yes,Common cause of intermittent flicker
+VS4-KIT-PM1,"Annual PM kit (seals, tubing, filters)",VeriScan 400 / 400 Pro,410.00,5,Yes,See SOP-VBS-011
+SP1-MEC-140,Tube feed mechanism (r1),VeriPrep SP-1 r1,640.00,14,No,Superseded by SP1-MEC-141 on r2 units
+SP1-MEC-141,Tube feed mechanism (r2),VeriPrep SP-1 r2,660.00,10,No,Retrofit to r1 requires SP1-KIT-R2UP
+SP1-KIT-R2UP,SP-1r2 feed mechanism retrofit kit,VeriPrep SP-1 r1,1150.00,28,No,"Includes SP1-MEC-141, harness and firmware 2.3.0 licence"
+SP1-ADP-05,Short-cap 5 mL tube adapter (set of 10),VeriPrep SP-1 r1,72.00,3,Yes,Interim mitigation per VBB-0038
+SP1-CBL-232,RS-232 interface cable 3 m,VeriPrep SP-1,34.00,2,Yes,
+SP1-ELE-018,Lid interlock switch,VeriPrep SP-1,58.00,5,Yes,
+SP1-MEC-160,Gripper jaw set,VeriPrep SP-1,188.00,7,Yes,Inspect at annual PM

@@ -1,0 +1,106 @@
+=====================================================
+VERIDIA BIOSYSTEMS - SECURITY ADVISORY
+=====================================================
+Reference: VBB-0044
+Date Issued: 2025-03-21
+Type: Service Availability Advisory
+Affected Product: VeriConnect (all tiers), VeriGuard add-on
+Affected Region: eu-west-1 (Ireland)
+Incident window: 2025-03-11 07:12 UTC to 2025-03-11 11:06 UTC
+Related documents: report-VBI-0094 (post-incident review)
+
+SUBJECT: SAML single sign-on outage of 11 March 2025 - customer advisory
+
+-----------------------------------------------------
+WHAT HAPPENED
+-----------------------------------------------------
+Between 07:12 and 11:06 UTC on 11 March 2025, users at customer tenants
+configured for SAML single sign-on against NHS Identity (and, for a subset of
+tenants, against customer-operated Microsoft Entra ID) were unable to
+authenticate to VeriConnect. Affected users received the error
+"SSO_ASSERTION_INVALID (VC-4412)".
+
+The immediate trigger was a scheduled rotation of the identity provider's SAML
+signing certificate. VeriConnect held a cached copy of the identity provider
+metadata that had been fetched at the time of tenant onboarding and was not
+being refreshed. When the identity provider began signing assertions with the
+new certificate, VeriConnect rejected the signature as untrusted.
+
+-----------------------------------------------------
+WHAT WAS AND WAS NOT AFFECTED
+-----------------------------------------------------
+Affected:
+  - Interactive login to the VeriConnect web application for SSO tenants.
+  - The VeriConnect mobile fleet dashboard for the same users.
+
+NOT affected:
+  - Analyser operation. VeriScan and VeriPrep instruments run independently of
+    VeriConnect and continued to process samples throughout.
+  - HL7 result transmission from instruments to laboratory LIS. This path does
+    not traverse VeriConnect authentication.
+  - Result data integrity. No data was lost, altered or exposed.
+  - Break-glass local accounts, where configured.
+  - Tenants using local password authentication rather than SSO.
+
+This was an availability incident. It was NOT a security breach. No
+unauthorised access occurred. The failure mode was fail-closed: VeriConnect
+refused to accept assertions it could not verify, which is the correct
+behaviour.
+
+-----------------------------------------------------
+IMPACT
+-----------------------------------------------------
+17 customer tenants were affected, covering an estimated 1,340 named users.
+Nine support tickets were raised during the incident window, the first at
+07:26 UTC.
+
+Laboratories reported the principal operational impact as loss of access to QC
+charting and to the authorisation queue, requiring temporary reversion to
+instrument-local result review and paper QC records.
+
+-----------------------------------------------------
+REMEDIATION COMPLETED
+-----------------------------------------------------
+  1. (11 March, 11:06 UTC) Identity provider metadata refreshed manually for
+     all affected tenants; service restored.
+  2. (14 March) Automatic metadata refresh implemented, running every 6 hours
+     with signature validation against both current and next-signing
+     certificates where the identity provider publishes them.
+  3. (18 March) Monitoring added for metadata staleness (alert at 24 hours) and
+     for SSO authentication failure rate (alert at 5 per cent over 5 minutes).
+  4. (19 March) Break-glass account provisioning made part of standard tenant
+     onboarding rather than an optional step.
+  5. (21 March) This advisory issued.
+
+-----------------------------------------------------
+RECOMMENDED CUSTOMER ACTIONS
+-----------------------------------------------------
+  1. Confirm that at least two break-glass local administrator accounts exist
+     for your tenant, that their credentials are held in your organisation's
+     password vault, and that they are excluded from SSO enforcement.
+     VeriConnect: Administration > Users > filter Authentication = Local.
+     This requires the users.manage permission.
+
+  2. Where your organisation controls the identity provider, notify Veridia of
+     planned certificate rotations at least 5 working days in advance via
+     support@veridiabio.com. This is no longer strictly necessary following
+     remediation item 2, but remains good practice for major IdP migrations.
+
+  3. VeriGuard customers: the audit trail for the incident window is complete.
+     Failed authentication attempts are recorded with reason code VC-4412 and
+     are available under Audit > Authentication. Note that because users could
+     not log in, there is an expected gap in user-activity audit events during
+     the window; this gap is explained by this advisory and should be
+     referenced in any accreditation evidence pack.
+
+  4. Laboratories holding ISO 15189 accreditation may wish to file this
+     advisory with their business continuity records.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Tom Reeves, Product Manager VeriConnect - tom.reeves@veridiabio.com
+Yusuf Demir, Cloud Operations - yusuf.demir@veridiabio.com
+Security contact: security@veridiabio.com
+Data protection queries: Ruth Amankwah, DPO - dpo@veridiabio.com
+=====================================================

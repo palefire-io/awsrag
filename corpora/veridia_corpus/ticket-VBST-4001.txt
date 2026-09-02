@@ -1,0 +1,142 @@
+Ticket ID: VBST-4001
+Status: Resolved
+Priority: P1-Critical
+Created: 2025-03-11 07:26 UTC
+Product: VeriConnect
+Customer: Royal Free London NHS Foundation Trust (ACC-1103)
+Reported by: Dr Nadia Haddad, Consultant Haematologist
+             nadia.haddad@nhs.net | 020 7794 0500 ext 33412
+Assigned to: Owen Trask (L1) -> Aisha Rahman (L2) -> Yusuf Demir (Cloud Ops)
+VeriConnect tenant: royalfree.vericonnect.veridiabio.com
+Tier: Enterprise + VeriGuard
+
+--- Thread ---
+
+[2025-03-11 07:26] Dr Nadia Haddad (Consultant Haematologist):
+Nobody can log into VeriConnect. Every user gets "SSO_ASSERTION_INVALID
+(VC-4412)" after being bounced back from NHS Identity. Started around 07:15.
+
+We have samples on the analysers and no way to review or authorise anything in
+VeriConnect. P1.
+
+[2025-03-11 07:34] Owen Trask (Support Engineer L1):
+Dr Haddad - acknowledged, treating as P1.
+
+First, the important operational point: your analysers are unaffected. They
+continue to run and to transmit results to your LIS. This is a VeriConnect
+login problem, not an instrument or a result transmission problem. You can
+review and authorise at the instrument in the interim.
+
+Escalating now.
+
+[2025-03-11 07:41] Owen Trask (Support Engineer L1):
+Internal note: second and third tickets in from other trusts with the same
+error. Not site-specific. Escalating to L2 immediately.
+
+[2025-03-11 07:58] Aisha Rahman (Support Engineering L2):
+Dr Haddad - we now have four sites reporting this, all SSO tenants. Cloud
+Operations are engaged and an incident has been declared. I'll update you at
+least every 30 minutes whether or not there is news.
+
+Confirmed so far: service health nominal, non-SSO tenants can log in normally.
+So this is specific to the SSO path.
+
+[2025-03-11 08:22] Dr Nadia Haddad (Consultant Haematologist):
+Understood. We have reverted to instrument-local review and paper QC records.
+It's workable for a morning. It would not be workable for a day.
+
+Is there any way in for an administrator?
+
+[2025-03-11 08:35] Aisha Rahman (Support Engineering L2):
+That depends on whether your tenant has local break-glass administrator
+accounts configured and excluded from SSO enforcement. Checking your tenant
+now.
+
+[2025-03-11 08:44] Aisha Rahman (Support Engineering L2):
+Your tenant has one local account, created 2023, belonging to a member of
+staff who I understand has left. It is not usable.
+
+I'm sorry - that's not the answer either of us wanted. This is going to be a
+recommendation coming out of this incident.
+
+[2025-03-11 08:51] Yusuf Demir (Cloud Operations):
+Root cause identified. Your identity provider rotated its SAML signing
+certificate this morning. VeriConnect was holding metadata cached from your
+tenant onboarding and had never refreshed it, so it is rejecting assertions
+signed with the new certificate as untrusted.
+
+The failure is fail-closed, which is the correct behaviour - we are refusing
+signatures we cannot verify rather than accepting them. But the underlying
+gap, that we never refresh the metadata, is ours.
+
+Fix is to refresh the metadata for each affected tenant manually. That is a
+supported operation and takes about eight minutes per tenant including a login
+test. There are 17 tenants. We are prioritising by size and by whether the
+site has any alternative access.
+
+[2025-03-11 09:12] Dr Nadia Haddad (Consultant Haematologist):
+Thank you for a clear answer.
+
+I want to record that we were not told our identity provider was rotating a
+certificate, and that we would not have known it mattered. I am not sure whose
+job that was, but it should not have depended on anyone noticing.
+
+[2025-03-11 09:38] Yusuf Demir (Cloud Operations):
+Royal Free metadata refreshed. Please try logging in.
+
+And you're right. It should not have depended on anyone noticing, which is
+exactly why the permanent fix is automatic refresh rather than a process for
+telling each other about certificate rotations.
+
+[2025-03-11 09:44] Dr Nadia Haddad (Consultant Haematologist):
+Logged in. Colleagues confirming access. Thank you.
+
+[2025-03-11 11:20] Aisha Rahman (Support Engineering L2):
+All 17 tenants restored as of 11:06 UTC. Incident closed.
+
+Dr Haddad, three things will follow:
+1. Automatic metadata refresh, being worked on now.
+2. A customer advisory with the full account.
+3. A recommendation about break-glass accounts, with help setting them up.
+
+I'll leave this ticket open until at least the first two are done.
+
+[2025-03-14 16:00] Yusuf Demir (Cloud Operations):
+Automatic metadata refresh deployed to production today. Refresh every 6
+hours, with validation against both current and next-signing certificates
+where the identity provider publishes them. Your tenant is covered.
+
+[2025-03-19 11:30] Tom Reeves (Product Manager, VeriConnect):
+Dr Haddad - I'd like to help you set up break-glass accounts properly. The
+recommendation is two, named to individuals, TOTP enrolled, credentials in
+your trust's password vault, tested every six months.
+
+Can we find 30 minutes this week? I'd rather do it with you than send
+instructions.
+
+[2025-03-20 14:00] Tom Reeves (Product Manager, VeriConnect):
+Session held. Two break-glass accounts created (named to Dr Haddad and to the
+laboratory manager), TOTP enrolled, both tested successfully, credentials
+lodged in the trust password vault. Six-monthly test scheduled and added to the
+site's own calendar.
+
+[2025-03-21 10:00] Aisha Rahman (Support Engineering L2):
+VBB-0044 issued today with the full account of the incident, the remediation
+and the recommended customer actions. Post-incident review is VBI-0094;
+a redacted copy is available under NDA if your governance committee wants it.
+
+Closing.
+
+[2025-03-21 11:15] Dr Nadia Haddad (Consultant Haematologist):
+Please send the redacted review, our committee will want it.
+
+Handled well after a bad start. The thing I would fix is that we found out
+before you did.
+
+--- Resolution ---
+Root cause: stale cached SAML identity provider metadata; IdP certificate
+rotation on 2025-03-11 invalidated all assertions. Fail-closed.
+Actions: manual metadata refresh (restored 09:38 for this tenant); automatic
+6-hourly refresh deployed 2025-03-14; break-glass accounts created and tested
+2025-03-20; VBB-0044 issued 2025-03-21.
+See also: VBI-0094, VBST-4003, VBST-4007, VBST-4011.

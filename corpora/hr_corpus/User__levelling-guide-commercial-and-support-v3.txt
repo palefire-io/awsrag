@@ -1,0 +1,129 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Levelling Guide - Commercial, Support and Corporate Functions
+=================================================================
+Document:      HR-GDE-012
+Version:       3
+Effective:     2026-01-01
+Owner:         Denise Kaur, Reward and Benefits Manager
+Contributors:  James Okafor (VP Customer Support), Michael Ashworth (Chief
+               Commercial Officer), Sarah Lindgren (Regulatory Affairs)
+Companion to:  User__career-framework-overview-v5.txt
+
+Covers sales, account management, customer support, marketing, regulatory
+affairs, quality, finance, legal and the People team. The engineering guide is
+separate.
+
+-----------------------------------------------------------------
+L1 - ASSOCIATE
+-----------------------------------------------------------------
+Scope        Defined tasks with a known approach and close support.
+Sales        Qualifies inbound enquiries. Supports a named territory. Builds
+             product knowledge.
+Support      First-line triage against documented runbooks. Knows when a
+             ticket is beyond them, which matters more than knowing the answer.
+Corporate    Prepares work for review. Learns the regulatory or financial
+             framework they will operate in.
+
+The most valuable L1 behaviour across all these functions is accurate
+handover: capturing what a customer actually said rather than what you assumed
+they meant.
+
+-----------------------------------------------------------------
+L2 - EXECUTIVE / ENGINEER / ANALYST
+-----------------------------------------------------------------
+Scope        Owns a territory, a queue, or a defined area of a function.
+Sales        Owns a territory or segment and a number. Runs a full cycle from
+             qualification to close with support on commercials.
+Support      Second-line diagnosis. Owns escalations to conclusion. Can hold a
+             P1 with a customer whose laboratory is down and keep them
+             informed rather than reassured.
+Corporate    Owns a recurring process end to end - a regulatory submission
+             section, a month-end close, a recruitment pipeline.
+
+Judgement    Knows what they do not know and escalates early. In support
+             specifically: knows the difference between "no fault found" and
+             "cannot reproduce", and records the difference.
+
+-----------------------------------------------------------------
+L3 - SENIOR / MANAGER
+-----------------------------------------------------------------
+Scope        Owns a region, a major account set, or a functional area.
+Sales        Owns a region or the largest accounts. Handles a tender end to
+             end. Manages a relationship through a product problem without
+             losing it - which is a distinct and undervalued skill.
+Support      Owns the escalation process and the quality of second line. The
+             person who spots that two unconnected tickets are the same
+             problem. Every significant field issue in our history was
+             identified by someone doing this well.
+Corporate    Owns a functional area and is the company's answer on it. When a
+             notified body, an auditor or a customer's regulatory lead asks a
+             hard question, you are who answers.
+
+Judgement    Says the unwelcome thing to a customer or an executive when it is
+             true. Distinguishes an unhappy customer from a customer with a
+             problem, which are different and need different responses.
+
+-----------------------------------------------------------------
+L4 - HEAD OF / PRINCIPAL
+-----------------------------------------------------------------
+Scope        A department, or a specialist domain that spans the company.
+Sales        Owns a country or a channel, and the plan for it.
+Support      Owns support as a function - process, tooling, quality, the
+             relationship with engineering and regulatory.
+Corporate    Owns a domain: regulatory strategy, reward, financial planning.
+             Sets what the company does, not only how it complies.
+
+Judgement    Makes decisions whose consequences land on other departments and
+             carries the cross-functional conversation themselves. Balances
+             the commercial and the regulatory without pretending the tension
+             does not exist.
+
+-----------------------------------------------------------------
+L5 - DIRECTOR / VP
+-----------------------------------------------------------------
+Scope        A function, its budget, its structure, its leadership.
+Impact       The company can do something it otherwise could not.
+Judgement    Owns decisions publicly, including the wrong ones. Represents
+             Veridia externally in a way that survives scrutiny.
+
+-----------------------------------------------------------------
+SUPPORT-SPECIFIC PROGRESSION NOTES
+-----------------------------------------------------------------
+Written with James Okafor because support progression is frequently
+misunderstood.
+
+Ticket volume is not a levelling criterion at any level, and a high-volume L2
+is not thereby an L3. What distinguishes support levels is the class of
+problem you can hold:
+
+  L1  Known problem, documented answer
+  L2  Unknown problem, known method
+  L3  Unknown problem, no method, and a customer under pressure
+  L4  Problems that are not yet visible as problems
+
+The last one is the hard one and it is what turns a support function from
+reactive to useful. The clustering review that now runs weekly in complaint
+handling exists because that kind of pattern recognition had previously
+depended on one person happening to notice.
+
+-----------------------------------------------------------------
+COMMERCIAL-SPECIFIC NOTES
+-----------------------------------------------------------------
+Hitting a number is necessary at L2 and L3 and is not sufficient for
+promotion. A territory hit through a single large deal that landed for reasons
+outside your control is not the same evidence as a territory built.
+
+Equally, missing a number in a year when a product problem took a quarter out
+of your pipeline is not evidence against you, and calibration panels are told
+this explicitly. In 2025 two commercial promotions were approved for people
+who missed their number, and the reasoning was recorded.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+denise.kaur@veridiabio.com | people@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

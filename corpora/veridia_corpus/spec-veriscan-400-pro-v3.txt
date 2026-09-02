@@ -1,0 +1,208 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PRODUCT SPECIFICATION SHEET
+=================================================================
+Product: VeriScan 400 Pro Benchtop Haematology Analyser
+Model: VS4-200P
+Document Ref: DS-VS400P-003
+Revision: v3
+Revision Date: 2025-05-22
+Supersedes: DS-VS400P-002 (2024-05-10)
+Classification: IVD Directive 98/79/EC, Annex III self-declared.
+                IVDR (EU) 2017/746 Class C conformity assessment in progress
+                with Notified Body 0086.
+
+-----------------------------------------------------------------
+INTENDED USE
+-----------------------------------------------------------------
+The VeriScan 400 Pro is an automated haematology analyser intended for the
+in-vitro quantitative determination of haematological parameters, including a
+five-part leucocyte differential and reticulocyte enumeration, in whole blood
+samples collected into K2 or K3 EDTA, and for the quantitative determination of
+total nucleated cell and red cell counts in body fluids (cerebrospinal fluid,
+serous fluids and synovial fluid).
+
+Intended for use by trained laboratory professionals in clinical laboratory
+settings. Results are intended to be used in conjunction with other clinical
+and laboratory findings and are not intended to be used as the sole basis for
+diagnosis.
+
+Body fluid mode is not validated for fluids containing visible particulate
+matter, for lavage specimens, or for fluids with a haematocrit above 5 per
+cent.
+
+-----------------------------------------------------------------
+RELATIONSHIP TO THE VERISCAN 400
+-----------------------------------------------------------------
+The VeriScan 400 Pro shares the chassis, fluidics architecture, user interface
+and firmware platform of the VeriScan 400. The two models are visually similar
+and can be distinguished by:
+
+  - the model badge to the right of the display (VS4-200P vs VS4-100);
+  - the serial number prefix, VS4P- on the Pro and VS4- on the 400;
+  - the presence of a fourth cartridge bay (RGT-RT) on the Pro;
+  - the Reticulocyte and Body Fluid entries on the main run menu;
+  - Settings > About reports "VeriScan 400 Pro" as the platform string.
+
+Sites operating a mixed fleet are advised to label instruments clearly. A
+recurring source of support tickets is a laboratory attempting a reticulocyte
+count or citing a Pro-only error code on a non-Pro instrument, or ordering
+RGT-RT stain against a VeriScan 400. See lookup-error-codes-veriscan-400.csv
+column "applies_to".
+
+Substantive differences are in the table below. They are not all obvious from a
+casual comparison of the two datasheets.
+
+  Attribute                    VeriScan 400        VeriScan 400 Pro
+  ---------------------------  ------------------  ---------------------
+  Throughput (sustained)       60 samples/hr       80 samples/hr
+  WBC/DIFF light source        Halogen, 535 nm     Diode laser, 638 nm
+  Reference photodiode         No                  Yes (baseline subtract)
+  Reticulocyte channel         No                  Yes
+  Body fluid mode              No                  Yes
+  Extended flagging            No                  Yes (FW 4.3.0+)
+  Cartridge bays               3                   4
+  On-board result storage      10,000              20,000
+  Mass                         42 kg               46 kg
+  Sample volume (closed tube)  150 uL              130 uL
+  Pro-only error codes         n/a                 E-215, E-601, E-604,
+                                                   E-607, E-711, E-715
+  Spare lamp assembly          VS4-OPT-104         not applicable
+  Spare laser module           not applicable      VS4-OPT-118
+
+The reference photodiode and per-run baseline subtraction on the Pro are the
+reason the Pro was outside the scope of FSN-2025-003, although the affected
+reagent lots were withdrawn from all instruments regardless of model.
+
+-----------------------------------------------------------------
+MEASURED AND DERIVED PARAMETERS
+-----------------------------------------------------------------
+Whole blood, measured:  WBC, RBC, HGB, PLT, MCV, RET%
+Whole blood, derived:   HCT, MCH, MCHC, RDW-SD, RDW-CV, MPV, PDW, P-LCR,
+                        PCT, RET#, IRF (immature reticulocyte fraction)
+Differential (5-part):  NEUT, LYMPH, MONO, EOS, BASO (absolute and %)
+Body fluid mode:        WBC-BF, RBC-BF, MN# / MN%, PMN# / PMN%
+Advisory flags (RUO, firmware 4.3.0 and later, disable-able):
+                        BLAST?, NRBC?, PLT-CLUMP?, FRAGMENTS?
+
+Advisory flags are research use only and must not be used as the sole basis
+for a clinical decision.
+
+-----------------------------------------------------------------
+TECHNICAL SPECIFICATIONS
+-----------------------------------------------------------------
+Parameter                    | Value
+-----------------------------|-----------------------------------------
+Throughput                   | 80 samples/hr (closed tube, CBC+5DIFF)
+                             | 62 samples/hr (CBC+5DIFF+RET)
+                             | 77 samples/hr with advisory flags enabled
+Sample volume                | 130 uL whole blood (closed tube)
+                             | 110 uL (open tube)
+                             | 350 uL body fluid (open tube only)
+Sample presentation          | Closed-tube cap-pierce; open tube;
+                             | 10-position autoloader (50 optional);
+                             | STAT interrupt position
+Measurement principles       | WBC/DIFF: flow cytometry with 638 nm diode
+                             |   laser, side scatter, forward scatter and
+                             |   fluorescence
+                             | RET: supravital fluorescence (RGT-RT stain)
+                             | RBC/PLT: hydrodynamically focused impedance
+                             | HGB: cyanide-free SLS colorimetry (540 nm)
+Reticulocyte measuring range | 0.10 - 25.00 % ; 0.005 - 1.500 x10^12/L
+Body fluid measuring range   | WBC-BF 0 - 10,000 /uL ; RBC-BF 0 - 5.0 x10^6/uL
+Carryover                    | < 0.5% whole blood; < 1.0% body fluid mode
+Result storage (on board)    | 20,000 results with histograms/scattergrams
+Display                      | 7-inch colour capacitive touchscreen
+Connectivity                 | 2x Ethernet 10/100, 2x USB-A, 1x RS-232,
+                             | barcode reader port
+Protocols                    | HL7 v2.5.1 (v2.3.1 legacy profile), ASTM
+                             | E1394, VeriConnect cloud agent
+Current firmware at issue     | 4.2.3
+Dimensions (W x D x H)       | 480 x 520 x 560 mm
+Mass                         | 46 kg
+Power                        | 100-240 V AC, 50/60 Hz, 360 VA
+Laser classification         | Class 1 laser product (IEC 60825-1)
+-----------------------------|-----------------------------------------
+
+-----------------------------------------------------------------
+ANALYTICAL PERFORMANCE
+-----------------------------------------------------------------
+Linearity
+Analyte | Interval                       | r
+--------|--------------------------------|-------
+WBC     | 0.10 - 120.0 x10^9/L           | 0.999
+RBC     | 0.05 - 8.50 x10^12/L           | 0.999
+HGB     | 5 - 260 g/L                    | 0.999
+PLT     | 5 - 3000 x10^9/L               | 0.998
+RET%    | 0.10 - 25.00 %                 | 0.996
+WBC-BF  | 0 - 10,000 /uL                 | 0.995
+
+Repeatability (within-run CV, normal-range material, n=31)
+WBC <= 1.8%   RBC <= 1.2%   HGB <= 1.0%   PLT <= 3.5%   RET% <= 6.0%
+WBC-BF <= 12% at 10-100 /uL ; <= 6% above 100 /uL
+
+Reticulocyte method comparison against manual microscopy (ICSH reference,
+n = 220): slope 1.02, intercept -0.04, r = 0.981. Full data in
+reg-clinical-performance-summary.txt.
+
+-----------------------------------------------------------------
+REAGENT COMPATIBILITY
+-----------------------------------------------------------------
+Required:
+  RGT-D5  VeriLyse Standard Diluent      500 mL   VL-D5-500
+  RGT-L3  VeriLyse Lyse Reagent          500 mL   VL-L3-500   (rev C or D)
+  RGT-CL  VeriLyse Cleaning Solution     250 mL   VL-CL-250
+  RGT-RT  VeriLyse Reticulocyte Stain    250 mL   VL-RT-250   (rev B only)
+
+RGT-RT revision A is withdrawn - see FSN-2024-006. Revision B is supplied in
+an amber vial and stored at 2-8 C.
+
+Evaluation product:
+  RGT-D5X VeriLyse Extended Diluent - firmware 4.3.0 or later, evaluation
+  sites only, not for routine diagnostic use.
+
+Cartridge shelf life: 18 months unopened; 90 days on board after first pierce.
+RGT-RT: 12 months unopened; 60 days on board.
+
+-----------------------------------------------------------------
+OPERATING CONDITIONS
+-----------------------------------------------------------------
+Ambient temperature       | 18 C to 32 C  (revised - see VBB-0052)
+Relative humidity         | 20% to 80% non-condensing
+Altitude                  | up to 2000 m
+Storage/transport temp    | -10 C to 50 C
+
+The reticulocyte flow cell is temperature-regulated to 37.0 +/- 0.5 C. Above
+32 C ambient the heater has insufficient headroom to regulate reliably and
+E-607 may be raised. This is the most common environmental failure mode
+reported on the Pro.
+
+-----------------------------------------------------------------
+REGULATORY STATUS
+-----------------------------------------------------------------
+CE marked under Directive 98/79/EC, Annex III self-declared.
+UKCA marked under UK MDR 2002 (as amended).
+IVDR Class C under Rule 3(k); technical documentation submitted to Notified
+Body 0086 on 2025-01-30, assessment in progress.
+Class 1 laser product per IEC 60825-1:2014.
+Not cleared or approved by the US FDA; Research Use Only in the United States.
+Basic UDI-DI: 5060847220VS4200PXP
+
+-----------------------------------------------------------------
+ORDERING INFORMATION
+-----------------------------------------------------------------
+Part Number    | Description
+---------------|------------------------------------------------
+VS4-200P       | VeriScan 400 Pro analyser, base configuration
+VS4-200P-AL    | VeriScan 400 Pro with 50-position autoloader
+VS4-200P-BF    | Body fluid mode activation (factory or field)
+VS4-200P-INST  | Installation, IQ/OQ and 2-day operator training
+VL-RT-250      | RGT-RT reticulocyte stain, 250 mL (rev B)
+VT-RET-2       | VeriTrol RET control material, 2 levels
+VT-BF-2        | VeriTrol body fluid control, 2 levels
+VS4-OPT-118    | Laser diode module (service part)
+VS4-OPT-224    | Reticulocyte flow cell assembly (service part)
+
+=================================================================
+Veridia BioSystems Ltd. | 41 Hurst Way, Cambridge CB4 0WS, UK
+Registered in England No. 10483726 | www.veridiabio.com
+=================================================================

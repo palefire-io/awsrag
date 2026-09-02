@@ -1,0 +1,28 @@
+*.js
+!jest.config.js
+*.d.ts
+node_modules
+
+# tsc output (everything under bin/, lib/, config/, scripts/, test/ compiles here now)
+/build/
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+# Environment files (deployment account/region config)
+.env.*
+!.env.example
+
+# Lambda build artifacts
+lib/lambdas/**/build/
+lib/lambdas/**/*.zip
+lib/lambdas/**/__pycache__/
+
+# Frontend build output
+services/orchestrator/frontend/dist/
+
+# Python virtual environments
+.venv/
+__pycache__/
+*.pyc

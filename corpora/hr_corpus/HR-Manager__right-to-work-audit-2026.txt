@@ -1,0 +1,188 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** RESTRICTED - PEOPLE TEAM, CPO, GENERAL COUNSEL ***
+Right to Work and Immigration Compliance Audit 2026
+=================================================================
+Reference:     HR-AUD-2026-001
+Audit date:    2026-04-13 to 2026-04-24
+Auditor:       Rachel Duffy, HR Business Partner
+Swiss section: Lena Hofstetter, HR Manager Switzerland
+Reviewed by:   Sunita Raval, General Counsel
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+Scope:         All 318 employees plus 14 contractors and agency workers
+               engaged at the audit date
+Frequency:     Annual, plus a rolling check of expiring permissions
+
+-----------------------------------------------------------------
+1. WHY WE DO THIS
+-----------------------------------------------------------------
+1.1  An employer who employs someone without the right to work commits a civil
+     offence with a penalty of up to GBP 60,000 per worker, and a criminal
+     offence if it knew or had reasonable cause to believe. A statutory excuse
+     is available only where a compliant check was carried out before
+     employment began and repeated before any time-limited permission expired.
+
+1.2  The excuse is document-specific and date-specific. A check carried out
+     late, or recorded without the date, provides no excuse at all. This is
+     why the audit is pedantic about evidence rather than about substance:
+     everyone in this company has the right to work, and the exposure is
+     entirely about whether we can prove we checked properly.
+
+-----------------------------------------------------------------
+2. POPULATION
+-----------------------------------------------------------------
+  UK employees                                    214
+    British or Irish citizens                     171
+    Settled or pre-settled status (EUSS)           24
+    Skilled Worker visa (sponsored by Veridia)      9
+    Skilled Worker visa (dependant or other route)  4
+    Global Talent                                   2
+    Other time-limited permission                   4
+  Swiss employees                                 104
+    Swiss nationals                                58
+    C permit (settlement)                          19
+    B permit (residence)                           18
+    G permit (cross-border, DE/FR resident)         9
+  Contractors and agency workers                   14
+
+  Employees with time-limited permission requiring
+    a follow-up check                              41
+  Veridia sponsor licence                          Skilled Worker, licence
+                                                   number SL-4471820, valid to
+                                                   2028-03-11, A-rating
+
+-----------------------------------------------------------------
+3. FINDINGS
+-----------------------------------------------------------------
+3.1  NO EMPLOYEE OR CONTRACTOR WAS FOUND TO BE WORKING WITHOUT THE RIGHT TO DO
+     SO. That is the headline and it is the important one.
+
+3.2  Six documentation findings were identified. All are evidential rather
+     than substantive.
+
+  FINDING 1 - HIGH - Missing follow-up check evidence (2 employees)
+    Two employees on time-limited permission had follow-up checks that were
+    performed and recorded in PeopleHub but for which the underlying evidence
+    (share code verification response, or copy of the biometric residence
+    permit) could not be located.
+    Individuals: VB-0221 Nils Berger (Swiss B permit, follow-up due
+    2025-09-30, recorded as done 2025-09-24, evidence missing);
+    VB-0326 [leaver] (EUSS pre-settled, follow-up 2024-11, evidence missing).
+    RISK: no statutory excuse for the period since the follow-up date.
+    ACTION: Berger re-verified 2026-04-16, evidence filed. Leaver record
+    annotated. COMPLETE.
+
+  FINDING 2 - HIGH - Check performed after start date (1 employee)
+    One 2023 hire's initial check is dated three days after their start date.
+    The employee holds settled status and has an unrestricted right to work,
+    so there is no substantive issue, but the statutory excuse does not exist
+    for that engagement.
+    RISK: theoretical. Penalty exposure only if enforcement action arose,
+    which would fail on the merits since the person has the right to work.
+    ACTION: cannot be remedied retrospectively. Recorded and accepted.
+    Recruitment process changed - see 4.1. COMPLETE.
+
+  FINDING 3 - MEDIUM - Contractor checks incomplete (4 contractors)
+    Four contractors engaged through an agency had no right to work check on
+    Veridia's file. The agency holds them and confirmed all four are compliant.
+    RISK: where a worker is supplied by an agency and employed by the agency,
+    the duty sits with the agency. Where the engagement is such that Veridia
+    is the de facto employer, it sits with us. Two of the four have been
+    engaged continuously for more than 18 months on Veridia-directed work,
+    which is a position Sunita Raval describes as "not one I would want to
+    argue".
+    ACTION: copies obtained from the agency for all four, filed 2026-04-22.
+    Separately, the two long-running engagements referred to the CPO for a
+    substantive review of whether they should be employees - see 5.2.
+    COMPLETE (evidence) / OPEN (engagement status).
+
+  FINDING 4 - MEDIUM - Expiry dates not monitored consistently (7 employees)
+    Seven employees with time-limited permission had no automated reminder
+    configured in PeopleHub. Manual tracking had caught all seven, but the
+    control depended on Ollie Kettering's spreadsheet rather than on the
+    system.
+    ACTION: automated reminders configured for all 41 time-limited
+    permissions at 90, 60, 30 and 7 days. COMPLETE 2026-04-21.
+
+  FINDING 5 - LOW - Swiss G permit renewal tracking (3 employees)
+    Three cross-border commuters' G permits were tracked by the employees
+    themselves rather than by Veridia. Not a UK-equivalent legal exposure but
+    poor practice.
+    ACTION: added to the same automated tracking. COMPLETE.
+
+  FINDING 6 - LOW - Retention beyond requirement (11 records)
+    Eleven leaver records retained right-to-work evidence beyond the required
+    period of two years after employment ended.
+    ACTION: deleted. COMPLETE 2026-04-24.
+
+-----------------------------------------------------------------
+4. PROCESS CHANGES
+-----------------------------------------------------------------
+4.1  START DATE HARD BLOCK. PeopleHub now prevents a start date being
+     confirmed until the right to work check is recorded WITH evidence
+     attached. Previously the field could be ticked without an attachment.
+     This is the change that closes Finding 2 permanently.
+
+4.2  Automated expiry reminders at 90, 60, 30 and 7 days, to the employee, the
+     People team and the line manager.
+
+4.3  Contractor right to work evidence now required at engagement regardless
+     of who employs them, held on the Veridia file.
+
+4.4  Quarterly spot check of 10 random records by Ollie Kettering, reported to
+     the HRBP. Introduced because an annual audit finds problems up to twelve
+     months old.
+
+-----------------------------------------------------------------
+5. SPONSORSHIP AND WATCH ITEMS
+-----------------------------------------------------------------
+5.1  SPONSOR LICENCE. Veridia holds a Skilled Worker sponsor licence, A-rated,
+     valid to 2028-03-11. Nine sponsored employees. Sponsor duties - reporting
+     changes of role, salary, work location and absence within 10 working days
+     - are held by Rachel Duffy with Ollie Kettering as deputy.
+
+     COMPLIANCE NOTE: two role changes in 2025 were reported on days 9 and 10
+     of the 10-day window. Both were within time. The margin is uncomfortable
+     and the process now triggers the report at the point the change is
+     approved rather than at the point it takes effect.
+
+5.2  CONTRACTOR ENGAGEMENT STATUS. The two long-running agency engagements at
+     Finding 3 raise an employment status question separate from right to
+     work, with IR35 and employment rights dimensions. Referred to the CPO and
+     the General Counsel. Sunita Raval's initial view is that at least one is
+     likely to be a deemed employment. Under review; report due 2026-07-31.
+
+5.3  WATCH ITEM ADDED 2026-06-15 by Naomi Okonjo-Bright. Any transaction
+     involving the transfer of employees into Veridia would bring a
+     population whose right to work evidence was compiled by another employer
+     under another process. Transferred employees retain their continuous
+     service but Veridia acquires the compliance obligation, and a
+     transferring employer's records cannot be assumed to be compliant.
+
+     Where such a transfer is contemplated, a right to work verification
+     exercise across the transferring population must be scoped as a day-one
+     activity and budgeted for. A statutory excuse does not transfer with the
+     employee; the transferee employer has 60 days from the transfer date to
+     carry out its own checks.
+
+     This is recorded here so that it is not discovered late. Rachel Duffy to
+     hold a scoped plan on the shelf.
+
+-----------------------------------------------------------------
+6. OPINION
+-----------------------------------------------------------------
+Compliance is SATISFACTORY WITH FINDINGS. No substantive breach. The findings
+are evidential and five of six are closed. The systemic weakness was
+dependence on manual tracking, which has been addressed by 4.1 and 4.2.
+
+Next full audit: April 2027. Quarterly spot checks from July 2026.
+
+-----------------------------------------------------------------
+DISTRIBUTION
+-----------------------------------------------------------------
+Naomi Okonjo-Bright, Sunita Raval, Rachel Duffy, Lena Hofstetter,
+Ollie Kettering. Summary to the Audit Committee at the July 2026 meeting.
+
+=================================================================
+RESTRICTED. Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

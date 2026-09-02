@@ -1,0 +1,114 @@
+Ticket ID: VBST-4085
+Status: Resolved (no root cause established)
+Priority: P3-Medium
+Created: 2025-06-03 11:15 UTC
+Product: VeriScan 400
+Customer: Laboratoire Cerba Ouest (ACC-1214)
+Reported by: Isabelle Renard, Responsable technique
+Assigned to: Marcus Chen (QC Applications Specialist)
+Serial: VS4-0851
+Firmware: 4.2.3
+
+--- Thread ---
+
+[2025-06-03 11:15] Isabelle Renard (Responsable technique):
+Calibration drift on VS4-0851. We recalibrate, QC is good for perhaps ten
+days, then the MCV begins to trend upward. By day fifteen we are at the edge
+of the range and we recalibrate again.
+
+This has happened four times since March. The other five analysers at this
+site do not do it.
+
+MCV only. All other parameters stable.
+
+[2025-06-03 14:40] Marcus Chen (QC Applications Specialist):
+An isolated MCV drift with everything else stable is unusual - MCV comes from
+the RBC impedance pulse height, so a drift there without an RBC count drift
+narrows things.
+
+Please send:
+- the last 60 QC points for MCV and RBC, both levels
+- reagent lot numbers and pierce dates across the period
+- ambient temperature log if you have one
+- calibration records with the applied factors each time
+
+[2025-06-04 09:20] Isabelle Renard (Responsable technique):
+All attached. Ambient is stable, 21-23 C, we log hourly.
+
+[2025-06-05 16:30] Marcus Chen (QC Applications Specialist):
+Looked at this carefully. Observations:
+
+- The drift is real and consistent: about +1.8 fL over 14 days, then reset by
+  calibration.
+- It does not correlate with reagent lot changes - it continues across two D5
+  lots and three L3 lots.
+- It does not correlate with ambient.
+- The applied calibration factor is stepping down by roughly the same amount
+  each time, which means the instrument is drifting, not the control material.
+- Your control lot is the same across the period and your other instruments
+  using the same lot are stable, so it isn't the material.
+
+That rules out the easy answers. What's left is something in the RBC aperture
+or the pulse height analysis on this specific instrument.
+
+Two things to try:
+1. Extended Clean followed by an aperture burn cycle (Service > Maintenance >
+   Aperture Burn), then monitor for 14 days without recalibrating.
+2. Run patient specimen comparison against one of your stable instruments at
+   day 1 and day 12 of a calibration cycle, 20 specimens each time. If the
+   comparison shifts, the instrument is genuinely drifting. If it doesn't, the
+   control material is behaving differently on this instrument than the others
+   for some reason we haven't identified.
+
+[2025-06-24 10:15] Isabelle Renard (Responsable technique):
+Results:
+1. Aperture burn done. Drift continued, same rate.
+2. Comparison at day 1: MCV slope 1.001 vs VS4-0844. At day 12: slope 1.019.
+   So the instrument is genuinely drifting relative to a stable one.
+
+[2025-06-25 11:00] Marcus Chen (QC Applications Specialist):
+That confirms the instrument is drifting. It doesn't tell us why.
+
+Escalating for a field visit with a view to replacing the RBC aperture
+assembly. I'd rather change a part than keep investigating a 1.8 fL drift.
+
+[2025-07-15 17:20] Nils Berger (Field Service Engineer):
+Attended. Replaced the RBC aperture assembly and re-ran calibration. Also
+replaced the fluidics control board on suspicion, since the pulse height
+analysis runs on it and it was the only other candidate.
+
+Full verification passed. Site to monitor for 30 days.
+
+Time on site 5.5 hours. Two parts changed, which I am not comfortable with as
+a diagnostic approach but the customer wanted the instrument fixed rather than
+studied.
+
+[2025-08-19 09:30] Isabelle Renard (Responsable technique):
+Thirty days, no drift. MCV stable within 0.4 fL. The problem is gone.
+
+[2025-08-19 14:00] Marcus Chen (QC Applications Specialist):
+Good outcome, unsatisfying investigation.
+
+Recording this honestly: we do not know which of the two parts was
+responsible, or whether it was the combination, or whether something was
+disturbed and reseated during the work. Both parts have gone back for
+examination.
+
+[2025-10-02 10:00] Marcus Chen (QC Applications Specialist):
+Returned parts examined. The aperture assembly is within specification on
+every measurement we can make. The fluidics control board passes full
+functional test on the bench, including a 72-hour soak.
+
+So neither returned part reproduces the fault, and we cannot say what caused
+it.
+
+Closing as resolved-for-the-customer with no root cause established. I would
+rather record that plainly than invent an explanation. If it recurs on this
+instrument or appears on another, this ticket is the reference.
+
+--- Resolution ---
+Symptom resolved by replacing the RBC aperture assembly and the fluidics
+control board. NO ROOT CAUSE ESTABLISHED - neither returned part reproduces
+the fault under examination.
+Instrument stable for 30 days post-repair and at time of closure.
+Recorded as an open question rather than a closed investigation.

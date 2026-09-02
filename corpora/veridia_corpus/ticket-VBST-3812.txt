@@ -1,0 +1,69 @@
+Ticket ID: VBST-3812
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-01-16 14:22 UTC
+Product: VeriPrep SP-1
+Customer: St Aloysius Pathology, Dublin (ACC-1185)
+Reported by: Cathal Brennan, Chief Medical Scientist
+Assigned to: Hannah Bright (Support Engineer) -> Dev Patel (FSE)
+Serial: SP1-R1-0288
+Firmware: SP-1 2.2.0
+
+--- Thread ---
+
+[2025-01-16 14:22] Cathal Brennan (Chief Medical Scientist):
+Getting P-105 "tube height out of range" repeatedly on the SP-1, roughly 15-20
+tubes a day out of about 300. One actual jam on Tuesday. Tubes are 5mL EDTA.
+Is this the issue you've been telling other sites about? A colleague at
+another lab mentioned something similar.
+
+[2025-01-16 15:48] Hannah Bright (Support Engineer):
+Hi Cathal, yes, almost certainly the same thing. Can you measure the overall
+height of a capped tube for me? If it comes out under about 75.5mm you're in
+the affected geometry.
+
+[2025-01-16 16:30] Cathal Brennan (Chief Medical Scientist):
+74.6mm, average of five. So yes.
+
+[2025-01-17 08:55] Hannah Bright (Support Engineer):
+That's it. Full explanation is going out as a bulletin shortly but the short
+version is the tube sits too low for the r1 feed mechanism and the barcode
+window.
+
+Options: raise your label template 3mm, fit SP1-ADP-05 adapters, or wait for
+the r2 hardware revision later this year. I'd suggest doing the first two now.
+
+Shall I raise an order for a set of adapters? They're EUR 86 for ten.
+
+[2025-01-17 09:20] Cathal Brennan (Chief Medical Scientist):
+Please do. Also can someone come out? I'd rather have the mechanism checked
+over than discover in three months that we've worn something out.
+
+[2025-01-22 17:05] Dev Patel (Field Service Engineer):
+Attended. Adapters fitted and staff trained on their use - they need to be
+placed in the carrier not on the tube, which is not obvious and I've written
+it on a card and left it by the machine.
+
+Feed mechanism and gripper jaws inspected, both within tolerance, no
+replacement needed. Guide rail clean.
+
+Ran 100 tubes with adapters: zero P-105, zero jams, 2 barcode retries which
+both succeeded on the second attempt.
+
+Discussed r2 with Cathal. He's interested in the retrofit at contract renewal
+in October rather than as a separate purchase. Flagged to the account manager.
+
+Time on site 4.0 hours. Visit FSV-2025-0130.
+
+[2025-01-23 09:10] Cathal Brennan (Chief Medical Scientist):
+Working well since. Thanks for the quick turnaround, appreciated.
+
+[2025-01-23 09:35] Hannah Bright (Support Engineer):
+Great. Closing this. Do come back if the rate creeps up again - and keep a note
+of any jams for the renewal conversation.
+
+--- Resolution ---
+Root cause: short-cap 5mL tubes, 74.6mm capped height, below reliable r1 band.
+Actions: SP1-ADP-05 adapters supplied and fitted (FSV-2025-0130); label
+position advice given; r2 retrofit to be quoted at renewal.
+See also: VBB-0038, VBST-3795.

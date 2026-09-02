@@ -1,0 +1,59 @@
+Ticket ID: VBST-4007
+Status: Resolved
+Priority: P1-Critical
+Created: 2025-03-11 07:49 UTC
+Product: VeriConnect
+Customer: Greater Manchester Pathology Network (ACC-1042)
+Reported by: Dr Aled Pritchard, Network Clinical Lead
+             aled.pritchard@gmpn.nhs.uk | 0161 276 1234
+Assigned to: Owen Trask (Support Engineer L1)
+VeriConnect tenant: gmpn.vericonnect.veridiabio.com
+
+--- Thread ---
+
+[2025-03-11 07:49] Dr Aled Pritchard (Network Clinical Lead):
+Login failing network-wide. VC-4412. Six sites, fourteen analysers. What is
+going on?
+
+[2025-03-11 07:55] Owen Trask (Support Engineer L1):
+Known incident affecting all SSO tenants. Cause identified as a stale copy of
+your identity provider's signing certificate on our side following a rotation
+this morning. Incident declared, Cloud Operations working through tenants.
+
+Analysers and LIS transmission unaffected.
+
+[2025-03-11 08:15] Dr Aled Pritchard (Network Clinical Lead):
+We are the largest deployment on your books. Please prioritise accordingly.
+
+[2025-03-11 08:33] Owen Trask (Support Engineer L1):
+You are second in the queue on that basis.
+
+[2025-03-11 09:31] Owen Trask (Support Engineer L1):
+GMPN metadata refreshed. Please test.
+
+[2025-03-11 09:40] Dr Aled Pritchard (Network Clinical Lead):
+Working. Two hours and twenty minutes of a Tuesday morning across six sites.
+I'd like the post-incident report when it exists.
+
+[2025-03-21 10:30] Owen Trask (Support Engineer L1):
+VBB-0044 issued today, attached. Post-incident review VBI-0094 available under
+NDA on request.
+
+Two recommendations for your tenant specifically:
+- you have no break-glass local administrator accounts. Given six sites and a
+  network-wide dependency, I'd suggest three rather than two.
+- your tenant is Enterprise, so you can also configure the metadata refresh
+  interval down to 1 hour if you want a tighter window than the 6-hour
+  default (available from VeriConnect 6.2).
+
+[2025-03-24 08:50] Dr Aled Pritchard (Network Clinical Lead):
+Report received. We'll set up break-glass accounts - please send instructions
+rather than booking a call, our informatics team can handle it.
+
+Closing.
+
+--- Resolution ---
+Root cause: stale cached SAML IdP metadata (VBI-0094). Tenant restored 09:31
+UTC, outage 2h 16m.
+Actions: VBB-0044 supplied; break-glass account guidance issued (SOP-VBS-004
+section 8).

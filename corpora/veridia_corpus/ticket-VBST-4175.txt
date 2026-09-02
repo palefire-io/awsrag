@@ -1,0 +1,74 @@
+Ticket ID: VBST-4175
+Status: Resolved
+Priority: P4-Low
+Created: 2025-08-27 11:10 UTC
+Product: VeriLyse RGT-RT
+Customer: Cardiff and Vale University Health Board (ACC-1063)
+Reported by: Rhys Morgan, Principal BMS
+Assigned to: Hannah Bright (Support Engineer)
+Serial: VS4P-0620, VS4P-0631, VS4-0703
+
+--- Thread ---
+
+[2025-08-27 11:10] Rhys Morgan (Principal BMS):
+Ordered 4 x RGT-RT for our three analysers. One of them throws E-302 when we
+fit the cartridge. The other two take it fine.
+
+Same lot (RT-2025-0049) in all three cases. So it's not the reagent.
+
+[2025-08-27 12:30] Hannah Bright (Support Engineer):
+It isn't the reagent, no. Can you tell me the serial of the instrument that
+rejects it?
+
+[2025-08-27 13:00] Rhys Morgan (Principal BMS):
+VS4-0703.
+
+[2025-08-27 13:40] Hannah Bright (Support Engineer):
+There it is. VS4-0703 is a VeriScan 400. Your other two, VS4P-0620 and
+VS4P-0631, are 400 Pros.
+
+The serial prefix tells you: VS4P- is a Pro, VS4- is a 400. The 400 has no
+reticulocyte channel and no fourth cartridge bay, so it rejects an RGT-RT
+cartridge with E-302, which is correct behaviour.
+
+You've ordered four cartridges for three instruments, one of which can't use
+them.
+
+[2025-08-27 14:15] Rhys Morgan (Principal BMS):
+Right. That's on us - we assumed all three were the same because they look
+identical and they're on the same bench.
+
+Can we return the spare?
+
+[2025-08-27 15:00] Hannah Bright (Support Engineer):
+Yes, if it's unopened and in date. RGT-RT is refrigerated stock so it needs to
+go back cold - I'll arrange a cool-pack collection rather than a standard
+courier.
+
+RMA-2025-1021 raised.
+
+One thought: your two Pros are running reticulocytes and your 400 isn't and
+can't. If work is being routed to whichever analyser is free, retic requests
+landing on VS4-0703 will be rejected. Worth checking your routing rules.
+
+[2025-08-28 09:20] Rhys Morgan (Principal BMS):
+Good catch. Our middleware routes CBC5DR (the retic panel) to any available
+analyser, which explains a handful of unexplained rejects we've been getting
+and blaming on the network.
+
+Fixing the routing today.
+
+[2025-08-28 10:00] Hannah Bright (Support Engineer):
+That'll be it. The analyser responds to a retic order it can't perform, the
+middleware sees a reject and it looks like a comms problem.
+
+I've also noted on your account record which serials are Pro and which are
+not, so the next person picking up a ticket from you can see it immediately.
+
+--- Resolution ---
+No fault. RGT-RT rejected with E-302 by VS4-0703, a VeriScan 400 with no
+reticulocyte channel. Correct behaviour.
+Actions: spare cartridge returned cold (RMA-2025-1021); customer's middleware
+routing corrected so CBC5DR panels route only to Pro instruments; account
+record annotated with model-by-serial.
+See also: VBST-4142, spec-verilyse-rgt-rt-v3.txt, lookup-reagent-compatibility.csv

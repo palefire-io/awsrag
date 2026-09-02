@@ -1,0 +1,94 @@
+Ticket ID: VBST-4160
+Status: Resolved
+Priority: P4-Low
+Created: 2025-08-12 13:50 UTC
+Product: VeriScan 400
+Customer: Northumbria Healthcare NHS Foundation Trust (ACC-1057)
+Reported by: Karen Dalgleish, Laboratory Manager
+             karen.dalgleish@northumbria.nhs.uk
+Assigned to: Owen Trask (Support Engineer L1) -> Rob Ellery (FSE)
+Serial: VS4-0596
+Firmware: 4.3.0
+
+--- Thread ---
+
+[2025-08-12 13:50] Karen Dalgleish (Laboratory Manager):
+We're getting W-031 ambient temperature warnings several times a day on
+VS4-0596. Results seem fine and QC is passing. Do we need to worry?
+
+The room feels warm but not unbearable.
+
+[2025-08-12 15:00] Owen Trask (Support Engineer L1):
+W-031 is a warning rather than an error, so nothing is being blocked, but it's
+worth taking seriously because it means the instrument is measuring an ambient
+outside the range it's specified for.
+
+Your firmware is 4.3.0, which raises W-031 outside 15-35 C. Note that the
+published operating range was narrowed to 18-32 C in April (bulletin VBB-0052)
+but the firmware warning thresholds don't catch up until 4.4.0. So if you're
+seeing W-031 on 4.3.0, you are outside 15-35, which is well outside the range
+you should actually be operating in.
+
+Can you check the temperature at the instrument - on top of the chassis, not
+the room thermostat - at a few points through the day?
+
+[2025-08-13 16:20] Karen Dalgleish (Laboratory Manager):
+09:00 - 27 C
+12:00 - 33 C
+15:00 - 36.5 C
+17:00 - 34 C
+
+Room thermostat reads 26 C at 15:00.
+
+It's been a hot fortnight. Is this just the weather?
+
+[2025-08-14 09:15] Owen Trask (Support Engineer L1):
+Partly the weather, but 36.5 C at the instrument against 26 C in the room is a
+10 degree difference, and that's not weather - that's siting or airflow.
+
+I'd like Rob Ellery to have a look. He's in the North East on the 19th.
+
+In the meantime: the practical risks at that temperature are accelerated
+reagent degradation on board (your L3 cartridge will not reach its labelled 90
+days), optical baseline drift, and increased E-101 aspiration errors. Your QC
+is passing, which is reassuring, but I'd watch the L-J charts closely for the
+rest of the hot spell.
+
+[2025-08-19 15:30] Rob Ellery (Field Service Engineer):
+Attended (FSV-2025-0341).
+
+Measurements at 14:40: 35.9 C top of chassis, 34.2 C rear vent, 25.8 C room
+thermostat.
+
+Cause: the instrument sits in an alcove approximately 700 mm deep with walls
+on three sides, rear clearance 50 mm against a required 150 mm. The
+instrument's own exhaust is recirculating. There is no local extraction and
+the alcove is on the opposite side of the room from the air handling outlet.
+
+Instrument itself: no fault. Optics, fluidics, calibration all normal. QC in
+range.
+
+This is a building services problem, not an instrument problem. I have written
+it up for the trust's estates department with the measurements and a
+recommendation for either local extraction or relocation, and left a copy of
+VBB-0052 with Karen.
+
+Told Karen plainly that Veridia cannot support the full performance
+specification at 36 C and that this needs fixing rather than monitoring.
+
+Time on site 1.5 hours.
+
+[2025-09-30 11:00] Karen Dalgleish (Laboratory Manager):
+Update - estates have moved us. Instrument is now on an open bench with proper
+clearance. Temperature at the instrument 22-25 C through the day. No W-031
+since the move.
+
+Rob's written report was what got estates to act. Thank you for putting it in
+writing.
+
+--- Resolution ---
+Root cause: instrument sited in a three-sided alcove with 50 mm rear clearance
+causing exhaust recirculation; ambient at the instrument reaching 36.5 C
+against 25.8 C room. No instrument fault (FSV-2025-0341).
+Actions: written report to the trust's estates department; instrument
+relocated to an open bench; ambient now 22-25 C.

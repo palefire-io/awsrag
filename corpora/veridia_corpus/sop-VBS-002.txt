@@ -1,0 +1,202 @@
+=================================================================
+VERIDIA BIOSYSTEMS - STANDARD OPERATING PROCEDURE
+=================================================================
+SOP Number:      SOP-VBS-002
+Title:           VeriLyse Reagent Lot Changeover
+Revision:        4
+Effective Date:  2025-05-19
+Supersedes:      Revision 3 (2024-01-30)
+Author:          Marcus Chen, QC Applications Specialist
+Reviewed by:     Dr Wen Li, R&D Reagents
+Approved by:     Simone Buehler, QA Manager
+Review due:      2027-05-19
+
+CHANGE SUMMARY (rev 3 -> rev 4)
+  - Section 5 rewritten to cover formulation revision changes (C to D)
+    following VBB-0047.
+  - Section 4.6 added: mandatory check against active field safety notices.
+  - Section 8 added: what to do if a lot is recalled while on board.
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+To define the procedure for changing a VeriLyse reagent cartridge lot on a
+VeriScan 400 or VeriScan 400 Pro, and to define the verification required
+before patient testing resumes.
+
+-----------------------------------------------------------------
+2. SCOPE
+-----------------------------------------------------------------
+Applies to RGT-D5, RGT-L3, RGT-CL and RGT-RT cartridges on VeriScan 400 and
+VeriScan 400 Pro instruments.
+
+Does not apply to the VeriScan 200; that platform has a separate procedure
+(SOP-VBS-002-VS2) and different reagent qualification. Note in particular that
+RGT-L3 revision D must not be used on a VeriScan 200.
+
+-----------------------------------------------------------------
+3. DEFINITIONS
+-----------------------------------------------------------------
+Lot change            A new cartridge of the same product and the same
+                      formulation revision.
+Revision change       A new cartridge of the same product but a different
+                      formulation revision (e.g. RGT-L3 revision C to D).
+Crossover study       Parallel running of old and new material to quantify
+                      any shift.
+
+-----------------------------------------------------------------
+4. BEFORE CHANGEOVER
+-----------------------------------------------------------------
+4.1  Plan the changeover for a period of low workload. Do not change a lot
+     mid-batch.
+
+4.2  Confirm the new cartridge is the correct product for the instrument.
+     RGT-RT is VeriScan 400 Pro only and will be rejected with E-302 on a
+     VeriScan 400.
+
+4.3  Confirm the cartridge is within its unopened shelf life.
+
+4.4  Inspect the cartridge for damage: cracks, a distorted or punctured
+     septum, leakage, or crystalline deposit around the outlet. A damaged
+     cartridge must not be fitted; it may raise E-311 or, worse, admit air and
+     produce E-112.
+
+4.5  Record the outgoing lot number, the incoming lot number, the date and the
+     operator.
+
+4.6  MANDATORY: check the incoming lot number against the field safety notices
+     in force before fitting. The list is on the customer portal and in
+     VeriConnect under Notifications > Safety. As at this revision, RGT-L3
+     lots L3-2025-0440 to L3-2025-0460 are recalled under FSN-2025-003.
+
+-----------------------------------------------------------------
+5. FORMULATION REVISION CHANGES
+-----------------------------------------------------------------
+5.1  Identify the formulation revision from the suffix after the lot number
+     (e.g. L3-2025-0471/D) and from the label identification band. RGT-L3
+     revision D carries a blue band; revision C carries a grey band.
+
+5.2  For the RGT-L3 revision C to D change specifically:
+       - No recalibration is required.
+       - No change to QC target values or ranges.
+       - No instrument setting change.
+       - A formal crossover study is NOT required.
+       - Both QC levels must be run and accepted after changeover (section 7).
+     Reference: VBB-0047, which includes method comparison data.
+
+5.3  For any future formulation revision change, Veridia will state in the
+     product change notification whether a crossover study is required. Do not
+     assume that because the C to D change did not require one, a later change
+     will not.
+
+5.4  Do not mix revisions within a cartridge bay. Do not decant between
+     cartridges under any circumstances - the RFID tag is matched to the fill
+     and a topped-up cartridge will report incorrect remaining volume and may
+     permit use beyond the stability limit.
+
+5.5  Where the laboratory's own accreditation requires a crossover study for
+     any reagent change regardless of manufacturer guidance, follow the local
+     requirement. A suitable protocol is at Appendix A.
+
+-----------------------------------------------------------------
+6. CHANGEOVER PROCEDURE
+-----------------------------------------------------------------
+6.1  Place the instrument in Standby. Do not power it down.
+
+6.2  Open the reagent compartment. Note which bay corresponds to which
+     reagent; the bays are keyed but the labels fade with cleaning.
+
+6.3  Withdraw the outgoing cartridge vertically. Do not rock it; rocking
+     enlarges the septum puncture and can shed septum material into the
+     needle.
+
+6.4  Fit the new cartridge, pressing home until it seats. Do not over-torque
+     a screw-collar cartridge; over-torquing is a recognised cause of E-311.
+
+6.5  The instrument reads the RFID tag and displays the product, lot and
+     expiry. Confirm the displayed lot matches the label. If it does not, stop
+     and raise a ticket with photographs.
+
+6.6  Run Reagent Prime for the changed reagent (Service > Maintenance >
+     Reagent Prime). This purges air introduced during the change. Omitting
+     the prime is the usual cause of E-112 immediately after a changeover.
+
+6.7  Run a background count. Acceptance limits are in SOP-VBS-001 Appendix A.
+
+-----------------------------------------------------------------
+7. VERIFICATION AFTER CHANGEOVER
+-----------------------------------------------------------------
+7.1  Run both QC levels (normal and at least one abnormal). For RGT-RT
+     changes on the Pro, recalibrate the reticulocyte channel first - this is
+     enforced by the instrument from firmware 4.1.0 - and then run both levels
+     of VT-RET-2.
+
+7.2  Acceptance criteria are as for a routine QC run (SOP-VBS-001 section 7).
+
+7.3  Additionally, compare the QC result to the mean of the previous 20 points
+     on the same instrument. A shift of more than 1SD in the same direction
+     across three or more analytes, even if all results remain within range,
+     should be investigated before proceeding. This is a weak signal but it is
+     the signal that would have detected the FSN-2025-003 lots earlier at
+     several sites.
+
+7.4  Record acceptance. Do not resume patient testing until QC is accepted.
+
+-----------------------------------------------------------------
+8. IF A LOT IS RECALLED WHILE ON BOARD
+-----------------------------------------------------------------
+8.1  Stop patient testing on the affected instrument.
+
+8.2  Remove the affected cartridge and quarantine it, labelled with the date,
+     the instrument serial number and the date it was first pierced. Do not
+     discard it - the manufacturer may require its return for investigation.
+
+8.3  Fit an unaffected cartridge, prime, run a background count and run full
+     QC before resuming.
+
+8.4  Determine the exposure window: the period between first pierce of the
+     affected cartridge and its removal. Every patient sample analysed in that
+     window on that instrument is within scope of the retrospective review
+     required by the notice.
+
+     VeriConnect Professional tier and above: Reports > Retrospective >
+     Reagent Lot Exposure generates this list. From firmware 4.4.0 the
+     instrument can also export the list directly for the last 400 days.
+
+8.5  Follow the specific instructions in the field safety notice. They take
+     precedence over this section.
+
+-----------------------------------------------------------------
+9. RECORDS
+-----------------------------------------------------------------
+9.1  Retain the lot changeover record for the period required by the
+     laboratory's accreditation, and in any case for not less than the shelf
+     life of the reagent plus one year.
+
+9.2  Minimum record content: date, time, instrument serial, reagent product,
+     outgoing lot, incoming lot, formulation revision, operator, prime
+     performed, background result, QC result, acceptance decision and
+     reviewer.
+
+-----------------------------------------------------------------
+APPENDIX A - CROSSOVER STUDY PROTOCOL (WHERE REQUIRED LOCALLY)
+-----------------------------------------------------------------
+A.1  Select a minimum of 40 residual patient specimens spanning the reportable
+     range, including at least 8 with abnormal WBC and at least 8 with
+     abnormal PLT.
+A.2  Analyse each specimen on the outgoing lot and then on the incoming lot
+     within 2 hours, in the same order.
+A.3  Compute Passing-Bablok regression and Bland-Altman bias for each analyte.
+A.4  Acceptance: slope 0.95-1.05, intercept within 0.25 of the analyte's LoQ,
+     and bias at the medical decision point within half of the laboratory's
+     total allowable error.
+A.5  Where a shift exceeds these criteria, do not put the new lot into service;
+     raise a support ticket with the data before proceeding.
+
+TODO: A.1 minimum sample number is under review - CLSI EP09 would suggest 40
+is the floor, some UKAS assessors have asked for 60. Awaiting a position from
+Regulatory. - MC 2025-05-19
+
+=================================================================
+END OF SOP-VBS-002 REVISION 4
+=================================================================

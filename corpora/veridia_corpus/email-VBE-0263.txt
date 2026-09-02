@@ -1,0 +1,64 @@
+From: Dr Oliver Kingsmill <oliver.kingsmill@gstt.nhs.uk>
+To: Tom Reeves <tom.reeves@veridiabio.com>
+Date: Tue, 12 May 2026 09:44:17 +0100
+Subject: FHIR export - when does beta become something we can use?
+X-Mailer: Microsoft Outlook 16.0
+
+Tom,
+
+VeriConnect 6.2 has been in for three weeks and my informatics colleagues have
+been playing with the FHIR R4 export. They like it. They would like to use it.
+
+The problem is "NOT FOR DIAGNOSTIC USE".
+
+I understand why that statement is there. What I would like to understand is
+what has to happen for it to go away, and roughly when.
+
+The reason this matters to us specifically: our trust is part of a regional
+shared care record programme that consumes FHIR. Today we transform our HL7 v2
+into FHIR in a middleware layer that we maintain ourselves, badly, with one
+developer who is leaving in September. A validated FHIR export from the source
+system would let us delete that layer.
+
+Concrete questions:
+
+1. What is the validation gap? Is it a matter of running the conformance
+   testing and updating the technical documentation, or is there a substantive
+   question about whether the FHIR representation is equivalent to the HL7 v2
+   one?
+
+2. Does the Notified Body have to see it? My assumption is that changing the
+   output format of a Class C device's data path is a change that needs
+   assessing, but I do not know whether it falls inside the scope of the
+   assessment you already have in flight.
+
+3. Is there any intermediate position? For example, could we use the FHIR
+   export for the shared care record, which is a read-only clinical summary,
+   while continuing to use HL7 v2 for the primary result path into our LIS?
+   That is arguably not a diagnostic use of the FHIR data at all.
+
+4. If the answer to 3 is "ask your own regulatory people", say so and I will.
+   But I would want to know Veridia's view first because our regulatory people
+   will ask what the manufacturer says.
+
+5. Timeline. Even a wide range would help. "This year" versus "not before
+   2028" changes what we do about our departing developer.
+
+I am not pushing you to say something you cannot support. I would genuinely
+rather have "we do not know" than a date that slips.
+
+Best,
+
+Oliver
+
+Dr Oliver Kingsmill
+Clinical Director of Pathology
+Guy's and St Thomas' NHS Foundation Trust
+Westminster Bridge Road, London SE1 7EH
+oliver.kingsmill@gstt.nhs.uk | 020 7188 7188 ext 51004
+
+--
+This e-mail and any attachments are confidential and intended for the addressee
+only. If you are not the named addressee you must not disclose, copy or take
+any action in reliance of this transmission. Guy's and St Thomas' NHS Foundation
+Trust monitors incoming and outgoing email for compliance with policy.

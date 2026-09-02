@@ -1,0 +1,285 @@
+=================================================================
+*** STRICTLY CONFIDENTIAL - PROJECT UNICORN ***
+=================================================================
+PROJECT UNICORN
+Announcement and Day One Communications Plan
+=================================================================
+Document:      UNI-COM-001
+Version:       3 (draft for Gate 2)
+Date:          2026-06-28
+Owners:        Naomi Okonjo-Bright, Chief People Officer
+               Michael Ashworth, Chief Commercial Officer
+Contributors:  Sunita Raval, GC; Rachel Duffy, HRBP
+Classification: Strictly Confidential - Inside Information
+Status:        DRAFT. Not to be executed before Gate 3.
+
+-----------------------------------------------------------------
+1. PRINCIPLES
+-----------------------------------------------------------------
+1.1  Everybody hears it on the same day. No cascade over a week. No group
+     learning from another group.
+
+1.2  Employees hear it before customers, before the press, and before
+     LinkedIn. This requires the announcement to be tightly sequenced within a
+     single morning.
+
+1.3  Say what we do not know. The instinct in acquisition communications is to
+     project certainty. It fails, because employees know that a company that
+     has just bought another company has not finished deciding things. Saying
+     "we have not decided that yet and here is when we will" is more credible
+     and, unlike false certainty, does not have to be walked back.
+
+1.4  Never say "there are no plans for redundancies" unless it is true and
+     will remain true. It is the sentence most likely to be quoted back.
+
+1.5  Delivered by people, in person, at each site. Not by email and not by a
+     recorded video. The CEO and CPO travel.
+
+-----------------------------------------------------------------
+2. WHY WE ARE DOING MORE THAN THE LAW REQUIRES
+-----------------------------------------------------------------
+2.1  On a share purchase there is no UK obligation to inform or consult
+     employees. We could announce at completion with no notice.
+
+2.2  We are not going to, for three reasons.
+
+     (a) There is already speculation. Four of thirteen H2 2025 exit
+         interviews referred unprompted to rumours the company was "doing
+         something". The People team FAQ has carried a question about
+         acquisition rumours since June 2026, answered honestly with "we
+         cannot confirm or deny". Silence is not producing an absence of
+         belief.
+
+     (b) Everything else Veridia has written down promises directness. The
+         speak-up policy, the pay review guidance, the FAQ. An announcement
+         that contradicted that tone would cost us more than it saved.
+
+     (c) The Polish site must be told anyway. Solidarnosc must be engaged
+         under Article 26-1 of the Trade Unions Act and under the collective
+         agreement. A UK population learning of the transaction after the
+         Polish population would be a fiasco.
+
+-----------------------------------------------------------------
+3. SEQUENCE
+-----------------------------------------------------------------
+BEFORE SIGNING
+  T-14 days  Solidarnosc engaged confidentially at Wroclaw by Mariusz Zalewski
+             with Kaczmarek Wiszniewski present. Confidentiality undertaking.
+             This is the legal obligation and it comes first in time.
+  T-10 days  Pension trustees briefed. Independent chair approached privately
+             first. See UNI-DD-PEN-001 recommendation P2.
+  T-7 days   Extended leadership briefed under confidentiality - Veridia
+             Directors and Heads of, approximately 14 people beyond the deal
+             team. THEY WILL BE ASKED QUESTIONS ON DAY ONE AND MUST NOT BE
+             HEARING IT FOR THE FIRST TIME.
+  T-3 days   Priya Anand, Yusuf Demir, Ruth Amankwah, Sarah Lindgren brought
+             fully inside if not already. Each has a workstream.
+  T-1 day    Manager briefing pack issued to all Veridia and Narwhal people
+             managers, embargoed, with the FAQ at Annex B.
+
+DAY ONE - SIGNING DAY
+  07:00 UTC  Veridia all-hands, Cambridge, in person and streamed to Basel and
+             remote. Alistair Vance and Naomi Okonjo-Bright. 20 minutes of
+             content, 40 minutes of questions. THE QUESTION TIME IS LONGER
+             THAN THE PRESENTATION AND THAT IS DELIBERATE.
+  07:00 UTC  Simultaneous: Basel all-hands led by Simone Buehler and Lena
+             Hofstetter, with Vance joining by video for questions at 07:45.
+  08:30 UTC  Narwhal all-hands, Warrington. Gareth Standish opens, Alistair
+             Vance and Naomi Okonjo-Bright follow. Standish speaks first and
+             says he chose this.
+  08:30 CET  Narwhal Wroclaw all-hands, Polish language, Mariusz Zalewski with
+             a Veridia representative present. Solidarnosc representatives
+             invited to attend.
+  10:00      Customers: top 40 accounts telephoned personally by their account
+             manager with an agreed script. Remainder by email.
+  10:00      Press release. Trade press briefed.
+  10:30      LinkedIn and website.
+  12:00      Suppliers and partners.
+  14:00      Second Q&A session for anyone who missed the morning, both
+             companies, video.
+  17:00      Written follow-up to every employee with the full FAQ.
+
+WEEK ONE
+  Day 2      Site visits. Vance and Okonjo-Bright at Warrington. Small group
+             sessions of 15 to 20 rather than another all-hands.
+  Day 3      Wroclaw visit, with an interpreter, including a session with
+             Solidarnosc.
+  Day 4      Open question inbox opened. Every question answered within 48
+             hours, publicly, including the uncomfortable ones.
+  Day 5      First weekly written update. To continue weekly for 12 weeks.
+
+-----------------------------------------------------------------
+4. WHAT WE SAY
+-----------------------------------------------------------------
+4.1  THE CORE MESSAGE - to both populations, identical:
+
+  "Veridia has agreed to acquire Narwhal Industrial. Together we will be a
+   company of about 730 people making both the analysers and the automation
+   that laboratories use.
+
+   We bought Narwhal because they are better at mechanical engineering than we
+   are. That is not a diplomatic way of saying something else - it is the
+   actual reason. Our own automation product had a design problem that cost us
+   eighteen months and a lot of customer goodwill, and Narwhal's engineers
+   would not have made that mistake.
+
+   Here is what we know. Here is what we do not know yet. Here is when we will
+   know it."
+
+4.2  WHAT IS NOT CHANGING - say this early and be specific:
+   - Nobody's employer changes. Contracts, terms, continuous service, notice
+     periods, all unchanged. This is a share purchase.
+   - Nobody's pay changes downward. Ever, as a result of this.
+   - Both sites continue. Warrington and Wroclaw are not being consolidated.
+   - Veridia's terms are not being reduced to fund this.
+   - Products, customers and commitments continue.
+
+4.3  WHAT WE INTEND TO DO - only where we mean it:
+   - Narwhal employees will move onto Veridia's pension contribution and
+     annual leave at the earliest practical date. This is an improvement and
+     it is a commitment.
+   - The field engineers currently engaged as contractors will be offered
+     employment.
+   - There will be a company-wide engagement survey within 90 days, and the
+     results will be published to everyone.
+
+4.4  WHAT WE DO NOT YET KNOW - say it plainly:
+   - Whether any roles will change or be reduced. WE WILL NOT SAY THERE WILL
+     BE NO REDUNDANCIES. What we will say is: no decision has been taken, we
+     will not make decisions about people's jobs behind closed doors, and if
+     any role is affected the person will hear it directly and first, with a
+     proper process.
+   - What the combined organisation structure looks like. Target: 90 days.
+   - Which systems will be used. Target: 6 months.
+   - Where offices will be. Nothing changes for at least 12 months.
+
+4.5  THE HARD QUESTIONS - answers agreed in advance, in the FAQ at Annex B:
+
+  "Will there be redundancies?"
+    "No decision has been taken. I am not going to promise you there will
+     never be any, because I would be making that promise without knowing
+     whether I could keep it, and you would remember. What I will promise is
+     this: no decision about anyone's job will be made without a proper
+     process, and nobody will find out from a rumour."
+
+  "Are our terms being levelled down?"
+    "No. Nobody's terms are being reduced. Where terms differ between the two
+     companies, we will move towards the better of the two, and that will take
+     time and money and we are committing to it."
+
+  "Is the Wroclaw site closing?"
+    "No. Wroclaw's manufacturing capability is one of the reasons for the
+     acquisition. We are committing capital investment there, and Mariusz will
+     hold us to it."
+
+  "Why did you not tell us before?"
+    "Because transactions like this are confidential until they are signed,
+     and a leak would have damaged both companies and both sets of employees.
+     I know that will feel unsatisfying. It is the honest answer."
+
+  "How long have you known?"
+    Give the real timeline. Do not obscure it. First conversation November
+     2025, exclusivity March 2026, signed today.
+
+  "How much did you pay?"
+    Give the figure once it is public. Do not be coy about it with employees
+     while it is in the trade press.
+
+  "Are the executives getting bonuses out of this?"
+    Answer honestly. Standish and the Narwhal management team have equity and
+     will receive proceeds. Veridia executives do not receive a transaction
+     bonus. Say both.
+
+-----------------------------------------------------------------
+5. WHAT WE WILL NOT DO
+-----------------------------------------------------------------
+  - Use the word "synergy" in any employee communication. It has one meaning
+    to an employee and it is not the finance one.
+  - Say "business as usual". It is not, and saying it insults people.
+  - Describe it as a merger. It is an acquisition and everyone can read.
+  - Announce on a Friday.
+  - Announce in December, or in the two weeks either side of the Wroclaw
+    summer shutdown.
+  - Let any employee learn of it from a customer, a journalist or LinkedIn.
+  - Circulate the role overlap model, in any form, to anyone outside the deal
+    team. If that document reaches employees, nothing else in this plan
+    matters.
+
+-----------------------------------------------------------------
+6. THE 90 DAYS AFTER
+-----------------------------------------------------------------
+  Week 1-2    Daily deal team standup. Question inbox answered within 48 hours.
+  Week 2-12   Weekly written update to all employees, both companies. Continue
+              even in weeks where there is nothing to say - "nothing has
+              changed this week" is itself information.
+  Week 4      Narwhal manager listening sessions run by Rachel Duffy and
+              Bernadette Astley-Quinn. No Veridia executives present.
+  Week 6      Terms harmonisation announcement - pension and annual leave.
+  Week 8      Contractor employment offers issued.
+  Week 12     Engagement survey, both populations, results published to
+              everyone including the bad ones.
+  Week 12     Organisation structure announced.
+
+6.1  THE SINGLE BIGGEST RISK IN THE 90 DAYS is a communications vacuum. In the
+     absence of information people assume the worst, and the worst is
+     redundancy. The weekly update exists to prevent the vacuum and must not
+     be allowed to lapse when the deal team gets busy, which is exactly when
+     it will be tempting.
+
+-----------------------------------------------------------------
+7. FIRST DRAFT - CPO OPENING REMARKS, VERIDIA ALL-HANDS
+-----------------------------------------------------------------
+Draft. To be revised.
+
+  "Most of you have heard a rumour at some point in the last few months. Some
+   of you asked the People team about it and were told we could not confirm or
+   deny anything. That was true and I know it was frustrating.
+
+   Here is what was happening. Since November we have been talking to a
+   company called Narwhal Industrial, in Warrington, who make laboratory
+   automation. This morning we signed an agreement to buy them.
+
+   They are bigger than us. Four hundred and ten people to our three hundred
+   and eighteen. From today we are a company of about seven hundred and thirty.
+
+   I want to say three things.
+
+   The first is that nothing about your employment changes today. Not your
+   contract, not your pay, not your terms, not who you work for. This is a
+   share purchase, and legally and practically your job is the same job it was
+   yesterday.
+
+   The second is that the people joining us have worse terms than you do. Less
+   pension, less leave, no private medical, statutory sick pay. We are going
+   to fix that, because I am not running a company where two people doing the
+   same job have different lives. It will cost us money and we have decided to
+   spend it. And I want to be equally clear: we are not paying for it by
+   reducing anything you have.
+
+   The third is the one you actually want the answer to, and I am not going to
+   dress it up. No decision has been taken about anybody's job. I am not going
+   to stand here and promise there will never be a redundancy at this company,
+   because I would be promising something I cannot know, and you would remember
+   that I said it.
+
+   What I will promise is that nobody at Veridia will find out about a decision
+   affecting their job from a rumour, from a colleague, or from me at an
+   all-hands. You will hear it from your manager, first, individually, with a
+   proper process.
+
+   We have forty minutes for questions and I would rather use all of them."
+
+-----------------------------------------------------------------
+ANNEXES (to be drafted at Gate 3)
+-----------------------------------------------------------------
+  Annex A  Manager briefing pack
+  Annex B  Full FAQ, both populations
+  Annex C  Customer scripts by segment
+  Annex D  Press release and trade press briefing
+  Annex E  Polish-language materials
+  Annex F  Solidarnosc engagement plan
+
+=================================================================
+STRICTLY CONFIDENTIAL - PROJECT UNICORN - INSIDE INFORMATION
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

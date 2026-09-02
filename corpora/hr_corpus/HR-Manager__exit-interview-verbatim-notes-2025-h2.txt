@@ -1,0 +1,258 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** RESTRICTED - PEOPLE TEAM AND CPO ONLY ***
+Exit Interview Verbatim Notes - H2 2025
+=================================================================
+Reference:     HR-EXIT-2025-H2
+Period:        1 July to 31 December 2025
+Compiled by:   Rachel Duffy, HR Business Partner
+                Lena Hofstetter, HR Manager Switzerland
+For:           Naomi Okonjo-Bright, Chief People Officer
+Date:          2026-01-22
+
+*** DO NOT CIRCULATE. THESE ARE ATTRIBUTABLE VERBATIM NOTES. ***
+
+Leavers are told that themes are reported to the Executive Committee in
+aggregate and that nothing attributable is shared with their manager without
+their explicit agreement. This document is the working record from which the
+aggregate report is produced. It must not be shared with any line manager, any
+Director, or the Executive Committee.
+
+The aggregate report (HR-EXIT-2025-H2-SUMMARY) is the circulating document.
+
+-----------------------------------------------------------------
+PERIOD SUMMARY
+-----------------------------------------------------------------
+  Leavers in period                    19
+  Voluntary resignations               14
+  End of fixed term                     2
+  Redundancy                            0
+  Dismissal                             1
+  Retirement                            1
+  Died in service                       1
+  Exit interviews offered              18 (not offered in the death in
+                                       service case)
+  Exit interviews completed            13 (72%)
+  Declined                              5
+
+  Voluntary turnover, annualised        9.1% (company)
+                                       14.2% (field service)
+                                        6.8% (engineering)
+                                       11.4% (support)
+
+-----------------------------------------------------------------
+1. VB-0312 - Duncan Threlfall - Senior Software Engineer, L3
+   Left 2025-08-29 - 4 years 2 months - to a Cambridge fintech
+   Interviewed by Rachel Duffy, 2025-08-22
+-----------------------------------------------------------------
+Reason given: money and progression.
+
+  "I'm not leaving unhappy. I'm leaving because they offered me twenty-two
+   thousand more and an L4 title and I would have been an idiot to say no."
+
+  "The honest version is I should have asked here first. I didn't because I
+   assumed the answer. That's on me and it's also on the fact that nobody has
+   ever told me what the top of my band is."
+
+  "The IC track came in a year too late for me. If it had existed in 2023 I'd
+   probably still be here."
+
+  "Best thing about this place is that when the reagent thing happened,
+   nobody lied. I've worked somewhere that would have."
+
+Rachel's note: he is right that he should have asked. He is also right that
+nothing in our process invited him to. Third departure in eighteen months
+citing the pre-v5 progression structure.
+
+-----------------------------------------------------------------
+2. VB-0319 - Neve Carmichael - Support Engineer, L2
+   Left 2025-09-12 - 3 years 4 months - to an NHS trust laboratory
+   Interviewed by Rachel Duffy, 2025-09-05
+-----------------------------------------------------------------
+Reason given: out-of-hours burden and a change of direction.
+
+  "The escalation rota broke me a bit. Not the work - the not knowing. You're
+   not on call but your phone goes anyway because you're the one who knows
+   that customer."
+
+  "First quarter of last year was relentless. Recall, then firmware, then the
+   SP-1 stuff, and it all lands in the same inbox."
+
+  "Aisha is the best manager I've had. She protected us as much as she could.
+   She couldn't protect us from the volume because there wasn't anyone to
+   give it to."
+
+  "I don't want anyone getting in trouble over this. It's a resourcing thing,
+   not a person thing."
+
+Rachel's note: she let her share options lapse despite three reminders. Fourth
+case. Now addressed by the reminder process approved in May 2026.
+
+-----------------------------------------------------------------
+3. VB-0326 - Adaeze Nwankwo - Field Service Engineer, L2
+   Left 2025-10-03 - 2 years 5 months - to a competitor
+   Interviewed by Rachel Duffy, 2025-09-26
+-----------------------------------------------------------------
+Reason given: travel burden and pay.
+
+  "I did eleven overnights in March. Eleven. I have a two-year-old."
+
+  "I asked about reducing the region twice. Both times I was told they were
+   recruiting. They probably were. It just never arrived."
+
+  "The new job is less interesting and it's forty minutes from my house. I've
+   thought about it a lot and I'd rather have the forty minutes."
+
+  "Priya was straight with me the whole way. She told me she couldn't fix it
+   in the time I needed it fixed. I respected that more than if she'd
+   promised."
+
+Rachel's note: the shoulder injury (OH-2025-006) is not cited as a reason and
+she was asked directly. She said it was handled well. Second field service
+departure in six months citing travel volume. Fed into the stress risk
+assessment.
+
+-----------------------------------------------------------------
+4. VB-0333 - Bartosz Wysocki - QC Analyst, L2 (Basel)
+   Left 2025-10-31 - 1 year 7 months - returned to Poland
+   Interviewed by Lena Hofstetter, 2025-10-24
+-----------------------------------------------------------------
+Reason given: personal, returning to family.
+
+  "Nothing is wrong here. My mother is unwell and I am the only son."
+
+  "One thing. The German. Everyone speaks English to be kind and it means
+   after eighteen months I still cannot follow the corridor conversation. I
+   would have liked to be made to learn."
+
+Lena's note: raised before by two others. The language budget exists and is
+underused. Suggest making a German course opt-out rather than opt-in for
+Basel-based non-German speakers.
+
+-----------------------------------------------------------------
+5. VB-0347 - [name withheld] - Account Executive, L2
+   Left 2025-11-14 - dismissal following ER-2025-017
+   Exit interview declined
+-----------------------------------------------------------------
+Declined. No notes.
+
+-----------------------------------------------------------------
+6. VB-0356 - [name withheld] - Support Engineering Team Lead, L3
+   Left 2025-11-28 - resigned during ER-2025-026
+   Exit interview declined
+-----------------------------------------------------------------
+Declined. Rachel's note: resignation submitted after the grievance outcome was
+communicated and before the sanction took effect. The grievance was upheld.
+Reference to be factual only.
+
+-----------------------------------------------------------------
+7. VB-0362 - [name withheld] - Field Service Engineer, L2
+   Left 2025-12-19 - resigned following ER-2025-031
+   Interviewed by Rachel Duffy, 2025-12-12
+-----------------------------------------------------------------
+  "I'm not going to pretend the driving thing wasn't my fault. It was."
+
+  "What I'd say is that when you're doing three hundred miles a day and you're
+   late for the fourth site, the speedometer is the only thing you can move."
+
+Rachel's note: he accepts the sanction and does not contest it. His second
+sentence is nonetheless the single most useful thing anyone said to me this
+period, and I have passed it, anonymised and with his permission, to Priya
+Anand for the field service review.
+
+-----------------------------------------------------------------
+8. VB-0368 - Hilary Prewett - Financial Controller, L4
+   Left 2025-12-31 - retirement after 6 years
+   Interviewed by Rachel Duffy, 2025-12-18
+-----------------------------------------------------------------
+  "I've enjoyed it enormously and I'm 63 and that's that."
+
+  "You are about to have a problem with your finance systems. Nobody has
+   invested in them since Series C because they're not customer-facing.
+   Whoever takes my job will spend their first year on it."
+
+  "The thing I'd say to Naomi: this company is honest in a way I have not seen
+   elsewhere in thirty years. Do not let it get smart. There will be a moment
+   where being smart is easier and you will have to choose."
+
+Rachel's note: her observation about finance systems has been passed to Gary
+Pemberton with her permission. Her second observation is recorded here without
+comment.
+
+-----------------------------------------------------------------
+9. VB-0374 - Callum Ross-Byrne - Marketing Manager, L3
+   Left 2025-12-05 - 2 years 1 month - to a larger competitor
+   Interviewed by Rachel Duffy, 2025-11-28
+-----------------------------------------------------------------
+Reason given: scope and ambition.
+
+  "Veridia sells a good product to people who already know they need it. It's
+   not a marketing problem, so there isn't much marketing to do."
+
+  "I asked for budget three times. Each time the answer was 'after the next
+   round'. There's always a next round."
+
+  "There's a lot of talk at the moment about the company doing something big.
+   I have no idea if it's true. I'll say that when people don't know what's
+   happening they invent something, and what they invent is usually worse than
+   the truth."
+
+Rachel's note: the third comment is one of four references to speculation
+about the company's direction across this period's interviews. See the
+compiled note at the end.
+
+-----------------------------------------------------------------
+10-13. FOUR FURTHER INTERVIEWS - SUMMARY ONLY
+-----------------------------------------------------------------
+Four remaining completed interviews (VB-0381 Applications L2, VB-0388 People
+Operations L1, VB-0395 Manufacturing L1 Basel, VB-0402 Commercial L2) produced
+no themes not already represented above. Full notes on file.
+
+-----------------------------------------------------------------
+THEMES FOR THE AGGREGATE REPORT
+-----------------------------------------------------------------
+  1. WORKLOAD CONCENTRATED IN Q1 2025. Cited by 6 of 13. The recall, the
+     firmware defect and the SP-1 programme landed together on the same
+     people. Already addressed through the stress risk assessment; noted here
+     because it continued to be cited into December, nine months later.
+
+  2. PAY AND BAND TRANSPARENCY. Cited by 5 of 13. The recurring pattern is
+     someone leaving for more money without having asked here first, because
+     they did not know what the range was. This is the single most actionable
+     theme and it points directly at the decision recorded in the career
+     framework at section 8.
+
+  3. PROGRESSION STRUCTURE PRE-V5. Cited by 3. Should decay now the IC track
+     exists.
+
+  4. FIELD SERVICE TRAVEL BURDEN. Cited by 2 of 2 field service leavers.
+
+  5. MANAGERS SPOKEN OF WELL. In 11 of 13 interviews the direct manager was
+     described positively and unprompted. Priya Anand and Aisha Rahman were
+     each named warmly by leavers who were leaving because of workload their
+     managers could not fix. That distinction matters and should be reported.
+
+  6. SPECULATION ABOUT COMPANY DIRECTION. Four of thirteen leavers referred
+     unprompted to rumours about the company "doing something", an
+     acquisition, or "something big". None had any information and none
+     claimed to. Two said the uncertainty had been a minor factor in their
+     decision to look elsewhere.
+
+     Reported to the CPO separately on 2026-01-08 rather than in the aggregate
+     report. Rachel's note: I do not know what if anything is behind this and
+     have not asked. What I can report is that people are talking, that the
+     absence of information is itself producing an effect, and that in my
+     experience speculation of this kind gets worse rather than better if it
+     is left alone.
+
+-----------------------------------------------------------------
+HANDLING
+-----------------------------------------------------------------
+This document: Rachel Duffy, Lena Hofstetter, Naomi Okonjo-Bright only.
+Aggregate report HR-EXIT-2025-H2-SUMMARY circulates to the Executive
+Committee. Theme 6 is excluded from the aggregate report at the CPO's
+direction and was reported to her verbally and by separate note.
+
+=================================================================
+RESTRICTED. Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

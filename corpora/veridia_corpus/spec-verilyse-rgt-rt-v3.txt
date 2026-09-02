@@ -1,0 +1,97 @@
+=================================================================
+VERIDIA BIOSYSTEMS - REAGENT SPECIFICATION SHEET
+=================================================================
+Product: VeriLyse RGT-RT Reticulocyte Stain
+Catalogue: VL-RT-250 (250 mL cartridge, 2 per case)
+Document Ref: DS-RGT-RT-003
+Revision: v3
+Revision Date: 2025-01-08
+Formulation revision: B (current). Revision A WITHDRAWN - see FSN-2024-006.
+Instrument: VeriScan 400 Pro ONLY
+
+-----------------------------------------------------------------
+INTENDED USE
+-----------------------------------------------------------------
+RGT-RT is a supravital fluorescent stain for the enumeration of reticulocytes
+on the VeriScan 400 Pro. The stain binds residual ribosomal RNA in immature
+erythrocytes, permitting their discrimination from mature erythrocytes by
+fluorescence intensity and the derivation of the immature reticulocyte fraction
+(IRF).
+
+RGT-RT IS NOT COMPATIBLE WITH THE VERISCAN 400. The VeriScan 400 has no
+reticulocyte channel and no fourth cartridge bay. An RGT-RT cartridge
+presented to a VeriScan 400 will be rejected with E-302 (reagent cartridge not
+recognised). Orders for RGT-RT against a site with no VeriScan 400 Pro on the
+account are flagged by order processing; this is a recurring source of
+confusion where a laboratory believes it operates a Pro and does not.
+
+-----------------------------------------------------------------
+COMPOSITION (nominal, revision B)
+-----------------------------------------------------------------
+Component                        | Concentration
+---------------------------------|------------------
+Polymethine fluorescent dye      | 0.09 g/L
+Buffered saline carrier          | to 1 L
+Stabiliser (revision B addition) | 0.15 g/L
+Antimicrobial preservative       | < 0.1%
+pH (25 C)                        | 7.0 +/- 0.1
+
+Revision B adds a stabiliser and is supplied in an amber cartridge with a
+revised storage statement. Revision A showed accelerated dye precipitation
+above 25 C, producing a negative reticulocyte bias and E-601 calibration
+failures. Revision A was withdrawn under FSN-2024-006 (2024-11-08).
+
+-----------------------------------------------------------------
+LOT NUMBERING
+-----------------------------------------------------------------
+Format: RT-YYYY-NNNN/R  (revision suffix A or B)
+Revision B cartridges: amber body, white label, blue cap.
+
+-----------------------------------------------------------------
+STORAGE AND STABILITY
+-----------------------------------------------------------------
+Unopened                         | 2-8 C, 12 months from manufacture
+                                 | DO NOT FREEZE
+On board after first pierce      | 60 days
+Light protection                 | Essential. Amber cartridge must not be
+                                 | transferred to a clear container.
+Equilibration before use         | 30 minutes at room temperature
+
+Note the shorter unopened shelf life (12 months) and on-board life (60 days)
+compared with the other VeriLyse reagents. Order accordingly; a laboratory
+running fewer than approximately 15 reticulocyte counts per week will discard
+stain on expiry rather than exhaust it.
+
+-----------------------------------------------------------------
+CALIBRATION AND QC
+-----------------------------------------------------------------
+The reticulocyte channel must be recalibrated after every stain lot change.
+This is not optional and is enforced by the instrument from firmware 4.1.0;
+the retic channel is locked out until calibration is accepted.
+
+Run both levels of VeriTrol RET control (VT-RET-2) after calibration. Expected
+recovery is within +/- 15 per cent of the assigned value at level 1 and +/- 10
+per cent at level 2.
+
+-----------------------------------------------------------------
+SAFETY SUMMARY
+-----------------------------------------------------------------
+Classified under CLP:
+  Skin Irrit. 2, H315
+  Eye Irrit. 2, H319
+Pictogram: GHS07. Signal word: Warning.
+
+The dye stains skin and fabric. Stains on skin are harmless and fade within
+several days.
+
+Full safety data sheet: SDS-RGT-RT rev 2.
+
+-----------------------------------------------------------------
+ORDERING
+-----------------------------------------------------------------
+VL-RT-250     | RGT-RT Reticulocyte Stain, 250 mL cartridge, case of 2
+VT-RET-2      | VeriTrol RET control material, 2 levels x 3 x 2 mL
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

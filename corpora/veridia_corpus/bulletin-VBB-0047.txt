@@ -1,0 +1,83 @@
+=====================================================
+VERIDIA BIOSYSTEMS - PRODUCT CHANGE NOTIFICATION
+=====================================================
+Reference: VBB-0047
+Date Issued: 2025-03-31
+Type: Product Change Notification (no safety impact)
+Affected Product: VeriLyse RGT-L3 Lyse Reagent (VL-L3-500)
+Effective from lot: L3-2025-0471
+Classification of change: Minor - no change to intended use, no change to
+                          performance claims, no revalidation required at
+                          customer sites.
+
+SUBJECT: RGT-L3 formulation revision C to revision D
+
+-----------------------------------------------------
+WHAT IS CHANGING
+-----------------------------------------------------
+The buffering system in RGT-L3 has been reformulated. Revision D replaces the
+previous organic buffer with a dual-buffer system that is substantially less
+sensitive to trace metal ion contamination in the incoming raw material stream.
+
+The change follows the investigation into FSN-2025-003 (see VBI-0087), in which
+a trace contaminant in a single raw material campaign was found to catalyse a
+slow oxidation of the buffering agent, producing a chromophore absorbing near
+535 nm.
+
+Revision D is identified by:
+  - Lot numbers from L3-2025-0471 onwards
+  - The suffix "/D" following the lot number on the cartridge label
+  - A revised cartridge label with a blue rather than grey identification band
+
+-----------------------------------------------------
+WHAT IS NOT CHANGING
+-----------------------------------------------------
+  - Catalogue number (VL-L3-500)
+  - Fill volume (500 mL)
+  - Storage conditions (2-25 C, do not freeze)
+  - Unopened shelf life (18 months from manufacture)
+  - On-board stability after opening (90 days)
+  - Intended use and instrument compatibility for VeriScan 400 and 400 Pro
+  - Instrument settings, calibration factors or QC target values
+
+No customer action is required at changeover beyond the normal lot changeover
+procedure in SOP-VBS-002.
+
+-----------------------------------------------------
+PERFORMANCE COMPARISON
+-----------------------------------------------------
+Method comparison of revision C (unaffected lot L3-2025-0433) against revision D
+(lot L3-2025-0471) on a VeriScan 400, n = 180 residual clinical specimens:
+
+  Analyte   Slope   Intercept    r        Bias at medical decision point
+  --------  ------  -----------  -------  ------------------------------
+  WBC       0.998   +0.02        0.9991   +0.4% at 4.0 x10^9/L
+  RBC       1.001   -0.01        0.9994   +0.1% at 4.5 x10^12/L
+  HGB       0.999   +0.3 g/L     0.9989   +0.2% at 100 g/L
+  PLT       1.003   -1.4         0.9976   -0.6% at 150 x10^9/L
+  NEUT%     0.997   +0.18        0.9962   within total allowable error
+  LYMPH%    1.004   -0.21        0.9958   within total allowable error
+
+Accelerated stability at 35 C for 12 weeks showed a baseline absorbance shift of
+0.004 AU for revision D against 0.061 AU for the affected revision C lots.
+
+-----------------------------------------------------
+TRANSITION ARRANGEMENTS
+-----------------------------------------------------
+Unaffected revision C stock (lots L3-2025-0421, L3-2025-0433 and earlier) may
+continue to be used until its labelled expiry. Revision C and revision D
+cartridges may be used on the same instrument, though not concurrently, and no
+crossover study is required.
+
+Distribution of revision D began 2025-04-07. All shipments from 2025-05-01 are
+revision D.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Dr Wen Li, R&D Reagents - wen.li@veridiabio.com
+Olu Adeyemi, Reagent Manufacturing Lead - olu.adeyemi@veridiabio.com
+Marcus Chen, QC Applications Specialist - marcus.chen@veridiabio.com
+=====================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=====================================================

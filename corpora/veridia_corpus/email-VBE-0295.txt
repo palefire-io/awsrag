@@ -1,0 +1,58 @@
+From: Priya Sundaram <ps2119@cam.ac.uk>
+To: info@veridiabio.com
+Date: Sun, 15 Mar 2026 22:41:18 +0000
+Subject: MPhil research - request for technical information on flagging algorithms
+X-Mailer: Roundcube Webmail
+
+Dear Sir/Madam,
+
+I am an MPhil student in Health Data Science at the University of Cambridge,
+working on a dissertation about false positive rates in automated haematology
+flagging and their downstream effect on laboratory workload.
+
+My supervisor is Dr Helen Ashby-Croft in the Department of Public Health and
+Primary Care, and she suggested I contact manufacturers directly rather than
+relying only on published literature, since much of the relevant detail is not
+published.
+
+I would be very grateful for any of the following, and I completely understand
+if some or all of it is commercially confidential:
+
+1. A description of the flagging algorithm categories used on the VeriScan 400
+   and 400 Pro - not the algorithm itself, but the taxonomy of flags and what
+   each is intended to detect.
+
+2. Any published or shareable data on flag rates in routine use. My literature
+   review has manufacturer-quoted sensitivity and specificity figures for
+   several platforms but almost nothing on what rate laboratories actually
+   experience.
+
+3. The distinction between the validated flag set and the advisory flags added
+   in firmware 4.3.0. I found this mentioned in a bulletin available on a
+   customer portal that appears to have been indexed publicly, and I am
+   interested in how a manufacturer decides which side of that line a flag
+   falls on. If that document was not meant to be public please tell me and I
+   will not cite it.
+
+4. Whether Veridia would be open to a short interview - 30 to 45 minutes - with
+   someone in applications or R&D about how flag thresholds are set and how the
+   trade-off between sensitivity and review workload is decided.
+
+I should be honest that I have nothing to offer in return except an
+acknowledgement and a copy of the dissertation. I am also aware that a student
+asking a company to explain how its algorithms work is a request that could
+reasonably be declined.
+
+If it helps: my interest here is not adversarial. My reading of the literature
+is that flag rates are the single biggest driver of biomedical scientist
+workload in routine haematology and that almost nobody studies them, and I
+would like that to be less true.
+
+Thank you for your time.
+
+Yours faithfully,
+
+Priya Sundaram
+MPhil Health Data Science
+University of Cambridge
+ps2119@cam.ac.uk

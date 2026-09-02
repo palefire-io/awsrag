@@ -1,0 +1,422 @@
+=================================================================
+*** STRICTLY CONFIDENTIAL - PROJECT UNICORN ***
+*** EXECUTIVE COMMITTEE AND NAMED DEAL TEAM ONLY ***
+=================================================================
+PROJECT UNICORN
+Human Resources Due Diligence Report - Narwhal Industrial Holdings Ltd
+=================================================================
+Report reference: UNI-DD-HR-001
+Version:          2 (final)
+Date:             2026-06-30
+Prepared by:      Naomi Okonjo-Bright, Chief People Officer
+Contributors:     Denise Kaur, Reward and Benefits Manager
+                  Rachel Duffy, HR Business Partner
+                  Marchmont Sayers LLP (employment)
+                  Kaczmarek Wiszniewski sp.k. (Polish employment)
+                  Pilkington Rowe (pensions - see UNI-DD-PEN-001)
+Data room:        Documents reviewed to 2026-06-18. 412 documents in the HR
+                  folder. Management interviews with the Narwhal HR Director
+                  (2026-05-14 and 2026-06-09) and Finance Director
+                  (2026-05-21).
+Classification:   Strictly Confidential - Inside Information
+
+-----------------------------------------------------------------
+1. SCOPE AND LIMITATIONS
+-----------------------------------------------------------------
+1.1  This report covers workforce composition and cost, terms and conditions,
+     employment status, reward, pensions (in outline - the detailed report is
+     separate), employee relations, litigation, compliance, HR systems and
+     data, culture, and the TUPE and consultation position.
+
+1.2  LIMITATIONS THE READER MUST HOLD IN MIND:
+     a) No access to individual employees. All information is from the vendor
+        or from management interviews.
+     b) The HR data provided is of poor quality. See section 9. Several
+        figures in this report carry an uncertainty we cannot reduce without
+        completion access.
+     c) No access to the Wroclaw workforce or to the Solidarnosc
+        representatives. Polish position is assessed from documents and from
+        Polish counsel's reading of them.
+     d) Narwhal's HR Director, Bernadette Astley-Quinn, joined in January 2026
+        and is candid that she inherited a function with minimal
+        documentation. Her candour has been genuinely helpful and several
+        findings in this report were volunteered by her rather than
+        discovered.
+
+-----------------------------------------------------------------
+2. WORKFORCE AT A GLANCE
+-----------------------------------------------------------------
+  Total headcount (2026-03-31)                       410
+    Warrington, UK                                   265
+    Wroclaw, Poland                                  145
+  Plus contractors engaged directly                   47
+    of which "self-employed" field engineers          34  ** see section 5
+  Total employment cost FY2025           GBP 22.4M
+  Average tenure                              4.1 years  (Veridia 3.8)
+  Voluntary turnover FY2025                      22.0%    (Veridia 9.1%)
+  Turnover, Wroclaw manufacturing                31.0%
+  Turnover, Warrington R&D                        8.0%
+  Female representation overall                   28.0%   (Veridia 47%)
+  Female representation, senior (equiv L4+)       14.0%   (Veridia 34%)
+  Union recognition                     Solidarnosc at Wroclaw only
+  Employee engagement survey            None conducted since 2022
+
+2.1  The 22 per cent turnover figure is the single most informative number in
+     this report. It is 2.4 times Veridia's. In manufacturing at Wroclaw it is
+     31 per cent, which for a machining operation dependent on skilled
+     operators is a serious operational risk as well as a cost.
+
+2.2  The R&D figure of 8 per cent is genuinely good and is the group we most
+     want to retain.
+
+-----------------------------------------------------------------
+3. TERMS AND CONDITIONS
+-----------------------------------------------------------------
+3.1  UK terms are materially less generous than Veridia's:
+
+  Provision            Narwhal                    Veridia
+  -------------------  -------------------------  ------------------------
+  Annual leave         22 days + bank holidays    27 rising to 30 + BH
+  Pension employer     4% (auto-enrolment
+                       minimum, on qualifying
+                       earnings)                  8% to 10% on full salary
+  Private medical      Senior managers only       All employees, family
+                       (14 people)                cover, no excess
+  Life assurance       2x salary                  4x salary
+  Company sick pay     Statutory only             4-13 weeks full pay
+  Primary carer leave  Statutory only             26 weeks full pay
+  Secondary carer      Statutory 2 weeks          8 weeks full pay
+  Learning budget      None                       GBP 1,500 + 5 days
+
+3.2  THIS IS THE HARDEST PRACTICAL PROBLEM IN THE TRANSACTION AND IT IS NOT
+     THE PENSION.
+
+     On a TUPE transfer, transferring employees keep their existing terms.
+     Harmonising downwards is unlawful where the reason is the transfer.
+     Harmonising upwards is lawful, is expensive, and is what we would do.
+
+     Cost of harmonising the 265 UK employees to Veridia terms:
+       Pension (4% to 8% on full salary)      GBP 1.42M per annum
+       Annual leave (22 to 27 days)           GBP 0.61M per annum equivalent
+       Private medical                        GBP 0.31M per annum
+       Life assurance and income protection   GBP 0.09M per annum
+       Company sick pay (accrual estimate)    GBP 0.18M per annum
+       Family leave (accrual estimate)        GBP 0.12M per annum
+       Learning budget                        GBP 0.40M per annum
+       -------------------------------------  ----------------------
+       TOTAL ANNUAL COST OF HARMONISATION     GBP 3.13M per annum
+
+3.3  GBP 3.13M per annum against modelled synergies of GBP 3.1M annualised.
+     The harmonisation cost cancels the entire synergy case.
+
+3.4  THE OPTIONS, STATED PLAINLY:
+
+     (a) Do not harmonise. Run two sets of terms indefinitely. This is lawful.
+         It is also, in the CPO's assessment, corrosive: two people doing the
+         same job on the same site, one with family private medical and 27
+         days and one with neither. Veridia has no experience of operating
+         this way and its culture is not built for it.
+
+     (b) Harmonise fully. GBP 3.13M per annum. The synergy case does not
+         survive it and the Board would be approving a transaction on a
+         different financial basis than the one modelled.
+
+     (c) Harmonise partially and over time - pension and leave first, benefits
+         over three years. Approximately GBP 1.9M in year one rising to
+         GBP 3.13M by year four. This is the CPO's recommendation and it is
+         still not cheap.
+
+     (d) Reduce Veridia's own terms to converge. NOT RECOMMENDED AND THE CPO
+         WILL NOT SUPPORT IT. It would be a fundamental breach of trust with
+         318 existing employees to fund the acquisition of a company they did
+         not ask us to buy.
+
+3.5  Recommendation: option (c), costed into the model at Gate 2, with the
+     pension and annual leave harmonised at completion and the remainder over
+     36 months. The Board should be told that the synergy case is materially
+     weaker than modelled.
+
+-----------------------------------------------------------------
+4. POLAND - WROCLAW
+-----------------------------------------------------------------
+4.1  145 employees. Manufacturing and machining. Solidarnosc recognised since
+     2017.
+
+4.2  A company collective agreement (Zakladowy Uklad Zbiorowy Pracy) is in
+     force, registered with the District Labour Inspectorate, and provides:
+       - severance above the statutory scale: 3 months' pay at under 2 years'
+         service, 6 months at 2 to 8 years, 12 months above 8 years, against
+         a statutory maximum of 3 months
+       - a guaranteed annual increase of at least CPI
+       - restrictions on outsourcing of production
+       - a consultation obligation on any change affecting more than 10
+         employees, with a 30-day period
+
+4.3  The collective agreement survives a transfer of undertaking under Article
+     23-1 of the Polish Labour Code and cannot be unilaterally terminated for
+     12 months following the transfer.
+
+4.4  CONSEQUENCE: the modelled Wroclaw synergy of GBP 0.4M through
+     consolidation of 9 roles would cost approximately GBP 0.55M in severance
+     under the collective agreement, before any consultation risk. It is
+     value-destructive in year one and marginal by year three. Polish counsel
+     recommends it be removed from the model.
+
+4.5  Works council: none, but a works council may be established on the
+     request of 10 per cent of employees, and Solidarnosc has raised it twice.
+     A change of control is a plausible trigger.
+
+4.6  There is one Polish labour court claim outstanding. See section 6.
+
+-----------------------------------------------------------------
+5. EMPLOYMENT STATUS - THE CONTRACTOR POPULATION
+-----------------------------------------------------------------
+5.1  Narwhal engages 34 field service engineers as self-employed contractors
+     through personal service companies. They have been engaged in this way
+     since 2016.
+
+5.2  On the documents reviewed, these engagements have the following features:
+       - Narwhal-branded uniform and vehicle livery
+       - Narwhal allocates the work; the contractor cannot decline
+       - No right of substitution in practice; the contract contains one but
+         Narwhal confirmed it has never been exercised and management said it
+         "wouldn't be allowed"
+       - Narwhal-provided tools, parts stock and diagnostic equipment
+       - Contractors appear on the Narwhal customer-facing engineer list
+       - Average engagement length 4.7 years; longest 9 years
+       - Several work exclusively for Narwhal
+
+5.3  MARCHMONT SAYERS' ASSESSMENT: at least 26 of the 34 are very likely to be
+     employees or workers at law, and the off-payroll working rules (IR35)
+     apply to the engagements from April 2021 with Narwhal as the client
+     responsible for the status determination. No status determination
+     statements have been issued.
+
+5.4  Exposure:
+       PAYE and NIC, 4 years, 26 engagements     GBP 1.42M
+       Interest                                  GBP 0.21M
+       Penalties (assuming careless not
+         deliberate)                             GBP 0.28M
+       ----------------------------------------  ----------
+       Estimated HMRC exposure                   GBP 1.91M
+
+       Plus employment rights exposure: holiday pay, unfair dismissal rights,
+       pension auto-enrolment arrears. Not separately quantified; Marchmont
+       Sayers estimate a further GBP 0.4M to GBP 0.9M if claims were brought.
+
+5.5  This is a known-unknown to Narwhal management. Bernadette Astley-Quinn
+     raised it with her Board in March 2026 and volunteered it to us before we
+     found it. Her memorandum to the Narwhal Board is in the data room and it
+     is a good document. No action has been taken.
+
+5.6  RECOMMENDATION: specific indemnity from the sellers, uncapped as to time
+     for the HMRC element, backed by an escrow of not less than GBP 2.5M for
+     four years. If the sellers will not give it, the price must move by at
+     least that amount. Do not accept a general warranty; this is a known
+     issue and a known issue is not covered by a warranty against the unknown.
+
+5.7  POST-COMPLETION: these 26 people become Veridia's problem on day one and
+     they are field service engineers, which is the group Veridia is already
+     short of. The right answer is almost certainly to employ them properly
+     on Veridia terms, which costs money and which they will overwhelmingly
+     welcome. It also increases the Veridia field service establishment by 26
+     at a stroke, which materially changes the picture described in the 2025
+     stress risk assessment - in a good way.
+
+-----------------------------------------------------------------
+6. LITIGATION AND EMPLOYEE RELATIONS
+-----------------------------------------------------------------
+Detailed schedule at UNI-DD-HR-002. Summary:
+
+6.1  ET CLAIM 1 - unfair dismissal and disability discrimination. Former
+     production supervisor, Warrington, dismissed on capability grounds
+     following long-term absence. No occupational health referral was
+     obtained at any point. Marchmont Sayers assess prospects of successfully
+     defending as POOR. Estimated exposure GBP 45,000 to GBP 95,000.
+
+6.2  ET CLAIM 2 - equal pay. Female quality engineer, comparator a male
+     colleague at the same grade. Narwhal has no job evaluation scheme and no
+     equal pay audit. Marchmont Sayers cannot assess prospects without a job
+     evaluation exercise Narwhal has not done. Estimated exposure
+     GBP 30,000 to GBP 180,000, and a material risk of further claims if it
+     succeeds given the 21.4 per cent pay gap.
+
+6.3  POLISH LABOUR COURT - unlawful termination during a protected period.
+     Employee dismissed while on sick leave. Polish counsel assess prospects
+     of defending as POOR; reinstatement is the primary remedy in Poland and
+     is a realistic outcome. Exposure PLN 180,000 plus reinstatement.
+
+6.4  HOLIDAY PAY - historic underpayment. Narwhal has calculated holiday pay
+     on basic pay only, excluding regular overtime and shift premia, since at
+     least 2018. Following Chief Constable of PSNI v Agnew the series of
+     deductions is not broken by a three-month gap.
+       Estimated exposure, UK, all affected employees   GBP 1.06M
+     No claim has been brought. Narwhal is aware; the finance director
+     described it as "on the list".
+
+6.5  GRIEVANCES: 14 raised in 24 months across 410 employees. Veridia's rate
+     is 7 in 18 months across 300. Adjusted for headcount, Narwhal's grievance
+     rate is approximately 1.5 times ours. Of the 14, 9 concerned a manager's
+     behaviour and 3 concerned the same manager, who remains in post.
+
+-----------------------------------------------------------------
+7. REWARD AND PAY EQUITY
+-----------------------------------------------------------------
+7.1  No pay bands. No job evaluation. No structured pay review. Increases are
+     decided by the line manager and approved by the Finance Director, with no
+     calibration and no equality analysis.
+
+7.2  Gender pay gap (UK, April 2025 snapshot):
+       Mean hourly gap        21.4%   (Veridia 11.4%)
+       Median hourly gap      18.9%   (Veridia 9.8%)
+       Mean bonus gap         34.1%   (Veridia 18.2%)
+     Published as required. No action plan published, which is not unlawful
+     but is now unusual and is noticed.
+
+7.3  Denise Kaur's benchmarking (UNI-DD-HR-004) finds Narwhal pays below
+     market median at every level, with the gap widening at senior grades. On
+     transfer to Veridia bands, 41 of 265 UK employees would sit below the
+     Veridia band minimum for their assessed level, requiring immediate
+     uplift. Cost approximately GBP 0.38M per annum and included in the
+     harmonisation figure at 3.2.
+
+7.4  The absence of any pay structure is an opportunity as well as a risk. A
+     population with no bands can be mapped onto Veridia's framework at
+     completion without unpicking an existing structure. Denise Kaur's view is
+     that this is materially easier than harmonising two structured systems.
+
+-----------------------------------------------------------------
+8. PENSIONS - SUMMARY ONLY
+-----------------------------------------------------------------
+Full report at UNI-DD-PEN-001. In summary: a closed defined benefit scheme
+with a GBP 9.2M technical provisions deficit and a GBP 19.4M buyout deficit,
+whose trustees will engage on the change of control and are likely to seek
+GBP 4M to GBP 7M of mitigation, possibly with a parent company guarantee. This
+is the largest single risk to the transaction and is capable of preventing it.
+
+-----------------------------------------------------------------
+9. HR SYSTEMS AND DATA
+-----------------------------------------------------------------
+Full assessment at UNI-DD-HR-003. In summary: three systems, no single source
+of truth, headcount reconciles to within 7 across sources, no records of
+processing activity, retention never applied, and eleven years of leaver data
+held including bank details and health records. The data protection position
+is poor and Veridia would inherit it. Estimated remediation GBP 340,000 and
+nine months.
+
+-----------------------------------------------------------------
+10. CULTURE
+-----------------------------------------------------------------
+10.1 We have not been able to survey employees and will not until completion.
+     What follows is assessed from documents, from turnover data, from
+     grievance records and from two management interviews. It is the softest
+     section of this report and it is the one the CPO regards as most
+     important.
+
+10.2 Indicators pointing one way:
+       - 22 per cent turnover, 31 per cent in Wroclaw manufacturing
+       - No engagement survey since 2022; the 2022 survey showed 41 per cent
+         favourable on "I would recommend this company as a place to work"
+       - 14 grievances in 24 months, 3 concerning the same manager in post
+       - No exit interview process
+       - No learning budget, no career framework, no levelling
+       - A contractor population of 34 people doing employee jobs for up to
+         nine years
+       - Average 47.2 contracted-plus-overtime hours in manufacturing
+
+10.3 Indicators pointing the other way:
+       - R&D turnover of 8 per cent and average tenure of 7.4 years in that
+         function. Something there is working.
+       - Bernadette Astley-Quinn was hired in January 2026 precisely to fix
+         this and is doing so. She volunteered several of the findings in this
+         report.
+       - Gareth Standish is well regarded by his people. Multiple documents
+         reference his personal involvement in individual cases.
+       - Manufacturing quality is excellent. That does not happen in a
+         demoralised operation.
+
+10.4 THE CPO'S ASSESSMENT.
+
+     This is not a bad company. It is an under-managed one. The people
+     practices are what a founder-led industrial business looks like when
+     nobody has ever been given the job of building them, and a competent HR
+     Director arrived four months ago and started.
+
+     The risk is not that Narwhal's culture is toxic. It is that Veridia's
+     culture is unusually good, is not written down anywhere except in
+     policies that people actually read, and depends on about forty people who
+     have been here since it was fifty people. Adding 410 people who have
+     never experienced it, in an organisation where they will be the
+     majority, is a real threat to it.
+
+     I want it recorded that the model contains no line item for this and that
+     I do not know how to put one in.
+
+-----------------------------------------------------------------
+11. QUANTIFIED EXPOSURE SUMMARY
+-----------------------------------------------------------------
+  One-off / historic
+    IR35 and employment status (HMRC)         GBP 1.91M
+    Historic holiday pay                      GBP 1.06M
+    Employment tribunal claims (mid case)     GBP 0.17M
+    Polish labour court                       GBP 0.04M
+    HR systems and data remediation           GBP 0.34M
+    Pension mitigation (central case)         GBP 5.50M
+    ---------------------------------------   ----------
+    TOTAL ONE-OFF                             GBP 9.02M
+
+  Recurring
+    Terms harmonisation (option c, at year 4) GBP 3.13M per annum
+    Below-band-minimum uplifts (in the above) (GBP 0.38M)
+    ---------------------------------------   ----------
+    RECURRING                                 GBP 3.13M per annum
+
+11.1 Against an indicative enterprise value of GBP 62M to GBP 68M and modelled
+     synergies of GBP 3.1M per annum.
+
+11.2 THE HEADLINE FINDING FOR THE BOARD: the people costs of this transaction
+     approximately cancel the modelled synergies on a recurring basis, and add
+     GBP 9M of one-off exposure. That does not make it a bad transaction - the
+     strategic case is capability, not synergy - but it does mean the
+     transaction must be justified on the strategic case alone.
+
+-----------------------------------------------------------------
+12. RECOMMENDATIONS
+-----------------------------------------------------------------
+  R1  Specific indemnity and GBP 2.5M escrow for the employment status
+      exposure. Non-negotiable.
+  R2  Specific indemnity for historic holiday pay.
+  R3  Price adjustment for the pension mitigation, treated as a certainty
+      rather than a contingency.
+  R4  Remove the Wroclaw consolidation synergy from the model. It is
+      value-destructive under the collective agreement.
+  R5  Re-model the synergy case with terms harmonisation on option (c)
+      included. Present the revised number to the Board at Gate 2.
+  R6  Employ the 26 contractors properly at completion, on Veridia terms.
+  R7  No field service headcount reduction in year one. See section 7 of this
+      report and the 2025 stress risk assessment.
+  R8  Bring Priya Anand inside the tent before Gate 2. The field service
+      integration is the largest single people workstream and is currently
+      being planned without the person who runs it.
+  R9  Engagement survey at Narwhal within 90 days of completion, run by
+      Veridia, with the results published to both populations.
+  R10 A named executive owner for culture integration, with a budget, reporting
+      to the Board quarterly for three years. The CPO's view is that without
+      this, section 10 becomes a prediction rather than a risk.
+
+-----------------------------------------------------------------
+SIGN-OFF
+-----------------------------------------------------------------
+Naomi Okonjo-Bright, Chief People Officer
+2026-06-30
+
+"I support this transaction on the strategic case. I do not support it on the
+ synergy case as currently modelled, and I have said so to the CFO. If the
+ Board proceeds, it should do so knowing that the people cost is real, that it
+ is roughly the size of the synergy, and that the cultural risk is the one
+ nobody can price and the one most likely to determine whether this works."
+
+=================================================================
+STRICTLY CONFIDENTIAL - PROJECT UNICORN - INSIDE INFORMATION
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

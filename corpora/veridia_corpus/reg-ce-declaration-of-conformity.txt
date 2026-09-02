@@ -1,0 +1,132 @@
+=================================================================
+EC DECLARATION OF CONFORMITY
+Directive 98/79/EC on in-vitro diagnostic medical devices
+=================================================================
+Document Ref: DOC-CE-VS4-006
+Revision:     6
+Date of issue: 2025-05-22
+Supersedes:   DOC-CE-VS4-005 (2024-05-10)
+
+-----------------------------------------------------------------
+MANUFACTURER
+-----------------------------------------------------------------
+Veridia BioSystems Ltd.
+41 Hurst Way, Cambridge CB4 0WS, United Kingdom
+Company registration: England and Wales 10483726
+SRN (EUDAMED): GB-MF-000104837
+
+AUTHORISED REPRESENTATIVE IN THE EUROPEAN UNION
+Veridia BioSystems Ireland Ltd.
+Block C, Riverside Business Park, Sir John Rogerson's Quay, Dublin 2, Ireland
+SRN (EUDAMED): IE-AR-000027714
+Contact: eu-rep@veridiabio.com
+
+SWISS AUTHORISED REPRESENTATIVE
+Veridia BioSystems Schweiz GmbH
+Klybeckstrasse 141, 4057 Basel, Switzerland
+Swissmedic establishment identifier: CHE-419.882.663
+
+-----------------------------------------------------------------
+DEVICES
+-----------------------------------------------------------------
+  VeriScan 400 Benchtop Haematology Analyser
+    Model VS4-100, VS4-100-AL
+    Basic UDI-DI 5060847220VS4100XN
+
+  VeriScan 400 Pro Benchtop Haematology Analyser
+    Model VS4-200P, VS4-200P-AL
+    Basic UDI-DI 5060847220VS4200PXP
+
+  VeriLyse RGT-D5 Standard Diluent        VL-D5-500
+  VeriLyse RGT-L3 Lyse Reagent            VL-L3-500
+  VeriLyse RGT-CL Cleaning Solution       VL-CL-250
+  VeriLyse RGT-RT Reticulocyte Stain      VL-RT-250
+  VeriTrol Control Materials              VT-CTRL-3, VT-CTRL-2, VT-RET-2,
+                                          VT-BF-2, VT-LIN-6
+
+-----------------------------------------------------------------
+DECLARATION
+-----------------------------------------------------------------
+We, Veridia BioSystems Ltd., declare under our sole responsibility that the
+devices identified above are in conformity with the provisions of Council
+Directive 98/79/EC of 27 October 1998 on in-vitro diagnostic medical devices,
+and with the essential requirements of Annex I thereof.
+
+Conformity assessment route: Annex III (EC Declaration of Conformity),
+self-declaration. The devices are not listed in Annex II List A or List B and
+are not devices for self-testing. Notified Body involvement is not required
+under this Directive for these devices.
+
+The devices also conform to:
+  Directive 2011/65/EU (RoHS), as amended
+  Regulation (EC) No 1907/2006 (REACH), in respect of substance content
+
+-----------------------------------------------------------------
+HARMONISED STANDARDS APPLIED
+-----------------------------------------------------------------
+EN ISO 13485:2016            Quality management systems
+EN ISO 14971:2019            Risk management
+EN ISO 15223-1:2021          Symbols to be used with information supplied
+EN ISO 18113-1:2022          Information supplied by the manufacturer - terms
+EN ISO 18113-2:2022          Reagents for professional use
+EN ISO 18113-3:2022          Instruments for professional use
+EN 61010-1:2010/A1:2019      Safety requirements
+EN 61010-2-101:2017          Particular requirements for IVD equipment
+EN 61326-1:2013              EMC requirements
+EN 61326-2-6:2013            EMC - particular requirements for IVD equipment
+EN 62366-1:2015/A1:2020      Usability engineering
+EN 62304:2006/A1:2015        Medical device software
+EN ISO 20916:2019            Clinical performance studies
+EN ISO 23640:2015            Stability evaluation of IVD reagents
+EN 60825-1:2014              Laser safety (VeriScan 400 Pro only)
+EN ISO 17511:2020            Metrological traceability of assigned values
+
+-----------------------------------------------------------------
+TRANSITIONAL STATEMENT - REGULATION (EU) 2017/746
+-----------------------------------------------------------------
+Directive 98/79/EC has been repealed and replaced by Regulation (EU) 2017/746
+(IVDR). The devices identified above are placed on the EU market under the
+transitional provisions of Article 110 IVDR as amended.
+
+Veridia BioSystems Ltd confirms:
+  (a) the devices were lawfully placed on the market under Directive 98/79/EC
+      before 26 May 2022;
+  (b) there has been no significant change in design or intended purpose;
+  (c) a quality management system compliant with Article 10(8) IVDR is in
+      place, audited by Notified Body 0086 in April 2025;
+  (d) a formal application for conformity assessment was lodged with Notified
+      Body 0086 on 17 June 2024 and a written agreement is in place;
+  (e) the IVDR requirements relating to post-market surveillance, market
+      surveillance, vigilance and registration of economic operators and
+      devices are applied in place of the corresponding Directive
+      requirements.
+
+Current status of the IVDR conformity assessment is maintained at
+reg-ivdr-transition-summary.txt and is available on request.
+
+-----------------------------------------------------------------
+TECHNICAL DOCUMENTATION
+-----------------------------------------------------------------
+Held at the manufacturer's registered address and available to competent
+authorities on request. Retained for the lifetime of the device plus 10 years.
+
+-----------------------------------------------------------------
+SIGNATURE
+-----------------------------------------------------------------
+Signed for and on behalf of Veridia BioSystems Ltd.
+
+  Dr Elena Marchetti
+  Chief Scientific Officer
+  Cambridge, United Kingdom
+  22 May 2025
+
+  Sarah Lindgren
+  Regulatory Affairs Manager
+  Cambridge, United Kingdom
+  22 May 2025
+
+=================================================================
+This is a text rendering of a controlled document. The signed original,
+bearing wet signatures and the company seal, is held in the quality system.
+Certified copies available on request from regulatory@veridiabio.com.
+=================================================================

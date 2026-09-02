@@ -1,0 +1,146 @@
+=================================================================
+VERIDIA BIOSYSTEMS - EMPLOYEE HANDBOOK
+Index and Reading Guide
+=================================================================
+Document:      HR-GDE-001
+Version:       6
+Effective:     2026-01-01
+Owner:         Naomi Okonjo-Bright, Chief People Officer
+Applies to:    All employees, United Kingdom and Switzerland
+
+Veridia does not have a single handbook document. We have a set of policies,
+each owned by a named person, each versioned, and each intended to be read on
+its own. This index tells you what exists and which parts you actually need.
+
+None of these documents is contractual unless your contract says so. Your
+contract of employment is the contractual document.
+
+-----------------------------------------------------------------
+IF YOU HAVE JUST JOINED, READ THESE FOUR
+-----------------------------------------------------------------
+  User__policy-onboarding-new-starter-v4.txt
+  User__onboarding-first-90-days-guide.txt
+  User__code-of-conduct-v4.txt
+  Your benefits handbook - UK or Switzerland
+
+Everything else can wait until you need it.
+
+-----------------------------------------------------------------
+JOINING AND LEAVING
+-----------------------------------------------------------------
+  Onboarding and new starters      User__policy-onboarding-new-starter-v4.txt
+  Week one agenda                  User__onboarding-induction-agenda-week-1.txt
+  Your first 90 days               User__onboarding-first-90-days-guide.txt
+  Probation                        User__policy-probation-period-v3.txt
+  Leavers and offboarding          User__policy-offboarding-leavers-v3.txt
+  Leaver checklist                 User__offboarding-exit-checklist-employee.txt
+
+-----------------------------------------------------------------
+YOUR LEVEL AND YOUR CAREER
+-----------------------------------------------------------------
+  Career framework                 User__career-framework-overview-v5.txt
+  Levels and titles                User__lookup-job-levels-and-titles.csv
+  Levelling - engineering          User__levelling-guide-engineering-v5.txt
+  Levelling - commercial, support
+    and corporate                  User__levelling-guide-commercial-and-support-v3.txt
+  Promotion and progression        User__policy-promotion-and-progression-v4.txt
+  Performance review cycle         User__policy-performance-review-cycle-v6.txt
+  Internal mobility and
+    secondments                    User__policy-internal-mobility-and-secondments.txt
+  Learning and development         User__policy-learning-and-development-budget.txt
+
+-----------------------------------------------------------------
+PAY, BENEFITS AND TIME OFF
+-----------------------------------------------------------------
+  Benefits - United Kingdom        User__benefits-handbook-uk-2026.txt
+  Benefits - Switzerland           User__benefits-handbook-switzerland-2026.txt
+  Benefits comparison table        User__lookup-benefits-summary-by-location.csv
+  Pension (UK)                     User__policy-pension-uk-v4.txt
+  Private medical insurance (UK)   User__policy-private-medical-insurance-v3.txt
+  Annual leave                     User__policy-annual-leave-v5.txt
+  Public holidays 2026             User__lookup-uk-and-ch-public-holidays-2026.csv
+  Sickness and sick pay            User__policy-sick-pay-and-absence-v5.txt
+  Family leave                     User__policy-family-leave-v4.txt
+  Expenses and travel              User__policy-expenses-and-travel-v6.txt
+  Employee referral scheme         User__policy-employee-referral-scheme.txt
+
+-----------------------------------------------------------------
+HOW WE WORK
+-----------------------------------------------------------------
+  Code of conduct                  User__code-of-conduct-v4.txt
+  Hybrid and flexible working      User__policy-hybrid-working-v3.txt
+  Equity, diversity and inclusion  User__policy-equity-diversity-inclusion-v3.txt
+
+-----------------------------------------------------------------
+IF SOMETHING IS WRONG
+-----------------------------------------------------------------
+  Grievance and dignity at work    User__policy-grievance-and-dignity-at-work-v4.txt
+  Speak up (whistleblowing)        User__policy-whistleblowing-speak-up-v3.txt
+  Frequently asked questions       User__faq-people-team-common-questions.txt
+
+-----------------------------------------------------------------
+POLICIES NOT IN THIS SET
+-----------------------------------------------------------------
+Held elsewhere because they are owned by other functions. Ask the owner or
+look on the intranet.
+
+  Health and safety                Facilities
+  Information security and
+    acceptable use                 Yusuf Demir, Cloud Operations
+  Data protection and privacy      Ruth Amankwah, Data Protection Officer
+  Quality system and GxP training  Simone Buehler, QA Manager
+  Anti-bribery detail              Sunita Raval, General Counsel
+  Disciplinary procedure           People team - issued on request; it is not
+                                   published generally because it is used
+                                   rarely and is better explained by a person
+  Redundancy procedure             People team - as above
+  Driving at work                  Priya Anand, Field Service Engineering
+
+Some People team documents are restricted to managers - pay band tables, the
+manager's guide to pre-employment screening, and case-handling guidance. If
+you need something from one of them, ask the People team rather than assuming
+the answer is no. Most of what is in them is explained in the employee-facing
+policies above.
+
+-----------------------------------------------------------------
+WHO OWNS WHAT
+-----------------------------------------------------------------
+  Naomi Okonjo-Bright   Chief People Officer. Everything, ultimately. EDI,
+                        hybrid working, the executive-level cases.
+  Rachel Duffy          HR Business Partner (UK). Onboarding, probation,
+                        leavers, sickness, family leave, grievances,
+                        learning and development.
+  Lena Hofstetter       HR Manager (Switzerland). All of the above for Basel,
+                        plus Swiss employment law, permits and payroll.
+  Denise Kaur           Reward and Benefits. Pay, bands, pension, insurance,
+                        the career framework, performance and promotion.
+  Tobias Frankl         Talent Acquisition. Hiring, referrals, internal
+                        mobility.
+  Ollie Kettering       People Operations. Systems, leave, the FAQ, and
+                        almost every practical question you have.
+  Sunita Raval          General Counsel. Code of conduct, speak up, conflicts,
+                        gifts and hospitality.
+
+-----------------------------------------------------------------
+HOW THESE DOCUMENTS ARE MAINTAINED
+-----------------------------------------------------------------
+Every policy shows a version, an effective date, an owner and a review date.
+If you are reading one whose review date has passed, it is still in force -
+tell the owner and they will either revise it or extend it, and either way
+they will be glad you noticed.
+
+Material changes are announced in the weekly bulletin and at the all-hands,
+not merely published. Where a change came from something an employee raised,
+we say so in the document.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+people@veridiabio.com | +44 1223 496 190
+Cambridge: 41 Hurst Way, Cambridge CB4 0WS
+Basel: Klybeckstrasse 141, 4057 Basel
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+Veridia BioSystems Schweiz GmbH | CHE-419.882.663
+=================================================================

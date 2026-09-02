@@ -1,0 +1,120 @@
+Ticket ID: VBST-4231
+Status: Resolved
+Priority: P2-High
+Created: 2025-09-24 10:30 UTC
+Product: VeriScan 400 Pro
+Customer: Royal Free London NHS Foundation Trust (ACC-1103)
+Reported by: Priti Shah, Senior BMS
+             priti.shah@nhs.net
+Assigned to: Marcus Chen (QC Applications Specialist) -> Marta Oliveira (FSE)
+Serial: VS4P-0503
+Firmware: 4.3.0
+
+--- Thread ---
+
+[2025-09-24 10:30] Priti Shah (Senior BMS):
+Reticulocyte QC CV has been climbing on VS4P-0503. Level 1 CV was 4.8% in
+June, it's 9.2% now. Still passing the acceptance range but the trend is
+obvious and we don't like it.
+
+Whole blood CBC parameters all stable. It's retic only.
+
+Stain lot RT-2025-0041, on board 41 days. We recalibrated at the lot change in
+July as required.
+
+[2025-09-24 13:15] Marcus Chen (QC Applications Specialist):
+A rising retic CV with stable CBC parameters points at the retic channel
+specifically: the stain, the retic flow cell, or the fluorescence detection.
+
+Stain first because it's cheapest to rule out. RT-2025-0041 at 41 days is
+inside the 60-day on-board limit but not by a lot, and RGT-RT is the least
+stable of our reagents.
+
+Please:
+1. Fit a fresh RGT-RT cartridge (any lot), recalibrate the retic channel,
+   run both levels of VT-RET-2 in replicate (n=10 each).
+2. Send me the CVs.
+3. Also send me the last 60 retic QC points, both levels.
+
+If the CV drops back to 4-5% it was the stain. If it doesn't, it's hardware.
+
+[2025-09-26 09:40] Priti Shah (Senior BMS):
+Fresh cartridge RT-2025-0049 fitted, recalibrated, n=10 both levels.
+
+Level 1 CV 8.7%. Level 2 CV 6.1%.
+
+Barely moved. So not the stain.
+
+[2025-09-26 11:20] Marcus Chen (QC Applications Specialist):
+Agreed, not the stain. That leaves the retic flow cell or the optics.
+
+A retic flow cell accumulates stain deposit over time in a way the whole blood
+cell doesn't, because the dye binds to surfaces as well as to cells. Rising CV
+with stable mean is the classic presentation.
+
+Try a Retic Clean cycle (Service > Maintenance > Retic Clean, 18 minutes)
+followed by n=10 both levels. If that improves it materially, the cell is
+fouled and may recover with a longer cleaning regime. If it improves it a
+little and it drifts back, the cell needs replacing.
+
+[2025-09-29 14:00] Priti Shah (Senior BMS):
+After Retic Clean: Level 1 CV 7.1%, Level 2 CV 5.4%. Better.
+
+Re-ran on 1 October after two days of normal work: Level 1 CV 8.4%. Drifting
+back.
+
+[2025-10-01 09:30] Marcus Chen (QC Applications Specialist):
+That's the answer. The cell is fouled beyond what cleaning recovers.
+
+Retic flow cell VS4-OPT-224, 14-day lead time, but let me check stock.
+
+[2025-10-01 16:20] Marta Oliveira (Field Service Engineer):
+Attended (FSV-2025-0384) - part was in London depot stock so we didn't wait.
+
+Retic flow cell VS4-OPT-224 replaced. Old cell showed visible dye deposit on
+the internal surfaces, heaviest at the inlet taper. Photographed for the
+returns record.
+
+Recalibrated retic channel with RT-2025-0049.
+
+Post-repair, n=10 both levels:
+  Level 1 CV 3.9%
+  Level 2 CV 2.8%
+Both well within specification and better than the site has seen since
+installation.
+
+20-specimen comparison against manual microscopy performed by the site's own
+staff: slope 1.01, r 0.984. Acceptable.
+
+Discussed the cleaning regime with Priti. The site was running Retic Clean
+monthly; recommended fortnightly given their retic volume, which is high
+(around 180 a week).
+
+Time on site 4.5 hours.
+
+[2025-10-02 09:00] Priti Shah (Senior BMS):
+CVs holding at 3.9 and 2.9 after a week of normal work. Fortnightly Retic
+Clean added to our schedule.
+
+Question for the record - is there anything that would have told us this was
+coming earlier? The CV crept up over three months and we only noticed because
+someone happened to look at the trend.
+
+[2025-10-02 11:30] Marcus Chen (QC Applications Specialist):
+Honest answer: not automatically, no. The instrument doesn't trend QC CV and
+VeriConnect charts the values but not the CV.
+
+What would have caught it is exactly what you did, just sooner: someone
+looking at the trend rather than at whether each point passed. A point can
+pass every day for three months while the process degrades underneath it.
+
+I'm raising a product request for CV trending with an alert on a rising trend.
+It's the second time this has come up.
+
+--- Resolution ---
+Root cause: reticulocyte flow cell fouled with dye deposit, producing a rising
+QC CV with a stable mean. Stain ruled out by cartridge swap.
+Actions: VS4-OPT-224 replaced (FSV-2025-0384); retic channel recalibrated;
+Retic Clean frequency increased from monthly to fortnightly for this site's
+volume.
+Product feedback: QC CV trending with rising-trend alert.

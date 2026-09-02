@@ -1,0 +1,94 @@
+=================================================================
+VERIDIA BIOSYSTEMS - REAGENT SPECIFICATION SHEET
+=================================================================
+Product: VeriLyse RGT-CL Cleaning Solution
+Catalogue: VL-CL-250 (250 mL cartridge, 6 per case)
+Document Ref: DS-RGT-CL-002
+Revision: v2
+Revision Date: 2024-12-11
+Formulation revision: A (unchanged since launch)
+
+-----------------------------------------------------------------
+INTENDED USE
+-----------------------------------------------------------------
+RGT-CL is an enzymatic and alkaline cleaning solution for the fluid paths of
+VeriScan 400, VeriScan 400 Pro and VeriPrep SP-1 instruments. It removes
+protein deposits, lysed cell debris and stain residue from flow cells, tubing
+and aspiration probes.
+
+RGT-CL is not a disinfectant and is not validated as a decontaminant for
+transmissible agents. Where surface disinfection is required, use the agents
+listed in the instrument IFU section 14.
+
+-----------------------------------------------------------------
+COMPOSITION (nominal)
+-----------------------------------------------------------------
+Component                        | Concentration
+---------------------------------|------------------
+Alkaline protease (subtilisin)   | 0.4 g/L
+Nonionic surfactant              | 5 g/L
+Sodium carbonate                 | 3 g/L
+Sequestrant                      | 1 g/L
+Purified water                   | to 1 L
+pH (25 C)                        | 10.4 +/- 0.2
+
+Contains no hypochlorite. Contains no alcohol.
+
+-----------------------------------------------------------------
+LOT NUMBERING
+-----------------------------------------------------------------
+Format: CL-YYYY-NNNN. No revision suffix (single formulation).
+
+-----------------------------------------------------------------
+STORAGE AND STABILITY
+-----------------------------------------------------------------
+Unopened, 5-25 C                 | 24 months from manufacture
+On board after first pierce      | 180 days
+Do not freeze                    | Yes
+Protect from direct sunlight     | Yes
+
+The enzyme loses activity above 30 C. Cartridges stored above 30 C for more
+than 30 days should be discarded even if within labelled shelf life.
+
+-----------------------------------------------------------------
+USE
+-----------------------------------------------------------------
+VeriScan 400 / 400 Pro
+  Automatic shutdown clean       daily, 12 mL per cycle
+  Extended Clean routine         on demand, 45 mL per cycle, 22 minutes
+  Probe soak                     manual, per SOP-VBS-001 appendix B
+
+An Extended Clean is the first-line response to E-207 (flow cell background
+high) and to W-042 (elevated background WBC count). If two consecutive Extended
+Clean cycles do not clear the condition, the flow cell (VS4-OPT-220) or, on the
+Pro, the retic flow cell (VS4-OPT-224) should be considered for replacement.
+
+VeriPrep SP-1
+  Weekly decontamination cycle   180 mL per cycle, per SOP-VBS-003
+  Do NOT substitute a hypochlorite-based disinfectant. The SP-1 aliquot fluid
+  path includes components that are not compatible with hypochlorite and will
+  degrade, producing P-201 aliquot volume errors within weeks.
+
+-----------------------------------------------------------------
+SAFETY SUMMARY
+-----------------------------------------------------------------
+Classified under CLP:
+  Eye Dam. 1, H318 - Causes serious eye damage
+  Resp. Sens. 1, H334 - May cause allergy or asthma symptoms or breathing
+    difficulties if inhaled (enzyme content)
+Pictograms: GHS05 (corrosion), GHS08 (health hazard)
+Signal word: Danger
+
+Do not aerosolise. Wear eye protection. Persons with a known enzyme sensitivity
+should not handle this product.
+
+Full safety data sheet: SDS-RGT-CL rev 3.
+
+-----------------------------------------------------------------
+ORDERING
+-----------------------------------------------------------------
+VL-CL-250     | RGT-CL Cleaning Solution, 250 mL cartridge, case of 6
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

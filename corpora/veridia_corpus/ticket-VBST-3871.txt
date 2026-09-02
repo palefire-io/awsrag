@@ -1,0 +1,63 @@
+Ticket ID: VBST-3871
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-02-05 13:26 UTC
+Product: VeriScan 400
+Customer: Sheffield Teaching Hospitals NHS FT (ACC-1255)
+Reported by: Vikram Sahota, Senior BMS
+Assigned to: Owen Trask (Support Engineer L1)
+Serial: VS4-0810
+Firmware: 4.2.0
+
+--- Thread ---
+
+[2025-02-05 13:26] Vikram Sahota (Senior BMS):
+Hi, seeing more WBC scatter flags than usual on VS4-0810 and a couple of W-042
+this week. Not urgent, we have three other analysers, but thought I'd flag it
+in case it's something.
+
+L3 lot is L3-2025-0440, on board since 28/01.
+
+[2025-02-05 14:10] Owen Trask (Support Engineer L1):
+Vikram, thanks for reporting it - and thank you for including the lot number
+unprompted, that's exactly the detail we need.
+
+Your lot is one we're currently investigating. Please:
+- swap to a cartridge from a lot below L3-2025-0440 if you have one
+- quarantine the removed cartridge with the pierce date on it
+- don't open anything else in the 0440-0460 range
+
+Once swapped, run a prime, three backgrounds and both QC levels and let me
+know.
+
+[2025-02-05 16:45] Vikram Sahota (Senior BMS):
+Swapped to L3-2024-0402. Backgrounds 0.06/0.07/0.06, QC fine. Flags looked
+normal on the last run of the day.
+
+We hold quite a lot of stock centrally - 14 cartridges, mixed lots. Do you
+want the full list?
+
+[2025-02-06 08:30] Owen Trask (Support Engineer L1):
+Yes please, the full list would be very helpful.
+
+[2025-02-06 09:15] Vikram Sahota (Senior BMS):
+List attached. Summary: 4 x L3-2025-0444, 3 x L3-2025-0452, 2 x L3-2025-0455,
+5 x L3-2025-0421.
+
+[2025-02-14 09:45] Owen Trask (Support Engineer L1):
+FSN-2025-003 issued today. Nine of your fourteen cartridges are in scope
+(the 0444, 0452 and 0455 stock). The 0421 stock is fine to use.
+
+Formal notice and reply form to your trust contact. Returns authorisation will
+follow; replacement is free of charge on a 1:1 basis.
+
+[2025-02-14 15:20] Vikram Sahota (Senior BMS):
+Ta. Reply form done. Exposure window on 0810 was 28/01 to 05/02, 640 samples.
+Reviewed, nothing of concern.
+
+--- Resolution ---
+Root cause: RGT-L3 lot L3-2025-0440 (FSN-2025-003).
+Actions: reagent swapped; 9 affected cartridges identified in site stock and
+returned; replacements supplied.
+Customer's early reporting of the lot number materially assisted the wider
+investigation.

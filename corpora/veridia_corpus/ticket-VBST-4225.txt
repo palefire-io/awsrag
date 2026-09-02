@@ -1,0 +1,67 @@
+Ticket ID: VBST-4225
+Status: Resolved
+Priority: P2-High
+Created: 2025-09-29 07:15 UTC
+Product: VeriPrep SP-1 / VeriScan 400 Pro
+Customer: University Hospitals Birmingham NHS FT (ACC-1146)
+Reported by: Jason Okonkwo, Pathology Informatics Manager
+Assigned to: Danny Whitcombe (Support Engineer)
+Serial: SP1-R2-0044 / VS4P-0447
+Firmware: SP-1 2.2.0 / VeriScan 4.3.0
+
+--- Thread ---
+
+[2025-09-29 07:15] Jason Okonkwo (Pathology Informatics Manager):
+We updated VS4P-0447 to firmware 4.3.0 over the weekend. This morning the SP-1
+won't hand off to it - P-407 host protocol version mismatch on every tube.
+
+Rolling back the analyser is not attractive; we've already run QC on 4.3.0 and
+signed it off.
+
+[2025-09-29 08:00] Danny Whitcombe (Support Engineer):
+This is expected behaviour and easily fixed - you need to update the SP-1 too.
+
+VeriScan 4.3.0 uses host protocol version 2. SP-1 firmware 2.2.0 speaks
+version 1. The SP-1 refuses the handoff rather than falling back, deliberately,
+because a silent protocol downgrade in a sample handling path is worse than a
+stop.
+
+Update the SP-1 to 2.3.0 and you're done. It's a 20-minute update from
+Service > Firmware.
+
+This is in bulletin VBB-0055 and in the 4.3.0 bulletin VBB-0061 under
+prerequisites - I'm not saying that to score a point, just so you know where
+to look next time.
+
+[2025-09-29 08:20] Jason Okonkwo (Pathology Informatics Manager):
+Fair. I read VBB-0061 and I read the "requires SP-1 firmware 2.3.0" line and
+did not connect it to anything because I didn't know the SP-1 had its own
+firmware track. I'd assumed it was part of the analyser.
+
+Updating now.
+
+[2025-09-29 09:45] Jason Okonkwo (Pathology Informatics Manager):
+SP-1 on 2.3.0. Handoff working. 40 tubes through with no issues.
+
+Suggestion: when the analyser firmware update is offered in VeriConnect, and
+the tenant has an SP-1 enrolled on an incompatible version, the update wizard
+should say so. It knows both versions.
+
+[2025-09-29 11:00] Danny Whitcombe (Support Engineer):
+That's a good suggestion and I've passed it to Tom Reeves as a product
+request. It does know both versions and it doesn't check.
+
+Closing.
+
+[2025-10-14 15:00] Tom Reeves (Product Manager, VeriConnect):
+Following up on the suggestion - it's on the backlog as a pre-flight check in
+the firmware deployment wizard. No date, but it's a sensible ask and it's the
+second time it's been raised.
+
+--- Resolution ---
+Root cause: VeriScan firmware 4.3.0 uses host protocol v2; SP-1 on firmware
+2.2.0 speaks v1. P-407 is correct protective behaviour.
+Actions: SP-1 updated to 2.3.0.
+Product feedback: firmware deployment wizard should pre-flight check enrolled
+SP-1 firmware compatibility.
+See also: VBB-0055, VBB-0061, lookup-error-codes-veriprep-sp1.csv

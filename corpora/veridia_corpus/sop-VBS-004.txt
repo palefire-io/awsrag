@@ -1,0 +1,229 @@
+=================================================================
+VERIDIA BIOSYSTEMS - STANDARD OPERATING PROCEDURE
+=================================================================
+SOP Number:      SOP-VBS-004
+Title:           VeriConnect User Provisioning and RBAC Configuration
+Revision:        5
+Effective Date:  2025-09-15
+Supersedes:      Revision 4 (2025-03-24)
+Author:          Tom Reeves, Product Manager VeriConnect
+Reviewed by:     Ruth Amankwah, Data Protection Officer
+Approved by:     Simone Buehler, QA Manager
+Review due:      2027-09-15
+
+CHANGE SUMMARY (rev 4 -> rev 5)
+  - Section 8 (break-glass accounts) elevated from a recommendation to a
+    requirement for SSO tenants, following the 11 March 2025 outage
+    (report-VBI-0094, VBB-0044).
+  - Section 5 updated for SCIM provisioning.
+  - Section 9 (periodic access review) added.
+  - Rev 4 had itself been an emergency revision issued during the outage
+    week; it is superseded in full.
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+To define how users are created, assigned roles, reviewed and removed in a
+VeriConnect tenant, and how role-based access control is configured.
+
+-----------------------------------------------------------------
+2. SCOPE
+-----------------------------------------------------------------
+2.1  Applies to all VeriConnect tenants on all tiers. Sections 5 (SCIM), 7
+     (custom roles) and 10 (residency) apply to Enterprise tier with
+     VeriGuard only.
+
+2.2  This SOP is written for the customer's tenant administrator. Veridia
+     staff accounts within a customer tenant are governed by Veridia's own
+     internal access policy (IT-POL-004), not by this document.
+
+-----------------------------------------------------------------
+3. PRINCIPLES
+-----------------------------------------------------------------
+3.1  Least privilege. Assign the narrowest role that permits the person to do
+     their job.
+
+3.2  Named accounts only. Shared or generic logins (for example a single
+     "nightshift" account) are prohibited. They defeat the audit trail, they
+     are a finding under SOC 2 and ISO 15189, and they were specifically
+     raised as observation NB-2025-OBS-02 in the 2025 Notified Body audit.
+
+3.3  Separation of duties. A user who authorises results should not also
+     configure the QC rules against which those results are judged. VeriGuard
+     enforces this by default and records any override.
+
+3.4  Access follows employment. A leaver's access is removed on their last
+     working day, not at the next review.
+
+-----------------------------------------------------------------
+4. ROLES
+-----------------------------------------------------------------
+4.1  The fixed roles and their permission keys are listed in
+     lookup-vericonnect-permissions.csv. Summary:
+
+     lab_technician         View results, add comments, enter QC.
+     biomedical_scientist   Authorise and amend results, review QC.
+     lab_manager            Edit Westgard rules, invite users, export reports,
+                            view the fleet dashboard.
+     qc_specialist          Configure QC charts and targets, run lot
+                            crossover studies.
+     service_engineer       Remote diagnostics; firmware deployment on
+                            Enterprise. Intended for Veridia FSE accounts.
+     tenant_admin           User management, SSO configuration, API keys,
+                            residency.
+     auditor                Read-only access to the full audit trail.
+                            VeriGuard required.
+     dpo                    Data subject access and erasure workflows.
+                            VeriGuard required.
+     integration_service    Service account for HL7/FHIR. No interactive
+                            login.
+
+4.2  Do not assign tenant_admin as a convenience. A tenant should have two to
+     four tenant administrators. More than four is a finding at most audits.
+
+4.3  service_engineer should normally be held only by Veridia field service
+     accounts. Where a customer's own engineering staff require it, scope it
+     to specific instruments.
+
+-----------------------------------------------------------------
+5. PROVISIONING
+-----------------------------------------------------------------
+5.1  Local accounts (all tiers)
+     a) Administration > Users > Invite.
+     b) Enter the work email address. Personal email addresses must not be
+        used.
+     c) Select the role and, where applicable, the site or instrument scope.
+     d) The invitee receives an email valid for 72 hours.
+     e) TOTP multi-factor authentication is mandatory for local accounts and
+        is set up at first login. It cannot be disabled per user.
+
+5.2  SSO (Enterprise tier)
+     a) Users authenticate against the customer's identity provider.
+     b) Role assignment is either mapped from an IdP group claim or set
+        locally in VeriConnect. Group mapping is preferred; it keeps joiners
+        and leavers in one system.
+     c) Configure group-to-role mapping under Administration > SSO > Role
+        Mapping.
+
+5.3  SCIM provisioning (Enterprise tier)
+     a) Enables automatic creation, update and deactivation of accounts from
+        the identity provider.
+     b) Endpoint and bearer token are generated under Administration > SSO >
+        SCIM. Rotate the token annually.
+     c) With SCIM enabled, do not create users manually; manually created
+        accounts will not be deactivated by the leaver process and are the
+        commonest source of orphaned access.
+
+5.4  Service accounts
+     a) Created under Administration > API > Service Accounts.
+     b) Assign integration_service and nothing else.
+     c) Credentials are shown once. Store them in the organisation's secret
+        management system, not in a spreadsheet or a middleware config file
+        in plain text.
+     d) Rotate at least annually and on any suspected exposure.
+
+-----------------------------------------------------------------
+6. SSO CONFIGURATION
+-----------------------------------------------------------------
+6.1  Supported: SAML 2.0 and OIDC.
+
+6.2  VeriConnect fetches and refreshes the identity provider metadata
+     automatically. The default refresh interval is 6 hours; it is
+     configurable from 1 to 24 hours in VeriConnect 6.2 and later
+     (Administration > SSO > Metadata Refresh).
+
+     Historical note: before March 2025 the metadata was fetched once at
+     tenant onboarding and cached indefinitely. A scheduled certificate
+     rotation at the identity provider on 11 March 2025 therefore broke
+     authentication for 17 tenants for just under four hours. See
+     report-VBI-0094 and VBB-0044. Automatic refresh removes this failure
+     mode but does not remove the need for break-glass accounts (section 8).
+
+6.3  Where the customer controls the identity provider, notify Veridia of any
+     major IdP migration at least 5 working days in advance. Routine
+     certificate rotation no longer requires notification.
+
+6.4  Test SSO with a non-privileged account before enforcing it tenant-wide.
+
+6.5  Do not enable "SSO only" enforcement until break-glass accounts have been
+     created, tested and stored (section 8).
+
+-----------------------------------------------------------------
+7. CUSTOM ROLES (ENTERPRISE + VERIGUARD)
+-----------------------------------------------------------------
+7.1  Compose custom roles from individual permission keys under
+     Administration > Roles > New.
+
+7.2  Every custom role change is audited with a before and after permission
+     set. Do not edit a role in place to grant a temporary elevation; create a
+     time-limited assignment instead.
+
+7.3  Keep the number of custom roles small. Tenants with more than about a
+     dozen custom roles consistently end up unable to explain who can do what,
+     which is the outcome RBAC exists to prevent.
+
+-----------------------------------------------------------------
+8. BREAK-GLASS ACCOUNTS (REQUIRED FOR SSO TENANTS)
+-----------------------------------------------------------------
+8.1  Every tenant using SSO MUST maintain at least two local administrator
+     accounts excluded from SSO enforcement.
+
+8.2  Requirements:
+     a) Named to individuals, not generic. "breakglass1" is not acceptable;
+        the account must be attributable.
+     b) TOTP enrolled.
+     c) Credentials held in the organisation's password vault, accessible to
+        the on-call laboratory manager out of hours.
+     d) Tested at least every 6 months. Record the test.
+     e) Every use raises an alert to the tenant's security contact and is
+        recorded in the audit trail.
+
+8.3  Break-glass accounts are for loss of the identity provider. They are not
+     for day-to-day administration and must not be used for routine work.
+
+8.4  During the 11 March 2025 outage, tenants with tested break-glass accounts
+     restored administrative access within minutes. Tenants without them were
+     dependent on Veridia's own remediation timeline.
+
+-----------------------------------------------------------------
+9. PERIODIC ACCESS REVIEW
+-----------------------------------------------------------------
+9.1  Review all accounts and role assignments at least every 6 months, and
+     within 5 working days of any organisational change affecting the
+     laboratory.
+
+9.2  VeriGuard tenants: Administration > Access Review generates the report
+     (user, role, scope, last login, created date, created by) and provides an
+     attestation workflow.
+
+9.3  Non-VeriGuard tenants: export the user list and review manually.
+
+9.4  Act on:
+     - accounts with no login in 90 days;
+     - accounts created outside the SCIM flow where SCIM is enabled;
+     - users holding tenant_admin who are not on the approved administrator
+       list;
+     - service accounts whose credentials are more than 12 months old.
+
+-----------------------------------------------------------------
+10. DEPROVISIONING
+-----------------------------------------------------------------
+10.1 On a leaver's last working day, deactivate the account. Do not delete it.
+     Deletion breaks the attribution of historical audit and result
+     authorisation records.
+
+10.2 With SCIM, deactivation flows from the identity provider automatically.
+     Verify it has occurred.
+
+10.3 Where the leaver held a service account credential, rotate that
+     credential.
+
+10.4 Where the leaver was one of the two break-glass account holders, create
+     and test a replacement before the account is deactivated.
+
+TODO: add a worked example of IdP group claim mapping for Entra ID. Requested
+by three customers since March. - TR 2025-09-15
+
+=================================================================
+END OF SOP-VBS-004 REVISION 5
+=================================================================

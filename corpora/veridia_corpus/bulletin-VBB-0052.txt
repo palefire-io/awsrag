@@ -1,0 +1,103 @@
+=====================================================
+VERIDIA BIOSYSTEMS - TECHNICAL BULLETIN
+=====================================================
+Reference: VBB-0052
+Date Issued: 2025-04-11
+Type: Specification Revision
+Affected Product: VeriScan 400, VeriScan 400 Pro (all serial numbers)
+Supersedes: operating temperature statement in DS-VS400-002 (spec sheet v2)
+            and DS-VS400P-002
+Superseded by: nothing. This bulletin is current.
+Incorporated into: DS-VS400-003 (spec sheet v3), IFU revision 7
+
+SUBJECT: Revised ambient operating temperature range - 18 C to 32 C
+
+-----------------------------------------------------
+THE CHANGE
+-----------------------------------------------------
+  Previous published range:  15 C to 35 C
+  Revised published range:   18 C to 32 C
+  Relative humidity:         unchanged, 20% to 80% non-condensing
+  Storage/transport:         unchanged, -10 C to 50 C
+
+This bulletin narrows the published operating range. It does not describe a
+defect and no instrument is being modified or recalled.
+
+-----------------------------------------------------
+WHY
+-----------------------------------------------------
+The original 15-35 C range was established from environmental chamber testing
+on pre-production units at steady state. Field data gathered from VeriConnect
+fleet telemetry between 2024-06 and 2025-02, covering 411 instruments, shows
+that performance at the extremes of the original range is less robust than the
+chamber data indicated, principally because real laboratories do not hold
+steady state - they cycle.
+
+Two effects were quantified:
+
+  Below 18 C:  reagent viscosity increases, aspiration volumes trend low, and
+               the platelet channel shows a small negative bias (mean -2.8 per
+               cent at 16 C against the 22 C reference). Below approximately
+               16 C, E-101 aspiration pressure errors become more frequent.
+
+  Above 32 C:  the reticulocyte flow cell heater on VeriScan 400 Pro loses
+               headroom to regulate, producing E-607 errors. On both models
+               the optical bench baseline drifts, and lyse reagent on-board
+               degradation accelerates, shortening effective on-board life
+               below the labelled 90 days.
+
+Neither effect produces a result that is silently wrong across the whole
+measuring range. The affected channels flag or error in the majority of cases.
+However, the narrowed range better reflects the conditions under which Veridia
+can support the full performance claims.
+
+-----------------------------------------------------
+RELATIONSHIP TO THE W-031 WARNING
+-----------------------------------------------------
+The W-031 ambient temperature warning was introduced in firmware 4.1.2 with
+thresholds set to the then-current 15-35 C range. Firmware 4.1.2 through 4.3.1
+therefore warn later than the revised specification requires.
+
+  Firmware 4.1.2 - 4.3.1:  W-031 raised outside 15-35 C
+  Firmware 4.4.0 onwards:  W-031 raised outside 18-32 C
+
+Until an instrument is updated to 4.4.0, laboratories operating near the
+boundary should monitor ambient temperature independently. VeriConnect
+Professional tier and above records ambient temperature with each run and can
+chart it under Reports > Environment.
+
+-----------------------------------------------------
+WHAT CUSTOMERS SHOULD DO
+-----------------------------------------------------
+1. Check the ambient temperature at the instrument, not at the room
+   thermostat. Instruments sited against a south-facing window, above a
+   centrifuge, or in a small side room with poor circulation commonly run
+   3-6 C above the room reading.
+
+2. Where the environment cannot be brought within 18-32 C, contact support
+   before assuming results are affected. In many cases the excursion is brief
+   and outside testing hours.
+
+3. Update your local IQ/OQ and environmental monitoring records to reference
+   18-32 C. Document sheet DS-VS400-003 and IFU revision 7 carry the revised
+   figure. If your quality system holds a controlled copy of DS-VS400-002,
+   supersede it.
+
+4. Accreditation bodies have in some cases queried the change. Veridia can
+   supply a supporting statement for ISO 15189 assessors on request.
+
+-----------------------------------------------------
+NOTE ON EXISTING DOCUMENTATION
+-----------------------------------------------------
+Spec sheet DS-VS400-002 (v2), which remains in circulation and is still present
+on some customer intranets, states 15-35 C. That figure is superseded by this
+bulletin. Where a customer contract, tender response or validation report cites
+15-35 C, Veridia will honour the original figure for the purposes of that
+document but recommends operating to the revised range.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Marcus Chen, QC Applications Specialist - marcus.chen@veridiabio.com
+Sarah Lindgren, Regulatory Affairs - sarah.lindgren@veridiabio.com
+=====================================================

@@ -1,0 +1,137 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PRODUCT SPECIFICATION SHEET
+=================================================================
+Product: VeriGuard - Cybersecurity and Compliance Module for VeriConnect
+Document Ref: DS-VG-002
+Revision: v2
+Revision Date: 2026-01-19
+Supersedes: DS-VG-001 (2024-11-05)
+Delivery model: Software as a Service add-on to VeriConnect.
+                Requires VeriConnect Enterprise tier (Professional tier by
+                exception, subject to commercial approval).
+
+-----------------------------------------------------------------
+OVERVIEW
+-----------------------------------------------------------------
+VeriGuard extends VeriConnect with the audit, access control, data residency
+and data protection capabilities required by laboratories operating under
+ISO 15189, ISO 27001, SOC 2, UK GDPR and Regulation (EU) 2016/679.
+
+VeriGuard is not a separate application. It activates additional capability
+within the customer's existing VeriConnect tenant and is licensed per tenant
+per year.
+
+-----------------------------------------------------------------
+CAPABILITIES
+-----------------------------------------------------------------
+1. AUDIT LOGGING
+   - Immutable, append-only audit trail covering authentication, authorisation
+     decisions, result viewing, result authorisation and amendment, QC
+     acceptance and rejection, configuration change, user lifecycle, firmware
+     deployment and data export.
+   - Each event records: event ID, UTC timestamp (server clock, NTP
+     synchronised), actor user ID and display name, actor IP address, session
+     ID, tenant ID, object type and identifier, action, outcome, and a
+     before/after value pair for configuration changes.
+   - Events are written to a write-once store and hash-chained. A tamper-check
+     job verifies the chain daily; a break raises a P1 alert to Veridia
+     operations and a banner in the customer tenant.
+   - Retention 7 years. Export as a signed CSV or JSON Lines bundle with a
+     detached signature and the issuing certificate chain.
+
+   LIMITATION: audit events record what a user did in VeriConnect. Actions
+   taken at the instrument keypad are recorded in the instrument's own audit
+   log and are uploaded to VeriConnect only for instruments on firmware 4.1.0
+   or later with cloud audit upload enabled. Sites running mixed firmware will
+   have gaps. This was a finding in the 2025 Notified Body audit
+   (observation NB-2025-OBS-04) and is addressed in firmware 4.4.0.
+
+2. ROLE-BASED ACCESS CONTROL
+   - Fixed roles: lab_technician, biomedical_scientist, lab_manager,
+     qc_specialist, service_engineer, tenant_admin, auditor, dpo,
+     integration_service. See lookup-vericonnect-permissions.csv.
+   - Custom roles: compose any subset of permission keys. Custom role changes
+     are themselves audited with before/after permission sets.
+   - Separation of duties enforcement: a user holding results.authorise cannot
+     simultaneously hold qc.chart.configure unless the tenant explicitly
+     overrides, and the override is recorded.
+   - Location scoping: roles may be scoped to a subset of sites or
+     instruments within a tenant.
+   - Periodic access review: scheduled report of users, roles and last login,
+     with an attestation workflow for the tenant admin.
+
+3. IDENTITY AND AUTHENTICATION
+   - SAML 2.0 and OIDC single sign-on with automatic identity provider
+     metadata refresh (default every 6 hours, configurable 1-24 hours since
+     VeriConnect 6.2). The fixed-metadata behaviour that caused the 11 March
+     2025 outage was removed in March 2025; see VBB-0044 and report-VBI-0094.
+   - SCIM 2.0 user and group provisioning.
+   - Break-glass local accounts, excluded from SSO enforcement, with mandatory
+     TOTP and alerting on every use.
+   - Session policy: idle timeout, absolute timeout, concurrent session limit,
+     IP allow-listing per tenant.
+
+4. DATA RESIDENCY
+   - Tenant data may be pinned to eu-west-1 (Ireland), eu-central-1
+     (Frankfurt), eu-west-2 (London) or us-east-1 (N. Virginia).
+   - Pinning covers result data, QC data, audit trail and backups.
+   - Support access from outside the pinned region is possible and is recorded
+     as an access event; it can be blocked entirely at the cost of longer
+     support resolution times.
+   - Telemetry and product analytics are aggregated and do not leave the
+     pinned region in identifiable form.
+
+5. GDPR AND DATA SUBJECT RIGHTS
+   - Consent and lawful basis register per tenant.
+   - Data subject access export: assembles all records relating to an
+     identified data subject across results, audit and comments, in a portable
+     format, within the tenant's configured SLA.
+   - Erasure workflow honouring retention obligations: records subject to a
+     statutory or accreditation retention period are marked rather than
+     deleted, with the reason recorded.
+   - Pseudonymisation of patient identifiers in exports and in the support
+     view.
+   - Records of processing activity (Article 30) template pre-populated with
+     Veridia's processing.
+
+-----------------------------------------------------------------
+COMPLIANCE POSITION
+-----------------------------------------------------------------
+  SOC 2 Type II       Report covering Security, Availability and
+                      Confidentiality. Current period 2025-04-01 to
+                      2026-03-31. Report available under NDA. Summary in
+                      reg-soc2-summary.txt.
+  ISO 27001:2022      Veridia BioSystems Ltd certified, certificate
+                      GB-ISMS-2024-0417, scope includes VeriConnect
+                      development and operations.
+  UK GDPR / EU GDPR   Veridia acts as processor. Standard DPA at
+                      reg-gdpr-dpa-template.txt.
+  International       UK IDTA and EU SCCs available for US-pinned tenants.
+  transfers
+  NHS DSPT            Veridia completes the Data Security and Protection
+                      Toolkit annually; latest submission Standards Met.
+  Penetration testing Annual third-party test of VeriConnect and VeriGuard.
+                      Executive summary available under NDA.
+
+-----------------------------------------------------------------
+WHAT VERIGUARD DOES NOT DO
+-----------------------------------------------------------------
+  - It does not encrypt or protect data on the customer's own network or LIS.
+  - It does not provide antivirus or endpoint protection for the analyser.
+    VeriScan instruments run a locked-down embedded OS with no user-installable
+    software; antivirus is neither required nor supported. See the
+    manufacturer disclosure of security-related information (MDS2) available
+    on request.
+  - It does not make the customer compliant. It provides the technical
+    controls and evidence; the laboratory remains the data controller.
+
+-----------------------------------------------------------------
+ORDERING
+-----------------------------------------------------------------
+VC-VG-1       | VeriGuard add-on, per tenant per year
+VC-VG-RES     | Data residency configuration service (one-off)
+VC-VG-AUDIT   | Assisted audit evidence pack preparation (per engagement)
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

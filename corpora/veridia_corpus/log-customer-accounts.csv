@@ -1,0 +1,26 @@
+account_id,customer_name,country,site_type,primary_contact,contact_email,products_deployed,instrument_count,vericonnect_tier,veriguard,support_level,account_manager,contract_renewal
+ACC-1042,Greater Manchester Pathology Network,UK,NHS Trust (hub),Dr Aled Pritchard,aled.pritchard@gmpn.nhs.uk,VeriScan 400; VeriScan 400 Pro; VeriPrep SP-1; VeriConnect,14,Enterprise,Yes,Platinum,Peter Doyle,2026-11-30
+ACC-1057,Northumbria Healthcare NHS Foundation Trust,UK,NHS Trust,Karen Dalgleish,karen.dalgleish@northumbria.nhs.uk,VeriScan 400; VeriConnect,4,Professional,No,Gold,Peter Doyle,2026-09-30
+ACC-1063,Cardiff and Vale University Health Board,UK,NHS Health Board,Rhys Morgan,rhys.morgan2@wales.nhs.uk,VeriScan 400 Pro; VeriConnect,3,Professional,No,Gold,Dev Patel,2027-03-31
+ACC-1078,NHS Lothian - Royal Infirmary of Edinburgh,UK,NHS Board,Fiona Sutherland,fiona.sutherland@nhslothian.scot.nhs.uk,VeriScan 400; VeriScan 400 Pro; VeriConnect,6,Professional,Yes,Gold,Peter Doyle,2026-10-31
+ACC-1090,Countess of Chester Hospital NHS Foundation Trust,UK,NHS Trust,Ian Bracewell,ian.bracewell@coch.nhs.uk,VeriScan 400,2,Essentials,No,Silver,Peter Doyle,2026-08-31
+ACC-1103,Royal Free London NHS Foundation Trust,UK,NHS Trust,Dr Nadia Haddad,nadia.haddad@nhs.net,VeriScan 400 Pro; VeriPrep SP-1; VeriConnect; VeriGuard,9,Enterprise,Yes,Platinum,Fiona Hargreaves,2027-01-31
+ACC-1117,Mid Yorkshire Teaching NHS Trust,UK,NHS Trust,Steve Ogden,steve.ogden@midyorks.nhs.uk,VeriScan 400; VeriPrep SP-1; VeriConnect,5,Professional,No,Gold,Peter Doyle,2026-12-31
+ACC-1129,Norfolk and Norwich University Hospitals NHS FT,UK,NHS Trust,Claire Bettinson,claire.bettinson@nnuh.nhs.uk,VeriScan 400 Pro; VeriConnect,3,Professional,No,Silver,Fiona Hargreaves,2027-02-28
+ACC-1134,Belfast Health and Social Care Trust,UK,HSC Trust,Sean McAllister,sean.mcallister@belfasttrust.hscni.net,VeriScan 400; VeriConnect,4,Essentials,No,Silver,Callum Frazer,2026-09-30
+ACC-1146,University Hospitals Birmingham NHS FT,UK,NHS Trust,Dr Priyanka Vaidya,priyanka.vaidya@uhb.nhs.uk,VeriScan 400 Pro; VeriPrep SP-1; VeriConnect; VeriGuard,11,Enterprise,Yes,Platinum,Fiona Hargreaves,2027-06-30
+ACC-1152,Alderley Diagnostics Ltd,UK,Private laboratory,Marcus Ollerenshaw,m.ollerenshaw@alderleydx.co.uk,VeriScan 400; VeriConnect,2,Essentials,No,Bronze,Peter Doyle,2026-08-31
+ACC-1168,Thornbury Path Services Ltd,UK,Private laboratory,Gemma Reidy,g.reidy@thornburypath.co.uk,VeriScan 400; VeriLyse,1,Essentials,No,Bronze,Fiona Hargreaves,2026-07-31
+ACC-1171,Nuffield Health Leeds Hospital,UK,Private hospital,Dawn Ackroyd,dawn.ackroyd@nuffieldhealth.com,VeriScan 400 Pro; VeriConnect,2,Professional,No,Gold,Peter Doyle,2027-04-30
+ACC-1185,St Aloysius Pathology,IE,Private laboratory,Cathal Brennan,cbrennan@staloysiuspath.ie,VeriScan 400; VeriPrep SP-1,3,Essentials,No,Silver,Camille Roux,2026-10-31
+ACC-1190,Universitaetsspital Basel - Haematologie,CH,University hospital,Dr Stefan Ruettimann,stefan.ruettimann@usb.ch,VeriScan 400 Pro; VeriPrep SP-1; VeriConnect; VeriGuard,7,Enterprise,Yes,Platinum,Camille Roux,2027-05-31
+ACC-1198,Hopitaux Universitaires de Geneve,CH,University hospital,Dr Amelie Fournier,amelie.fournier@hug.ch,VeriScan 400 Pro; VeriConnect,4,Professional,No,Gold,Camille Roux,2026-12-31
+ACC-1206,Synlab Nordwest GmbH,DE,Reference laboratory,Bernd Kaltenbrunner,b.kaltenbrunner@synlab-nordwest.de,VeriScan 400; VeriScan 400 Pro; VeriPrep SP-1; VeriConnect,12,Enterprise,No,Platinum,Camille Roux,2027-03-31
+ACC-1214,Laboratoire Cerba Ouest,FR,Reference laboratory,Isabelle Renard,i.renard@cerba-ouest.fr,VeriScan 400; VeriConnect,6,Professional,No,Gold,Camille Roux,2026-11-30
+ACC-1222,Uppsala Klinisk Kemi och Farmakologi,SE,University hospital,Anders Lindqvist,anders.lindqvist@akademiska.se,VeriScan 400 Pro; VeriConnect,3,Professional,No,Silver,Camille Roux,2027-01-31
+ACC-1241,University of Michigan Health - Pathology,US,Academic medical centre,Dr Robert Yeun,ryeun@med.umich.edu,VeriScan 400 Pro,2,Essentials,No,Silver,Ben Whittle,2026-09-30
+ACC-1248,Massachusetts Coastal Medical Center,US,Academic medical centre,Dr Laura Feinberg,lfeinberg@mcmc.org,VeriScan 400 Pro; VeriConnect,2,Professional,No,Gold,Ben Whittle,2027-02-28
+ACC-1255,Sheffield Teaching Hospitals NHS FT,UK,NHS Trust,Vikram Sahota,vikram.sahota@sth.nhs.uk,VeriScan 400; VeriScan 400 Pro; VeriConnect,8,Professional,Yes,Gold,Peter Doyle,2026-10-31
+ACC-1263,Betsi Cadwaladr University Health Board,UK,NHS Health Board,Eleri Wyn Jones,eleri.wynjones@wales.nhs.uk,VeriScan 400; VeriConnect,5,Essentials,No,Silver,Dev Patel,2026-08-31
+ACC-1270,Guy's and St Thomas' NHS Foundation Trust,UK,NHS Trust,Dr Oliver Kingsmill,oliver.kingsmill@gstt.nhs.uk,VeriScan 400 Pro; VeriPrep SP-1; VeriConnect; VeriGuard,10,Enterprise,Yes,Platinum,Fiona Hargreaves,2027-07-31
+ACC-1284,Wirral University Teaching Hospital NHS FT,UK,NHS Trust,Helen Tarbuck,helen.tarbuck@nhs.net,VeriScan 400,2,Essentials,No,Bronze,Peter Doyle,2026-09-30

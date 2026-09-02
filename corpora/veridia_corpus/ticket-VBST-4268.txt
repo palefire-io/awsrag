@@ -1,0 +1,120 @@
+Ticket ID: VBST-4268
+Status: Closed (cannot reproduce)
+Priority: P3-Medium
+Created: 2025-10-27 11:20 UTC
+Product: VeriScan 400
+Customer: Belfast Health and Social Care Trust (ACC-1134)
+Reported by: Sean McAllister, Senior BMS
+Assigned to: Danny Whitcombe (Support Engineer) -> Callum Frazer (FSE)
+Serial: VS4-0481
+Firmware: 4.3.0
+
+--- Thread ---
+
+[2025-10-27 11:20] Sean McAllister (Senior BMS):
+Intermittent E-402 rotor home position not found on VS4-0481. Maybe twice a
+week for the last month. Power cycle clears it every time and it runs fine
+afterwards, sometimes for days.
+
+No pattern we can see. Different times, different operators, different rack
+positions.
+
+[2025-10-27 14:00] Danny Whitcombe (Support Engineer):
+Intermittent E-402 is usually the home sensor (contamination or an
+intermittent connection) or an obstruction that only interferes some of the
+time.
+
+Things to check before we send anyone:
+- Look at the home sensor window for deposit. It's on the left of the rotor
+  assembly, small dark lens.
+- Check the rotor for any debris, particularly shed cap material.
+- When it happens, note whether the rotor is at a particular position.
+
+Please also start a log: date, time, operator, what was running, rotor
+position if visible.
+
+[2025-11-03 09:30] Sean McAllister (Senior BMS):
+Log so far - 3 events in a week. Sensor window looks clean. No debris we can
+find. Rotor position looks different each time.
+
+[2025-11-03 11:00] Danny Whitcombe (Support Engineer):
+Booking Callum in. Three a week is enough to justify a visit.
+
+[2025-11-05 17:30] Callum Frazer (Field Service Engineer):
+Attended (FSV-2025-0418). Could not reproduce.
+
+What I did:
+- Home sensor removed, inspected, cleaned, refitted. No contamination found,
+  output waveform clean on the scope across 50 home cycles.
+- Sensor connector at J9 reseated. No corrosion, no bent pins. Continuity good
+  including with the harness flexed.
+- Rotor removed, bearing checked (smooth, no play), rotor face and flag
+  inspected. Flag alignment within 0.2 mm of nominal.
+- Motor current draw measured across 30 cycles, consistent, no spikes.
+- 300-cycle soak test with the rotor loaded and unloaded, alternating. Zero
+  E-402.
+- Full QC after reassembly, in range.
+
+No fault found and I am recording that as "cannot reproduce" rather than "no
+fault found", because the site's log is credible and three events in a week is
+not somebody imagining it.
+
+Left instructions with Sean to capture, next time it happens: a photo of the
+screen with the timestamp, the rotor position, whether the instrument was mid-
+batch or idle, and the ambient temperature. Also asked him NOT to power cycle
+immediately - to leave it in the error state for five minutes and note whether
+it recovers on its own, then call the out-of-hours line if it's outside
+working hours. Diagnosing this needs someone looking at it while it's broken.
+
+Time on site 3.0 hours.
+
+[2025-12-08 10:15] Danny Whitcombe (Support Engineer):
+Sean - checking in. Any further events since Callum's visit on 5 November?
+
+[2025-12-08 11:40] Sean McAllister (Senior BMS):
+Two in the five weeks since, so less often but not gone. Neither time did
+anyone follow Callum's instructions unfortunately, both were on the late shift
+and they power cycled and carried on.
+
+I'll try again with the staff.
+
+[2026-01-19 09:00] Danny Whitcombe (Support Engineer):
+Sean - any more?
+
+[2026-01-19 15:20] Sean McAllister (Senior BMS):
+None since 12 December. Six weeks clear.
+
+We did have a PM on 8 December, though nothing was changed on the rotor as far
+as I know.
+
+[2026-01-20 10:00] Danny Whitcombe (Support Engineer):
+Six weeks clear is good but I'm not going to claim we fixed it, because we
+didn't do anything on 8 December that would obviously address it.
+
+Closing this as cannot reproduce. Recording plainly:
+- the symptom was real and logged by the site
+- comprehensive examination found nothing
+- a 300-cycle soak did not reproduce it
+- the symptom reduced after the visit and stopped after the December PM, for
+  reasons we cannot explain
+- we never got a capture of the instrument in the error state
+
+If it comes back, please reopen against this ticket rather than raising a new
+one, and please try again to get the capture. The most likely candidates
+remain an intermittent connection somewhere in the sensor path that reseating
+temporarily improved, or a marginal timing condition that we haven't
+characterised.
+
+[2026-01-20 16:00] Sean McAllister (Senior BMS):
+Understood, and I'd rather have that than a made-up answer. Will reopen if it
+returns.
+
+--- Resolution ---
+CANNOT REPRODUCE. Intermittent E-402 credibly logged by the customer (5 events
+over 6 weeks) but not reproduced during a 3-hour visit including a 300-cycle
+soak test (FSV-2025-0418). Home sensor, connector, rotor, flag alignment and
+motor current all normal.
+Symptom frequency reduced after the visit and ceased after a routine PM on
+2025-12-08 for reasons not established. No diagnostic capture of the
+instrument in the error state was ever obtained.
+Closed with ticket left as the reference if the symptom recurs.

@@ -1,0 +1,148 @@
+=================================================================
+VERIDIA BIOSYSTEMS - STANDARD OPERATING PROCEDURE
+=================================================================
+SOP Number:      SOP-VBS-007
+Title:           Instrument Shipping, Installation and IQ/OQ
+Revision:        3
+Effective Date:  2025-02-03
+Author:          Priya Anand, Head of Field Service Engineering
+Approved by:     Simone Buehler, QA Manager
+Review due:      2027-02-03
+
+-----------------------------------------------------------------
+1. SCOPE
+-----------------------------------------------------------------
+Shipping preparation, delivery acceptance, installation qualification (IQ) and
+operational qualification (OQ) for VeriScan 400, VeriScan 400 Pro and
+VeriPrep SP-1.
+
+-----------------------------------------------------------------
+2. PRE-DELIVERY SITE SURVEY
+-----------------------------------------------------------------
+2.1  Complete the site survey before the instrument ships. A survey completed
+     after delivery is a survey completed too late; the commonest consequence
+     is an instrument sitting in a corridor for a fortnight.
+
+2.2  Confirm:
+     [ ] Bench dimensions and load rating. VeriScan 480 x 520 mm, 42-46 kg.
+         SP-1 860 x 640 mm, 118 kg - a surprising number of laboratory
+         benches are not rated for the SP-1.
+     [ ] Clearance: 150 mm rear, 300 mm above for the SP-1 lid.
+     [ ] Mains socket within 2 m, correctly earthed.
+     [ ] Ambient temperature achievable within 18-32 C (analysers) or
+         18-30 C (SP-1) throughout the working day, including in summer.
+         Ask specifically about west-facing windows and about whether the air
+         handling is switched off overnight and at weekends.
+     [ ] Network drop available; static IP or DHCP reservation agreed with
+         the trust's IT.
+     [ ] Firewall rules: TCP 443 outbound to *.vericonnect.veridiabio.com,
+         TCP 6661 to the LIS host, UDP 123 to an NTP server.
+     [ ] Access route: lift dimensions, door widths, thresholds.
+     [ ] Waste and water arrangements.
+     [ ] Reagent storage space at 2-25 C, and 2-8 C for RGT-RT.
+
+2.3  Record the survey and attach it to the installation job.
+
+-----------------------------------------------------------------
+3. SHIPPING PREPARATION (FROM VERIDIA OR BETWEEN SITES)
+-----------------------------------------------------------------
+3.1  Remove all reagent cartridges. Cap the fluidic ports with the transit
+     caps supplied.
+
+3.2  Flush the fluid path with purified water and then drain. An instrument
+     shipped with reagent in the lines will arrive with crystalline deposit at
+     the fittings.
+
+3.3  Fit the transit brackets to the rotor and the probe arm. These are in the
+     accessory box; if they have been lost, do not improvise, order
+     replacements.
+
+3.4  Photograph the instrument before packing.
+
+3.5  Use the original packaging where available. Where it is not, use a
+     purpose-built flight case; general-purpose pallet wrap over a bare
+     instrument is not acceptable and voids the transit warranty.
+
+3.6  Fit a shock indicator to the outer packaging.
+
+-----------------------------------------------------------------
+4. DELIVERY ACCEPTANCE
+-----------------------------------------------------------------
+4.1  Inspect the shock indicator before signing. If triggered, note it on the
+     carrier's paperwork before signing and photograph it.
+
+4.2  Inspect the packaging for crush, puncture and water damage.
+
+4.3  Do not unpack the instrument until an engineer is present unless the
+     laboratory has been trained to do so.
+
+4.4  A recurring cause of E-311 (cartridge seal breach) reports shortly after
+     an install is reagent shipped separately and roughly handled in transit.
+     Inspect reagent cartons on arrival and reject any that are crushed.
+
+-----------------------------------------------------------------
+5. INSTALLATION QUALIFICATION (IQ)
+-----------------------------------------------------------------
+[ ] Serial number matches the delivery note and the sales order.
+[ ] Model matches the order. Check VS4-100 against VS4-200P explicitly -
+    the two are visually similar and a mis-shipped model has reached a
+    customer bench more than once. Confirm the platform string under
+    Settings > About, not just the badge.
+[ ] Accessory box contents checked against the packing list.
+[ ] Instrument sited per the survey; ambient measured at the instrument and
+    recorded.
+[ ] Mains supply verified.
+[ ] Network connectivity verified; IP address recorded.
+[ ] NTP reachable and time synchronised.
+[ ] Firmware version recorded; updated to current if agreed with the site.
+[ ] VeriConnect enrolment completed and instrument visible in the fleet view.
+[ ] LIS interface configured; test message sent and acknowledged.
+[ ] Documentation handed over: IFU, spec sheet at current revision, safety
+    data summary, quick reference card.
+
+-----------------------------------------------------------------
+6. OPERATIONAL QUALIFICATION (OQ)
+-----------------------------------------------------------------
+[ ] Reagents fitted, primed, lot numbers recorded and checked against active
+    field safety notices.
+[ ] Startup sequence completed without error.
+[ ] Background counts within SOP-VBS-001 Appendix A limits.
+[ ] Optical calibration passed.
+[ ] Calibration with VeriCal material completed and accepted.
+[ ] QC: all levels in use, both within range.
+[ ] Precision: 10 replicates of a normal specimen, CV within specification.
+[ ] Carryover: high specimen followed by three blanks, < 0.5%.
+[ ] Linearity verification with VT-LIN-6 where the laboratory requires it.
+[ ] Reticulocyte channel calibration and QC (Pro, where retic is in use).
+[ ] Body fluid mode background and QC (Pro, where body fluid is in use).
+[ ] SP-1 integration verified where applicable: 20-tube run, correct barcode
+    read, correct handoff, correct sorting. Confirm host protocol versions are
+    compatible (P-407).
+[ ] Aliquot volume verification per SOP-VBS-009 where the SP-1 aliquots.
+
+-----------------------------------------------------------------
+7. TRAINING
+-----------------------------------------------------------------
+7.1  One day for the VeriScan 400; two days for the 400 Pro; one day for the
+     SP-1. Record attendee names and roles.
+
+7.2  Cover as a minimum: daily QC (SOP-VBS-001), reagent changeover
+     (SOP-VBS-002), error code lookup and first-line response, how to raise a
+     support ticket and what information to include, and where to find field
+     safety notices.
+
+7.3  Leave the site with at least two staff able to perform a reagent
+     changeover unsupervised.
+
+-----------------------------------------------------------------
+8. HANDBACK
+-----------------------------------------------------------------
+8.1  IQ/OQ report signed by the engineer and by the laboratory.
+8.2  Copy filed with Veridia and with the customer.
+8.3  Warranty start date recorded.
+8.4  Account record updated: instruments, serial numbers, firmware,
+    VeriConnect tier.
+
+=================================================================
+END OF SOP-VBS-007 REVISION 3
+=================================================================

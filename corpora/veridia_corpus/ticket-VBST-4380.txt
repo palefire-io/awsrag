@@ -1,0 +1,121 @@
+Ticket ID: VBST-4380
+Status: Resolved
+Priority: P2-High
+Created: 2026-03-04 09:30 UTC
+Product: VeriGuard
+Customer: Royal Free London NHS Foundation Trust (ACC-1103)
+Reported by: Amara Nwosu, Information Governance Manager
+             amara.nwosu@nhs.net | 020 7794 0500 ext 31009
+Assigned to: Ruth Amankwah (Data Protection Officer)
+Tier: Enterprise + VeriGuard
+
+--- Thread ---
+
+[2026-03-04 09:30] Amara Nwosu (Information Governance Manager):
+We have received a subject access request from a former patient covering all
+personal data held about them, including in laboratory systems. The request
+was received 26 February and we have one month.
+
+The patient's records include haematology results processed through
+VeriConnect. I need to produce everything VeriConnect holds relating to this
+individual.
+
+Patient identifier: NHS number 943 476 5919. Local hospital number RF-4471203.
+
+Can you tell me what VeriConnect holds and how I extract it?
+
+[2026-03-04 12:15] Ruth Amankwah (Data Protection Officer):
+Ms Nwosu, hello. Ruth Amankwah, Veridia's DPO.
+
+First, a point of clarity that matters for how you handle this: for the
+purposes of UK GDPR, your trust is the controller and Veridia is the
+processor. The obligation to respond to the request is yours; our obligation
+is to assist you, which we will.
+
+Second, please do not send patient identifiers to us again through the support
+ticketing system. I have redacted them from your message above and purged them
+from the ticket store, and I have logged that action. The extraction runs
+inside your own tenant and you do not need to give us the identifier at all.
+
+What VeriConnect holds relating to a patient:
+- result records (analyte values, flags, scattergram and histogram data)
+- the patient identifiers transmitted with the order (NHS number, local
+  number, name, date of birth, sex where supplied)
+- the specimen accession and collection/report timestamps
+- authorisation records: who authorised the result and when
+- any free-text comments added to the result
+- audit events referencing the result
+
+Retention on your tenant is set to 7 years.
+
+How to extract it: you need a user holding the dpo role, which carries
+gdpr.export. Administration > Data Protection > Subject Access Export. Enter
+the identifier, select the date range, and the system assembles results, audit
+events and comments into a portable bundle (JSON plus a human-readable PDF).
+
+Do you have a user with the dpo role? I can see your tenant has the role
+available but I cannot see who holds it without an access request of my own.
+
+[2026-03-04 14:40] Amara Nwosu (Information Governance Manager):
+Understood on the identifiers, apologies, and thank you for handling it.
+
+No, nobody holds the dpo role. Our tenant admin is the laboratory manager.
+
+[2026-03-04 16:20] Ruth Amankwah (Data Protection Officer):
+Then the first step is for your tenant admin to assign it, to you or to
+whoever will do this work. It should not sit with the laboratory manager
+long-term - the dpo role carries erasure as well as export and separating it
+from laboratory operations is the point.
+
+Once assigned, the export itself takes a few minutes.
+
+Three further things you will want to know:
+
+1. Scattergram and histogram data is included in the JSON bundle but is not
+   meaningfully readable by a data subject. You are entitled to describe it
+   rather than reproduce it; the PDF renders it as an image.
+
+2. The bundle will include the names of the staff who authorised the results.
+   Those are third-party personal data. You will need to make your own
+   decision about redaction under the exemption for third-party data; most
+   trusts we work with redact staff names and retain the fact of
+   authorisation. The export does not redact automatically.
+
+3. If the request also asks for erasure, note that laboratory results are
+   subject to retention obligations under your own records management policy
+   and under accreditation requirements. VeriGuard's erasure workflow marks
+   records subject to a retention obligation rather than deleting them, and
+   records the reason. It will not silently destroy something you are required
+   to keep.
+
+[2026-03-05 11:00] Amara Nwosu (Information Governance Manager):
+dpo role assigned to me by our tenant admin this morning. Export run
+successfully - 47 result records over four years, plus audit events.
+
+The third-party redaction point is helpful and I'd not thought about it in
+this context.
+
+Request does not include erasure, so point 3 doesn't arise this time.
+
+[2026-03-05 11:30] Ruth Amankwah (Data Protection Officer):
+Good. Two last things for your file:
+
+- Our record of processing (Article 30) for VeriConnect is available on
+  request, and the current data processing agreement is at
+  reg-gdpr-dpa-template.txt if you need the executed version reference.
+- Your tenant's data is pinned to eu-west-1 (Ireland). If you need a statement
+  about international transfers for this request, ask and I will provide one.
+
+Closing unless you need anything further.
+
+[2026-03-05 13:15] Amara Nwosu (Information Governance Manager):
+Nothing further. Thank you - this was the least painful vendor interaction of
+the whole request.
+
+--- Resolution ---
+Data subject access request assistance. Controller/processor positions
+clarified; dpo role assigned to the customer's IG manager; subject access
+export run successfully within the tenant.
+NOTE: patient identifiers were submitted through the ticketing system by the
+customer. Redacted and purged by the DPO; action logged. Consider a warning in
+the ticket submission form.

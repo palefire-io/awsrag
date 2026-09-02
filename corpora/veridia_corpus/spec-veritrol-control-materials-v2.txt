@@ -1,0 +1,106 @@
+=================================================================
+VERIDIA BIOSYSTEMS - QUALITY CONTROL MATERIAL SPECIFICATION
+=================================================================
+Product: VeriTrol Haematology Control Materials
+Document Ref: DS-QC-002
+Revision: v2
+Revision Date: 2025-07-16
+Applies to: VeriScan 400, VeriScan 400 Pro
+
+-----------------------------------------------------------------
+PRODUCT RANGE
+-----------------------------------------------------------------
+Catalogue    | Description                          | Levels | Presentation
+-------------|--------------------------------------|--------|-------------
+VT-CTRL-3    | VeriTrol CBC/DIFF control            | 3      | 4 x 3 mL each
+VT-CTRL-2    | VeriTrol CBC/DIFF control            | 2      | 6 x 3 mL each
+VT-RET-2     | VeriTrol reticulocyte control (Pro)  | 2      | 3 x 2 mL each
+VT-BF-2      | VeriTrol body fluid control (Pro)    | 2      | 3 x 2 mL each
+VT-LIN-6     | VeriTrol linearity verification set  | 6      | 1 x 3 mL each
+
+Levels for VT-CTRL-3: Level 1 (low / abnormal-low), Level 2 (normal),
+Level 3 (high / abnormal-high).
+
+-----------------------------------------------------------------
+COMPOSITION
+-----------------------------------------------------------------
+Stabilised human erythrocytes, stabilised avian erythrocytes (as a leucocyte
+surrogate for the differential channels), platelet-sized particles and a
+haemoglobin-containing matrix, in a buffered preservative medium.
+
+CONTAINS MATERIAL OF HUMAN ORIGIN. Each donation has been tested and found
+non-reactive for HBsAg, anti-HCV, anti-HIV 1/2 and HIV-1 RNA. No test method
+can offer complete assurance that products derived from human blood will not
+transmit infection. Handle as potentially infectious using universal
+precautions.
+
+-----------------------------------------------------------------
+ASSIGNED VALUES
+-----------------------------------------------------------------
+Assigned values and acceptable ranges are lot specific and are supplied on the
+assay sheet in the carton and as a downloadable file from the customer portal
+(format: .vqc, importable from VeriConnect or from a USB stick at the
+instrument).
+
+Values are assigned on VeriScan 400 and VeriScan 400 Pro instruments. The two
+models have separate value columns on the assay sheet. USING THE WRONG COLUMN
+IS A COMMON CAUSE OF APPARENT QC FAILURE AT MIXED-FLEET SITES - the
+differential channel values differ materially between the halogen/absorbance
+optics of the 400 and the laser/fluorescence optics of the Pro.
+
+Ranges are expressed as target +/- 2SD or as a range; the instrument applies
+Westgard rules 1-3s, 2-2s and R-4s by default.
+
+-----------------------------------------------------------------
+STORAGE AND STABILITY
+-----------------------------------------------------------------
+Unopened, 2-8 C            | To the expiry date on the vial (typically 90-120
+                           | days from manufacture)
+Open vial, 2-8 C           | 14 days for VT-CTRL; 7 days for VT-RET; 24 hours
+                           | for VT-BF
+Do not freeze              | Yes
+Equilibration before use   | 15 minutes at room temperature, then mix by
+                           | gentle inversion for 30 seconds. Do not vortex.
+                           | Do not mix mechanically.
+
+Inadequate mixing is by a large margin the most common cause of an out-of-range
+QC result on this platform. A vial that has stood overnight requires the full
+30 seconds of inversion; a rushed 5-second mix typically produces a low RBC and
+a low HCT with a normal HGB, which is a recognisable signature.
+
+-----------------------------------------------------------------
+FREQUENCY AND WHEN TO RUN
+-----------------------------------------------------------------
+Minimum: two levels every 24 hours of operation.
+Additionally, run QC after:
+  - any calibration
+  - any reagent lot change (see SOP-VBS-002)
+  - any firmware update (see SOP-VBS-001 section 9)
+  - replacement of any fluidic or optical component
+  - relocation of the instrument
+  - any period of more than 7 days without use
+
+-----------------------------------------------------------------
+LOT CROSSOVER
+-----------------------------------------------------------------
+When moving to a new control lot, run the new lot alongside the current lot for
+at least 5 consecutive days (10 runs) before switching. Establish the
+laboratory's own mean and SD from a minimum of 20 data points rather than
+relying on the assay sheet SD, which is derived from a multi-instrument
+consensus and is generally wider than a single instrument achieves.
+
+VeriConnect Professional tier and above supports parallel lot running and will
+compute the new lot statistics automatically (Quality > Control Lots >
+Crossover).
+
+-----------------------------------------------------------------
+ORDERING
+-----------------------------------------------------------------
+Control material is supplied on a scheduled standing order by default, timed
+to arrive 3 weeks before the current lot expires. Contact your account manager
+to adjust the schedule. Ad hoc orders carry a 5 working day lead time and are
+shipped at 2-8 C.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

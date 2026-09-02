@@ -1,0 +1,264 @@
+=================================================================
+*** STRICTLY CONFIDENTIAL - PROJECT UNICORN ***
+*** BOARD OF DIRECTORS - RESTRICTED CIRCULATION ***
+=================================================================
+VERIDIA BIOSYSTEMS LTD - BOARD PAPER
+Project Unicorn - Approval to Proceed to Full Due Diligence
+=================================================================
+Paper reference:  UNI-BRD-001
+Board meeting:    2026-03-11
+Agenda item:      7 (in camera)
+Sponsor:          Gary Pemberton, Chief Financial Officer
+Presented by:     Dr Alistair Vance, Chief Executive Officer
+                  Gary Pemberton, Chief Financial Officer
+Prepared by:      Sunita Raval, General Counsel
+Classification:   Strictly Confidential - Inside Information
+
+DECISION REQUESTED
+The Board is asked to approve (a) proceeding to full due diligence on the
+proposed acquisition of Narwhal Industrial Holdings Limited, (b) a diligence
+budget of GBP 1.85M, and (c) the grant of exclusivity to 30 September 2026.
+
+-----------------------------------------------------------------
+1. EXECUTIVE SUMMARY
+-----------------------------------------------------------------
+1.1  Management recommends acquiring Narwhal Industrial Holdings Ltd for an
+     indicative enterprise value of GBP 62M to GBP 68M, subject to diligence
+     and to resolution of the pension position described at section 6.
+
+1.2  The strategic logic is capability, not scale. Narwhal has fourteen years
+     of mechanical engineering depth in tube handling. Veridia does not have
+     it and the cost of not having it is documented: the VeriPrep SP-1r1
+     tolerance failure produced 23 customer complaints, a redesign, a
+     subsidised retrofit programme and approximately GBP 640,000 of direct
+     cost, in a product line generating GBP 4.2M of annual revenue.
+
+1.3  The commercial logic is access. Narwhal has 340 systems in 190
+     laboratories, of which roughly 40 per cent run competitor haematology
+     analysers. Veridia currently reaches almost none of them.
+
+1.4  The principal risk is the Narwhal defined benefit pension scheme, which
+     carries a technical provisions deficit of GBP 9.2M and which is capable
+     of preventing the transaction. Section 6.
+
+1.5  The secondary risk is cultural. Narwhal's people practices are
+     materially weaker than Veridia's and integrating them carries a real risk
+     to what Veridia currently is. Section 7.
+
+-----------------------------------------------------------------
+2. WHY NOW
+-----------------------------------------------------------------
+2.1  Ardenmoor Capital has held its 38 per cent since 2019 and is at the end
+     of its fund life. It has been seeking an exit for eighteen months. Two
+     prior processes did not complete - one in 2024 on price and one in 2025
+     when the buyer withdrew during diligence, on grounds Ardenmoor describes
+     as "pension".
+
+2.2  Gareth Standish, founder and CEO, is 61 and has told Alistair Vance
+     directly that he wants a home for the business rather than the highest
+     price. That is a genuine advantage to Veridia and it is also a reason to
+     be careful: a founder's preference is not a binding commitment and
+     Ardenmoor has a fiduciary duty that points elsewhere.
+
+2.3  If we do not act, the most likely outcome is a trade sale to a larger
+     diagnostics group, which would put a competitor's automation inside 190
+     laboratories we sell into.
+
+-----------------------------------------------------------------
+3. WHAT WE WOULD BE BUYING
+-----------------------------------------------------------------
+  Revenue FY2025            GBP 58.2M   (Veridia GBP 42.1M)
+  EBITDA FY2025             GBP 4.1M    (7.0 per cent)
+  Employees                 410         (Veridia 318)
+  Installed base            340 systems in 190 laboratories
+  Sites                     Warrington (HQ, assembly, R&D)
+                            Wroclaw, Poland (machining, manufacturing)
+  Order book at 2026-02     GBP 21.4M
+  Customer concentration    Top 5 customers 31 per cent of revenue
+
+3.1  Note that Narwhal is larger than Veridia by revenue and headcount and
+     materially less profitable. This is an acquisition of a bigger, weaker
+     company by a smaller, stronger one. That shape carries integration risk
+     that a conventional bolt-on does not, and the Board should hold that in
+     mind throughout.
+
+-----------------------------------------------------------------
+4. VALUATION AND FUNDING
+-----------------------------------------------------------------
+4.1  Indicative EV of GBP 62M to GBP 68M represents 15.1x to 16.6x FY2025
+     EBITDA, or 1.07x to 1.17x revenue. The EBITDA multiple looks high; the
+     revenue multiple looks low. Both are true and the reason is Narwhal's
+     margin.
+
+4.2  Management's view is that the margin is fixable. Narwhal has never had a
+     pricing function, discounts at an average of 22 per cent against a list
+     it sets itself, and carries a cost base with duplication we would remove.
+     The model assumes margin improvement to 12 per cent by FY2029.
+
+4.3  THE BOARD SHOULD TEST THIS ASSUMPTION HARD. "We will fix their margin" is
+     the most common and least reliable assumption in acquisition modelling.
+
+4.4  Funding: GBP 40M of the Series D facility, GBP 18M of new debt (term
+     sheet received from two lenders), balance in Veridia equity issued to
+     Standish and the EBT, subject to shareholder consent.
+
+4.5  Synergies modelled at GBP 3.1M annualised by FY2029, of which GBP 1.9M
+     is cost and GBP 1.2M is revenue. The cost synergies are credible and are
+     detailed in the role overlap model. The revenue synergies are not yet
+     credible and management is not asking the Board to underwrite them.
+
+-----------------------------------------------------------------
+5. DILIGENCE SCOPE AND BUDGET
+-----------------------------------------------------------------
+  Financial (Hartwell Brogan)                 GBP 620,000
+  Legal (Marchmont Sayers)                    GBP 480,000
+  Pensions (Pilkington Rowe)                  GBP 260,000
+  Technical and product (internal + external) GBP 180,000
+  Commercial (internal)                       GBP  90,000
+  HR and people (internal + Marchmont Sayers) GBP 140,000
+  Polish law and works council (Kaczmarek
+    Wiszniewski sp.k.)                        GBP  80,000
+  ------------------------------------------  ------------
+  TOTAL                                       GBP 1,850,000
+
+5.1  GBP 1.85M is 4.4 per cent of FY2025 revenue and it is a real cost that
+     will be incurred whether or not the transaction proceeds. Management has
+     been explicit with the Board that it is asking for permission to spend it
+     on an outcome that may be "no".
+
+-----------------------------------------------------------------
+6. THE PENSION - THE CENTRAL ISSUE
+-----------------------------------------------------------------
+6.1  The Narwhal Industrial Pension Scheme is a defined benefit scheme, closed
+     to new entrants in 2009 and to future accrual in 2014. 312 members, of
+     whom 41 are current Narwhal employees.
+
+  Position at the 2025-04-05 actuarial valuation:
+    IAS 19 accounting deficit               GBP 6.8M
+    Technical provisions deficit            GBP 9.2M
+    Estimated buyout deficit                GBP 19.4M
+    Deficit recovery contributions          GBP 1.15M per annum to 2031
+
+6.2  A change of control is an event the trustees will engage with. The
+     trustee board, chaired by an independent professional trustee, will
+     assess whether the transaction weakens the employer covenant. Veridia
+     is smaller than Narwhal by revenue and less cash-generative in absolute
+     terms, and a leveraged acquisition adds GBP 18M of debt ranking ahead of
+     the scheme.
+
+6.3  Pilkington Rowe's preliminary view, 2026-03-04: the trustees are likely
+     to seek mitigation. Realistic outcomes range from an accelerated
+     recovery plan (GBP 2M per annum rather than GBP 1.15M) through a
+     lump-sum contribution of GBP 4M to GBP 7M, to a parent company guarantee
+     from Veridia, to some combination.
+
+6.4  The Pensions Regulator's moral hazard powers - contribution notices and
+     financial support directions - are a live consideration. Clearance is not
+     mandatory but Pilkington Rowe recommends seeking it, which adds three to
+     four months.
+
+6.5  MANAGEMENT'S POSITION: the pension is not a reason not to proceed to
+     diligence. It IS a reason the transaction may not complete, and the
+     Board should treat a GBP 5M to GBP 7M mitigation as the central case
+     rather than the downside. That sum comes off the price or it does not
+     happen.
+
+6.6  The prior buyer who withdrew in 2025 is understood to have withdrawn on
+     this issue. We should assume the trustees' position has hardened rather
+     than softened since.
+
+-----------------------------------------------------------------
+7. PEOPLE AND CULTURE
+-----------------------------------------------------------------
+7.1  Preliminary HR review has identified, from the vendor data room:
+       - 34 field engineers engaged as self-employed contractors, with a
+         potential employment status and IR35 exposure estimated at GBP 1.9M
+       - Historic holiday pay calculation excluding overtime, exposure
+         estimated at GBP 1.1M
+       - A gender pay gap of 21.4 per cent mean with no published action plan
+       - Two live employment tribunal claims and one Polish labour court claim
+       - Voluntary turnover of 22 per cent against Veridia's 9.1 per cent
+       - A Solidarnosc-recognised collective agreement at Wroclaw with
+         above-statutory severance provisions
+       - HR data held across three systems with no single source of truth and
+         no records of processing activity
+
+7.2  Individually these are all fixable and none is unusual in a founder-led
+     industrial business. Collectively they describe an organisation that has
+     not invested in its people function, and they represent an estimated
+     GBP 3.0M to GBP 3.4M of quantifiable exposure before any remediation
+     cost.
+
+7.3  THE UNQUANTIFIABLE RISK IS CULTURAL AND THE CPO HAS ASKED THAT IT BE
+     RECORDED IN THIS PAPER RATHER THAN IN AN ANNEX.
+
+     Veridia would be acquiring an organisation 29 per cent larger than itself
+     with materially weaker people practices and a turnover rate 2.4 times
+     ours. The assumption in every acquisition model is that the acquirer's
+     culture prevails. That assumption is not supported by evidence, and where
+     the target is larger it is often wrong.
+
+     Naomi Okonjo-Bright's recorded view: "Everything good about how this
+     company treats people was built deliberately over nine years by people
+     who are still here. It is not written into the products. It is not
+     protected by anything. If we get this wrong we will not notice for
+     eighteen months and then it will be gone."
+
+7.4  Management is not presenting this as a reason to decline. It is
+     presenting it as something the Board should require a plan for before
+     Gate 2, and management commits to bringing one.
+
+-----------------------------------------------------------------
+8. WHAT MANAGEMENT WOULD DO DIFFERENTLY FROM THE MODEL
+-----------------------------------------------------------------
+8.1  The synergy model assumes 34 role reductions across the combined group.
+     Management's view is that the number is achievable but that the timing in
+     the model - 60 per cent within twelve months of completion - is not.
+
+8.2  Specifically, management would NOT reduce field service headcount in year
+     one under any circumstances. Veridia's own field service function was the
+     subject of a formal stress risk assessment in 2025 which identified
+     understaffing as the root cause and recruitment as the substantive
+     control. Reversing that within a year of documenting it would be
+     indefensible, and if a claim arose the assessment would be disclosable.
+
+8.3  Management would also not consolidate the Wroclaw site in the first two
+     years. The collective agreement makes it expensive and the manufacturing
+     capability is a reason for buying the business.
+
+-----------------------------------------------------------------
+9. RECOMMENDATION
+-----------------------------------------------------------------
+The Board is asked to APPROVE:
+  (a) proceeding to full due diligence on Narwhal Industrial Holdings Ltd;
+  (b) a diligence budget of GBP 1.85M;
+  (c) the grant of exclusivity to 30 September 2026;
+  (d) the requirement that a people and culture integration plan be presented
+      at Gate 2 as a condition of any recommendation to proceed.
+
+-----------------------------------------------------------------
+BOARD DECISION - 2026-03-11
+-----------------------------------------------------------------
+APPROVED unanimously, with the following recorded by the Chair:
+
+  "The Board approves proceeding to diligence. The Board is not approving an
+   acquisition and management should not represent it as such internally or
+   externally.
+
+   Three things the Board will want at Gate 2. First, a pension answer, not a
+   pension range. Second, an honest assessment of the revenue synergy that
+   does not rely on a displacement rate nobody has evidenced. Third, the
+   people plan the CPO has asked for, and I want it presented by her rather
+   than summarised by anyone else.
+
+   And I want it minuted that we have spent four months and a great deal of
+   management attention on this. That is a sunk cost and it is not a reason to
+   buy a company."
+
+                                        Sir Nigel Broadhurst, Chair
+                                        2026-03-11
+
+=================================================================
+STRICTLY CONFIDENTIAL - PROJECT UNICORN - INSIDE INFORMATION
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

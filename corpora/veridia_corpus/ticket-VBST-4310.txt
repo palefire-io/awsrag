@@ -1,0 +1,103 @@
+Ticket ID: VBST-4310
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-12-15 09:30 UTC
+Product: VeriLyse RGT-L3 / VeriScan 400
+Customer: Uppsala Klinisk Kemi och Farmakologi (ACC-1222)
+Reported by: Anders Lindqvist, Sektionschef
+Assigned to: Marcus Chen (QC Applications Specialist)
+Serial: VS4P-0755
+Firmware: 4.3.1
+
+--- Thread ---
+
+[2025-12-15 09:30] Anders Lindqvist (Sektionschef):
+We changed RGT-L3 lot on Friday, from L3-2025-0499 to L3-2025-0510, both
+revision D. QC after changeover was accepted, all levels in range.
+
+But comparing the week before and the week after, the WBC mean on our normal
+control has shifted by +0.9 SD and the NEUT% by +0.7 SD. Everything is still
+within range so nothing has failed, but the shift is systematic.
+
+Your SOP-VBS-002 section 7.3 says a shift of more than 1 SD across three or
+more analytes should be investigated. We are at two analytes and under 1 SD,
+so strictly we are below the threshold. But it is a within-revision lot change
+and I did not expect any shift at all.
+
+Should I be concerned?
+
+[2025-12-15 14:20] Marcus Chen (QC Applications Specialist):
+This is a good question and I would rather you asked it than didn't.
+
+Short answer: a shift of that size at a within-revision lot change is at the
+larger end of normal but it is within normal. It is not a signal of the kind
+we saw in the FSN-2025-003 episode, where the shift was progressive over days
+rather than a step at changeover, and where it kept going.
+
+The distinction that matters:
+- A STEP at changeover that then stays flat is lot-to-lot variation. Every
+  reagent has some. It is why we ask you to establish your own mean and SD.
+- A DRIFT that begins some days after a cartridge goes on board and continues
+  is a stability problem. That is what the section 7.3 threshold is really
+  looking for.
+
+What I would like from you, to be sure:
+1. Continue running both levels daily and send me the WBC and NEUT% values
+   from the next 10 working days.
+2. Tell me the pierce date of the new cartridge.
+3. Confirm nothing else changed at the same time - calibration, control lot,
+   firmware.
+
+If the shift is flat over ten days, it is lot variation and you can adjust
+your target if you wish. If it continues to climb, we look harder.
+
+[2025-12-15 15:00] Anders Lindqvist (Sektionschef):
+2. Pierced 2025-12-12.
+3. Nothing else changed. Control lot is the same, no calibration, firmware
+   4.3.1 since November.
+
+I will send the data.
+
+[2026-01-07 10:15] Anders Lindqvist (Sektionschef):
+Ten working days of data attached, spanning the holiday period so there are
+some gaps.
+
+WBC normal level: mean over the ten days is +0.85 SD relative to the previous
+lot's established mean. Flat - the day-to-day scatter is what it always is and
+there is no upward trend.
+
+NEUT%: +0.6 SD, also flat.
+
+[2026-01-07 13:40] Marcus Chen (QC Applications Specialist):
+Flat is the answer. That is lot-to-lot variation, not instability.
+
+Two suggestions:
+
+1. Re-establish your control mean on the new lot from these ten days plus the
+   next ten, and use your own mean rather than carrying the previous lot's
+   forward. Carrying an old mean across a lot change is why the shift looks
+   alarming - you are measuring the new lot against the old lot's centre.
+
+2. If you want an early warning for the stability failure mode specifically,
+   the thing to watch is not the QC mean but the background WBC count over the
+   life of a cartridge. In the FSN-2025-003 episode the background began
+   climbing around day 5 and kept going. A background that is stable from day
+   1 to day 90 is the reassurance you are looking for.
+
+Nothing further needed here. Thank you for the careful question - most sites
+would have seen "in range" and moved on.
+
+[2026-01-08 08:50] Anders Lindqvist (Sektionschef):
+Understood. We will re-establish the mean and we will chart the background
+count over cartridge life, which we were not doing.
+
+Closing.
+
+--- Resolution ---
+No fault. Step shift of +0.85 SD (WBC) and +0.6 SD (NEUT%) at a within-revision
+RGT-L3 lot change, flat over ten subsequent working days. Normal lot-to-lot
+variation, not a stability signal.
+Actions: customer to re-establish control mean on the new lot; advised to chart
+background WBC count over cartridge life as the specific early warning for the
+FSN-2025-003 failure mode.
+See also: SOP-VBS-002 s.7.3, VBB-0047, VBI-0087

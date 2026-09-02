@@ -1,0 +1,175 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PRODUCT SPECIFICATION SHEET
+=================================================================
+Product: VeriScan 400 Benchtop Haematology Analyser
+Model: VS4-100
+Document Ref: DS-VS400-002
+Revision: v2
+Revision Date: 2024-05-10
+Supersedes: DS-VS400-001 (2023-02-28)
+Classification: IVD Directive 98/79/EC, Annex III self-declared.
+                IVDR (EU) 2017/746 conformity assessment in progress -
+                anticipated Class C. See reg-ivdr-transition-summary.txt.
+
+-----------------------------------------------------------------
+INTENDED USE
+-----------------------------------------------------------------
+The VeriScan 400 is an automated haematology analyser intended for the in-vitro
+quantitative determination of haematological parameters, including a five-part
+leucocyte differential, in whole blood samples collected into K2 or K3 EDTA.
+The device is intended for use by trained laboratory professionals in clinical
+laboratory settings. Results are intended to be used in conjunction with other
+clinical and laboratory findings and are not intended to be used as the sole
+basis for diagnosis.
+
+The VeriScan 400 is not intended for use in point-of-care settings, for
+home use, or for the analysis of body fluids other than whole blood. Body
+fluid analysis is available on the VeriScan 400 Pro only.
+
+-----------------------------------------------------------------
+MEASURED AND DERIVED PARAMETERS
+-----------------------------------------------------------------
+Measured:    WBC, RBC, HGB, PLT, MCV
+Derived:     HCT, MCH, MCHC, RDW-SD, RDW-CV, MPV, PDW, P-LCR, PCT
+Differential (5-part, absolute and percentage):
+             NEUT, LYMPH, MONO, EOS, BASO
+Research use only: none on this model
+
+-----------------------------------------------------------------
+TECHNICAL SPECIFICATIONS
+-----------------------------------------------------------------
+Parameter                    | Value
+-----------------------------|-----------------------------------------
+Throughput                   | 65 samples/hr (closed tube, CBC+5DIFF)
+Sample volume                | 150 uL whole blood (closed tube mode)
+                             | 130 uL (open tube mode)
+                             | 20 uL (predilute mode, 1:5)
+Sample presentation          | Closed-tube cap-pierce; open tube;
+                             | 10-position autoloader; STAT position
+Measurement principles       | WBC/DIFF: flow cytometry, impedance +
+                             |   absorbance (535 nm halogen source)
+                             | RBC/PLT: hydrodynamically focused impedance
+                             | HGB: cyanide-free SLS colorimetry (540 nm)
+Aspiration                   | Automatic, with clot detection
+Carryover                    | < 0.5% (WBC, RBC, HGB, PLT)
+Result storage (on board)    | 10,000 results with histograms/scattergrams
+Display                      | 7-inch colour capacitive touchscreen
+Connectivity                 | 2x Ethernet 10/100, 2x USB-A, 1x RS-232,
+                             | barcode reader port
+Protocols                    | HL7 v2.5.1 (v2.3.1 legacy profile), ASTM
+                             | E1394, VeriConnect cloud agent
+Dimensions (W x D x H)       | 480 x 520 x 560 mm
+Mass                         | 42 kg
+Power                        | 100-240 V AC, 50/60 Hz, 300 VA
+Noise                        | < 58 dB(A) at 1 m
+-----------------------------|-----------------------------------------
+
+-----------------------------------------------------------------
+ANALYTICAL PERFORMANCE
+-----------------------------------------------------------------
+Linearity (measuring interval)
+Analyte | Interval                       | r
+--------|--------------------------------|-------
+WBC     | 0.10 - 120.0 x10^9/L           | 0.999
+RBC     | 0.05 - 8.50 x10^12/L           | 0.999
+HGB     | 5 - 260 g/L                    | 0.999
+PLT     | 5 - 3000 x10^9/L               | 0.998
+HCT     | 0.5 - 75.0 %                   | 0.999
+
+Repeatability (within-run CV, normal-range material, n=31)
+Analyte | CV
+--------|-------
+WBC     | <= 2.0%
+RBC     | <= 1.5%
+HGB     | <= 1.0%
+PLT     | <= 4.0%
+MCV     | <= 1.0%
+
+Limit of blank / limit of detection
+WBC: LoB 0.02, LoD 0.05 x10^9/L
+PLT: LoB 2, LoD 4 x10^9/L
+
+Method comparison against reference flow cytometry (ICSH) is reported in
+DS-VS400-CLIN-002 and summarised in reg-clinical-performance-summary.txt.
+
+-----------------------------------------------------------------
+REAGENT COMPATIBILITY
+-----------------------------------------------------------------
+Required:
+  RGT-D5  VeriLyse Standard Diluent      500 mL cartridge   VL-D5-500
+  RGT-L3  VeriLyse Lyse Reagent          500 mL cartridge   VL-L3-500
+  RGT-CL  VeriLyse Cleaning Solution     250 mL cartridge   VL-CL-250
+
+Not compatible:
+  RGT-RT  VeriLyse Reticulocyte Stain - VeriScan 400 Pro only. The VeriScan
+          400 has no reticulocyte channel and the cartridge bay will reject
+          an RGT-RT cartridge with E-302.
+
+Cartridge shelf life: 18 months unopened. 90 days on board after first pierce.
+Third-party reagents are not supported and will not be recognised (E-302).
+
+-----------------------------------------------------------------
+OPERATING CONDITIONS
+-----------------------------------------------------------------
+Condition                 | Specification
+--------------------------|-------------------------------
+Ambient temperature       | 15 C to 35 C
+Relative humidity         | 20% to 80% non-condensing
+Altitude                  | up to 2000 m
+Storage/transport temp    | -10 C to 50 C
+Installation category     | II
+Pollution degree          | 2
+Indoor use only           | Yes
+
+-----------------------------------------------------------------
+QUALITY CONTROL
+-----------------------------------------------------------------
+Three levels of VeriTrol control material (low, normal, high) are supported.
+Westgard rules 1-3s, 2-2s and R-4s are applied by default; the rule set is
+configurable from VeriConnect Professional tier and above. Levey-Jennings
+charting is available on the instrument and in VeriConnect.
+
+Recommended QC frequency: both normal and abnormal levels once per 24 hours of
+operation and after each calibration, reagent lot change or firmware update.
+See SOP-VBS-001.
+
+-----------------------------------------------------------------
+REGULATORY STATUS
+-----------------------------------------------------------------
+CE marked under Directive 98/79/EC on in-vitro diagnostic medical devices,
+self-declared under Annex III. Notified Body involvement is not required for
+this classification under the Directive.
+
+UKCA marked under the UK Medical Devices Regulations 2002 (as amended).
+Declaration available on request; see reg-ukca-self-declaration.txt.
+
+Under IVDR (EU) 2017/746 the device is expected to be classified as Class C
+under Rule 3(k). Conformity assessment with Notified Body 0086 is in progress.
+Until that assessment concludes, the device is placed on the EU market under
+the transitional provisions of Article 110.
+
+Not cleared or approved by the US FDA. Available in the United States for
+Research Use Only.
+
+Manufacturer registration: MHRA GB registration number GB-MF-000104837.
+
+-----------------------------------------------------------------
+ORDERING INFORMATION
+-----------------------------------------------------------------
+Part Number   | Description
+--------------|-------------------------------------------------
+VS4-100       | VeriScan 400 analyser, base configuration
+VS4-100-AL    | VeriScan 400 with 50-position extended autoloader
+VS4-100-INST  | Installation, IQ/OQ and 1-day operator training
+VL-D5-500     | RGT-D5 diluent cartridge, 500 mL
+VL-L3-500     | RGT-L3 lyse cartridge, 500 mL
+VL-CL-250     | RGT-CL cleaning cartridge, 250 mL
+VT-CTRL-3     | VeriTrol control material, 3 levels x 4 x 3 mL
+VS4-KIT-PM1   | Annual preventive maintenance kit
+VS4-SVC-GOLD  | Gold service contract, 12 months
+VC-ESS-1      | VeriConnect Essentials, per instrument per year
+
+=================================================================
+Veridia BioSystems Ltd. | 41 Hurst Way, Cambridge CB4 0WS, UK
+Registered in England No. 10483726 | www.veridiabio.com
+=================================================================

@@ -1,0 +1,50 @@
+From: Dr Amelie Fournier <amelie.fournier@hug.ch>
+To: Camille Roux <camille.roux@veridiabio.com>
+CC: Marcus Chen <marcus.chen@veridiabio.com>
+Date: Thu, 4 Sep 2025 10:12:55 +0200
+Subject: Training request - body fluid mode and reticulocyte for new staff
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Camille,
+
+We have four new biomedical scientists starting in October and I would like to
+arrange training on the VeriScan 400 Pro, specifically the reticulocyte and
+body fluid modes.
+
+Our existing staff were trained at installation in 2023 and have passed
+knowledge on informally since. That has worked but it is not defensible at
+accreditation, and the informal transmission has produced some habits I would
+rather correct at source. For example, I discovered last month that two
+scientists were not running the three background cycles before a body fluid
+batch, because nobody had told them why it matters.
+
+What I would like:
+  - One day, on site, for four new staff plus two existing staff as a refresher
+  - Focus on reticulocyte calibration and QC, body fluid mode including the
+    background requirement, and the interpretation of the advisory flags
+  - A written training record we can file
+
+Two questions:
+
+1. The advisory flags in firmware 4.3.0 (BLAST?, NRBC?, PLT-CLUMP?,
+   FRAGMENTS?) are research use only. My scientists see them on screen and ask
+   what to do with them. Currently the answer is "ignore them", which is
+   unsatisfying and I suspect not what actually happens. What is Veridia's
+   guidance on how a laboratory should handle a flag it is told not to rely on?
+   I would like this covered in the training explicitly.
+
+2. Following the E-607 problem we had in the spring (ticket VBST-4056), I would
+   like the environmental requirements covered as part of the training. My
+   staff now know that the instrument is sensitive to ambient temperature but
+   they learned it from an incident rather than from instruction.
+
+Our preference would be a date in the second half of October. We can host in
+the laboratory seminar room.
+
+Best regards,
+
+Dr Amelie Fournier
+Medecin responsable, Laboratoire d'hematologie
+Hopitaux Universitaires de Geneve
+Rue Gabrielle-Perret-Gentil 4, 1205 Geneve
+amelie.fournier@hug.ch | +41 22 372 3311

@@ -1,0 +1,42 @@
+From: Rhys Morgan <rhys.morgan2@wales.nhs.uk>
+To: Sarah Lindgren <sarah.lindgren@veridiabio.com>
+Date: Thu, 6 Nov 2025 13:47:55 +0000
+Subject: UKCA marking - evidence for our UKAS assessment
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Sarah,
+
+Short question, hopefully.
+
+Our UKAS assessor has asked for evidence that our analysers are appropriately
+marked for the UK market. We have the CE declaration but she has specifically
+asked about UKCA.
+
+Could you send:
+- the UKCA declaration of conformity for the VeriScan 400 and 400 Pro
+- confirmation of the legislation it is declared against
+- your UK Responsible Person details if applicable
+
+Also, and I ask this partly out of curiosity: your datasheets say both CE
+marked under the IVD Directive and UKCA marked under the UK MDR 2002. Are these
+two separate declarations or one document? The assessor asked and I did not
+know.
+
+One more. She also asked whether the reagents are separately marked. I said I
+would ask.
+
+Diolch,
+
+Rhys Morgan
+Principal Biomedical Scientist
+Haematology
+Cardiff and Vale University Health Board
+University Hospital of Wales, Heath Park, Cardiff CF14 4XW
+rhys.morgan2@wales.nhs.uk | 029 2074 7747 ext 24418
+
+--
+This email and any files transmitted with it are confidential and intended
+solely for the use of the individual or entity to whom they are addressed.
+Cardiff and Vale University Health Board / Bwrdd Iechyd Prifysgol Caerdydd a'r
+Fro. Rydym yn croesawu gohebiaeth yn Gymraeg. We welcome correspondence in
+Welsh.

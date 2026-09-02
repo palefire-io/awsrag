@@ -1,0 +1,147 @@
+=================================================================
+UKCA DECLARATION OF CONFORMITY
+=================================================================
+Document Ref: DOC-UKCA-VS4-004
+Revision:     4
+Date of issue: 2025-05-22
+Supersedes:   DOC-UKCA-VS4-003 (2024-05-10)
+
+-----------------------------------------------------------------
+1. MANUFACTURER
+-----------------------------------------------------------------
+Veridia BioSystems Ltd.
+41 Hurst Way
+Cambridge CB4 0WS
+United Kingdom
+
+Registered in England and Wales, company number 10483726
+MHRA manufacturer registration: GB-MF-000104837
+
+UK Responsible Person: not applicable. Veridia BioSystems Ltd is established in
+the United Kingdom and acts as manufacturer for the purposes of the UK Medical
+Devices Regulations 2002.
+
+-----------------------------------------------------------------
+2. DEVICES COVERED
+-----------------------------------------------------------------
+Device name          Model      Basic UDI-DI            GMDN
+-------------------  ---------  ----------------------  ------
+VeriScan 400         VS4-100    5060847220VS4100XN      56341
+VeriScan 400 Pro     VS4-200P   5060847220VS4200PXP     56341
+  Benchtop automated haematology analysers
+
+VeriLyse RGT-D5      VL-D5-500  5060847220VLD5XXXH      41703
+VeriLyse RGT-L3      VL-L3-500  5060847220VLL3XXXK      41703
+VeriLyse RGT-CL      VL-CL-250  5060847220VLCLXXXM      41703
+VeriLyse RGT-RT      VL-RT-250  5060847220VLRTXXXQ      41703
+  Reagents for use with the above analysers
+
+This declaration does not cover the VeriPrep SP-1, which is not an in-vitro
+diagnostic medical device. See section 8.
+
+-----------------------------------------------------------------
+3. CLASSIFICATION
+-----------------------------------------------------------------
+Under Part IV of the Medical Devices Regulations 2002 (as amended), which
+implements the requirements formerly derived from Directive 98/79/EC:
+
+  VeriScan 400 and 400 Pro   General IVD (Annex III self-declaration route)
+  VeriLyse reagents          General IVD (Annex III self-declaration route)
+
+None of the devices is listed in Annex II List A or List B, and none is a
+device for self-testing. Approved Body involvement is therefore not required
+for this conformity assessment route.
+
+NOTE FOR CUSTOMERS. Under the EU IVDR these devices are classified Class C and
+DO require Notified Body involvement. The difference is not an inconsistency:
+the UK framework currently in force derives from the earlier Directive and
+uses a different classification scheme. See reg-ivdr-transition-summary.txt.
+The UK is expected to introduce a revised framework aligned more closely with
+international practice; Veridia monitors this and will reissue this declaration
+when required.
+
+-----------------------------------------------------------------
+4. DECLARATION
+-----------------------------------------------------------------
+Veridia BioSystems Ltd declares under its sole responsibility that the devices
+identified in section 2 conform to the relevant essential requirements of Annex
+I of the Medical Devices Regulations 2002 (as amended), and to the requirements
+of the following regulations where applicable:
+
+  - Electrical Equipment (Safety) Regulations 2016
+  - Electromagnetic Compatibility Regulations 2016
+  - Restriction of the Use of Certain Hazardous Substances in Electrical and
+    Electronic Equipment Regulations 2012
+
+-----------------------------------------------------------------
+5. DESIGNATED STANDARDS APPLIED
+-----------------------------------------------------------------
+BS EN ISO 13485:2016+A11:2021   Medical devices - Quality management systems
+BS EN ISO 14971:2019+A11:2021   Application of risk management
+BS EN ISO 15223-1:2021          Symbols for labels and information supplied
+BS EN ISO 18113-1:2022          Information supplied by the manufacturer
+BS EN ISO 18113-3:2022          IVD instruments for professional use
+BS EN 61010-1:2010+A1:2019      Safety requirements for electrical equipment
+BS EN 61010-2-101:2017          Particular requirements for IVD equipment
+BS EN 61326-1:2013              EMC requirements
+BS EN 61326-2-6:2013            EMC - particular requirements for IVD
+BS EN 62366-1:2015+A1:2020      Application of usability engineering
+BS EN 62304:2008+A1:2015        Medical device software lifecycle processes
+BS EN ISO 20916:2019            Clinical performance studies using specimens
+BS EN 60825-1:2014              Safety of laser products (VeriScan 400 Pro)
+BS EN ISO 23640:2015            Stability evaluation of IVD reagents
+
+-----------------------------------------------------------------
+6. TECHNICAL DOCUMENTATION
+-----------------------------------------------------------------
+Technical documentation is held at the registered address above and is
+available to the MHRA on request. It is retained for the lifetime of the device
+and for not less than 10 years after the last device has been placed on the
+market.
+
+Documentation reference: TD-VS400-MASTER (analysers), TD-RGT-MASTER (reagents).
+
+-----------------------------------------------------------------
+7. UKCA MARKING
+-----------------------------------------------------------------
+The UKCA mark is applied to the device label, the outer packaging and the
+Instructions for Use. It is not accompanied by an Approved Body number, since
+no Approved Body is involved in this conformity assessment route.
+
+Devices bearing both the CE mark and the UKCA mark are placed on both markets.
+The marks are applied under separate declarations; this document covers the
+UKCA mark only.
+
+-----------------------------------------------------------------
+8. VERIPREP SP-1
+-----------------------------------------------------------------
+The VeriPrep SP-1 is an accessory to an in-vitro diagnostic medical device. It
+performs no measurement, produces no diagnostic result and does not itself fall
+within the definition of an IVD.
+
+It is UKCA marked under the Supply of Machinery (Safety) Regulations 2008, the
+Electrical Equipment (Safety) Regulations 2016 and the Electromagnetic
+Compatibility Regulations 2016. A separate declaration (DOC-UKCA-SP1-002) is
+available.
+
+-----------------------------------------------------------------
+9. SIGNATURE
+-----------------------------------------------------------------
+Signed for and on behalf of Veridia BioSystems Ltd:
+
+  Name:      Sarah Lindgren
+  Position:  Regulatory Affairs Manager
+  Place:     Cambridge, United Kingdom
+  Date:      22 May 2025
+
+  Countersigned:
+
+  Name:      Dr Elena Marchetti
+  Position:  Chief Scientific Officer
+  Place:     Cambridge, United Kingdom
+  Date:      22 May 2025
+
+=================================================================
+Veridia BioSystems Ltd. | 41 Hurst Way, Cambridge CB4 0WS
+Registered in England No. 10483726
+=================================================================

@@ -1,0 +1,134 @@
+Ticket ID: VBST-3795
+Status: Resolved
+Priority: P2-High
+Created: 2024-12-19 08:41 UTC
+Product: VeriPrep SP-1
+Customer: Mid Yorkshire Teaching NHS Trust (ACC-1117)
+Reported by: Steve Ogden, Laboratory Manager, Haematology
+Assigned to: Danny Whitcombe (Support Engineer) -> Rob Ellery (FSE North)
+Serial: SP1-R1-0219
+Firmware: SP-1 2.2.0 / VeriScan 4.2.0
+
+--- Thread ---
+
+[2024-12-19 08:41] Steve Ogden (Laboratory Manager):
+Morning. Our SP-1 has started jamming. Its always the same thing, a tube gets
+stuck partway into the feed and we get P-112, then we have to open it up and
+pull the tube out. Happened 4 times yesterday and twice already this morning.
+We are getting a lot of P-101 as well where it just wont read the label.
+
+This is a new thing, it was fine up until about a month ago. Nothing has
+changed at our end that I know of.
+
+[2024-12-19 09:15] Danny Whitcombe (Support Engineer):
+Hi Steve, thanks for getting in touch and sorry you're having trouble.
+
+A few questions to narrow this down:
+1. Is it the same rack position each time or is it random?
+2. What tube type and volume are the jamming tubes? Manufacturer and nominal
+   volume please, and if you can, measure the overall height with the cap on.
+3. Has your tube supplier or catalogue number changed recently? Procurement
+   sometimes switches without telling the lab.
+4. Are the P-101 read failures on the same tubes that jam, or different ones?
+
+If you can get a photo of a jammed tube in situ before you clear it, that
+would help a lot.
+
+[2024-12-19 11:52] Steve Ogden (Laboratory Manager):
+1. Random positions.
+2. 5mL EDTA, I'll have to check the cat number. Measured three of them, 74.8,
+   74.9 and 75.1mm with the cap on.
+3. Now you mention it, procurement did move us onto a different line in
+   November. Same nominal tube, different supplier I think. Nobody told us.
+4. Mostly the same tubes yes. The ones that read OK usually go through fine.
+
+Photos attached (3).
+
+[2024-12-19 13:20] Danny Whitcombe (Support Engineer):
+That's the answer, I think. Your new tubes are about 2mm shorter overall than
+the ones you were using. The r1 feed mechanism wants 73.5-80.0mm and the
+barcode window is positioned for a tube sitting at the top of that band. At
+74.8mm the label top edge is dropping below the scanner window, which gives
+you the P-101, and the cap has less for the feed pawl to push against, which
+gives you the jam.
+
+We've seen this at a handful of sites now. Three things you can do today:
+
+a) Ask your label printer to shift the label template up by 3mm. That alone
+   usually fixes the barcode reads.
+b) Load alternate carrier positions on affected racks. Doesn't stop jams but
+   stops a cascade.
+c) If you can get any of the old tubes back, use them until we sort this
+   properly.
+
+Longer term we have a tube adapter (SP1-ADP-05, set of 10) that lifts the tube
+2.5mm and restores both. I can get you a set out. There is also a hardware
+revision coming next year that widens the tolerance.
+
+[2024-12-19 14:04] Steve Ogden (Laboratory Manager):
+Right, that makes sense. I've spoken to procurement and they cannot switch
+back before Q2, contract reasons. Please send the adapters.
+
+Can I ask - is there any risk to results from this? I have to say something at
+the departmental meeting.
+
+[2024-12-19 14:31] Danny Whitcombe (Support Engineer):
+No risk to results. This is purely a tube handling problem in the prep
+station. A tube that jams doesn't get processed at all, so there's no
+possibility of a wrong result - you just have to recover it manually. And a
+tube that fails the barcode read goes to the exception rack rather than being
+run against the wrong patient.
+
+The thing to watch is turnaround time and the manual handling, not accuracy.
+
+[2024-12-19 14:38] Steve Ogden (Laboratory Manager):
+Thats what I needed. Thanks.
+
+[2025-01-02 10:15] Steve Ogden (Laboratory Manager):
+Adapters arrived and are in use. Better but not fixed - jams down to maybe one
+a day from four, barcode reads much improved. Still not what I'd call right.
+
+[2025-01-06 09:30] Danny Whitcombe (Support Engineer):
+Thanks for the update. One a day is still too many. I'm going to get Rob
+Ellery out to you - he can check the gripper jaws and the feed pawl for wear,
+because a month of jamming will have taken a toll on both regardless of what
+started it.
+
+Visit booked for 9 January.
+
+[2025-01-09 16:40] Rob Ellery (Field Service Engineer):
+Attended site. Gripper jaws were visibly glazed and the left jaw had a flat
+spot - replaced with SP1-MEC-160. Feed pawl tip showed wear but was within
+tolerance so left in place. Cleared a small amount of shed rubber from the
+guide rail.
+
+Confirmed the tube geometry with the customer's current stock: mean capped
+height 74.9mm across 10 tubes. That's below the reliable band for r1.
+
+Ran 60 tubes with adapters fitted after the jaw change - zero jams, 1 barcode
+retry, no failures. Ran 20 without adapters - 2 P-105 and 1 jam. So the
+adapters are doing real work and the site needs to keep using them.
+
+Advised Steve to log every jam with date, rack position and tube type. Told
+him about the r2 revision expected Q3 and that a retrofit will be available.
+He'd like a quote when there is one.
+
+Time on site 3.5 hours. Visit FSV-2025-0114.
+
+[2025-01-10 09:12] Danny Whitcombe (Support Engineer):
+Marking this resolved. Steve, please do keep the jam log - if this continues
+it's the evidence we need to get you prioritised for the retrofit.
+
+Advisory bulletin on this issue is being prepared and will go out to all SP-1
+sites shortly.
+
+[2025-01-10 09:44] Steve Ogden (Laboratory Manager):
+Understood. Thanks both, good service.
+
+--- Resolution ---
+Root cause: short-cap 5mL tubes (mean 74.9mm capped) below the reliable
+handling band for SP-1r1. Compounded by gripper jaw wear.
+Actions: SP1-ADP-05 adapters supplied; gripper jaws replaced under
+FSV-2025-0114; label template raised 3mm; site added to r2 retrofit interest
+list.
+See also: VBB-0038, ticket VBST-3812, ticket VBST-4098.

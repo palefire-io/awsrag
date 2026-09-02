@@ -1,0 +1,301 @@
+=================================================================
+VERIDIA BIOSYSTEMS - STANDARD OPERATING PROCEDURE
+=================================================================
+SOP Number:      SOP-VBS-001
+Title:           Daily Quality Control Procedure - VeriScan 400 and
+                 VeriScan 400 Pro
+Revision:        6
+Effective Date:  2025-06-01
+Supersedes:      Revision 5 (2024-02-12)
+Author:          Marcus Chen, QC Applications Specialist
+Reviewed by:     Dr Elena Marchetti, Chief Scientific Officer
+Approved by:     Simone Buehler, QA Manager
+Review due:      2027-06-01
+Document owner:  Applications, Cambridge
+
+CHANGE SUMMARY (rev 5 -> rev 6)
+  - Section 4 amended for the 18-32 C ambient range (VBB-0052).
+  - Section 6 amended: reagent lot verification now explicitly requires a
+    check against current field safety notices, following FSN-2025-003.
+  - Section 9 added: QC requirements after a firmware update.
+  - Appendix B (probe soak) unchanged.
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+1.1  This procedure defines the minimum daily quality control activities to be
+     performed on VeriScan 400 and VeriScan 400 Pro haematology analysers
+     before patient samples are analysed and results released.
+
+1.2  It is written for customer laboratories. Veridia field service engineers
+     performing QC as part of a service visit follow SOP-VBS-011 in addition
+     to this procedure.
+
+-----------------------------------------------------------------
+2. SCOPE
+-----------------------------------------------------------------
+2.1  Applies to all VeriScan 400 (VS4-100) and VeriScan 400 Pro (VS4-200P)
+     instruments.
+
+2.2  Sections 7 and 8 (reticulocyte and body fluid QC) apply to the VeriScan
+     400 Pro only. If your instrument does not display a Reticulocyte entry on
+     the run menu, it is a VeriScan 400 and those sections do not apply. See
+     spec-veriscan-400-pro-v3.txt section "Relationship to the VeriScan 400"
+     if you are unsure which model you operate.
+
+2.3  This SOP does not cover calibration. Calibration is described in the
+     Instructions for Use, section 9.
+
+-----------------------------------------------------------------
+3. RESPONSIBILITIES
+-----------------------------------------------------------------
+3.1  The operator performing the QC run is responsible for executing this
+     procedure and for recording the result.
+
+3.2  A biomedical scientist holding the results.authorise permission (or local
+     equivalent) is responsible for reviewing and accepting or rejecting the
+     QC run. The operator who ran the QC may perform this review provided
+     they hold the permission.
+
+3.3  The laboratory manager is responsible for the QC policy, the control
+     material ordering schedule, and for investigating repeated failures.
+
+-----------------------------------------------------------------
+4. PRE-CHECKS (BEFORE ANY QC RUN)
+-----------------------------------------------------------------
+4.1  Confirm ambient temperature at the instrument is between 18 C and 32 C.
+     Measure at the instrument, not at the room thermostat. Instruments sited
+     near a window, above a centrifuge or in a poorly ventilated side room
+     commonly run 3-6 C above the room reading. Reference: VBB-0052.
+
+     NOTE: firmware up to and including 4.3.1 raises the W-031 ambient warning
+     only outside 15-35 C, so the absence of W-031 does not confirm compliance
+     with 4.1. Firmware 4.4.0 and later align the warning with 18-32 C.
+
+4.2  Confirm relative humidity is between 20 and 80 per cent, non-condensing.
+
+4.3  Check the waste container. Empty it if more than three quarters full.
+     E-107 will halt a run mid-batch, which is avoidable.
+
+4.4  Check reagent cartridge levels and remaining on-board days. From firmware
+     4.3.0 the instrument displays a countdown against the 90-day on-board
+     limit. Replace any cartridge with fewer than 2 days remaining before
+     starting a batch.
+
+4.5  Review any errors or warnings logged since the previous QC run
+     (Log > Events). Investigate and clear before proceeding.
+
+-----------------------------------------------------------------
+5. STARTUP AND BACKGROUND CHECK
+-----------------------------------------------------------------
+5.1  Power on the instrument or wake it from standby. Allow the startup
+     sequence to complete. Startup includes an automatic prime and background
+     count and takes approximately 8 minutes from cold.
+
+5.2  Review the background count. Acceptance limits:
+
+       WBC   <= 0.20 x10^9/L
+       RBC   <= 0.02 x10^12/L
+       HGB   <= 1 g/L
+       PLT   <= 10 x10^9/L
+
+5.3  If any background result exceeds its limit, run a second background
+     cycle. If it fails again:
+       a) run an Extended Clean (Service > Maintenance > Extended Clean,
+          approximately 22 minutes, consumes 45 mL RGT-CL);
+       b) repeat the background count;
+       c) if it still fails, do NOT proceed to patient testing. Raise a
+          support ticket. Persistent high background is most often flow cell
+          fouling (E-207) or a reagent problem.
+
+5.4  If the elevated background is confined to the WBC channel and is
+     accompanied by W-042, check the RGT-L3 lot number against current field
+     safety notices before assuming an instrument fault. See section 6.4.
+
+-----------------------------------------------------------------
+6. REAGENT AND LOT VERIFICATION
+-----------------------------------------------------------------
+6.1  Record the lot number of each cartridge on board: RGT-D5, RGT-L3, RGT-CL
+     and, on the Pro, RGT-RT. The lot number is shown under
+     Reagents > Cartridge Detail and printed on the cartridge label.
+
+6.2  Confirm the lot number displayed by the instrument matches the label. A
+     mismatch indicates an RFID or labelling problem; quarantine the cartridge
+     and raise a ticket with photographs of both.
+
+6.3  Confirm each cartridge is within its unopened shelf life and within its
+     on-board limit (90 days for D5, L3 and CL; 60 days for RT).
+
+6.4  Check each lot number against the field safety notices in force. The
+     current list is published on the customer portal and in VeriConnect under
+     Notifications > Safety. As at the effective date of this revision, lots
+     L3-2025-0440 to L3-2025-0460 inclusive are recalled under FSN-2025-003
+     and must not be used.
+
+     This check was added in revision 6. During the FSN-2025-003 episode
+     several laboratories continued to use affected stock for some days after
+     the notice was issued because there was no defined point in the daily
+     workflow at which lot numbers were compared against notices.
+
+6.5  VeriConnect Professional tier and above records lot numbers automatically
+     and will display a banner if a cartridge matching an active notice is
+     detected. This does not remove the requirement at 6.4; the banner depends
+     on the instrument being enrolled and online.
+
+-----------------------------------------------------------------
+7. CBC AND DIFFERENTIAL QC (ALL MODELS)
+-----------------------------------------------------------------
+7.1  Remove the control vials from refrigeration and allow 15 minutes at room
+     temperature. Do not shortcut this.
+
+7.2  Mix by gentle inversion for a full 30 seconds. Do not vortex. Do not use
+     a mechanical mixer. Inadequate mixing is the single most common cause of
+     an out-of-range QC result on this platform; the characteristic signature
+     is a low RBC and low HCT with a normal HGB.
+
+7.3  Run a minimum of two levels (normal and one abnormal) in QC mode:
+     Run > Quality Control > select control lot > present vial.
+
+7.4  Do not run controls in patient mode. Results run in patient mode are not
+     charted and will not satisfy accreditation requirements.
+
+7.5  Review each result against the assigned range for the lot.
+
+     CRITICAL: on a mixed fleet, use the value column for the correct model.
+     The assay sheet carries separate columns for the VeriScan 400 and the
+     VeriScan 400 Pro. The differential channel values differ materially
+     between the two because the optics differ. Using the wrong column
+     produces an apparent systematic differential failure on an instrument
+     that is performing correctly.
+
+7.6  Westgard rules applied by default: 1-3s (reject), 2-2s (reject), R-4s
+     (reject). 1-2s is a warning only and does not require rejection of the
+     run. The rule set is configurable from VeriConnect Professional tier.
+
+7.7  Acceptance:
+       - All levels within range, no rejection rule triggered: accept the run
+         and proceed to patient testing.
+       - A 1-2s warning on a single analyte at a single level: accept, but
+         note it. Two consecutive 1-2s warnings in the same direction warrant
+         investigation even though no rule has been broken.
+       - Any rejection rule triggered: go to section 10.
+
+-----------------------------------------------------------------
+8. RETICULOCYTE AND BODY FLUID QC (VERISCAN 400 PRO ONLY)
+-----------------------------------------------------------------
+8.1  Reticulocyte QC (VT-RET-2, two levels) must be run:
+       - daily, on any day on which reticulocyte counts will be reported;
+       - after every RGT-RT stain lot change (mandatory, and the retic channel
+         is locked by the instrument until calibration and QC are accepted);
+       - after replacement of the retic flow cell (VS4-OPT-224).
+
+8.2  Reticulocyte control has a 7-day open-vial stability. Date the vial when
+     opened.
+
+8.3  Body fluid QC (VT-BF-2) must be run on any day on which body fluid
+     samples will be analysed. Open-vial stability is 24 hours.
+
+8.4  Before the first body fluid sample of a batch, run three background
+     cycles in body fluid mode to clear whole blood carryover. Failure to do
+     this produces E-711 and, worse, may produce a plausible but falsely
+     elevated cell count on a genuinely acellular fluid.
+
+-----------------------------------------------------------------
+9. QC AFTER A FIRMWARE UPDATE
+-----------------------------------------------------------------
+9.1  A full QC run (both levels, plus retic and body fluid levels where those
+     modes are in use) must be run and accepted after any firmware update
+     before patient testing resumes.
+
+9.2  Record the firmware version before and after the update in the QC record.
+     VeriConnect 6.2 and later annotate the Levey-Jennings chart with firmware
+     changes automatically.
+
+9.3  If the update was applied to correct a known defect, confirm that the
+     symptom has cleared before releasing the instrument. For example, after
+     updating from firmware 4.2.1 or 4.2.2 to 4.2.3 or later, confirm that
+     result timestamps in the LIS match the instrument display (see VBB-0041).
+
+-----------------------------------------------------------------
+10. ACTION ON QC FAILURE
+-----------------------------------------------------------------
+10.1 Do not report patient results from a run in which QC has been rejected.
+
+10.2 First-line actions, in order:
+       a) Confirm the correct control lot and the correct model column were
+          selected.
+       b) Re-mix the control vial thoroughly and repeat. A single repeat is
+          permitted. Repeated repeating until a pass is obtained is not
+          acceptable practice and will be visible in the audit trail.
+       c) Check the vial's open date and expiry.
+       d) Open a fresh vial of the same lot and repeat.
+       e) Run a background count (section 5).
+
+10.3 If the failure persists with fresh material:
+       a) Review recent reagent lot changes. Correlate the onset of the
+          failure with the date of any changeover (SOP-VBS-002 records this).
+       b) Check the reagent lot against current field safety notices.
+       c) Run an Extended Clean and repeat.
+       d) Consider recalibration. Recalibration should not be performed
+          casually; an instrument recalibrated onto a drifting reagent will
+          appear to pass and will then fail when correct reagent is restored.
+
+10.4 If the failure is not resolved by 10.3, raise a support ticket with:
+       - instrument serial number and firmware version;
+       - control lot number and level(s) affected;
+       - which analytes failed and in which direction;
+       - all reagent lot numbers on board;
+       - the last 20 QC data points, exported from the instrument or from
+         VeriConnect (Quality > Export);
+       - background count results;
+       - ambient temperature.
+
+     Tickets that arrive without the above take materially longer to resolve.
+
+-----------------------------------------------------------------
+11. RECORDS
+-----------------------------------------------------------------
+11.1 QC results are retained on the instrument (10,000 results on the 400,
+     20,000 on the Pro) and, where enrolled, in VeriConnect for the tenant's
+     configured retention period (minimum 2 years for QC records, default 7).
+
+11.2 The laboratory must retain evidence of QC review and acceptance. In
+     VeriConnect this is captured automatically in the audit trail. On a
+     standalone instrument the laboratory must maintain its own record.
+
+11.3 Where QC has been rejected, the record must show the investigation and
+     the outcome, not only the rejection.
+
+-----------------------------------------------------------------
+APPENDIX A - BACKGROUND COUNT ACCEPTANCE LIMITS
+-----------------------------------------------------------------
+  Analyte  | Limit
+  ---------|-------------------------
+  WBC      | <= 0.20 x10^9/L
+  RBC      | <= 0.02 x10^12/L
+  HGB      | <= 1 g/L
+  PLT      | <= 10 x10^9/L
+  RET#     | <= 0.005 x10^12/L  (Pro)
+  WBC-BF   | <= 2 /uL           (Pro, body fluid mode)
+
+-----------------------------------------------------------------
+APPENDIX B - PROBE SOAK PROCEDURE
+-----------------------------------------------------------------
+B.1  Use where E-104 (sample probe blockage) recurs after a Probe Unblock
+     cycle has been run twice.
+B.2  Power down the instrument.
+B.3  Wearing gloves and eye protection, remove the probe guard.
+B.4  Apply approximately 2 mL of RGT-CL to a clean vessel and immerse the
+     probe tip for 15 minutes. Do not immerse above the probe collar.
+B.5  Rinse with purified water. Do not wipe the probe tip with tissue; fibres
+     shed into the aperture.
+B.6  Refit the guard, power on, and run two background counts.
+B.7  If E-104 recurs within 24 hours, the probe or the seal kit (VS4-SP-021)
+     requires replacement. Raise a ticket.
+
+TODO: B.4 to be revised when the extended-life probe (in validation, target
+Q4 2026) is released - soak time may change. - MC 2025-06-01
+
+=================================================================
+END OF SOP-VBS-001 REVISION 6
+=================================================================

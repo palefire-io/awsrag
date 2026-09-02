@@ -1,0 +1,139 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Your First 90 Days
+=================================================================
+Document:      HR-GDE-005
+Version:       3
+Effective:     2025-09-01
+Owner:         Rachel Duffy, HR Business Partner
+Audience:      New starters and their managers
+
+This is a guide, not a policy. Nothing in it is a rule. It exists because
+almost every new starter asks the same questions in the same order, and it is
+better to answer them once in writing.
+
+-----------------------------------------------------------------
+WEEK 1 - ORIENTATION
+-----------------------------------------------------------------
+Goal: know where things are and who people are. Nothing more.
+
+You should by the end of the week:
+  [ ] Have working accounts and a laptop that does what you need
+  [ ] Have met your team and your buddy
+  [ ] Have written-down goals for your first month
+  [ ] Understand at a basic level what Veridia sells and to whom
+  [ ] Know what to do if you think a product is unsafe
+  [ ] Know how to book leave and claim expenses
+
+You should NOT by the end of the week:
+  - Understand the product properly. Nobody does after a week.
+  - Have delivered anything.
+  - Feel useful. This is the single most common thing new starters say at day
+    30 - "I felt useless for the first fortnight". Everybody does. It passes.
+
+-----------------------------------------------------------------
+WEEKS 2 TO 4 - FIRST CONTRIBUTION
+-----------------------------------------------------------------
+Goal: finish something small, end to end.
+
+Your manager should have given you a piece of work that is real, small enough
+to finish, and low enough stakes that getting it wrong costs nothing. Fixing a
+documentation error, running a defined analysis, taking a category of tickets.
+
+Things worth doing in this period:
+  - Meet ten people outside your team. Ask them what they do and what makes
+    their job harder. This is the single highest-return activity available to
+    a new starter and almost nobody does enough of it.
+  - Read the last six months of your team's output, whatever form it takes.
+  - Write down every time something confuses you. You will lose the ability to
+    see it within about eight weeks, and that list is genuinely valuable to us.
+    Several policy changes have come out of new starter confusion lists.
+  - Ask your buddy the questions you think are too stupid to ask your manager.
+
+DAY 30: structured review with your manager against the month one goals, plus
+a short survey from the People team. The survey is not a formality. The free
+text is read by Rachel Duffy and Naomi Okonjo-Bright, and it has changed the
+onboarding policy twice - once about managers being absent in a starter's
+first week, and once about laptops arriving late.
+
+-----------------------------------------------------------------
+WEEKS 5 TO 8 - BUILDING UP
+-----------------------------------------------------------------
+Goal: work at something closer to a normal load, with support.
+
+By now:
+  - You should be taking work without it being handed to you individually.
+  - You should be able to explain what your team does to someone outside it.
+  - Field service engineers: supervised customer visits begin around week 8.
+  - Support engineers: independent ticket ownership from around week 5.
+
+DAY 60: manager review. This is the honest one. If your manager has any
+concern about your probation, you hear it at day 60, clearly, with what needs
+to change and by when. Nobody at Veridia should ever be surprised at day 90.
+If you get to day 60 and your manager says "all fine" and then raises a
+problem at day 90, that is a failure by the manager and you should tell the
+People team.
+
+-----------------------------------------------------------------
+WEEKS 9 TO 13 - INDEPENDENCE
+-----------------------------------------------------------------
+Goal: be doing the job.
+
+DAY 90: probation decision. See User__policy-probation-period-v3.txt. Three
+possible outcomes: confirmed, extended, or not confirmed. The overwhelming
+majority are confirmed.
+
+-----------------------------------------------------------------
+QUESTIONS NEW STARTERS ACTUALLY ASK
+-----------------------------------------------------------------
+"When can I book holiday?"
+  Immediately. You accrue from day one and you can book from day one, subject
+  to your manager's approval like everyone else. You do not have to wait for
+  probation. See User__policy-annual-leave-v5.txt.
+
+"Am I allowed to disagree with my manager?"
+  Yes, and in the first three months your outside perspective is the most
+  valuable thing you have. Say it once, clearly, and then commit to whatever
+  is decided.
+
+"How much do people work?"
+  Contracted hours are 37.5 a week in the UK and 40 in Switzerland. Most
+  people work close to that. There are periods - a product launch, a
+  regulatory submission, a field safety notice - when some teams work more,
+  and those periods should be visible and time-limited. If your team is
+  permanently in one, that is a problem to raise, not a culture to admire.
+
+"Everyone seems to know about a reagent recall in 2025. What is that?"
+  FSN-2025-003. A batch of lyse reagent developed a fault that produced
+  spurious white cell flags on the VeriScan 400. We recalled 21 lots. It is
+  discussed openly in induction because of how it was found and what we
+  changed afterwards, and because it is the clearest example we have of why
+  the quality system exists.
+
+"Who do I talk to if something is wrong and it is not about my work?"
+  Your manager, the People team, or the speak-up route in
+  User__policy-whistleblowing-speak-up-v3.txt, which can be anonymous.
+
+"When will I stop feeling behind?"
+  Most people say around month four. Technical roles in the regulated part of
+  the business often say month six. This is normal and is not a reflection on
+  you.
+
+-----------------------------------------------------------------
+FOR MANAGERS
+-----------------------------------------------------------------
+The three things that make the difference, in order:
+  1. Written goals for month one, set before day one.
+  2. An honest day 60 conversation.
+  3. Being present. A new starter whose manager is unavailable for their first
+     fortnight takes roughly twice as long to become productive, based on our
+     own day 30 survey data.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+rachel.duffy@veridiabio.com | people@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

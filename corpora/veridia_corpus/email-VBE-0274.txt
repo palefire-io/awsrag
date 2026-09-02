@@ -1,0 +1,61 @@
+From: Dr Stefan Ruettimann <stefan.ruettimann@usb.ch>
+To: Sarah Lindgren <sarah.lindgren@veridiabio.com>
+CC: Simone Buehler <simone.buehler@veridiabio.com>
+Date: Mon, 19 Jan 2026 08:35:12 +0100
+Subject: IVDR transition status - request for current position in writing
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Ms Lindgren,
+
+Our quality management system requires that we hold current conformity
+information for every in-vitro diagnostic device in the laboratory, and that we
+review it annually. Our review is due at the end of this month.
+
+For the VeriScan 400 Pro (we operate seven) I currently hold:
+  - EC Declaration of Conformity under Directive 98/79/EC, dated 2021
+  - Your statement of January 2025 that technical documentation was submitted
+    to Notified Body 0086 on 30 January 2025
+  - Datasheet DS-VS400P-003 stating "assessment in progress"
+
+I would be grateful for a current written statement covering:
+
+1. Whether the Notified Body assessment has concluded, and if not, the current
+   stage and the expected timeline. I understand you may not be able to give a
+   date; the stage would still help.
+
+2. The specific transitional provision under which the devices are currently
+   placed on the market, with the article reference, and the date by which
+   that provision expires for a Class C device of this type.
+
+3. Confirmation that Veridia will notify us if the transitional position
+   changes, and the mechanism by which that notification would reach us. I ask
+   because our experience of firmware bulletins reaching the right person at
+   this hospital has been mixed.
+
+4. Whether the reagents (RGT-D5, RGT-L3, RGT-CL, RGT-RT) are covered by the
+   same submission or assessed separately, and their classification.
+
+5. What happens to devices already in service if certification is not achieved
+   before the transitional period expires. I do not expect this to occur, but
+   our risk register requires that I have asked.
+
+6. Whether the VeriPrep SP-1, as an accessory, has any IVDR obligation of its
+   own.
+
+A related question that is not strictly regulatory. Switzerland's position
+following the lapse of the mutual recognition agreement means that we require a
+Swiss Authorised Representative and Swissmedic registration for IVDs placed on
+the Swiss market. Could you confirm Veridia's arrangements, including the
+identity of your CH-REP? Our previous correspondence on this is from 2023 and I
+would like it refreshed.
+
+I appreciate this is a substantial request. It is the same request I send to
+every IVD supplier in January and most of them manage it.
+
+With kind regards,
+
+Dr Stefan Ruettimann
+Leitender Arzt, Haematologie
+Universitaetsspital Basel
+Petersgraben 4, 4031 Basel
+stefan.ruettimann@usb.ch | +41 61 265 25 25

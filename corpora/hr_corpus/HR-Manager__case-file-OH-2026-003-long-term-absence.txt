@@ -1,0 +1,186 @@
+=================================================================
+VERIDIA BIOSYSTEMS SCHWEIZ GMBH - PEOPLE TEAM
+*** CONFIDENTIAL - SPECIAL CATEGORY PERSONAL DATA ***
+*** ACCESS RESTRICTED - PEOPLE TEAM ONLY ***
+Long-Term Absence Case File
+=================================================================
+Case reference:   OH-2026-003
+Opened:           2026-01-12
+Status:           OPEN - long term
+Case owner:       Lena Hofstetter, HR Manager Switzerland
+Reviewed by:      Naomi Okonjo-Bright, Chief People Officer
+Employee:         Peter Vasilenko
+Employee ID:      VB-0341
+Date of birth:    03/11/1979
+AHV number:       756.4471.8823.19
+Job title:        QC Analyst, L2
+Function:         Quality (Basel)
+Line manager:     Simone Buehler, QA Manager
+Start date:       2021-03-15 (continuous service 5 years)
+Home address:     Missionsstrasse 47, 4055 Basel
+Personal mobile:  +41 79 555 0182
+Emergency contact: Yelena Vasilenko (spouse), +41 79 555 0197
+Absent since:     2026-01-08
+
+HANDLING NOTE. Health information. Special category data. Restricted to the
+People team. Simone Buehler has been told the absence is serious, that the
+prognosis is uncertain, and nothing further. Do not discuss the diagnosis.
+
+-----------------------------------------------------------------
+1. BACKGROUND
+-----------------------------------------------------------------
+1.1  Peter has been absent since 8 January 2026. Initial Arztzeugnis certified
+     unfitness for four weeks; subsequently extended three times.
+
+1.2  Diagnosis, disclosed voluntarily by Peter to Lena Hofstetter on
+     2026-01-19 and recorded with his express written consent: stage II colon
+     cancer, diagnosed 2026-01-06 following investigation of symptoms present
+     since November 2025. Surgery performed 2026-01-27 at Universitätsspital
+     Basel. Adjuvant chemotherapy commenced 2026-03-09, planned six cycles
+     over approximately five months.
+
+1.3  Peter asked specifically that his diagnosis not be shared with his team.
+     He said he did not want "to be the person people are careful around". His
+     manager and team know he is seriously unwell and have been asked not to
+     speculate.
+
+-----------------------------------------------------------------
+2. PAY AND BENEFITS POSITION
+-----------------------------------------------------------------
+2.1  Salary continuation:
+       2026-01-08 to 2026-03-08   100% of salary paid by Veridia (first 60
+                                   days per the KTG arrangement)
+       From 2026-03-09             90% of salary from the collective daily
+                                   sickness benefit insurer (Helsana,
+                                   policy KTG-4471-VBS), up to 720 days
+                                   within 900 days
+
+2.2  Benefits continuing: BVG pension contributions continue in full, with
+     Veridia paying both the employer and employee share during KTG payment
+     per the fund rules; UVG cover continues; half-fare travelcard maintained;
+     share options continue to vest (grant EMI-2023-0138, unaffected).
+
+2.3  Annual leave continues to accrue. Swiss law permits pro-rata reduction of
+     leave entitlement after two full months of absence in a year. VERIDIA
+     HAS DECIDED NOT TO APPLY THE REDUCTION. Decision by Naomi
+     Okonjo-Bright, 2026-02-04, recorded so that it is not treated as
+     precedent-setting by omission: we will not apply it in cases of serious
+     illness. Lena to note this in the Swiss policy at next revision.
+
+2.4  EMPLOYMENT PROTECTION. Under Article 336c of the Swiss Code of
+     Obligations, notice given during incapacity is void. Peter has 5 years'
+     service, so the protection period (Sperrfrist) is 180 days from the start
+     of incapacity, running to approximately 2026-07-07. After that date
+     termination becomes legally possible. IT WILL NOT BE CONSIDERED. This is
+     recorded explicitly so that no future reader of this file mistakes the
+     expiry of a legal protection for the arrival of a decision point.
+
+-----------------------------------------------------------------
+3. CONTACT ARRANGEMENTS
+-----------------------------------------------------------------
+3.1  Agreed with Peter on 2026-01-19 and reconfirmed 2026-03-16:
+       - Lena Hofstetter contacts him by SMS on the first Monday of each
+         month. He replies when he wants to.
+       - No contact from his manager or team unless he initiates it.
+       - He has Lena's mobile and has been told to use it at any time.
+       - No pressure, no return-to-work discussion, no "keeping in touch"
+         days, until he raises it.
+
+3.2  He initiated contact twice outside the agreed schedule, both times about
+     administrative matters (an insurance form, and a question about whether
+     his options kept vesting - they do).
+
+3.3  His team sent a card in February. He replied to Simone directly to say he
+     appreciated it. No further contact has been made and none should be
+     without his initiation.
+
+-----------------------------------------------------------------
+4. OCCUPATIONAL HEALTH
+-----------------------------------------------------------------
+4.1  Referral to Arbeitsmedizinisches Zentrum Basel, 2026-02-11. Assessed
+     remotely by Dr Beatrice Hunziker 2026-02-24. Report received 2026-03-02.
+     Peter reviewed and approved release.
+
+4.2  Report summary:
+     - Currently unfit for work. No estimate of return date can responsibly be
+       given during active treatment.
+     - Recommends review at three months rather than a fixed prognosis.
+     - Notes that where return is possible, a graduated return over 8 to 12
+       weeks would be appropriate and that fatigue rather than any specific
+       functional limitation is the usual barrier following this treatment.
+     - Recommends that the employer maintain contact at a frequency set by
+       the employee, which is already the arrangement.
+
+4.3  Next review 2026-06-02.
+
+-----------------------------------------------------------------
+5. COVER AND TEAM IMPACT
+-----------------------------------------------------------------
+5.1  Simone Buehler has covered Peter's method validation work by reallocating
+     to Gregor Lindqvist (VB-0281) and by deferring two non-critical
+     validations to Q4.
+
+5.2  A fixed-term QC Analyst has been approved for 12 months to backfill,
+     recruitment started 2026-03-02. It is a genuine backfill and the vacancy
+     is described as such: the advert does not imply a permanent role and
+     candidates are told at interview that it covers a colleague's absence.
+
+5.3  Simone raised on 2026-02-18 that she was uncomfortable recruiting a
+     backfill in case Peter or his family read it as Veridia moving on. Lena
+     discussed this with Peter directly on 2026-02-23. His response, recorded
+     with permission: "Please hire someone. I have enough to worry about
+     without imagining Gregor doing two jobs."
+
+-----------------------------------------------------------------
+6. RISKS AND WATCH ITEMS
+-----------------------------------------------------------------
+6.1  KTG benefit expires at 720 days, approximately 2027-12-29. If return has
+     not occurred by then the position changes materially. Diarised for review
+     at 2027-06-01, eighteen months out, so that any conversation happens with
+     time rather than under a deadline.
+
+6.2  Disability insurance (IV) application may become relevant if incapacity
+     is prolonged. Lena to raise it only if Peter or his family raise it, or
+     at the 12-month point, whichever is sooner. It is not a conversation to
+     have prematurely.
+
+6.3  ADDED 2026-05-14: this employee is at the Basel site. Any organisational
+     process affecting the Basel QC function during 2026 must have this case
+     flagged to the Chief People Officer before any communication is issued.
+     An employee on long-term sick leave has the same consultation rights as
+     anyone else, and receiving that kind of communication cold while
+     undergoing chemotherapy would be indefensible. Naomi Okonjo-Bright is
+     aware and has confirmed she will personally check this before any such
+     communication.
+
+-----------------------------------------------------------------
+7. FILE NOTES
+-----------------------------------------------------------------
+2026-01-12  File opened. Third Arztzeugnis received.
+2026-01-19  Peter disclosed diagnosis voluntarily. Written consent to record
+            it obtained. Contact arrangements agreed.
+2026-02-04  CPO decision not to apply pro-rata leave reduction.
+2026-02-11  OH referral made with consent.
+2026-02-23  Conversation about the backfill.
+2026-03-02  OH report received and released.
+2026-03-16  Contact arrangements reconfirmed. Peter reported treatment
+            "manageable so far". No return discussion.
+2026-04-06  Monthly SMS. Brief reply.
+2026-05-04  Monthly SMS. He asked about the option vesting. Answered.
+2026-05-14  Watch item at 6.3 added by Lena Hofstetter after a conversation
+            with the CPO.
+2026-06-01  Monthly SMS. No reply. Not chased - this is within the agreed
+            arrangement.
+
+-----------------------------------------------------------------
+RETENTION AND ACCESS
+-----------------------------------------------------------------
+Retained 6 years after employment ends.
+Access: Lena Hofstetter, Naomi Okonjo-Bright, Rachel Duffy (cover only).
+The line manager has NOT been given the diagnosis and must not be.
+Legal basis: UK/Swiss GDPR equivalent Article 9(2)(b) and 9(2)(h).
+
+=================================================================
+CONFIDENTIAL - SPECIAL CATEGORY DATA
+Veridia BioSystems Schweiz GmbH | CHE-419.882.663
+=================================================================

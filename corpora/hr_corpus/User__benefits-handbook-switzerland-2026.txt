@@ -1,0 +1,221 @@
+=================================================================
+VERIDIA BIOSYSTEMS SCHWEIZ GMBH - PEOPLE TEAM
+Benefits Handbook - Switzerland - 2026
+=================================================================
+Document:      HR-GDE-020-CH
+Version:       2026.1
+Effective:     2026-01-01
+Owner:         Lena Hofstetter, HR Manager (Switzerland)
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+Applies to:    Staff employed by Veridia BioSystems Schweiz GmbH, Basel
+Language:      Issued in English. A German version is available and, in the
+               event of any discrepancy, the German version governs for
+               Swiss law purposes.
+
+Swiss employment law and the Swiss social security system differ substantially
+from the UK. Where a UK colleague describes a benefit that does not appear
+here, it is usually because the Swiss statutory system already provides it,
+often better.
+
+-----------------------------------------------------------------
+1. AT A GLANCE
+-----------------------------------------------------------------
+  Annual leave              25 days, rising to 30
+  Pension (BVG/LPP)         Employer pays 60% of contributions
+  Health insurance          CHF 400/month employer contribution
+  Accident insurance        Full UVG cover, occupational and non-occupational
+  Salary continuation       Up to 720 days at 90% via collective daily
+                            sickness benefit insurance
+  Maternity                 20 weeks at full pay
+  Paternity/second parent   8 weeks at full pay
+  Learning budget           CHF 1,800 a year plus 5 days
+  Employee Assistance       24/7, free, confidential, in DE/FR/IT/EN
+  Share options             Discretionary
+  Half-fare travelcard      Funded
+  Lunch allowance           CHF 12 per working day
+
+-----------------------------------------------------------------
+2. PENSION - BVG / LPP (BERUFLICHE VORSORGE)
+-----------------------------------------------------------------
+Pension fund: Basellandschaftliche Pensionskasse, affiliation 2019-4471.
+
+Veridia pays 60% of the total contribution and you pay 40%. The statutory
+minimum split is 50/50, so this is meaningfully better than the legal
+requirement.
+
+Contribution rates rise with age as required by law:
+
+  Age band     Total contribution    Veridia pays    You pay
+  -----------  -------------------   -------------   -------
+  25 to 34     11%                   6.6%            4.4%
+  35 to 44     15%                   9.0%            6.0%
+  45 to 54     20%                   12.0%           8.0%
+  55 to 65     22%                   13.2%           8.8%
+
+Insured salary is coordinated per BVG rules. Our plan insures from a lower
+entry threshold than the statutory minimum, which materially benefits
+part-time employees - a group the statutory coordination deduction treats
+poorly.
+
+Voluntary purchase (Einkauf) into the fund is possible and is tax-deductible.
+The fund will tell you your maximum purchase amount on request. This is one of
+the most effective tax planning measures available in Switzerland and it is
+worth understanding before you are 50.
+
+When you leave, your vested benefit (Freizügigkeitsleistung) must be
+transferred to your new employer's fund or to a vested benefits account. YOU
+MUST RESPOND TO THE FUND. It does not resolve itself and unclaimed vested
+benefits are a genuinely common problem.
+
+-----------------------------------------------------------------
+3. HEALTH INSURANCE (KRANKENVERSICHERUNG)
+-----------------------------------------------------------------
+Basic health insurance in Switzerland is compulsory, individual, and arranged
+by you rather than by your employer. This surprises people arriving from the
+UK.
+
+Veridia contributes CHF 400 per month towards your premium, paid with your
+salary and shown separately on your payslip. It is treated as salary for tax
+and social security purposes.
+
+The contribution is per employee, not per family, and is not increased for
+dependants. We are aware this is less generous in effect for employees with
+families than the UK's family private medical cover, and it is on the reward
+agenda for 2027.
+
+New arrivals: you must arrange basic insurance within three months of
+arriving. Cover is backdated to your arrival date, so you will receive a bill
+for the intervening period. Lena Hofstetter can point you to a comparison
+service; we do not recommend a specific insurer.
+
+-----------------------------------------------------------------
+4. ACCIDENT INSURANCE (UVG/LAA)
+-----------------------------------------------------------------
+Compulsory and paid entirely by Veridia, including the non-occupational
+element which the employer is not legally required to fund.
+
+Covers accidents at work, on the way to work, and outside work. If you have
+UVG cover through Veridia you may reduce the accident cover on your personal
+health insurance, which lowers your premium. Ask your insurer for the
+"ohne Unfalldeckung" rate.
+
+-----------------------------------------------------------------
+5. SALARY CONTINUATION IN ILLNESS (KRANKENTAGGELD)
+-----------------------------------------------------------------
+Veridia holds collective daily sickness benefit insurance (KTG).
+
+  - 90% of salary for up to 720 days within 900 days
+  - Veridia pays 100% of salary for the first 60 days, then the insurance pays
+  - Employer funds 100% of the KTG premium, where the legal norm is a 50/50
+    split
+
+This is considerably better than the statutory Scala/Berner minimum
+(three weeks' salary in the first year of service), and is the main reason
+Swiss employees do not have a "company sick pay" table like the UK one.
+
+-----------------------------------------------------------------
+6. FAMILY LEAVE
+-----------------------------------------------------------------
+  Maternity              20 weeks at 100% of salary
+                         (statutory minimum: 14 weeks at 80%, capped)
+  Paternity / second     8 weeks at 100%
+  parent                 (statutory minimum: 2 weeks at 80%, capped)
+  Adoption               Same as birth, on the same terms
+  Care of a sick child   Statutory 3 days per event, uncapped by Veridia in
+                         practice - speak to your manager
+  Care of a seriously    14 weeks at full pay per the Betreuungsurlaub
+  ill child              provisions
+  Pregnancy loss         2 weeks paid, either parent, any gestation
+  Fertility treatment    Up to 5 days paid per cycle
+
+Maternity leave in Switzerland may not be taken before the birth, and
+returning to work within 8 weeks of giving birth is prohibited by law.
+
+-----------------------------------------------------------------
+7. ANNUAL LEAVE AND HOLIDAYS
+-----------------------------------------------------------------
+  25 days on joining (statutory minimum is 20 for employees over 20)
+  +2 days at 5 years' service
+  +3 days at 10 years' service (maximum 30)
+
+  Basel-Stadt cantonal public holidays in addition. See
+  User__lookup-uk-and-ch-public-holidays-2026.csv - note that Swiss public
+  holidays are cantonal and Basel-Stadt differs from other cantons.
+
+  Under Swiss law at least two weeks of annual leave must be taken
+  consecutively. This is not a Veridia preference, it is Article 329c of the
+  Code of Obligations.
+
+-----------------------------------------------------------------
+8. WORKING TIME
+-----------------------------------------------------------------
+  Contracted week: 40 hours
+  Maximum weekly working time: 45 hours (Labour Act, for most of our roles)
+  Overtime (Überstunden): compensated by time off in lieu at 1:1 by default,
+  or paid at 125% by agreement
+  Time recording is a legal requirement. It is not surveillance and it is not
+  optional; the Labour Inspectorate can and does ask for it.
+
+Employees earning above CHF 120,000 in a management role may waive time
+recording in favour of a simplified record, by written agreement. Speak to
+Lena Hofstetter.
+
+-----------------------------------------------------------------
+9. OTHER BENEFITS
+-----------------------------------------------------------------
+  Half-fare travelcard      Funded annually
+  Lunch allowance           CHF 12 per working day worked on site
+  Learning budget           CHF 1,800 a year plus 5 days
+  Home working setup        CHF 450 on joining plus ergonomic assessment
+  Volunteering              2 paid days a year
+  Bereavement               Up to 10 days paid
+  Employee referral         CHF 2,200, or CHF 3,800 for hard-to-fill roles
+  Long service              Additional week of leave at 5 and 10 years
+  Share options             Discretionary. Note that Swiss tax treatment of
+                            options differs materially from the UK and you
+                            should take personal advice. Veridia cannot advise
+                            you on your tax position.
+
+-----------------------------------------------------------------
+10. EMPLOYEE ASSISTANCE PROGRAMME
+-----------------------------------------------------------------
+Provider: ICAS Switzerland. 24 hours, 365 days, in German, French, Italian and
+English.
+  Freephone 0800 55 44 10
+
+Available to you and to members of your household. Veridia receives anonymous
+aggregate statistics only and is never told that you have used it.
+
+-----------------------------------------------------------------
+11. SOCIAL SECURITY - WHAT IS DEDUCTED
+-----------------------------------------------------------------
+For orientation, since Swiss payslips are opaque to newcomers:
+
+  AHV/IV/EO    Old age, disability and loss of earnings   5.3% employee,
+                                                          5.3% employer
+  ALV          Unemployment insurance                     1.1% employee,
+                                                          1.1% employer
+  BVG          Occupational pension                       see section 2
+  UVG-NBU      Non-occupational accident                  paid by Veridia
+  KTG          Daily sickness benefit                     paid by Veridia
+  FAK          Family allowances                          paid by Veridia
+
+Family allowances (Kinderzulagen) of CHF 200 per child per month up to age 16,
+and CHF 250 for children in education up to 25, are paid through payroll in
+Basel-Stadt. You must claim them - they are not automatic. Lena Hofstetter has
+the form.
+
+Cross-border commuters (Grenzgänger) from Germany and France have a different
+tax and social security position. Speak to Lena Hofstetter before your first
+payroll rather than after.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Lena Hofstetter, HR Manager Switzerland - lena.hofstetter@veridiabio.com
++41 61 271 0334
+Veridia BioSystems Schweiz GmbH, Klybeckstrasse 141, 4057 Basel
+
+=================================================================
+Veridia BioSystems Schweiz GmbH | CHE-419.882.663
+=================================================================

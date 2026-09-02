@@ -1,0 +1,219 @@
+=================================================================
+VERIDIA BIOSYSTEMS - REGULATORY SUMMARY
+=================================================================
+Title:        IVDR (EU) 2017/746 Transition Status
+Document Ref: REG-SUM-IVDR-007
+Revision:     7
+Date:         2026-05-11
+Prepared by:  Sarah Lindgren, Regulatory Affairs Manager
+Approved by:  Dr Elena Marchetti, Chief Scientific Officer
+Distribution: Customer-facing. May be shared with customers, notified bodies,
+              accreditation assessors and competent authorities.
+
+REVISION HISTORY
+  rev 7 (2026-05-11)  Status update; Notified Body questions round 2 closed.
+  rev 6 (2026-01-14)  Status update; reagent classification confirmed.
+  rev 5 (2025-09-08)  Status update following first round of NB questions.
+  rev 4 (2025-05-06)  VeriScan 200 position added following VBB-0049.
+  rev 3 (2025-02-03)  Updated following technical documentation submission.
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+This document states Veridia BioSystems' current position with respect to
+Regulation (EU) 2017/746 on in-vitro diagnostic medical devices (IVDR). It is
+maintained so that customers can answer questions from their own accreditation
+assessors and regulatory functions without having to ask us each time.
+
+It is a summary. It is not a declaration of conformity and it does not create
+any contractual commitment.
+
+-----------------------------------------------------------------
+2. DEVICE CLASSIFICATION UNDER IVDR
+-----------------------------------------------------------------
+Device                        Classification   Rule       Basis
+----------------------------  ---------------  ---------  --------------------
+VeriScan 400 (VS4-100)        Class C          Rule 3(k)  Device intended for
+VeriScan 400 Pro (VS4-200P)   Class C          Rule 3(k)  staging of disease /
+                                                          patient management
+                                                          decisions
+VeriLyse RGT-D5               Class B          Rule 5(c)  Accessory reagent
+VeriLyse RGT-L3               Class B          Rule 5(c)  Accessory reagent
+VeriLyse RGT-CL               Class B          Rule 5(c)  Accessory reagent
+VeriLyse RGT-RT               Class B          Rule 5(c)  Accessory reagent
+VeriTrol control materials    Class B          Rule 6     Control material
+VeriPrep SP-1 (SP1-100)       Not an IVD       n/a        Accessory to an IVD;
+                                                          performs no
+                                                          measurement
+VeriConnect                   Component of     n/a        Data path component;
+                              the device                  result values are
+                              data path                   computed on the
+                                                          instrument
+VeriScan 200 (VS2-100)        Not transitioning to IVDR. See section 7.
+
+Under the Directive, the VeriScan 400 and 400 Pro were self-declared under
+Annex III with no Notified Body involvement. Under IVDR they are Class C and
+Notified Body involvement is mandatory. This is the single largest change for
+Veridia in the transition, and it is the change that drives the timeline.
+
+-----------------------------------------------------------------
+3. CURRENT STATUS
+-----------------------------------------------------------------
+Notified Body:            0086 (BSI Assurance UK Ltd, Netherlands entity for
+                          EU designation)
+Application submitted:    2024-06-17
+Technical documentation
+  submitted:              2025-01-30
+Quality management
+  system audit:           2025-04-14 to 2025-04-17 (on site, Cambridge and
+                          Basel). Outcome: certificate recommendation with
+                          four observations, no non-conformities. See
+                          reg-notified-body-audit-findings.txt.
+Technical documentation
+  review, round 1:        Questions received 2025-08-22 (31 questions).
+                          Responses submitted 2025-11-07.
+Technical documentation
+  review, round 2:        Questions received 2026-02-19 (9 questions).
+                          Responses submitted 2026-04-28.
+                          All round 2 questions closed as at 2026-05-05.
+Current stage:            Awaiting final review and certification decision.
+Expected certification:   Veridia does not publish an expected date.
+
+WHY WE DO NOT PUBLISH AN EXPECTED DATE. We have been asked for one by almost
+every customer and by three tender processes. The honest position is that the
+remaining time is controlled by the Notified Body's review queue, not by us,
+and that every date we could give would be a guess. We would rather be
+criticised for not giving a date than for giving one that slips. We will notify
+customers within 5 working days of certification.
+
+-----------------------------------------------------------------
+4. TRANSITIONAL PROVISIONS
+-----------------------------------------------------------------
+The VeriScan 400 and VeriScan 400 Pro are currently placed on the EU market
+under the transitional provisions of Article 110 IVDR, as amended by Regulation
+(EU) 2022/112 and subsequently by Regulation (EU) 2024/1860.
+
+Conditions we meet:
+  - The devices were lawfully placed on the market under Directive 98/79/EC
+    before 26 May 2022 and continue to be placed on the market.
+  - There has been no significant change in the design or intended purpose.
+  - The devices continue to comply with the Directive.
+  - IVDR requirements relating to post-market surveillance, market
+    surveillance, vigilance and registration of economic operators and devices
+    apply in place of the corresponding Directive requirements. Veridia
+    complies with these; our post-market surveillance system, PMS plan and
+    vigilance reporting are operated to IVDR requirements.
+  - A quality management system compliant with Article 10(8) is in place
+    (audited 2025-04).
+  - A formal application to a Notified Body was lodged before the applicable
+    deadline (2024-06-17) and a written agreement is in place.
+
+Applicable transitional deadline for Class C devices of this type:
+31 December 2027, subject to the conditions above continuing to be met.
+
+Devices already placed on the market and put into service before the deadline
+may continue to be made available or put into service until 31 December 2028.
+
+CUSTOMERS SHOULD NOTE: these dates are our reading of the current legislation
+as at the date of this document. Transitional deadlines under IVDR have been
+amended twice. Customers with a regulatory function should form their own view
+and should not rely solely on this summary.
+
+-----------------------------------------------------------------
+5. WHAT CHANGES FOR CUSTOMERS ON CERTIFICATION
+-----------------------------------------------------------------
+Nothing operational. The devices, reagents, software and performance are
+unchanged; IVDR conformity assessment is an assessment of evidence Veridia
+already holds, not a modification of the product.
+
+What customers will receive:
+  - An updated EU Declaration of Conformity referencing IVDR.
+  - Updated labelling and Instructions for Use carrying the Notified Body
+    number alongside the CE mark.
+  - Updated Basic UDI-DI registration in EUDAMED.
+  - A summary of safety and performance (SSP), which is an IVDR requirement for
+    Class C devices and which will be publicly available through EUDAMED.
+
+Firmware 4.4.0 and later already carry the Basic UDI-DI and conformity route in
+the result header (see VBB-0067), in anticipation.
+
+-----------------------------------------------------------------
+6. PERFORMANCE EVALUATION
+-----------------------------------------------------------------
+The IVDR performance evaluation for both analysers comprises:
+
+  Scientific validity        Established from published literature and from
+                             the accepted clinical role of the full blood
+                             count and differential. Not contentious.
+  Analytical performance     Precision, trueness, linearity, measuring
+                             interval, limits of detection and quantitation,
+                             analytical specificity and interference,
+                             carryover, sample stability. Studies conducted
+                             2019-2024, supplemented 2025.
+  Clinical performance       Method comparison against reference methods
+                             (ICSH manual differential; flow cytometry) at
+                             five sites across three countries.
+                             n = 2,140 specimens for the differential;
+                             n = 220 for reticulocyte; n = 410 for body
+                             fluid. Summary at
+                             reg-clinical-performance-summary.txt.
+
+The advisory flags introduced in firmware 4.3.0 (BLAST?, NRBC?, PLT-CLUMP?,
+FRAGMENTS?) are NOT within the scope of the performance evaluation and are
+labelled research use only. They are excluded from the intended purpose. A
+laboratory must not rely on them as the basis of a clinical decision.
+
+-----------------------------------------------------------------
+7. VERISCAN 200
+-----------------------------------------------------------------
+The VeriScan 200 will not be transitioned to IVDR conformity. See VBB-0049.
+
+Devices already placed on the market and put into service may continue in use
+subject to the Article 110 conditions and to the transitional deadlines above.
+From the applicable deadline the device may no longer be placed on the EU
+market.
+
+Veridia will continue to supply consumables and service for the VeriScan 200
+according to the dates in VBB-0049 (end of software support 2026-12-31, end of
+service 2027-12-31, end of spare parts 2028-12-31), subject to the transitional
+provisions permitting it.
+
+Customers operating a VeriScan 200 in the EU should plan migration. Customers
+in Great Britain are not affected by IVDR and should refer to
+reg-ukca-self-declaration.txt.
+
+-----------------------------------------------------------------
+8. GREAT BRITAIN, NORTHERN IRELAND AND SWITZERLAND
+-----------------------------------------------------------------
+GREAT BRITAIN. IVDR does not apply. The devices are UKCA marked under the UK
+Medical Devices Regulations 2002 (as amended). The UK's future regulatory
+framework for medical devices is subject to ongoing legislative change; Veridia
+monitors it and will notify customers of any change affecting them.
+
+NORTHERN IRELAND. IVDR applies under the Windsor Framework. The position is as
+sections 3 and 4 above. Devices placed on the NI market carry the CE mark.
+
+SWITZERLAND. Following the lapse of the EU-Swiss Mutual Recognition Agreement
+for medical devices, IVDs placed on the Swiss market require a Swiss
+Authorised Representative and registration with Swissmedic.
+
+  Veridia CH-REP:   Veridia BioSystems Schweiz GmbH
+                    Klybeckstrasse 141, 4057 Basel
+                    Swissmedic establishment identifier CHE-419.882.663
+  Swiss importer:   as above
+  Registration:     Devices registered with Swissmedic; registration numbers
+                    available on request.
+
+-----------------------------------------------------------------
+9. CONTACT
+-----------------------------------------------------------------
+Sarah Lindgren, Regulatory Affairs Manager
+sarah.lindgren@veridiabio.com | +44 1223 496 142
+
+For questions from a customer's own regulatory or quality function, Sarah is
+available to speak directly. We would rather answer a question once, properly,
+than have it travel through three people.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

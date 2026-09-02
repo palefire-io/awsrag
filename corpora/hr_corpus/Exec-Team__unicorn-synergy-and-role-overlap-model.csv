@@ -1,0 +1,34 @@
+overlap_ref,function,narwhal_department,narwhal_headcount,veridia_equivalent,veridia_headcount,combined_headcount,modelled_target_headcount,modelled_reduction,annual_saving_gbp,severance_cost_gbp,payback_months,earliest_feasible_date,cpo_assessment,cpo_recommendation
+OV-01,Executive,Executive and Board,9,Veridia Executive Committee,9,18,11,7,742000,486000,7.9,Completion +1 month,Genuine overlap. Two CEOs two CFOs two CCOs. Standish has indicated he would not stay beyond a 12-month transition.,PROCEED - but retain Narwhal CTO see key person plan
+OV-02,Corporate,Finance,11,Veridia Finance,14,25,20,5,268000,161000,7.2,Completion +6 months,Genuine overlap. Two finance functions two ledgers two audit processes. Systems integration must precede headcount change or the close breaks.,PROCEED - sequence after systems
+OV-03,Corporate,HR,4,Veridia People,7,11,10,1,42000,28000,8.0,Completion +12 months,MINIMAL OVERLAP. Combined entity is 728 people with 10 HR staff - a ratio of 1:73 against a sector norm of 1:60. Narwhal HR Director joined Jan 2026 and is the person fixing their function.,DO NOT REDUCE - and retain Astley-Quinn
+OV-04,Corporate,IT,6,Veridia IT,5,11,9,2,88000,53000,7.2,Completion +9 months,Genuine overlap in support. NOT in infrastructure - two ERPs two HRIS two networks for at least 24 months.,PROCEED - support only defer infrastructure
+OV-05,Corporate,Facilities,5,Veridia Facilities,3,8,8,0,0,0,,,Two sites plus Wroclaw. No overlap.,NO CHANGE
+OV-06,Commercial,Sales,21,Veridia Commercial,18,39,33,6,346000,242000,8.4,Completion +12 months,Overlap exists but the two sales forces sell to overlapping customers with different products. Cutting before the cross-sell is proven destroys the revenue synergy the deal rests on.,DEFER 12 MONTHS MINIMUM
+OV-07,Commercial,Marketing,6,Veridia Marketing,4,10,7,3,131000,79000,7.2,Completion +6 months,Genuine overlap.,PROCEED
+OV-08,Commercial,Bids and Tenders,7,Veridia (within Commercial),2,9,8,1,38000,26000,8.2,Completion +9 months,Narwhal bid function is better than ours. Consolidate INTO theirs not ours.,PROCEED - Narwhal as receiving team
+OV-09,Quality,Quality Assurance,12,Veridia QA (Basel),9,21,19,2,89000,61000,8.2,Completion +18 months,Regulated function. Two quality systems must run in parallel until a single QMS is certified. Reduction before then is not possible.,DEFER 18 MONTHS
+OV-10,Quality,Regulatory Affairs,4,Veridia Regulatory,5,9,8,1,52000,34000,7.8,Completion +18 months,Regulated. Veridia RA is already thin and carries the IVDR submission. Narwhal RA covers machinery directive not IVD.,DO NOT REDUCE
+OV-11,Field Service,Field Engineering,18+34 contractors,Veridia Field Service,36,88,88,0,0,0,,,SEE NOTE 3. No reduction. Veridia field service is short-staffed against a documented stress risk assessment and the contractors should be employed properly.,NO REDUCTION - INCREASE
+OV-12,Field Service,Service Desk,9,Veridia Support,32,41,37,4,132000,84000,7.6,Completion +12 months,Overlap in first-line. Narwhal service desk is product-specific and needs retraining before consolidation.,PROCEED AFTER RETRAINING
+OV-13,R&D,Software and Controls,19,Veridia Engineering,38,57,54,3,178000,112000,7.5,Completion +18 months,Different technology stacks. Nominal overlap only.,DEFER - reassess at 18 months
+OV-14,R&D,Systems and Integration,11,Veridia Engineering,0,11,11,0,0,0,,,No Veridia equivalent.,NO CHANGE
+OV-15,R&D,Mechanical Engineering,26,None,0,26,26,0,0,0,,,THIS IS WHAT WE ARE BUYING.,NO CHANGE - PROTECT
+OV-16,Manufacturing,Wroclaw (all),145,None,0,145,136,9,398000,551000,16.6,Not recommended,Collective agreement severance exceeds statutory by 3-4x. Value destructive in year one. Polish counsel recommends removal from the model.,REMOVE FROM MODEL
+OV-17,Manufacturing,Warrington (all),97,None,0,97,97,0,0,0,,,No Veridia UK manufacturing. No overlap.,NO CHANGE
+TOTAL MODELLED,,,410,,182,592,558,34,2504000,1917000,9.2,,,
+,,,,,,,,,,,,,,
+MODEL SUMMARY,,,,,,,,,,,,,,
+Modelled reduction 34 roles. Modelled annual saving GBP 2.504M. Severance cost GBP 1.917M. Blended payback 9.2 months.,,,,,,,,,,,,,,
+CPO-ADJUSTED POSITION,,,,,,,,,,,,,,
+Removing OV-16 (Wroclaw, value destructive), deferring OV-06 (sales, 12 months), OV-09 (QA, 18 months) and OV-13 (software, 18 months), and applying no reduction to OV-03, OV-10 and OV-11:,,,,,,
+  Achievable in year one: 18 roles, GBP 0.925M annual saving, GBP 0.598M severance,,,,,,,,,,,,
+  Achievable by year three: 25 roles, GBP 1.671M annual saving,,,,,,,,,,,,,
+  Never achievable on this analysis: 9 roles (Wroclaw),,,,,,,,,,,,,,
+The board paper models GBP 1.9M of cost synergy. The CPO-adjusted figure is GBP 0.925M in year one and GBP 1.671M by year three.,,,,,,,,,,,,,,
+AND NOTE: against terms harmonisation of GBP 3.13M per annum (UNI-DD-HR-001 section 3), the combined people economics of this transaction are NEGATIVE by approximately GBP 1.46M per annum at steady state.,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+NOTE 1: THIS IS A MODELLING DOCUMENT. No decision has been taken. No individual has been selected. No consultation has begun and none may begin before the appropriate point in the process. Any suggestion that this document identifies people for redundancy is wrong and any circulation of it outside the deal team would be a serious breach.,,,,,,,,,,,,,,
+NOTE 2: Severance costs are modelled on statutory plus Veridia's enhanced formula (2 weeks per year of service, minimum 8 weeks) for UK employees, and on the Wroclaw collective agreement for Polish employees. TUPE-transferring employees bring their continuous service, which increases the cost relative to a new hire.,,,,,,,,,,,
+NOTE 3: OV-11 REQUIRES SPECIFIC ATTENTION. Veridia's field service function was the subject of formal stress risk assessment HSRA-2025-002 in October 2025, which identified understaffing as the root cause of a high absence rate, two occupational health referrals and 14.2% turnover, and identified recruitment from 36 to 42 as the substantive control. That assessment is a live health and safety document with a note added by the CPO in June 2026 requiring any organisational change affecting field service resourcing to be assessed against it BEFORE it is decided. Reducing field service headcount within twelve months of that assessment would be indefensible and the document would be disclosable in any claim. The recommendation is not merely no reduction but an increase, by employing the 34 contractors properly.,,,,,,,,,,
+NOTE 4: OV-01 assumes Gareth Standish departs after a 12-month transition, which he has indicated but not committed to. The Narwhal CTO is a separate case and is covered in the key person retention plan.,,,,,,,,,,,,,

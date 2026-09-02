@@ -1,0 +1,146 @@
+=================================================================
+VERIDIA BIOSYSTEMS - INTEGRATION SPECIFICATION
+=================================================================
+Product: VeriConnect - LIS and EHR Integration
+Document Ref: DS-VC-INT-006
+Revision: v6
+Revision Date: 2026-04-21
+Applies to: VeriConnect 6.2; VeriScan firmware 4.0.0 and later
+
+-----------------------------------------------------------------
+1. INTEGRATION TOPOLOGIES
+-----------------------------------------------------------------
+A. Instrument -> LIS direct (VeriConnect observational)
+   The analyser sends HL7 directly to the LIS or middleware over the
+   laboratory network. VeriConnect receives a parallel copy for QC charting
+   and fleet management. Most common topology in NHS trusts.
+
+B. Instrument -> VeriConnect -> LIS
+   The analyser sends only to VeriConnect, which forwards to the LIS after
+   optional rules processing. Requires Professional tier or above. Used where
+   the laboratory wants result authorisation to happen in VeriConnect.
+
+C. Instrument -> VeriConnect -> FHIR consumer (BETA)
+   Enterprise tier only. NOT VALIDATED FOR DIAGNOSTIC USE. See VBB-0067.
+
+Topology A is recommended for new installations. It keeps the clinical result
+path independent of internet connectivity: if VeriConnect is unreachable,
+results still reach the LIS. The 11 March 2025 SSO outage (VBB-0044) affected
+only VeriConnect logins; sites on topology A continued reporting normally.
+
+-----------------------------------------------------------------
+2. HL7 v2 PROFILE
+-----------------------------------------------------------------
+Supported versions   2.5.1 (default), 2.3.1 (legacy profile)
+Message types        ORU^R01 outbound results
+                     ORM^O01 / OML^O21 inbound orders
+                     QRY^Q02 / ORF^R04 host query (instrument-initiated)
+                     ACK acknowledgement, application level (AA/AE/AR)
+Encoding             ER7 (pipe delimited). XML is not supported.
+Character set        UTF-8 (MSH-18). ISO IR-100 accepted on the legacy
+                     profile.
+Transport            MLLP over TCP. TLS optional; strongly recommended where
+                     the link crosses a network boundary.
+Default port         MLLP 6661 outbound; configurable per interface.
+
+LIS PROFILES
+  "HL7 2.5.1 Standard"  Recommended. Full segment set including OBX-14.
+  "Generic"             DEPRECATED. Omits OBX-14 entirely. Present for
+                        compatibility with two legacy middleware products.
+                        Will be removed in firmware 5.0. Sites still on this
+                        profile should migrate.
+  "Legacy 2.3.1"        For LIS versions that cannot parse 2.5.1.
+
+Field-level mapping: lookup-hl7-message-mapping.csv
+
+-----------------------------------------------------------------
+3. TIMESTAMPS - READ THIS SECTION
+-----------------------------------------------------------------
+Four timestamp fields are emitted with each result: MSH-7, OBR-7, OBR-22 and
+OBX-14. Their meanings are distinct and integrators regularly conflate them.
+
+  MSH-7   when the message was assembled and sent
+  OBR-7   when the specimen was collected, IF the collection time was
+          supplied with the order. Where no order exists, the instrument
+          populates OBR-7 with the aspiration time. Integrators frequently
+          assume OBR-7 is always collection time; it is not.
+  OBR-22  when the result was reported by the instrument. VeriConnect QC
+          charts use this field for the x-axis.
+  OBX-14  when the individual observation was made. Usually equal to OBR-22
+          for haematology because the whole panel is produced in one cycle.
+
+All four are emitted in the instrument's configured local time with a UTC
+offset (format YYYYMMDDHHMMSS+ZZZZ) unless the interface is configured for
+UTC. Mixing the two across a fleet produces charts that appear to jump by the
+offset at the boundary between instruments; set the whole fleet the same way.
+
+DEFECT NOTICE: instruments running firmware 4.2.1 or 4.2.2 emitted drifting
+timestamps in all four fields. Corrected in 4.2.3. See VBB-0041 and
+report-VBI-0091. Any historical integration testing performed against an
+instrument on 4.2.1 should be repeated.
+
+-----------------------------------------------------------------
+4. ACKNOWLEDGEMENT AND ERROR HANDLING
+-----------------------------------------------------------------
+The instrument expects an application acknowledgement within 30 seconds
+(configurable 5-120 s). On timeout it raises E-501; on a negative
+acknowledgement it raises E-503 and retries with exponential backoff up to 5
+times, then queues the message locally. The local queue holds 2,000 messages
+and is transmitted when the link recovers.
+
+Common causes of E-503:
+  - MSH-10 message control ID not unique within the sending facility. The
+    instrument generates SERIAL-YYYYMMDD-NNNN; a middleware that strips the
+    serial prefix will see duplicates across a multi-instrument site.
+  - Receiving system rejects OBR-7 in the future. See section 3.
+  - Unknown OBX-3 observation identifier where the LIS has not been configured
+    for a newly enabled analyte, most often RET% or IRF after a VeriScan 400
+    is replaced by a 400 Pro.
+  - Character set mismatch producing a parse failure on a patient name with a
+    diacritic.
+
+-----------------------------------------------------------------
+5. ORDERS (HOST QUERY AND DOWNLOAD)
+-----------------------------------------------------------------
+Two modes:
+
+  Broadcast download   LIS pushes ORM/OML messages; instrument holds a work
+                       list. Simple, but the work list must be reconciled if
+                       the instrument is restarted.
+  Host query           Instrument reads the tube barcode and queries the LIS
+                       for the order. Preferred with VeriPrep SP-1, which
+                       uses the query result to decide routing.
+
+Where a query returns no order, the SP-1 routes the tube to the exception rack
+and the analyser will not aspirate. This is by design and is not an error.
+
+-----------------------------------------------------------------
+6. VERICONNECT API v2
+-----------------------------------------------------------------
+Base URL       https://api.vericonnect.veridiabio.com/v2
+Auth           OAuth 2.0 client credentials; scopes per permission key
+Rate limit     120 requests/minute per client, burst 300
+Pagination     Cursor based, max page size 200
+Key resources  /results, /qc-runs, /instruments, /reagent-lots, /audit-events
+Webhooks       result.authorised, qc.rejected, instrument.offline,
+               firmware.deployed, reagent.lot.changed
+
+API v1 is deprecated and will be withdrawn 2027-04-30.
+
+-----------------------------------------------------------------
+7. NETWORK REQUIREMENTS
+-----------------------------------------------------------------
+From analyser:
+  TCP 443  -> *.vericonnect.veridiabio.com   (cloud agent)
+  TCP 6661 -> LIS or middleware host          (MLLP, site configured)
+  UDP 123  -> NTP server                      (time sync; REQUIRED)
+  UDP 5353 <-> local subnet                   (SP-1 discovery, optional)
+
+NTP is not optional. An instrument without a reliable time source will drift,
+and drift is indistinguishable at the LIS from the 4.2.1 firmware defect.
+Point instruments at the trust or laboratory internal NTP server where one
+exists.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

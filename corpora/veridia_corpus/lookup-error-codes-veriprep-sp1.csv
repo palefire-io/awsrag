@@ -1,0 +1,18 @@
+error_code,severity,description,probable_cause,resolution,hardware_revision,notes
+P-101,Warning,Barcode read failure - no decode,"Label damaged, wrapped, or printed below 300 dpi",Reprint label; present tube manually,Both,
+P-103,Warning,Barcode read failure - ambiguous decode,Two labels on one tube or overlapping label edges,Remove secondary label,Both,
+P-105,Error,Tube height out of range,Short-cap 5 mL tubes below minimum sensor window,See VBB-0038 advisory; use tube adapter SP1-ADP-05 or upgrade to SP-1r2,SP-1r1,Root cause of the 2025 barcode jam reports
+P-108,Error,Decapper torque limit exceeded,Overtightened cap or cap glued by dried sample,Manually decap; inspect gripper jaws for wear,Both,
+P-110,Error,Decapper failed to release cap,Cap retained in gripper,Open lid and clear cap; run Gripper Home,Both,
+P-112,Critical,Tube feed mechanism jam,"Tube tilted in carrier, short-cap tube geometry, or feed pawl wear",Clear jam per SOP-VBS-003; replace feed mechanism SP1-MEC-140 if recurring,SP-1r1,Frequency drops ~90% on SP-1r2 feed assembly
+P-115,Error,Gripper home position error,Home flag misaligned after jam recovery,Run Gripper Home from Service menu,Both,
+P-201,Error,Aliquot volume out of tolerance,Pipette seal wear or air in syringe,Run Syringe Prime; verify with gravimetric check per SOP-VBS-009,Both,
+P-204,Error,Pipette tip not detected,Tip rack empty or tip seated crooked,Reload tip rack; check rack seating,Both,
+P-207,Error,Liquid level detection failure,Capacitive sensor contaminated or highly lipaemic sample,Clean sensor; enable Lipaemic Mode in run settings,Both,
+P-301,Warning,Sort destination rack full,Output rack at capacity,Unload rack,Both,
+P-304,Error,Rack not seated,Rack RFID unread or rack inserted at angle,Reseat rack,Both,
+P-402,Error,Serial link to analyser lost,RS-232 cable fault or baud mismatch,Confirm 115200-8-N-1; check cable SP1-CBL-232,Both,
+P-405,Error,LAN connection to VeriScan timeout,Network change or analyser IP reassigned by DHCP,Assign static IP or DHCP reservation to analyser,Both,
+P-407,Error,Host protocol version mismatch,SP-1 firmware older than analyser firmware requirement,Update SP-1 firmware to 2.3.0 or later for VeriScan FW 4.3.x,Both,
+P-501,Critical,Lid interlock open during run,Lid opened mid-cycle or interlock switch failure,Close lid; if error persists with lid closed replace interlock SP1-ELE-018,Both,
+P-505,Warning,Decontamination cycle incomplete,Cycle aborted or insufficient RGT-CL volume,Repeat full cycle per SOP-VBS-003,Both,

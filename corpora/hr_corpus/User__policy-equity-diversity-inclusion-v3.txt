@@ -1,0 +1,178 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Equity, Diversity and Inclusion Policy
+=================================================================
+Document:      HR-POL-017
+Version:       3
+Effective:     2026-01-01
+Owner:         Naomi Okonjo-Bright, Chief People Officer
+Approved by:   Executive Committee, 2025-11-20
+
+-----------------------------------------------------------------
+1. POSITION
+-----------------------------------------------------------------
+1.1  Veridia does not discriminate on the basis of age, disability, gender
+     reassignment, marriage or civil partnership, pregnancy or maternity,
+     race, religion or belief, sex, or sexual orientation. In Switzerland the
+     equivalent protections under federal and cantonal law apply.
+
+1.2  We also do not discriminate on the basis of things that are not
+     protected characteristics but frequently operate as proxies: which
+     university you went to, whether you went to one at all, your accent, your
+     socioeconomic background, or whether you took a conventional career path.
+
+1.3  This policy states what we do, what our numbers are, and where we are
+     falling short. A policy that only states aspirations is not worth
+     reading.
+
+-----------------------------------------------------------------
+2. WHERE WE ACTUALLY ARE
+-----------------------------------------------------------------
+As at 31 December 2025. 318 employees across the UK and Switzerland.
+
+  OVERALL GENDER SPLIT
+    Women 47%   Men 52%   Non-binary or not disclosed 1%
+
+  BY LEVEL
+    L1 to L2     Women 54%   Men 45%
+    L3           Women 44%   Men 55%
+    L4           Women 36%   Men 64%
+    L5           Women 31%   Men 69%
+    L6 (ExCo)    Women 33%   Men 67%   (3 of 9)
+
+  BY FUNCTION
+    Laboratory and QC        Women 61%
+    Regulatory and Quality   Women 58%
+    People, Finance, Legal   Women 71%
+    Commercial               Women 43%
+    Support engineering      Women 38%
+    Software and firmware    Women 24%
+    Field service            Women 11%   (4 of 36)
+
+  ETHNICITY (UK employees, self-declared, 81% disclosure rate)
+    Reported an ethnic minority background   19%
+    Comparable regional working population    22% (Cambridge travel-to-work
+                                                   area)
+
+  DISABILITY (self-declared, 68% disclosure rate)
+    Declared a disability or long-term condition   9%
+
+  GENDER PAY GAP (UK, April 2025 snapshot)
+    Mean hourly gap    11.4%
+    Median hourly gap   9.8%
+    Mean bonus gap     18.2%
+    Full report published on our website and to all staff.
+
+3. WHAT THESE NUMBERS TELL US
+-----------------------------------------------------------------
+3.1  Our pay gap is not primarily a pay gap. Analysis at each level shows a
+     mean difference of 1.1% within band, which is small but not zero and
+     which we look at every review cycle. The 11.4% headline is driven almost
+     entirely by distribution: we have more men at L4 and above and more men
+     in the higher-paid technical functions.
+
+3.2  That makes it a progression and a hiring problem, which is harder to fix
+     than a pay problem but more worth fixing.
+
+3.3  Field service at 11% women is our worst number and has barely moved in
+     three years. It reflects the industry, and that is an explanation rather
+     than an excuse.
+
+3.4  Disclosure rates matter. A 68% disclosure rate on disability means our 9%
+     figure is a floor, not a measurement.
+
+-----------------------------------------------------------------
+4. WHAT WE DO ABOUT HIRING
+-----------------------------------------------------------------
+  - Structured interviews with the same questions and a scoring rubric agreed
+    before the first candidate is seen.
+  - Diverse interview panels wherever possible. Where it is not possible - and
+    in field service it often is not - we say so rather than pretend.
+  - Job adverts checked for gendered language. Requirements limited to what
+    the job actually needs, because long "essential" lists deter candidates
+    who do not tick everything, disproportionately women.
+  - No degree requirement unless the role genuinely requires one. Most do not.
+  - Salary range published in every advert. This is the single most effective
+    anti-bias measure we have adopted; it removes the negotiation gap at the
+    point it opens.
+  - Adjustments offered to every candidate at every stage, proactively.
+  - We do not ask candidates for their current salary. Anywhere. Ever.
+
+-----------------------------------------------------------------
+5. WHAT WE DO ABOUT PROGRESSION
+-----------------------------------------------------------------
+  - Calibration panels for promotion, with the People team present, so that
+    the bar is comparable across teams.
+  - The L4 IC track, so that technical depth is a route to seniority. Its
+    absence disproportionately affected people who did not want to manage.
+  - Promotion and pay review outcomes analysed by gender, ethnicity and
+    part-time status every cycle. The analysis goes to the Executive
+    Committee.
+  - Family leave that does not penalise the person who takes it, and 8 weeks
+    of secondary carer leave, because the distribution of care is the
+    mechanism behind most of the progression gap.
+  - Pay reviews apply to people on family leave on the same basis as everyone
+    else.
+
+-----------------------------------------------------------------
+6. WHAT WE DO NOT DO
+-----------------------------------------------------------------
+6.1  We do not use quotas or positive discrimination. Selection is on merit.
+
+6.2  We do not set diversity targets for individual managers' bonuses. We
+     think this produces gaming rather than change.
+
+6.3  We do not run unconscious bias training as a standalone intervention. The
+     evidence that it changes behaviour on its own is weak. We put the effort
+     into process design instead, where the evidence is better.
+
+-----------------------------------------------------------------
+7. INCLUSION IN PRACTICE
+-----------------------------------------------------------------
+  - Employee networks: currently Women in Veridia, Veridia Pride, and a
+    Carers network. Any five employees may start one and get a budget and
+    time.
+  - Meetings scheduled within core hours so that people with caring
+    responsibilities are not systematically excluded.
+  - Accessibility of our own sites reviewed annually.
+  - Religious observance accommodated - prayer space at Cambridge and Basel,
+    flexibility around fasting periods and religious holidays.
+  - Trans and non-binary colleagues: we support transition at work, will
+    change records and email addresses promptly on request, and will do so
+    without requiring any medical evidence. A colleague's gender history is
+    confidential and disclosing it without consent may be unlawful and is a
+    disciplinary matter.
+
+-----------------------------------------------------------------
+8. WHERE WE HAVE FALLEN SHORT
+-----------------------------------------------------------------
+Included deliberately.
+
+  - Field service diversity has not moved. We have tried adjusting adverts and
+    it has not worked. We do not currently have a better idea and are looking
+    for one.
+  - The L4 IC track took two years longer than it should have, and the 2024
+    engagement survey told us so 31 times before we acted.
+  - Our disability disclosure rate of 68% suggests people do not feel safe
+    disclosing. That is a signal about us, not about them.
+  - Our ethnicity representation at L4 and above is too small a population to
+    report responsibly, which is itself the finding.
+
+-----------------------------------------------------------------
+9. RESPONSIBILITY AND REPORTING
+-----------------------------------------------------------------
+The Chief People Officer owns this policy. The Executive Committee reviews the
+data twice a year. The gender pay gap report is published annually and sent to
+all staff, not merely posted on a website.
+
+If you experience or witness discrimination, use
+User__policy-grievance-and-dignity-at-work-v4.txt or the speak-up line.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+naomi.okonjo-bright@veridiabio.com | people@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

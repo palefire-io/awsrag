@@ -1,0 +1,127 @@
+From: Peter Doyle <peter.doyle@veridiabio.com>
+To: Dr Rebecca Aylesworth <rebecca.aylesworth@ncauh.nhs.uk>
+CC: Sarah Lindgren <sarah.lindgren@veridiabio.com>, Ben Whittle <ben.whittle@veridiabio.com>
+Date: Fri, 17 Oct 2025 16:52:40 +0100
+Subject: RE: Request for information - haematology analyser replacement programme
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Dr Aylesworth,
+
+Thank you for a clear and well structured request. I will answer your points in
+order, and I will answer point 6 fully because you asked and because you said
+you check.
+
+1. SPECIFICATIONS
+Attached: DS-VS400-003 (v3, revision date 2025-05-22) and DS-VS400P-003 (v3,
+2025-05-22). These are the current revisions. Please note that v2 of the
+VeriScan 400 sheet is still in circulation and quotes a throughput of 65
+samples/hr and an operating temperature range of 15-35 C. Both figures are
+superseded. See point 5.
+
+2. INDICATIVE PRICING
+Ben Whittle will send a costed indication under separate cover within five
+working days. I would rather he built it properly than I gave you a number
+from memory.
+
+3. IVDR
+Both models are classified Class C under Rule 3(k). Technical documentation was
+submitted to Notified Body 0086 on 30 January 2025 and assessment is in
+progress. We are currently on the EU market under the Article 110 transitional
+provisions.
+
+I am not going to promise you certification by June 2026. I do not control the
+Notified Body's timetable and neither does anyone else selling into this
+market. What I will do is give you our current status in writing at any point
+in your process, and Sarah Lindgren (copied) will speak directly to your
+regulatory colleagues if that is useful.
+
+4. UKCA
+Both models are UKCA marked under the UK MDR 2002 as amended. Self-declaration
+documentation available on request.
+
+5. THROUGHPUT
+Sustained closed-tube throughput with the autoloader running:
+  VeriScan 400        60 samples/hr (CBC + 5-part differential)
+  VeriScan 400 Pro    80 samples/hr (CBC + 5-part differential)
+                      62 samples/hr (CBC + differential + reticulocyte)
+                      77 samples/hr with advisory flagging enabled
+
+I will note without prompting that v2 of our own datasheet quoted 65 samples/hr
+for the VeriScan 400. That figure came from an open-tube bench measurement
+without autoloader indexing and it should not have been published alongside a
+closed-tube description. We corrected it in v3 and the correction is stated
+explicitly in the change summary at the top of that document. You will find no
+other supplier who tells you this about their own paperwork, and I mention it
+because your point 5 suggests you will find out anyway.
+
+6. FIELD SAFETY NOTICES AND KNOWN ISSUES, LAST 36 MONTHS
+Full disclosure as requested.
+
+  FSN-2025-003 (14 Feb 2025). Recall of VeriLyse RGT-L3 lyse reagent lots
+  L3-2025-0440 to L3-2025-0460. Elevated baseline absorbance developing during
+  on-board use, causing spurious WBC flags and a positive WBC bias of up to
+  +0.9 x10^9/L on the VeriScan 400. The 400 Pro was not affected. Root cause
+  was trace copper contamination in a raw material delivery catalysing
+  oxidation of the buffer. Reformulated (revision D) from March 2025.
+  Investigation report VBI-0087, closed 2 April 2025. No adverse patient
+  outcome reported. 19 complaints.
+
+  FSN-2024-006 (8 Nov 2024). Withdrawal of RGT-RT reticulocyte stain
+  formulation revision A. Dye precipitation above 25 C causing negative
+  reticulocyte bias. Revision B available from October 2024. 4 complaints. No
+  adverse patient outcome.
+
+  VBB-0041 (19 Mar 2025). Firmware bulletin, mandatory update. Firmware 4.2.1
+  introduced a defect causing HL7 result timestamps to drift forward with
+  instrument uptime, up to 47 minutes at 14 days on the 400 Pro. Analyte values
+  unaffected. Corrected in 4.2.3. Assessed as not reportable as an incident;
+  the assessment was challenged by one customer's regulatory lead and upheld.
+  Investigation report VBI-0091.
+
+  VBB-0038 (24 Jan 2025) and VBB-0055 (30 Jul 2025). VeriPrep SP-1 revision r1
+  tube handling limitation with short-cap 5 mL tubes below approximately
+  75.5 mm capped height. Barcode read failures and feed jams. Addressed by the
+  SP-1r2 hardware revision shipping from Q3 2025, which is what you would be
+  buying. Relevant to you because it is a live example of how we handle a
+  design limitation: we published the mechanism, published the mitigation,
+  redesigned the mechanism and offered a subsidised retrofit to affected
+  customers.
+
+  VBB-0044 (21 Mar 2025). VeriConnect SAML single sign-on outage of 11 March
+  2025, 3 hours 54 minutes, 17 tenants. Availability incident, no data loss, no
+  unauthorised access, no instrument or LIS impact. Post-incident review
+  VBI-0094.
+
+  VBB-0052 (11 Apr 2025). Operating temperature range narrowed from 15-35 C to
+  18-32 C based on field data. Not a defect; a specification revision. I flag
+  it because it will affect your site environmental requirements and because
+  you may encounter the older figure in circulating documents.
+
+7. REFERENCE SITES
+Greater Manchester Pathology Network is the closest match to your description -
+14 instruments, mixed 400 and 400 Pro, VeriPrep integration, Enterprise
+VeriConnect. I will ask Dr Aled Pritchard whether he is willing to speak to
+you. I should tell you that GMPN were significantly affected by FSN-2025-003
+and were robust with us about it. If he agrees to speak to you, you will get an
+unvarnished account. I think that is more useful to you than a happy customer.
+
+8. DATA PROTECTION
+VeriConnect is hosted on AWS eu-west-1 (Ireland) by default, with eu-west-2
+(London) available on Enterprise tier with the VeriGuard add-on. Veridia acts
+as processor. Our standard DPA is aligned to the NHS Data Processing Agreement
+template and we complete the NHS Data Security and Protection Toolkit annually
+(latest submission: Standards Met). ISO 27001:2022 certified, certificate
+GB-ISMS-2024-0417. SOC 2 Type II report available under NDA.
+
+I would welcome the opportunity to arrange a site visit for your team to a
+working installation, and to bring Marcus Chen from our applications team to
+talk through the QC and accreditation side, which in my experience is where
+these evaluations are actually won and lost.
+
+Kind regards,
+
+Peter Doyle
+Sales Manager, UK North
+Veridia BioSystems Ltd
+peter.doyle@veridiabio.com | +44 7700 900 461
+41 Hurst Way, Cambridge CB4 0WS | Registered in England No. 10483726

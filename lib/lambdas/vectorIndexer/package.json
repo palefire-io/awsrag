@@ -1,0 +1,9 @@
+{
+  "name": "vector-indexer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf build function.zip && mkdir build && pip install -r requirements.txt -t build --quiet && cp *.py build/",
+    "deploy:dev": "npm run build && cd build && zip -rq ../function.zip . && cd .. && aws lambda update-function-code --function-name cloudrag-dev-vector-indexer --zip-file fileb://function.zip"
+  }
+}

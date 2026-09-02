@@ -1,0 +1,62 @@
+From: Danielle Frost <danielle.frost@gmpn.nhs.uk>
+To: Tom Reeves <tom.reeves@veridiabio.com>
+CC: Aisha Rahman <aisha.rahman@veridiabio.com>
+Date: Tue, 6 May 2025 13:25:41 +0100
+Subject: LIS integration for Oldham site - kickoff questions
+X-Mailer: Microsoft Outlook 16.0
+
+Tom,
+
+We're bringing the Oldham site onto the network in July and it needs a new LIS
+interface. Two VeriScan 400s going in, connecting to the same Integrated
+Pathology Gateway as the rest of the network.
+
+Before we start, some questions from our side. I've been through the
+integration spec so these are the ones it doesn't answer.
+
+1. TOPOLOGY. We run topology A everywhere else - instrument straight to the
+   gateway, VeriConnect gets a parallel copy. I want to keep that consistent.
+   Any reason not to?
+
+2. MSH-10. After what happened at MRI (ticket VBST-4200), I want to nail this
+   down before we go live rather than after. Can you confirm the exact MSH-10
+   format the instrument generates, including field widths, so I can write the
+   gateway rules correctly the first time?
+
+3. TIME ZONE. Our gateway wants UTC. Our instruments elsewhere are set to local
+   time with offset. I know the spec says to set the whole fleet the same way.
+   Which do you recommend, and is there any downside to moving everything to
+   UTC?
+
+4. OBR-7. Oldham's order comms doesn't send a collection time for GP samples,
+   only for inpatients. So OBR-7 will be instrument-supplied for a large chunk
+   of the workload. Anything I should know about that beyond what's in the
+   spec?
+
+5. TEST PROFILE. Both instruments will run CBC5D only, no retic. Do I need to
+   configure anything to stop retic order codes reaching them, or will they
+   just reject?
+
+6. VALIDATION. What does Veridia typically provide for interface validation
+   evidence? Our quality team will want a test script and results.
+
+7. GO-LIVE. Is there any value in you being on a call during cutover, or is
+   this routine enough that we just do it?
+
+One request: can we do this over a call rather than email? Last time we did an
+integration by email it took three weeks and four misunderstandings. Aisha was
+very good on the MRI ticket and I'd happily work with her again if she's
+available.
+
+Thanks
+
+Danielle Frost
+Pathology Systems Analyst
+Greater Manchester Pathology Network
+danielle.frost@gmpn.nhs.uk | 0161 276 1234 ext 8802
+
+--
+This email and any attachments are confidential and intended solely for the
+addressee. If you have received this email in error please notify the sender
+and delete it from your system. The Greater Manchester Pathology Network is a
+collaboration of NHS Foundation Trusts.

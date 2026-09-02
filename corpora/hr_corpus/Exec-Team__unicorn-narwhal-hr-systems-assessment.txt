@@ -1,0 +1,278 @@
+=================================================================
+*** STRICTLY CONFIDENTIAL - PROJECT UNICORN ***
+=================================================================
+PROJECT UNICORN
+Narwhal HR Systems and Data Assessment
+=================================================================
+Report reference: UNI-DD-HR-003
+Date:             2026-06-12
+Prepared by:      Rachel Duffy, HR Business Partner
+Technical review: Yusuf Demir, Cloud Operations Lead - LIMITED BRIEF, target
+                  identity not disclosed to him
+Data protection
+review:           Ruth Amankwah, Data Protection Officer - LIMITED BRIEF
+Approved by:      Naomi Okonjo-Bright, Chief People Officer
+
+NOTE ON LIMITED BRIEFS. Yusuf Demir and Ruth Amankwah were asked to assess an
+anonymised HR systems landscape and an anonymised data protection position
+without being told the target's identity or that a transaction is
+contemplated. Both provided high-quality assessments. Both should be brought
+inside the tent before any implementation planning begins, and the CPO has
+recommended this.
+
+-----------------------------------------------------------------
+1. THE LANDSCAPE
+-----------------------------------------------------------------
+1.1  Narwhal operates THREE systems holding employee data, with no single
+     source of truth and no integration between any pair of them.
+
+  SYSTEM 1 - Sage People (HRIS)
+    Implemented 2019. UK employees only. Holds core records, absence, and
+    an unused performance module.
+    Records: 265 current UK employees plus 1,140 leavers.
+    Owner: HR. Administered by one person (an HR Advisor, not a systems
+    specialist).
+
+  SYSTEM 2 - Access Dimensions Payroll
+    Implemented 2013, on premise, running on a Windows Server 2016 instance
+    that is out of extended support since January 2027 - eight months away.
+    UK payroll only. Holds bank details, NI numbers, salary history, P11D
+    data, court orders and attachment of earnings.
+    Owner: Finance. Administered by the Payroll Manager.
+    NO INTEGRATION WITH SAGE PEOPLE. Starters, leavers and salary changes are
+    keyed into both systems by hand.
+
+  SYSTEM 3 - "Kadry" (local Polish HR and payroll system)
+    Wroclaw only. Polish-language, supplied by a local vendor, hosted by that
+    vendor in Poland.
+    Holds all Polish employee data including ZUS records, PPK pension, medical
+    examination records (obligatory under Polish law) and working time records.
+    Reconciled to group reporting quarterly BY A MANUAL SPREADSHEET.
+    Owner: Wroclaw site administration.
+
+1.2  In addition: an Excel file, held on the HR shared drive, described by the
+     HR Director as "the actual org chart", which is the only place the
+     reporting structure is accurately recorded. It is not access controlled
+     beyond the HR folder permissions and it contains salary.
+
+-----------------------------------------------------------------
+2. DATA QUALITY
+-----------------------------------------------------------------
+2.1  HEADCOUNT DOES NOT RECONCILE.
+       Sage People            410
+       Payroll                413
+       Statutory accounts     417 (implied from the employee note)
+     A 7-person discrepancy in a 410-person company. Management attributes it
+     to leavers not closed in Sage and to two employees on unpaid leave. We
+     have accepted 410 with a stated uncertainty and have flagged that we
+     cannot verify actual headcount until completion.
+
+2.2  Sample testing of 40 records against source documents:
+       Start date matches contract                     37 / 40
+       Salary matches payroll                          36 / 40
+       Job title matches contract                      29 / 40
+       Manager field populated and current             31 / 40
+       Right to work evidence attached                 22 / 40
+       Contract on file                                34 / 40
+
+2.3  The job title and manager findings are the most operationally significant:
+     roughly a quarter of records do not accurately state who someone works
+     for. This makes any consultation exercise - which requires accurate
+     identification of affected populations and their managers - materially
+     harder.
+
+2.4  RIGHT TO WORK EVIDENCE ATTACHED IN 22 OF 40 RECORDS. Extrapolated, up to
+     130 UK employees may have no right to work evidence on file. This does
+     not mean they lack the right to work. It means Narwhal may have no
+     statutory excuse, and on transfer Veridia acquires the obligation with 60
+     days from the transfer date to carry out its own checks.
+
+     This is precisely the scenario anticipated in the watch item added to
+     Veridia's own right to work audit (HR-AUD-2026-001 section 5.3). Rachel
+     Duffy holds a scoped plan. The exercise would cover up to 265 UK
+     employees, take approximately six weeks, and require two temporary
+     resources. Estimated cost GBP 28,000. IT MUST BE A DAY ONE ACTIVITY.
+
+-----------------------------------------------------------------
+3. DATA PROTECTION
+-----------------------------------------------------------------
+Ruth Amankwah's assessment, on an anonymised basis.
+
+3.1  NO RECORDS OF PROCESSING ACTIVITY (Article 30). None exists for HR data.
+     This is a straightforward compliance failure for an organisation of this
+     size.
+
+3.2  RETENTION NEVER APPLIED. Sage People holds 1,140 leaver records, the
+     oldest from 2013. Payroll holds records from 2013 including bank account
+     details, NI numbers and, in 44 cases sampled, attachment of earnings
+     orders. Nothing has ever been deleted.
+
+     Statutory retention for payroll records is 3 years from the end of the
+     tax year (6 recommended). For general HR records, 6 years after
+     employment ends is the usual position. Narwhal is holding 11 to 13 years
+     of data including special category and financial data with no lawful
+     basis for retaining most of it.
+
+3.3  HEALTH DATA HELD WITHOUT ADEQUATE CONTROL. Sage People contains an
+     unstructured "Notes" field on the absence record. Sample review of 60
+     absence records found 14 containing free-text clinical information -
+     diagnoses, medication, in two cases the name of a treating consultant -
+     entered by line managers. This is special category data under Article 9,
+     entered by people with no training, visible to anyone with HR module
+     access, and retained indefinitely.
+
+     Ruth Amankwah's comment: "This is the single worst finding in the
+     assessment. It is not a system problem. It is a training and culture
+     problem and it will exist in the people, not in the database, on the day
+     the data is migrated."
+
+3.4  NO DATA PROTECTION IMPACT ASSESSMENTS for any HR processing.
+
+3.5  NO PROCESSOR AGREEMENT with the Polish "Kadry" vendor that Ruth
+     Amankwah considers Article 28 compliant. The agreement is a two-page
+     services contract from 2014.
+
+3.6  SUBJECT ACCESS. Four requests in 24 months, all from former employees in
+     the context of a dispute. Two were answered outside the statutory period.
+     One was not answered at all.
+
+3.7  NO REPORTED PERSONAL DATA BREACHES. Ruth Amankwah's view is that this is
+     more likely to reflect an absence of detection than an absence of
+     breaches, given that there is no logging on the payroll system and the
+     org chart spreadsheet is on an open shared drive.
+
+-----------------------------------------------------------------
+4. SECURITY
+-----------------------------------------------------------------
+Yusuf Demir's assessment, on an anonymised basis.
+
+4.1  Payroll on Windows Server 2016, extended support ending January 2027.
+     No plan to migrate. This is a hard deadline eight months from now and it
+     is independent of the transaction.
+
+4.2  No multi-factor authentication on Sage People. Password only.
+
+4.3  Payroll accessed by four named users. No privileged access management, no
+     session logging, no periodic access review.
+
+4.4  Backups: payroll backed up to a NAS on the same site. No offsite copy
+     tested in the last 24 months. A fire in the Warrington server room would
+     destroy the payroll system and its backup.
+
+4.5  No penetration testing of any HR system, ever.
+
+4.6  Yusuf's summary: "If this were our estate I would classify the payroll
+     server as a critical finding requiring remediation inside 90 days, and I
+     would not be comfortable that we would detect an exfiltration if one had
+     occurred."
+
+-----------------------------------------------------------------
+5. WHAT INTEGRATION WOULD ACTUALLY INVOLVE
+-----------------------------------------------------------------
+5.1  Veridia runs PeopleHub for HR and a single outsourced payroll provider
+     for both UK and Swiss payroll. The target state is one HRIS and one
+     payroll relationship across the combined group.
+
+5.2  Realistic sequence:
+
+  Phase 0 - PRE-COMPLETION (from signing)
+    Right to work remediation plan finalised and resourced
+    Payroll server remediation plan agreed with the vendor - this cannot wait
+      for completion given the January 2027 support deadline
+    Data protection remediation scoped
+
+  Phase 1 - DAY ONE TO MONTH 3
+    Run everything as-is. Change nothing. Two payrolls, three HR systems.
+    Right to work exercise across the UK population. MUST complete within 60
+      days of transfer.
+    Immediate: turn off the Sage People free-text absence notes field and
+      brief every Narwhal manager on why. This costs nothing and stops the
+      worst finding getting worse.
+    Retention policy applied and the 2013-2019 leaver data deleted, subject to
+      any litigation hold.
+
+  Phase 2 - MONTH 3 TO MONTH 12
+    UK payroll consolidated onto the Veridia provider. This removes the
+      Windows Server 2016 exposure and is the single highest-value change.
+    Records of processing activity created for the combined group.
+    Processor agreements remediated.
+    Data quality remediation - the 40-record sample suggests roughly 25 per
+      cent of records need correction, which is approximately 100 records
+      requiring manual verification against source documents.
+
+  Phase 3 - MONTH 12 TO MONTH 24
+    Sage People migrated to PeopleHub.
+    Polish payroll and HR reviewed. RECOMMENDATION: do not migrate Kadry.
+      Polish payroll is highly specific, the local system works, and the
+      integration cost exceeds the benefit. Keep it and build a proper
+      reporting interface.
+    Single org structure in one system.
+
+5.3  COST AND RESOURCE
+       Right to work exercise                    GBP  28,000
+       Payroll consolidation                     GBP  95,000
+       Data quality remediation                  GBP  62,000
+       Data protection remediation (incl. DPIAs,
+         ROPA, processor agreements, training)   GBP  74,000
+       Sage to PeopleHub migration               GBP 118,000
+       Polish reporting interface                GBP  34,000
+       Contingency 15%                           GBP  61,650
+       ---------------------------------------   -----------
+       TOTAL                                     GBP 472,650
+
+     The HR due diligence report carries GBP 340,000 for this line. That
+     figure was compiled before the payroll server and right to work findings
+     and IS UNDERSTATED BY APPROXIMATELY GBP 130,000. Corrected here; to be
+     reflected at Gate 2.
+
+5.4  RESOURCE: one full-time HR systems lead for 24 months, plus two temporary
+     resources for six weeks for right to work, plus approximately 0.3 FTE of
+     Yusuf Demir's team. Veridia does not currently have an HR systems lead
+     and would need to hire one.
+
+-----------------------------------------------------------------
+6. RISKS
+-----------------------------------------------------------------
+6.1  The payroll server support deadline of January 2027 falls between target
+     signing (October 2026) and target completion (January 2027). If the
+     transaction slips, Narwhal is running payroll for 265 people on an
+     unsupported server and it is not our problem. If it completes on time, it
+     becomes our problem in the first month.
+     MITIGATION: raise it with Narwhal now, as a diligence finding, and press
+     them to remediate before completion at their cost.
+
+6.2  The right to work exposure is the one with a legal consequence and a hard
+     clock. 60 days from transfer.
+
+6.3  The free-text health data is the one with the highest reputational
+     consequence. If a Narwhal employee made a subject access request post-
+     completion and received their manager's free-text note about their
+     medical condition, on Veridia letterhead, that would be genuinely
+     damaging and entirely deserved.
+
+6.4  Data migration always surfaces problems that diligence did not. A 7-
+     person headcount discrepancy in a 410-person company is a signal that
+     there will be more.
+
+-----------------------------------------------------------------
+7. RECOMMENDATIONS
+-----------------------------------------------------------------
+  S1  Correct the systems remediation figure in the model to GBP 473,000.
+  S2  Right to work verification as a day one activity, resourced and
+      budgeted, completing within 60 days of transfer. Non-negotiable.
+  S3  Disable the free-text absence notes field on day one.
+  S4  Require Narwhal to remediate the payroll server before completion at
+      their cost, as a condition.
+  S5  Hire an HR systems lead before completion, not after.
+  S6  Do not migrate the Polish system. Build a reporting interface.
+  S7  Bring Yusuf Demir and Ruth Amankwah inside the tent before
+      implementation planning. Both have now assessed this landscape without
+      knowing what it is, which is not a sustainable basis for planning the
+      work.
+  S8  Specific warranty on data protection compliance, and an indemnity for
+      any regulatory action arising from pre-completion processing.
+
+=================================================================
+STRICTLY CONFIDENTIAL - PROJECT UNICORN - INSIDE INFORMATION
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

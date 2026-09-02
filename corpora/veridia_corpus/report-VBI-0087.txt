@@ -1,0 +1,321 @@
+=================================================================
+VERIDIA BIOSYSTEMS - INVESTIGATION REPORT
+=================================================================
+Report Number:   VBI-0087
+Title:           Elevated baseline absorbance in VeriLyse RGT-L3 lots
+                 L3-2025-0440 to L3-2025-0460 (formulation revision C)
+Classification:  Product investigation - reagent
+Status:          CLOSED
+Opened:          2025-02-04
+Closed:          2025-04-02
+Investigator:    Dr Wen Li, R&D Reagents (lead)
+Contributors:    Olu Adeyemi, Reagent Manufacturing Lead
+                 Marcus Chen, QC Applications Specialist
+                 Simone Buehler, QA Manager (Basel)
+                 Rob Ellery, Field Service Engineer (site data)
+Approved:        Dr Elena Marchetti, Chief Scientific Officer, 2025-04-02
+Related:         FSN-2025-003, VBB-0047, tickets VBST-3847, VBST-3851,
+                 VBST-3863, VBST-3871, VBST-3884; field visits FSV-2025-0146,
+                 FSV-2025-0149, FSV-2025-0155
+
+-----------------------------------------------------------------
+1. SUMMARY
+-----------------------------------------------------------------
+Twenty-one production lots of VeriLyse RGT-L3 lyse reagent, formulation
+revision C, manufactured between 2025-01-27 and 2025-02-11, develop an
+elevated baseline absorbance at 535 nm during on-board use. The elevation
+becomes measurable from approximately day 5 after first pierce and continues
+to increase for the remainder of the on-board period.
+
+On VeriScan 400 instruments, which use a halogen source and a single-beam
+absorbance measurement for the WBC differential, the elevation shifts the
+gating thresholds and produces spurious abnormal-scatter flags, W-042
+warnings, E-208 errors and a positive WBC bias of up to +0.9 x10^9/L. On
+VeriScan 400 Pro instruments, which use a laser source with a reference
+photodiode and per-run baseline subtraction, no clinically significant
+deviation was demonstrable.
+
+Root cause was established as catalytic oxidation of the revision C organic
+buffer by trace copper introduced with a single raw material delivery, itself
+the consequence of an undeclared change of intermediate supplier by the raw
+material vendor.
+
+Corrective action: recall of the affected lots (FSN-2025-003); reformulation
+to revision D with a dual buffer system substantially less sensitive to trace
+metal contamination (VBB-0047); addition of an incoming trace metal
+specification and test; contractual change notification obligation imposed on
+the raw material vendor.
+
+-----------------------------------------------------------------
+2. BACKGROUND AND TRIGGER
+-----------------------------------------------------------------
+2.1  The first complaint attributable to this issue was VBST-3847, received
+     2025-01-28 from Countess of Chester Hospital NHS Foundation Trust
+     (ACC-1090), reporting an increase in WBC abnormal-scatter flags on a
+     VeriScan 400 (serial VS4-0402) without a corresponding change in the
+     patient population.
+
+2.2  Four further complaints with a similar presentation were received by
+     2025-02-03 (VBST-3851, VBST-3863, VBST-3871, VBST-3884). The weekly
+     clustering review on 2025-02-03 identified the pattern; at that point
+     three of the five complaints shared an RGT-L3 lot within a narrow range.
+
+2.3  This investigation was opened 2025-02-04. The health hazard evaluation
+     was completed 2025-02-12 and FSN-2025-003 was issued 2025-02-14.
+
+2.4  Observation. The interval from first complaint to field safety notice was
+     17 days. Two of the five complaints had been closed locally as
+     "instrument fault - no fault found" before the pattern was recognised.
+     See section 9.
+
+-----------------------------------------------------------------
+3. INVESTIGATION - SITE DATA
+-----------------------------------------------------------------
+3.1  Field service attended three sites (FSV-2025-0146, FSV-2025-0149,
+     FSV-2025-0155). In each case the instrument passed optical calibration,
+     background counts were normal immediately after an Extended Clean, and no
+     hardware fault was found.
+
+3.2  In each case the elevated background returned within 24 to 72 hours of
+     the clean, and in each case swapping the RGT-L3 cartridge for one from an
+     earlier lot resolved the problem immediately.
+
+3.3  The correlation with cartridge age on board was noted at
+     FSV-2025-0155 (Betsi Cadwaladr, 2025-02-18) by the attending engineer,
+     who recorded that the site's two instruments were both affected but the
+     one whose cartridge had been fitted four days earlier was markedly less
+     affected than the one fitted eleven days earlier. This observation
+     directed the laboratory investigation to on-board ageing rather than to
+     as-manufactured quality, which is why the release testing data had not
+     flagged the lots.
+
+3.4  Nineteen complaints in total were ultimately attributed to this issue,
+     from 11 accounts, all on VeriScan 400 instruments.
+
+-----------------------------------------------------------------
+4. INVESTIGATION - LABORATORY
+-----------------------------------------------------------------
+4.1  Retained samples of lots L3-2025-0433 (unaffected), L3-2025-0444
+     (affected), L3-2025-0452 (affected) and L3-2025-0463 (adjacent, later
+     quarantined) were tested.
+
+4.2  Absorbance at 535 nm, measured against a water blank, as received:
+
+       Lot              t=0 (AU)   Release spec
+       ---------------  ---------  ------------
+       L3-2025-0433     0.008      <= 0.015
+       L3-2025-0444     0.011      <= 0.015
+       L3-2025-0452     0.012      <= 0.015
+       L3-2025-0463     0.011      <= 0.015
+
+     All four lots met the release specification as manufactured. This is the
+     central point of the investigation: the defect is not detectable at
+     release.
+
+4.3  Accelerated ageing, 35 C, absorbance at 535 nm:
+
+       Days    0433    0444    0452    0463
+       -----   -----   -----   -----   -----
+       0       0.008   0.011   0.012   0.011
+       7       0.009   0.024   0.026   0.019
+       14      0.009   0.038   0.041   0.027
+       28      0.010   0.055   0.058   0.034
+       56      0.012   0.068   0.071   0.041
+       84      0.014   0.076   0.079   0.048
+
+     Specification at end of on-board life is <= 0.025 AU. Lots 0444 and 0452
+     exceed it by day 7 at 35 C. Lot 0463 exceeds it between days 14 and 28
+     and was quarantined on this basis, although no field complaint was
+     attributed to it.
+
+4.4  Real-time ageing at 22 C on instrument reproduced the effect at
+     approximately one third the rate, consistent with the field observation
+     that the problem becomes apparent from around day 5 to day 10 in a
+     laboratory at typical ambient.
+
+4.5  UV-visible scanning of aged affected material showed a broad absorbance
+     band centred at 531 nm not present in the unaffected lot. LC-MS
+     identified the species as an oxidation product of the revision C organic
+     buffer.
+
+4.6  ICP-MS of the four lots:
+
+       Lot              Cu (ppb)   Fe (ppb)   Mn (ppb)
+       ---------------  ---------  ---------  --------
+       L3-2025-0433     < 1        14         < 1
+       L3-2025-0444     41         16         < 1
+       L3-2025-0452     46         15         < 1
+       L3-2025-0463     22         14         < 1
+
+     Copper at 40-50 ppb in the affected lots against < 1 ppb in the
+     unaffected lot. Lot 0463 is intermediate, consistent with its position at
+     the end of the affected raw material campaign.
+
+4.7  Spiking experiment: unaffected lot L3-2025-0433 spiked with copper(II) at
+     50 ppb and aged at 35 C reproduced the absorbance profile of the affected
+     lots within experimental error (day 28: 0.052 AU spiked, 0.055 and 0.058
+     AU for the affected lots). This is taken as confirmation of the mechanism.
+
+-----------------------------------------------------------------
+5. INVESTIGATION - MANUFACTURING AND SUPPLY CHAIN
+-----------------------------------------------------------------
+5.1  All 21 affected lots were manufactured from a single delivery of the
+     organic buffering agent, vendor lot BV-24-11-338, received 2025-01-22.
+
+5.2  Lots manufactured before 2025-01-27 used the previous delivery
+     (BV-24-09-201); lots from L3-2025-0471 onward used delivery BV-25-02-107
+     and are unaffected, although by then the formulation change was already
+     in progress.
+
+5.3  ICP-MS of retained samples of the three vendor deliveries:
+
+       BV-24-09-201    Cu < 1 ppb
+       BV-24-11-338    Cu 780 ppb
+       BV-25-02-107    Cu 3 ppb
+
+5.4  The vendor's certificate of analysis for BV-24-11-338 reported
+     conformance on all specified parameters. Trace metals were not a
+     specified parameter on either Veridia's incoming specification or the
+     vendor's CoA. Neither party was testing for it.
+
+5.5  Supplier audit conducted 2025-03-06 established that the vendor had
+     changed the supplier of a synthesis intermediate in October 2024. The new
+     intermediate is produced using a copper-catalysed coupling step. The
+     vendor did not notify Veridia of the change because Veridia's supply
+     agreement required notification of changes to the specified parameters
+     only, and the change did not affect them.
+
+5.6  This is a supplier control failure on Veridia's part as much as a
+     notification failure on the vendor's. The supply agreement was drafted
+     around a specification that did not contemplate a catalytic sensitivity
+     that Veridia had not characterised.
+
+-----------------------------------------------------------------
+6. WHY THE VERISCAN 400 PRO IS NOT AFFECTED
+-----------------------------------------------------------------
+6.1  240 residual clinical specimens were analysed across 4 VeriScan 400 Pro
+     instruments using affected lot L3-2025-0452 aged to 28 days on board,
+     paired against the same specimens on unaffected lot L3-2025-0433.
+
+6.2  Results:
+
+       Analyte   Slope    Intercept   Mean bias        95% LoA
+       -------   ------   ---------   --------------   ------------------
+       WBC       1.004    +0.03       +0.06 x10^9/L    -0.19 to +0.31
+       NEUT%     0.999    +0.11       +0.10 pp         -0.9 to +1.1
+       LYMPH%    1.002    -0.09       -0.05 pp         -0.8 to +0.7
+       RBC       1.000    0.00        0.00             -0.04 to +0.04
+       HGB       1.001    -0.2 g/L    -0.1 g/L         -1.4 to +1.2
+       PLT       0.998    +1.1        +0.6 x10^9/L     -5.2 to +6.4
+
+6.3  No result met the criteria for clinical significance. Flag rates were
+     equivalent (affected 4.2 per cent, unaffected 3.9 per cent, n.s.).
+
+6.4  Mechanism: the Pro's optical bench measures a reference beam through a
+     path containing the same reagent and subtracts it per run. An absorbance
+     offset common to sample and reference cancels. The VeriScan 400's
+     single-beam arrangement has no such compensation and relies on a baseline
+     established at calibration, which the drift invalidates.
+
+6.5  The same 240-specimen comparison on a VeriScan 400 produced a mean WBC
+     bias of +0.41 x10^9/L with a 95th percentile of +0.87, and a flag rate of
+     14.1 per cent against 3.8 per cent on unaffected reagent.
+
+-----------------------------------------------------------------
+7. RISK AND CLINICAL SIGNIFICANCE
+-----------------------------------------------------------------
+7.1  The health hazard evaluation (QA-HHE-2025-002, 2025-02-12) concluded that
+     the residual risk is LOW, principally because:
+     a) the great majority of affected results carry an instrument flag;
+     b) laboratory practice requires flagged differentials to be reviewed;
+     c) the bias is positive and in the WBC channel only, so the failure mode
+        is an unnecessary review or repeat rather than a missed abnormality;
+     d) haemoglobin, red cell and platelet parameters are unaffected.
+
+7.2  The evaluation identified as the worst credible case a mildly elevated
+     WBC in an otherwise normal sample being reported without review and
+     prompting an unnecessary investigation. No such case was reported.
+
+7.3  No adverse patient outcome, serious deterioration or death was reported
+     to Veridia in connection with this issue. Reportability was assessed
+     under SOP-VBS-014 section 7; the FSCA itself was notified to competent
+     authorities.
+
+-----------------------------------------------------------------
+8. CORRECTIVE AND PREVENTIVE ACTIONS
+-----------------------------------------------------------------
+  CAPA-2025-011  Recall affected lots. FSN-2025-003 issued 2025-02-14.
+                 Status: complete. 94 per cent of shipped affected units
+                 accounted for by 2025-03-31.
+
+  CAPA-2025-012  Reformulate RGT-L3 to a dual buffer system with reduced
+                 sensitivity to trace metal catalysis. Revision D, first
+                 production lot L3-2025-0471. VBB-0047 issued 2025-03-31.
+                 Status: complete.
+
+  CAPA-2025-013  Add trace metals (Cu, Fe, Mn, Zn) to the incoming
+                 specification for the buffering agent, with ICP-MS testing on
+                 every delivery. Cu limit 10 ppb.
+                 Status: complete, effective 2025-03-10.
+
+  CAPA-2025-014  Amend the supply agreement to require notification of any
+                 change to raw materials, intermediates, synthesis route or
+                 manufacturing site, irrespective of whether specified
+                 parameters are affected. Extend to all critical raw material
+                 vendors, not only this one.
+                 Status: complete for this vendor 2025-04-01; extension to the
+                 remaining seven critical vendors tracked separately under
+                 CAPA-2025-019.
+
+  CAPA-2025-015  Add an accelerated stability check (35 C, 28 days,
+                 absorbance at 535 nm) to lot release for RGT-L3. Note this
+                 delays release by 28 days; mitigated by holding a larger
+                 finished goods buffer stock.
+                 Status: complete, effective 2025-05-01.
+
+  CAPA-2025-016  Amend SOP-VBS-001 to require verification of reagent lot
+                 numbers against active field safety notices as part of daily
+                 QC. Status: complete, SOP-VBS-001 revision 6.
+
+  CAPA-2025-017  Amend SOP-VBS-014 to introduce weekly complaint clustering
+                 review and to reduce the health hazard evaluation target from
+                 15 to 5 working days. Status: complete, revision 2.
+
+  CAPA-2025-018  Build a retrospective reagent lot exposure report into
+                 VeriConnect so that customers can identify affected patient
+                 episodes without manual reconciliation.
+                 Status: delivered in VeriConnect 6.1 beta, general
+                 availability 6.2 (2026-04-21). Instrument-side export
+                 delivered in firmware 4.4.0.
+
+-----------------------------------------------------------------
+9. OBSERVATIONS AND LESSONS
+-----------------------------------------------------------------
+9.1  Release testing measured the correct parameter at the wrong time. The
+     specification was written around as-manufactured absorbance; the failure
+     mode was a rate of change during use. A specification that cannot detect
+     the failure mode is not a control.
+
+9.2  Two early complaints were closed as instrument faults. In both cases the
+     instrument passed every test applied to it, which is exactly what one
+     would expect when the instrument is not the problem. The absence of an
+     instrument fault should have prompted a reagent hypothesis sooner.
+
+9.3  The distinction between "no fault found" and "cannot reproduce" matters.
+     Both early complaints were recorded as the former when the latter was
+     accurate. SOP-VBS-014 revision 2 section 6.4 now addresses this.
+
+9.4  The engineer observation at FSV-2025-0155 correlating severity with days
+     on board was the single most useful piece of evidence in the
+     investigation and it came from someone writing down something they
+     noticed that nobody had asked them to record.
+
+9.5  Customers with mixed VeriScan 400 and 400 Pro fleets found the scope of
+     the notice hard to apply. Several quarantined Pro instruments
+     unnecessarily; one continued using affected stock on a 400 believing the
+     notice applied only to the Pro. FSN scope statements must state what is
+     NOT affected as prominently as what is.
+
+=================================================================
+END OF REPORT VBI-0087
+=================================================================

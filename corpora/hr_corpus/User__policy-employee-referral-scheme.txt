@@ -1,0 +1,116 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Employee Referral Scheme
+=================================================================
+Document:      HR-POL-026
+Version:       3
+Effective:     2026-01-01
+Owner:         Tobias Frankl, Talent Acquisition Lead
+
+-----------------------------------------------------------------
+1. THE AWARD
+-----------------------------------------------------------------
+  Standard roles          GBP 2,000 / CHF 2,200
+  Hard-to-fill roles      GBP 3,500 / CHF 3,800
+  Contractor conversion   GBP 1,000 / CHF 1,100
+
+The hard-to-fill list is published on the intranet and reviewed quarterly. As
+at January 2026 it contains: Field Service Engineer (all regions, and
+especially Scotland and the South West), Firmware Engineer, Regulatory Affairs
+Specialist, and QC Analyst (Basel).
+
+Paid in two halves: 50% when your referral passes probation, 50% at twelve
+months. Paid through payroll and subject to tax and NI in the normal way.
+
+-----------------------------------------------------------------
+2. HOW TO REFER
+-----------------------------------------------------------------
+2.1  Send the name and CV to referrals@veridiabio.com, or submit through
+     PeopleHub, BEFORE they apply. A referral logged after someone has already
+     applied through another route does not qualify.
+
+2.2  ASK THEM FIRST. Sending someone's CV without their knowledge is a data
+     protection problem and an awkward phone call for the recruiter.
+
+2.3  Tell us honestly what you think. A referral that says "brilliant engineer,
+     struggles with ambiguity, would need a structured team" is worth ten that
+     say "great person".
+
+2.4  You may refer as many people as you like. The record is four in one year.
+
+-----------------------------------------------------------------
+3. WHO QUALIFIES
+-----------------------------------------------------------------
+Eligible to refer: all employees except the Talent Acquisition team, the
+People team, and the hiring manager for that specific role.
+
+Eligible to be referred: anyone not already in our applicant tracking system
+within the last 6 months, and not currently employed by Veridia.
+
+Former Veridia employees CAN be referred and the award is payable. We rehire
+and we are pleased when it happens.
+
+-----------------------------------------------------------------
+4. WHAT DOES NOT CHANGE
+-----------------------------------------------------------------
+4.1  Referred candidates go through exactly the same process: same interviews,
+     same structured questions, same scoring rubric, same decision.
+
+4.2  A referral gets your candidate a guaranteed CV review by a human, and a
+     response within 5 working days. That is the entire advantage and it is a
+     real one.
+
+4.3  You will not be told the detail of why a referral was unsuccessful. That
+     is your friend's information, not yours. They may tell you themselves.
+
+4.4  You cannot sit on the interview panel for someone you referred.
+
+-----------------------------------------------------------------
+5. A HONEST NOTE ABOUT REFERRALS AND DIVERSITY
+-----------------------------------------------------------------
+Referral schemes tend to reproduce the existing shape of a company, because
+people know people like themselves. Ours is no exception - 31% of our hires in
+2025 came through referral, and that cohort was less diverse on every measure
+we track than our direct applicants.
+
+We are not going to close the scheme, because it produces good hires and good
+retention. What we do instead:
+  - Referred candidates go through the same structured process, with no short
+    cuts, which is where the real risk of bias would otherwise sit.
+  - We monitor referral hiring separately in our diversity data.
+  - We would particularly encourage referrals into field service and firmware,
+    which are our two least diverse functions, from anyone whose network does
+    not look like our current team.
+
+-----------------------------------------------------------------
+6. QUESTIONS PEOPLE ASK
+-----------------------------------------------------------------
+"My referral was hired into a different role than I referred them for."
+  You still get the award, at the rate for the role they actually took.
+
+"They were hired six months after I referred them."
+  Referrals are live for 12 months. You still get the award.
+
+"Two of us referred the same person."
+  Whoever logged it first. If it was genuinely simultaneous we split it.
+
+"They left after eight months."
+  You keep the first 50%. The second instalment is not paid.
+
+"My referral was made redundant before twelve months."
+  Both instalments are paid.
+
+"Can I refer my partner / brother / housemate?"
+  Yes. Declare the relationship to the People team so that the conflict of
+  interest register is accurate, and you will not be involved in the process.
+  See User__code-of-conduct-v4.txt section 5.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+referrals@veridiabio.com
+Tobias Frankl, Talent Acquisition Lead - tobias.frankl@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

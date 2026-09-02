@@ -1,0 +1,113 @@
+=================================================================
+VERIDIA BIOSYSTEMS - SAFETY DATA SUMMARY
+=================================================================
+Document: VeriLyse reagent range - consolidated safety data summary
+Document Ref: DS-SDS-SUM-002
+Revision: v2
+Revision Date: 2025-06-03
+Scope: RGT-D5, RGT-L3, RGT-CL, RGT-RT
+
+*** THIS IS A SUMMARY FOR LABORATORY RISK ASSESSMENT AND COSHH FILING.
+*** IT DOES NOT REPLACE THE FULL SAFETY DATA SHEETS, WHICH ARE THE
+*** CONTROLLED DOCUMENTS. OBTAIN THESE FROM www.veridiabio.com/sds
+
+-----------------------------------------------------------------
+1. CLASSIFICATION SUMMARY (Regulation (EC) No 1272/2008 - CLP)
+-----------------------------------------------------------------
+Product  | Classification              | Pictogram | Signal word | SDS rev
+---------|-----------------------------|-----------|-------------|--------
+RGT-D5   | Not classified              | none      | none        | 4
+RGT-L3   | Eye Irrit. 2 H319           | GHS07     | Warning     | 6
+         | Skin Irrit. 2 H315          |           |             |
+         | Aquatic Chronic 3 H412      |           |             |
+RGT-CL   | Eye Dam. 1 H318             | GHS05     | Danger      | 3
+         | Resp. Sens. 1 H334          | GHS08     |             |
+RGT-RT   | Skin Irrit. 2 H315          | GHS07     | Warning     | 2
+         | Eye Irrit. 2 H319           |           |             |
+
+-----------------------------------------------------------------
+2. PERSONAL PROTECTIVE EQUIPMENT
+-----------------------------------------------------------------
+All products: laboratory coat, disposable nitrile gloves.
+RGT-L3, RGT-CL, RGT-RT: additionally eye protection to EN 166.
+RGT-CL: do not aerosolise. Handle in a well ventilated area. Personnel with a
+        known proteolytic enzyme sensitivity must not handle this product.
+
+Once a reagent has contacted a patient sample, treat the mixture and all waste
+as potentially infectious regardless of the reagent's own classification.
+
+-----------------------------------------------------------------
+3. FIRST AID
+-----------------------------------------------------------------
+Eye contact     Rinse cautiously with water for at least 15 minutes, holding
+                the eyelids open. Remove contact lenses if present and easy to
+                do. For RGT-CL seek immediate medical attention (H318).
+Skin contact    Remove contaminated clothing. Wash with soap and water. Seek
+                medical advice if irritation persists.
+Inhalation      Move to fresh air. For RGT-CL, if breathing is difficult seek
+                immediate medical attention.
+Ingestion       Rinse mouth. Do not induce vomiting. Seek medical advice.
+
+-----------------------------------------------------------------
+4. SPILLAGE
+-----------------------------------------------------------------
+Small spill (< 100 mL)
+  Absorb with inert absorbent. Place in a chemical waste container. Wash the
+  area with water. For RGT-CL, neutralise the residue with a dilute weak acid
+  (e.g. 1% citric acid) before washing, then rinse thoroughly.
+
+Large spill (> 100 mL) or spill of a reagent that has contacted samples
+  Evacuate the immediate area. Wear eye protection and gloves. Contain with
+  absorbent. Where the spill includes sample material, disinfect the area
+  after absorption using the laboratory's standard blood spill procedure. Do
+  NOT apply hypochlorite directly to RGT-L3 or RGT-CL spills before
+  absorption; the combination of hypochlorite with the surfactant load
+  generates an unpleasant and irritant aerosol.
+
+-----------------------------------------------------------------
+5. STORAGE AND INCOMPATIBILITIES
+-----------------------------------------------------------------
+Product  | Storage        | Do not store with / mix with
+---------|----------------|--------------------------------------------
+RGT-D5   | 2-25 C         | Nothing specific. Do not freeze.
+RGT-L3   | 2-25 C         | Strong oxidisers. Hypochlorite.
+RGT-CL   | 5-25 C         | Acids (generates heat). Hypochlorite.
+RGT-RT   | 2-8 C, dark    | Do not freeze. Protect from light.
+
+-----------------------------------------------------------------
+6. DISPOSAL
+-----------------------------------------------------------------
+Waste from the instrument fluid path contains lysed patient sample and must be
+handled as clinical waste in accordance with local regulations (in the UK,
+Hazardous Waste Regulations and HTM 07-01).
+
+Unused RGT-D5 may generally be disposed of to drain with copious water where
+permitted by the local water authority. Unused RGT-L3 and RGT-CL should be
+consigned as chemical waste; RGT-L3 carries H412 and should not be discharged
+to surface water. Unused RGT-RT should be consigned as chemical waste owing to
+the dye content.
+
+Empty cartridges: rinse and dispose of as laboratory plastic waste. The RFID
+tag contains no battery and requires no special handling.
+
+-----------------------------------------------------------------
+7. TRANSPORT
+-----------------------------------------------------------------
+None of the VeriLyse products is classified as dangerous goods for transport
+by road (ADR), sea (IMDG) or air (IATA). No UN number is assigned. Ship at
+ambient; RGT-RT should be shipped with a cool pack where transit exceeds 48
+hours, but is not a temperature-controlled dangerous good.
+
+-----------------------------------------------------------------
+8. DOCUMENT CONTROL
+-----------------------------------------------------------------
+This summary is reissued whenever any constituent SDS is revised. Revision v2
+was issued following the RGT-L3 revision D formulation change (VBB-0047); the
+classification of RGT-L3 is unchanged by that change.
+
+Queries: Simone Buehler, QA Manager - simone.buehler@veridiabio.com (Basel)
+         Sarah Lindgren, Regulatory Affairs - sarah.lindgren@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

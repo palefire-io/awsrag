@@ -1,0 +1,3 @@
+# pure-Python Postgres driver (no native build, zip/bundle friendly)
+pg8000==1.31.2
+# boto3 is provided by the Lambda runtime and is not pinned here

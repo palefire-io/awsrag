@@ -1,0 +1,97 @@
+Ticket ID: VBST-4290
+Status: Resolved
+Priority: P2-High
+Created: 2025-11-18 07:40 UTC
+Product: VeriScan 400 / VeriScan 400 Pro
+Customer: Sheffield Teaching Hospitals NHS FT (ACC-1255)
+Reported by: Vikram Sahota, Senior BMS
+Assigned to: Marcus Chen (QC Applications Specialist)
+Serial: VS4P-0388
+Firmware: 4.3.1
+
+--- Thread ---
+
+[2025-11-18 07:40] Vikram Sahota (Senior BMS):
+QC failing on VS4P-0388 this morning. 1-3s on NEUT% and LYMPH% at both levels,
+everything else fine. Repeated with a fresh vial, same result.
+
+Nothing else has changed. Instrument was fine on Friday.
+
+We've got eight analysers so we're not stuck, but I'd like to understand it.
+
+[2025-11-18 09:15] Marcus Chen (QC Applications Specialist):
+Differential channels failing at both levels while the CBC parameters pass is a
+distinctive pattern and it usually means one of three things: a new control
+lot, a reagent change, or the wrong assay values being applied.
+
+Did anything change over the weekend - control lot, reagent lot, firmware,
+anything?
+
+[2025-11-18 09:50] Vikram Sahota (Senior BMS):
+New control lot started Monday morning, yes. VT-CTRL-3 lot 25K118.
+
+We did the crossover in the week before as we always do.
+
+[2025-11-18 10:30] Marcus Chen (QC Applications Specialist):
+Then I'd like to check which value column was used when the new lot was
+entered.
+
+The assay sheet carries separate columns for the VeriScan 400 and the VeriScan
+400 Pro. The differential values differ materially between them because the
+optics differ - the 400 uses halogen absorbance, the Pro uses laser
+fluorescence, and the differential channels are where that shows up. CBC
+parameters are close enough between models that they'd pass either way.
+
+Your fleet is mixed - six 400s and two Pros. Which column was entered against
+VS4P-0388?
+
+[2025-11-18 11:20] Vikram Sahota (Senior BMS):
+Checked with the BMS who did it. She entered the values once and applied them
+across all eight analysers, using the 400 column because that's most of the
+fleet.
+
+So the two Pros have the 400's differential targets.
+
+That's embarrassing.
+
+[2025-11-18 12:00] Marcus Chen (QC Applications Specialist):
+It's a very easy mistake and it is the single most common cause of this
+presentation at mixed-fleet sites. The assay sheet puts the two columns side
+by side and nothing stops you using the wrong one.
+
+Fix: re-enter the lot values for VS4P-0388 and your other Pro using the Pro
+column, then re-run both levels. The failing points from this week should be
+annotated in the QC record as an assay value error rather than left looking
+like an instrument problem.
+
+If you're on VeriConnect Professional or above you can import the .vqc file
+from the customer portal instead of typing values - it carries both columns and
+applies the right one per instrument by model. That removes the failure mode
+entirely.
+
+[2025-11-18 14:30] Vikram Sahota (Senior BMS):
+Re-entered from the Pro column. Both levels in range on both Pros, first time.
+
+We're on Professional. Nobody knew about the .vqc import. We've been typing
+values in for two years.
+
+[2025-11-18 15:00] Marcus Chen (QC Applications Specialist):
+Then that's the more valuable outcome of this ticket.
+
+Quality > Control Lots > Import, then select the .vqc downloaded from the
+portal for your lot. It applies per instrument by model. It also carries the
+SD values, though I'd still encourage you to establish your own from 20 points
+rather than using the assay sheet SD, which is a multi-instrument consensus and
+wider than a single instrument achieves.
+
+I'll ask whether the assay sheet layout can be improved. Two columns headed
+"400" and "400 Pro" in the same table is asking for this.
+
+--- Resolution ---
+Root cause: control lot assay values from the VeriScan 400 column applied to
+VeriScan 400 Pro instruments. Differential channel targets differ between
+models because the optics differ.
+Actions: values re-entered from the correct column; site trained on .vqc import
+which applies values per instrument by model.
+Feedback raised on assay sheet layout.
+See also: spec-veritrol-control-materials-v2.txt, SOP-VBS-001 s.7.5

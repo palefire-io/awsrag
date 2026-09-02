@@ -1,0 +1,81 @@
+=====================================================
+VERIDIA BIOSYSTEMS - END OF LIFE NOTIFICATION
+=====================================================
+Reference: VBB-0049
+Date Issued: 2025-04-08
+Type: End of Life / End of Support Notification
+Affected Product: VeriScan 200 Benchtop Haematology Analyser
+Model numbers: VS2-100, VS2-100T
+Serial ranges: VS2-0001 to VS2-1876 (all units)
+
+SUBJECT: End of life for VeriScan 200 - key dates and migration options
+
+-----------------------------------------------------
+KEY DATES
+-----------------------------------------------------
+  2025-06-30   Last order date for new VeriScan 200 instruments.
+  2025-12-31   End of sale for VeriScan 200 consumable configurations
+               specific to the platform. RGT-D5 revision B production ends.
+  2026-12-31   End of software and firmware support. No further firmware
+               releases for the 3.7.x line after this date.
+  2027-12-31   End of service. Last date on which Veridia will accept a
+               service contract renewal or perform a chargeable repair.
+  2028-12-31   End of spare parts availability, subject to stock.
+
+VeriScan 200 has been in the field since 2017. Approximately 340 units remain
+in active service.
+
+-----------------------------------------------------
+REASON
+-----------------------------------------------------
+The VeriScan 200 optical bench uses a photodiode array that the component
+manufacturer discontinued in 2023. Veridia holds a last-time-buy inventory
+sufficient to support the service commitments above but cannot extend them.
+
+Separately, the VeriScan 200 is a legacy device under the IVD Directive. It will
+not be transitioned to IVDR conformity. From the applicable IVDR transition
+deadline the device may no longer be placed on the EU market, although devices
+already placed on the market and put into service may continue in use subject
+to the conditions in Article 110. Customers in the EU should discuss this with
+their own regulatory function; Veridia's regulatory affairs team can provide
+supporting documentation. Refer to reg-ivdr-transition-summary.txt.
+
+-----------------------------------------------------
+CONSUMABLE SUPPORT
+-----------------------------------------------------
+RGT-D5 revision B is the diluent qualified for VeriScan 200. Revision C, which
+is shipped for VeriScan 400 and 400 Pro, is backward compatible with VeriScan
+200 running firmware 3.4.0 or later, and will be supplied against VeriScan 200
+orders after revision B production ends.
+
+RGT-L3 revision D is NOT validated on VeriScan 200 and must not be used on that
+platform. Remaining VeriScan 200 sites requiring lyse reagent after 2025-12-31
+should contact their account manager; a platform-specific fill will be
+maintained to 2027-12-31.
+
+Refer to lookup-reagent-compatibility.csv for the current compatibility matrix.
+
+-----------------------------------------------------
+MIGRATION OPTIONS
+-----------------------------------------------------
+1. VeriScan 400. Direct functional successor. Same 5-part differential, higher
+   throughput (60 vs 40 samples/hr), IVDR Class C conformity in progress.
+   Trade-in allowance available until 2026-12-31.
+
+2. VeriScan 400 Pro. Adds reticulocyte counting, body fluid mode and extended
+   flagging. Recommended where the VeriScan 200 is currently supplemented by a
+   manual reticulocyte method.
+
+3. Where a VeriScan 200 is used as a backup or overflow analyser, sites should
+   note that VeriConnect will continue to accept results from VeriScan 200
+   instruments until end of software support, but the instrument will not
+   appear in the fleet firmware management view.
+
+Contact your account manager for trade-in pricing and migration planning.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Ben Whittle, Commercial Operations - ben.whittle@veridiabio.com
+Support: support@veridiabio.com | +44 1223 496 100
+=====================================================

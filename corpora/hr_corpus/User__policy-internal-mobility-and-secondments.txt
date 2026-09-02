@@ -1,0 +1,132 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Internal Mobility and Secondments
+=================================================================
+Document:      HR-POL-027
+Version:       2
+Effective:     2025-06-01
+Owner:         Tobias Frankl, Talent Acquisition Lead
+Co-owner:      Rachel Duffy, HR Business Partner
+
+-----------------------------------------------------------------
+1. POSITION
+-----------------------------------------------------------------
+1.1  Every role is advertised internally for at least 5 working days before or
+     alongside any external advertising. No exceptions for senior roles.
+
+1.2  You do not need your manager's permission to apply for an internal role.
+     You do not need to tell them before you apply. We ask that you tell them
+     before the final stage, so that nobody is blindsided.
+
+1.3  A manager may not block an internal move. They may ask for a reasonable
+     handover period, normally up to 8 weeks and occasionally 12 for a
+     critical role.
+
+1.4  Wanting to move is not disloyalty. A company where people can only grow by
+     leaving is a company that will keep hiring replacements for people it
+     already had.
+
+-----------------------------------------------------------------
+2. APPLYING
+-----------------------------------------------------------------
+2.1  Internal roles are on the intranet careers page and announced in the
+     weekly bulletin.
+
+2.2  Apply through PeopleHub. A short statement is enough; you do not need a
+     full CV for an internal move.
+
+2.3  You will get a response within 5 working days and an interview or a
+     reason. Internal candidates who are not progressed get a conversation
+     with the hiring manager, not an email. This is the part most companies
+     get wrong.
+
+2.4  Eligibility: normally 12 months in your current role, and not on a
+     performance support plan. The 12 months is a guideline and is waived
+     regularly - most often where someone is clearly in the wrong role and
+     both managers can see it.
+
+-----------------------------------------------------------------
+3. WHAT HAPPENS TO YOUR TERMS
+-----------------------------------------------------------------
+3.1  Continuous service, notice period, annual leave entitlement, pension and
+     benefits all carry across unchanged.
+
+3.2  No new probation. A three-month settling-in period applies, and if the
+     move does not work the first option considered is a return to a
+     comparable role rather than an exit.
+
+3.3  Pay: a lateral move at the same level does not normally change pay unless
+     the new role sits in a different band, in which case you move to the new
+     band. A move that is also a promotion follows the promotion policy.
+
+3.4  A move to a lower level, where someone chooses it, is handled
+     individually. Pay is normally protected for 12 months and we will tell
+     you clearly what happens after that.
+
+-----------------------------------------------------------------
+4. SECONDMENTS
+-----------------------------------------------------------------
+4.1  A temporary move to another team, typically 3 to 12 months, with a
+     guaranteed return to your substantive role.
+
+4.2  Your terms, level and pay stay as they are. If the secondment role is at
+     a higher level, an acting allowance applies - typically 8% to 12% for the
+     duration.
+
+4.3  Both managers and the People team agree it in writing before it starts,
+     including the return date and what happens if the receiving team wants to
+     make it permanent.
+
+4.4  Recent examples: a support engineer seconded to firmware for six months
+     after the 2025 timestamp investigation, who is now permanently in
+     firmware; a QC analyst from Basel seconded to Cambridge applications for
+     four months; two field engineers seconded into the product team for the
+     SP-1r2 development.
+
+4.5  Cross-site secondments between Cambridge and Basel are actively
+     encouraged and Veridia funds accommodation and travel. Immigration and
+     tax arrangements are handled by the People team; do not attempt to
+     arrange this yourself.
+
+-----------------------------------------------------------------
+5. SHADOWING AND SHORT PLACEMENTS
+-----------------------------------------------------------------
+5.1  Anyone may spend up to 5 days a year shadowing another team. Agree it
+     with both managers. It does not come out of your learning days.
+
+5.2  Particularly worth doing: a day with field service if you are in
+     engineering, a day in support if you are in product, a day in the Basel
+     QC laboratory if you are in the UK. People come back with a different
+     understanding of what our customers actually deal with.
+
+5.3  Customer site visits: anyone may request to accompany a field engineer or
+     an account manager on a customer visit, subject to the customer agreeing
+     and to you completing the confidentiality and site safety briefing. This
+     is one of the most valuable things available to you and it is
+     underused - eleven people did it in 2025.
+
+-----------------------------------------------------------------
+6. IF YOU ARE THINKING ABOUT MOVING
+-----------------------------------------------------------------
+6.1  Talk to the People team confidentially first if you would rather not
+     start with your manager. Rachel Duffy or Lena Hofstetter. It will not get
+     back to your manager.
+
+6.2  We will be honest with you about whether a move is realistic and what you
+     would need to do to make it so. Sometimes the answer is that the gap is
+     large, and we would rather tell you that than let you apply and be
+     rejected.
+
+6.3  If you are considering leaving Veridia because of your role rather than
+     the company, tell someone before you resign rather than after. We can
+     usually do something about the first and rarely about the second.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+tobias.frankl@veridiabio.com | rachel.duffy@veridiabio.com
+people@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

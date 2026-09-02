@@ -1,0 +1,124 @@
+Ticket ID: VBST-4070
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-06-17 10:44 UTC
+Product: VeriGuard
+Customer: University Hospitals Birmingham NHS FT (ACC-1146)
+Reported by: Dr Priyanka Vaidya, Consultant Haematologist
+CC: Jason Okonkwo, Pathology Informatics Manager
+Assigned to: Tom Reeves (Product Manager, VeriConnect)
+Tier: Enterprise + VeriGuard
+
+--- Thread ---
+
+[2025-06-17 10:44] Jason Okonkwo (Pathology Informatics Manager):
+We're preparing our ISO 15189 evidence pack and I've been reconciling the
+VeriGuard audit trail against what actually happened in the laboratory.
+
+There are gaps. Specifically, actions taken at the instrument keypad -
+calibrations, reagent changeovers, QC acceptance done at the analyser rather
+than in VeriConnect - appear for some instruments and not for others.
+
+Six of our eleven instruments show instrument-side audit events. Five show
+nothing at all. All eleven are in the same tenant.
+
+I'd assumed VeriGuard captured everything. Is that wrong?
+
+[2025-06-17 14:20] Tom Reeves (Product Manager, VeriConnect):
+It's partly wrong, and I'd rather say so plainly than manage the message.
+
+VeriGuard's audit trail is complete for everything done in VeriConnect. For
+actions taken at the instrument itself, the instrument writes to its own local
+audit log and uploads it to VeriConnect only if:
+(a) it is on firmware 4.1.0 or later, and
+(b) cloud audit upload is enabled in its settings.
+
+Let me check your fleet. My expectation is that the five silent instruments
+are on older firmware, or have the setting off, or both.
+
+[2025-06-17 16:05] Tom Reeves (Product Manager, VeriConnect):
+Checked. Of your eleven:
+- Six on firmware 4.2.3 with cloud audit upload enabled - these are the ones
+  you see.
+- Three on 4.1.2 with the setting available but disabled. It defaults to off
+  on upgrade, which is a poor default and I'm not going to defend it.
+- Two on 4.0.x, which predates the capability entirely.
+
+Actions:
+1. Enable cloud audit upload on the three 4.1.2 instruments now, with your
+   permission. Takes effect immediately, no restart.
+2. Update the two 4.0.x instruments to 4.2.3 or later. That needs planning on
+   your side because of the QC requirement afterwards.
+
+What I cannot do is backfill. The local logs on those five instruments hold
+their own history - retrievable at the instrument or by an engineer - but they
+have not been uploaded and the upload is not retrospective. For your evidence
+pack you would need to export the local logs and attach them separately.
+
+[2025-06-18 09:15] Jason Okonkwo (Pathology Informatics Manager):
+Please enable on the three. We'll schedule the two upgrades for the July
+maintenance window.
+
+On the backfill - how far back do the local logs go?
+
+[2025-06-18 10:30] Tom Reeves (Product Manager, VeriConnect):
+Enabled on all three, confirmed writing.
+
+Local instrument audit log retention is 400 days or 50,000 events, whichever
+comes first. On your workload that's comfortably over a year, so your evidence
+period is covered. An engineer can export them, or your staff can from
+Service > Logs > Export Audit with the appropriate permission.
+
+[2025-06-18 11:00] Dr Priyanka Vaidya (Consultant Haematologist):
+Tom - the substantive issue here is that we bought VeriGuard on the basis that
+it gives us a complete audit trail, and it does not, and nothing told us that.
+Nobody at our end did anything wrong; we just didn't know there was a setting.
+
+I'd like that acknowledged and I'd like to know what changes.
+
+[2025-06-18 15:40] Tom Reeves (Product Manager, VeriConnect):
+Acknowledged without qualification. The limitation is real, it is not
+documented prominently enough, and the default on upgrade is wrong.
+
+What changes:
+1. The VeriGuard datasheet is being revised to state the limitation explicitly
+   under "Audit logging". That's DS-VG-002, out in due course.
+2. VeriConnect will show a fleet-level warning where an enrolled instrument is
+   not uploading audit events, so this is visible without anyone going looking.
+3. The default is being changed so that cloud audit upload is on for any
+   instrument in a VeriGuard tenant, opt-out rather than opt-in.
+
+I'll be straight about timing: (1) is quick, (2) and (3) are product work and I
+don't have dates yet.
+
+I should also tell you that this was raised as observation NB-2025-OBS-04 in
+our own Notified Body audit in April, so you are not the first to spot it and
+we were already on notice.
+
+[2025-06-19 09:20] Dr Priyanka Vaidya (Consultant Haematologist):
+The disclosure about the audit observation is appreciated and it changes how I
+read the rest of the answer.
+
+We'll proceed as above. Please let us know when (2) and (3) land.
+
+[2026-01-22 11:00] Tom Reeves (Product Manager, VeriConnect):
+Closing the loop, later than I would have liked.
+
+DS-VG-002 revision 2 was issued 2026-01-19 and states the limitation under
+"Audit logging" with the firmware dependency spelled out. The fleet-level
+warning for non-uploading instruments shipped in VeriConnect 6.1. The default
+change shipped with firmware 4.4.0 in April 2026, along with the wider audit
+improvements addressing NB-2025-OBS-04.
+
+Your fleet is now fully uploading.
+
+Closing this ticket. Thank you for the push.
+
+--- Resolution ---
+Root cause: instrument-side audit events upload to VeriConnect only on
+firmware 4.1.0+ with cloud audit upload enabled; setting defaulted to off on
+upgrade. Five of eleven instruments silent.
+Actions: setting enabled on three instruments; two upgraded from 4.0.x; local
+logs exported for the evidence pack; datasheet, fleet warning and default
+behaviour all changed.
+Related: Notified Body observation NB-2025-OBS-04.

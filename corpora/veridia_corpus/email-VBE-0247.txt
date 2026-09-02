@@ -1,0 +1,77 @@
+From: Deborah Cannock <deborah.cannock@coch.nhs.uk>
+To: Ben Whittle <ben.whittle@veridiabio.com>
+CC: Peter Doyle <peter.doyle@veridiabio.com>, Ian Bracewell <ian.bracewell@coch.nhs.uk>
+Date: Thu, 17 Jul 2025 16:31:44 +0100
+Subject: PO and account details for renewal - CoCH 2025/26
+X-Mailer: Microsoft Outlook 16.0
+
+Ben,
+
+Further to Peter's quotation QTE-2025-1447 dated 8 July, I can confirm the
+following for the renewal effective 1 September 2025.
+
+APPROVED SCOPE
+  1 x VeriScan 400 Pro (VS4-200P-AL) - new, replacing VS4-0409 on trade-in
+  1 x VeriScan 400 (VS4-0402) - retained
+  VeriConnect Professional, 2 instruments
+  Gold support contract, 12 months, both instruments
+  Installation, IQ/OQ and 2-day training
+  Consumables on scheduled standing order
+
+Trade-in of VS4-0409 accepted at the quoted allowance.
+
+PURCHASE ORDER
+  PO number:            CH-PO-2025-118447
+  PO value:             GBP 96,428.00 excluding VAT
+  Cost centre:          PATH-HAEM-4412
+  Budget holder:        Dr M Ashworth-Bell, Clinical Director of Pathology
+
+INVOICING
+  Invoice to:           Accounts Payable, Countess of Chester Hospital NHS
+                        Foundation Trust, Liverpool Road, Chester CH2 1UL
+  Invoice email:        accountspayable@coch.nhs.uk
+  Supplier account ref: VERIDIA-COCH-00418
+  Payment terms:        30 days from receipt of a valid invoice
+  VAT registration:     GB 654 9382 11
+
+Please quote the PO number on every invoice. Invoices without a valid PO number
+are returned unpaid by our shared services centre and there is nothing I can do
+about it once that happens.
+
+CONDITIONS
+1. Installation to be completed by 31 October 2025. Ian has flagged that our
+   UKAS assessment is in November and he wants the instrument installed,
+   validated and with QC history before the assessors arrive. If that date is
+   at risk please tell us now rather than in October.
+
+2. The quotation includes the goodwill credit of GBP 4,200 against the
+   VeriConnect Professional licence for the first year, which Peter offered in
+   respect of the February reagent recall. Please ensure this appears as a line
+   on the invoice rather than as a discount on the licence price, as our
+   finance team need to see it separately.
+
+3. Trade-in unit VS4-0409 to be collected within 10 working days of the new
+   instrument being accepted, not before.
+
+4. Please confirm the VeriConnect Professional licence commences on the date of
+   instrument acceptance, not on order date.
+
+BANKING
+Our finance team have asked me to confirm your bank details independently
+rather than taking them from an invoice, following an attempted supplier fraud
+against another department last year. Please send them on Veridia letterhead to
+me directly, and I will telephone your finance team on the number from your
+website to verify. Please do not send them in reply to this email.
+
+Regards,
+
+Deborah Cannock
+Senior Procurement Manager
+Countess of Chester Hospital NHS Foundation Trust
+deborah.cannock@coch.nhs.uk | 01244 365 2210
+
+--
+This email is confidential and intended solely for the use of the individual to
+whom it is addressed. If you are not the intended recipient please notify the
+sender. The Trust reserves the right to monitor all email communications through
+its networks.

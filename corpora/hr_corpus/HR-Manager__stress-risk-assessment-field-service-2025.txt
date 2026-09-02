@@ -1,0 +1,210 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** RESTRICTED - PEOPLE TEAM, DIRECTORS AND EXCO ***
+Stress Risk Assessment - Field Service Engineering
+=================================================================
+Reference:     HSRA-2025-002
+Assessment
+period:        2025-01-01 to 2025-09-30
+Date issued:   2025-10-17
+Assessor:      Rachel Duffy, HR Business Partner
+Co-assessor:   Priya Anand, Head of Field Service Engineering
+Reviewed by:   James Okafor, VP Customer Support
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+Framework:     HSE Management Standards for work-related stress
+Population:    36 field service engineers (32 UK, 4 Switzerland)
+Next review:   2026-10-17
+
+-----------------------------------------------------------------
+1. WHY THIS ASSESSMENT WAS COMMISSIONED
+-----------------------------------------------------------------
+1.1  Four triggers coincided in the first three quarters of 2025:
+
+     a) Field Service recorded the highest absence rate in the company at
+        4.7%, with 28.6% of those days attributed to stress and fatigue.
+     b) Two occupational health referrals (OH-2025-019 and OH-2025-036) were
+        made on manager initiative for stress and fatigue, in a population
+        that had produced no such referral in the preceding three years.
+     c) Voluntary turnover in field service reached 14% annualised against a
+        company figure of 9%.
+     d) Priya Anand raised it directly with the CPO in June, having noticed
+        that three of her engineers had untaken annual leave balances above
+        15 days in a year where they had also worked significant overtime.
+
+1.2  The proximate cause is not in doubt and was identified by every engineer
+     interviewed. Three separate demands landed on the same 36 people within
+     nine months:
+
+       - The FSN-2025-003 reagent recall (February onwards). Field service
+         attended sites to verify instruments were fault-free, collect
+         quarantined stock and reassure customers. 11 unplanned visits in
+         February and March against a normal unplanned rate of 3 to 4 a month.
+       - The firmware 4.2.1 timestamp defect (February to April). Rollbacks
+         and then updates across the affected estate, all unplanned, all
+         urgent, several at Enterprise sites requiring out-of-hours work.
+       - The VeriPrep SP-1 jam workload, running throughout, culminating in
+         the r2 retrofit programme from Q3.
+
+     None of these was foreseeable at the point the 2025 field service
+     resourcing plan was set. That is the substantive finding: the plan had no
+     slack, and three simultaneous unplanned demands consumed a year's
+     contingency by March.
+
+-----------------------------------------------------------------
+2. METHOD
+-----------------------------------------------------------------
+  - HSE Management Standards Indicator Tool, issued to all 36. 31 responses
+    (86%).
+  - Semi-structured interviews with 12 engineers, selected to cover all
+    regions and both countries, conducted by Rachel Duffy without Priya
+    present.
+  - Analysis of working time records, overnight stays, driving hours, on-call
+    activations and annual leave balances.
+  - Review of the two occupational health reports (with consent).
+  - Discussion with Priya Anand and with the two regional leads.
+
+-----------------------------------------------------------------
+3. FINDINGS AGAINST THE SIX HSE STANDARDS
+-----------------------------------------------------------------
+DEMANDS - RED
+  Mean working week 44.1 hours against a contracted 37.5. Highest individual
+  mean 49.3 (Callum Frazer, sole cover for Scotland and Northern Ireland).
+  Overnight stays averaged 6.2 nights a month, peaking at 14 (Rob Ellery,
+  March). 22 instances company-wide of an engineer driving home after 21:00
+  in breach of the standing instruction in the expenses and travel policy.
+  Untaken annual leave at 30 September averaged 11.4 days against a company
+  average of 6.1.
+
+CONTROL - AMBER
+  Engineers report good control over how they do the work and poor control
+  over when. Visit scheduling is driven by customer availability and by
+  escalation priority, both external. Several described being unable to
+  protect a planned day off because a P1 escalation lands.
+
+SUPPORT - GREEN
+  Consistently positive. Priya Anand was named unprompted by 11 of 12
+  interviewees as accessible and as an advocate. Peer support strong; the
+  regional WhatsApp group described repeatedly as the most useful support
+  mechanism in the company, which is a compliment to the team and a criticism
+  of everything formal.
+
+RELATIONSHIPS - AMBER
+  Internal relationships good. The amber rating is entirely about customers.
+  Engineers absorb customer frustration that is frequently not about them -
+  seven interviewees described being "shouted at about the reagent" during the
+  recall period. Two described customer behaviour that would meet the
+  definition of harassment in the dignity at work policy and neither had
+  reported it because "it's part of the job". IT IS NOT PART OF THE JOB.
+
+ROLE - GREEN
+  Role clarity high. Engineers know what is expected.
+
+CHANGE - AMBER
+  Three significant changes in nine months, none well communicated in advance
+  to the people executing them. Engineers learned of the r2 retrofit programme
+  from a customer bulletin.
+
+-----------------------------------------------------------------
+4. WHAT ENGINEERS SAID
+-----------------------------------------------------------------
+Anonymised, quoted with consent, selected for representativeness.
+
+  "February and March I was doing recall visits on top of a full diary. Nobody
+   took anything off me. The diary just got longer."
+
+  "I don't mind the hours when there's an end to them. What got me was that
+   every time one thing finished another started."
+
+  "I drove home from Newcastle at half ten at night because the customer
+   couldn't do earlier and I had a PM in Leeds at eight. I know I shouldn't
+   have. I did it because the alternative was letting two customers down."
+
+  "You can't take leave when you're the only person who covers a region. It's
+   not that anyone stops you. It's that you know what happens if you go."
+
+  "Priya is brilliant. That's not the problem. The problem is there are
+   thirty-six of us and there should be forty-two."
+
+  "A customer told me the recall was my fault, personally, for twenty minutes.
+   I stood there and took it because that's what you do. Then I drove three
+   hours home."
+
+-----------------------------------------------------------------
+5. CONTROL MEASURES AGREED
+-----------------------------------------------------------------
+  Ref  Measure                                          Owner       Status
+  ---  -----------------------------------------------  ----------  ---------
+  5.1  Recruit 6 additional field engineers, taking      P Anand /   4 hired
+       establishment from 36 to 42, including a second   T Frankl    by 2026-06;
+       Scotland engineer                                             2 in
+                                                                     process
+  5.2  Hard cap of 3 consecutive overnight stays; no     P Anand     Implemented
+       on-call in the fortnight after a week of                      2025-11-01
+       overnights
+  5.3  Overnight stay authorised by DEFAULT rather than  P Anand /   Implemented
+       by exception where a return drive would end       G Pemberton 2025-11-01
+       after 20:00
+  5.4  On-call allowance introduced (previously unpaid)  D Kaur      Implemented
+                                                                     2026-01-01
+  5.5  Field service bonus plan introduced, deliberately D Kaur      Implemented
+       excluding volume and utilisation measures                     2026-01-01
+  5.6  Mandatory leave planning conversation each        P Anand     Implemented
+       quarter; regional leads to flag balances above 12              2025-11-01
+       days
+  5.7  Customer behaviour: engineers instructed          P Anand /   Implemented
+       explicitly that they may leave a site, and that   J Okafor    2025-10-24
+       abusive customer behaviour must be reported and
+       will be escalated to the customer's management
+  5.8  Unplanned demand contingency built into the 2026  P Anand /   In 2026
+       resourcing plan at 15% of capacity               J Okafor     plan
+  5.9  Field service represented at the change planning  J Okafor    Implemented
+       forum so that programmes are not announced to
+       customers before the engineers executing them
+  5.10 Repeat HSE Indicator Tool at 12 months            R Duffy     Due
+                                                                     2026-10
+
+-----------------------------------------------------------------
+6. RESIDUAL RISK
+-----------------------------------------------------------------
+6.1  Assessed as MEDIUM, reduced from HIGH, and will remain medium until 5.1
+     completes. Recruitment is the substantive control; everything else
+     mitigates.
+
+6.2  Two of the six roles remain unfilled at the date of this assessment.
+     Field Service Engineer is on the hard-to-fill list and the two open roles
+     are Scotland and the South West, which are the two hardest geographies.
+
+6.3  WATCH ITEM. The measures at 5.2, 5.3 and 5.8 all consume capacity. If
+     recruitment does not complete, the controls will come under pressure from
+     the same operational demands that created the problem, and the most
+     likely failure mode is that they are quietly not applied. Priya Anand has
+     been asked to escalate to the CPO rather than absorb it if that begins to
+     happen.
+
+-----------------------------------------------------------------
+7. NOTE ADDED 2026-06-18
+-----------------------------------------------------------------
+Added by Naomi Okonjo-Bright.
+
+Any organisational change during 2026 affecting field service resourcing must
+be assessed against this document before it is decided, not afterwards. The
+control measures at section 5 depend on an establishment of 42 and on the 15%
+contingency. A change that reduced field service headcount, or that increased
+the estate served without increasing headcount, would reverse the mitigation
+and would need a fresh assessment and a documented decision.
+
+This is a health and safety matter with a documented risk assessment behind
+it, and the obligation does not pause for a commercial process.
+
+-----------------------------------------------------------------
+DISTRIBUTION
+-----------------------------------------------------------------
+Naomi Okonjo-Bright, Rachel Duffy, Lena Hofstetter, Priya Anand,
+James Okafor, Alistair Vance. Regional leads receive sections 3, 5 and 6.
+Engineers received a summary and the control measures at a team meeting on
+2025-10-24; the verbatim quotes were shown to their authors before that
+meeting.
+
+=================================================================
+RESTRICTED. Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

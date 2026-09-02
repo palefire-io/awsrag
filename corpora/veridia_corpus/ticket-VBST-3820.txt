@@ -1,0 +1,102 @@
+Ticket ID: VBST-3820
+Status: Resolved
+Priority: P2-High
+Created: 2025-01-20 11:03 UTC
+Product: VeriPrep SP-1
+Customer: Synlab Nordwest GmbH (ACC-1206)
+Reported by: Bernd Kaltenbrunner, Laborleiter
+Assigned to: Aisha Rahman (Support Engineering L2)
+Serial: SP1-R1-0173
+Firmware: SP-1 2.2.0
+
+--- Thread ---
+
+[2025-01-20 11:03] Bernd Kaltenbrunner (Laborleiter):
+We are seeing P-201 aliquot volume out of tolerance on SP1-R1-0173,
+increasing in frequency over the last six weeks. Initially perhaps twice a
+week, now several times a day. Aliquots that pass appear low - our downstream
+chemistry analyser is flagging short samples.
+
+We have replaced the tips, we have re-primed, we have checked the tip rack
+seating. No improvement.
+
+[2025-01-20 12:40] Aisha Rahman (Support Engineering L2):
+Thank you, that is a helpful history. A gradually worsening aliquot problem
+that survives a prime and a tip change usually points at the syringe seal.
+
+Before we send an engineer, please can you run the gravimetric verification in
+SOP-VBS-009 at 200, 500 and 1000 uL, 10 replicates each. What I want to see is
+whether the mean is off, the CV is off, or both:
+
+- mean off, CV fine  -> calibration or seal, recoverable
+- CV off             -> air, seal wear, or tip seating
+- both off           -> seal, almost certainly
+
+Also, a direct question, and I ask everyone this so please don't take it
+personally: has anything other than RGT-CL ever gone through the fluid path?
+Bleach in particular.
+
+[2025-01-21 09:15] Bernd Kaltenbrunner (Laborleiter):
+Gravimetric results attached. Summary:
+
+  200 uL   mean 189.4   CV 4.1%
+  500 uL   mean 478.2   CV 3.4%
+  1000 uL  mean 962.0   CV 2.9%
+
+All three fail on both criteria.
+
+On your question - I have asked. In November a member of staff used a
+chlorine-based disinfectant for a decontamination cycle because the RGT-CL had
+run out and there was pressure to get the instrument back. This was not
+recorded anywhere. I only know because I asked the question you told me to
+ask.
+
+[2025-01-21 10:30] Aisha Rahman (Support Engineering L2):
+Thank you for asking and for telling me. That's the cause and it explains the
+six-week onset - the seals degrade progressively rather than failing at once.
+
+What happens next: the syringe seal and the tip cone O-ring need replacing, and
+the fluid path needs a full flush. An engineer visit is required. I'm going to
+be straight with you that this is likely to be chargeable, because it's damage
+rather than a fault, but I'll ask about goodwill given that the incompatibility
+was not as prominent in the documentation as it should have been. It said "use
+RGT-CL" but it did not say "and here is what happens if you don't".
+
+I'm also raising this internally as a documentation issue.
+
+[2025-01-21 11:02] Bernd Kaltenbrunner (Laborleiter):
+That is fair. Please arrange the visit. And yes, the documentation point is
+correct - the manual says to use RGT-CL, it does not say that a substitute
+will destroy the instrument. Our staff member was trying to help.
+
+[2025-01-27 16:20] Ingrid Sorensen (Field Service Engineer):
+Attended. Replaced syringe seal, tip cone O-ring and the aliquot needle
+(needle showed pitting). Full flush of the fluid path, three cycles.
+
+Post-repair gravimetric:
+  200 uL   mean 200.8   CV 1.4%
+  500 uL   mean 501.3   CV 0.9%
+  1000 uL  mean 998.6   CV 0.8%
+
+All within specification. Instrument returned to service.
+
+Advised the site to keep a reserve cartridge of RGT-CL and gave them the
+reorder point. Left a laminated warning card on the instrument.
+
+[2025-01-28 09:45] Aisha Rahman (Support Engineering L2):
+Repair authorised at 50% under goodwill given the documentation gap. Invoice
+will reflect that.
+
+SOP-VBS-003 revision 3, due later this year, will make the hypochlorite
+prohibition explicit with the consequence stated. I've also asked for it to go
+into the spec sheet for RGT-CL.
+
+Closing.
+
+--- Resolution ---
+Root cause: hypochlorite-based disinfectant used in the SP-1 fluid path in
+place of RGT-CL, degrading the syringe seal and aliquot needle over ~6 weeks.
+Actions: seal, O-ring and needle replaced; fluid path flushed; gravimetric
+verification passed. Documentation CAPA raised (SOP-VBS-003 rev 3, RGT-CL
+spec sheet).
+Chargeable at 50% under goodwill.

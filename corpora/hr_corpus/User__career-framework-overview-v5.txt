@@ -1,0 +1,199 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Career Framework Overview
+=================================================================
+Document:      HR-POL-021
+Version:       5
+Effective:     2026-01-01
+Supersedes:    Version 4 (2024-07-01)
+Owner:         Denise Kaur, Reward and Benefits Manager
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+Review due:    2028-01-01
+Audience:      All employees
+Applies to:    United Kingdom and Switzerland
+
+WHAT CHANGED IN VERSION 5
+  - L4 split into an individual contributor track and a management track on
+    the same band (section 4). Previously the only route past L3 was to manage
+    people, which we were repeatedly told was wrong and which we agree was
+    wrong.
+  - Promotion windows moved from one a year to two (section 6).
+  - Levelling guides published in full rather than summarised. See
+    User__levelling-guide-engineering-v5.txt and
+    User__levelling-guide-commercial-and-support-v3.txt.
+  - Band ranges are no longer published in this document. See section 8 for
+    why, and what you can ask for instead.
+
+-----------------------------------------------------------------
+1. WHY WE HAVE A FRAMEWORK
+-----------------------------------------------------------------
+Veridia grew from 40 people to about 320 in nine years. For most of that time
+levels were decided case by case, which worked when everybody could name
+everybody and stopped working somewhere around 150 people.
+
+The framework exists to answer three questions consistently:
+  - What is expected of someone at this level?
+  - What would I need to demonstrate to move to the next one?
+  - Is my pay in the right place for the work I actually do?
+
+It is not a performance rating, it is not a queue, and time served in a level
+is not by itself a reason to move up.
+
+-----------------------------------------------------------------
+2. THE LEVELS
+-----------------------------------------------------------------
+  L1  Associate           Learning the craft. Well-defined work, close support.
+  L2  Engineer            Owns defined pieces of work end to end.
+  L3  Senior              Owns an area. Others rely on your judgement in it.
+  L4  Staff / Principal   Owns a system or a department. Your decisions shape
+      or Head of          how other people work.
+  L5  Director            Owns a function, its budget and its plan.
+  L6  Executive           Executive Committee.
+
+The full title list by job family is in
+User__lookup-job-levels-and-titles.csv.
+
+-----------------------------------------------------------------
+3. WHAT MOVES YOU UP A LEVEL
+-----------------------------------------------------------------
+Three things, and all three have to be true.
+
+  SCOPE       The size and ambiguity of what you are trusted with. Not how
+              hard you work. A person doing L3 work at L2 pace is doing L3
+              work.
+
+  IMPACT      What changed because you did it. We are a small company and
+              almost everyone can point at something. The question is whether
+              the something is the size of the level.
+
+  BEHAVIOUR   How you got there. The behaviours in the code of conduct are
+              not a separate track; sustained impact achieved by making
+              colleagues' lives worse does not qualify anyone for anything.
+
+A promotion recognises that you have been operating at the next level. It is
+not a bet that you will. If you are being told "do the job for six months and
+we will review it", that is a conversation about scope, not about promotion,
+and your manager should be explicit about which one you are having.
+
+-----------------------------------------------------------------
+4. THE TWO TRACKS AT L4 AND ABOVE
+-----------------------------------------------------------------
+From L4 there are two tracks:
+
+  Individual contributor    Staff Engineer, Principal Scientist. Depth. You
+                            are trusted with the hardest technical problems
+                            and your judgement carries beyond your team.
+
+  Management                Head of, Director. Breadth. You are accountable
+                            for a group of people, their work and their
+                            development.
+
+They sit on the same band. Moving between them is lateral. If you move from
+Head of X to Staff Engineer, your pay does not change and it is not a
+demotion, and anyone who describes it as one is wrong.
+
+We added this in version 5 because in the 2024 engagement survey "the only way
+up is to manage people" was the single most common free-text comment, appearing
+31 times. It was a fair criticism.
+
+-----------------------------------------------------------------
+5. LEVELS ARE NOT TITLES
+-----------------------------------------------------------------
+Your level is internal. Your title is what appears on your email signature and
+your business card, and in customer-facing roles it sometimes needs to say
+something the customer will understand.
+
+Two consequences:
+  - Two people with the same title can be at different levels.
+  - You may negotiate a title change with your manager without any change of
+    level or pay. Titles are cheap and we would rather you had one that helps
+    you do your job.
+
+What we will not do is inflate a title to substitute for a promotion.
+
+-----------------------------------------------------------------
+6. HOW AND WHEN PROMOTIONS HAPPEN
+-----------------------------------------------------------------
+Two windows a year, aligned to the performance cycle:
+
+  Spring window   Nominations close 15 March. Decisions communicated by
+                  30 April. Effective 1 May.
+  Autumn window   Nominations close 15 September. Decisions communicated by
+                  31 October. Effective 1 November.
+
+Process:
+  1. You or your manager raises it. Either is fine; you do not need to wait to
+     be nominated and you do not need your manager's permission to be
+     considered.
+  2. Your manager writes a case against the levelling guide, with evidence.
+  3. Cases go to a calibration panel for the job family, chaired by the
+     relevant Director with the People team present. The panel exists so that
+     the bar is the same across teams, not to ration outcomes.
+  4. The decision, and the reasoning, comes back to you from your manager in
+     person. If the answer is no, you are entitled to know specifically what
+     was missing.
+
+There is no quota. If eleven people meet the bar, eleven people get promoted.
+Budget constrains the pay review (see section 8), not the level.
+
+-----------------------------------------------------------------
+7. WHAT HAPPENS TO PAY ON PROMOTION
+-----------------------------------------------------------------
+A promotion moves you to the new band. Where in the new band you land depends
+on where you were, and it is normal to enter a band below its midpoint.
+
+If your current pay is already inside the new band, you will still receive an
+increase; a promotion with no pay movement is not something we do.
+
+Promotion increases are separate from the annual pay review and are not
+deducted from it.
+
+-----------------------------------------------------------------
+8. A NOTE ON PAY RANGES
+-----------------------------------------------------------------
+Versions 1 to 4 of this document published the numeric range for each band.
+Version 5 does not, and we owe you an explanation rather than a silent
+removal.
+
+We publish band ranges to managers, not to the whole company, because with 320
+people across two countries the ranges are wide enough that individuals were
+reading them as a statement about their own pay and drawing wrong conclusions -
+most often that being below a midpoint meant something was wrong, when in a
+band that spans 40 per cent it usually means length of service in the level.
+
+That is a reason to explain better, not to hide, so:
+
+  - You are entitled to know your own band, where you sit in it, and why. Ask
+    your manager. If you do not get a straight answer, ask the People team and
+    you will get one.
+  - You are entitled to know what the band ranges are for your own level. Ask
+    and we will tell you.
+  - We publish the gender pay gap annually and will continue to.
+
+This is a compromise and we know some of you will think it is the wrong one.
+It is reviewed every year and the People team would rather hear the argument
+than not.
+
+-----------------------------------------------------------------
+9. IF YOU DISAGREE WITH YOUR LEVEL
+-----------------------------------------------------------------
+Talk to your manager first. If that does not resolve it, ask for a review by
+the People team - Rachel Duffy for Cambridge and remote UK, Lena Hofstetter
+for Basel. A review looks at the evidence against the levelling guide with
+fresh eyes. It can go up, and it can also confirm the original.
+
+If you believe your level or pay has been affected by discrimination, that is
+a grievance, not a levelling question, and it should go through
+User__policy-grievance-and-dignity-at-work-v4.txt.
+
+-----------------------------------------------------------------
+10. CONTACT
+-----------------------------------------------------------------
+Denise Kaur, Reward and Benefits Manager - denise.kaur@veridiabio.com
+Rachel Duffy, HR Business Partner (UK) - rachel.duffy@veridiabio.com
+Lena Hofstetter, HR Manager (Switzerland) - lena.hofstetter@veridiabio.com
+People team general - people@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

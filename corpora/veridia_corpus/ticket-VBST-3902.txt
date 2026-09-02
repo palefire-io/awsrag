@@ -1,0 +1,186 @@
+Ticket ID: VBST-3902
+Status: Resolved
+Priority: P2-High
+Created: 2025-02-19 11:37 UTC
+Product: VeriConnect / VeriScan 400 Pro
+Customer: Royal Free London NHS Foundation Trust (ACC-1103)
+Reported by: Dr Nadia Haddad, Consultant Haematologist / Clinical Lead
+             nadia.haddad@nhs.net | 020 7794 0500 ext 33412
+Assigned to: Owen Trask (L1) -> Aisha Rahman (Support Engineering L2)
+             -> Gavin Tuck (Firmware Lead)
+Serial: VS4P-0503, VS4P-0511
+Firmware: 4.2.1
+VeriConnect tenant: royalfree.vericonnect.veridiabio.com
+
+--- Thread ---
+
+[2025-02-19 11:37] Dr Nadia Haddad (Consultant Haematologist):
+Our QC charts in VeriConnect are showing points in the future. This morning's
+QC run, performed at 07:40, appears on the Levey-Jennings chart at 08:11. Some
+of yesterday's points are half an hour out as well, and the ordering on the
+chart no longer matches the order in which we ran the material.
+
+It's not a display refresh issue - I've checked on two machines and in two
+browsers.
+
+This matters to us because we use the L-J charts as accreditation evidence and
+an assessor is going to ask why the timestamps don't match our worksheet.
+
+[2025-02-19 13:20] Owen Trask (Support Engineer L1):
+Dr Haddad, thank you. Some initial questions:
+
+- Is the time shown on the instrument screen correct when you run the QC?
+- Is this happening on both of your Pro instruments or just one?
+- Has anything changed with your network or NTP recently?
+
+I'd initially suspect a time zone or NTP configuration issue at the
+instrument, so let's rule that out first.
+
+[2025-02-19 14:45] Dr Nadia Haddad (Consultant Haematologist):
+- The instrument screen shows the correct time, yes. I checked it against my
+  phone.
+- Both instruments, but VS4P-0503 is worse than VS4P-0511.
+- Nothing has changed on the network. Our informatics team confirm NTP is
+  fine, both instruments sync to ntp1.royalfree.nhs.uk (10.44.12.8) and both
+  report last sync within the hour.
+
+The screen being right and the chart being wrong is the part that puzzles me.
+
+[2025-02-20 09:15] Owen Trask (Support Engineer L1):
+That combination is odd and I don't have an explanation for it. Escalating to
+L2.
+
+[2025-02-20 10:40] Aisha Rahman (Support Engineering L2):
+Dr Haddad, Aisha Rahman, second line. The detail that the instrument display
+is correct while the chart is wrong is the useful one - it tells us the two
+values are coming from different places in the instrument, which narrows this
+considerably.
+
+Please can you:
+1. Run a QC, note the exact time from the instrument display.
+2. Immediately export the HL7 message for that run (Log > Messages > Export)
+   and send it to me.
+3. Tell me the firmware version on both instruments (Settings > About).
+4. Tell me how long each instrument has been up without a power cycle
+   (Settings > About > Uptime).
+
+That last one is a hunch.
+
+[2025-02-20 15:30] Dr Nadia Haddad (Consultant Haematologist):
+1. QC run at 15:02 by the instrument display.
+2. HL7 attached. OBR-7 reads 20250220152233+0000. That's 20 minutes and 33
+   seconds later than the display.
+3. Both on 4.2.1.
+4. VS4P-0503 uptime 17 days 4 hours. VS4P-0511 uptime 6 days 2 hours.
+
+I assume the uptime question was not idle.
+
+[2025-02-20 16:05] Aisha Rahman (Support Engineering L2):
+It was not. 0503 has been up nearly three times as long as 0511 and is
+correspondingly more wrong, which fits an error that accumulates with uptime
+rather than one that's a fixed offset.
+
+Please power cycle VS4P-0503, wait for it to complete startup, run a QC and
+send me the HL7 again. I expect the timestamp to be correct or very nearly so.
+
+I'm escalating to firmware in parallel.
+
+[2025-02-21 08:50] Dr Nadia Haddad (Consultant Haematologist):
+Power cycled, QC run at 08:31 by the display, OBR-7 reads
+20250221083104+0000. Eleven seconds out, which I assume is nothing.
+
+So a power cycle fixes it. That is not a satisfactory long-term answer.
+
+[2025-02-21 09:30] Gavin Tuck (Firmware Lead):
+Dr Haddad, Gavin Tuck, firmware. You are right that it isn't, and you've
+essentially diagnosed it for us.
+
+We have reproduced this internally this morning. Firmware 4.2.1 changed how
+the HL7 timestamp is assembled - it now derives the time from a counter seeded
+at boot rather than reading the real-time clock directly. The counter runs
+slightly fast, and on the Pro it runs quite a lot fast because the retic and
+flagging code extends the cycle it counts. So the error grows with uptime and
+resets when you power cycle.
+
+The instrument display, the printed report and the audit log all read the
+clock directly, which is why they're right. That asymmetry is the reason you
+found this and we didn't.
+
+Affected fields are OBR-7, OBX-14, OBR-22 and MSH-7. Result values are not
+affected - this is a timestamp defect only. No number you have reported is
+wrong.
+
+What happens next:
+- Investigation opened as VBI-0091.
+- A corrected firmware is in progress. I'm not going to give you a date I'm
+  not sure of; I'd expect weeks, not months.
+- Interim mitigation: power cycle at the start of each working day. That holds
+  the error to a few minutes.
+- If you'd prefer, we can roll both instruments back to 4.2.0, which does not
+  have this defect. That loses you the RFID read reliability fix in 4.2.1,
+  which from your ticket history is not something you've been affected by.
+
+[2025-02-21 10:15] Dr Nadia Haddad (Consultant Haematologist):
+Thank you for a clear explanation.
+
+Roll them back please. Daily power cycling is a manual control that depends on
+someone remembering, and I'd rather not add one.
+
+I will need something in writing about the historical data - specifically that
+the result values are unaffected and that the timestamp error is bounded by
+uptime. Our accreditation assessor will ask, and "the manufacturer told me on
+the phone" will not do.
+
+[2025-02-21 11:00] Gavin Tuck (Firmware Lead):
+Understood on both counts. Rollback will be arranged through field service. A
+customer bulletin will be issued when the corrected firmware ships and it will
+state the affected fields, the mechanism and the bounds - that's the document
+you'll want for your assessor. I'll make sure you get it directly as well as
+through the general distribution.
+
+[2025-03-04 15:20] Marta Oliveira (Field Service Engineer):
+Attended (FSV-2025-0171). Both Pro instruments rolled back to firmware 4.2.0.
+Full QC run and accepted on both after rollback per SOP-VBS-001 section 9.
+
+Verified timestamp accuracy after 6 hours of uptime on 0503: HL7 OBR-7 within
+2 seconds of the instrument display.
+
+Advised the site that when 4.2.3 is available they should update rather than
+staying on 4.2.0 indefinitely.
+
+Site also asked about the historical QC charts, which still show the drifted
+points. Explained that the stored data cannot be retrospectively corrected but
+that the bulletin will explain the discontinuity.
+
+Time on site 3.0 hours.
+
+[2025-03-19 09:30] Gavin Tuck (Firmware Lead):
+Dr Haddad - firmware 4.2.3 released today and bulletin VBB-0041 issued. The
+bulletin covers everything you asked for: affected fields, mechanism, drift
+magnitude by uptime, and confirmation that result values are unaffected.
+
+We can also supply a per-instrument drift reconstruction for your historical
+data if that would help your assessor - it estimates the actual time for each
+historical result from the uptime record. Say the word and I'll arrange it for
+VS4P-0503 and VS4P-0511.
+
+[2025-03-19 14:10] Dr Nadia Haddad (Consultant Haematologist):
+Yes please to the reconstruction, for the period 3 February to 4 March on both
+instruments.
+
+And thank you. This has been handled well - the initial triage went down the
+wrong path but once it reached the right people it was straightforward and
+honest, which is all I want.
+
+[2025-03-28 11:00] Aisha Rahman (Support Engineering L2):
+Drift reconstruction delivered for both instruments, period as requested.
+Instruments updated to 4.2.3 by the site under remote guidance. QC accepted.
+
+Closing.
+
+--- Resolution ---
+Root cause: VeriScan firmware 4.2.1 HL7 timestamp accumulator defect
+(VBI-0091). Result values unaffected.
+Actions: instruments rolled back to 4.2.0 (FSV-2025-0171), then updated to
+4.2.3; VBB-0041 issued; drift reconstruction supplied for historical data.
+This ticket and VBST-3910 were the two reports that triggered VBI-0091.

@@ -1,0 +1,103 @@
+Ticket ID: VBST-4355
+Status: Resolved
+Priority: P3-Medium
+Created: 2026-02-11 08:20 UTC
+Product: VeriScan 400 Pro
+Customer: Wirral University Teaching Hospital NHS FT (ACC-1284)
+Reported by: Helen Tarbuck, Senior BMS
+             helen.tarbuck@nhs.net
+Assigned to: Owen Trask (Support Engineer L1) -> Marcus Chen (QC Applications)
+Serial: VS4-1002
+Firmware: 4.4.0
+
+--- Thread ---
+
+[2026-02-11 08:20] Helen Tarbuck (Senior BMS):
+We want to start running CSF cell counts on our VeriScan. There's a Body Fluid
+option mentioned in the documentation but we can't find it on the menu.
+
+Do we need a licence key or something?
+
+[2026-02-11 09:45] Owen Trask (Support Engineer L1):
+Helen - your instrument VS4-1002 is a VeriScan 400, not a 400 Pro. Body fluid
+mode is a VeriScan 400 Pro feature and it isn't available on the 400 at all -
+it's not a licensing question, the mode doesn't exist on that platform.
+
+I suspect the documentation you're looking at is the 400 Pro datasheet. The
+two documents look very similar and the model name differs by one word.
+
+To confirm at your end: Settings > About should say "VeriScan 400", and the
+instrument will have three reagent bays rather than four.
+
+[2026-02-11 10:30] Helen Tarbuck (Senior BMS):
+Settings > About says VeriScan 400. Three bays. So no body fluids.
+
+We were given the Pro datasheet at some point and have been working from it.
+That explains a couple of other things we couldn't find as well.
+
+Is there any way to do CSF counts on what we have?
+
+[2026-02-11 13:00] Marcus Chen (QC Applications Specialist):
+Helen, Marcus Chen from Applications. Owen has passed this to me because the
+"is there any way" question deserves a proper answer rather than just "no".
+
+The direct answer is no - and I want to be emphatic about it, because this is
+somewhere laboratories occasionally improvise and shouldn't.
+
+Do NOT run body fluids in whole blood mode on a VeriScan 400. It will produce
+numbers. The numbers will be wrong, and wrong in a way that is not obvious:
+the gating, the dilution and the lyse step are all wrong for a low-cellularity
+fluid, the background is far too high relative to the counts you are looking
+for, and there is no carryover protection appropriate to the sample type. A
+CSF white cell count is a result on which somebody decides whether to start
+antibiotics. It is one of the few haematology numbers where being wrong is
+immediately dangerous.
+
+Your options are:
+1. Manual chamber count. Still the reference method and entirely appropriate
+   for your likely volume.
+2. Refer to a laboratory with a Pro. Your network may already have one.
+3. A VeriScan 400 Pro. That's a conversation with Peter Doyle, and if CSF
+   volume is low it may not be justifiable - I'd rather tell you that than
+   have you buy an instrument for six samples a week.
+
+Happy to talk through the validation requirements for any of these if useful.
+
+[2026-02-11 15:20] Helen Tarbuck (Senior BMS):
+That's clear and I'm glad I asked before someone tried it. We do about four
+CSFs a week. Manual counting it is.
+
+Could you send whatever the correct datasheet is for our instrument? We've
+clearly been working from the wrong one for a while.
+
+[2026-02-11 16:00] Owen Trask (Support Engineer L1):
+Sent: DS-VS400-003 (spec sheet v3, current) and the current IFU. I've also
+removed the Pro datasheet from your account's document set so it doesn't get
+sent again.
+
+I've flagged internally that a Pro datasheet reached a 400-only account. Worth
+understanding how.
+
+[2026-02-12 09:00] Marcus Chen (QC Applications Specialist):
+Followed up on how. The site's install pack in August 2025 was assembled
+manually because it was a new account, and the Pro datasheet was included in
+error. Raised with the installation team; the pack contents should be
+generated from the order, not assembled by hand.
+
+Helen - if you'd like, I can send the ICSH reference method for manual CSF
+counting and a short validation protocol. It's not a Veridia document but it's
+what I'd use.
+
+[2026-02-12 11:30] Helen Tarbuck (Senior BMS):
+Yes please, that would be genuinely useful. Thank you both.
+
+--- Resolution ---
+No fault. Customer operating a VeriScan 400 believed it was a 400 Pro, having
+been supplied the Pro datasheet in error in their August 2025 installation
+pack. Body fluid mode does not exist on the VeriScan 400.
+Actions: correct documentation supplied (DS-VS400-003 and current IFU); Pro
+datasheet removed from the account document set; installation pack assembly
+process raised with the installation team.
+Customer strongly advised against running body fluids in whole blood mode;
+manual chamber count recommended for their volume.
+See also: VBST-4142, VBST-4175, spec-veriscan-400-pro-v3.txt

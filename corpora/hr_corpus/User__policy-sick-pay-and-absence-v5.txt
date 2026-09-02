@@ -1,0 +1,199 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Sickness Absence and Sick Pay Policy
+=================================================================
+Document:      HR-POL-008
+Version:       5
+Effective:     2026-01-01
+Supersedes:    Version 4 (2024-06-01)
+Owner:         Rachel Duffy, HR Business Partner
+Approved by:   Naomi Okonjo-Bright, Chief People Officer
+Applies to:    UK and Switzerland. Swiss provisions in section 9.
+
+-----------------------------------------------------------------
+1. PRINCIPLE
+-----------------------------------------------------------------
+1.1  If you are ill, do not work. This is not a courtesy, it is what we want.
+     Someone working through illness makes mistakes, takes longer to recover,
+     and in shared offices and laboratories makes other people ill.
+
+1.2  We do not operate trigger points that automatically lead to disciplinary
+     action, and we do not use return-to-work interviews as an interrogation.
+     Absence is managed as a conversation, and where a pattern emerges the
+     first question is always what is causing it.
+
+-----------------------------------------------------------------
+2. TELLING US
+-----------------------------------------------------------------
+2.1  Contact your manager as early as you can on the first day, by whatever
+     means you normally use. A message is fine; you do not have to telephone
+     and you do not have to speak to anyone if you feel awful.
+
+2.2  Tell us roughly how long you expect to be off, if you know. Keep in touch
+     - a short message every few days is enough.
+
+2.3  You do not have to give a diagnosis. "I am unwell" is a complete answer.
+     Many people volunteer more and that is their choice.
+
+2.4  Record it in PeopleHub when you are well enough, or ask your manager to.
+
+-----------------------------------------------------------------
+3. CERTIFICATION (UK)
+-----------------------------------------------------------------
+  1 to 7 calendar days     Self-certification. No doctor's note.
+  8 days or more           Fit note from a GP or other approved professional.
+
+We do not ask for a doctor's note for short absences. GP appointments for a
+note you do not clinically need waste NHS capacity, and several of our
+customers are the NHS.
+
+If a fit note says "may be fit for work" with adjustments, we will act on the
+adjustments. That is the whole purpose of the form and we treat it seriously.
+
+-----------------------------------------------------------------
+4. COMPANY SICK PAY (UK)
+-----------------------------------------------------------------
+  Service at first day
+  of absence         Full pay          Then half pay
+  -----------------  ----------------  ---------------
+  Under 6 months     4 weeks           4 weeks
+  6 to 24 months     8 weeks           8 weeks
+  Over 24 months     13 weeks          13 weeks
+
+Inclusive of Statutory Sick Pay, calculated on a rolling 12 months.
+
+Beyond company sick pay, SSP continues to its statutory limit, and income
+protection may begin at 26 weeks at 75% of base salary. See
+User__benefits-handbook-uk-2026.txt section 4.
+
+Company sick pay is discretionary in the sense that it may be withheld where
+absence is not genuine. In nine years we have withheld it once.
+
+-----------------------------------------------------------------
+5. RETURNING TO WORK
+-----------------------------------------------------------------
+5.1  A return-to-work conversation happens after every absence. It takes five
+     minutes for a two-day absence. Its purpose is: are you actually better,
+     do you need anything, and what did you miss.
+
+5.2  After a long absence we will discuss a phased return. Phased returns are
+     paid at full pay for the reduced hours for up to four weeks. We do not
+     make people use annual leave to come back gradually.
+
+5.3  Your manager will not ask for details you have not volunteered.
+
+-----------------------------------------------------------------
+6. LONGER OR RECURRING ABSENCE
+-----------------------------------------------------------------
+6.1  Where absence is long-term or forms a pattern, the People team becomes
+     involved. The first purpose is support, not process.
+
+6.2  OCCUPATIONAL HEALTH. We may ask for your consent to an occupational
+     health referral. You may refuse. If you consent:
+       - You see the report first and may comment on it before it is released.
+       - The report tells us what you can do and what adjustments would help.
+         It does not tell us your diagnosis unless you agree.
+       - Refusing consent will not of itself lead to any detriment, though it
+         does limit what we can do to help.
+
+6.3  REASONABLE ADJUSTMENTS. If you have a disability within the meaning of
+     the Equality Act 2010, or a condition that affects your work whether or
+     not it meets that definition, we will consider adjustments. You do not
+     need a formal diagnosis to ask, and you do not need to use the word
+     disability.
+
+     Adjustments we have made include changed hours, changed duties, equipment,
+     a different workstation, reduced travel, remote working, and in one case
+     a change of team. Your manager is told what to do, not why.
+
+6.4  ILL-HEALTH CAPABILITY. In rare cases, where someone cannot return and no
+     adjustment makes the role possible, we consider ill-health capability.
+     This is a formal process with the right to be accompanied and a right of
+     appeal, and it is never a first step. Redeployment is always considered
+     first. Two cases in nine years, both of which ended in redeployment.
+
+-----------------------------------------------------------------
+7. MENTAL HEALTH
+-----------------------------------------------------------------
+7.1  Mental ill health is sickness. It is certified the same way, paid the
+     same way and managed the same way.
+
+7.2  Support available:
+       - Employee Assistance Programme, 24/7, free, confidential, and Veridia
+         is not told you used it. 0800 028 0199 (UK), 0800 55 44 10 (CH).
+       - Bupa mental health cover, up to 25 therapy sessions a year (UK).
+       - Trained Mental Health First Aiders in Cambridge and Basel; the list
+         is on the intranet.
+       - Occupational health referral where useful.
+
+7.3  Managers: you are not a clinician and you are not expected to be. What
+     you are expected to do is notice, ask, listen and adjust. If you are
+     worried about someone, ring Rachel Duffy or Lena Hofstetter.
+
+7.4  In 2025 the field service team was the subject of a stress risk assessment
+     following an unusually heavy year - the reagent recall, the firmware
+     issue and the SP-1 workload landed together. Changes to on-call
+     compensation and rota planning came out of it. If your team's workload
+     feels unsustainable rather than merely busy, say so; the mechanism for
+     doing something about it exists.
+
+-----------------------------------------------------------------
+8. ABSENCE THAT IS NOT SICKNESS
+-----------------------------------------------------------------
+  Medical and dental appointments  Paid time off, try to book at the edges of
+                                   the day where you can. Not deducted.
+  Hospital appointments and
+  treatment                        Paid. Not deducted. Includes ongoing
+                                   treatment such as dialysis, chemotherapy,
+                                   fertility treatment and gender-affirming
+                                   care.
+  Antenatal appointments           Paid, for the pregnant employee and for
+                                   the partner
+  Caring for a dependant           See annual leave policy section 8
+  Injury at work                   Report it immediately. RIDDOR reportable
+                                   incidents must be recorded. Field service:
+                                   report vehicle accidents to Priya Anand
+                                   the same day.
+
+-----------------------------------------------------------------
+9. SWITZERLAND
+-----------------------------------------------------------------
+9.1  Notify your manager on the first day. A medical certificate
+     (Arztzeugnis) is required from the fourth consecutive day of absence.
+
+9.2  Salary continuation is provided through collective daily sickness benefit
+     insurance (KTG): Veridia pays 100% for the first 60 days, then the
+     insurer pays 90% for up to 720 days within 900 days. This is
+     substantially better than the statutory Basel scale.
+
+9.3  Swiss law provides strong protection against termination during illness
+     (Sperrfrist): 30 days in the first year of service, 90 days in years 2 to
+     5, and 180 days from year 6. Notice given during a protection period is
+     void.
+
+9.4  Absence caused by accident is covered by UVG accident insurance rather
+     than KTG. Report accidents to Lena Hofstetter immediately, including
+     those outside work, because non-occupational accident cover applies.
+
+-----------------------------------------------------------------
+10. YOUR MEDICAL INFORMATION
+-----------------------------------------------------------------
+10.1 Your manager knows your absence dates and whatever reason you chose to
+     give. Detailed medical information, fit notes and occupational health
+     reports are held by the People team and are not shared with your manager
+     without your consent.
+
+10.2 Sickness records are retained for 6 years after employment ends.
+
+10.3 To see what is held about you, contact dpo@veridiabio.com.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Rachel Duffy (UK) - rachel.duffy@veridiabio.com
+Lena Hofstetter (Switzerland) - lena.hofstetter@veridiabio.com
+EAP UK 0800 028 0199 | EAP CH 0800 55 44 10
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

@@ -1,0 +1,5156 @@
+{
+  "corpus": "Veridia BioSystems synthetic RAG demo corpus",
+  "description": "Synthetic document corpus for a fictional in-vitro diagnostics company. Built for RAG pipeline stress testing: S3 -> SQS -> Lambda -> Amazon Comprehend PII redaction -> Titan Text Embeddings v2 (1024-dim) -> PGVector, served to OpenWebUI backed by Gemma 3 4B IT on Bedrock.",
+  "disclaimer": "Entirely fictional. Veridia BioSystems, its products, staff, customers, documents and identifiers do not exist. All names, email addresses, telephone numbers, NHS numbers, IP addresses, account numbers and specimen identifiers are invented and are included deliberately so that PII redaction can be demonstrated. No real patient data is present.",
+  "generated": "2026-08-21",
+  "file_count": 130,
+  "total_bytes": 685946,
+  "counts_by_doc_type": {
+    "customer_bulletin": 9,
+    "customer_email": 29,
+    "field_safety_notice": 2,
+    "investigation_report": 3,
+    "log_table": 4,
+    "lookup_table": 6,
+    "product_specification": 15,
+    "regulatory_summary": 10,
+    "standard_operating_procedure": 8,
+    "support_ticket": 44
+  },
+  "date_range_covered": "2023-09 to 2026-05 (bulk of activity 2024-12 to 2026-05)",
+  "id_schemes": {
+    "VBST-NNNN": "Support ticket",
+    "VBE-NNNN": "Customer email (filename only; not referenced inside documents)",
+    "FSN-YYYY-NNN": "Field safety notice",
+    "VBB-NNNN": "Customer bulletin / advisory / firmware bulletin",
+    "VBI-NNNN": "Investigation report or post-incident review",
+    "SOP-VBS-NNN": "Standard operating procedure",
+    "FSV-YYYY-NNNN": "Field service visit (defined in log-field-service-visits-2025.csv)",
+    "ACC-NNNN": "Customer account (defined in log-customer-accounts.csv)",
+    "DS-*": "Datasheet / controlled document reference",
+    "CAPA-YYYY-NNN": "Corrective and preventive action",
+    "NB-YYYY-OBS-NN": "Notified Body audit observation",
+    "E-NNN / W-NNN": "VeriScan error and warning codes",
+    "P-NNN": "VeriPrep SP-1 error codes",
+    "D5|L3|CL|RT-YYYY-NNNN": "Reagent lot",
+    "VS4-NNNN / VS4P-NNNN / SP1-R1-NNNN / SP1-R2-NNNN": "Instrument serial numbers"
+  },
+  "cross_reference_storylines": [
+    {
+      "id": "SL-1",
+      "name": "RGT-L3 reagent recall (FSN-2025-003)",
+      "summary": "Elevated baseline absorbance in RGT-L3 lots L3-2025-0440 to L3-2025-0460 causing spurious WBC flags on VeriScan 400 but not 400 Pro. Traced to trace copper in a raw material delivery.",
+      "files": [
+        "notice-FSN-2025-003.txt",
+        "report-VBI-0087.txt",
+        "bulletin-VBB-0047.txt",
+        "ticket-VBST-3847.txt",
+        "ticket-VBST-3851.txt",
+        "ticket-VBST-3863.txt",
+        "ticket-VBST-3871.txt",
+        "ticket-VBST-3884.txt",
+        "ticket-VBST-4310.txt",
+        "log-reagent-lots-2025.csv",
+        "log-field-service-visits-2025.csv",
+        "spec-verilyse-rgt-l3-v4.txt",
+        "sop-VBS-002.txt",
+        "sop-VBS-014.txt",
+        "email-VBE-0147.txt",
+        "email-VBE-0149.txt",
+        "email-VBE-0241.txt"
+      ],
+      "key_identifiers": [
+        "FSN-2025-003",
+        "VBI-0087",
+        "VBB-0047",
+        "L3-2025-0440..L3-2025-0460",
+        "E-208",
+        "W-042",
+        "CAPA-2025-011..018"
+      ]
+    },
+    {
+      "id": "SL-2",
+      "name": "Firmware 4.2.1 HL7 timestamp drift",
+      "summary": "Firmware 4.2.1 derived HL7 timestamps from a scheduler-tick accumulator that ran fast on the 400 Pro, drifting up to 47 minutes at 14 days uptime. 4.2.2 was an incomplete fix and was withdrawn; 4.2.3 corrected it.",
+      "files": [
+        "bulletin-VBB-0041.txt",
+        "report-VBI-0091.txt",
+        "log-firmware-releases.csv",
+        "ticket-VBST-3902.txt",
+        "ticket-VBST-3910.txt",
+        "ticket-VBST-3918.txt",
+        "ticket-VBST-3925.txt",
+        "lookup-hl7-message-mapping.csv",
+        "spec-vericonnect-integration-v6.txt",
+        "email-VBE-0152.txt",
+        "email-VBE-0181.txt",
+        "ticket-VBST-4345.txt"
+      ],
+      "key_identifiers": [
+        "VBB-0041",
+        "VBI-0091",
+        "4.2.1",
+        "4.2.2 (withdrawn)",
+        "4.2.3",
+        "OBR-7",
+        "OBX-14",
+        "E-503",
+        "E-507"
+      ]
+    },
+    {
+      "id": "SL-3",
+      "name": "VeriPrep SP-1 barcode and tube feed jams",
+      "summary": "Short-cap 5 mL tubes below ~75.5 mm capped height sit low in the SP-1r1 carrier, causing P-101/P-105 and P-112 jams. Mitigated by adapters, resolved by the SP-1r2 feed mechanism and retrofit kit.",
+      "files": [
+        "bulletin-VBB-0038.txt",
+        "bulletin-VBB-0055.txt",
+        "spec-veriprep-sp1-v4.txt",
+        "spec-veriscan-tube-compatibility-v2.txt",
+        "sop-VBS-003.txt",
+        "ticket-VBST-3795.txt",
+        "ticket-VBST-3812.txt",
+        "ticket-VBST-4098.txt",
+        "ticket-VBST-4330.txt",
+        "lookup-error-codes-veriprep-sp1.csv",
+        "lookup-spare-parts-veriscan.csv",
+        "log-field-service-visits-2025.csv",
+        "email-VBE-0166.txt"
+      ],
+      "key_identifiers": [
+        "VBB-0038",
+        "VBB-0055",
+        "P-101",
+        "P-105",
+        "P-112",
+        "SP1-ADP-05",
+        "SP1-MEC-140",
+        "SP1-MEC-141",
+        "SP1-KIT-R2UP"
+      ]
+    },
+    {
+      "id": "SL-4",
+      "name": "VeriConnect SAML SSO outage, 11 March 2025",
+      "summary": "Stale cached identity provider metadata caused fail-closed SAML rejection across 17 tenants for 3h54m. No data loss; instruments and LIS unaffected.",
+      "files": [
+        "bulletin-VBB-0044.txt",
+        "report-VBI-0094.txt",
+        "sop-VBS-004.txt",
+        "ticket-VBST-4001.txt",
+        "ticket-VBST-4003.txt",
+        "ticket-VBST-4007.txt",
+        "ticket-VBST-4011.txt",
+        "lookup-vericonnect-permissions.csv",
+        "spec-veriguard-v2.txt",
+        "log-field-service-visits-2025.csv",
+        "ticket-VBST-4345.txt"
+      ],
+      "key_identifiers": [
+        "VBB-0044",
+        "VBI-0094",
+        "VC-4412",
+        "ACT-2025-031..039",
+        "FSV-2025-0312"
+      ]
+    },
+    {
+      "id": "SL-5",
+      "name": "Operating temperature specification contradiction",
+      "summary": "Spec sheet v2 (DS-VS400-002) states 15-35 C. Bulletin VBB-0052 revises the range to 18-32 C; spec v3 (DS-VS400-003) carries the corrected figure. Firmware W-031 thresholds do not align until 4.4.0. Superseded documents remain in circulation.",
+      "files": [
+        "spec-veriscan-400-v2.txt",
+        "spec-veriscan-400-v3.txt",
+        "bulletin-VBB-0052.txt",
+        "bulletin-VBB-0067.txt",
+        "ticket-VBST-4056.txt",
+        "ticket-VBST-4160.txt",
+        "sop-VBS-001.txt",
+        "reg-ifu-revision-history.txt",
+        "lookup-error-codes-veriscan-400.csv"
+      ],
+      "key_identifiers": [
+        "DS-VS400-002",
+        "DS-VS400-003",
+        "VBB-0052",
+        "W-031",
+        "E-607",
+        "15-35 C (superseded)",
+        "18-32 C (current)"
+      ],
+      "note": "DELIBERATE CONTRADICTION. v2 and v3 disagree on both throughput (65 vs 60 samples/hr) and operating temperature. v3 is authoritative."
+    },
+    {
+      "id": "SL-6",
+      "name": "VeriScan 400 vs 400 Pro model confusion",
+      "summary": "Multiple customers believe they operate a 400 Pro when they operate a 400 (or route Pro-only work to a 400). Manifests as E-302 rejecting RGT-RT, missing retic/body-fluid menus, and QC assay values from the wrong model column.",
+      "files": [
+        "ticket-VBST-4142.txt",
+        "ticket-VBST-4175.txt",
+        "ticket-VBST-4355.txt",
+        "ticket-VBST-4290.txt",
+        "spec-veriscan-400-pro-v3.txt",
+        "spec-verilyse-rgt-rt-v3.txt",
+        "spec-veritrol-control-materials-v2.txt",
+        "lookup-error-codes-veriscan-400.csv",
+        "lookup-reagent-compatibility.csv",
+        "log-customer-accounts.csv",
+        "email-VBE-0217.txt",
+        "email-VBE-0219.txt"
+      ],
+      "key_identifiers": [
+        "VS4- (400) vs VS4P- (400 Pro)",
+        "E-302",
+        "E-215",
+        "E-601",
+        "E-607",
+        "E-711",
+        "E-715",
+        "RGT-RT"
+      ]
+    }
+  ],
+  "deliberate_inconsistencies": [
+    {
+      "type": "superseded_specification",
+      "detail": "spec-veriscan-400-v2.txt states throughput 65 samples/hr and ambient 15-35 C. spec-veriscan-400-v3.txt corrects both (60 samples/hr, 18-32 C). Retrieval should surface v3 as authoritative; tickets exist where customers cite the v2 figures.",
+      "files": [
+        "spec-veriscan-400-v2.txt",
+        "spec-veriscan-400-v3.txt",
+        "bulletin-VBB-0052.txt"
+      ]
+    },
+    {
+      "type": "firmware_lags_specification",
+      "detail": "The W-031 ambient warning uses the superseded 15-35 C thresholds until firmware 4.4.0, so the absence of a warning does not confirm compliance with the current 18-32 C range.",
+      "files": [
+        "bulletin-VBB-0052.txt",
+        "lookup-error-codes-veriscan-400.csv",
+        "ticket-VBST-4056.txt"
+      ]
+    },
+    {
+      "type": "outdated_sop",
+      "detail": "sop-VBS-009.txt is past its review date and says so in an inline note. sop-VBS-001.txt and sop-VBS-002.txt carry TODO placeholders.",
+      "files": [
+        "sop-VBS-009.txt",
+        "sop-VBS-001.txt",
+        "sop-VBS-002.txt"
+      ]
+    },
+    {
+      "type": "documentation_error_corrected",
+      "detail": "IFU revision history records that E-215 was wrongly listed as applying to both models from revision 4 to 7; corrected in revision 8. The error-code lookup carries the correct attribution (400 Pro only).",
+      "files": [
+        "reg-ifu-revision-history.txt",
+        "lookup-error-codes-veriscan-400.csv"
+      ]
+    },
+    {
+      "type": "messy_csv",
+      "detail": "log-reagent-lots-2025.csv contains 2024 lots despite its name, uses DD/MM/YYYY for some older qc_release_date values against YYYY-MM-DD elsewhere, has blank cells, and ends with a trailing empty row.",
+      "files": [
+        "log-reagent-lots-2025.csv"
+      ]
+    },
+    {
+      "type": "unresolved_investigations",
+      "detail": "Three tickets close without an established root cause and say so explicitly: VBST-4085 (no root cause), VBST-4268 (cannot reproduce), VBST-4185 (customer unresponsive, cause inferred from telemetry). VBST-3884 resolves only via shipping records after the customer went silent. VBST-4345 is partially explained with one component left openly unexplained.",
+      "files": [
+        "ticket-VBST-4085.txt",
+        "ticket-VBST-4268.txt",
+        "ticket-VBST-4185.txt",
+        "ticket-VBST-3884.txt",
+        "ticket-VBST-4345.txt"
+      ]
+    }
+  ],
+  "expected_unresolved_references": [
+    {
+      "ids": [
+        "RT-2023-0001",
+        "RT-2024-0028"
+      ],
+      "reason": "Historical RGT-RT revision A lot range endpoints cited in notice-FSN-2024-006.txt. Predate log-reagent-lots-2025.csv by design; the lots were withdrawn in 2024."
+    },
+    {
+      "ids": [
+        "SP1-TIP-1000",
+        "SP1-TIP-200",
+        "SP1-BIN-CAP",
+        "SP1-SVC-GOLD",
+        "VS4-SVC-GOLD"
+      ],
+      "reason": "Consumable and service order codes appearing in spec-sheet ordering tables. lookup-spare-parts-veriscan.csv covers spare parts only, by design."
+    }
+  ],
+  "pii_note": "Fictional PII is distributed deliberately: staff and customer names, work email addresses on real-looking NHS and commercial domains, UK and international telephone numbers, one NHS number and one local hospital number (ticket-VBST-4380.txt), specimen identifiers (ticket-VBST-3847.txt), IP addresses and hostnames (VeriConnect and LIS integration tickets), and purchase order, VAT and account numbers (email-VBE-0247.txt). NHS-style email disclaimer blocks appear on roughly half the customer emails.",
+  "files": [
+    {
+      "file": "bulletin-VBB-0038.txt",
+      "doc_type": "customer_bulletin",
+      "title": "Tube feed jams and barcode read failures with short-cap 5 mL tubes",
+      "date": "2025-01-24",
+      "related_products": [
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 4668,
+      "line_count": 97,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-003"
+        ],
+        "firmware_versions": [
+          "2.2.0",
+          "2.3.0"
+        ],
+        "error_codes": [
+          "P-101",
+          "P-103",
+          "P-105",
+          "P-112",
+          "P-501"
+        ],
+        "spare_parts": [
+          "SP1-ADP-05",
+          "SP1-KIT-R2UP",
+          "SP1-MEC-141"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "bulletin-VBB-0041.txt",
+      "doc_type": "customer_bulletin",
+      "title": "HL7 result timestamp drift under firmware 4.2.1 - update to 4.2.3",
+      "date": "2025-03-19",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 5587,
+      "line_count": 112,
+      "cross_references": {
+        "reports": [
+          "VBI-0091"
+        ],
+        "firmware_versions": [
+          "4.2.1",
+          "4.2.3"
+        ],
+        "error_codes": [
+          "E-503",
+          "E-512"
+        ],
+        "referenced_files": [
+          "log-firmware-releases.csv"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "bulletin-VBB-0044.txt",
+      "doc_type": "customer_bulletin",
+      "title": "SAML single sign-on outage of 11 March 2025 - customer advisory",
+      "date": "2025-03-21",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 5337,
+      "line_count": 107,
+      "cross_references": {
+        "reports": [
+          "VBI-0094"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 5
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "bulletin-VBB-0047.txt",
+      "doc_type": "customer_bulletin",
+      "title": "RGT-L3 formulation revision C to revision D",
+      "date": "2025-03-31",
+      "related_products": [
+        "VeriScan 400",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 3934,
+      "line_count": 84,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "reports": [
+          "VBI-0087"
+        ],
+        "sops": [
+          "SOP-VBS-002"
+        ],
+        "reagent_lots": [
+          "L3-2025-0421",
+          "L3-2025-0433",
+          "L3-2025-0471"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "bulletin-VBB-0049.txt",
+      "doc_type": "customer_bulletin",
+      "title": "End of life for VeriScan 200 - key dates and migration options",
+      "date": "2025-04-08",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriScan 200",
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 4013,
+      "line_count": 82,
+      "cross_references": {
+        "firmware_versions": [
+          "3.4.0"
+        ],
+        "referenced_files": [
+          "lookup-reagent-compatibility.csv",
+          "reg-ivdr-transition-summary.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "bulletin-VBB-0052.txt",
+      "doc_type": "customer_bulletin",
+      "title": "Revised ambient operating temperature range - 18 C to 32 C",
+      "date": "2025-04-11",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 5029,
+      "line_count": 104,
+      "cross_references": {
+        "firmware_versions": [
+          "4.1.2"
+        ],
+        "error_codes": [
+          "E-101",
+          "E-607",
+          "W-031"
+        ],
+        "documents": [
+          "DS-VS400-002",
+          "DS-VS400-003",
+          "DS-VS400P-002"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "bulletin-VBB-0055.txt",
+      "doc_type": "customer_bulletin",
+      "title": "VeriPrep SP-1r2 now shipping; firmware 2.3.0 released; retrofit kit",
+      "date": "2025-07-30",
+      "related_products": [
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 3846,
+      "line_count": 82,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0038"
+        ],
+        "firmware_versions": [
+          "2.2.0",
+          "2.3.0",
+          "4.3.0"
+        ],
+        "error_codes": [
+          "P-101",
+          "P-105",
+          "P-112",
+          "P-407",
+          "P-501"
+        ],
+        "spare_parts": [
+          "SP1-KIT-R2UP",
+          "SP1-MEC-140",
+          "SP1-MEC-141",
+          "SP1-MEC-160"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "bulletin-VBB-0061.txt",
+      "doc_type": "customer_bulletin",
+      "title": "VeriScan firmware 4.3.0 - feature release",
+      "date": "2025-09-02",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect"
+      ],
+      "size_bytes": 3923,
+      "line_count": 83,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0052",
+          "VBB-0055"
+        ],
+        "reports": [
+          "VBI-0091"
+        ],
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "firmware_versions": [
+          "2.3.0",
+          "4.1.0",
+          "4.3.0"
+        ],
+        "error_codes": [
+          "E-302",
+          "E-715",
+          "P-407",
+          "W-031",
+          "W-035"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "bulletin-VBB-0067.txt",
+      "doc_type": "customer_bulletin",
+      "title": "Firmware 4.4.0 and VeriConnect 6.2 - IVDR result labelling, FHIR R4",
+      "date": "2026-04-21",
+      "related_products": [
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 3549,
+      "line_count": 74,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0044",
+          "VBB-0052"
+        ],
+        "firmware_versions": [
+          "4.2.1",
+          "4.4.0"
+        ],
+        "error_codes": [
+          "W-031"
+        ],
+        "referenced_files": [
+          "lookup-hl7-message-mapping.csv"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "email-VBE-0147.txt",
+      "doc_type": "customer_email",
+      "title": "FSN-2025-003 - operational impact across GMPN and what we need from you",
+      "date": "2025-02-24",
+      "related_products": [
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 4709,
+      "line_count": 98,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "reports": [
+          "VBI-0087"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 5,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Dr Aled Pritchard <aled.pritchard@gmpn.nhs.uk>",
+      "to": "James Okafor <james.okafor@veridiabio.com>",
+      "cc": "Peter Doyle <peter.doyle@veridiabio.com>, Suneet Kaur <suneet.kaur@gmpn.nhs.uk>, Dr Elena Marchetti <elena.marchetti@veridiabio.com>",
+      "subject": "FSN-2025-003 - operational impact across GMPN and what we need from you",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0149.txt",
+      "doc_type": "customer_email",
+      "title": "RE: FSN-2025-003 - operational impact across GMPN and what we need from you",
+      "date": "2025-02-26",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 3871,
+      "line_count": 80,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "reports": [
+          "VBI-0087"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 5,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "James Okafor <james.okafor@veridiabio.com>",
+      "to": "Dr Aled Pritchard <aled.pritchard@gmpn.nhs.uk>",
+      "cc": "Peter Doyle <peter.doyle@veridiabio.com>, Dr Elena Marchetti <elena.marchetti@veridiabio.com>, Tom Reeves <tom.reeves@veridiabio.com>",
+      "subject": "RE: FSN-2025-003 - operational impact across GMPN and what we need from you",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": true
+    },
+    {
+      "file": "email-VBE-0152.txt",
+      "doc_type": "customer_email",
+      "title": "RE: RE: VBST-3902 - QC chart timestamps - what do we tell our assessor?",
+      "date": "2025-03-06",
+      "related_products": [
+        "VeriScan 400 Pro"
+      ],
+      "size_bytes": 2552,
+      "line_count": 64,
+      "cross_references": {
+        "tickets": [
+          "VBST-3902"
+        ],
+        "bulletins": [
+          "VBB-0041"
+        ],
+        "firmware_versions": [
+          "4.2.1",
+          "4.2.3"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 4,
+        "uk_phone_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Dr Nadia Haddad <nadia.haddad@nhs.net>",
+      "to": "support@veridiabio.com",
+      "cc": "Tom Reeves <tom.reeves@veridiabio.com>",
+      "subject": "RE: RE: VBST-3902 - QC chart timestamps - what do we tell our assessor?",
+      "x_mailer": "Apple Mail (2.3774.600.62)",
+      "is_reply": true
+    },
+    {
+      "file": "email-VBE-0166.txt",
+      "doc_type": "customer_email",
+      "title": "VeriPrep SP-1 - eighty seven jams and counting",
+      "date": "2025-06-03",
+      "related_products": [
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 3179,
+      "line_count": 69,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 4,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Steve Ogden <steve.ogden@midyorks.nhs.uk>",
+      "to": "James Okafor <james.okafor@veridiabio.com>",
+      "cc": "Priya Anand <priya.anand@veridiabio.com>, Peter Doyle <peter.doyle@veridiabio.com>",
+      "subject": "VeriPrep SP-1 - eighty seven jams and counting",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0173.txt",
+      "doc_type": "customer_email",
+      "title": "Feedback on ticket VBST-3851",
+      "date": "2025-02-18",
+      "related_products": [],
+      "size_bytes": 1781,
+      "line_count": 46,
+      "cross_references": {
+        "tickets": [
+          "VBST-3851"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Marcus Ollerenshaw <m.ollerenshaw@alderleydx.co.uk>",
+      "to": "james.okafor@veridiabio.com",
+      "subject": "Feedback on ticket VBST-3851",
+      "x_mailer": "Thunderbird 128.4.3",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0181.txt",
+      "doc_type": "customer_email",
+      "title": "Firmware auto-update on Class C devices - formal position request",
+      "date": "2025-03-31",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 3077,
+      "line_count": 69,
+      "cross_references": {
+        "tickets": [
+          "VBST-3910"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 4,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Jason Okonkwo <jason.okonkwo@uhb.nhs.uk>",
+      "to": "Tom Reeves <tom.reeves@veridiabio.com>",
+      "cc": "Dr Priyanka Vaidya <priyanka.vaidya@uhb.nhs.uk>, Sarah Lindgren <sarah.lindgren@veridiabio.com>",
+      "subject": "Firmware auto-update on Class C devices - formal position request",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0192.txt",
+      "doc_type": "customer_email",
+      "title": "Request for information - haematology analyser replacement programme",
+      "date": "2025-10-15",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect"
+      ],
+      "size_bytes": 3227,
+      "line_count": 77,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Dr Rebecca Aylesworth <rebecca.aylesworth@ncauh.nhs.uk>",
+      "to": "sales@veridiabio.com",
+      "subject": "Request for information - haematology analyser replacement programme",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0195.txt",
+      "doc_type": "customer_email",
+      "title": "RE: Request for information - haematology analyser replacement programme",
+      "date": "2025-10-17",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect",
+        "VeriGuard",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 6472,
+      "line_count": 128,
+      "cross_references": {
+        "notices": [
+          "FSN-2024-006",
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0038",
+          "VBB-0041",
+          "VBB-0044",
+          "VBB-0052",
+          "VBB-0055"
+        ],
+        "reports": [
+          "VBI-0087",
+          "VBI-0091",
+          "VBI-0094"
+        ],
+        "reagent_lots": [
+          "L3-2025-0440",
+          "L3-2025-0460"
+        ],
+        "documents": [
+          "DS-VS400-003",
+          "DS-VS400P-003"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 4,
+        "hostnames": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Peter Doyle <peter.doyle@veridiabio.com>",
+      "to": "Dr Rebecca Aylesworth <rebecca.aylesworth@ncauh.nhs.uk>",
+      "cc": "Sarah Lindgren <sarah.lindgren@veridiabio.com>, Ben Whittle <ben.whittle@veridiabio.com>",
+      "subject": "RE: Request for information - haematology analyser replacement programme",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": true
+    },
+    {
+      "file": "email-VBE-0198.txt",
+      "doc_type": "customer_email",
+      "title": "pricing query - second analyser",
+      "date": "2025-06-12",
+      "related_products": [
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 907,
+      "line_count": 32,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Gemma Reidy <g.reidy@thornburypath.co.uk>",
+      "to": "sales@veridiabio.com",
+      "subject": "pricing query - second analyser",
+      "x_mailer": "Outlook for iOS",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0205.txt",
+      "doc_type": "customer_email",
+      "title": "Anfrage / RFQ - expansion at Hamburg site, 6 x VeriScan 400 Pro",
+      "date": "2026-02-09",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 200",
+        "VeriPrep SP-1",
+        "VeriConnect",
+        "VeriGuard",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 3726,
+      "line_count": 78,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0061"
+        ],
+        "firmware_versions": [
+          "4.3.0"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3
+      },
+      "contains_pii": true,
+      "from": "Bernd Kaltenbrunner <b.kaltenbrunner@synlab-nordwest.de>",
+      "to": "Camille Roux <camille.roux@veridiabio.com>",
+      "cc": "Dr Elena Marchetti <elena.marchetti@veridiabio.com>",
+      "subject": "Anfrage / RFQ - expansion at Hamburg site, 6 x VeriScan 400 Pro",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0211.txt",
+      "doc_type": "customer_email",
+      "title": "RUO status, IVDR labeling in firmware 4.4.0, and what it means for us",
+      "date": "2026-04-21",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriConnect"
+      ],
+      "size_bytes": 2269,
+      "line_count": 55,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0067"
+        ],
+        "firmware_versions": [
+          "4.4.0"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2,
+        "nhs_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Dr Robert Yeun <ryeun@med.umich.edu>",
+      "to": "Ben Whittle <ben.whittle@veridiabio.com>",
+      "subject": "RUO status, IVDR labeling in firmware 4.4.0, and what it means for us",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0217.txt",
+      "doc_type": "customer_email",
+      "title": "Post-install questions - VS4-1002",
+      "date": "2025-08-11",
+      "related_products": [
+        "VeriScan 400"
+      ],
+      "size_bytes": 2056,
+      "line_count": 56,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 3,
+        "uk_phone_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Helen Tarbuck <helen.tarbuck@nhs.net>",
+      "to": "Rob Ellery <rob.ellery@veridiabio.com>",
+      "cc": "support@veridiabio.com",
+      "subject": "Post-install questions - VS4-1002",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0219.txt",
+      "doc_type": "customer_email",
+      "title": "RE: Post-install questions - VS4-1002",
+      "date": "2025-08-11",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 4206,
+      "line_count": 94,
+      "cross_references": {
+        "documents": [
+          "DS-VS400-003"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 4
+      },
+      "contains_pii": true,
+      "from": "Rob Ellery <rob.ellery@veridiabio.com>",
+      "to": "Helen Tarbuck <helen.tarbuck@nhs.net>",
+      "cc": "support@veridiabio.com, Marcus Chen <marcus.chen@veridiabio.com>",
+      "subject": "RE: Post-install questions - VS4-1002",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": true
+    },
+    {
+      "file": "email-VBE-0223.txt",
+      "doc_type": "customer_email",
+      "title": "Training request - body fluid mode and reticulocyte for new staff",
+      "date": "2025-09-04",
+      "related_products": [
+        "VeriScan 400 Pro"
+      ],
+      "size_bytes": 2249,
+      "line_count": 51,
+      "cross_references": {
+        "tickets": [
+          "VBST-4056"
+        ],
+        "firmware_versions": [
+          "4.3.0"
+        ],
+        "error_codes": [
+          "E-607"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3
+      },
+      "contains_pii": true,
+      "from": "Dr Amelie Fournier <amelie.fournier@hug.ch>",
+      "to": "Camille Roux <camille.roux@veridiabio.com>",
+      "cc": "Marcus Chen <marcus.chen@veridiabio.com>",
+      "subject": "Training request - body fluid mode and reticulocyte for new staff",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0229.txt",
+      "doc_type": "customer_email",
+      "title": "LIS integration for Oldham site - kickoff questions",
+      "date": "2025-05-06",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 2639,
+      "line_count": 63,
+      "cross_references": {
+        "tickets": [
+          "VBST-4200"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Danielle Frost <danielle.frost@gmpn.nhs.uk>",
+      "to": "Tom Reeves <tom.reeves@veridiabio.com>",
+      "cc": "Aisha Rahman <aisha.rahman@veridiabio.com>",
+      "subject": "LIS integration for Oldham site - kickoff questions",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0234.txt",
+      "doc_type": "customer_email",
+      "title": "VeriConnect tenant setup - who does what",
+      "date": "2025-06-18",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 1993,
+      "line_count": 47,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Sean McAllister <sean.mcallister@belfasttrust.hscni.net>",
+      "to": "support@veridiabio.com",
+      "subject": "VeriConnect tenant setup - who does what",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0241.txt",
+      "doc_type": "customer_email",
+      "title": "Contract renewal August 2025 - preliminary discussion",
+      "date": "2025-06-02",
+      "related_products": [
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 3085,
+      "line_count": 73,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Ian Bracewell <ian.bracewell@coch.nhs.uk>",
+      "to": "Peter Doyle <peter.doyle@veridiabio.com>",
+      "cc": "Deborah Cannock <deborah.cannock@coch.nhs.uk>",
+      "subject": "Contract renewal August 2025 - preliminary discussion",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0247.txt",
+      "doc_type": "customer_email",
+      "title": "PO and account details for renewal - CoCH 2025/26",
+      "date": "2025-07-17",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 3265,
+      "line_count": 78,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 5,
+        "uk_phone_numbers": 1,
+        "hostnames": 1,
+        "purchase_order_refs": 3,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Deborah Cannock <deborah.cannock@coch.nhs.uk>",
+      "to": "Ben Whittle <ben.whittle@veridiabio.com>",
+      "cc": "Peter Doyle <peter.doyle@veridiabio.com>, Ian Bracewell <ian.bracewell@coch.nhs.uk>",
+      "subject": "PO and account details for renewal - CoCH 2025/26",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0252.txt",
+      "doc_type": "customer_email",
+      "title": "Renewal April 2027 - early conversation about tiers",
+      "date": "2026-03-13",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 2310,
+      "line_count": 51,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Dawn Ackroyd <dawn.ackroyd@nuffieldhealth.com>",
+      "to": "Peter Doyle <peter.doyle@veridiabio.com>",
+      "subject": "Renewal April 2027 - early conversation about tiers",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0258.txt",
+      "doc_type": "customer_email",
+      "title": "FW: QC chart annotation - consolidated customer requests (31 sites)",
+      "date": "2025-04-23",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 3115,
+      "line_count": 75,
+      "cross_references": {
+        "firmware_versions": [
+          "4.2.1"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3
+      },
+      "contains_pii": true,
+      "from": "Marcus Chen <marcus.chen@veridiabio.com>",
+      "to": "Tom Reeves <tom.reeves@veridiabio.com>",
+      "cc": "Dr Elena Marchetti <elena.marchetti@veridiabio.com>",
+      "subject": "FW: QC chart annotation - consolidated customer requests (31 sites)",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0263.txt",
+      "doc_type": "customer_email",
+      "title": "FHIR export - when does beta become something we can use?",
+      "date": "2026-05-12",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 2727,
+      "line_count": 65,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Dr Oliver Kingsmill <oliver.kingsmill@gstt.nhs.uk>",
+      "to": "Tom Reeves <tom.reeves@veridiabio.com>",
+      "subject": "FHIR export - when does beta become something we can use?",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0269.txt",
+      "doc_type": "customer_email",
+      "title": "Feature request - QC CV trending and reagent exposure by patient",
+      "date": "2025-09-08",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 2741,
+      "line_count": 64,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 3,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Vikram Sahota <vikram.sahota@sth.nhs.uk>",
+      "to": "support@veridiabio.com",
+      "cc": "Marcus Chen <marcus.chen@veridiabio.com>",
+      "subject": "Feature request - QC CV trending and reagent exposure by patient",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0274.txt",
+      "doc_type": "customer_email",
+      "title": "IVDR transition status - request for current position in writing",
+      "date": "2026-01-19",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriPrep SP-1",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 2747,
+      "line_count": 62,
+      "cross_references": {
+        "documents": [
+          "DS-VS400P-003"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3
+      },
+      "contains_pii": true,
+      "from": "Dr Stefan Ruettimann <stefan.ruettimann@usb.ch>",
+      "to": "Sarah Lindgren <sarah.lindgren@veridiabio.com>",
+      "cc": "Simone Buehler <simone.buehler@veridiabio.com>",
+      "subject": "IVDR transition status - request for current position in writing",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0279.txt",
+      "doc_type": "customer_email",
+      "title": "UKCA marking - evidence for our UKAS assessment",
+      "date": "2025-11-06",
+      "related_products": [
+        "VeriScan 400"
+      ],
+      "size_bytes": 1494,
+      "line_count": 43,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "from": "Rhys Morgan <rhys.morgan2@wales.nhs.uk>",
+      "to": "Sarah Lindgren <sarah.lindgren@veridiabio.com>",
+      "subject": "UKCA marking - evidence for our UKAS assessment",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0283.txt",
+      "doc_type": "customer_email",
+      "title": "RE: Hebergement des donnees de sante / health data hosting - VeriConnect",
+      "date": "2026-02-27",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 3537,
+      "line_count": 74,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 3
+      },
+      "contains_pii": true,
+      "from": "Ruth Amankwah <dpo@veridiabio.com>",
+      "to": "Isabelle Renard <i.renard@cerba-ouest.fr>",
+      "cc": "Camille Roux <camille.roux@veridiabio.com>",
+      "subject": "RE: Hebergement des donnees de sante / health data hosting - VeriConnect",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": true
+    },
+    {
+      "file": "email-VBE-0287.txt",
+      "doc_type": "customer_email",
+      "title": "Follow-up from EHA Diagnostics Forum - your talk on reagent stability",
+      "date": "2025-09-22",
+      "related_products": [],
+      "size_bytes": 2222,
+      "line_count": 47,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 2
+      },
+      "contains_pii": true,
+      "from": "Dr Katarzyna Wisniewska <k.wisniewska@haematology-summit.org>",
+      "to": "Dr Elena Marchetti <elena.marchetti@veridiabio.com>",
+      "subject": "Follow-up from EHA Diagnostics Forum - your talk on reagent stability",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0291.txt",
+      "doc_type": "customer_email",
+      "title": "Partnership enquiry - morphology AI integration with VeriConnect",
+      "date": "2026-02-04",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 2577,
+      "line_count": 60,
+      "cross_references": {
+        "firmware_versions": [
+          "4.3.0"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true,
+      "from": "Daniel Osei-Bonsu <d.osei-bonsu@lumenpath.io>",
+      "to": "partnerships@veridiabio.com",
+      "cc": "Tom Reeves <tom.reeves@veridiabio.com>",
+      "subject": "Partnership enquiry - morphology AI integration with VeriConnect",
+      "x_mailer": "Superhuman",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0295.txt",
+      "doc_type": "customer_email",
+      "title": "MPhil research - request for technical information on flagging algorithms",
+      "date": "2026-03-15",
+      "related_products": [
+        "VeriScan 400"
+      ],
+      "size_bytes": 2519,
+      "line_count": 59,
+      "cross_references": {
+        "firmware_versions": [
+          "4.3.0"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2
+      },
+      "contains_pii": true,
+      "from": "Priya Sundaram <ps2119@cam.ac.uk>",
+      "to": "info@veridiabio.com",
+      "subject": "MPhil research - request for technical information on flagging algorithms",
+      "x_mailer": "Roundcube Webmail",
+      "is_reply": false
+    },
+    {
+      "file": "email-VBE-0297.txt",
+      "doc_type": "customer_email",
+      "title": "RE: MPhil research - request for technical information on flagging algorithms",
+      "date": "2026-03-17",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 4309,
+      "line_count": 83,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0061"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3
+      },
+      "contains_pii": true,
+      "from": "Marcus Chen <marcus.chen@veridiabio.com>",
+      "to": "Priya Sundaram <ps2119@cam.ac.uk>",
+      "cc": "Dr Elena Marchetti <elena.marchetti@veridiabio.com>",
+      "subject": "RE: MPhil research - request for technical information on flagging algorithms",
+      "x_mailer": "Microsoft Outlook 16.0",
+      "is_reply": true
+    },
+    {
+      "file": "log-customer-accounts.csv",
+      "doc_type": "log_table",
+      "title": "account_id,customer_name,country,site_type,primary_contact,contact_email,products_deployed,instrument_count,vericonnect_tier,veriguard,support_level,account_manager,contract_renewal",
+      "date": null,
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 4964,
+      "line_count": 27,
+      "cross_references": {
+        "accounts": [
+          "ACC-1042",
+          "ACC-1057",
+          "ACC-1063",
+          "ACC-1078",
+          "ACC-1090",
+          "ACC-1103",
+          "ACC-1117",
+          "ACC-1129",
+          "ACC-1134",
+          "ACC-1146",
+          "ACC-1152",
+          "ACC-1168",
+          "ACC-1171",
+          "ACC-1185",
+          "ACC-1190",
+          "ACC-1198",
+          "ACC-1206",
+          "ACC-1214",
+          "ACC-1222",
+          "ACC-1241",
+          "ACC-1248",
+          "ACC-1255",
+          "ACC-1263",
+          "ACC-1270",
+          "ACC-1284"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 25,
+        "hostnames": 11
+      },
+      "contains_pii": true,
+      "columns": [
+        "account_id",
+        "customer_name",
+        "country",
+        "site_type",
+        "primary_contact",
+        "contact_email",
+        "products_deployed",
+        "instrument_count",
+        "vericonnect_tier",
+        "veriguard",
+        "support_level",
+        "account_manager",
+        "contract_renewal"
+      ],
+      "data_rows": 25,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "log-field-service-visits-2025.csv",
+      "doc_type": "log_table",
+      "title": "visit_id,account_id,customer_name,visit_date,engineer,product,serial_number,visit_type,issue_summary,parts_used,resolution,time_on_site_hours,related_ticket",
+      "date": null,
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 6747,
+      "line_count": 31,
+      "cross_references": {
+        "tickets": [
+          "VBST-3795",
+          "VBST-3812",
+          "VBST-3847",
+          "VBST-3851",
+          "VBST-3863",
+          "VBST-3878",
+          "VBST-3902",
+          "VBST-3910",
+          "VBST-4003",
+          "VBST-4022",
+          "VBST-4041",
+          "VBST-4056",
+          "VBST-4063",
+          "VBST-4098",
+          "VBST-4110",
+          "VBST-4160",
+          "VBST-4231",
+          "VBST-4249",
+          "VBST-4268",
+          "VBST-4301"
+        ],
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0052"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0114",
+          "FSV-2025-0121",
+          "FSV-2025-0130",
+          "FSV-2025-0146",
+          "FSV-2025-0149",
+          "FSV-2025-0155",
+          "FSV-2025-0163",
+          "FSV-2025-0171",
+          "FSV-2025-0180",
+          "FSV-2025-0194",
+          "FSV-2025-0203",
+          "FSV-2025-0217",
+          "FSV-2025-0225",
+          "FSV-2025-0238",
+          "FSV-2025-0246",
+          "FSV-2025-0259",
+          "FSV-2025-0271",
+          "FSV-2025-0284",
+          "FSV-2025-0299",
+          "FSV-2025-0312",
+          "FSV-2025-0328",
+          "FSV-2025-0341",
+          "FSV-2025-0355",
+          "FSV-2025-0369",
+          "FSV-2025-0384",
+          "FSV-2025-0401",
+          "FSV-2025-0418",
+          "FSV-2025-0433",
+          "FSV-2025-0447"
+        ],
+        "accounts": [
+          "ACC-1042",
+          "ACC-1057",
+          "ACC-1078",
+          "ACC-1090",
+          "ACC-1103",
+          "ACC-1117",
+          "ACC-1129",
+          "ACC-1134",
+          "ACC-1146",
+          "ACC-1152",
+          "ACC-1171",
+          "ACC-1185",
+          "ACC-1190",
+          "ACC-1198",
+          "ACC-1206",
+          "ACC-1214",
+          "ACC-1255",
+          "ACC-1263",
+          "ACC-1270",
+          "ACC-1284"
+        ],
+        "reagent_lots": [
+          "L3-2025-0444",
+          "RT-2025-0049"
+        ],
+        "firmware_versions": [
+          "2.3.0",
+          "4.2.1",
+          "4.2.3"
+        ],
+        "error_codes": [
+          "E-104",
+          "E-203",
+          "E-207",
+          "E-208",
+          "E-215",
+          "E-311",
+          "E-402",
+          "E-412",
+          "E-507",
+          "E-607",
+          "P-105",
+          "P-112",
+          "W-031",
+          "W-042"
+        ],
+        "spare_parts": [
+          "SP1-ADP-05",
+          "SP1-KIT-R2UP",
+          "SP1-MEC-140",
+          "SP1-MEC-160",
+          "VS4-DIS-142",
+          "VS4-ELE-090",
+          "VS4-KIT-PM1",
+          "VS4-MEC-011",
+          "VS4-MEC-047",
+          "VS4-OPT-104",
+          "VS4-OPT-118",
+          "VS4-OPT-220",
+          "VS4-OPT-224"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "visit_id",
+        "account_id",
+        "customer_name",
+        "visit_date",
+        "engineer",
+        "product",
+        "serial_number",
+        "visit_type",
+        "issue_summary",
+        "parts_used",
+        "resolution",
+        "time_on_site_hours",
+        "related_ticket"
+      ],
+      "data_rows": 29,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "log-firmware-releases.csv",
+      "doc_type": "log_table",
+      "title": "version,platform,release_date,channel,changelog_summary,known_issues,superseded_by",
+      "date": null,
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect"
+      ],
+      "size_bytes": 2758,
+      "line_count": 18,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0052"
+        ],
+        "reports": [
+          "VBI-0091"
+        ],
+        "error_codes": [
+          "E-118",
+          "E-302",
+          "E-307",
+          "E-507",
+          "E-512",
+          "E-601",
+          "P-105",
+          "P-112",
+          "P-207",
+          "P-407",
+          "W-031"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "version",
+        "platform",
+        "release_date",
+        "channel",
+        "changelog_summary",
+        "known_issues",
+        "superseded_by"
+      ],
+      "data_rows": 16,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "log-reagent-lots-2025.csv",
+      "doc_type": "log_table",
+      "title": "lot_id,product_code,product_name,formulation_rev,manufacture_date,expiry_date,units_produced,release_status,qc_release_date,disposition_notes",
+      "date": null,
+      "related_products": [
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 3539,
+      "line_count": 36,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "reports": [
+          "VBI-0087"
+        ],
+        "reagent_lots": [
+          "CL-2024-0059",
+          "CL-2025-0071",
+          "CL-2025-0088",
+          "CL-2025-0102",
+          "D5-2024-1188",
+          "D5-2024-1201",
+          "D5-2025-0104",
+          "D5-2025-0119",
+          "D5-2025-0133",
+          "D5-2025-0158",
+          "D5-2025-0177",
+          "D5-2025-0194",
+          "D5-2025-0211",
+          "L3-2024-0388",
+          "L3-2024-0402",
+          "L3-2025-0421",
+          "L3-2025-0433",
+          "L3-2025-0440",
+          "L3-2025-0444",
+          "L3-2025-0448",
+          "L3-2025-0452",
+          "L3-2025-0455",
+          "L3-2025-0458",
+          "L3-2025-0460",
+          "L3-2025-0463",
+          "L3-2025-0471",
+          "L3-2025-0483",
+          "L3-2025-0499",
+          "L3-2025-0510",
+          "RT-2025-0033",
+          "RT-2025-0041",
+          "RT-2025-0049",
+          "RT-2025-0056"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "lot_id",
+        "product_code",
+        "product_name",
+        "formulation_rev",
+        "manufacture_date",
+        "expiry_date",
+        "units_produced",
+        "release_status",
+        "qc_release_date",
+        "disposition_notes"
+      ],
+      "data_rows": 33,
+      "has_trailing_blank_row": true
+    },
+    {
+      "file": "lookup-error-codes-veriprep-sp1.csv",
+      "doc_type": "lookup_table",
+      "title": "error_code,severity,description,probable_cause,resolution,hardware_revision,notes",
+      "date": null,
+      "related_products": [
+        "VeriPrep SP-1",
+        "VeriLyse RGT-CL"
+      ],
+      "size_bytes": 2523,
+      "line_count": 19,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0038"
+        ],
+        "sops": [
+          "SOP-VBS-003",
+          "SOP-VBS-009"
+        ],
+        "error_codes": [
+          "P-101",
+          "P-103",
+          "P-105",
+          "P-108",
+          "P-110",
+          "P-112",
+          "P-115",
+          "P-201",
+          "P-204",
+          "P-207",
+          "P-301",
+          "P-304",
+          "P-402",
+          "P-405",
+          "P-407",
+          "P-501",
+          "P-505"
+        ],
+        "spare_parts": [
+          "SP1-ADP-05",
+          "SP1-CBL-232",
+          "SP1-ELE-018",
+          "SP1-MEC-140"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "error_code",
+        "severity",
+        "description",
+        "probable_cause",
+        "resolution",
+        "hardware_revision",
+        "notes"
+      ],
+      "data_rows": 17,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "lookup-error-codes-veriscan-400.csv",
+      "doc_type": "lookup_table",
+      "title": "error_code,severity,description,probable_cause,resolution,applies_to,first_firmware",
+      "date": null,
+      "related_products": [
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 5809,
+      "line_count": 37,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0052"
+        ],
+        "sops": [
+          "SOP-VBS-001",
+          "SOP-VBS-002"
+        ],
+        "error_codes": [
+          "E-101",
+          "E-104",
+          "E-107",
+          "E-110",
+          "E-112",
+          "E-118",
+          "E-203",
+          "E-207",
+          "E-208",
+          "E-211",
+          "E-215",
+          "E-302",
+          "E-304",
+          "E-305",
+          "E-307",
+          "E-311",
+          "E-402",
+          "E-405",
+          "E-408",
+          "E-412",
+          "E-501",
+          "E-503",
+          "E-507",
+          "E-512",
+          "E-601",
+          "E-604",
+          "E-607",
+          "E-711",
+          "E-715",
+          "W-021",
+          "W-024",
+          "W-031",
+          "W-035",
+          "W-042",
+          "W-050"
+        ],
+        "spare_parts": [
+          "VS4-MEC-011",
+          "VS4-MEC-033",
+          "VS4-MEC-047",
+          "VS4-OPT-104",
+          "VS4-OPT-220"
+        ],
+        "referenced_files": [
+          "lookup-hl7-message-mapping.csv",
+          "lookup-reagent-compatibility.csv"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "error_code",
+        "severity",
+        "description",
+        "probable_cause",
+        "resolution",
+        "applies_to",
+        "first_firmware"
+      ],
+      "data_rows": 35,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "lookup-hl7-message-mapping.csv",
+      "doc_type": "lookup_table",
+      "title": "hl7_message_type,segment,field,component,hl7_element_name,vericonnect_field,data_type,required,transform_notes",
+      "date": null,
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 3079,
+      "line_count": 34,
+      "cross_references": {
+        "reports": [
+          "VBI-0091"
+        ],
+        "firmware_versions": [
+          "4.0.0",
+          "4.2.1"
+        ],
+        "error_codes": [
+          "E-503"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "hl7_message_type",
+        "segment",
+        "field",
+        "component",
+        "hl7_element_name",
+        "vericonnect_field",
+        "data_type",
+        "required",
+        "transform_notes"
+      ],
+      "data_rows": 32,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "lookup-reagent-compatibility.csv",
+      "doc_type": "lookup_table",
+      "title": "reagent_code,reagent_name,analyser_model,min_firmware,max_firmware,formulation_rev,compatible,notes",
+      "date": null,
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriScan 200",
+        "VeriPrep SP-1",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 1239,
+      "line_count": 15,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0049"
+        ],
+        "firmware_versions": [
+          "4.0.0"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "reagent_code",
+        "reagent_name",
+        "analyser_model",
+        "min_firmware",
+        "max_firmware",
+        "formulation_rev",
+        "compatible",
+        "notes"
+      ],
+      "data_rows": 13,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "lookup-spare-parts-veriscan.csv",
+      "doc_type": "lookup_table",
+      "title": "part_number,description,fits_model,list_price_gbp,lead_time_days,field_replaceable,notes",
+      "date": null,
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 2054,
+      "line_count": 24,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0038"
+        ],
+        "sops": [
+          "SOP-VBS-011"
+        ],
+        "firmware_versions": [
+          "2.3.0"
+        ],
+        "error_codes": [
+          "E-507"
+        ],
+        "spare_parts": [
+          "SP1-ADP-05",
+          "SP1-CBL-232",
+          "SP1-ELE-018",
+          "SP1-KIT-R2UP",
+          "SP1-MEC-140",
+          "SP1-MEC-141",
+          "SP1-MEC-160",
+          "VS4-DIS-140",
+          "VS4-DIS-142",
+          "VS4-ELE-090",
+          "VS4-ELE-115",
+          "VS4-FLU-060",
+          "VS4-FLU-072",
+          "VS4-KIT-PM1",
+          "VS4-MEC-011",
+          "VS4-MEC-033",
+          "VS4-MEC-047",
+          "VS4-OPT-104",
+          "VS4-OPT-118",
+          "VS4-OPT-220",
+          "VS4-OPT-224"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "part_number",
+        "description",
+        "fits_model",
+        "list_price_gbp",
+        "lead_time_days",
+        "field_replaceable",
+        "notes"
+      ],
+      "data_rows": 22,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "lookup-vericonnect-permissions.csv",
+      "doc_type": "lookup_table",
+      "title": "role,permission_key,permission_description,tier_required,notes",
+      "date": null,
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 2410,
+      "line_count": 28,
+      "cross_references": {},
+      "pii_indicators": {},
+      "contains_pii": false,
+      "columns": [
+        "role",
+        "permission_key",
+        "permission_description",
+        "tier_required",
+        "notes"
+      ],
+      "data_rows": 26,
+      "has_trailing_blank_row": false
+    },
+    {
+      "file": "notice-FSN-2024-006.txt",
+      "doc_type": "field_safety_notice",
+      "title": "FIELD SAFETY NOTICE",
+      "date": "2024-11-08",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 2793,
+      "line_count": 64,
+      "cross_references": {
+        "reagent_lots": [
+          "RT-2023-0001",
+          "RT-2024-0028"
+        ],
+        "error_codes": [
+          "E-601"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "notice-FSN-2025-003.txt",
+      "doc_type": "field_safety_notice",
+      "title": "FIELD SAFETY NOTICE",
+      "date": "2025-02-14",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 6666,
+      "line_count": 139,
+      "cross_references": {
+        "reports": [
+          "VBI-0087"
+        ],
+        "reagent_lots": [
+          "L3-2025-0440",
+          "L3-2025-0460",
+          "L3-2025-0471"
+        ],
+        "error_codes": [
+          "E-208",
+          "W-042"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 3,
+        "nhs_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-ce-declaration-of-conformity.txt",
+      "doc_type": "regulatory_summary",
+      "title": "EC DECLARATION OF CONFORMITY",
+      "date": "2025-05-22",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 5991,
+      "line_count": 133,
+      "cross_references": {
+        "referenced_files": [
+          "reg-ivdr-transition-summary.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 2
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-clinical-performance-summary.txt",
+      "doc_type": "regulatory_summary",
+      "title": "VeriScan 400 Pro - Clinical Performance Summary",
+      "date": "2025-11-28",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 11528,
+      "line_count": 227,
+      "cross_references": {
+        "firmware_versions": [
+          "4.0.0"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-data-residency-faq.txt",
+      "doc_type": "regulatory_summary",
+      "title": "VeriConnect Data Residency - Frequently Asked Questions",
+      "date": "2026-05-11",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 9473,
+      "line_count": 193,
+      "cross_references": {
+        "tickets": [
+          "VBST-4345"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-export-control-veriprep-sp1.txt",
+      "doc_type": "regulatory_summary",
+      "title": "Export Control Classification - VeriPrep SP-1 and associated",
+      "date": "2025-10-14",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 9542,
+      "line_count": 185,
+      "cross_references": {
+        "referenced_files": [
+          "spec-verilyse-safety-data-summary-v2.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-gdpr-dpa-template.txt",
+      "doc_type": "regulatory_summary",
+      "title": "DATA PROCESSING AGREEMENT (TEMPLATE)",
+      "date": "2026-01-19",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 15098,
+      "line_count": 295,
+      "cross_references": {},
+      "pii_indicators": {
+        "email_addresses": 2,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-ifu-revision-history.txt",
+      "doc_type": "regulatory_summary",
+      "title": "Instructions for Use - Revision History",
+      "date": "2026-05-11",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 7206,
+      "line_count": 145,
+      "cross_references": {
+        "notices": [
+          "FSN-2024-006",
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0047",
+          "VBB-0052"
+        ],
+        "firmware_versions": [
+          "4.2.3",
+          "4.4.0"
+        ],
+        "error_codes": [
+          "E-118",
+          "E-215",
+          "E-307",
+          "E-408",
+          "E-412",
+          "E-503",
+          "E-507",
+          "E-711",
+          "E-715",
+          "W-031"
+        ],
+        "documents": [
+          "DS-VS400-002"
+        ]
+      },
+      "pii_indicators": {
+        "hostnames": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-ivdr-transition-summary.txt",
+      "doc_type": "regulatory_summary",
+      "title": "IVDR (EU) 2017/746 Transition Status",
+      "date": "2026-05-11",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriScan 200",
+        "VeriPrep SP-1",
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 12018,
+      "line_count": 220,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0049",
+          "VBB-0067"
+        ],
+        "firmware_versions": [
+          "4.3.0"
+        ],
+        "referenced_files": [
+          "reg-clinical-performance-summary.txt",
+          "reg-notified-body-audit-findings.txt",
+          "reg-ukca-self-declaration.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-notified-body-audit-findings.txt",
+      "doc_type": "regulatory_summary",
+      "title": "Notified Body 0086 - Quality Management System Audit 2025",
+      "date": "2026-05-11",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 9856,
+      "line_count": 187,
+      "cross_references": {
+        "tickets": [
+          "VBST-4070"
+        ],
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "reports": [
+          "VBI-0087"
+        ],
+        "sops": [
+          "SOP-VBS-004",
+          "SOP-VBS-014"
+        ],
+        "firmware_versions": [
+          "4.1.0",
+          "4.2.1"
+        ],
+        "documents": [
+          "DS-VG-002"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-soc2-summary.txt",
+      "doc_type": "regulatory_summary",
+      "title": "SOC 2 Type II Report Summary - VeriConnect and VeriGuard",
+      "date": "2026-05-11",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 9303,
+      "line_count": 183,
+      "cross_references": {
+        "tickets": [
+          "VBST-4152"
+        ],
+        "bulletins": [
+          "VBB-0044"
+        ],
+        "reports": [
+          "VBI-0094"
+        ],
+        "referenced_files": [
+          "reg-gdpr-dpa-template.txt",
+          "reg-notified-body-audit-findings.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "reg-ukca-self-declaration.txt",
+      "doc_type": "regulatory_summary",
+      "title": "UKCA DECLARATION OF CONFORMITY",
+      "date": "2025-05-22",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 6889,
+      "line_count": 148,
+      "cross_references": {
+        "referenced_files": [
+          "reg-ivdr-transition-summary.txt"
+        ]
+      },
+      "pii_indicators": {
+        "uk_phone_numbers": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "report-VBI-0087.txt",
+      "doc_type": "investigation_report",
+      "title": "Elevated baseline absorbance in VeriLyse RGT-L3 lots",
+      "date": "2025-02-04",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 16707,
+      "line_count": 322,
+      "cross_references": {
+        "tickets": [
+          "VBST-3847",
+          "VBST-3851",
+          "VBST-3863",
+          "VBST-3871",
+          "VBST-3884"
+        ],
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0047"
+        ],
+        "sops": [
+          "SOP-VBS-001",
+          "SOP-VBS-014"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0146",
+          "FSV-2025-0149",
+          "FSV-2025-0155"
+        ],
+        "accounts": [
+          "ACC-1090"
+        ],
+        "reagent_lots": [
+          "L3-2025-0433",
+          "L3-2025-0440",
+          "L3-2025-0444",
+          "L3-2025-0452",
+          "L3-2025-0460",
+          "L3-2025-0463",
+          "L3-2025-0471"
+        ],
+        "firmware_versions": [
+          "4.4.0"
+        ],
+        "error_codes": [
+          "E-208",
+          "W-042"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "report-VBI-0091.txt",
+      "doc_type": "investigation_report",
+      "title": "HL7 result timestamp drift introduced by VeriScan firmware",
+      "date": "2025-02-24",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 14307,
+      "line_count": 266,
+      "cross_references": {
+        "tickets": [
+          "VBST-3902",
+          "VBST-3910",
+          "VBST-3918",
+          "VBST-3925"
+        ],
+        "bulletins": [
+          "VBB-0041"
+        ],
+        "sops": [
+          "SOP-VBS-014"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0171",
+          "FSV-2025-0180",
+          "FSV-2025-0194"
+        ],
+        "accounts": [
+          "ACC-1103",
+          "ACC-1146"
+        ],
+        "firmware_versions": [
+          "4.2.1"
+        ],
+        "error_codes": [
+          "E-302",
+          "E-503",
+          "E-507"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "report-VBI-0094.txt",
+      "doc_type": "investigation_report",
+      "title": "VeriConnect SAML single sign-on outage, 11 March 2025",
+      "date": "2025-03-11",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 13877,
+      "line_count": 268,
+      "cross_references": {
+        "tickets": [
+          "VBST-4001",
+          "VBST-4003",
+          "VBST-4007",
+          "VBST-4011"
+        ],
+        "bulletins": [
+          "VBB-0044"
+        ],
+        "sops": [
+          "SOP-VBS-004"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0312"
+        ],
+        "accounts": [
+          "ACC-1103",
+          "ACC-1146",
+          "ACC-1270"
+        ],
+        "referenced_files": [
+          "spec-vericonnect-integration-v6.txt"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "sop-VBS-001.txt",
+      "doc_type": "standard_operating_procedure",
+      "title": "Daily Quality Control Procedure - VeriScan 400 and",
+      "date": "2025-06-01",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 14991,
+      "line_count": 302,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0052"
+        ],
+        "sops": [
+          "SOP-VBS-002",
+          "SOP-VBS-011"
+        ],
+        "reagent_lots": [
+          "L3-2025-0440",
+          "L3-2025-0460"
+        ],
+        "firmware_versions": [
+          "4.2.1"
+        ],
+        "error_codes": [
+          "E-104",
+          "E-107",
+          "E-207",
+          "E-711",
+          "W-031",
+          "W-042"
+        ],
+        "spare_parts": [
+          "VS4-OPT-224"
+        ],
+        "referenced_files": [
+          "spec-veriscan-400-pro-v3.txt"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "sop-VBS-002.txt",
+      "doc_type": "standard_operating_procedure",
+      "title": "VeriLyse Reagent Lot Changeover",
+      "date": "2025-05-19",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriScan 200",
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 9793,
+      "line_count": 203,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0047"
+        ],
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "reagent_lots": [
+          "L3-2025-0440",
+          "L3-2025-0460",
+          "L3-2025-0471"
+        ],
+        "firmware_versions": [
+          "4.1.0",
+          "4.4.0"
+        ],
+        "error_codes": [
+          "E-112",
+          "E-302",
+          "E-311"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "sop-VBS-003.txt",
+      "doc_type": "standard_operating_procedure",
+      "title": "VeriPrep SP-1 Decontamination and Jam Clearance",
+      "date": "2025-08-04",
+      "related_products": [
+        "VeriPrep SP-1",
+        "VeriLyse RGT-CL"
+      ],
+      "size_bytes": 8032,
+      "line_count": 181,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0038"
+        ],
+        "error_codes": [
+          "P-112",
+          "P-115",
+          "P-201",
+          "P-501",
+          "P-505"
+        ],
+        "spare_parts": [
+          "SP1-BIN-CAP",
+          "SP1-MEC-160"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "sop-VBS-004.txt",
+      "doc_type": "standard_operating_procedure",
+      "title": "VeriConnect User Provisioning and RBAC Configuration",
+      "date": "2025-09-15",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 10916,
+      "line_count": 230,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0044"
+        ],
+        "reports": [
+          "VBI-0094"
+        ],
+        "referenced_files": [
+          "lookup-vericonnect-permissions.csv"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "sop-VBS-007.txt",
+      "doc_type": "standard_operating_procedure",
+      "title": "Instrument Shipping, Installation and IQ/OQ",
+      "date": "2025-02-03",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 7244,
+      "line_count": 149,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-001",
+          "SOP-VBS-002",
+          "SOP-VBS-009"
+        ],
+        "error_codes": [
+          "E-311",
+          "P-407"
+        ]
+      },
+      "pii_indicators": {
+        "hostnames": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "sop-VBS-009.txt",
+      "doc_type": "standard_operating_procedure",
+      "title": "VeriPrep SP-1 Aliquot Volume Gravimetric Verification",
+      "date": "2024-11-20",
+      "related_products": [
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 5049,
+      "line_count": 113,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-003"
+        ],
+        "error_codes": [
+          "P-201"
+        ],
+        "spare_parts": [
+          "SP1-TIP-1000",
+          "SP1-TIP-200"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "sop-VBS-011.txt",
+      "doc_type": "standard_operating_procedure",
+      "title": "Annual Preventive Maintenance Checklist - VeriScan 400 /",
+      "date": "2025-10-06",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect"
+      ],
+      "size_bytes": 7711,
+      "line_count": 154,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0055",
+          "VBB-0061"
+        ],
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "error_codes": [
+          "E-215",
+          "E-412",
+          "E-607",
+          "P-407",
+          "W-031"
+        ],
+        "spare_parts": [
+          "VS4-DIS-142",
+          "VS4-ELE-090",
+          "VS4-KIT-PM1",
+          "VS4-MEC-011",
+          "VS4-OPT-104",
+          "VS4-OPT-220",
+          "VS4-OPT-224"
+        ],
+        "referenced_files": [
+          "log-firmware-releases.csv"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "sop-VBS-014.txt",
+      "doc_type": "standard_operating_procedure",
+      "title": "Customer Complaint Handling and Vigilance Reporting",
+      "date": "2025-04-28",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 9698,
+      "line_count": 199,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false
+    },
+    {
+      "file": "spec-vericonnect-feature-matrix-v6.txt",
+      "doc_type": "product_specification",
+      "title": "VeriConnect Cloud Laboratory Information Management Platform",
+      "date": "2026-04-21",
+      "related_products": [
+        "VeriScan 200",
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 7447,
+      "line_count": 126,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0049"
+        ],
+        "firmware_versions": [
+          "4.0.0",
+          "4.2.1"
+        ],
+        "documents": [
+          "DS-VC-005",
+          "DS-VC-006"
+        ]
+      },
+      "pii_indicators": {
+        "hostnames": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-vericonnect-integration-v6.txt",
+      "doc_type": "product_specification",
+      "title": "VeriConnect - LIS and EHR Integration",
+      "date": "2026-04-21",
+      "related_products": [
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriConnect"
+      ],
+      "size_bytes": 7626,
+      "line_count": 147,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0044",
+          "VBB-0067"
+        ],
+        "reports": [
+          "VBI-0091"
+        ],
+        "firmware_versions": [
+          "4.0.0",
+          "4.2.1"
+        ],
+        "error_codes": [
+          "E-501",
+          "E-503"
+        ],
+        "documents": [
+          "DS-VC-INT-006"
+        ],
+        "referenced_files": [
+          "lookup-hl7-message-mapping.csv"
+        ]
+      },
+      "pii_indicators": {
+        "hostnames": 2,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-veriguard-v2.txt",
+      "doc_type": "product_specification",
+      "title": "VeriGuard - Cybersecurity and Compliance Module for VeriConnect",
+      "date": "2026-01-19",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 7433,
+      "line_count": 138,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0044"
+        ],
+        "reports": [
+          "VBI-0094"
+        ],
+        "firmware_versions": [
+          "4.1.0",
+          "4.4.0"
+        ],
+        "documents": [
+          "DS-VG-001",
+          "DS-VG-002"
+        ],
+        "referenced_files": [
+          "lookup-vericonnect-permissions.csv",
+          "reg-gdpr-dpa-template.txt",
+          "reg-soc2-summary.txt"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-verilyse-rgt-cl-v2.txt",
+      "doc_type": "product_specification",
+      "title": "VeriLyse RGT-CL Cleaning Solution",
+      "date": "2024-12-11",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1",
+        "VeriLyse RGT-CL"
+      ],
+      "size_bytes": 4179,
+      "line_count": 95,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-001",
+          "SOP-VBS-003"
+        ],
+        "error_codes": [
+          "E-207",
+          "P-201",
+          "W-042"
+        ],
+        "spare_parts": [
+          "VS4-OPT-220",
+          "VS4-OPT-224"
+        ],
+        "documents": [
+          "DS-RGT-CL-002"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-verilyse-rgt-d5-v3.txt",
+      "doc_type": "product_specification",
+      "title": "VeriLyse RGT-D5 Standard Diluent",
+      "date": "2025-06-03",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriScan 200",
+        "VeriPrep SP-1",
+        "VeriLyse RGT-D5",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 5848,
+      "line_count": 123,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0049"
+        ],
+        "sops": [
+          "SOP-VBS-002"
+        ],
+        "reagent_lots": [
+          "D5-2025-0158"
+        ],
+        "firmware_versions": [
+          "3.4.0",
+          "3.8.0",
+          "4.3.0"
+        ],
+        "error_codes": [
+          "E-304",
+          "W-035"
+        ],
+        "documents": [
+          "DS-RGT-D5-003"
+        ],
+        "referenced_files": [
+          "log-reagent-lots-2025.csv",
+          "spec-verilyse-safety-data-summary-v2.txt"
+        ]
+      },
+      "pii_indicators": {
+        "hostnames": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-verilyse-rgt-l3-v4.txt",
+      "doc_type": "product_specification",
+      "title": "VeriLyse RGT-L3 Lyse Reagent",
+      "date": "2025-06-03",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriScan 200",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 6503,
+      "line_count": 140,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0047",
+          "VBB-0049"
+        ],
+        "reports": [
+          "VBI-0087"
+        ],
+        "sops": [
+          "SOP-VBS-002"
+        ],
+        "reagent_lots": [
+          "L3-2025-0440",
+          "L3-2025-0460",
+          "L3-2025-0471"
+        ],
+        "documents": [
+          "DS-RGT-L3-003",
+          "DS-RGT-L3-004"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-verilyse-rgt-rt-v3.txt",
+      "doc_type": "product_specification",
+      "title": "VeriLyse RGT-RT Reticulocyte Stain",
+      "date": "2025-01-08",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 4593,
+      "line_count": 98,
+      "cross_references": {
+        "notices": [
+          "FSN-2024-006"
+        ],
+        "firmware_versions": [
+          "4.1.0"
+        ],
+        "error_codes": [
+          "E-302",
+          "E-601"
+        ],
+        "documents": [
+          "DS-RGT-RT-003"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-verilyse-safety-data-summary-v2.txt",
+      "doc_type": "product_specification",
+      "title": "VERIDIA BIOSYSTEMS - SAFETY DATA SUMMARY",
+      "date": "2025-06-03",
+      "related_products": [
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 6107,
+      "line_count": 114,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0047"
+        ],
+        "documents": [
+          "DS-SDS-SUM-002"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2,
+        "hostnames": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-veriprep-sp1-v4.txt",
+      "doc_type": "product_specification",
+      "title": "VeriPrep SP-1 Automated Sample Preparation Station",
+      "date": "2025-08-14",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriPrep SP-1",
+        "VeriLyse RGT-CL"
+      ],
+      "size_bytes": 8385,
+      "line_count": 166,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0038",
+          "VBB-0055"
+        ],
+        "sops": [
+          "SOP-VBS-003"
+        ],
+        "firmware_versions": [
+          "2.0.0",
+          "2.3.0",
+          "4.3.0"
+        ],
+        "error_codes": [
+          "P-101",
+          "P-103",
+          "P-105",
+          "P-112",
+          "P-405",
+          "P-407"
+        ],
+        "spare_parts": [
+          "SP1-ADP-05",
+          "SP1-BIN-CAP",
+          "SP1-CBL-232",
+          "SP1-KIT-R2UP",
+          "SP1-MEC-140",
+          "SP1-MEC-141",
+          "SP1-MEC-160",
+          "SP1-SVC-GOLD",
+          "SP1-TIP-1000",
+          "SP1-TIP-200"
+        ],
+        "documents": [
+          "DS-SP1-003",
+          "DS-SP1-004",
+          "DS-SP1-PROTO-002"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-veriscan-200-legacy-v5.txt",
+      "doc_type": "product_specification",
+      "title": "VeriScan 200 Benchtop Haematology Analyser",
+      "date": "2025-04-08",
+      "related_products": [
+        "VeriScan 400",
+        "VeriScan 200",
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 4960,
+      "line_count": 101,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0049",
+          "VBB-0052"
+        ],
+        "firmware_versions": [
+          "3.4.0",
+          "3.6.0"
+        ],
+        "documents": [
+          "DS-VS200-005"
+        ],
+        "referenced_files": [
+          "lookup-reagent-compatibility.csv",
+          "reg-ivdr-transition-summary.txt",
+          "spec-veriscan-400-v3.txt"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-veriscan-400-pro-v3.txt",
+      "doc_type": "product_specification",
+      "title": "VeriScan 400 Pro Benchtop Haematology Analyser",
+      "date": "2025-05-22",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 10744,
+      "line_count": 209,
+      "cross_references": {
+        "notices": [
+          "FSN-2024-006",
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0052"
+        ],
+        "firmware_versions": [
+          "4.3.0"
+        ],
+        "error_codes": [
+          "E-215",
+          "E-601",
+          "E-604",
+          "E-607",
+          "E-711",
+          "E-715"
+        ],
+        "spare_parts": [
+          "VS4-OPT-104",
+          "VS4-OPT-118",
+          "VS4-OPT-224"
+        ],
+        "documents": [
+          "DS-VS400P-002",
+          "DS-VS400P-003"
+        ],
+        "referenced_files": [
+          "lookup-error-codes-veriscan-400.csv",
+          "reg-clinical-performance-summary.txt"
+        ]
+      },
+      "pii_indicators": {
+        "hostnames": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-veriscan-400-v2.txt",
+      "doc_type": "product_specification",
+      "title": "VeriScan 400 Benchtop Haematology Analyser",
+      "date": "2024-05-10",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 8346,
+      "line_count": 176,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "error_codes": [
+          "E-302"
+        ],
+        "spare_parts": [
+          "VS4-KIT-PM1",
+          "VS4-SVC-GOLD"
+        ],
+        "documents": [
+          "DS-VS400-001",
+          "DS-VS400-002",
+          "DS-VS400-CLIN-002"
+        ],
+        "referenced_files": [
+          "reg-clinical-performance-summary.txt",
+          "reg-ivdr-transition-summary.txt",
+          "reg-ukca-self-declaration.txt"
+        ]
+      },
+      "pii_indicators": {
+        "uk_phone_numbers": 1,
+        "hostnames": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-veriscan-400-v3.txt",
+      "doc_type": "product_specification",
+      "title": "VeriScan 400 Benchtop Haematology Analyser",
+      "date": "2025-05-22",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 10688,
+      "line_count": 212,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0047",
+          "VBB-0052"
+        ],
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "reagent_lots": [
+          "L3-2025-0440",
+          "L3-2025-0460",
+          "L3-2025-0471"
+        ],
+        "firmware_versions": [
+          "4.3.0",
+          "4.4.0"
+        ],
+        "error_codes": [
+          "E-302",
+          "W-031"
+        ],
+        "spare_parts": [
+          "VS4-KIT-PM1",
+          "VS4-SVC-GOLD"
+        ],
+        "documents": [
+          "DS-VS400-002",
+          "DS-VS400-003"
+        ],
+        "referenced_files": [
+          "log-firmware-releases.csv",
+          "lookup-reagent-compatibility.csv",
+          "reg-ivdr-transition-summary.txt",
+          "reg-ukca-self-declaration.txt"
+        ]
+      },
+      "pii_indicators": {
+        "uk_phone_numbers": 1,
+        "hostnames": 1,
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-veriscan-tube-compatibility-v2.txt",
+      "doc_type": "product_specification",
+      "title": "VERIDIA BIOSYSTEMS - SUPPORTED CONSUMABLES SPECIFICATION",
+      "date": "2025-09-10",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 5900,
+      "line_count": 116,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0038"
+        ],
+        "error_codes": [
+          "E-104",
+          "P-101",
+          "P-103",
+          "P-105",
+          "P-112",
+          "P-304",
+          "W-050"
+        ],
+        "spare_parts": [
+          "SP1-ADP-05",
+          "SP1-KIT-R2UP"
+        ],
+        "documents": [
+          "DS-CONS-001",
+          "DS-CONS-002"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "spec-veritrol-control-materials-v2.txt",
+      "doc_type": "product_specification",
+      "title": "VeriTrol Haematology Control Materials",
+      "date": "2025-07-16",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 5375,
+      "line_count": 107,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-001",
+          "SOP-VBS-002"
+        ],
+        "documents": [
+          "DS-QC-002"
+        ]
+      },
+      "pii_indicators": {
+        "vat_or_company_numbers": 1
+      },
+      "contains_pii": true
+    },
+    {
+      "file": "ticket-VBST-3795.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3795 - VeriPrep SP-1 - Mid Yorkshire Teaching NHS Trust",
+      "date": "2024-12-19",
+      "related_products": [
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 5994,
+      "line_count": 135,
+      "cross_references": {
+        "tickets": [
+          "VBST-3812",
+          "VBST-4098"
+        ],
+        "bulletins": [
+          "VBB-0038"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0114"
+        ],
+        "accounts": [
+          "ACC-1117"
+        ],
+        "error_codes": [
+          "P-101",
+          "P-105",
+          "P-112"
+        ],
+        "spare_parts": [
+          "SP1-ADP-05",
+          "SP1-MEC-160"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Mid Yorkshire Teaching NHS Trust (ACC-1117)",
+      "assigned_to": "Danny Whitcombe (Support Engineer) -> Rob Ellery (FSE North)",
+      "serial": "SP1-R1-0219",
+      "firmware": "SP-1 2.2.0 / VeriScan 4.2.0",
+      "message_count": 12
+    },
+    {
+      "file": "ticket-VBST-3812.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3812 - VeriPrep SP-1 - St Aloysius Pathology, Dublin",
+      "date": "2025-01-16",
+      "related_products": [
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 2882,
+      "line_count": 70,
+      "cross_references": {
+        "tickets": [
+          "VBST-3795"
+        ],
+        "bulletins": [
+          "VBB-0038"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0130"
+        ],
+        "accounts": [
+          "ACC-1185"
+        ],
+        "error_codes": [
+          "P-105"
+        ],
+        "spare_parts": [
+          "SP1-ADP-05"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "St Aloysius Pathology, Dublin (ACC-1185)",
+      "assigned_to": "Hannah Bright (Support Engineer) -> Dev Patel (FSE)",
+      "serial": "SP1-R1-0288",
+      "firmware": "SP-1 2.2.0",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-3820.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3820 - VeriPrep SP-1 - Synlab Nordwest GmbH",
+      "date": "2025-01-20",
+      "related_products": [
+        "VeriPrep SP-1",
+        "VeriLyse RGT-CL"
+      ],
+      "size_bytes": 4259,
+      "line_count": 103,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-003",
+          "SOP-VBS-009"
+        ],
+        "accounts": [
+          "ACC-1206"
+        ],
+        "error_codes": [
+          "P-201"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Synlab Nordwest GmbH (ACC-1206)",
+      "assigned_to": "Aisha Rahman (Support Engineering L2)",
+      "serial": "SP1-R1-0173",
+      "firmware": "SP-1 2.2.0",
+      "message_count": 7
+    },
+    {
+      "file": "ticket-VBST-3847.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3847 - VeriScan 400 - Countess of Chester Hospital NHS Foundation Trust",
+      "date": "2025-01-28",
+      "related_products": [
+        "VeriScan 400",
+        "VeriLyse RGT-D5",
+        "VeriLyse RGT-L3",
+        "VeriLyse RGT-CL"
+      ],
+      "size_bytes": 8960,
+      "line_count": 201,
+      "cross_references": {
+        "tickets": [
+          "VBST-3851",
+          "VBST-3863",
+          "VBST-3871",
+          "VBST-3884"
+        ],
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "reports": [
+          "VBI-0087"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0146"
+        ],
+        "accounts": [
+          "ACC-1090"
+        ],
+        "reagent_lots": [
+          "CL-2024-0059",
+          "D5-2025-0104",
+          "L3-2025-0421",
+          "L3-2025-0433",
+          "L3-2025-0440",
+          "L3-2025-0444",
+          "L3-2025-0448",
+          "L3-2025-0452",
+          "L3-2025-0460"
+        ],
+        "error_codes": [
+          "E-208",
+          "W-042"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "hostnames": 1,
+        "specimen_ids": 3
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Countess of Chester Hospital NHS Foundation Trust (ACC-1090)",
+      "assigned_to": "Danny Whitcombe (Support Engineer) -> Marcus Chen (QC",
+      "serial": "VS4-0402",
+      "firmware": "4.2.0",
+      "message_count": 16
+    },
+    {
+      "file": "ticket-VBST-3851.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3851 - VeriScan 400 - Alderley Diagnostics Ltd",
+      "date": "2025-01-30",
+      "related_products": [
+        "VeriScan 400",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 5191,
+      "line_count": 123,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0149"
+        ],
+        "accounts": [
+          "ACC-1152"
+        ],
+        "reagent_lots": [
+          "L3-2025-0440",
+          "L3-2025-0452"
+        ],
+        "error_codes": [
+          "W-042"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Alderley Diagnostics Ltd (ACC-1152)",
+      "assigned_to": "Owen Trask (Support Engineer L1) -> Kasia Nowak (FSE Midlands)",
+      "serial": "VS4-0918",
+      "firmware": "4.2.0",
+      "message_count": 13
+    },
+    {
+      "file": "ticket-VBST-3863.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3863 - VeriScan 400 - Betsi Cadwaladr University Health Board",
+      "date": "2025-02-03",
+      "related_products": [
+        "VeriScan 400",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 6163,
+      "line_count": 150,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "reports": [
+          "VBI-0087"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0155"
+        ],
+        "accounts": [
+          "ACC-1263"
+        ],
+        "reagent_lots": [
+          "L3-2025-0433",
+          "L3-2025-0440",
+          "L3-2025-0448",
+          "L3-2025-0460"
+        ],
+        "error_codes": [
+          "E-208",
+          "E-211"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 2,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P1-Critical",
+      "customer": "Betsi Cadwaladr University Health Board (ACC-1263)",
+      "assigned_to": "Hannah Bright (Support Engineer) -> Dev Patel (FSE)",
+      "serial": "VS4-0655",
+      "firmware": "4.2.0",
+      "message_count": 14
+    },
+    {
+      "file": "ticket-VBST-3871.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3871 - VeriScan 400 - Sheffield Teaching Hospitals NHS FT",
+      "date": "2025-02-05",
+      "related_products": [
+        "VeriScan 400",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 2327,
+      "line_count": 64,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "accounts": [
+          "ACC-1255"
+        ],
+        "reagent_lots": [
+          "L3-2024-0402",
+          "L3-2025-0421",
+          "L3-2025-0440",
+          "L3-2025-0444",
+          "L3-2025-0452",
+          "L3-2025-0455"
+        ],
+        "error_codes": [
+          "W-042"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "Sheffield Teaching Hospitals NHS FT (ACC-1255)",
+      "assigned_to": "Owen Trask (Support Engineer L1)",
+      "serial": "VS4-0810",
+      "firmware": "4.2.0",
+      "message_count": 7
+    },
+    {
+      "file": "ticket-VBST-3878.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3878 - VeriScan 400 Pro - Synlab Nordwest GmbH",
+      "date": "2025-02-06",
+      "related_products": [
+        "VeriScan 400 Pro"
+      ],
+      "size_bytes": 3347,
+      "line_count": 84,
+      "cross_references": {
+        "field_service_visits": [
+          "FSV-2025-0163"
+        ],
+        "accounts": [
+          "ACC-1206"
+        ],
+        "error_codes": [
+          "E-215"
+        ],
+        "spare_parts": [
+          "VS4-OPT-118"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Synlab Nordwest GmbH (ACC-1206)",
+      "assigned_to": "Hannah Bright (Support Engineer) -> Ingrid Sorensen (FSE)",
+      "serial": "VS4P-0311",
+      "firmware": "4.2.0",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-3884.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3884 - VeriScan 400 - Thornbury Path Services Ltd",
+      "date": "2025-02-07",
+      "related_products": [
+        "VeriScan 400",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 3469,
+      "line_count": 79,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "accounts": [
+          "ACC-1168"
+        ],
+        "reagent_lots": [
+          "L3-2025-0440",
+          "L3-2025-0448",
+          "L3-2025-0460"
+        ]
+      },
+      "pii_indicators": {
+        "uk_phone_numbers": 2
+      },
+      "contains_pii": true,
+      "status": "Resolved (customer unresponsive)",
+      "priority": "P3-Medium",
+      "customer": "Thornbury Path Services Ltd (ACC-1168)",
+      "assigned_to": "Owen Trask (Support Engineer L1)",
+      "serial": "VS4-0877",
+      "firmware": "4.1.2",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-3902.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3902 - VeriConnect / VeriScan 400 Pro - Royal Free London NHS Foundation Trust",
+      "date": "2025-02-19",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriConnect"
+      ],
+      "size_bytes": 8320,
+      "line_count": 187,
+      "cross_references": {
+        "tickets": [
+          "VBST-3910"
+        ],
+        "bulletins": [
+          "VBB-0041"
+        ],
+        "reports": [
+          "VBI-0091"
+        ],
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0171"
+        ],
+        "accounts": [
+          "ACC-1103"
+        ],
+        "firmware_versions": [
+          "4.2.0",
+          "4.2.1",
+          "4.2.3"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "ip_addresses": 1,
+        "hostnames": 2
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Royal Free London NHS Foundation Trust (ACC-1103)",
+      "assigned_to": "Owen Trask (L1) -> Aisha Rahman (Support Engineering L2)",
+      "serial": "VS4P-0503, VS4P-0511",
+      "firmware": "4.2.1",
+      "message_count": 15
+    },
+    {
+      "file": "ticket-VBST-3910.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3910 - VeriScan 400 Pro / VeriConnect - University Hospitals Birmingham NHS FT",
+      "date": "2025-02-21",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriConnect"
+      ],
+      "size_bytes": 7429,
+      "line_count": 172,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0041"
+        ],
+        "reports": [
+          "VBI-0091"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0180"
+        ],
+        "accounts": [
+          "ACC-1146"
+        ],
+        "firmware_versions": [
+          "4.2.0",
+          "4.2.1",
+          "4.2.3"
+        ],
+        "error_codes": [
+          "E-503"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 2,
+        "uk_phone_numbers": 1,
+        "ip_addresses": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "University Hospitals Birmingham NHS FT (ACC-1146)",
+      "assigned_to": "Aisha Rahman (Support Engineering L2)",
+      "serial": "VS4P-0447, VS4P-0452",
+      "firmware": "4.2.1",
+      "message_count": 13
+    },
+    {
+      "file": "ticket-VBST-3918.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3918 - VeriScan 400 Pro - Universitaetsspital Basel - Haematologie",
+      "date": "2025-02-26",
+      "related_products": [
+        "VeriScan 400 Pro"
+      ],
+      "size_bytes": 4562,
+      "line_count": 107,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0041"
+        ],
+        "reports": [
+          "VBI-0091"
+        ],
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "accounts": [
+          "ACC-1190"
+        ],
+        "firmware_versions": [
+          "4.2.2"
+        ],
+        "error_codes": [
+          "E-507"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "Universitaetsspital Basel - Haematologie (ACC-1190)",
+      "assigned_to": "Aisha Rahman (Support Engineering L2)",
+      "serial": "VS4P-0288",
+      "firmware": "4.2.2",
+      "message_count": 7
+    },
+    {
+      "file": "ticket-VBST-3925.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-3925 - VeriScan 400 Pro - Guy's and St Thomas' NHS Foundation Trust",
+      "date": "2025-03-03",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriConnect"
+      ],
+      "size_bytes": 7041,
+      "line_count": 148,
+      "cross_references": {
+        "tickets": [
+          "VBST-3910"
+        ],
+        "bulletins": [
+          "VBB-0041"
+        ],
+        "reports": [
+          "VBI-0091"
+        ],
+        "accounts": [
+          "ACC-1270"
+        ],
+        "firmware_versions": [
+          "4.2.1"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "Guy's and St Thomas' NHS Foundation Trust (ACC-1270)",
+      "assigned_to": "Sarah Lindgren (Regulatory Affairs Manager)",
+      "serial": "multiple (fleet query)",
+      "firmware": "4.2.1",
+      "message_count": 7
+    },
+    {
+      "file": "ticket-VBST-4001.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4001 - VeriConnect - Royal Free London NHS Foundation Trust",
+      "date": "2025-03-11",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 6280,
+      "line_count": 143,
+      "cross_references": {
+        "tickets": [
+          "VBST-4003",
+          "VBST-4007",
+          "VBST-4011"
+        ],
+        "bulletins": [
+          "VBB-0044"
+        ],
+        "reports": [
+          "VBI-0094"
+        ],
+        "accounts": [
+          "ACC-1103"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P1-Critical",
+      "customer": "Royal Free London NHS Foundation Trust (ACC-1103)",
+      "assigned_to": "Owen Trask (L1) -> Aisha Rahman (L2) -> Yusuf Demir (Cloud Ops)",
+      "message_count": 17
+    },
+    {
+      "file": "ticket-VBST-4003.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4003 - VeriConnect / VeriGuard - Guy's and St Thomas' NHS Foundation Trust",
+      "date": "2025-03-11",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 5316,
+      "line_count": 125,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0044"
+        ],
+        "reports": [
+          "VBI-0094"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0312"
+        ],
+        "accounts": [
+          "ACC-1270"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "hostnames": 2
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P1-Critical",
+      "customer": "Guy's and St Thomas' NHS Foundation Trust (ACC-1270)",
+      "assigned_to": "Owen Trask (L1) -> Yusuf Demir (Cloud Ops) -> Tom Reeves",
+      "message_count": 13
+    },
+    {
+      "file": "ticket-VBST-4007.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4007 - VeriConnect - Greater Manchester Pathology Network",
+      "date": "2025-03-11",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 2341,
+      "line_count": 60,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0044"
+        ],
+        "reports": [
+          "VBI-0094"
+        ],
+        "sops": [
+          "SOP-VBS-004"
+        ],
+        "accounts": [
+          "ACC-1042"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "hostnames": 2
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P1-Critical",
+      "customer": "Greater Manchester Pathology Network (ACC-1042)",
+      "assigned_to": "Owen Trask (Support Engineer L1)",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4011.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4011 - VeriConnect - Sheffield Teaching Hospitals NHS FT",
+      "date": "2025-03-11",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 1186,
+      "line_count": 39,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0044"
+        ],
+        "reports": [
+          "VBI-0094"
+        ],
+        "accounts": [
+          "ACC-1255"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Sheffield Teaching Hospitals NHS FT (ACC-1255)",
+      "assigned_to": "Owen Trask (Support Engineer L1)",
+      "message_count": 6
+    },
+    {
+      "file": "ticket-VBST-4022.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4022 - VeriScan 400 - NHS Lothian - Royal Infirmary of Edinburgh",
+      "date": "2025-03-26",
+      "related_products": [
+        "VeriScan 400"
+      ],
+      "size_bytes": 3861,
+      "line_count": 96,
+      "cross_references": {
+        "field_service_visits": [
+          "FSV-2025-0203"
+        ],
+        "accounts": [
+          "ACC-1078"
+        ],
+        "error_codes": [
+          "E-104"
+        ],
+        "spare_parts": [
+          "VS4-MEC-011"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "NHS Lothian - Royal Infirmary of Edinburgh (ACC-1078)",
+      "assigned_to": "Danny Whitcombe (Support Engineer) -> Callum Frazer (FSE)",
+      "serial": "VS4-0733",
+      "firmware": "4.2.3",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4041.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4041 - VeriScan 400 Pro - Nuffield Health Leeds Hospital",
+      "date": "2025-04-17",
+      "related_products": [
+        "VeriScan 400 Pro"
+      ],
+      "size_bytes": 1814,
+      "line_count": 50,
+      "cross_references": {
+        "field_service_visits": [
+          "FSV-2025-0225"
+        ],
+        "accounts": [
+          "ACC-1171"
+        ],
+        "spare_parts": [
+          "VS4-DIS-142"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P4-Low",
+      "customer": "Nuffield Health Leeds Hospital (ACC-1171)",
+      "assigned_to": "Owen Trask (Support Engineer L1) -> Rob Ellery (FSE)",
+      "serial": "VS4P-0712",
+      "firmware": "4.2.3",
+      "message_count": 6
+    },
+    {
+      "file": "ticket-VBST-4056.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4056 - VeriScan 400 Pro - Hopitaux Universitaires de Geneve",
+      "date": "2025-04-29",
+      "related_products": [
+        "VeriScan 400 Pro"
+      ],
+      "size_bytes": 4708,
+      "line_count": 115,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0052"
+        ],
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0238"
+        ],
+        "accounts": [
+          "ACC-1198"
+        ],
+        "firmware_versions": [
+          "4.2.3"
+        ],
+        "error_codes": [
+          "E-607",
+          "W-031"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Hopitaux Universitaires de Geneve (ACC-1198)",
+      "assigned_to": "Hannah Bright (Support Engineer) -> Nils Berger (FSE)",
+      "serial": "VS4P-0559",
+      "firmware": "4.2.3",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4063.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4063 - VeriScan 400 Pro - Norfolk and Norwich University Hospitals NHS FT",
+      "date": "2025-05-13",
+      "related_products": [
+        "VeriScan 400 Pro"
+      ],
+      "size_bytes": 3355,
+      "line_count": 82,
+      "cross_references": {
+        "field_service_visits": [
+          "FSV-2025-0246"
+        ],
+        "accounts": [
+          "ACC-1129"
+        ],
+        "error_codes": [
+          "E-412"
+        ],
+        "spare_parts": [
+          "VS4-MEC-047"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P1-Critical",
+      "customer": "Norfolk and Norwich University Hospitals NHS FT (ACC-1129)",
+      "assigned_to": "Danny Whitcombe (Support Engineer) -> Marta Oliveira (FSE)",
+      "serial": "VS4P-0668",
+      "firmware": "4.3.0",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4070.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4070 - VeriGuard - University Hospitals Birmingham NHS FT",
+      "date": "2025-06-17",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 5654,
+      "line_count": 125,
+      "cross_references": {
+        "accounts": [
+          "ACC-1146"
+        ],
+        "firmware_versions": [
+          "4.1.0",
+          "4.2.3",
+          "4.4.0"
+        ],
+        "documents": [
+          "DS-VG-002"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "University Hospitals Birmingham NHS FT (ACC-1146)",
+      "assigned_to": "Tom Reeves (Product Manager, VeriConnect)",
+      "message_count": 9
+    },
+    {
+      "file": "ticket-VBST-4085.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4085 - VeriScan 400 - Laboratoire Cerba Ouest",
+      "date": "2025-06-03",
+      "related_products": [
+        "VeriScan 400"
+      ],
+      "size_bytes": 4957,
+      "line_count": 115,
+      "cross_references": {
+        "accounts": [
+          "ACC-1214"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved (no root cause established)",
+      "priority": "P3-Medium",
+      "customer": "Laboratoire Cerba Ouest (ACC-1214)",
+      "assigned_to": "Marcus Chen (QC Applications Specialist)",
+      "serial": "VS4-0851",
+      "firmware": "4.2.3",
+      "message_count": 10
+    },
+    {
+      "file": "ticket-VBST-4098.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4098 - VeriPrep SP-1 - Mid Yorkshire Teaching NHS Trust",
+      "date": "2025-06-05",
+      "related_products": [
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 4190,
+      "line_count": 100,
+      "cross_references": {
+        "tickets": [
+          "VBST-3795",
+          "VBST-3812"
+        ],
+        "bulletins": [
+          "VBB-0038",
+          "VBB-0055"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0271"
+        ],
+        "accounts": [
+          "ACC-1117"
+        ],
+        "firmware_versions": [
+          "2.3.0",
+          "4.2.3"
+        ],
+        "error_codes": [
+          "P-105",
+          "P-407"
+        ],
+        "spare_parts": [
+          "SP1-KIT-R2UP",
+          "SP1-MEC-140",
+          "SP1-MEC-141"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Mid Yorkshire Teaching NHS Trust (ACC-1117)",
+      "assigned_to": "Danny Whitcombe (Support Engineer) -> Rob Ellery (FSE)",
+      "serial": "SP1-R1-0219",
+      "firmware": "SP-1 2.2.0",
+      "message_count": 7
+    },
+    {
+      "file": "ticket-VBST-4110.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4110 - VeriLyse RGT-D5 / VeriScan 400 - Greater Manchester Pathology Network",
+      "date": "2025-06-18",
+      "related_products": [
+        "VeriScan 400",
+        "VeriLyse RGT-D5"
+      ],
+      "size_bytes": 4864,
+      "line_count": 114,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-002"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0284"
+        ],
+        "accounts": [
+          "ACC-1042"
+        ],
+        "reagent_lots": [
+          "D5-2025-0158"
+        ],
+        "error_codes": [
+          "E-311"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "Greater Manchester Pathology Network (ACC-1042)",
+      "assigned_to": "Hannah Bright (Support Engineer) -> Olu Adeyemi (Reagent",
+      "serial": "VS4-0779",
+      "firmware": "4.2.3",
+      "message_count": 9
+    },
+    {
+      "file": "ticket-VBST-4128.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4128 - VeriLyse RGT-L3 - Belfast Health and Social Care Trust",
+      "date": "2025-07-08",
+      "related_products": [
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 2522,
+      "line_count": 60,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0061"
+        ],
+        "accounts": [
+          "ACC-1134"
+        ],
+        "firmware_versions": [
+          "4.3.0"
+        ],
+        "error_codes": [
+          "E-304",
+          "W-035"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P4-Low",
+      "customer": "Belfast Health and Social Care Trust (ACC-1134)",
+      "assigned_to": "Owen Trask (Support Engineer L1)",
+      "message_count": 5
+    },
+    {
+      "file": "ticket-VBST-4142.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4142 - VeriScan 400 (customer believed VeriScan 400 Pro) - Countess of Chester Hospital NHS Foundation Trust",
+      "date": "2025-07-24",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 4104,
+      "line_count": 100,
+      "cross_references": {
+        "accounts": [
+          "ACC-1090"
+        ],
+        "error_codes": [
+          "E-302"
+        ],
+        "referenced_files": [
+          "lookup-error-codes-veriscan-400.csv",
+          "spec-veriscan-400-pro-v3.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "hostnames": 1,
+        "purchase_order_refs": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "Countess of Chester Hospital NHS Foundation Trust (ACC-1090)",
+      "assigned_to": "Owen Trask (Support Engineer L1)",
+      "serial": "VS4-0402",
+      "firmware": "4.2.3",
+      "message_count": 7
+    },
+    {
+      "file": "ticket-VBST-4152.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4152 - VeriConnect - Synlab Nordwest GmbH",
+      "date": "2025-08-06",
+      "related_products": [
+        "VeriConnect"
+      ],
+      "size_bytes": 3536,
+      "line_count": 84,
+      "cross_references": {
+        "accounts": [
+          "ACC-1206"
+        ]
+      },
+      "pii_indicators": {
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "Synlab Nordwest GmbH (ACC-1206)",
+      "assigned_to": "Yusuf Demir (Cloud Operations)",
+      "message_count": 7
+    },
+    {
+      "file": "ticket-VBST-4160.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4160 - VeriScan 400 - Northumbria Healthcare NHS Foundation Trust",
+      "date": "2025-08-12",
+      "related_products": [
+        "VeriScan 400"
+      ],
+      "size_bytes": 3802,
+      "line_count": 95,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0052"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0341"
+        ],
+        "accounts": [
+          "ACC-1057"
+        ],
+        "error_codes": [
+          "E-101",
+          "W-031"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P4-Low",
+      "customer": "Northumbria Healthcare NHS Foundation Trust (ACC-1057)",
+      "assigned_to": "Owen Trask (Support Engineer L1) -> Rob Ellery (FSE)",
+      "serial": "VS4-0596",
+      "firmware": "4.3.0",
+      "message_count": 6
+    },
+    {
+      "file": "ticket-VBST-4175.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4175 - VeriLyse RGT-RT - Cardiff and Vale University Health Board",
+      "date": "2025-08-27",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriLyse RGT-RT"
+      ],
+      "size_bytes": 2856,
+      "line_count": 75,
+      "cross_references": {
+        "tickets": [
+          "VBST-4142"
+        ],
+        "accounts": [
+          "ACC-1063"
+        ],
+        "reagent_lots": [
+          "RT-2025-0049"
+        ],
+        "error_codes": [
+          "E-302"
+        ],
+        "referenced_files": [
+          "lookup-reagent-compatibility.csv",
+          "spec-verilyse-rgt-rt-v3.txt"
+        ]
+      },
+      "pii_indicators": {
+        "purchase_order_refs": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P4-Low",
+      "customer": "Cardiff and Vale University Health Board (ACC-1063)",
+      "assigned_to": "Hannah Bright (Support Engineer)",
+      "serial": "VS4P-0620, VS4P-0631, VS4-0703",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4185.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4185 - VeriPrep SP-1 / VeriScan 400 - Massachusetts Coastal Medical Center",
+      "date": "2025-09-02",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 3838,
+      "line_count": 84,
+      "cross_references": {
+        "accounts": [
+          "ACC-1248"
+        ],
+        "error_codes": [
+          "P-405"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "nhs_numbers": 1
+      },
+      "contains_pii": true,
+      "status": "Closed (unable to reproduce, customer unresponsive)",
+      "priority": "P3-Medium",
+      "customer": "Massachusetts Coastal Medical Center (ACC-1248)",
+      "assigned_to": "Aisha Rahman (Support Engineering L2)",
+      "serial": "SP1-R2-0061 / VS4P-0808",
+      "firmware": "SP-1 2.3.0 / VeriScan 4.3.0",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4200.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4200 - VeriScan 400 / VeriConnect - Greater Manchester Pathology Network",
+      "date": "2025-09-16",
+      "related_products": [
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 4549,
+      "line_count": 104,
+      "cross_references": {
+        "accounts": [
+          "ACC-1042"
+        ],
+        "error_codes": [
+          "E-503"
+        ],
+        "referenced_files": [
+          "lookup-hl7-message-mapping.csv",
+          "spec-vericonnect-integration-v6.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "ip_addresses": 1,
+        "hostnames": 2
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Greater Manchester Pathology Network (ACC-1042)",
+      "assigned_to": "Aisha Rahman (Support Engineering L2)",
+      "serial": "multiple (VS4-0771, VS4-0779, VS4-0784)",
+      "firmware": "4.3.0",
+      "message_count": 7
+    },
+    {
+      "file": "ticket-VBST-4225.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4225 - VeriPrep SP-1 / VeriScan 400 Pro - University Hospitals Birmingham NHS FT",
+      "date": "2025-09-29",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriPrep SP-1",
+        "VeriConnect"
+      ],
+      "size_bytes": 2745,
+      "line_count": 68,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0055",
+          "VBB-0061"
+        ],
+        "accounts": [
+          "ACC-1146"
+        ],
+        "firmware_versions": [
+          "2.2.0",
+          "2.3.0",
+          "4.3.0"
+        ],
+        "error_codes": [
+          "P-407"
+        ],
+        "referenced_files": [
+          "lookup-error-codes-veriprep-sp1.csv"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "University Hospitals Birmingham NHS FT (ACC-1146)",
+      "assigned_to": "Danny Whitcombe (Support Engineer)",
+      "serial": "SP1-R2-0044 / VS4P-0447",
+      "firmware": "SP-1 2.2.0 / VeriScan 4.3.0",
+      "message_count": 6
+    },
+    {
+      "file": "ticket-VBST-4231.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4231 - VeriScan 400 Pro - Royal Free London NHS Foundation Trust",
+      "date": "2025-09-24",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriConnect",
+        "VeriLyse RGT-RT",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 4679,
+      "line_count": 121,
+      "cross_references": {
+        "field_service_visits": [
+          "FSV-2025-0384"
+        ],
+        "accounts": [
+          "ACC-1103"
+        ],
+        "reagent_lots": [
+          "RT-2025-0041",
+          "RT-2025-0049"
+        ],
+        "spare_parts": [
+          "VS4-OPT-224"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Royal Free London NHS Foundation Trust (ACC-1103)",
+      "assigned_to": "Marcus Chen (QC Applications Specialist) -> Marta Oliveira (FSE)",
+      "serial": "VS4P-0503",
+      "firmware": "4.3.0",
+      "message_count": 9
+    },
+    {
+      "file": "ticket-VBST-4240.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4240 - VeriGuard / VeriConnect - Universitaetsspital Basel - Haematologie",
+      "date": "2025-10-08",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 4643,
+      "line_count": 108,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-004"
+        ],
+        "accounts": [
+          "ACC-1190"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Universitaetsspital Basel - Haematologie (ACC-1190)",
+      "assigned_to": "Tom Reeves (Product Manager, VeriConnect)",
+      "message_count": 9
+    },
+    {
+      "file": "ticket-VBST-4249.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4249 - VeriScan 400 - NHS Lothian - Royal Infirmary of Edinburgh",
+      "date": "2025-10-14",
+      "related_products": [
+        "VeriScan 400"
+      ],
+      "size_bytes": 3860,
+      "line_count": 93,
+      "cross_references": {
+        "reports": [
+          "VBI-0091"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0401"
+        ],
+        "accounts": [
+          "ACC-1078"
+        ],
+        "firmware_versions": [
+          "4.2.1"
+        ],
+        "error_codes": [
+          "E-507"
+        ],
+        "spare_parts": [
+          "VS4-ELE-090",
+          "VS4-OPT-104"
+        ]
+      },
+      "pii_indicators": {
+        "ip_addresses": 1,
+        "hostnames": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "NHS Lothian - Royal Infirmary of Edinburgh (ACC-1078)",
+      "assigned_to": "Owen Trask (Support Engineer L1) -> Callum Frazer (FSE)",
+      "serial": "VS4-0733",
+      "firmware": "4.3.0",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4268.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4268 - VeriScan 400 - Belfast Health and Social Care Trust",
+      "date": "2025-10-27",
+      "related_products": [
+        "VeriScan 400"
+      ],
+      "size_bytes": 5098,
+      "line_count": 121,
+      "cross_references": {
+        "field_service_visits": [
+          "FSV-2025-0418"
+        ],
+        "accounts": [
+          "ACC-1134"
+        ],
+        "error_codes": [
+          "E-402"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Closed (cannot reproduce)",
+      "priority": "P3-Medium",
+      "customer": "Belfast Health and Social Care Trust (ACC-1134)",
+      "assigned_to": "Danny Whitcombe (Support Engineer) -> Callum Frazer (FSE)",
+      "serial": "VS4-0481",
+      "firmware": "4.3.0",
+      "message_count": 11
+    },
+    {
+      "file": "ticket-VBST-4290.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4290 - VeriScan 400 / VeriScan 400 Pro - Sheffield Teaching Hospitals NHS FT",
+      "date": "2025-11-18",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriConnect",
+        "VeriTrol controls"
+      ],
+      "size_bytes": 4115,
+      "line_count": 98,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "accounts": [
+          "ACC-1255"
+        ],
+        "referenced_files": [
+          "spec-veritrol-control-materials-v2.txt"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Sheffield Teaching Hospitals NHS FT (ACC-1255)",
+      "assigned_to": "Marcus Chen (QC Applications Specialist)",
+      "serial": "VS4P-0388",
+      "firmware": "4.3.1",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4301.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4301 - VeriScan 400 - Alderley Diagnostics Ltd",
+      "date": "2025-12-02",
+      "related_products": [
+        "VeriScan 400",
+        "VeriLyse RGT-CL"
+      ],
+      "size_bytes": 3981,
+      "line_count": 96,
+      "cross_references": {
+        "sops": [
+          "SOP-VBS-001"
+        ],
+        "field_service_visits": [
+          "FSV-2025-0447"
+        ],
+        "accounts": [
+          "ACC-1152"
+        ],
+        "reagent_lots": [
+          "D5-2025-0211",
+          "L3-2025-0510"
+        ],
+        "error_codes": [
+          "E-207"
+        ],
+        "spare_parts": [
+          "VS4-OPT-220"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Alderley Diagnostics Ltd (ACC-1152)",
+      "assigned_to": "Owen Trask (Support Engineer L1) -> Kasia Nowak (FSE)",
+      "serial": "VS4-0918",
+      "firmware": "4.3.1",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4310.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4310 - VeriLyse RGT-L3 / VeriScan 400 - Uppsala Klinisk Kemi och Farmakologi",
+      "date": "2025-12-15",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400",
+        "VeriLyse RGT-L3"
+      ],
+      "size_bytes": 4367,
+      "line_count": 104,
+      "cross_references": {
+        "notices": [
+          "FSN-2025-003"
+        ],
+        "bulletins": [
+          "VBB-0047"
+        ],
+        "reports": [
+          "VBI-0087"
+        ],
+        "sops": [
+          "SOP-VBS-002"
+        ],
+        "accounts": [
+          "ACC-1222"
+        ],
+        "reagent_lots": [
+          "L3-2025-0499",
+          "L3-2025-0510"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "Uppsala Klinisk Kemi och Farmakologi (ACC-1222)",
+      "assigned_to": "Marcus Chen (QC Applications Specialist)",
+      "serial": "VS4P-0755",
+      "firmware": "4.3.1",
+      "message_count": 6
+    },
+    {
+      "file": "ticket-VBST-4330.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4330 - VeriPrep SP-1 - St Aloysius Pathology, Dublin",
+      "date": "2026-01-13",
+      "related_products": [
+        "VeriScan 400",
+        "VeriPrep SP-1"
+      ],
+      "size_bytes": 3403,
+      "line_count": 78,
+      "cross_references": {
+        "tickets": [
+          "VBST-3812"
+        ],
+        "bulletins": [
+          "VBB-0038",
+          "VBB-0055"
+        ],
+        "accounts": [
+          "ACC-1185"
+        ],
+        "firmware_versions": [
+          "2.3.0",
+          "4.3.0",
+          "4.4.0"
+        ],
+        "error_codes": [
+          "P-105",
+          "P-407"
+        ],
+        "spare_parts": [
+          "SP1-KIT-R2UP",
+          "SP1-MEC-141"
+        ]
+      },
+      "pii_indicators": {
+        "purchase_order_refs": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P4-Low",
+      "customer": "St Aloysius Pathology, Dublin (ACC-1185)",
+      "assigned_to": "Hannah Bright (Support Engineer)",
+      "serial": "SP1-R1-0288",
+      "message_count": 6
+    },
+    {
+      "file": "ticket-VBST-4345.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4345 - VeriConnect - Mid Yorkshire Teaching NHS Trust",
+      "date": "2026-01-28",
+      "related_products": [
+        "VeriScan 400",
+        "VeriConnect"
+      ],
+      "size_bytes": 5691,
+      "line_count": 119,
+      "cross_references": {
+        "bulletins": [
+          "VBB-0041",
+          "VBB-0044"
+        ],
+        "reports": [
+          "VBI-0091",
+          "VBI-0094"
+        ],
+        "accounts": [
+          "ACC-1117"
+        ],
+        "firmware_versions": [
+          "4.2.1"
+        ]
+      },
+      "pii_indicators": {},
+      "contains_pii": false,
+      "status": "Resolved (partially explained)",
+      "priority": "P3-Medium",
+      "customer": "Mid Yorkshire Teaching NHS Trust (ACC-1117)",
+      "assigned_to": "Tom Reeves (Product Manager, VeriConnect)",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4355.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4355 - VeriScan 400 Pro - Wirral University Teaching Hospital NHS FT",
+      "date": "2026-02-11",
+      "related_products": [
+        "VeriScan 400 Pro",
+        "VeriScan 400"
+      ],
+      "size_bytes": 4715,
+      "line_count": 104,
+      "cross_references": {
+        "tickets": [
+          "VBST-4142",
+          "VBST-4175"
+        ],
+        "accounts": [
+          "ACC-1284"
+        ],
+        "documents": [
+          "DS-VS400-003"
+        ],
+        "referenced_files": [
+          "spec-veriscan-400-pro-v3.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P3-Medium",
+      "customer": "Wirral University Teaching Hospital NHS FT (ACC-1284)",
+      "assigned_to": "Owen Trask (Support Engineer L1) -> Marcus Chen (QC Applications)",
+      "serial": "VS4-1002",
+      "firmware": "4.4.0",
+      "message_count": 8
+    },
+    {
+      "file": "ticket-VBST-4380.txt",
+      "doc_type": "support_ticket",
+      "title": "Support ticket VBST-4380 - VeriGuard - Royal Free London NHS Foundation Trust",
+      "date": "2026-03-04",
+      "related_products": [
+        "VeriConnect",
+        "VeriGuard"
+      ],
+      "size_bytes": 5581,
+      "line_count": 122,
+      "cross_references": {
+        "accounts": [
+          "ACC-1103"
+        ],
+        "referenced_files": [
+          "reg-gdpr-dpa-template.txt"
+        ]
+      },
+      "pii_indicators": {
+        "email_addresses": 1,
+        "uk_phone_numbers": 1,
+        "nhs_numbers": 1
+      },
+      "contains_pii": true,
+      "status": "Resolved",
+      "priority": "P2-High",
+      "customer": "Royal Free London NHS Foundation Trust (ACC-1103)",
+      "assigned_to": "Ruth Amankwah (Data Protection Officer)",
+      "message_count": 7
+    }
+  ]
+}

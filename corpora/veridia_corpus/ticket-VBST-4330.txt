@@ -1,0 +1,77 @@
+Ticket ID: VBST-4330
+Status: Resolved
+Priority: P4-Low
+Created: 2026-01-13 11:45 UTC
+Product: VeriPrep SP-1
+Customer: St Aloysius Pathology, Dublin (ACC-1185)
+Reported by: Cathal Brennan, Chief Medical Scientist
+Assigned to: Hannah Bright (Support Engineer)
+Serial: SP1-R1-0288
+
+--- Thread ---
+
+[2026-01-13 11:45] Cathal Brennan (Chief Medical Scientist):
+Following on from VBST-3812 last year. We renewed in October and the r2
+retrofit was discussed but never actually quoted. Can I get a quote please?
+
+Adapters have held up well - maybe one jam a month - but we're expanding and
+adding a second analyser and I'd rather not carry a known limitation into a
+bigger operation.
+
+[2026-01-13 14:20] Hannah Bright (Support Engineer):
+Of course, and apologies that it fell through the cracks at renewal.
+
+SP1-KIT-R2UP, list GBP 1,150 (EUR equivalent at the prevailing rate). Includes
+the r2 feed mechanism SP1-MEC-141, revised harness, scanner bracket, gripper
+jaw set and the firmware 2.3.0 licence. 28-day lead time.
+
+Fitting is an engineer visit, approximately 6 hours, plus a 200-tube
+verification run. Your contract is Silver so the visit is chargeable at the
+Silver rate; I'll get you a full number rather than leaving you to add it up.
+
+The goodwill programme from VBB-0055 gave 50% off list to sites with an open
+jam ticket raised before 2025-07-30. Your VBST-3812 was raised in January 2025
+and was resolved rather than left open, so strictly you don't qualify. I'm
+going to ask anyway, because the substance of the case is the same as sites
+that did qualify and the difference is only that you closed your ticket
+promptly. That seems like the wrong thing to penalise.
+
+[2026-01-19 10:00] Hannah Bright (Support Engineer):
+Approved. James Okafor agreed the goodwill rate applies.
+
+Quote QTE-2026-0188 attached: SP1-KIT-R2UP at 50% of list, plus the engineer
+visit at Silver rate. Valid 60 days.
+
+One planning point for your second analyser: SP-1 firmware 2.3.0, which comes
+with the retrofit, is required for VeriScan firmware 4.3.0 and above. If your
+new analyser ships on 4.4.0, which it will, then doing the retrofit before or
+at the same time as the install saves you a P-407 and a second visit.
+
+[2026-01-19 11:30] Cathal Brennan (Chief Medical Scientist):
+Very good of you to ask on our behalf, thank you.
+
+Quote approved. Please coordinate the retrofit with the new analyser install -
+Camille Roux has the install date.
+
+[2026-03-05 17:00] Ingrid Sorensen (Field Service Engineer):
+Retrofit completed alongside the new analyser install. SP1-KIT-R2UP fitted,
+firmware 2.3.0. New analyser VS4-1088 on firmware 4.4.0, integrated over LAN
+with static addressing.
+
+Verification: 200-tube run with the site's own short-cap 5mL stock, no
+adapters. Zero jams, zero P-105, one barcode retry which succeeded.
+
+Adapters retained by the site as spares, which is sensible.
+
+Time on site 9.0 hours (retrofit plus install plus integration).
+
+[2026-03-06 09:15] Cathal Brennan (Chief Medical Scientist):
+All working. Two years of jams over in a day.
+
+--- Resolution ---
+Commercial enquiry leading to SP-1r2 retrofit. Goodwill rate extended by
+exception (customer had closed the original ticket promptly and so fell
+outside the literal VBB-0055 criteria).
+Retrofit fitted 2026-03-05 alongside a new analyser install; verified zero
+jams over 200 tubes without adapters.
+See also: VBST-3812, VBB-0038, VBB-0055

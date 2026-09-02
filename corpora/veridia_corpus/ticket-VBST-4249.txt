@@ -1,0 +1,92 @@
+Ticket ID: VBST-4249
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-10-14 09:00 UTC
+Product: VeriScan 400
+Customer: NHS Lothian - Royal Infirmary of Edinburgh (ACC-1078)
+Reported by: Fiona Sutherland, Chief BMS
+Assigned to: Owen Trask (Support Engineer L1) -> Callum Frazer (FSE)
+Serial: VS4-0733
+Firmware: 4.3.0
+
+--- Thread ---
+
+[2025-10-14 09:00] Fiona Sutherland (Chief BMS):
+E-507 internal clock not synchronised, appearing several times a day since the
+trust network change last week. Timestamps on the instrument display look
+right to me.
+
+I know you've had a timestamp problem before, so I want to be clear this is a
+warning on the instrument, not something we've noticed in the LIS.
+
+[2025-10-14 10:30] Owen Trask (Support Engineer L1):
+Thank you for distinguishing those - it saves confusion. This is a different
+thing entirely from the 4.2.1 defect. E-507 means the instrument cannot reach
+its NTP server or the real-time clock is drifting faster than the sync can
+correct.
+
+Given "since the trust network change", first suspicion is that the NTP server
+address or the firewall rule changed.
+
+Please check Settings > Time. What NTP server is configured, and does the
+screen show a recent successful sync?
+
+[2025-10-14 13:45] Fiona Sutherland (Chief BMS):
+Configured server is 10.32.4.11. Last successful sync shown as 6 days ago.
+
+Our network team say that address was decommissioned in the change and NTP is
+now served from ntp.lothian.scot.nhs.uk.
+
+[2025-10-14 14:20] Owen Trask (Support Engineer L1):
+That's the immediate cause. Update the server address in Settings > Time and
+the instrument should sync within a few minutes.
+
+But six days without sync should not produce several E-507 a day unless the
+RTC is also drifting quickly. A healthy RTC drifts a minute or two a week. So
+once you've fixed the NTP address, watch whether E-507 goes away entirely or
+comes back.
+
+[2025-10-15 09:15] Fiona Sutherland (Chief BMS):
+Updated the address, synced immediately. E-507 stopped yesterday afternoon.
+
+It came back twice overnight though.
+
+[2025-10-15 10:30] Owen Trask (Support Engineer L1):
+Then the RTC battery is likely near end of life as well - the two things
+together explain it. The instrument is now correcting a fast-drifting clock
+against a reachable server, and E-507 fires when the correction exceeds the
+threshold.
+
+Part is VS4-ELE-090, GBP 18.50. Callum Frazer can fit it, or your staff can -
+it's a coin cell in a holder behind the rear panel. Given this instrument has
+had a probe change earlier in the year I'd rather Callum did it and had a
+general look while he's there.
+
+[2025-10-21 15:00] Callum Frazer (Field Service Engineer):
+Attended (FSV-2025-0401). RTC battery VS4-ELE-090 replaced. Measured 2.41 V on
+removal against a 3.0 V nominal, which is why it was drifting.
+
+Reconfigured NTP to ntp.lothian.scot.nhs.uk and verified sync. Set the check
+interval to hourly.
+
+Measured drift over the 4 hours I was on site: under 1 second. No E-507.
+
+General check while on site: probe from the April replacement is in good
+condition, no burr. Fluidics normal. QC in range. Lamp at 2,010 hours - over
+the 2,000 h nominal life, flagged to the site for replacement at the next PM
+in January, and left a VS4-OPT-104 on the shelf so they have it.
+
+Time on site 2.0 hours.
+
+[2025-10-22 09:00] Fiona Sutherland (Chief BMS):
+No E-507 since. Thanks - and thanks for leaving the lamp, that's the sort of
+thing that saves us a call in January.
+
+--- Resolution ---
+Root cause: two contributing causes - NTP server decommissioned in a trust
+network change, and RTC battery at 2.41 V (nominal 3.0 V) causing fast clock
+drift.
+Actions: NTP reconfigured to ntp.lothian.scot.nhs.uk; RTC battery VS4-ELE-090
+replaced (FSV-2025-0401).
+NOT related to the firmware 4.2.1 timestamp defect (VBI-0091) - different
+mechanism, instrument-side warning only.

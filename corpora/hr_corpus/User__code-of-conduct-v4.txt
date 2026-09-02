@@ -1,0 +1,224 @@
+=================================================================
+VERIDIA BIOSYSTEMS - CODE OF CONDUCT
+=================================================================
+Document:      HR-POL-001
+Version:       4
+Effective:     2025-04-01
+Supersedes:    Version 3 (2023-01-01)
+Owner:         Sunita Raval, General Counsel and Company Secretary
+Approved by:   Board of Directors, 2025-03-18
+Applies to:    All employees, contractors, agency workers, interns and
+               non-executive directors, in all locations.
+Acknowledgement required: on joining and annually thereafter.
+
+-----------------------------------------------------------------
+1. WHY THIS ONE MATTERS MORE THAN MOST
+-----------------------------------------------------------------
+Most companies' codes of conduct are written by lawyers to protect the
+company. This one partly is, and Sunita wrote it. But there is a reason it is
+taken more seriously here than the genre usually deserves.
+
+We make medical devices. A result from a VeriScan analyser can be the thing
+that tells a clinician a patient's white cell count is rising. If we cut a
+corner, the consequence is not an unhappy customer, it is a wrong number in
+front of a doctor.
+
+That single fact sits behind most of what follows.
+
+-----------------------------------------------------------------
+2. PRODUCT SAFETY AND QUALITY - THE FIRST OBLIGATION
+-----------------------------------------------------------------
+2.1  If you believe a Veridia product is unsafe, is not performing as it
+     should, or that a quality or regulatory obligation is not being met, you
+     must report it. This is not discretionary and it is not something you can
+     delegate to somebody more senior.
+
+2.2  Report to: your manager, Sarah Lindgren (Regulatory Affairs), Simone
+     Buehler (QA), or anonymously through the speak-up channel. Any of these
+     is a valid route and you do not have to try one before another.
+
+2.3  Veridia will not retaliate. Not in your appraisal, not in your pay
+     review, not in a restructure, not socially. Retaliation is a dismissable
+     offence and it applies to the most senior people in the company.
+
+2.4  You will not be criticised for raising a concern that turns out to be
+     unfounded, provided you raised it honestly. We would far rather
+     investigate ten things that turn out fine than miss one that does not.
+
+2.5  Never falsify, backdate or destroy a quality record, a training record, a
+     calibration record or a complaint record. Never sign for work you did not
+     do or witness. Never mark a task complete that is not. These are not
+     administrative matters; they are the things auditors and regulators look
+     at and they are the things that go badly wrong.
+
+-----------------------------------------------------------------
+3. HOW WE TREAT EACH OTHER
+-----------------------------------------------------------------
+3.1  Bullying, harassment, discrimination and victimisation are not tolerated.
+     This includes conduct that is not intended to cause harm but does.
+
+3.2  It applies at work, at customer sites, at conferences, at company events,
+     in messaging channels, and at the pub afterwards. The last one is where
+     most of the incidents we have dealt with actually occurred.
+
+3.3  Disagreement is not disrespect. We want people to argue about technical
+     decisions and to say the unwelcome thing. The line is between attacking
+     an idea and attacking a person, and most people know exactly where it is.
+
+3.4  Seniority is not a licence. The more senior you are the more your
+     behaviour sets the standard, and the more damage impatience does.
+
+3.5  If someone tells you your behaviour is affecting them, the correct first
+     response is to listen, not to explain your intention.
+
+-----------------------------------------------------------------
+4. CONFIDENTIALITY
+-----------------------------------------------------------------
+4.1  Do not discuss a named customer outside Veridia. Not on social media, not
+     at a conference bar, not with a friend who works at a hospital. Our
+     customers tell us about their instrument failures, their staffing
+     problems and their accreditation anxieties on the understanding that it
+     stays with us.
+
+4.2  Do not share commercially sensitive information - pricing, roadmaps,
+     tender responses, customer volumes.
+
+4.3  Patient data. VeriConnect may hold patient identifiers on behalf of
+     customers. You will encounter it if you work in support or field service.
+     You may access it only where a specific support case requires it, and
+     every access is logged and attributable to you. Curiosity is not a
+     legitimate purpose.
+
+4.4  Confidentiality obligations survive your employment.
+
+4.5  Confidentiality never prevents you from raising a safety concern, making
+     a protected disclosure, reporting discrimination, or speaking to a
+     regulator. Nothing in any Veridia agreement is intended to have that
+     effect, and if you are ever presented with a document that appears to,
+     tell the General Counsel.
+
+-----------------------------------------------------------------
+5. CONFLICTS OF INTEREST
+-----------------------------------------------------------------
+5.1  Declare anything that could reasonably look like a conflict. The test is
+     how it would look written down by someone unsympathetic.
+
+5.2  Declarable: a financial interest in a competitor, customer or supplier;
+     a close personal relationship with someone at a customer or supplier; a
+     second job or consultancy; a relative applying for a job here; a
+     directorship elsewhere.
+
+5.3  RELATIONSHIPS AT WORK. Consenting relationships between colleagues are
+     nobody's business except where one party manages, assesses, or influences
+     the pay or progression of the other. In that case it must be declared to
+     the People team so that the reporting line or the assessment can be
+     changed. The declaration is confidential. Nobody is in trouble for the
+     relationship; people would be in trouble for concealing it while sitting
+     on the other's pay review.
+
+5.4  Declare to your manager and to Sunita Raval. The register is confidential.
+     Declaring something is never held against you.
+
+-----------------------------------------------------------------
+6. GIFTS AND HOSPITALITY
+-----------------------------------------------------------------
+6.1  We sell to publicly funded healthcare systems. The rules are stricter
+     than in most industries and the reputational exposure is asymmetric.
+
+6.2  NHS and public sector customers:
+       - Never offer or give cash or a cash equivalent.
+       - Modest hospitality directly connected to a legitimate business
+         purpose is acceptable - lunch at a customer meeting, refreshments at
+         a user group.
+       - Anything beyond that needs prior approval from your Director and
+         Sunita Raval.
+       - Never anything that could influence, or appear to influence, a
+         procurement decision. If a tender is live, the answer is no.
+
+6.3  Receiving: you may accept a gift of nominal value (a pen, chocolates).
+     Anything over GBP 50 / CHF 50 must be declared and will usually be
+     donated or raffled.
+
+6.4  If in doubt, ask before, not after. Nobody has ever been criticised for
+     asking.
+
+-----------------------------------------------------------------
+7. ANTI-BRIBERY AND CORRUPTION
+-----------------------------------------------------------------
+7.1  We operate under the UK Bribery Act 2010, which is extraterritorial and
+     applies to Veridia's conduct anywhere in the world.
+
+7.2  Never offer, give, request or accept a bribe. Never make a facilitation
+     payment, even where it is customary locally. If you are asked for one,
+     refuse and report it - to Sunita Raval the same day.
+
+7.3  This applies to anyone acting on Veridia's behalf, including
+     distributors and agents. If you manage one, you are responsible for
+     knowing how they behave.
+
+-----------------------------------------------------------------
+8. COMPETITION LAW
+-----------------------------------------------------------------
+8.1  Never discuss pricing, market allocation, bid strategy or customer
+     allocation with a competitor. Not at a trade association, not at a
+     conference, not informally.
+
+8.2  If such a conversation starts, say clearly that you cannot take part,
+     leave, and report it to Sunita Raval. Being present and silent is not a
+     defence.
+
+-----------------------------------------------------------------
+9. USE OF COMPANY SYSTEMS
+-----------------------------------------------------------------
+9.1  Reasonable personal use is fine.
+
+9.2  Do not install unapproved software on a device that touches customer data
+     or the quality system.
+
+9.3  Do not put company or customer information into a third-party service -
+     including AI tools - that has not been approved. Approved tools are
+     listed on the intranet. This is not a prohibition on AI; several teams
+     use approved tools daily. It is a prohibition on pasting a customer's
+     confidential incident report into an unapproved one.
+
+9.4  Report a lost or stolen device immediately, at any hour.
+     security@veridiabio.com or +44 1223 496 199.
+
+-----------------------------------------------------------------
+10. SPEAKING PUBLICLY
+-----------------------------------------------------------------
+10.1 You may say you work at Veridia and describe your role. You are not a
+     spokesperson.
+
+10.2 Media enquiries go to marketing. Regulatory enquiries go to Sarah
+     Lindgren. Legal enquiries go to Sunita Raval. Never answer directly, even
+     to say "no comment" - forward it.
+
+10.3 Publishing, presenting or speaking about your work: encouraged, with
+     prior approval from your Director. We have never refused one that did not
+     contain confidential customer information.
+
+-----------------------------------------------------------------
+11. WHEN THE CODE IS BREACHED
+-----------------------------------------------------------------
+11.1 Handled under the disciplinary procedure, proportionately. Most breaches
+     are mistakes and are handled as learning.
+
+11.2 Some things are gross misconduct: falsifying a quality or regulatory
+     record; deliberately concealing a product safety concern; retaliation
+     against someone who raised one; bribery; serious harassment; deliberate
+     misuse of patient data.
+
+11.3 The code applies to everyone. Two of the four formal code investigations
+     since 2022 concerned people at L4 or above.
+
+-----------------------------------------------------------------
+12. QUESTIONS
+-----------------------------------------------------------------
+Sunita Raval, General Counsel - sunita.raval@veridiabio.com
+Naomi Okonjo-Bright, Chief People Officer - naomi.okonjo-bright@veridiabio.com
+Speak-up line: see User__policy-whistleblowing-speak-up-v3.txt
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

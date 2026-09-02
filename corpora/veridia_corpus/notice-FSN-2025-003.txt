@@ -1,0 +1,138 @@
+=====================================================
+FIELD SAFETY NOTICE
+=====================================================
+Reference: FSN-2025-003
+Date Issued: 2025-02-14
+Urgency: Urgent - Action Required
+Issued by: Veridia BioSystems Ltd., 41 Hurst Way, Cambridge CB4 0WS, United Kingdom
+Signatory: Sarah Lindgren, Regulatory Affairs Manager
+Distribution: All customers with recorded shipments of affected lots; MHRA; Swissmedic;
+              national competent authorities of receiving EU member states.
+
+Affected Product(s):
+  VeriLyse RGT-L3 Lyse Reagent Cartridge (formulation revision C)
+  Catalogue number: VL-L3-500
+
+Affected Lot(s):
+  L3-2025-0440 through L3-2025-0460 inclusive
+  (21 lot numbers; see Appendix A of the covering letter for the shipped subset)
+
+Affected Instruments:
+  VeriScan 400 (all serial numbers)
+  NOTE: VeriScan 400 Pro is NOT affected by this notice. See "Scope" below.
+
+-----------------------------------------------------
+DESCRIPTION OF ISSUE
+-----------------------------------------------------
+Veridia BioSystems has identified that RGT-L3 lyse reagent cartridges from the lot
+range above may exhibit elevated baseline absorbance at 535 nm. The elevation
+develops progressively after the cartridge is placed on board and becomes
+measurable from approximately day 5 of on-board use.
+
+On VeriScan 400 analysers the elevated baseline shifts the WBC differential
+scatter/absorbance gating thresholds. The observed effect is:
+
+  (a) spurious WBC abnormal-scatter flags (instrument flag "WBC ABN SCATTER");
+  (b) intermittent W-042 "Background WBC count elevated" warnings;
+  (c) in a minority of cases, E-208 "Baseline absorbance out of range" errors
+      that halt the run;
+  (d) a positive bias on the WBC count of up to +0.9 x10^9/L at the upper end
+      of the observed distribution.
+
+The bias is not accompanied by a corresponding change in the RBC or platelet
+channels. Haemoglobin results are unaffected.
+
+-----------------------------------------------------
+SCOPE - WHY VERISCAN 400 PRO IS NOT AFFECTED
+-----------------------------------------------------
+The VeriScan 400 Pro uses a laser-based optical bench with an independent
+reference photodiode and applies a per-run baseline subtraction that compensates
+for the absorbance shift described above. Testing of the affected lots on Pro
+instruments (n = 240 samples across 4 instruments, see report VBI-0087 section 5)
+showed no clinically significant deviation.
+
+Customers operating a mixed fleet must nonetheless withdraw affected lots from
+ALL instruments, because cartridges are physically interchangeable between
+models and there is no on-instrument block preventing use of an affected lot on
+a VeriScan 400.
+
+-----------------------------------------------------
+RISK ASSESSMENT
+-----------------------------------------------------
+A health hazard evaluation was completed on 2025-02-12. The identified risk is
+that a spuriously elevated or flagged WBC result could prompt unnecessary
+repeat testing, a blood film review, or - in the worst credible case - a
+clinical decision based on an apparent leucocytosis that is not present.
+
+Because the affected results carry instrument flags in the great majority of
+cases, and because laboratory practice requires flagged differentials to be
+reviewed before authorisation, the residual risk of an unreviewed erroneous
+result reaching a clinician is assessed as LOW. No serious injury, no death and
+no adverse patient outcome has been reported to Veridia in connection with this
+issue.
+
+Nineteen (19) customer complaints were received between 2025-01-28 and
+2025-02-13 that are attributable to this issue.
+
+-----------------------------------------------------
+ACTION REQUIRED
+-----------------------------------------------------
+1. Immediately quarantine all RGT-L3 cartridges with lot numbers in the range
+   L3-2025-0440 to L3-2025-0460 inclusive, whether on board an instrument or in
+   stores. The lot number is printed on the cartridge label and on the outer
+   carton, and is also displayed on the instrument under
+   Reagents > Cartridge Detail.
+
+2. If an affected cartridge is currently on board a VeriScan 400, remove it,
+   install an unaffected cartridge, and run a Blank Cycle followed by full
+   QC (both levels) before resuming patient testing.
+
+3. Review WBC results and differentials reported from VeriScan 400 instruments
+   during the period in which an affected lot was on board. Veridia recommends
+   that laboratories review flagged results in particular. VeriConnect users on
+   Professional tier and above can run the report
+   Reports > Retrospective > Reagent Lot Exposure to generate this list
+   automatically.
+
+4. Complete and return the enclosed Customer Reply Form within 10 working days,
+   even if you hold no affected stock. Return by email to
+   fsn-response@veridiabio.com or by fax to +44 1223 496 118.
+
+5. Arrange return of quarantined stock. Veridia will issue a returns
+   authorisation number and prepaid shipping documentation on receipt of your
+   reply form. Replacement stock from lot L3-2025-0471 onwards will be shipped
+   at no charge, carriage paid, on a 1:1 basis.
+
+6. Forward this notice to any other organisation to which you have transferred
+   affected product.
+
+-----------------------------------------------------
+INVESTIGATION STATUS
+-----------------------------------------------------
+Root cause investigation is documented in report VBI-0087. At the time of
+issue, the investigation had provisionally identified a raw material change in
+the buffering agent supplied for the affected production campaign. The
+investigation was closed on 2025-04-02; a summary is available on request.
+A revised formulation (revision D) entered production with lot L3-2025-0471.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Technical queries:   James Okafor, VP Customer Support
+                     james.okafor@veridiabio.com  |  +44 1223 496 100
+Regulatory queries:  Sarah Lindgren, Regulatory Affairs Manager
+                     sarah.lindgren@veridiabio.com  |  +44 1223 496 142
+Returns and stock:   fsn-response@veridiabio.com
+Out of hours:        +44 800 118 4477 (Platinum and Gold support customers)
+
+Customers in Switzerland should direct queries to the Basel office:
+Veridia BioSystems Schweiz GmbH, Klybeckstrasse 141, 4057 Basel  |  +41 61 271 0330
+
+The undersigned confirms that this notice has been notified to the appropriate
+regulatory agencies.
+
+Sarah Lindgren
+Regulatory Affairs Manager
+Veridia BioSystems Ltd.
+2025-02-14
+=====================================================

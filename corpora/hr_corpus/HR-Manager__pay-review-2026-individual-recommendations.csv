@@ -1,0 +1,50 @@
+employee_id,full_name,job_title,function,level,band,country,current_salary,currency,compa_ratio,performance_outcome,manager_recommended_pct,calibrated_pct,equal_pay_correction_pct,new_salary,effective_date,manager,notes
+VB-0018,Elena Marchetti,Chief Scientific Officer,Executive,L6,B6,UK,178000,GBP,1.08,Exceptional,2.0,2.0,0.0,181560,2026-01-01,Alistair Vance,RemCo approved
+VB-0029,Naomi Okonjo-Bright,Chief People Officer,Executive,L6,B6,UK,162000,GBP,0.98,Strong,3.0,3.0,0.0,166860,2026-01-01,Alistair Vance,RemCo approved
+VB-0036,Gary Pemberton,Chief Financial Officer,Executive,L6,B6,UK,171000,GBP,1.04,Strong,2.5,2.5,0.0,175275,2026-01-01,Alistair Vance,RemCo approved
+VB-0042,James Okafor,VP Customer Support,Support,L5,B5,UK,118000,GBP,1.07,Exceptional,3.0,3.5,0.0,122130,2026-01-01,Alistair Vance,Recall and firmware response cited in calibration
+VB-0049,Michael Ashworth,Chief Commercial Officer,Executive,L6,B6,UK,168000,GBP,1.02,Strong,2.5,2.5,0.0,172200,2026-01-01,Alistair Vance,RemCo approved
+VB-0055,Simone Buehler,QA Manager,Quality,L4,C4,CH,158000,CHF,1.04,Exceptional,3.0,3.5,0.0,163530,2026-01-01,Elena Marchetti,NB audit outcome cited
+VB-0061,Wen Li,Principal Scientist - Reagents,R&D,L4,B4,UK,84000,GBP,1.08,Exceptional,2.5,3.0,0.0,86520,2026-01-01,Elena Marchetti,VBI-0087 root cause work
+VB-0067,Sunita Raval,General Counsel,Legal,L5,B5,UK,112000,GBP,1.02,Strong,3.0,3.0,0.0,115360,2026-01-01,Alistair Vance,
+VB-0071,Priya Anand,Head of Field Service Engineering,Field Service,L4,B4,UK,79000,GBP,1.01,Exceptional,3.5,4.5,0.0,82555,2026-01-01,James Okafor,Retention risk flagged; approached by competitor Q3 2025
+VB-0079,Olu Adeyemi,Reagent Manufacturing Lead,Manufacturing,L4,C4,CH,146000,CHF,0.96,Strong,2.0,2.0,0.0,148920,2026-01-01,Simone Buehler,
+VB-0084,Ben Whittle,Commercial Operations Manager,Commercial,L3,B3,UK,58000,GBP,1.04,Strong,2.5,2.5,0.0,59450,2026-01-01,Michael Ashworth,
+VB-0088,Sarah Lindgren,Regulatory Affairs Manager,Regulatory,L3,B3,UK,54000,GBP,0.96,Exceptional,4.0,5.0,3.2,58968,2026-01-01,Elena Marchetti,EQUAL PAY CORRECTION APPLIED - see guidance s.6. Regulatory premium also applied to band.
+VB-0092,Ingrid Sorensen,Field Service Engineer,Field Service,L3,C3,CH,118000,CHF,1.03,Strong,2.0,2.0,0.0,120360,2026-01-01,Priya Anand,
+VB-0103,Tom Reeves,Product Manager VeriConnect,Product,L4,B4,UK,81000,GBP,1.04,Strong,3.0,3.0,0.0,83430,2026-01-01,Michael Ashworth,
+VB-0112,Peter Doyle,Sales Manager UK North,Commercial,L3,B3,UK,57000,GBP,1.02,Strong,2.5,2.5,0.0,58425,2026-01-01,Michael Ashworth,Commission separate
+VB-0119,Marcus Chen,QC Applications Specialist,Applications,L3,B3,UK,59000,GBP,1.05,Exceptional,3.5,4.5,0.0,61655,2026-01-01,Elena Marchetti,Retention risk - key person in recall response
+VB-0127,Gavin Tuck,Firmware Lead,Engineering,L4,B4,UK,88000,GBP,1.03,Developing,2.0,1.5,0.0,89320,2026-01-01,Elena Marchetti,See note - 4.2.1/4.2.2 release process failures. Support plan not required; process CAPAs complete.
+VB-0134,Rob Ellery,Senior Field Service Engineer,Field Service,L3,B3,UK,53000,GBP,0.95,Exceptional,4.0,5.5,0.0,55915,2026-01-01,Priya Anand,Below midpoint; consistently highest-rated FSE
+VB-0141,Fiona Hargreaves,Sales Manager UK South,Commercial,L3,B3,UK,56000,GBP,1.00,Strong,3.0,3.0,0.0,57680,2026-01-01,Michael Ashworth,
+VB-0145,Yusuf Demir,Cloud Operations Lead,Engineering,L4,B4,UK,86000,GBP,1.02,Strong,3.0,3.0,0.0,88580,2026-01-01,Tom Reeves,Software premium applied
+VB-0156,Aisha Rahman,Support Engineering Lead,Support,L3,B3,UK,51000,GBP,0.91,Exceptional,5.0,6.0,2.4,55284,2026-01-01,James Okafor,EQUAL PAY CORRECTION APPLIED. Promoted to L3 Nov 2025.
+VB-0158,Camille Roux,Sales Manager EU,Commercial,L3,C3,CH,112000,CHF,0.97,Strong,2.0,2.0,0.0,114240,2026-01-01,Michael Ashworth,
+VB-0167,Kasia Nowak,Field Service Engineer,Field Service,L2,B2,UK,42000,GBP,1.01,Strong,3.5,3.5,0.0,43470,2026-01-01,Priya Anand,
+VB-0176,Dev Patel,Field Service Engineer,Field Service,L2,B2,UK,40500,GBP,0.98,Strong,3.5,4.0,0.0,42120,2026-01-01,Priya Anand,
+VB-0182,Rachel Duffy,HR Business Partner,People,L3,B3,UK,52000,GBP,0.93,Strong,3.0,3.5,0.0,53820,2026-01-01,Naomi Okonjo-Bright,
+VB-0189,Callum Frazer,Field Service Engineer,Field Service,L2,B2,UK,41000,GBP,0.99,Strong,3.5,3.5,0.0,42435,2026-01-01,Priya Anand,Sole cover Scotland and NI - retention watch
+VB-0194,Lena Hofstetter,HR Manager Switzerland,People,L3,C3,CH,109000,CHF,0.95,Strong,2.5,2.5,0.0,111725,2026-01-01,Naomi Okonjo-Bright,
+VB-0198,Marta Oliveira,Field Service Engineer,Field Service,L2,B2,UK,43000,GBP,1.04,Strong,3.0,3.0,0.0,44290,2026-01-01,Priya Anand,
+VB-0203,Danny Whitcombe,Support Engineer,Support,L2,B2,UK,39000,GBP,0.94,Strong,4.0,4.0,0.0,40560,2026-01-01,Aisha Rahman,
+VB-0206,Denise Kaur,Reward and Benefits Manager,People,L3,B3,UK,55000,GBP,0.98,Strong,3.0,3.0,0.0,56650,2026-01-01,Naomi Okonjo-Bright,Recused from own calibration
+VB-0211,Hannah Bright,Support Engineer,Support,L2,B2,UK,38500,GBP,0.93,Strong,4.0,4.5,0.0,40233,2026-01-01,Aisha Rahman,
+VB-0221,Nils Berger,Field Service Engineer,Field Service,L2,C2,CH,91000,CHF,1.03,Strong,2.0,2.0,0.0,92820,2026-01-01,Priya Anand,
+VB-0230,Ruth Amankwah,Data Protection Officer,Legal,L3,B3,UK,57500,GBP,1.03,Strong,2.5,2.5,0.0,58938,2026-01-01,Sunita Raval,
+VB-0238,Tobias Frankl,Talent Acquisition Lead,People,L3,B3,UK,53000,GBP,0.95,Developing,2.0,2.0,0.0,54060,2026-01-01,Naomi Okonjo-Bright,Time to hire against target; support in place
+VB-0247,Owen Trask,Support Engineer,Support,L1,B1,UK,31500,GBP,0.98,Strong,4.0,4.5,0.0,32918,2026-01-01,Aisha Rahman,Promotion case to L2 for spring 2026 window
+VB-0251,Farida Bello,Support Engineer,Support,L2,B2,UK,37000,GBP,0.89,Strong,4.5,5.5,0.0,39035,2026-01-01,Aisha Rahman,Below lower quartile
+VB-0255,Ollie Kettering,People Operations Coordinator,People,L1,B1,UK,30000,GBP,0.94,Exceptional,5.0,6.0,0.0,31800,2026-01-01,Rachel Duffy,
+VB-0263,Sanjay Bhatt,IT Systems Engineer,IT,L2,B2,UK,44000,GBP,1.06,Strong,2.5,2.5,0.0,45100,2026-01-01,Yusuf Demir,
+VB-0274,Helena Nkemelu,Regulatory Affairs Specialist,Regulatory,L2,B2,UK,40000,GBP,0.96,Strong,3.5,4.0,3.2,42880,2026-01-01,Sarah Lindgren,EQUAL PAY CORRECTION APPLIED
+VB-0281,Gregor Lindqvist,QC Analyst,Quality,L2,C2,CH,89000,CHF,1.01,Strong,2.0,2.0,0.0,90780,2026-01-01,Simone Buehler,
+VB-0288,Maya Rothbury,Software Engineer,Engineering,L2,B2,UK,47000,GBP,1.05,Strong,3.0,3.0,0.0,48410,2026-01-01,Yusuf Demir,Software premium applied
+VB-0294,Tunde Bakare,Firmware Engineer,Engineering,L2,B2,UK,46500,GBP,1.04,Exceptional,3.5,5.0,0.0,48825,2026-01-01,Gavin Tuck,Retention risk - two approaches known
+VB-0301,Clare Ballantyne,Field Service Engineer,Field Service,L1,B1,UK,33000,GBP,1.03,Developing,3.0,3.0,0.0,33990,2026-01-01,Priya Anand,Joined May 2025; on 12-week FSE programme to Aug 2025
+VB-0308,Stefan Aebi,Manufacturing Technician,Manufacturing,L1,C1,CH,68000,CHF,0.97,Strong,2.0,2.0,0.0,69360,2026-01-01,Olu Adeyemi,
+,,,,,,,,,,,,,,,,,
+SUMMARY: 44 records shown of 318 employees. Full file in PeopleHub.,,,,,,,,,,,,,,,,,
+BUDGET: UK 3.4% / CH 2.1%. Actual weighted distribution UK 3.38% / CH 2.09%.,,,,,,,,,,,,,,,,,
+EQUAL PAY CORRECTIONS: 9 individuals company-wide, funded centrally, not drawn from function budgets. 3 shown above.,,,,,,,,,,,,,,,
+CONFIDENTIALITY: individual pay data. Restricted to the People team, the relevant Director and the Executive Committee. A manager may see their own direct reports only. Do not extract, email or copy this file.,,,,,,,,,,,,,,,

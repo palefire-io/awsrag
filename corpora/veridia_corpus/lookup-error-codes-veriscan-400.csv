@@ -1,0 +1,36 @@
+error_code,severity,description,probable_cause,resolution,applies_to,first_firmware
+E-101,Error,Aspiration pressure out of range,Sample probe partially occluded or pump seal worn,Run Fluidics Prime x3; if persistent replace probe seal kit VS4-SP-021,Both,3.8.0
+E-104,Critical,Sample probe blockage,Clot in sample or dried reagent at probe tip,Perform Probe Unblock cycle; soak probe in RGT-CL for 15 min; escalate to FSE if repeated,Both,3.8.0
+E-107,Warning,Waste container full,Waste bottle at or above float sensor level,Empty waste per local biohazard policy and reseat float sensor connector,Both,3.8.0
+E-110,Error,Diluent flow sensor no signal,RGT-D5 cartridge empty or flow sensor cable disconnected,Check RGT-D5 volume; reseat cartridge; verify J14 cable at fluidics board,Both,3.8.0
+E-112,Error,Air detected in reagent line,Cartridge changed without prime or seal breach in tubing,Run Reagent Prime; inspect cartridge septum for damage,Both,3.8.0
+E-118,Warning,Rinse cup overflow,Drain line kinked or waste pump underperforming,Straighten drain line; check waste pump duty cycle in Service > Diagnostics,Both,4.0.0
+E-203,Error,Optical bench lamp intensity low,Halogen lamp ageing (>2000 h) or dust on collector lens,Replace lamp assembly VS4-OPT-104; recalibrate optics,Both,3.8.0
+E-207,Error,Flow cell background high,Flow cell contamination or protein deposit,Run Extended Clean with RGT-CL; if unresolved replace flow cell VS4-OPT-220,Both,3.8.0
+E-208,Error,Baseline absorbance out of range,"Lyse reagent degradation, incorrect lot, or optics drift",Verify RGT-L3 lot against current field notices; run Blank Cycle; recalibrate,400,3.8.0
+E-211,Error,Photodiode gain calibration failed,Optics board drift or failed calibration bead lot,Repeat calibration with fresh VeriCal bead vial; if failed twice escalate,Both,4.0.0
+E-215,Critical,Laser current out of tolerance,Laser diode degradation,Instrument requires FSE visit; do not attempt user repair,400 Pro,4.0.0
+E-302,Error,Reagent cartridge not recognised,RFID tag unreadable or non-genuine cartridge,Reseat cartridge; clean RFID window; confirm cartridge is genuine VeriLyse stock,Both,3.8.0
+E-304,Error,Reagent expired,Cartridge past expiry or past 90-day on-board limit,Install in-date cartridge; record lot change per SOP-VBS-002,Both,3.8.0
+E-305,Warning,Reagent volume insufficient for run,Cartridge nearly empty,Replace cartridge before starting batch,Both,3.8.0
+E-307,Error,Reagent lot pairing mismatch,Diluent and lyse cartridges from incompatible formulation revisions,See lookup-reagent-compatibility.csv; install matched pair,Both,4.1.0
+E-311,Critical,Reagent cartridge seal breach detected,Cartridge damaged in transit or over-torqued on insertion,Quarantine cartridge; photograph and raise support ticket with lot ID,Both,4.1.0
+E-402,Error,Sample rotor home position not found,Rotor obstruction or home sensor fault,Clear obstruction; power cycle; if repeated replace sensor VS4-MEC-033,Both,3.8.0
+E-405,Critical,Piercing needle jam,Cap material shed into needle path or bent needle,Power down; inspect needle; replace needle assembly VS4-MEC-011,Both,3.8.0
+E-408,Error,Cap detect sensor fault,Sensor contaminated or tube type unsupported,Clean sensor window; verify tube geometry against supported tube list,Both,4.0.0
+E-412,Error,Mixer motor overcurrent,Mixer bearing seizure,FSE visit required; replace mixer assembly VS4-MEC-047,Both,4.0.0
+E-501,Warning,LIS communication timeout,Network fault or LIS host unavailable,Check LAN link LED; ping host; verify VeriConnect connector status,Both,3.8.0
+E-503,Error,HL7 ACK not received,Middleware not acknowledging or malformed MSH segment,See lookup-hl7-message-mapping.csv; check MSH-10 uniqueness,Both,4.0.0
+E-507,Warning,Internal clock not synchronised,NTP unreachable or RTC battery low,Set NTP server in Settings > Time; replace RTC battery if drift >2 min/week,Both,4.0.0
+E-512,Critical,Firmware image checksum mismatch,Interrupted update or corrupted USB media,Re-download image from VeriConnect > Fleet > Firmware; do not power cycle mid-update,Both,4.1.0
+E-601,Error,Reticulocyte channel calibration failed,RGT-RT stain degraded or retic flow cell fouled,Install fresh RGT-RT; run Retic Clean; recalibrate,400 Pro,4.0.0
+E-604,Warning,RGT-RT stain volume low,Retic stain cartridge nearly empty,Replace RGT-RT cartridge,400 Pro,4.0.0
+E-607,Error,Retic flow cell temperature out of range,Heater element fault or ambient temperature outside limits,Confirm ambient within specification; if within limits raise FSE ticket,400 Pro,4.0.0
+E-711,Error,Body fluid mode background count exceeds limit,Carryover from previous whole blood sample,Run three background cycles before body fluid batch per SOP-VBS-001 s.7,400 Pro,4.1.0
+E-715,Error,Body fluid mode dilution factor invalid,Manual dilution factor entered outside 1:1 to 1:20,Re-enter valid dilution factor,400 Pro,4.1.0
+W-021,Warning,QC result outside 2SD,Normal statistical variation or early reagent drift,Monitor; no action if single occurrence (Westgard 1-2s is warning only),Both,3.8.0
+W-024,Warning,QC result outside 3SD (Westgard 1-3s),Reagent or calibration problem,Reject run; recalibrate; repeat QC before releasing patient results,Both,3.8.0
+W-031,Warning,Ambient temperature outside specified range,Room temperature drift,See VBB-0052 for revised operating range; relocate or condition the room,Both,4.1.2
+W-035,Warning,Reagent shelf life under 7 days,On-board cartridge approaching 90-day limit,Order replacement stock,Both,4.0.0
+W-042,Warning,Background WBC count elevated,"Lyse contamination, flow cell fouling, or affected RGT-L3 lot",Check lot against FSN-2025-003; run Extended Clean,400,4.0.0
+W-050,Warning,Sample volume marginal,Underfilled tube,Recollect sample; minimum 150 uL whole blood required,Both,3.8.0

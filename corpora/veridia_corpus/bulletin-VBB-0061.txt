@@ -1,0 +1,82 @@
+=====================================================
+VERIDIA BIOSYSTEMS - FIRMWARE BULLETIN
+=====================================================
+Reference: VBB-0061
+Date Issued: 2025-09-02
+Type: Feature Release (optional update)
+Affected Product: VeriScan 400, VeriScan 400 Pro
+Firmware version: 4.3.0
+Supersedes: 4.2.3
+
+SUBJECT: VeriScan firmware 4.3.0 - feature release
+
+-----------------------------------------------------
+NEW IN 4.3.0
+-----------------------------------------------------
+1. Extended flagging algorithms (VeriScan 400 Pro only)
+   Adds four new research-use-only morphology flags: BLAST?, NRBC?,
+   PLT-CLUMP? and FRAGMENTS?. These flags are advisory and must not be used as
+   the sole basis for a clinical decision. The existing validated flag set is
+   unchanged. New flags may be disabled per-site under
+   Settings > Flagging > Advisory Flags.
+
+2. Reagent on-board countdown
+   The instrument now displays remaining on-board days for each cartridge
+   against the 90-day limit, and raises W-035 at 7 days rather than at 3.
+   Countdown begins at first pierce, not at cartridge insertion.
+
+3. VeriPrep SP-1 host protocol version 2
+   Faster handoff and per-tube status reporting. REQUIRES SP-1 firmware 2.3.0
+   or later. An SP-1 on an older firmware will raise P-407. See VBB-0055.
+
+4. Ambient temperature logging to VeriConnect
+   Ambient temperature recorded with every run and available under
+   Reports > Environment on Professional tier and above.
+
+5. Drift telemetry (carried forward from 4.2.3)
+   Clock drift between the real-time clock and NTP reported to VeriConnect
+   daily. Introduced in 4.2.3 following VBI-0091 and retained.
+
+-----------------------------------------------------
+FIXED IN 4.3.0
+-----------------------------------------------------
+  - E-302 RFID read failures at low ambient humidity (28 reports since 4.2.3).
+  - Body fluid mode: dilution factor field accepted a trailing space, which
+    caused a spurious E-715. (Pro only.)
+  - QC scheduling: a QC run scheduled to start within 60 seconds of midnight
+    was assigned to the previous day.
+  - Printed report: sample ID truncated at 18 characters instead of 24.
+
+-----------------------------------------------------
+KNOWN ISSUES IN 4.3.0
+-----------------------------------------------------
+  - Instruments enrolled in VeriConnect before firmware 4.1.0 may need to
+    re-enrol after updating to 4.3.0. Symptom: instrument shows as Offline in
+    the fleet view while operating normally. Remedy: Settings > Cloud >
+    Re-enrol, then scan the QR code from VeriConnect.
+  - The W-031 ambient temperature warning still uses the superseded 15-35 C
+    thresholds. Revised thresholds land in 4.4.0. See VBB-0052.
+  - Advisory flags increase result processing time by approximately 0.4 s per
+    sample on Pro instruments. At sustained maximum throughput this reduces
+    effective throughput from 80 to approximately 77 samples/hr. Disable
+    advisory flags if maximum throughput is required.
+
+-----------------------------------------------------
+UPDATE PATH AND PREREQUISITES
+-----------------------------------------------------
+  From 4.2.3:  direct update supported.
+  From 4.2.1 or 4.2.2:  update directly to 4.3.0. This also remedies the
+                        timestamp defect described in VBB-0041.
+  From 4.1.x:  update to 4.2.3 first, then to 4.3.0.
+  From 4.0.x or earlier: contact support. A staged update is required and
+                        calibration must be verified afterwards.
+
+Full QC (both levels) must be run and accepted after any firmware update
+before patient testing resumes. See SOP-VBS-001 section 9.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Gavin Tuck, Firmware Lead - gavin.tuck@veridiabio.com
+Support: support@veridiabio.com | +44 1223 496 100
+=====================================================

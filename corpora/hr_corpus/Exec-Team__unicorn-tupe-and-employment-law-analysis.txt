@@ -1,0 +1,268 @@
+=================================================================
+*** STRICTLY CONFIDENTIAL - PROJECT UNICORN ***
+=================================================================
+PROJECT UNICORN
+Employment Law Analysis - Transaction Structure, TUPE and Consultation
+=================================================================
+Report reference: UNI-DD-HR-006
+Date:             2026-06-25
+Prepared by:      Marchmont Sayers LLP (employment)
+                  Partner: Gideon Ashcombe-Ward
+Polish input:     Kaczmarek Wiszniewski sp.k.
+Internal owner:   Sunita Raval, General Counsel
+Contributor:      Rachel Duffy, HR Business Partner
+Classification:   Strictly Confidential - Inside Information
+
+-----------------------------------------------------------------
+1. THE STRUCTURE AND WHY IT MATTERS FOR EMPLOYEES
+-----------------------------------------------------------------
+1.1  The transaction is structured as a SHARE PURCHASE: Veridia acquires 100
+     per cent of the issued share capital of Narwhal Industrial Holdings Ltd.
+
+1.2  ON A SHARE PURCHASE, TUPE DOES NOT APPLY. The employer does not change.
+     Employees continue to be employed by the same legal entity on the same
+     terms with the same continuous service. Their contracts are untouched.
+     There is no transfer, no measures, and no obligation to inform and
+     consult under regulation 13 of TUPE.
+
+1.3  This is the single most important point in this report and it is
+     routinely misunderstood, including by experienced managers. Somebody in
+     the integration planning will say "we need to do TUPE consultation". At
+     completion, we do not.
+
+1.4  WHERE TUPE WOULD APPLY. If, after completion, Veridia moves activities
+     between legal entities - for example transferring the Narwhal field
+     service operation into Veridia BioSystems Ltd, or consolidating a
+     function - that internal reorganisation would very likely be a service
+     provision change or a business transfer and TUPE WOULD then apply to that
+     step. Any such step requires its own analysis, its own information and
+     consultation, and its own timetable.
+
+     Integration planning must therefore treat each post-completion
+     reorganisation as a separate TUPE event rather than assuming the whole
+     thing was dealt with at completion.
+
+-----------------------------------------------------------------
+2. WHAT EMPLOYEES ARE ENTITLED TO AT COMPLETION
+-----------------------------------------------------------------
+2.1  UK EMPLOYEES: no statutory entitlement to be informed or consulted about
+     a share sale. There is no legal obligation to tell them anything.
+
+2.2  That is the legal position and it is not the recommendation. See section
+     6.
+
+2.3  POLAND: DIFFERENT AND MORE ONEROUS.
+     Under Article 26-1 of the Polish Trade Unions Act, an employer must
+     inform the recognised trade union of matters affecting employees' working
+     conditions and employment status. Kaczmarek Wiszniewski advise that a
+     change of control of the parent is very likely to fall within this.
+
+     Solidarnosc is recognised at Wroclaw. The company collective agreement
+     also contains an express consultation obligation on "any change affecting
+     more than 10 employees" with a 30-day period.
+
+     PRACTICAL CONSEQUENCE: the Polish site must be told, and the union must
+     be engaged, on a timetable that does not fit a UK "announce at completion"
+     model. Kaczmarek Wiszniewski recommend engaging Solidarnosc between
+     signing and completion, under confidentiality, rather than presenting
+     completion as a fait accompli.
+
+2.4  Failure to consult in Poland does not invalidate the transaction but can
+     found a claim, and more practically will poison the relationship with a
+     union at a site with 31 per cent turnover and a manufacturing capability
+     that is a principal reason for the acquisition.
+
+-----------------------------------------------------------------
+3. THE COLLECTIVE AGREEMENT AT WROCLAW
+-----------------------------------------------------------------
+3.1  Zakladowy Uklad Zbiorowy Pracy, registered with the District Labour
+     Inspectorate, in force since 2017.
+
+3.2  Key provisions:
+       - Severance above statutory: 3 months at under 2 years' service,
+         6 months at 2 to 8 years, 12 months above 8 years. The statutory
+         maximum is 3 months.
+       - Guaranteed annual increase of at least CPI.
+       - Restriction on outsourcing production activities.
+       - Consultation on any change affecting more than 10 employees, 30-day
+         period.
+       - Enhanced notice periods.
+
+3.3  The agreement survives a change of control and, following a transfer of
+     undertaking, cannot be unilaterally terminated for 12 months. On a share
+     purchase there is no transfer, so the agreement simply continues
+     indefinitely until renegotiated or terminated in accordance with its own
+     terms, which requires notice and negotiation.
+
+3.4  CONSEQUENCE FOR THE SYNERGY MODEL: the modelled Wroclaw reduction of 9
+     roles carries severance of approximately GBP 551,000 against an annual
+     saving of GBP 398,000. Payback of 16.6 months on a headline basis, and
+     that ignores the consultation risk, the union relationship and the
+     restriction on outsourcing. Polish counsel recommend the item be removed
+     from the model. The CPO agrees.
+
+-----------------------------------------------------------------
+4. HARMONISATION OF TERMS - WHAT IS AND IS NOT LAWFUL
+-----------------------------------------------------------------
+4.1  Since TUPE does not apply on a share purchase, the TUPE restriction on
+     varying terms by reason of the transfer does not apply either. This is
+     more permissive than most people assume.
+
+4.2  However, ordinary contract law does apply. A contractual term cannot be
+     varied without consent, and imposing a variation risks constructive
+     dismissal claims and claims for unlawful deduction from wages.
+
+4.3  HARMONISING UPWARDS - improving Narwhal terms to match Veridia's -
+     requires no consent and is straightforward. It is expensive. See
+     UNI-DD-HR-001 section 3.
+
+4.4  HARMONISING DOWNWARDS - reducing Veridia's terms to converge - would
+     require consent from 318 employees or dismissal and re-engagement. It is
+     legally possible and it would be, in Gideon Ashcombe-Ward's words, "a
+     spectacularly poor idea in a company whose employee proposition is a
+     retention asset". The CPO has stated she will not support it.
+
+4.5  A THIRD OPTION sometimes proposed: leave existing employees on existing
+     terms and hire all NEW employees on a single harmonised set. This avoids
+     the cost and creates a two-tier workforce that persists for a decade. Not
+     recommended.
+
+-----------------------------------------------------------------
+5. REDUNDANCY - IF AND WHEN
+-----------------------------------------------------------------
+5.1  No decision has been taken and none should be represented as taken.
+
+5.2  If redundancies are proposed post-completion:
+
+     UK - COLLECTIVE CONSULTATION THRESHOLDS
+       20 to 99 proposed dismissals at one establishment in 90 days:
+         30 days' consultation before the first dismissal takes effect
+       100 or more:
+         45 days
+       Fewer than 20: individual consultation only, no collective obligation
+
+     The modelled 34 reductions are spread across two countries and, in the
+     UK, across two establishments (Warrington and Cambridge). Whether they
+     count as "one establishment" is fact-sensitive following USDAW v Ethel
+     Austin and the subsequent case law. Marchmont Sayers' view is that
+     Warrington and Cambridge are separate establishments, which would put
+     each below 20 and avoid the collective obligation.
+
+     THAT VIEW SHOULD NOT DRIVE THE PLAN. Structuring a redundancy programme to
+     fall below a consultation threshold is legally available and is exactly
+     the kind of thing that reads badly in a tribunal and worse in a leak.
+     Marchmont Sayers advise conducting meaningful collective consultation
+     regardless of whether the threshold is technically engaged.
+
+     POLAND
+       Collective redundancy rules apply at 10 or more dismissals in 30 days
+       for an employer of Narwhal Wroclaw's size, plus the 30-day consultation
+       obligation in the collective agreement, plus notification to the
+       Powiatowy Urzad Pracy. Additionally, severance under the collective
+       agreement rather than the statutory scale.
+
+5.3  SELECTION. Any pool must be objectively defined and any criteria
+     objectively applied and capable of evidence. Length of service alone is
+     not a safe criterion. Absence records must be used with extreme care and
+     disability-related absence must be discounted.
+
+5.4  SPECIFIC WARNING ON FIELD SERVICE. Veridia's own field service function
+     is the subject of a live stress risk assessment (HSRA-2025-002, October
+     2025) identifying understaffing as the root cause of elevated absence,
+     two occupational health referrals and 14.2 per cent turnover, and
+     identifying recruitment from 36 to 42 as the substantive control
+     measure.
+
+     A redundancy in that population within twelve months of that assessment
+     would be extremely difficult to defend. The assessment is a health and
+     safety document, it would be disclosable, and it says in terms that the
+     function is understaffed. Marchmont Sayers' advice is unambiguous: do
+     not.
+
+5.5  SPECIFIC WARNING ON INDIVIDUALS WITH LIVE HR MATTERS. Any employee on
+     long-term sick leave, on family leave, with a live grievance, or who has
+     made a protected disclosure, requires individual legal review before
+     inclusion in any pool. There is at least one Veridia employee on
+     long-term sick leave at the Basel site (case OH-2026-003) with a note on
+     file requiring CPO sign-off before any organisational communication
+     reaches them.
+
+-----------------------------------------------------------------
+6. WHAT WE SHOULD DO EVEN THOUGH WE DO NOT HAVE TO
+-----------------------------------------------------------------
+6.1  The legal minimum at completion is to tell UK employees nothing.
+
+6.2  Marchmont Sayers and the CPO both recommend against the legal minimum,
+     for the following reasons:
+
+     (a) There is already speculation. Four of thirteen Veridia exit
+         interviews in H2 2025 referred unprompted to rumours the company was
+         "doing something", and the People team FAQ has carried a question
+         about acquisition rumours since June 2026. Silence is not currently
+         producing an absence of belief; it is producing invention.
+
+     (b) A transaction of this size becomes public at completion regardless.
+         Employees who learn about it from LinkedIn conclude that they were
+         not trusted, and that conclusion is durable.
+
+     (c) Veridia's employee proposition is built on a set of policies that
+         repeatedly promise directness. The speak-up policy, the pay review
+         guidance, the exit interview process and the FAQ all say some version
+         of "we will tell you what we can, including when the answer is that
+         we cannot say". Announcing an acquisition of 410 people with no
+         warning would be inconsistent with everything else we have written
+         down, and employees would notice.
+
+6.3  The recommended approach is at UNI-COM-001. In outline: same-day
+     announcement to both populations at completion, delivered in person by
+     the CEO and CPO at each site, with the Polish union engaged under
+     confidentiality between signing and completion, and with an explicit
+     statement of what is NOT changing that is honest about what is not yet
+     decided.
+
+-----------------------------------------------------------------
+7. WARRANTIES AND INDEMNITIES - EMPLOYMENT
+-----------------------------------------------------------------
+Recommended, in priority order:
+
+  W1  Specific indemnity, uncapped as to time, for the employment status and
+      off-payroll working exposure, backed by escrow of not less than GBP 2.5M
+      for four years. NON-NEGOTIABLE.
+  W2  Specific indemnity for historic holiday pay underpayment.
+  W3  Specific indemnities for each live claim, with conduct provisions giving
+      Veridia control of the ACAS employment status matter.
+  W4  Warranty that all employees have the right to work and that compliant
+      checks were carried out - and note this warranty will almost certainly
+      be qualified by disclosure, given that 22 of 40 sampled records had no
+      evidence attached.
+  W5  Warranty on compliance with working time and record-keeping obligations
+      in both jurisdictions, given the open Polish grievance about overtime
+      records.
+  W6  Warranty that no employee earning above a threshold has given or
+      received notice.
+  W7  Warranty on the completeness of the disclosed employment terms, and
+      specifically that no undisclosed contractual entitlement exists.
+  W8  Data protection warranty and indemnity for pre-completion processing.
+
+-----------------------------------------------------------------
+8. SUMMARY OF ADVICE
+-----------------------------------------------------------------
+  8.1  TUPE does not apply at completion. It will apply to post-completion
+       internal reorganisations, each of which needs its own analysis.
+  8.2  There is no UK obligation to consult at completion. There is a Polish
+       obligation and it starts before completion.
+  8.3  Harmonising Narwhal terms upwards is lawful and expensive. Harmonising
+       Veridia's downwards is lawful and inadvisable.
+  8.4  Do not structure a redundancy programme around a consultation
+       threshold.
+  8.5  Do not touch field service headcount in year one.
+  8.6  Do the communication properly even though you do not have to.
+
+                                Gideon Ashcombe-Ward
+                                Partner, Marchmont Sayers LLP
+                                2026-06-25
+
+=================================================================
+STRICTLY CONFIDENTIAL - PROJECT UNICORN - INSIDE INFORMATION
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

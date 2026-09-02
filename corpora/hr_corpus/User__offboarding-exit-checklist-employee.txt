@@ -1,0 +1,139 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Leaver Checklist - Your Copy
+=================================================================
+Document:      HR-CHK-009
+Version:       4
+Effective:     2026-01-01
+Owner:         Ollie Kettering, People Operations Coordinator
+Audience:      Employees who have resigned or are otherwise leaving
+
+Your manager and the People team have their own versions of this. This one is
+yours. Print it or do not, but work through it - the items people forget are
+almost always the share options and the expenses.
+
+-----------------------------------------------------------------
+AS SOON AS YOU KNOW
+-----------------------------------------------------------------
+[ ] Resignation confirmed in writing to your manager, copying
+    people@veridiabio.com
+[ ] Last working day agreed and confirmed in writing
+[ ] Check your notice period against your contract - do not rely on memory
+[ ] Check your contract for restrictive covenants and any training repayment
+    agreement. Ask the People team if anything is unclear. Ask now, not in
+    your last week.
+[ ] SHARE OPTIONS. Find your option agreement. Work out how many options have
+    vested and what the exercise window is after your leaving date (usually 90
+    days). If you intend to exercise, start the process now. This is the item
+    leavers most often get wrong and the deadline cannot be extended.
+
+-----------------------------------------------------------------
+FOUR WEEKS OUT
+-----------------------------------------------------------------
+[ ] Agree a written handover plan with your manager
+[ ] List everything only you know how to do. Be honest and be
+    unflattering about how much of it is undocumented.
+[ ] List your recurring commitments - approvals you give, meetings you chair,
+    on-call rotas, systems where you are the only administrator
+[ ] Identify anything where you are a single point of failure and say so
+[ ] Field service and support: list your open cases and their state
+[ ] Anyone with customer relationships: list your accounts and their current
+    temperature, including the awkward ones
+
+-----------------------------------------------------------------
+THREE WEEKS OUT
+-----------------------------------------------------------------
+[ ] Write the handover documents. Written, not verbal. Verbal handover
+    evaporates within a fortnight of your leaving.
+[ ] File your documents somewhere your team can find them, not in your
+    personal drive
+[ ] Transfer ownership of any shared documents, dashboards or scripts
+[ ] Hand over any admin rights, service accounts or credentials you hold.
+    Credentials go to your manager or to IT, never in a chat message.
+[ ] Regulated roles: confirm your training records and any open quality
+    records are complete. An unsigned training record after you leave is a
+    finding at the next audit and someone else has to explain it.
+
+-----------------------------------------------------------------
+TWO WEEKS OUT
+-----------------------------------------------------------------
+[ ] Knowledge transfer sessions with whoever is picking up your work
+[ ] Introduce your successor or cover to your key contacts, internal and
+    external
+[ ] Customer-facing roles: agree with your manager what customers are told and
+    by whom. Do not tell customers you are leaving before this is agreed - not
+    because it is secret, but because they should hear who is looking after
+    them next in the same sentence.
+[ ] Book your exit interview with the People team (or decline it, which is
+    fine)
+
+-----------------------------------------------------------------
+ONE WEEK OUT
+-----------------------------------------------------------------
+[ ] SUBMIT ALL EXPENSES. Anything unsubmitted on your last day becomes
+    genuinely difficult and occasionally impossible.
+[ ] Reconcile your company credit card and hand it back
+[ ] Arrange equipment return with IT - laptop, phone, monitors, peripherals,
+    access card, keys
+[ ] Field service: arrange return of vehicle, fuel card, test instruments,
+    service tools and any customer parts stock
+[ ] Empty your locker, desk and pedestal
+[ ] Cancel or reassign any recurring travel or accommodation bookings
+[ ] Update your out of office with who to contact instead of you
+[ ] Confirm the personal email address you want us to use after you leave
+
+-----------------------------------------------------------------
+LAST DAY
+-----------------------------------------------------------------
+[ ] Final handover conversation with your manager
+[ ] Equipment returned and receipted - get the receipt, it protects you
+[ ] Building access card handed in
+[ ] Exit interview if not already done
+[ ] Accounts disabled at 18:00 local time
+
+-----------------------------------------------------------------
+AFTER YOU LEAVE
+-----------------------------------------------------------------
+[ ] Final pay lands on the normal pay date for your leaving month
+[ ] P45 (UK) or exit documentation and Arbeitszeugnis (Switzerland)
+[ ] Pension provider will write to you. Swiss employees MUST respond to the
+    pension fund about their vested benefit - it does not sort itself out.
+[ ] Share option exercise window closes (check your date - usually 90 days)
+[ ] Private medical cover ended on your last day; continuation is available
+    directly from the insurer at your cost
+[ ] EAP remains available to you for three months
+[ ] Alumni list - opt in at your exit interview if you want to
+
+-----------------------------------------------------------------
+THINGS PEOPLE ASK
+-----------------------------------------------------------------
+"Can I keep my laptop?"
+  No, including if you offer to buy it. Devices hold customer and regulated
+  data and are wiped and redeployed or securely disposed of.
+
+"Can I take copies of work I did?"
+  Your own performance records and payslips, yes. Company documents, customer
+  information, source code, designs, regulatory documentation and anything
+  containing personal data, no. If you want something for a portfolio, ask -
+  we will usually find a way to give you something you can show.
+
+"Will my manager see my exit interview?"
+  Not attributably, and not without your explicit agreement.
+
+"Can I come back?"
+  Yes. We rehire and there is no waiting period.
+
+"Do I have to work my full notice?"
+  Contractually yes, but we frequently agree something shorter by mutual
+  consent. Ask.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Ollie Kettering - ollie.kettering@veridiabio.com - +44 1223 496 194
+Rachel Duffy - rachel.duffy@veridiabio.com
+Lena Hofstetter (Switzerland) - lena.hofstetter@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

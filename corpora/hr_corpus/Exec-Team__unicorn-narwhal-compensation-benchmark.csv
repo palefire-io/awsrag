@@ -1,0 +1,48 @@
+role_family,seniority,veridia_level,veridia_band,narwhal_typical_salary_gbp,veridia_band_min_gbp,veridia_band_mid_gbp,veridia_band_max_gbp,narwhal_vs_veridia_mid_pct,narwhal_vs_market_median_pct,employees_affected,uplift_to_veridia_min_gbp,total_uplift_cost_gbp,assessment
+Mechanical Engineering,Graduate,L1,B1,26800,28000,32000,36000,-16.3,-11.0,3,1200,3600,Below Veridia band minimum - immediate uplift required
+Mechanical Engineering,Engineer,L2,B2,36400,35000,41500,48000,-12.3,-9.0,9,0,0,Within band but below lower quartile
+Mechanical Engineering,Senior,L3,B3,48200,46000,56000,66000,-13.9,-12.0,10,0,0,Within band below midpoint
+Mechanical Engineering,Principal,L4,B4,61500,64000,78000,92000,-21.2,-18.0,4,2500,10000,Below Veridia band minimum - immediate uplift required
+Software and Controls,Engineer,L2,B2,42800,35000,41500,48000,3.1,-6.0,8,0,0,Within band - closest alignment in the business
+Software and Controls,Senior,L3,B3,54600,46000,56000,66000,-2.5,-8.0,7,0,0,Within band
+Software and Controls,Principal,L4,B4,68200,64000,78000,92000,-12.6,-14.0,4,0,0,Within band below midpoint
+Field Engineering,Engineer,L2,B2,38900,35000,41500,48000,-6.3,-7.0,12,0,0,Within band. NOTE excludes the 34 contractors whose day rates are not directly comparable
+Field Engineering,Senior,L3,B3,46100,46000,56000,66000,-17.7,-15.0,6,0,0,At band minimum
+Service Desk,Associate,L1,B1,26200,28000,32000,36000,-18.1,-14.0,5,1800,9000,Below Veridia band minimum - immediate uplift required
+Service Desk,Engineer,L2,B2,32400,35000,41500,48000,-21.9,-16.0,4,2600,10400,Below Veridia band minimum - immediate uplift required
+Sales,Executive,L2,B2,39200,35000,41500,48000,-5.5,-4.0,9,0,0,Within band. Narwhal OTE mix is 75/25 vs Veridia 70/30
+Sales,Manager,L3,B3,52800,46000,56000,66000,-5.7,-9.0,8,0,0,Within band
+Sales,Director,L4,B4,72400,64000,78000,92000,-7.2,-11.0,4,0,0,Within band
+Marketing,Executive,L2,B2,34600,35000,41500,48000,-16.6,-13.0,4,400,1600,Below Veridia band minimum - immediate uplift required
+Marketing,Manager,L3,B3,47200,46000,56000,66000,-15.7,-14.0,2,0,0,At band minimum
+Quality Assurance,Engineer,L2,B2,38200,35000,41500,48000,-8.0,-5.0,7,0,0,Within band
+Quality Assurance,Senior,L3,B3,49800,46000,56000,66000,-11.1,-10.0,5,0,0,Within band
+Regulatory Affairs,Specialist,L2,B2,41600,35000,44800,51800,-7.1,-6.0,2,0,0,Veridia band includes the 2026 RA premium
+Regulatory Affairs,Manager,L3,B3,53200,49700,60500,71300,-12.1,-13.0,2,0,0,Within band
+Finance,Analyst,L2,B2,36800,35000,41500,48000,-11.3,-8.0,6,0,0,Within band
+Finance,Manager,L3,B3,50400,46000,56000,66000,-10.0,-9.0,4,0,0,Within band
+Finance,Controller,L4,B4,71200,64000,78000,92000,-8.7,-12.0,1,0,0,Within band
+HR,Advisor,L2,B2,33800,35000,41500,48000,-18.6,-15.0,2,1200,2400,Below Veridia band minimum - immediate uplift required
+HR,Director,L4,B4,74000,64000,78000,92000,-5.1,-8.0,1,0,0,Within band
+IT,Engineer,L2,B2,40200,35000,41500,48000,-3.1,-5.0,4,0,0,Within band
+Manufacturing (Warrington),Operative,L1,B1,27600,28000,32000,36000,-13.8,-9.0,58,400,23200,Below Veridia band minimum - immediate uplift required. Largest single population.
+Manufacturing (Warrington),Technician,L2,B2,33400,35000,41500,48000,-19.5,-12.0,22,1600,35200,Below Veridia band minimum - immediate uplift required
+Manufacturing (Warrington),Supervisor,L3,B3,42800,46000,56000,66000,-23.6,-17.0,7,3200,22400,Below Veridia band minimum - immediate uplift required
+Executive,ExCo,L6,B6,118000,130000,165000,200000,-28.5,-24.0,9,,,Not applicable - executive population subject to separate treatment on completion
+Wroclaw Manufacturing,Operative,,,19400,,,,,-3.0 vs Polish market,62,,,Polish market comparison only. Veridia has no Polish band structure. Broadly at local market.
+Wroclaw Manufacturing,Technician,,,22600,,,,,-6.0 vs Polish market,14,,,Polish market comparison only
+Wroclaw R&D,Engineer,,,28400,,,,,-11.0 vs Polish market,9,,,Polish market comparison only. Below local market - retention risk at 31% site turnover
+,,,,,,,,,,,,,
+SUMMARY OF FINDINGS,,,,,,,,,,,,,
+1. Narwhal pays below Veridia's band midpoint in 30 of 33 comparable role families. The average gap is -12.4%.,,,,,,,,,,,,,
+2. Narwhal pays below external market median in 32 of 33. The average gap is -10.8%. This is a company that has systematically underpaid relative to its own market, not merely relative to Veridia.,,,,,,,,,,,,
+3. The gap WIDENS with seniority. At L1-L2 the average gap to Veridia midpoint is -11.2%. At L4 it is -13.0%, and at executive level -28.5%.,,,,,,,,,,,,
+4. 41 UK employees sit BELOW the Veridia band minimum for their assessed level. Immediate uplift on mapping would cost GBP 117,800 per annum. This is a floor, not a harmonisation - it is what is required simply to place them in a band.,,,,,,,,,,,
+5. The largest single affected population is Warrington manufacturing operatives (58 people, -13.8% to midpoint, GBP 400 each to reach band minimum).,,,,,,,,,,,
+6. Software and Controls is the closest-aligned family and the only one where any Narwhal role exceeds the Veridia midpoint.,,,,,,,,,,,,,
+7. Wroclaw is broadly at Polish market for manufacturing but below market for R&D engineers, in a site with 31% turnover. This is a retention risk that predates the transaction.,,,,,,,,,,,,
+,,,,,,,,,,,,,
+METHODOLOGY: Narwhal salaries from the March 2026 HRIS extract, averaged by assessed role family and mapped to Veridia levels by Denise Kaur using the Veridia levelling guides. Mapping is INDICATIVE - Narwhal has no level structure, no job evaluation and no job descriptions for most roles, so the mapping is based on job titles and reporting lines and carries real uncertainty. Market median from Radford Global Life Sciences October 2025 cut, Willis Towers Watson UK Technology, and Croner Reward regional data. Polish comparison from Sedlak & Sedlak 2025.,,,,,,,,
+CAVEAT: the absence of any Narwhal job structure means these mappings will move on contact with reality. Denise Kaur's estimate is that 15-20% of individual mappings will change once actual job content is assessed post-completion.,,,,,,,,,,,,,
+OPPORTUNITY: a population with no existing pay structure can be mapped onto Veridia's framework at completion without unpicking an incumbent system. This is materially easier than harmonising two structured systems and should be done early, in one exercise, rather than allowed to drift.,,,,,,,,,,,
+CLASSIFICATION: Strictly Confidential - Project Unicorn - Inside Information. Deal team only. Contains no individual salary data - role family averages only.,,,,,,,,,,,,,

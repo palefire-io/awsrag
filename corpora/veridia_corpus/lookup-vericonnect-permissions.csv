@@ -1,0 +1,27 @@
+role,permission_key,permission_description,tier_required,notes
+lab_technician,results.view,View patient results for assigned locations,Essentials,
+lab_technician,results.comment,Add non-authorising comment to a result,Essentials,
+lab_technician,qc.enter,Record QC material results,Essentials,
+lab_technician,instrument.status.view,View instrument status dashboard,Essentials,
+biomedical_scientist,results.authorise,Authorise and release results to LIS,Essentials,Requires named user; shared logins are a SOC 2 finding
+biomedical_scientist,results.amend,Issue corrected result (HL7 status C),Essentials,
+biomedical_scientist,qc.review,Review and accept/reject QC runs,Essentials,
+biomedical_scientist,rules.view,View Westgard rule configuration,Professional,
+lab_manager,rules.edit,Edit Westgard rule configuration,Professional,
+lab_manager,users.invite,Invite users to the site tenant,Professional,
+lab_manager,reports.export,Export QC and turnaround reports,Professional,
+lab_manager,fleet.view,View multi-site instrument fleet dashboard,Professional,
+qc_specialist,qc.chart.configure,Configure QC chart scaling and target/SD values,Professional,
+qc_specialist,lot.crossover,Perform reagent lot crossover study,Professional,
+service_engineer,instrument.diagnostics,Run instrument diagnostic routines remotely,Professional,Veridia FSE accounts only
+service_engineer,firmware.deploy,Push firmware to enrolled instruments,Enterprise,
+tenant_admin,users.manage,Create/disable users and assign roles,Professional,
+tenant_admin,sso.configure,Configure SAML/OIDC identity provider,Enterprise,Misconfiguration was contributing factor in 2025-03-11 outage
+tenant_admin,api.keys.manage,Create and revoke API keys,Enterprise,
+tenant_admin,residency.configure,Set data residency region for tenant,Enterprise,VeriGuard add-on required
+auditor,audit.read,Read-only access to full audit trail,Enterprise,VeriGuard add-on required
+auditor,audit.export,Export audit trail as signed CSV,Enterprise,VeriGuard add-on required
+dpo,gdpr.export,Generate data subject access export,Enterprise,VeriGuard add-on required
+dpo,gdpr.erase,Execute erasure request within retention policy,Enterprise,VeriGuard add-on required
+integration_service,hl7.submit,Submit HL7 messages to tenant endpoint,Essentials,Service account; no interactive login
+integration_service,fhir.read,Read FHIR R4 result bundles,Enterprise,Beta from VeriConnect 6.2

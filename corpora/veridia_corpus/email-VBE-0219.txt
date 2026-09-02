@@ -1,0 +1,93 @@
+From: Rob Ellery <rob.ellery@veridiabio.com>
+To: Helen Tarbuck <helen.tarbuck@nhs.net>
+CC: support@veridiabio.com, Marcus Chen <marcus.chen@veridiabio.com>
+Date: Mon, 11 Aug 2025 17:40:09 +0100
+Subject: RE: Post-install questions - VS4-1002
+X-Mailer: Microsoft Outlook 16.0
+
+Hi Helen,
+
+Glad it went well. Answers below, and the last one first because it matters
+most.
+
+> In the training pack there's a datasheet that mentions body fluid mode and
+> reticulocytes, and we can't find either of those on the instrument. Are they
+> options we haven't bought?
+
+They are not options - they are a different model. Your instrument VS4-1002 is
+a VeriScan 400. Body fluid mode and reticulocyte counting are VeriScan 400 Pro
+features and the hardware is not present on the 400.
+
+The datasheet in your pack is the 400 Pro sheet and it should not have been
+there. That is our error in assembling the install pack and I have raised it. I
+am sending you DS-VS400-003, which is the correct one for your instrument, and
+I would suggest binning the other so it does not confuse anyone later.
+
+I am sorry about that. The two models look identical and the paperwork is the
+main way to tell them apart, so getting the paperwork wrong is worse than it
+sounds.
+
+Now the rest.
+
+1. AUTOLOADER SKIPPING
+Not a fault. If a tube fails the cap detect or the level check on first
+presentation, the instrument moves on and re-presents it at the end of the rack
+rather than stopping the batch. If it fails twice you get an error. Going
+1, 2, 4, 5 then 3 means position 3 was retried successfully.
+
+If you want to know why a position was deferred, Log > Events will show it. A
+recurring deferral at the same position usually means an underfilled tube or a
+label wrapped over the cap.
+
+2. EXTENDED CLEAN FREQUENCY
+"As needed" is not good enough for an SOP, you are right. What comparable sites
+do at your volume (you said around 300 a week at install):
+
+  - Automatic shutdown clean: daily, which happens on its own.
+  - Extended Clean: weekly as a routine, plus whenever the background count
+    creeps above about half the acceptance limit, plus after any known
+    contamination event.
+
+Marcus Chen is copied and can send you the applications note.
+
+3. REAGENT LOT NUMBERS
+Reagents > Cartridge Detail on the instrument. It shows product, lot, expiry
+and days on board. Read them from there rather than the label, because if the
+two disagree you want to know - a mismatch means an RFID or labelling problem
+and should be raised with us.
+
+4. LEVEY-JENNINGS HISTORY ON ESSENTIALS
+The instrument holds 10,000 results and the on-screen chart shows 30 days.
+Essentials tier in VeriConnect gives you charting but not the extended reporting
+and export. Professional gives you configurable chart ranges, scheduled export
+and the reagent lot exposure report.
+
+I am not going to tell you to upgrade. For a two-instrument site doing 300 a
+week, Essentials is a reasonable choice and plenty of labs your size stay on
+it. If your accreditation assessor asks for longer QC history, you can export
+from the instrument to USB, which is a manual job but it works. Peter Doyle can
+give you the Professional numbers if you want to compare.
+
+5. IQ/OQ REPORT
+A scan is fine for your records, provided your quality system accepts scanned
+documents generally. We hold the original signed copy at our end for the
+lifetime of the instrument and can reissue a certified copy if you ever need
+one. I would keep your paper original too if you have the filing space, purely
+because accreditation assessors sometimes ask for wet signatures.
+
+6. CATCH-UP TRAINING
+Covered. Your install included a training day and two people missing it is
+normal. I will do a half-day session for the two of them and anyone else who
+wants a refresher. Let me know a date that suits. No charge.
+
+One thing I would add unprompted: put a label on the instrument saying
+"VeriScan 400 - VS4-1002 - no reticulocyte or body fluid mode". Sites with a
+single model do not think they need it until an agency scientist spends twenty
+minutes looking for a menu that does not exist.
+
+Cheers
+
+Rob Ellery
+Field Service Engineer, North
+Veridia BioSystems Ltd
+rob.ellery@veridiabio.com | +44 7700 900 388

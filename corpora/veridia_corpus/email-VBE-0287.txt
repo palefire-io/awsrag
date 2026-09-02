@@ -1,0 +1,46 @@
+From: Dr Katarzyna Wisniewska <k.wisniewska@haematology-summit.org>
+To: Dr Elena Marchetti <elena.marchetti@veridiabio.com>
+Date: Mon, 22 Sep 2025 10:15:33 +0200
+Subject: Follow-up from EHA Diagnostics Forum - your talk on reagent stability
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Dr Marchetti,
+
+Thank you for your presentation at the Diagnostics Forum in Vienna last week.
+"What our release specification could not see" was, by some distance, the most
+discussed session of the meeting, and I have had a dozen people ask me for your
+slides.
+
+I am writing with three things.
+
+First, a request. Would you be willing to share the slides, or a version of
+them? Several attendees asked and I would rather point them to something you
+have approved than to their own photographs of the screen.
+
+Second, an invitation. We are planning next year's programme and I would like
+to invite you to give an extended version, perhaps 40 minutes, as part of a
+session on post-market surveillance. What made your talk land was that you
+described a failure in your own product in specific detail, including the parts
+that reflected badly on your company. That is rare and the room noticed. I
+would like more of it and I think you are the person to do it.
+
+Third, a question of my own, which you may prefer not to answer publicly. You
+said the release specification measured absorbance at manufacture and the
+failure mode was a rate of change during use, and that "a specification that
+cannot detect the failure mode is not a control". I have been turning that over
+since. Do you think this is a general problem in IVD reagent release testing,
+or was it specific to the chemistry involved? I ask because if it is general
+then a lot of us are testing the wrong thing.
+
+I should say that two of our committee members were initially uneasy about a
+manufacturer speaking on post-market surveillance, on the grounds that it might
+become a sales pitch. Your talk settled that. It would help me if the extended
+version were similarly free of product names beyond what the story requires.
+
+With warm regards,
+
+Dr Katarzyna Wisniewska
+Scientific Programme Chair
+European Haematology Diagnostics Forum
+k.wisniewska@haematology-summit.org
++48 22 555 0184

@@ -1,0 +1,122 @@
+=================================================================
+VERIDIA BIOSYSTEMS - REAGENT SPECIFICATION SHEET
+=================================================================
+Product: VeriLyse RGT-D5 Standard Diluent
+Catalogue: VL-D5-500 (500 mL cartridge, 4 per case)
+Document Ref: DS-RGT-D5-003
+Revision: v3
+Revision Date: 2025-06-03
+Formulation revision: C (current). Revision B supplied for VeriScan 200 only.
+Classification: In-vitro diagnostic reagent, accessory to VeriScan analysers.
+                IVD Directive 98/79/EC. IVDR classification Class B (Rule 5c)
+                pending; assessment bundled with the analyser submission.
+
+-----------------------------------------------------------------
+INTENDED USE
+-----------------------------------------------------------------
+RGT-D5 is an isotonic diluent for use with VeriScan 400 and VeriScan 400 Pro
+haematology analysers. It dilutes the whole blood sample, provides the
+conductive medium for impedance counting of erythrocytes and platelets, and
+maintains cell volume during measurement. For in-vitro diagnostic use by
+trained laboratory personnel.
+
+-----------------------------------------------------------------
+COMPOSITION (nominal)
+-----------------------------------------------------------------
+Component                        | Concentration
+---------------------------------|------------------
+Sodium chloride                  | 6.8 g/L
+Disodium hydrogen phosphate      | 1.2 g/L
+Potassium dihydrogen phosphate   | 0.2 g/L
+EDTA disodium                    | 0.4 g/L
+Antimicrobial preservative       | < 0.1%
+Purified water                   | to 1 L
+Osmolality                       | 300 +/- 10 mOsm/kg
+pH (25 C)                        | 7.3 +/- 0.1
+Conductivity (25 C)              | 14.2 +/- 0.4 mS/cm
+
+Contains no cyanide. Contains no reagents of human or animal origin.
+
+-----------------------------------------------------------------
+LOT NUMBERING SCHEME
+-----------------------------------------------------------------
+Format: D5-YYYY-NNNN[/R]
+
+  D5      product code
+  YYYY    year of manufacture
+  NNNN    sequential fill number within the year, not reset by campaign
+  /R      formulation revision suffix, present from revision C onwards
+          (revision B lots carry no suffix)
+
+Example: D5-2025-0158/C is the 158th fill of 2025, formulation revision C.
+
+The lot number appears in three places: the cartridge label, the outer carton
+label, and the RFID tag read by the instrument. If the three disagree, do not
+use the cartridge; quarantine it and raise a support ticket with photographs.
+
+Current released lots are listed in log-reagent-lots-2025.csv.
+
+-----------------------------------------------------------------
+STORAGE AND STABILITY
+-----------------------------------------------------------------
+Unopened, stored 2-25 C          | 18 months from date of manufacture
+On board after first pierce      | 90 days
+Do not freeze                    | Freezing causes salt precipitation and
+                                 | irreversible change in conductivity
+Protect from direct sunlight     | Yes
+Transport                        | Ambient, -10 to 50 C for up to 14 days
+
+The on-board 90-day limit is enforced by the instrument. E-304 is raised when
+the limit is reached. From firmware 4.3.0 the instrument displays a countdown
+and warns at 7 days (W-035).
+
+Do not decant, top up, or transfer between cartridges. The cartridge septum
+and RFID tag are matched to the fill; a topped-up cartridge will report an
+incorrect remaining volume and may allow use beyond the stability limit.
+
+-----------------------------------------------------------------
+INSTRUMENT COMPATIBILITY
+-----------------------------------------------------------------
+  VeriScan 400        Yes, revision C, firmware 3.8.0 and later
+  VeriScan 400 Pro    Yes, revision C, firmware 3.8.0 and later
+  VeriScan 200        Revision B qualified. Revision C is backward compatible
+                      with firmware 3.4.0 and later and will be supplied
+                      against VeriScan 200 orders once revision B production
+                      ends (2025-12-31). See VBB-0049.
+  VeriPrep SP-1       Not applicable (no reagent path)
+
+-----------------------------------------------------------------
+SAFETY SUMMARY
+-----------------------------------------------------------------
+Not classified as hazardous under Regulation (EC) No 1272/2008 (CLP).
+No hazard pictogram required. Treat as potentially infectious once it has
+contacted a sample.
+
+First aid: eye contact - rinse with water for 10 minutes; skin - wash with
+soap and water; ingestion - rinse mouth, seek medical advice if a large
+quantity is swallowed.
+
+Disposal: dispose of used diluent and waste as clinical/biohazardous waste in
+accordance with local regulations. Unused product may be disposed of to drain
+with copious water where permitted locally.
+
+Full safety data sheet: SDS-RGT-D5 rev 4, available at
+www.veridiabio.com/sds or on request. Summary in
+spec-verilyse-safety-data-summary-v2.txt.
+
+-----------------------------------------------------------------
+QUALITY CONTROL AT LOT CHANGEOVER
+-----------------------------------------------------------------
+Run both levels of VeriTrol control after changeover. A formal crossover study
+is not required for a diluent lot change within the same formulation revision.
+See SOP-VBS-002.
+
+-----------------------------------------------------------------
+ORDERING
+-----------------------------------------------------------------
+VL-D5-500     | RGT-D5 Standard Diluent, 500 mL cartridge, case of 4
+VL-D5-500-S   | Single cartridge (surcharge applies)
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

@@ -1,0 +1,200 @@
+Ticket ID: VBST-3847
+Status: Resolved
+Priority: P2-High
+Created: 2025-01-28 09:14 UTC
+Product: VeriScan 400
+Customer: Countess of Chester Hospital NHS Foundation Trust (ACC-1090)
+Reported by: Ian Bracewell, Principal Biomedical Scientist, Haematology
+             ian.bracewell@coch.nhs.uk | 01244 365 8821
+Assigned to: Danny Whitcombe (Support Engineer) -> Marcus Chen (QC
+             Applications) -> Dr Wen Li (R&D Reagents)
+Serial: VS4-0402
+Firmware: 4.2.0
+
+--- Thread ---
+
+[2025-01-28 09:14] Ian Bracewell (Principal BMS):
+We've had a noticeable increase in WBC abnormal-scatter flags over the last
+week or so on VS4-0402. Normally we'd flag maybe 4% of differentials for
+review; we're now at 12-14%. The films we're pulling are unremarkable, so
+these look like false flags rather than a change in the patient mix.
+
+We're also seeing W-042 background WBC warnings intermittently, maybe twice a
+day, and one E-208 on Monday which halted a run.
+
+QC is passing, both levels, but I've been looking at the L-J chart and the WBC
+normal level has been trending up for about ten days. Still inside 2SD but
+it's a clear trend, about +0.4SD.
+
+Nothing has changed here. Same staff, same tubes, same procedures. The
+instrument passed PM in October.
+
+Sample IDs affected today include CH-25-0128-0417, CH-25-0128-0433 and
+CH-25-0128-0461 if that helps.
+
+[2025-01-28 10:40] Danny Whitcombe (Support Engineer):
+Hi Ian, thanks - that's an unusually well-characterised report, it helps.
+
+Starting points:
+1. Please run an Extended Clean and then three background counts, and send me
+   the numbers.
+2. Please send the lot numbers for all cartridges on board (D5, L3, CL) and
+   the date each was first pierced.
+3. What's the ambient temperature at the instrument, measured at the
+   instrument rather than the room thermostat?
+4. Can you export the last 30 QC points for WBC, both levels?
+
+The trend on the L-J chart is the thing I'm most interested in. A drifting
+background with a rising WBC QC and increased scatter flagging is a pattern
+that points at optics or reagent rather than at anything mechanical.
+
+[2025-01-28 13:55] Ian Bracewell (Principal BMS):
+1. Extended Clean done. Backgrounds after: WBC 0.09, 0.11, 0.10 x10^9/L. All
+   within limits, so that looks fine immediately after the clean.
+2. RGT-D5 lot D5-2025-0104 pierced 14/01. RGT-L3 lot L3-2025-0444 pierced
+   15/01. RGT-CL lot CL-2024-0059 pierced 02/01.
+3. 21.5 C at the instrument, 20.8 C in the room. Stable, we log it.
+4. QC export attached.
+
+[2025-01-29 08:20] Ian Bracewell (Principal BMS):
+Update - the background has gone back up overnight. WBC background this
+morning 0.24, 0.26 x10^9/L, both over the limit. So the clean helped for less
+than 24 hours.
+
+[2025-01-29 09:30] Danny Whitcombe (Support Engineer):
+That's very useful, thank you. A background that clears with a clean and comes
+back within a day is not a fouling problem in the ordinary sense - fouling
+doesn't reaccumulate that fast on a normal workload.
+
+Escalating to Marcus Chen in Applications.
+
+[2025-01-29 11:15] Marcus Chen (QC Applications Specialist):
+Ian, hello. Two questions and one request.
+
+Questions:
+- Your RGT-L3 cartridge was pierced on 15 January, so it's fourteen days on
+  board. Did the flagging increase start around day 4 or 5 of that cartridge,
+  which would be about the 19th or 20th?
+- Do you have an earlier RGT-L3 cartridge, from a different lot, still in
+  date and unopened?
+
+Request: if you do, please swap it in, prime, run three backgrounds and both
+QC levels, and tell me what happens. If the background comes down and stays
+down, we have our answer.
+
+[2025-01-29 14:22] Ian Bracewell (Principal BMS):
+Checked our records - the first W-042 was on the 20th, so yes, day five.
+That's a good catch.
+
+We have one cartridge left from L3-2025-0433, unopened, in date. Swapping now.
+
+[2025-01-29 16:48] Ian Bracewell (Principal BMS):
+Swapped, primed, backgrounds: 0.07, 0.08, 0.06 x10^9/L. QC both levels well
+within range and the WBC normal has come back to where it was three weeks ago.
+
+That's a reagent problem, isn't it.
+
+[2025-01-30 08:50] Marcus Chen (QC Applications Specialist):
+It looks that way, yes. Thank you for running that - it's the cleanest piece
+of evidence we have.
+
+What I need from you now:
+- Please quarantine the L3-2025-0444 cartridge you removed. Do not discard it.
+  Label it with the pierce date and the removal date.
+- Please tell me the lot numbers of any other RGT-L3 stock you hold, opened or
+  unopened.
+- Please hold off on using anything from the 0440s range until I come back to
+  you.
+
+I'm raising this with our reagent R&D team today. I want to be straight with
+you: if this is what I think it is, it will not be confined to your site.
+
+[2025-01-30 09:30] Ian Bracewell (Principal BMS):
+Quarantined and labelled. Other stock we hold: two unopened from L3-2025-0448
+and one from L3-2025-0452. Both in the range you're worried about, I assume.
+
+I have to ask the awkward question. Have we reported bad results? I have ten
+days of differentials to think about.
+
+[2025-01-30 11:40] Marcus Chen (QC Applications Specialist):
+It's the right question and you're entitled to a straight answer.
+
+What we understand so far: the effect is a positive bias on the WBC count and
+an increase in false abnormal-scatter flags. Red cell, haemoglobin and platelet
+parameters are unaffected. Most affected results carry a flag, which means they
+should have come to you for review before authorisation.
+
+So the likely picture is that you have been reviewing more films than you
+needed to, rather than that you have released wrong results without knowing.
+But I'm not going to tell you the number is zero before we've quantified the
+bias, and I'd suggest you start thinking now about how you would identify the
+patient episodes analysed on that cartridge between 15 and 29 January, because
+if this becomes a formal notice you will be asked to.
+
+I'll come back to you within 48 hours with something firmer.
+
+[2025-01-31 15:10] Dr Wen Li (R&D Reagents):
+Ian, Wen Li here, I lead reagent R&D. Thank you for the work you've done on
+this, it has moved us along considerably.
+
+We have opened a formal investigation (VBI-0087). Retained samples of your lot
+and of adjacent lots are in accelerated testing now. Early data supports what
+you found: the affected material develops elevated baseline absorbance at
+535 nm over time on board, and it is not detectable at release, which is why
+our lot release testing did not catch it.
+
+We will collect your quarantined cartridge for analysis. A courier will be
+arranged - please do not send it through the post.
+
+[2025-02-06 12:00] Rob Ellery (Field Service Engineer):
+Attended site (FSV-2025-0146) at the customer's request for reassurance that
+the instrument itself is sound.
+
+Optics calibration passed. Lamp hours 1,240, well within life. Flow cell
+clean, no deposit visible. Fluidics normal. Background counts on the
+unaffected reagent lot: 0.06-0.08 x10^9/L across six cycles over three hours.
+
+No instrument fault. Confirmed to Ian in person.
+
+Collected the quarantined L3-2025-0444 cartridge and the two unopened
+L3-2025-0448 for return to Basel. Left the site with L3-2025-0421 stock from
+our van inventory as a bridge.
+
+Time on site 3.0 hours.
+
+[2025-02-14 09:00] Marcus Chen (QC Applications Specialist):
+Ian - Field Safety Notice FSN-2025-003 was issued this morning. It covers
+lots L3-2025-0440 through L3-2025-0460. Your affected lots are in scope. The
+notice is being sent formally to your trust's contact address; I'm attaching a
+copy here so you have it now.
+
+The notice asks for a retrospective review of WBC results from the affected
+period. Given that you already know your exposure window (15 to 29 January on
+VS4-0402), you're ahead of most sites.
+
+Replacement stock is being shipped at no charge. Returns authorisation for
+your remaining affected stock will follow.
+
+Thank you again. Your report was the first we received on this and the quality
+of it is why we found it as quickly as we did.
+
+[2025-02-14 10:15] Ian Bracewell (Principal BMS):
+Appreciated. We'd worked out the exposure list already and it's 1,847 samples,
+of which 214 were flagged and reviewed. Our consultant haematologist is
+reviewing the unflagged ones with an elevated WBC as a precaution. Nothing has
+come out of it so far.
+
+I'll close my end once the returns are collected.
+
+[2025-02-21 14:30] Danny Whitcombe (Support Engineer):
+Returns collected. Replacement stock delivered and confirmed. Marking
+resolved.
+
+--- Resolution ---
+Root cause: RGT-L3 lot L3-2025-0444 (formulation revision C) developing
+elevated baseline absorbance at 535 nm during on-board use. Not an instrument
+fault.
+Actions: affected stock quarantined and returned; replacement supplied free of
+charge; FSN-2025-003 issued 2025-02-14; investigation VBI-0087.
+This ticket was the index complaint for FSN-2025-003.
+See also: VBST-3851, VBST-3863, VBST-3871, VBST-3884, FSV-2025-0146.

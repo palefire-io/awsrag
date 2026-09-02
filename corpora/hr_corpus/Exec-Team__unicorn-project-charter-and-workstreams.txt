@@ -1,0 +1,236 @@
+=================================================================
+*** STRICTLY CONFIDENTIAL - PROJECT UNICORN ***
+*** EXECUTIVE COMMITTEE AND NAMED DEAL TEAM ONLY ***
+*** DO NOT FORWARD - DO NOT PRINT - DO NOT DISCUSS OUTSIDE THE ***
+*** DEAL TEAM INCLUDING WITH YOUR OWN DIRECT REPORTS ***
+=================================================================
+PROJECT UNICORN
+Project Charter and Workstream Structure
+=================================================================
+Document:      UNI-GOV-001
+Version:       4
+Date:          2026-06-02
+Owner:         Gary Pemberton, Chief Financial Officer (Project Sponsor)
+Prepared by:   Sunita Raval, General Counsel (Project Director)
+Classification: Strictly Confidential - Inside Information
+Distribution:  Named individuals at Annex A only
+
+INSIDE INFORMATION WARNING. This project concerns a potential corporate
+transaction. The information in this document and in all Project Unicorn
+documents is confidential and price-sensitive. Veridia is a private company
+but Ardenmoor Capital, a shareholder in the target, manages listed vehicles.
+Any person in receipt of this information must not deal in any relevant
+securities and must not disclose it to any person outside Annex A, including
+their own team, their partner or their family. If you believe you have
+disclosed it accidentally, tell Sunita Raval the same day. Nobody has ever
+been disciplined for reporting an accidental disclosure promptly.
+
+-----------------------------------------------------------------
+1. WHAT PROJECT UNICORN IS
+-----------------------------------------------------------------
+1.1  Project Unicorn is Veridia BioSystems' evaluation of, and potential offer
+     for, 100 per cent of the issued share capital of Narwhal Industrial
+     Holdings Limited ("Narwhal"), a UK-headquartered manufacturer of
+     pre-analytical laboratory automation systems.
+
+1.2  Codenames used throughout project documentation:
+       "Unicorn"   the transaction
+       "Veridia"   Veridia BioSystems Ltd - used openly in internal documents
+       "Narwhal"   Narwhal Industrial Holdings Ltd - used openly in internal
+                   documents but NEVER in email subject lines, calendar
+                   entries, travel bookings or expense descriptions
+       "Kelpie"    Ardenmoor Capital, the private equity shareholder in
+                   Narwhal
+       "Selkie"    the alternative target evaluated and rejected in
+                   January 2026
+
+1.3  Calendar entries use "Unicorn review" and nothing more. Travel to
+     Warrington or Wrocław is booked personally and expensed as "business
+     development - confidential" with the CFO as approver.
+
+-----------------------------------------------------------------
+2. STRATEGIC RATIONALE
+-----------------------------------------------------------------
+2.1  Veridia's automation product, the VeriPrep SP-1, is a single benchtop
+     station. It decaps, identifies, aliquots and sorts, and it integrates
+     with our analysers. It is a good product with a well-documented weakness:
+     the r1 tolerance problem with short-cap tubes cost us eighteen months of
+     customer goodwill, a subsidised retrofit programme and a redesign we
+     should not have needed. We did not have the mechanical engineering depth
+     in-house to have got it right first time.
+
+2.2  Narwhal has that depth. They have been building tube handling mechanisms
+     for fourteen years and their tolerance engineering is materially better
+     than ours. Their SortLine and ArchiveCell products sit in large
+     laboratories that we do not currently reach with the SP-1.
+
+2.3  The strategic case, in one sentence: Narwhal gives Veridia the track
+     automation portfolio and the mechanical engineering capability that would
+     otherwise take us five years and a lot of unhappy customers to build.
+
+2.4  Commercially: Narwhal's installed base is 340 systems across 190
+     laboratories in the UK, Germany, Poland and the Nordics. Approximately 40
+     per cent of those laboratories already run at least one competitor
+     haematology analyser. The revenue synergy case rests on displacement into
+     that base over five to seven years, which is slower than the model
+     assumes and is the single softest assumption in the financial case.
+
+-----------------------------------------------------------------
+3. NARWHAL AT A GLANCE
+-----------------------------------------------------------------
+  Legal entity        Narwhal Industrial Holdings Limited
+                      Registered in England, company number 07551043
+                      Registered office: Kingsway Point, Delta Park,
+                      Warrington WA5 7ZB
+  Founded             2011
+  Sites               Warrington (HQ, assembly, R&D) - 265 employees
+                      Wroclaw, Poland (manufacturing, machining) - 145
+                      employees
+  Total headcount     410 (at 2026-03-31)
+  Revenue FY2025      GBP 58.2M
+  EBITDA FY2025       GBP 4.1M (7.0 per cent margin)
+  Products            SortLine track sorters; ArchiveCell refrigerated sample
+                      archiving; DecapPro standalone decappers; SortLine Lite
+  Ownership           Gareth Standish (founder, CEO) 42%
+                      Ardenmoor Capital ("Kelpie") 38%
+                      Management and EBT 20%
+  Chair               Dame Rosalind Ferrier-Blake (non-executive)
+
+-----------------------------------------------------------------
+4. TIMELINE AND STATUS
+-----------------------------------------------------------------
+  2025-11-14  Initial approach by Alistair Vance to Gareth Standish at
+              Medica. Informal.
+  2025-12-09  Second conversation. Standish indicates Ardenmoor is seeking an
+              exit and has been for eighteen months.
+  2026-01-20  "Selkie" alternative evaluated and rejected - poor product fit,
+              worse margins, no manufacturing capability.
+  2026-02-06  Mutual NDA executed.
+  2026-02-27  Heads of terms agreed, non-binding. Indicative enterprise value
+              GBP 62M to GBP 68M, subject to diligence.
+  2026-03-11  Veridia Board approves proceeding to full due diligence. See
+              UNI-BRD-001.
+  2026-03-18  Exclusivity granted to 2026-09-30.
+  2026-04-06  Data room opened. Financial, commercial, legal, technical and
+              HR workstreams commence.
+  2026-06-30  HR due diligence report issued. See UNI-DD-HR-001.
+  2026-07-31  All diligence workstreams to report. TARGET.
+  2026-09-15  Board decision on final offer. TARGET.
+  2026-10-31  Signing. TARGET.
+  2027-01-31  Completion, subject to CMA clearance. TARGET.
+
+  CURRENT STATUS as at this version: diligence in progress. HR, legal and
+  financial workstreams have reported. Technical and commercial outstanding.
+
+-----------------------------------------------------------------
+5. WORKSTREAMS AND LEADS
+-----------------------------------------------------------------
+  Financial          Gary Pemberton, CFO. Advisers: Hartwell Brogan LLP.
+  Legal              Sunita Raval, GC. Advisers: Marchmont Sayers LLP.
+  Commercial         Michael Ashworth, CCO.
+  Technical and
+    product          Dr Elena Marchetti, CSO.
+  Regulatory         Sarah Lindgren, RA Manager. LIMITED BRIEF - see 6.3.
+  HR and people      Naomi Okonjo-Bright, CPO. Advisers: Marchmont Sayers
+                     employment team; Pilkington Rowe (pensions).
+  Integration
+    planning         Gary Pemberton, with Tom Reeves seconded from 2026-08.
+  Communications     Naomi Okonjo-Bright and Michael Ashworth jointly.
+
+-----------------------------------------------------------------
+6. WHO KNOWS - AND WHO DOES NOT
+-----------------------------------------------------------------
+6.1  Annex A lists every person inside the tent. It runs to fourteen names
+     including advisers' engagement partners. It is maintained by Sunita
+     Raval and every addition requires her approval and the CFO's.
+
+6.2  NOBODY BELOW THE EXECUTIVE COMMITTEE KNOWS, with three exceptions, each
+     approved individually and each subject to a personal confidentiality
+     undertaking:
+       - Denise Kaur (Reward), for the compensation benchmarking work. Told
+         2026-04-22.
+       - Rachel Duffy (HRBP), for the TUPE and employment analysis. Told
+         2026-05-11.
+       - Tom Reeves, for integration planning. To be told 2026-08-03.
+
+6.3  Sarah Lindgren has a LIMITED BRIEF. She has been asked to assess the
+     regulatory implications of acquiring a manufacturer of IVD accessories
+     without being told the target's identity. She has not been told and has
+     not asked. This is unsatisfactory and Elena Marchetti has flagged that it
+     limits the quality of the answer. It will be resolved by 2026-07-31.
+
+6.4  Priya Anand does NOT know, and the field service implications at section
+     7 of the HR due diligence report are therefore currently assessed without
+     her input. Naomi Okonjo-Bright has recommended she be brought inside
+     before any decision. Pending CFO approval.
+
+6.5  LEAK STATUS. There is no evidence of a leak. There is evidence of
+     speculation: four of thirteen exit interviews in H2 2025 referred
+     unprompted to rumours that the company was "doing something", and the
+     People team FAQ has carried a question about acquisition rumours since
+     the June 2026 revision. Both are recorded in the risk register as
+     UNI-RSK-011. Neither indicates that anyone knows anything.
+
+-----------------------------------------------------------------
+7. GOVERNANCE
+-----------------------------------------------------------------
+7.1  Steering group: Vance (CEO), Pemberton (CFO), Raval (GC), Marchetti
+     (CSO), Ashworth (CCO), Okonjo-Bright (CPO). Fortnightly, Thursdays,
+     16:00, room booked as "Finance review".
+
+7.2  Board updates at each scheduled meeting. Sir Nigel Broadhurst as Chair
+     receives a weekly written update.
+
+7.3  DECISION GATES
+       Gate 1  Proceed to diligence            PASSED 2026-03-11
+       Gate 2  Diligence complete, proceed to
+               final offer                     2026-09-15
+       Gate 3  Signing                         2026-10-31
+       Gate 4  Completion                      2027-01-31
+
+7.4  The Board has been explicit that Gate 2 is a genuine gate. The Chair's
+     minuted comment of 2026-03-11: "We have spent four months and a great
+     deal of management attention. That is a sunk cost and it is not a reason
+     to buy a company."
+
+-----------------------------------------------------------------
+8. STANDING RISKS TO THE PROJECT ITSELF
+-----------------------------------------------------------------
+8.1  MANAGEMENT ATTENTION. Six of nine Executive Committee members are
+     materially engaged. The 2026 operating plan assumes their full attention
+     and does not have it. Monitored monthly by the CEO.
+
+8.2  DISCLOSURE. See section 6. The single largest risk to the project.
+
+8.3  PENSION. The Narwhal defined benefit scheme is the largest single
+     financial and structural risk in the transaction and is capable of
+     preventing it. See UNI-DD-PEN-001.
+
+8.4  CULTURE AND CONDUCT. The HR diligence has identified findings at Narwhal
+     - long hours, contractor misclassification, an unaddressed pay gap, two
+     tribunal claims - which are individually manageable and which
+     collectively describe a company that has not invested in its people
+     function. Integrating that into Veridia is a real risk to Veridia's own
+     culture and it is not adequately priced in the model.
+
+     Naomi Okonjo-Bright's minuted position of 2026-06-04: "We are good at
+     this. They are not. Acquisitions do not reliably transmit the acquirer's
+     culture to the target; sometimes it goes the other way. I want that
+     written down before anybody signs anything."
+
+-----------------------------------------------------------------
+ANNEX A - PERSONS IN POSSESSION (14)
+-----------------------------------------------------------------
+Veridia:      A Vance, G Pemberton, S Raval, E Marchetti, M Ashworth,
+              N Okonjo-Bright, D Kaur, R Duffy, T Reeves (from 2026-08)
+Board:        Sir N Broadhurst (Chair)
+Advisers:     Hartwell Brogan LLP (2 named partners)
+              Marchmont Sayers LLP (1 named partner)
+              Pilkington Rowe (1 named partner)
+
+Maintained by Sunita Raval. Last updated 2026-06-02.
+
+=================================================================
+STRICTLY CONFIDENTIAL - PROJECT UNICORN - INSIDE INFORMATION
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

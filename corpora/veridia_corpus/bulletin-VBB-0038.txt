@@ -1,0 +1,96 @@
+=====================================================
+VERIDIA BIOSYSTEMS - CUSTOMER ADVISORY BULLETIN
+=====================================================
+Reference: VBB-0038
+Date Issued: 2025-01-24
+Type: Technical Advisory (non-safety)
+Affected Product: VeriPrep SP-1 Automated Sample Preparation Station
+Affected Hardware Revision: SP-1r1 (all serial numbers SP1-R1-xxxx)
+Not affected: SP-1r2 (from Q3 2025)
+
+SUBJECT: Tube feed jams and barcode read failures with short-cap 5 mL tubes
+
+-----------------------------------------------------
+BACKGROUND
+-----------------------------------------------------
+Veridia has received 23 reports since September 2024 of VeriPrep SP-1 units
+raising P-105 (tube height out of range), P-101 (barcode no decode) and, in the
+more serious presentations, P-112 (tube feed mechanism jam) when processing
+5 mL evacuated blood collection tubes fitted with a short-profile cap.
+
+Investigation has established that the affected tubes sit 2.1 to 2.8 mm lower in
+the carrier than the tube geometry the SP-1r1 feed mechanism and barcode window
+were designed around. Two consequences follow:
+
+  1. The barcode label may sit partly below the lower edge of the scanner
+     window, producing a partial or failed decode (P-101 / P-103).
+
+  2. The reduced cap height gives the feed pawl insufficient purchase. Under
+     the retry behaviour introduced in SP-1 firmware 2.2.0, a tube that fails
+     to index can tilt in the carrier and wedge against the guide rail. This
+     is the P-112 jam.
+
+The issue is a tolerance interaction, not a defect in either the instrument or
+the tubes. Tubes from at least four suppliers fall within the affected
+geometry. Veridia is not naming suppliers in this bulletin because the same
+supplier may ship compliant and non-compliant cap profiles under one catalogue
+number depending on manufacturing site.
+
+-----------------------------------------------------
+HOW TO IDENTIFY AFFECTED TUBES
+-----------------------------------------------------
+Measure the overall height of the capped tube. If the total height is less than
+75.5 mm for a nominal 13 x 75 mm 5 mL tube, the tube is within the affected
+geometry.
+
+A simple check: place the capped tube in the SP-1 carrier and view from the
+front. If the top of the barcode label is more than 1 mm below the top edge of
+the scanner window, the tube is affected.
+
+-----------------------------------------------------
+MITIGATIONS
+-----------------------------------------------------
+Immediate (no cost):
+  - Where possible, switch to a standard-cap 5 mL tube.
+  - Apply barcode labels 3 mm higher than the current label position. Most
+    laboratory printers allow a vertical offset in the label template.
+  - Reduce carrier fill to alternate positions on affected racks. This does not
+    prevent jams but reduces the chance of a cascade jam.
+
+Interim (chargeable, low cost):
+  - Order SP1-ADP-05, a set of 10 short-cap tube adapters (list GBP 72.00,
+    lead time 3 days). The adapter raises the tube by 2.5 mm and restores both
+    scanner alignment and feed pawl purchase. Adapters are washable and
+    autoclavable at 121 C.
+
+Permanent:
+  - SP-1r2 units, shipping from Q3 2025, include a redesigned feed mechanism
+    (SP1-MEC-141) with a wider tube height tolerance band and a repositioned
+    scanner window. Internal validation over 5,000 tube presentations recorded
+    a jam rate of 0.02 per cent against 1.8 per cent for r1 with affected
+    tubes.
+  - A retrofit kit (SP1-KIT-R2UP, list GBP 1,150.00) is available for r1 units.
+    The retrofit requires an engineer visit of approximately 6 hours and
+    includes the firmware 2.3.0 licence. Contact your account manager.
+
+-----------------------------------------------------
+CLEARING A P-112 JAM
+-----------------------------------------------------
+Refer to SOP-VBS-003 section 6. In summary: stop the run, open the lid (this
+raises P-501, which is expected), release the carrier lock, withdraw the tube
+by hand without rotating it, inspect the feed pawl and guide rail for shed cap
+material, then run Gripper Home from the Service menu before resuming.
+
+Do NOT attempt to free a wedged tube with the instrument running. Do not use
+metal tools in the tube path.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Priya Anand, Head of Field Service Engineering
+priya.anand@veridiabio.com  |  +44 1223 496 130
+
+Support: support@veridiabio.com  |  +44 1223 496 100
+=====================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=====================================================

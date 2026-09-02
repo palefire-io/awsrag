@@ -1,0 +1,37 @@
+{
+  "name": "cloudrag",
+  "version": "0.1.0",
+  "bin": {
+    "cloudrag": "bin/cloudrag.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "deploy:dev": "CDK_STAGE=dev npx cdk deploy --all",
+    "deploy:prod": "CDK_STAGE=prod npx cdk deploy --all",
+    "destroy:dev": "CDK_STAGE=dev npx cdk destroy --all --force",
+    "silos:orphans": "ts-node scripts/silos-orphans.ts",
+    "corpus:import": "ts-node scripts/import-corpus.ts",
+    "db:connect": "ts-node scripts/db-connect.ts",
+    "db:cloudshell": "ts-node scripts/db-cloudshell.ts"
+   },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.19.43",
+    "aws-cdk": "^2.1137.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.265.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}

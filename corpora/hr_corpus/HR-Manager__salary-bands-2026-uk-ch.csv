@@ -1,0 +1,18 @@
+band_code,level,level_name,country,currency,band_minimum,band_lower_quartile,band_midpoint,band_upper_quartile,band_maximum,job_family_premium_applies,premium_families,premium_percent,market_position_target,last_benchmarked,notes
+B1,L1,Associate,UK,GBP,28000,30000,32000,34000,36000,No,,0,Median,2025-10-14,
+B2,L2,Engineer,UK,GBP,35000,38250,41500,44750,48000,Yes,Software; Firmware; Cloud,8,Median,2025-10-14,Premium reflects Cambridge software market not internal value
+B3,L3,Senior,UK,GBP,46000,51000,56000,61000,66000,Yes,Software; Firmware; Cloud; Regulatory,8,Median,2025-10-14,Regulatory premium added 2026 - see pay review guidance s.6
+B4,L4,Staff / Principal / Head of,UK,GBP,64000,71000,78000,85000,92000,Yes,Software; Firmware; Cloud; Regulatory,10,Median to upper quartile,2025-10-14,
+B5,L5,Director / VP,UK,GBP,90000,100000,110000,120000,130000,No,,0,Median,2025-10-14,ExCo direct reports; individually reviewed
+B6,L6,Executive,UK,GBP,130000,147500,165000,182500,200000,No,,0,Median,2025-10-14,Remuneration Committee approval required for any change
+C1,L1,Associate,CH,CHF,62000,66000,70000,74000,78000,No,,0,Median,2025-10-14,
+C2,L2,Engineer,CH,CHF,76000,82000,88000,94000,100000,Yes,Software; Firmware; QC,6,Median,2025-10-14,
+C3,L3,Senior,CH,CHF,98000,106500,115000,123500,132000,Yes,Software; Firmware; QC; Regulatory,6,Median,2025-10-14,
+C4,L4,Staff / Principal / Head of,CH,CHF,130000,141250,152500,163750,175000,Yes,Software; Firmware; QC; Regulatory,8,Median to upper quartile,2025-10-14,
+C5,L5,Director / VP,CH,CHF,172000,187750,203500,219250,235000,No,,0,Median,2025-10-14,
+C6,L6,Executive,CH,CHF,230000,255000,280000,305000,330000,No,,0,Median,2025-10-14,No current CH incumbents at L6
+,,,,,,,,,,,,,,,
+BENCHMARK SOURCE: Radford Global Life Sciences survey (Oct 2025 cut) supplemented by Willis Towers Watson UK Technology and Croner Reward for Cambridge-region roles. Swiss data from Swissstaffing and the Basel Life Sciences Compensation Circle.,,,,,,,,,,,,,,,
+POSITIONING: Veridia targets median of the comparator set for most roles. We do not target upper quartile and we tell candidates so. Premium families reflect external market scarcity, not a judgement about internal contribution, and this distinction must be made explicitly if an employee asks.,,,,,,,,,,,,,
+BAND WIDTH: bands span roughly 28-44 per cent. A person entering a band below the midpoint is normal and is not a signal of a problem. Managers must not describe below-midpoint placement as underperformance.,,,,,,,,,,,,,,,
+CONFIDENTIALITY: this table is restricted to people managers, the People team and the Executive Committee. Employees are entitled to know their own band, their position within it, and the range for their own level - see User__career-framework-overview-v5.txt section 8. Do not share the full table.,,,,,,,,,,,,

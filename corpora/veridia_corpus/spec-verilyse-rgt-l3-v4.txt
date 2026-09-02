@@ -1,0 +1,139 @@
+=================================================================
+VERIDIA BIOSYSTEMS - REAGENT SPECIFICATION SHEET
+=================================================================
+Product: VeriLyse RGT-L3 Lyse Reagent
+Catalogue: VL-L3-500 (500 mL cartridge, 4 per case)
+Document Ref: DS-RGT-L3-004
+Revision: v4
+Revision Date: 2025-06-03
+Supersedes: DS-RGT-L3-003 (2024-08-19)
+Formulation revision: D (current, from lot L3-2025-0471)
+Classification: In-vitro diagnostic reagent. IVD Directive 98/79/EC.
+                IVDR Class B (Rule 5c) pending.
+
+REVISION HISTORY OF THIS DOCUMENT
+  v4 (2025-06-03)  Adds formulation revision D; adds FSN-2025-003 reference;
+                   revises stability data table.
+  v3 (2024-08-19)  Adds RFID lot verification note.
+  v2 (2023-11-02)  Adds VeriScan 400 Pro compatibility.
+
+-----------------------------------------------------------------
+INTENDED USE
+-----------------------------------------------------------------
+RGT-L3 is a lytic reagent for use with VeriScan 400 and VeriScan 400 Pro
+haematology analysers. It lyses erythrocytes, converts haemoglobin to a stable
+cyanide-free chromogen for colorimetric measurement, and differentially
+modifies leucocyte membranes to permit five-part differentiation by scatter and
+absorbance or fluorescence. For in-vitro diagnostic use by trained laboratory
+personnel.
+
+-----------------------------------------------------------------
+COMPOSITION (nominal, revision D)
+-----------------------------------------------------------------
+Component                          | Concentration
+-----------------------------------|------------------
+Quaternary ammonium surfactant     | 12 g/L
+Sodium lauryl sulfate              | 1.4 g/L
+Dual buffer system (rev D)         | 8.5 g/L total
+  - organic zwitterionic buffer    |
+  - phosphate co-buffer            |
+Chelating agent                    | 0.6 g/L
+Stabiliser                         | 0.3 g/L
+Purified water                     | to 1 L
+pH (25 C)                          | 6.9 +/- 0.1
+Absorbance at 535 nm (blank)       | <= 0.015 AU at release
+                                   | <= 0.025 AU at end of on-board life
+
+CYANIDE-FREE. Contains no reagents of human or animal origin.
+
+Revision C used a single organic buffer. Revision D replaces it with the dual
+buffer system above, which is substantially less sensitive to trace metal ion
+contamination in the incoming raw material stream. See VBB-0047 for the change
+notification and method comparison data.
+
+-----------------------------------------------------------------
+LOT NUMBERING SCHEME
+-----------------------------------------------------------------
+Format: L3-YYYY-NNNN/R
+
+  L3      product code
+  YYYY    year of manufacture
+  NNNN    sequential fill number within the year
+  /R      formulation revision suffix (C or D)
+
+Revision D cartridges carry a blue identification band on the label. Revision C
+cartridges carry a grey band.
+
+IMPORTANT - RECALLED LOTS
+  Lots L3-2025-0440 through L3-2025-0460 inclusive (revision C) were recalled
+  under Field Safety Notice FSN-2025-003 issued 2025-02-14. These lots may show
+  elevated baseline absorbance at 535 nm developing from approximately day 5 of
+  on-board use, producing spurious WBC flags and a positive WBC bias on
+  VeriScan 400 instruments. They must not be used on any instrument. If you
+  hold stock from this range, refer to FSN-2025-003 for the return process.
+
+  Root cause is documented in investigation report VBI-0087.
+
+-----------------------------------------------------------------
+STORAGE AND STABILITY
+-----------------------------------------------------------------
+Condition                        | Specification
+---------------------------------|---------------------------------
+Unopened, 2-25 C                 | 18 months from manufacture
+On board after first pierce      | 90 days
+Do not freeze                    | Yes - freezing denatures surfactant
+Protect from direct sunlight     | Yes
+Transport                        | Ambient, -10 to 50 C, up to 14 days
+
+Accelerated stability, baseline absorbance shift at 535 nm after 12 weeks at
+35 C:
+  Revision D                      0.004 AU
+  Revision C, unaffected lots     0.009 AU
+  Revision C, affected lots       0.061 AU
+
+-----------------------------------------------------------------
+INSTRUMENT COMPATIBILITY
+-----------------------------------------------------------------
+  VeriScan 400        Yes. Firmware 4.0.0 and later. Revisions C and D.
+  VeriScan 400 Pro    Yes. Firmware 4.0.0 and later. Revisions C and D.
+  VeriScan 200        NO. Revision D is not validated on the VeriScan 200
+                      platform and must not be used on it. A platform-specific
+                      lyse fill is maintained for VeriScan 200 sites until
+                      2027-12-31. See VBB-0049.
+
+Revisions C and D may be used on the same instrument at different times. Do not
+mix within a cartridge bay and do not decant between cartridges. No
+recalibration is required at revision changeover; run both QC levels per
+SOP-VBS-002.
+
+-----------------------------------------------------------------
+SAFETY SUMMARY
+-----------------------------------------------------------------
+Classified under Regulation (EC) No 1272/2008 (CLP):
+  Eye Irrit. 2, H319 - Causes serious eye irritation
+  Skin Irrit. 2, H315 - Causes skin irritation
+  Aquatic Chronic 3, H412 - Harmful to aquatic life with long lasting effects
+Pictogram: GHS07 (exclamation mark)
+Signal word: Warning
+
+Precautionary statements: P264 wash hands thoroughly after handling; P280 wear
+protective gloves and eye protection; P305+P351+P338 IF IN EYES rinse
+cautiously with water for several minutes, remove contact lenses if present and
+easy to do, continue rinsing; P337+P313 if eye irritation persists get medical
+advice.
+
+Disposal: as clinical/chemical waste in accordance with local regulations. Do
+not discharge to surface water.
+
+Full safety data sheet: SDS-RGT-L3 rev 6.
+
+-----------------------------------------------------------------
+ORDERING
+-----------------------------------------------------------------
+VL-L3-500     | RGT-L3 Lyse Reagent, 500 mL cartridge, case of 4
+VL-L3-500-S   | Single cartridge (surcharge applies)
+VL-L3-200-VS2 | VeriScan 200 platform fill, 200 mL (to 2027-12-31)
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

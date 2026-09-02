@@ -1,0 +1,186 @@
+=================================================================
+VERIDIA BIOSYSTEMS - AUDIT FINDINGS SUMMARY
+=================================================================
+Title:        Notified Body 0086 - Quality Management System Audit 2025
+Document Ref: REG-AUD-2025-001
+Revision:     3
+Date:         2026-05-11
+Prepared by:  Simone Buehler, QA Manager
+Approved by:  Dr Elena Marchetti, Chief Scientific Officer
+Distribution: Internal, and customer-facing on request under NDA.
+
+-----------------------------------------------------------------
+1. AUDIT DETAILS
+-----------------------------------------------------------------
+Notified Body:      0086
+Standard/scope:     EN ISO 13485:2016; Regulation (EU) 2017/746 Annex IX
+                    Chapter I (quality management system assessment)
+Audit dates:        2025-04-14 to 2025-04-17
+Sites audited:      Cambridge, United Kingdom (design, software, regulatory,
+                    customer support, distribution)
+                    Basel, Switzerland (reagent manufacture, QC laboratory,
+                    stability testing)
+Lead auditor:       (name withheld in customer-facing copy)
+Audit team:         3 auditors plus 1 technical expert (haematology)
+
+OUTCOME
+Certificate recommendation issued. Zero major non-conformities. Zero minor
+non-conformities. Four observations raised.
+
+An observation under this Notified Body's scheme is a finding that does not
+constitute a departure from a requirement but that identifies a risk of one
+arising, or a practice that could be improved. Observations do not require a
+formal corrective action plan. Veridia elected to treat all four as if they
+did.
+
+-----------------------------------------------------------------
+2. OBSERVATIONS RAISED
+-----------------------------------------------------------------
+
+NB-2025-OBS-01
+Area:       Post-market surveillance / complaint handling
+Finding:    "The complaint handling procedure defines a target of 15 working
+            days for completion of a health hazard evaluation. In the case
+            reviewed (FSN-2025-003), the interval between the first complaint
+            reasonably attributable to the issue and the completion of the
+            health hazard evaluation was 15 days, during which affected product
+            remained in distribution and in use. The organisation may wish to
+            consider whether the target interval is consistent with its stated
+            risk policy."
+
+Veridia response and action:
+            Accepted. SOP-VBS-014 revision 2 (2025-04-28) reduces the health
+            hazard evaluation target from 15 to 5 working days and introduces
+            a weekly complaint clustering review, which is the control that
+            would have shortened the interval before the evaluation began.
+            The clustering review is the more significant change: the
+            evaluation was not slow, the recognition that one was needed was.
+            Status: CLOSED, verified at surveillance audit 2026-04.
+
+NB-2025-OBS-02
+Area:       Design and development / software - access control
+Finding:    "Evidence was seen of customer tenants operating shared user
+            accounts within the VeriConnect platform. While the platform
+            provides adequate controls, the organisation does not
+            systematically detect or advise customers of this practice, which
+            undermines the traceability of result authorisation."
+
+Veridia response and action:
+            Accepted. Three actions:
+            (a) SOP-VBS-004 revision 5 (2025-09-15) states the prohibition on
+                shared accounts explicitly and gives the reasons.
+            (b) VeriConnect now surfaces likely shared-account patterns
+                (concurrent sessions from disparate addresses, login frequency
+                inconsistent with a single user) to tenant administrators.
+            (c) Onboarding materials revised.
+            Veridia notes for completeness that account practice within a
+            customer tenant is the customer's responsibility as controller.
+            The observation is nonetheless fair: we can see it and we were not
+            telling anyone.
+            Status: CLOSED, verified at surveillance audit 2026-04.
+
+NB-2025-OBS-03
+Area:       Design and development / software lifecycle
+Finding:    "The abbreviated release path applied to firmware hotfixes omits
+            the extended soak testing applied to major releases. Two defects
+            reaching the field in Q1 2025 (firmware 4.2.1 and 4.2.2) were
+            released through this path. The organisation's own investigation
+            identifies the omission as contributory."
+
+Veridia response and action:
+            Accepted without qualification. This is the observation Veridia
+            considers most serious of the four, notwithstanding its
+            classification.
+            Actions from CAPA-2025-022 through CAPA-2025-024:
+            (a) A 72-hour continuous-uptime soak with an independent time
+                reference added to the hotfix release path.
+            (b) No hotfix ships before the investigation identifying the
+                defect it addresses is complete. This is the rule that would
+                have prevented 4.2.2.
+            (c) Code review checklist: any change touching a time source, a
+                clock read or a monotonic counter requires a second reviewer
+                and an explicit statement of semantic intent.
+            (d) Absolute time assertion added to the HL7 conformance suite.
+            Status: CLOSED, verified at surveillance audit 2026-04. The
+            auditor specifically reviewed the release records for firmware
+            4.3.1 and 4.4.0 and confirmed the soak evidence was present.
+
+NB-2025-OBS-04
+Area:       Design and development / traceability
+Finding:    "Instrument-side audit events are uploaded to the VeriConnect
+            platform only where the instrument is running firmware 4.1.0 or
+            later and where an optional setting is enabled. The setting
+            defaults to disabled on upgrade. Customers purchasing the VeriGuard
+            module on the basis of audit trail completeness may not be aware
+            that the trail is incomplete."
+
+Veridia response and action:
+            Accepted. Actions:
+            (a) DS-VG-002 revision 2 (2026-01-19) states the limitation
+                explicitly under "Audit logging".
+            (b) VeriConnect 6.1 surfaces a fleet-level warning where an
+                enrolled instrument is not uploading audit events.
+            (c) Firmware 4.4.0 (2026-04-21) changes the default so that cloud
+                audit upload is enabled for any instrument in a VeriGuard
+                tenant, opt-out rather than opt-in.
+            Status: CLOSED, verified at surveillance audit 2026-04.
+
+            Note: this observation was independently identified by a customer
+            in June 2025 (ticket VBST-4070) before actions (b) and (c) had
+            shipped. Veridia disclosed the audit observation to that customer
+            at the time.
+
+-----------------------------------------------------------------
+3. AREAS OF PARTICULAR STRENGTH NOTED BY THE AUDIT TEAM
+-----------------------------------------------------------------
+The audit report records three:
+
+  - The root cause investigation for FSN-2025-003 (report VBI-0087) was
+    described as "unusually thorough, including the identification of a
+    supplier control weakness that the organisation was not obliged to
+    disclose".
+
+  - The Basel reagent QC laboratory's stability testing programme and the
+    retention sample regime were commended.
+
+  - The separation of the clinical result path (instrument to LIS) from the
+    cloud platform was noted as "an architectural decision with a demonstrable
+    safety benefit", with reference to the March 2025 SSO outage in which no
+    result was delayed.
+
+-----------------------------------------------------------------
+4. SURVEILLANCE AUDIT 2026
+-----------------------------------------------------------------
+Dates:        2026-04-20 to 2026-04-22
+Sites:        Cambridge (remote for one day), Basel (on site)
+Outcome:      Zero non-conformities. All four 2025 observations verified as
+              closed. One new observation raised:
+
+NB-2026-OBS-01
+Area:       Design and development / software - beta features
+Finding:    "The FHIR R4 export introduced in VeriConnect 6.2 is labelled as
+            not for diagnostic use. The organisation should satisfy itself
+            that the technical and procedural controls preventing diagnostic
+            use are adequate, given that the output is clinically meaningful
+            and is delivered through the same platform as validated outputs."
+
+Status:     OPEN. Response due 2026-07-31. Under review by Regulatory Affairs
+            and Product. Veridia's preliminary view is that a label is not by
+            itself a control and that a technical measure is likely to be
+            required.
+
+-----------------------------------------------------------------
+5. NOTE ON DISCLOSURE
+-----------------------------------------------------------------
+Veridia publishes this summary to customers on request because customers
+increasingly ask, and because a supplier who will not discuss its audit
+findings invites the assumption that they are worse than they are.
+
+The full audit reports are the property of the Notified Body and are not
+Veridia's to distribute. This summary is complete as to the findings and their
+disposition. Auditor names and the Notified Body's internal report references
+are withheld.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

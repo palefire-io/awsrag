@@ -1,0 +1,35 @@
+lot_id,product_code,product_name,formulation_rev,manufacture_date,expiry_date,units_produced,release_status,qc_release_date,disposition_notes
+D5-2024-1188,RGT-D5,VeriLyse Standard Diluent,C,2024-11-04,2026-05-04,4200,Released,08/11/2024,
+D5-2024-1201,RGT-D5,VeriLyse Standard Diluent,C,2024-12-02,2026-06-02,4200,Released,06/12/2024,
+D5-2025-0104,RGT-D5,VeriLyse Standard Diluent,C,2025-01-13,2026-07-13,4800,Released,2025-01-17,
+D5-2025-0119,RGT-D5,VeriLyse Standard Diluent,C,2025-02-10,2026-08-10,4800,Released,2025-02-14,
+D5-2025-0133,RGT-D5,VeriLyse Standard Diluent,C,2025-03-11,2026-09-11,5000,Released,2025-03-14,
+D5-2025-0158,RGT-D5,VeriLyse Standard Diluent,C,2025-05-06,2026-11-06,5000,Released,2025-05-09,
+D5-2025-0177,RGT-D5,VeriLyse Standard Diluent,C,2025-07-15,2027-01-15,5200,Released,2025-07-18,
+D5-2025-0194,RGT-D5,VeriLyse Standard Diluent,C,2025-09-23,2027-03-23,5200,Released,2025-09-26,
+D5-2025-0211,RGT-D5,VeriLyse Standard Diluent,C,2025-11-18,2027-05-18,5200,Released,2025-11-21,
+L3-2024-0388,RGT-L3,VeriLyse Lyse Reagent,C,2024-10-21,2026-04-21,3600,Released,25/10/2024,
+L3-2024-0402,RGT-L3,VeriLyse Lyse Reagent,C,2024-11-25,2026-05-25,3600,Released,29/11/2024,
+L3-2025-0421,RGT-L3,VeriLyse Lyse Reagent,C,2025-01-07,2026-07-07,3800,Released,2025-01-10,
+L3-2025-0433,RGT-L3,VeriLyse Lyse Reagent,C,2025-01-20,2026-07-20,3800,Released,2025-01-23,
+L3-2025-0440,RGT-L3,VeriLyse Lyse Reagent,C,2025-01-27,2026-07-27,3800,Recalled,2025-01-30,FSN-2025-003 - elevated baseline absorbance; customer return requested
+L3-2025-0444,RGT-L3,VeriLyse Lyse Reagent,C,2025-01-29,2026-07-29,3800,Recalled,2025-02-01,FSN-2025-003
+L3-2025-0448,RGT-L3,VeriLyse Lyse Reagent,C,2025-02-03,2026-08-03,3800,Recalled,2025-02-06,FSN-2025-003
+L3-2025-0452,RGT-L3,VeriLyse Lyse Reagent,C,2025-02-05,2026-08-05,4000,Recalled,2025-02-08,FSN-2025-003
+L3-2025-0455,RGT-L3,VeriLyse Lyse Reagent,C,2025-02-07,2026-08-07,4000,Recalled,,FSN-2025-003 - held at warehouse; never shipped
+L3-2025-0458,RGT-L3,VeriLyse Lyse Reagent,C,2025-02-10,2026-08-10,4000,Recalled,,FSN-2025-003 - held at warehouse; never shipped
+L3-2025-0460,RGT-L3,VeriLyse Lyse Reagent,C,2025-02-11,2026-08-11,4000,Recalled,,FSN-2025-003 - last affected lot
+L3-2025-0463,RGT-L3,VeriLyse Lyse Reagent,C,2025-02-17,2026-08-17,4000,Quarantined,,Held pending VBI-0087 closure; released to scrap 2025-04-02
+L3-2025-0471,RGT-L3,VeriLyse Lyse Reagent,D,2025-03-24,2026-09-24,4000,Released,2025-03-28,First rev D production lot
+L3-2025-0483,RGT-L3,VeriLyse Lyse Reagent,D,2025-05-12,2026-11-12,4200,Released,2025-05-15,
+L3-2025-0499,RGT-L3,VeriLyse Lyse Reagent,D,2025-07-28,2027-01-28,4200,Released,2025-07-31,
+L3-2025-0510,RGT-L3,VeriLyse Lyse Reagent,D,2025-10-06,2027-04-06,4200,Released,2025-10-09,
+CL-2024-0059,RGT-CL,VeriLyse Cleaning Solution,A,2024-10-14,2026-10-14,6000,Released,18/10/2024,
+CL-2025-0071,RGT-CL,VeriLyse Cleaning Solution,A,2025-02-18,2027-02-18,6000,Released,2025-02-21,
+CL-2025-0088,RGT-CL,VeriLyse Cleaning Solution,A,2025-06-09,2027-06-09,6000,Released,2025-06-12,
+CL-2025-0102,RGT-CL,VeriLyse Cleaning Solution,A,2025-10-27,2027-10-27,6000,Released,2025-10-30,
+RT-2025-0033,RGT-RT,VeriLyse Reticulocyte Stain,B,2025-01-15,2026-01-15,1800,Released,2025-01-20,
+RT-2025-0041,RGT-RT,VeriLyse Reticulocyte Stain,B,2025-04-22,2026-04-22,1800,Released,2025-04-25,
+RT-2025-0049,RGT-RT,VeriLyse Reticulocyte Stain,B,2025-08-19,2026-08-19,2000,Released,2025-08-22,
+RT-2025-0056,RGT-RT,VeriLyse Reticulocyte Stain,B,2025-12-02,2026-12-02,2000,Released,2025-12-05,
+

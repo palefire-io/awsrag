@@ -1,0 +1,81 @@
+=====================================================
+VERIDIA BIOSYSTEMS - PRODUCT AVAILABILITY BULLETIN
+=====================================================
+Reference: VBB-0055
+Date Issued: 2025-07-30
+Type: Hardware Revision Availability
+Affected Product: VeriPrep SP-1 Automated Sample Preparation Station
+New hardware revision: SP-1r2
+Related: VBB-0038 (barcode/jam advisory), SP-1 firmware 2.3.0
+
+SUBJECT: VeriPrep SP-1r2 now shipping; firmware 2.3.0 released; retrofit kit
+         available for r1 units
+
+-----------------------------------------------------
+SP-1r2 - WHAT HAS CHANGED
+-----------------------------------------------------
+1. Tube feed mechanism (SP1-MEC-141). Redesigned feed pawl with a compliant
+   tip and a widened tube height acceptance band (68.0 to 82.5 mm capped
+   height, against 73.5 to 80.0 mm on r1). This addresses the short-cap 5 mL
+   tube interaction described in VBB-0038.
+
+2. Repositioned barcode scanner window, lowered 3 mm and widened 4 mm, with a
+   second scan attempt at a 12-degree offset before P-101 is raised.
+
+3. Gripper jaw material changed from acetal to a glass-filled PPS with a
+   textured contact face. Expected service interval for SP1-MEC-160 extends
+   from 12 to 24 months.
+
+4. Lid interlock switch relocated away from the decontamination spray path.
+   This addresses a small number of P-501 false trips reported after
+   decontamination cycles.
+
+No change to: footprint, power requirements, throughput (120 tubes/hr),
+aliquot volume specification, host protocols, or consumables.
+
+-----------------------------------------------------
+VALIDATION DATA
+-----------------------------------------------------
+5,000 tube presentations, mixed tube population including 1,200 short-cap 5 mL
+tubes from three suppliers previously associated with jams:
+
+                          SP-1r1 (FW 2.2.0)   SP-1r2 (FW 2.3.0)
+  P-101 barcode no decode      2.4%                0.11%
+  P-105 tube height error      3.1%                0.00%
+  P-112 feed jam               1.8%                0.02%
+  Mean uninterrupted run       142 tubes           4,300 tubes
+
+-----------------------------------------------------
+FIRMWARE 2.3.0
+-----------------------------------------------------
+Released 2025-07-30. Required on SP-1r2. Available for r1 units, where it
+provides the second-attempt barcode scan and improved jam recovery but cannot
+provide the mechanical tolerance improvement.
+
+IMPORTANT: SP-1 firmware 2.3.0 or later is required for integration with
+VeriScan firmware 4.3.0 and above, which uses host protocol version 2. An SP-1
+on firmware 2.2.0 or earlier connected to a VeriScan on 4.3.0 will raise P-407
+(host protocol version mismatch) and refuse to hand off samples. Plan the two
+updates together.
+
+-----------------------------------------------------
+RETROFIT FOR EXISTING r1 UNITS
+-----------------------------------------------------
+SP1-KIT-R2UP, list GBP 1,150.00, lead time 28 days. Includes SP1-MEC-141,
+revised harness, scanner bracket, gripper jaw set and the firmware 2.3.0
+licence. Fitting requires a Veridia engineer, approximately 6 hours on site,
+and a post-fit verification run of 200 tubes.
+
+Sites with an open jam-related ticket raised before 2025-07-30 are eligible for
+the retrofit at 50 per cent of list under the goodwill programme agreed by
+James Okafor. Contact support quoting the original ticket number.
+
+Note that the r1 tube feed mechanism SP1-MEC-140 remains available as a
+like-for-like spare until 2028 for sites that do not wish to retrofit.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Priya Anand, Head of Field Service Engineering - priya.anand@veridiabio.com
+Ben Whittle, Commercial Operations - ben.whittle@veridiabio.com
+=====================================================

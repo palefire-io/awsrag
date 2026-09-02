@@ -1,0 +1,192 @@
+=================================================================
+VERIDIA BIOSYSTEMS - CUSTOMER FAQ
+=================================================================
+Title:        VeriConnect Data Residency - Frequently Asked Questions
+Document Ref: REG-FAQ-RES-004
+Revision:     4
+Date:         2026-05-11
+Owner:        Ruth Amankwah, Data Protection Officer
+Audience:     Customers, prospective customers, and their information
+              governance and procurement functions.
+
+-----------------------------------------------------------------
+Q1. WHERE IS MY DATA HELD?
+-----------------------------------------------------------------
+By default, in Amazon Web Services region eu-west-1, which is Ireland.
+
+Customers on Enterprise tier with the VeriGuard add-on may pin their tenant to:
+  eu-west-1     Ireland (default)
+  eu-central-1  Frankfurt, Germany
+  eu-west-2     London, United Kingdom
+  us-east-1     Northern Virginia, United States
+
+Pinning covers result data, quality control data, the audit trail, and backups.
+
+-----------------------------------------------------------------
+Q2. WE ARE AN NHS TRUST. DOES OUR DATA LEAVE THE UK?
+-----------------------------------------------------------------
+On the default configuration, yes - it is held in Ireland.
+
+Transfers from the UK to Ireland are transfers to an EEA country covered by
+the UK's adequacy regulations for the EEA. They are lawful and require no
+additional safeguard.
+
+If your information governance position requires UK hosting, eu-west-2 (London)
+is available on Enterprise tier with VeriGuard. A number of NHS trusts use the
+default Irish region and a smaller number have moved to London. Both positions
+are defensible; which is right for you is a question for your IG function, not
+for us.
+
+We would note that Veridia BioSystems Ltd is itself a UK company, so support
+access to your tenant is from the UK regardless of where the data is stored.
+
+-----------------------------------------------------------------
+Q3. WHAT ABOUT SWITZERLAND?
+-----------------------------------------------------------------
+Swiss customers' data is held in eu-west-1 by default, or in one of the pinned
+regions above. There is no Swiss region.
+
+Transfers from Switzerland to the EEA and to the UK are covered by the Swiss
+Federal Council's adequacy decisions. Transfers to the United States require
+additional safeguards and we do not recommend a US-pinned tenant for a Swiss
+customer.
+
+Veridia BioSystems Schweiz GmbH in Basel is our Swiss establishment and our
+Swiss Authorised Representative for regulatory purposes. It is not a data
+hosting location.
+
+-----------------------------------------------------------------
+Q4. WE ARE IN FRANCE AND OUR REGULATOR REQUIRES HDS-CERTIFIED HOSTING.
+-----------------------------------------------------------------
+Veridia does not hold Hebergeur de Donnees de Sante (HDS) certification, and
+the VeriConnect deployment is not within the scope of an HDS certification.
+
+AWS holds HDS certification for certain services in eu-west-3 (Paris).
+VeriConnect is not deployed there.
+
+Whether HDS applies to your use of VeriConnect depends on your configuration
+and on a legal question we are not qualified to answer. If your instruments
+report directly to your own LIS and VeriConnect holds a parallel copy for
+quality control purposes, the analysis may differ from a configuration in which
+VeriConnect is in the primary result path.
+
+Two things that may help:
+  - The pseudonymisation option (Q7) materially changes what VeriConnect holds
+    and may change the analysis.
+  - We will speak directly to your DPO and legal counsel.
+
+We would rather tell you plainly that we cannot meet an HDS requirement today
+than let you discover it during an inspection. Three French customers have
+raised this since 2024 and the accumulated weight of that is on our internal
+agenda.
+
+-----------------------------------------------------------------
+Q5. WE ARE IN GERMANY. IS FRANKFURT HOSTING ENOUGH?
+-----------------------------------------------------------------
+eu-central-1 (Frankfurt) hosting is available on Enterprise tier with
+VeriGuard and covers result data, QC data, audit trail and backups.
+
+German customers frequently ask about the additional requirements arising from
+sectoral rules and from the position of the data protection authorities on US
+cloud providers. Points to note:
+
+  - The infrastructure provider is Amazon Web Services EMEA SARL, a Luxembourg
+    entity, contracted under EU law.
+  - AWS's ultimate parent is a US company. Several German authorities have
+    expressed views on the implications. This is a live question across the
+    industry and is not specific to Veridia.
+  - We can provide our transfer impact assessment, the AWS data processing
+    addendum, and details of the technical measures (encryption at rest with
+    customer-managed keys on Enterprise tier) that bear on it.
+
+Your DPO will need to form a view. We will support the assessment with whatever
+documentation you need.
+
+-----------------------------------------------------------------
+Q6. CAN VERIDIA STAFF SEE OUR PATIENT DATA?
+-----------------------------------------------------------------
+In principle yes, and in practice rarely, under controls.
+
+  - Support access to a customer tenant requires a request, an approval, and a
+    stated reason. It is time-limited, defaulting to 8 hours.
+  - Every access is recorded in your audit trail as an access event
+    attributable to a named Veridia individual. You can see it. VeriGuard
+    customers can alert on it.
+  - Support staff see a pseudonymised view by default. Direct patient
+    identifiers are masked unless the support case requires them and the
+    unmasking is separately approved and logged.
+  - You may block support access from outside your pinned region entirely, or
+    block it altogether. Both increase support resolution times, and blocking
+    it altogether means some classes of problem cannot be diagnosed remotely.
+
+-----------------------------------------------------------------
+Q7. CAN WE AVOID SENDING PATIENT IDENTIFIERS TO VERICONNECT AT ALL?
+-----------------------------------------------------------------
+Yes, and more customers should consider it than do.
+
+Instruments can be configured not to transmit direct patient identifiers to
+VeriConnect. Results are then held against the specimen accession number only.
+Your LIS continues to receive the full identified result over the direct HL7
+path, unaffected.
+
+What you keep: QC charting, fleet management, turnaround reporting, reagent lot
+exposure reporting, audit trail, firmware management. Everything that is about
+managing the laboratory rather than about individual patients.
+
+What you lose: the ability to search VeriConnect by patient, and the ability to
+run a subject access export from VeriConnect - though if VeriConnect does not
+hold identifiable patient data, you do not need to.
+
+This is a configuration change, not a licensing change, and we will assist with
+it at no charge. It is the single most effective thing most customers can do to
+simplify their information governance position, and we mention it here because
+it comes up too late in most conversations.
+
+-----------------------------------------------------------------
+Q8. WHAT HAPPENS TO OUR DATA IF WE LEAVE?
+-----------------------------------------------------------------
+On termination, you may request return of your data in a portable format
+(JSON plus CSV) or deletion. Data is purged within 30 days of termination
+unless you request return or a legal hold applies.
+
+Backups roll off within 35 days.
+
+We will provide written confirmation of deletion.
+
+-----------------------------------------------------------------
+Q9. HOW LONG IS OUR DATA KEPT WHILE WE ARE A CUSTOMER?
+-----------------------------------------------------------------
+  Result records          Your choice, 1-10 years, default 7
+  Quality control         7 years default, not reducible below 2
+  Audit trail             90 days (Essentials), 1 year (Professional),
+                          7 years (Enterprise with VeriGuard)
+  Instrument telemetry    13 months
+  Backups                 35 days rolling
+
+A note on the telemetry retention: 13 months has proved short in at least one
+case where a customer needed to reconstruct events from 14 months earlier and
+we could not (ticket VBST-4345). We record that here because a customer
+planning around accreditation evidence should know it.
+
+-----------------------------------------------------------------
+Q10. CAN WE MOVE REGIONS LATER?
+-----------------------------------------------------------------
+Yes. Migration between regions is a service we perform, typically over a
+weekend, with a read-only window of 2 to 6 hours depending on data volume.
+Instruments continue to operate and to report to your LIS throughout; only
+VeriConnect is affected.
+
+There is a one-off charge (VC-VG-RES). Contact your account manager.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Ruth Amankwah, Data Protection Officer
+dpo@veridiabio.com | +44 1223 496 155
+ICO registration ZA884170
+
+For technical questions on configuration: support@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================

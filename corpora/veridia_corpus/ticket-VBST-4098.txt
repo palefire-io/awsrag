@@ -1,0 +1,99 @@
+Ticket ID: VBST-4098
+Status: Resolved
+Priority: P2-High
+Created: 2025-06-05 09:12 UTC
+Product: VeriPrep SP-1
+Customer: Mid Yorkshire Teaching NHS Trust (ACC-1117)
+Reported by: Steve Ogden, Laboratory Manager
+Assigned to: Danny Whitcombe (Support Engineer) -> Rob Ellery (FSE)
+Serial: SP1-R1-0219
+Firmware: SP-1 2.2.0
+
+--- Thread ---
+
+[2025-06-05 09:12] Steve Ogden (Laboratory Manager):
+Back again on the SP-1 jamming (see VBST-3795 from December). The adapters
+helped for a few months but we're back up to 3-4 jams a day.
+
+I've kept the log you asked for. Attached - 87 jams since January, with dates,
+rack positions and tube types. 79 of them are 5mL short cap. All positions,
+no pattern.
+
+Procurement still can't switch tube supplier until the contract ends in
+December.
+
+[2025-06-05 11:30] Danny Whitcombe (Support Engineer):
+Steve, thank you for keeping that log - it's the best evidence any site has
+given us on this and it makes the next conversation much easier.
+
+87 jams in five months on a single r1 unit with a tube population that is
+outside the reliable band is, frankly, a machine being asked to do something
+it can't do reliably. The adapters mitigate; they don't fix.
+
+Two things:
+1. Rob Ellery to attend and replace the feed mechanism - after 87 jams the
+   pawl will be worn regardless of what started it.
+2. I'm going to put your site forward for the r2 retrofit. The r2 hardware
+   ships from Q3 and the retrofit kit is SP1-KIT-R2UP. I can't promise pricing
+   yet but with your log I'd expect a good hearing.
+
+[2025-06-11 18:00] Rob Ellery (Field Service Engineer):
+Attended (FSV-2025-0271). Feed mechanism SP1-MEC-140 replaced - the old pawl
+tip was worn approximately 0.6 mm out of profile, well past service limit.
+Guide rail scored in two places but within tolerance, polished.
+
+Post-repair 200-tube run using the site's own tube stock with adapters: 3
+P-105, 1 jam. Better than before but not good. Without adapters, 40-tube run:
+6 P-105, 2 jams.
+
+Told Steve plainly that a new feed mechanism on an r1 will not solve this with
+his tube stock, and that the choices are the tube contract, the adapters
+religiously applied, or the r2 retrofit.
+
+He is going to escalate the tube contract internally as well.
+
+Time on site 5.5 hours.
+
+[2025-08-01 10:00] Danny Whitcombe (Support Engineer):
+Steve - bulletin VBB-0055 issued this week. SP-1r2 is shipping and the
+retrofit kit is available, list GBP 1,150.
+
+Because you have an open jam-related ticket raised before the bulletin date,
+you qualify for the goodwill programme James Okafor has agreed: retrofit at
+50% of list. That's GBP 575 plus the engineer visit, which is covered under
+your Gold contract.
+
+Your jam log was what got this agreed, so it was worth keeping.
+
+[2025-08-04 08:45] Steve Ogden (Laboratory Manager):
+Approved at our end. Please book it.
+
+[2025-09-30 16:30] Rob Ellery (Field Service Engineer):
+Retrofit completed. SP1-KIT-R2UP fitted: new feed mechanism SP1-MEC-141,
+harness, scanner bracket, gripper jaw set. Firmware updated to 2.3.0.
+
+Verification: 200-tube run with the site's own short-cap 5mL stock, NO
+adapters. Zero jams. Zero P-105. Two barcode retries, both succeeded on the
+second attempt.
+
+Note for the site: the analysers here are on VeriScan firmware 4.2.3. SP-1 is
+now on 2.3.0. That combination is fine. But when they move the analysers to
+4.3.0 or later they must stay on SP-1 2.3.0+ or they'll get P-407. Explained
+and left a note on the instrument.
+
+Time on site 6.5 hours.
+
+[2025-10-01 09:00] Steve Ogden (Laboratory Manager):
+Ran a full day yesterday, no jams at all. First time since November.
+
+Thanks - and thanks for being straight with us in June that the r1 wasn't
+going to cope. That saved us six months of pretending.
+
+--- Resolution ---
+Root cause: SP-1r1 feed mechanism tolerance interaction with short-cap 5mL
+tubes (VBB-0038), compounded by feed pawl wear from 87 jam events.
+Actions: feed mechanism replaced (FSV-2025-0271); SP-1r2 retrofit
+(SP1-KIT-R2UP) fitted 2025-09-30 at 50% of list under the VBB-0055 goodwill
+programme; firmware 2.3.0.
+Customer jam log was the evidence basis for the goodwill decision.
+See also: VBST-3795, VBST-3812, VBB-0038, VBB-0055.

@@ -1,0 +1,185 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** RESTRICTED - PEOPLE MANAGERS, PEOPLE TEAM AND EXCO ONLY ***
+Bonus and Commission Plan Rules 2026
+=================================================================
+Document:      HR-MGR-016
+Version:       2026.1
+Issued:        2026-01-05
+Owner:         Denise Kaur, Reward and Benefits Manager
+Co-owner:      Michael Ashworth, Chief Commercial Officer (commission)
+Approved by:   Gary Pemberton, CFO; Remuneration Committee (executive plans)
+Plan year:     1 January to 31 December 2026
+
+-----------------------------------------------------------------
+1. WHO IS ON WHAT
+-----------------------------------------------------------------
+  Company bonus         All employees not on a commission plan. Discretionary.
+  Sales commission      Account Executives, Account Managers, Sales Managers.
+  Field service bonus   Field Service Engineers. Introduced 2026.
+  Executive plan        L6, governed by the Remuneration Committee. Not
+                        covered here.
+
+Nobody is on two variable plans.
+
+-----------------------------------------------------------------
+2. COMPANY BONUS
+-----------------------------------------------------------------
+2.1  TARGET OPPORTUNITY
+       L1 to L2     4% of base salary
+       L3           7%
+       L4           10%
+       L5           15%
+       L6           per Remuneration Committee
+
+2.2  FUNDING GATE. The pool funds only if the company achieves at least 90% of
+     the Board-approved revenue plan AND at least 85% of the EBITDA plan.
+     Below either gate the pool is zero and no discretionary override exists
+     at Executive level - only the Board may override.
+
+       Achievement vs plan     Pool funding
+       ---------------------   ------------
+       Below 90% revenue       0%
+       90% to 99%              50% of target pool
+       100% to 109%            100%
+       110% to 119%            130%
+       120%+                   150% (cap)
+
+2.3  FY2025 OUTTURN, for context when you are asked. Revenue GBP 42.1M against
+     a plan of GBP 45.0M, being 93.6%. EBITDA 88% of plan. The pool funded at
+     50%. Every employee therefore received half of their target opportunity,
+     which for an L2 on GBP 40,000 was GBP 800 rather than GBP 1,600.
+
+     You may share those figures. They were presented at the January
+     all-hands. What you must not do is characterise it as a personal outcome -
+     it was a company outcome and it applied to everyone including the
+     Executive Committee.
+
+2.4  INDIVIDUAL MODIFIER. Applied to the funded pool.
+       Exceptional          x 1.5
+       Strong               x 1.0
+       Developing           x 0.5
+       Below Expectations   x 0
+
+2.5  ELIGIBILITY
+       - Employed on 31 December of the plan year AND on the payment date.
+       - Joiners: pro-rated from start date. No qualifying period.
+       - Leavers: no payment if you have resigned and are working notice on
+         the payment date. Exception: redundancy, retirement, ill-health
+         termination, and death in service, where a pro-rated payment is made.
+       - Family leave: FULL bonus, not pro-rated for the leave period. This is
+         a deliberate departure from common practice and is not negotiable.
+       - Long-term sick leave: full bonus for the first 6 months of absence,
+         then pro-rated.
+
+2.6  Paid with March payroll, following the FY audit. Subject to tax and NI.
+
+-----------------------------------------------------------------
+3. SALES COMMISSION
+-----------------------------------------------------------------
+3.1  STRUCTURE. On-target earnings are split 70% base, 30% commission for
+     Account Executives and Account Managers; 80/20 for Sales Managers.
+
+3.2  QUOTA. Set annually by the CCO, communicated by 31 January. A quota
+     communicated after 28 February is deemed to be the prior year's quota
+     uplifted by the plan growth rate - this rule exists because in 2023 two
+     quotas were issued in April and it caused a dispute we do not intend to
+     repeat.
+
+3.3  ACCELERATORS
+       0% to 79% of quota      no commission on the shortfall band
+       80% to 99%              0.8x rate
+       100% to 119%            1.0x rate
+       120% to 149%            1.4x rate
+       150%+                   1.8x rate, uncapped
+
+     Veridia does not cap commission. A capped plan tells a salesperson to
+     stop selling in November.
+
+3.4  CREDITING. Revenue is credited on invoice, not on order. Multi-year
+     contracts credit year one only. Consumable revenue credits to the account
+     owner at 20% of the instrument credit rate.
+
+3.5  CLAWBACK. Commission is clawed back where an order is cancelled, a
+     customer does not pay within 180 days, or an instrument is returned. This
+     is the mechanism, not a judgement about the salesperson.
+
+3.6  DISPUTED CREDIT. Escalate to the CCO within 30 days. His decision is
+     final and is recorded.
+
+3.7  Paid quarterly in arrears, one month after quarter end.
+
+3.8  A NOTE ON THE FSN-2025-003 EFFECT. Three territories lost material
+     pipeline in Q1 2025 because of the recall - customers deferred purchasing
+     decisions during the retrospective review period. The CCO applied a
+     quota relief of 8% to the affected territories for Q1 and Q2 2025. That
+     relief was a one-off and does not carry into 2026. If a salesperson
+     raises it, the position is that the relief addressed a specific external
+     event that has passed.
+
+-----------------------------------------------------------------
+4. FIELD SERVICE BONUS - NEW FOR 2026
+-----------------------------------------------------------------
+4.1  Introduced following the 2025 field service stress risk assessment and
+     the retention analysis. Field engineers were the only significant
+     population carrying an out-of-hours burden with no variable reward.
+
+4.2  Target opportunity 6% of base salary. Funded on the same company gate as
+     the company bonus.
+
+4.3  Measures, weighted:
+       First-time fix rate                 30%
+       Customer satisfaction (post-visit)  30%
+       Preventive maintenance completed
+         to schedule                       20%
+       Visit report quality and timeliness 20%
+
+4.4  DELIBERATELY EXCLUDED: number of visits, time on site, and utilisation.
+     These were considered and rejected. Paying an engineer by visit volume
+     produces short visits, and paying by utilisation produces an engineer who
+     will not spend the extra hour that finds the actual root cause. The
+     observation at FSV-2025-0155 that reagent fault severity tracked days on
+     board came from an engineer who took the time to notice, and no metric we
+     could construct would have rewarded it.
+
+4.5  On-call is compensated separately through the on-call allowance and is
+     not part of this plan.
+
+-----------------------------------------------------------------
+5. WHAT MANAGERS MUST NOT DO
+-----------------------------------------------------------------
+5.1  Do not promise a bonus outcome. The pool is not known until the FY audit
+     completes.
+
+5.2  Do not describe target opportunity as guaranteed or as "part of salary".
+     It is discretionary and it funded at 50% last year.
+
+5.3  Do not reduce someone's bonus because they took family leave. See 2.5.
+
+5.4  Do not use bonus to correct a base salary problem. Raise it as an
+     off-cycle adjustment instead.
+
+5.5  Do not tell anyone what another person received.
+
+-----------------------------------------------------------------
+6. COMMUNICATION
+-----------------------------------------------------------------
+6.1  Target opportunity is stated in the offer letter and confirmed annually.
+
+6.2  Pool funding is announced company-wide at the January all-hands with the
+     revenue and EBITDA figures. Individual outcomes are communicated by
+     managers in February, before the March payment.
+
+6.3  If the pool funds below 100%, say so plainly and give the numbers.
+     Employees at Veridia have consistently responded better to a clear
+     explanation of a poor outcome than to a vague one.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Denise Kaur - denise.kaur@veridiabio.com
+Commission queries: Michael Ashworth - michael.ashworth@veridiabio.com
+
+=================================================================
+RESTRICTED. Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

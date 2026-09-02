@@ -1,0 +1,200 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** CONFIDENTIAL - SPECIAL CATEGORY PERSONAL DATA ***
+*** ACCESS RESTRICTED - PEOPLE TEAM ONLY ***
+Occupational Health Case File
+=================================================================
+Case reference:   OH-2025-014
+Opened:           2025-04-08
+Closed:           2025-10-24
+Case owner:       Rachel Duffy, HR Business Partner
+Employee:         Maya Rothbury
+Employee ID:      VB-0288
+Date of birth:    14/09/1996
+National Insurance: SK 41 88 27 C
+Job title:        Software Engineer, L2
+Function:         Engineering (Cloud and Platform)
+Line manager:     Yusuf Demir, Cloud Operations Lead
+Start date:       2024-07-08
+Home address:     Flat 12, Elmsworth Court, 88 Mill Road, Cambridge CB1 2AS
+Personal mobile:  07700 900 512
+Personal email:   m.rothbury96@protonmail.com
+
+HANDLING NOTE. This file contains health information, which is special
+category data under UK GDPR Article 9. Access is restricted to the People
+team. The line manager has been given the adjustments only and has NOT been
+told the underlying diagnosis. Do not discuss the diagnosis with the manager,
+with colleagues, or in any forum where it could be identified. Do not forward.
+
+-----------------------------------------------------------------
+1. HOW THE CASE AROSE
+-----------------------------------------------------------------
+1.1  Self-referral. Maya emailed Rachel Duffy on 2025-04-03 following a
+     private diagnosis of ADHD (combined presentation), confirmed by
+     Dr Helena Ashworth-Croft, consultant psychiatrist, Cambridge Adult ADHD
+     Service, on 2025-03-19.
+
+1.2  She had not taken any absence and her performance outcome for 2024 was
+     Strong. Her stated reason for referring herself was that she was
+     "spending an enormous amount of effort compensating and it is not
+     sustainable", and that she wanted adjustments in place before it became a
+     performance issue rather than after.
+
+1.3  Extract from her email, quoted with her written permission for the
+     purposes of this file:
+
+       "I want to be clear I'm not struggling with the work. I'm struggling
+        with the wrapper around the work - remembering what was said in a
+        meeting three days ago, switching between four escalations in a
+        morning, the open-plan floor on Tuesdays. I've been managing it
+        privately for about ten years and I'd rather stop."
+
+-----------------------------------------------------------------
+2. INITIAL MEETING
+-----------------------------------------------------------------
+Date: 2025-04-08. Present: Maya Rothbury, Rachel Duffy. Held off site at
+Maya's request.
+
+2.1  Discussed what she wanted from the process. She was clear that she did
+     not want her manager told the diagnosis, and she was anxious that
+     disclosure would change how her technical judgement was regarded.
+     Rachel confirmed that consent to share is her decision, that a manager
+     can be told what to do without being told why, and that this is common.
+
+2.2  Discussed whether ADHD would meet the definition of a disability under
+     the Equality Act 2010. Rachel's position, and it is the People team's
+     standard position, is that we do not require the question to be settled
+     before making an adjustment. If an adjustment is reasonable and it works,
+     we make it. Whether a tribunal would classify the condition is a question
+     for a tribunal, and waiting for legal certainty before helping someone is
+     both slow and unkind.
+
+2.3  Consent obtained in writing for an occupational health referral, on a
+     partial-disclosure basis: the report to state functional effects and
+     recommended adjustments, and not to state the diagnosis to the manager.
+
+-----------------------------------------------------------------
+3. OCCUPATIONAL HEALTH REPORT
+-----------------------------------------------------------------
+Provider: Optima Health. Assessed by Dr Ranjit Sanghera, 2025-04-22. Report
+received 2025-04-24. Maya reviewed the report on 2025-04-25 and had no
+comments.
+
+Summary of findings:
+  - Fit for work in her current role without restriction.
+  - Functional effects: difficulty sustaining attention in environments with
+    competing auditory stimuli; working memory load in verbal-only handovers;
+    task initiation difficulty under ambiguous prioritisation; time
+    estimation.
+  - Strengths noted, and the report is unusual in recording them: sustained
+    hyperfocus on complex debugging; high tolerance for ambiguity in technical
+    problems as distinct from organisational ones.
+  - Prognosis: stable condition, managed with medication (initiated
+    2025-03-26, titration ongoing at the time of assessment).
+
+Recommended adjustments:
+  1. Noise-cancelling headphones; sanctioned use during focused work.
+  2. Bookable quiet space on office days.
+  3. Written follow-up to any verbal instruction or verbal handover.
+  4. Agenda circulated in advance of any meeting where she is expected to
+     contribute.
+  5. Flexible start time; core hours attendance from 10:30 rather than 10:00.
+  6. Support with task chunking and explicit prioritisation from the manager
+     in one-to-ones.
+  7. Where possible, avoid assigning more than two concurrent escalations.
+
+-----------------------------------------------------------------
+4. WHAT WAS SHARED WITH THE MANAGER
+-----------------------------------------------------------------
+4.1  Yusuf Demir was given the seven adjustments and told that they arose from
+     an occupational health assessment following a health matter that Maya has
+     chosen not to disclose. He was told explicitly that he should not ask.
+
+4.2  Rachel's note of that conversation, 2025-04-29: "Yusuf's first question
+     was whether he had done something wrong. Reassured him that this is a
+     proactive referral and not a complaint. His second question was whether
+     the adjustments would affect what he could expect of her, and I said no -
+     they are about removing friction, not lowering the bar. He was
+     straightforward about it and asked sensible practical questions about the
+     escalation cap."
+
+4.3  Yusuf has not asked about the underlying condition at any point in the
+     case. Recorded because it is worth recording.
+
+-----------------------------------------------------------------
+5. IMPLEMENTATION
+-----------------------------------------------------------------
+  Adjustment                          Status         Date       Cost
+  ----------------------------------  -------------  ---------  --------
+  Noise-cancelling headphones         Implemented    2025-05-06  GBP 289
+  Quiet space booking access          Implemented    2025-05-06  Nil
+  Written follow-up to verbal         Implemented    2025-05-12  Nil
+  Advance agendas                     Implemented    2025-05-12  Nil
+  Flexible start time                 Implemented    2025-05-06  Nil
+  Task chunking support in 1:1s       Implemented    2025-05-12  Nil
+  Escalation concurrency cap          Implemented    2025-06-02  Nil
+
+5.1  Total direct cost GBP 289. Recorded because managers periodically assume
+     adjustments are expensive. Across all 12 open and closed cases in the
+     current log the median direct cost is GBP 0.
+
+5.2  The escalation concurrency cap took longest because it required a change
+     to the rota logic, not because of any resistance.
+
+-----------------------------------------------------------------
+6. REVIEW - 2025-10-24
+-----------------------------------------------------------------
+Present: Maya Rothbury, Rachel Duffy.
+
+6.1  Maya reported all seven adjustments in place and working. She singled out
+     the written-follow-up-to-verbal adjustment as the most useful, and noted
+     that Yusuf had extended it to the whole team of his own accord because it
+     turned out everyone preferred it.
+
+6.2  Performance outcome for 2025 was Strong, with her manager's written
+     comment noting "materially more consistent output in the second half of
+     the year".
+
+6.3  Maya asked whether she should now tell her manager the diagnosis. Rachel's
+     advice was that it is entirely her choice, that there is no obligation,
+     and that she should not do it because she feels she owes anyone an
+     explanation. Maya said she would think about it. As at the date of this
+     file being closed, she had not, and that is her right.
+
+6.4  One issue raised: on two occasions a colleague outside her team scheduled
+     a meeting without an agenda and Maya found it difficult to ask for one
+     without explaining why. Discussed with Yusuf; the team now defaults to
+     agendas for all meetings, which resolves it without Maya having to ask.
+
+6.5  CASE CLOSED. Adjustments to remain in place permanently. No further
+     review scheduled. Maya knows she can reopen at any time.
+
+-----------------------------------------------------------------
+7. LEARNING FOR THE PEOPLE TEAM
+-----------------------------------------------------------------
+7.1  This is our first ADHD-related self-referral and it went well largely
+     because Maya initiated it early. Most neurodivergence cases reach us via
+     a performance conversation, by which point there is damage to repair.
+
+7.2  Worth considering: making explicit in the onboarding materials that
+     adjustments can be requested proactively and do not require a problem to
+     have occurred first. Raised with Naomi Okonjo-Bright, 2025-11-04.
+
+7.3  The partial-consent model worked. Maya got what she needed and disclosed
+     nothing she did not want to. Managers do not need diagnoses to manage
+     well.
+
+-----------------------------------------------------------------
+RETENTION AND ACCESS
+-----------------------------------------------------------------
+Retained 6 years after employment ends, then destroyed.
+Access: Rachel Duffy, Naomi Okonjo-Bright, Lena Hofstetter (cover only).
+Not accessible to the line manager, to the Executive Committee, or to any
+other employee.
+Subject access: Maya is entitled to this file on request. Third-party
+identifiers would be redacted.
+
+=================================================================
+CONFIDENTIAL - SPECIAL CATEGORY DATA
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

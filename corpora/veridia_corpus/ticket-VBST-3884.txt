@@ -1,0 +1,78 @@
+Ticket ID: VBST-3884
+Status: Resolved (customer unresponsive)
+Priority: P3-Medium
+Created: 2025-02-07 10:12 UTC
+Product: VeriScan 400
+Customer: Thornbury Path Services Ltd (ACC-1168)
+Reported by: Gemma Reidy, Laboratory Supervisor
+Assigned to: Owen Trask (Support Engineer L1)
+Serial: VS4-0877
+Firmware: 4.1.2
+
+--- Thread ---
+
+[2025-02-07 10:12] Gemma Reidy (Laboratory Supervisor):
+hi getting loads of wbc flags all of a sudden, and the machine keeps saying
+w-042. is this the reagent thing? one of the reps mentioned something at a
+user day. thx
+
+[2025-02-07 10:55] Owen Trask (Support Engineer L1):
+Hi Gemma, possibly yes. Can you tell me:
+- the RGT-L3 lot number on board (Reagents > Cartridge Detail on the screen)
+- the date it was fitted
+- your last few background WBC counts
+
+If the lot number is between L3-2025-0440 and L3-2025-0460 then that's very
+likely your answer and we'll get replacement reagent to you.
+
+[2025-02-11 09:00] Owen Trask (Support Engineer L1):
+Gemma, following up - haven't heard back. If you can send those three things
+I can move this along. If it's easier, ring 01223 496 100 and ask for me.
+
+[2025-02-14 09:50] Owen Trask (Support Engineer L1):
+FSN-2025-003 has now been issued covering RGT-L3 lots L3-2025-0440 to
+L3-2025-0460. Given your symptoms I'd strongly suggest checking your stock
+against that range today. The notice has gone to your registered address.
+
+Please do come back to me - if your lot is in scope you're entitled to free
+replacement stock and I'd like to get it to you.
+
+[2025-02-24 11:30] Owen Trask (Support Engineer L1):
+Third attempt. Called the main lab number 0117 496 3320, spoke to someone who
+said Gemma is on leave and they'd pass it on. Left my details.
+
+[2025-03-07 14:15] Owen Trask (Support Engineer L1):
+No response in a month. Checking our shipping records: Thornbury received two
+cartridges from L3-2025-0448 on 2025-01-24, so they are almost certainly in
+scope. No FSN reply form received from this account.
+
+Escalating to the FSN non-responder process and to the account manager
+(Fiona Hargreaves) rather than leaving this open in support.
+
+[2025-03-07 16:00] Fiona Hargreaves (Account Manager):
+Picked up. I'll call Gemma's manager directly. This account is a single
+instrument, one-person lab most days, and they go quiet when she's off, which
+is a known pattern with them.
+
+[2025-03-21 10:20] Owen Trask (Support Engineer L1):
+Fiona reached them. Reply form now returned. They had in fact swapped the
+reagent themselves in mid-February after reading the notice and hadn't thought
+to tell us. Affected stock returned last week.
+
+No way for us to know that from here, which is a bit unsatisfying, but the
+outcome is fine.
+
+Closing as resolved with the caveat that the technical investigation on this
+ticket never actually happened - we never got a lot number or a background
+count from the site. The resolution is inferred from shipping records and from
+what they told Fiona a month later.
+
+--- Resolution ---
+Inferred root cause: RGT-L3 lot L3-2025-0448 (FSN-2025-003), based on shipping
+records. Never confirmed directly - customer did not respond to four contact
+attempts over five weeks.
+Site independently swapped reagent after receiving the FSN and returned
+affected stock. Reply form received 2025-03-21 via account manager.
+NOTE FOR FILE: a single-scientist site with no cover is a known
+non-responsiveness risk. Consider a secondary contact requirement for
+single-instrument accounts.

@@ -1,0 +1,54 @@
+From: Dr Robert Yeun <ryeun@med.umich.edu>
+To: Ben Whittle <ben.whittle@veridiabio.com>
+Date: Tue, 21 Apr 2026 15:08:11 -0400
+Subject: RUO status, IVDR labeling in firmware 4.4.0, and what it means for us
+X-Mailer: Microsoft Outlook 16.0
+
+Ben,
+
+I saw bulletin VBB-0067 this morning and I have a question that I suspect
+nobody has asked you yet.
+
+Firmware 4.4.0 puts IVDR labeling data - Basic UDI-DI and conformity route -
+into the result header. We are a US site running the VeriScan 400 Pro under
+Research Use Only. We do not have an IVDR conformity route. What does the
+instrument put in that field for us, and does it go out on the wire to our
+LIS?
+
+I am not raising a problem. I am raising it because our LIS interface is
+validated and if the message content changes we have to revalidate, and because
+our compliance office will want to know why a research use only instrument is
+emitting conformity assessment metadata.
+
+Related questions while I have you:
+
+1. Is 4.4.0 being pushed to US instruments, or is the US firmware track
+   separate? Our two instruments are on 4.3.1.
+
+2. The FHIR R4 export in VeriConnect 6.2 is flagged as beta and not for
+   diagnostic use. For a research site, is "not for diagnostic use" a
+   meaningful restriction or is it the same statement as the RUO labeling we
+   already operate under? Our informatics group would like to use it for a
+   study and I want to give them a clear answer.
+
+3. Any update on FDA submission plans for the 400 Pro? I ask every year. I
+   understand the answer may still be no. Two of my colleagues at other
+   academic centers have asked me whether they should wait, and I would like to
+   tell them something accurate.
+
+For context on why this matters to us: we run the Pro for a marrow transplant
+program where the reticulocyte and IRF data drive engraftment monitoring. The
+instrument does what we need it to do and I have no complaints about it. But
+running clinically useful measurements under RUO labeling is an
+uncomfortable position and every year it continues it gets slightly more so.
+
+Best,
+
+Rob
+
+Robert Yeun, MD, PhD
+Professor of Pathology
+Director, Hematology Laboratory
+University of Michigan Health
+1500 E Medical Center Drive, Ann Arbor, MI 48109
+ryeun@med.umich.edu | +1 734 555 0198

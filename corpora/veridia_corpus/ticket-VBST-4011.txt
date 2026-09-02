@@ -1,0 +1,38 @@
+Ticket ID: VBST-4011
+Status: Resolved
+Priority: P2-High
+Created: 2025-03-11 08:12 UTC
+Product: VeriConnect
+Customer: Sheffield Teaching Hospitals NHS FT (ACC-1255)
+Reported by: Vikram Sahota, Senior BMS
+Assigned to: Owen Trask (Support Engineer L1)
+
+--- Thread ---
+
+[2025-03-11 08:12] Vikram Sahota (Senior BMS):
+Can't log into VeriConnect, VC-4412 error. Colleagues same. Assume you know
+about it already given the timing?
+
+[2025-03-11 08:20] Owen Trask (Support Engineer L1):
+We do - known incident affecting SSO tenants, identified and being fixed
+tenant by tenant. Instruments and LIS unaffected.
+
+I'll ping you when yours is done.
+
+[2025-03-11 10:52] Owen Trask (Support Engineer L1):
+Sheffield refreshed. Try now.
+
+[2025-03-11 11:01] Vikram Sahota (Senior BMS):
+In. Cheers.
+
+[2025-03-21 10:35] Owen Trask (Support Engineer L1):
+Advisory VBB-0044 issued today with the full account, attached for your
+records. Recommendation about break-glass accounts in section "Recommended
+customer actions".
+
+[2025-03-21 15:40] Vikram Sahota (Senior BMS):
+Ta. Passed to our informatics lead.
+
+--- Resolution ---
+Root cause: stale cached SAML IdP metadata (VBI-0094). Tenant restored 10:52
+UTC.

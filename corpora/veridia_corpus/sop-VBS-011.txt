@@ -1,0 +1,153 @@
+=================================================================
+VERIDIA BIOSYSTEMS - STANDARD OPERATING PROCEDURE
+=================================================================
+SOP Number:      SOP-VBS-011
+Title:           Annual Preventive Maintenance Checklist - VeriScan 400 /
+                 400 Pro
+Revision:        4
+Effective Date:  2025-10-06
+Author:          Priya Anand, Head of Field Service Engineering
+Approved by:     James Okafor, VP Customer Support
+Review due:      2027-10-06
+Audience:        Veridia field service engineers
+
+-----------------------------------------------------------------
+1. SCOPE
+-----------------------------------------------------------------
+Annual preventive maintenance for VeriScan 400 (VS4-100) and VeriScan 400 Pro
+(VS4-200P). Approximately 2.5 hours per instrument for a 400, 3.5 hours for a
+Pro including optical verification.
+
+Parts: VS4-KIT-PM1 (annual PM kit). Additional parts as found.
+
+-----------------------------------------------------------------
+2. BEFORE ATTENDING
+-----------------------------------------------------------------
+[ ] Review the instrument's event log in VeriConnect for the preceding 12
+    months. Note recurring error codes.
+[ ] Review open and recently closed tickets for the account.
+[ ] Check the installed firmware against log-firmware-releases.csv. Plan an
+    update if the instrument is more than two minor versions behind, and
+    confirm with the laboratory before doing so - a firmware update requires
+    full QC afterwards (SOP-VBS-001 section 9) and the lab must have time.
+[ ] Confirm the site has control material in date for post-PM QC.
+[ ] Confirm parts availability and lead time.
+[ ] Where the site also runs a VeriPrep SP-1, check whether an SP-1 PM is due
+    at the same visit, and whether the analyser firmware update would take the
+    pair out of protocol compatibility (P-407). See VBB-0055.
+
+-----------------------------------------------------------------
+3. ON ARRIVAL
+-----------------------------------------------------------------
+[ ] Report to the laboratory manager. Agree the window.
+[ ] Confirm the instrument is not mid-batch.
+[ ] Record: serial number, firmware version, run count, ambient temperature,
+    relative humidity.
+[ ] Photograph the installation if the siting looks marginal - against a
+    window, above a centrifuge, in an unventilated alcove. Ambient siting
+    problems are the root cause of a material share of E-607 and W-031
+    tickets and are far easier to raise with evidence.
+
+-----------------------------------------------------------------
+4. FLUIDICS
+-----------------------------------------------------------------
+[ ] Replace sample probe seal kit (VS4-SP-021).
+[ ] Inspect the sample probe for burrs, bends and deposit. Replace
+    (VS4-MEC-011) if in doubt.
+[ ] Replace pump tubing from the PM kit.
+[ ] Replace inline filters from the PM kit.
+[ ] Inspect all fluidic connections for weeping. Retighten to spec.
+[ ] Inspect the waste line for kinks and the waste float sensor for deposit.
+[ ] Run Fluidics Prime x3. Confirm no air.
+[ ] Check aspiration pressure in Service > Diagnostics > Fluidics. Record.
+
+-----------------------------------------------------------------
+5. MECHANICS
+-----------------------------------------------------------------
+[ ] Clean the cap-pierce station. Remove shed septum material.
+[ ] Inspect the piercing needle. Replace (VS4-MEC-011) if bent or blunt.
+[ ] Check rotor home sensor operation. Clean the sensor window.
+[ ] Check mixer operation. Listen for bearing noise - a mixer that will fail
+    within the year is usually audible now (E-412 follows).
+[ ] Exercise the autoloader through a full cycle with empty racks.
+[ ] Inspect and clean the barcode reader window.
+
+-----------------------------------------------------------------
+6. OPTICS
+-----------------------------------------------------------------
+VeriScan 400 (halogen)
+[ ] Record lamp hours. Replace (VS4-OPT-104) if above 1800 h; the specified
+    life is 2000 h and an in-service failure costs the laboratory more than
+    the lamp does.
+[ ] Clean the collector lens.
+[ ] Run optical calibration with fresh VeriCal beads. Record pass/fail and the
+    gain values.
+
+VeriScan 400 Pro (laser)
+[ ] Record laser hours and drive current. A drive current trending upward
+    toward the E-215 threshold predicts a laser module failure; note it in the
+    visit report and flag to the account manager if within 20 per cent of the
+    limit.
+[ ] Do not open the laser enclosure. Class 1 rating depends on it remaining
+    closed.
+[ ] Run optical calibration. Record.
+[ ] Inspect the retic flow cell. Check heater regulation holds 37.0 +/- 0.5 C.
+
+Both models
+[ ] Run an Extended Clean. Confirm background counts within the limits at
+    SOP-VBS-001 Appendix A.
+[ ] Inspect the flow cell for deposit. Replace (VS4-OPT-220, or VS4-OPT-224
+    for the retic cell) if background will not come down.
+
+-----------------------------------------------------------------
+7. ELECTRICAL AND SOFTWARE
+-----------------------------------------------------------------
+[ ] Visual inspection of the mains lead and the IEC inlet.
+[ ] Portable appliance test if required by the site.
+[ ] Check the RTC. If drift exceeds 2 minutes per week, replace the battery
+    (VS4-ELE-090). Confirm NTP is configured and reachable; an instrument with
+    no NTP source will drift and the drift is easily mistaken for the firmware
+    4.2.1 defect (VBB-0041), which it is not.
+[ ] Confirm the instrument appears online in VeriConnect. Re-enrol if it shows
+    offline while operating normally - a known issue after updating to 4.3.0
+    on instruments enrolled before 4.1.0 (VBB-0061).
+[ ] Check the display and touchscreen. A flickering display is usually the
+    ribbon cable (VS4-DIS-142) rather than the panel.
+[ ] Download the event log for the visit report.
+
+-----------------------------------------------------------------
+8. REAGENTS AND CONSUMABLES
+-----------------------------------------------------------------
+[ ] Record all cartridge lot numbers and on-board days.
+[ ] Check each lot against active field safety notices.
+[ ] Note any cartridge approaching the 90-day on-board limit and tell the
+    laboratory before you leave.
+
+-----------------------------------------------------------------
+9. VERIFICATION AND HANDBACK
+-----------------------------------------------------------------
+[ ] Background count within limits.
+[ ] Both QC levels run and within range. Retic and body fluid QC on the Pro
+    where those modes are in use.
+[ ] Carryover check: high sample followed by three blanks, carryover < 0.5%.
+[ ] Precision check: 10 replicates of a normal sample, CV within the
+    specification in the datasheet.
+[ ] Complete the visit report. Have the laboratory sign it.
+[ ] Enter the visit in the field service log with visit ID, parts used, time
+    on site and any related ticket number.
+
+-----------------------------------------------------------------
+10. NOTES
+-----------------------------------------------------------------
+10.1 If the instrument fails verification at section 9 and cannot be brought
+     into specification during the visit, do not hand it back as serviceable.
+     Record the failure, tell the laboratory manager in person, and raise a
+     P2 ticket before leaving site.
+
+10.2 Where a site's instruments repeatedly need the same part, say so in the
+     visit report. Two mixer motors in eighteen months at the same site is a
+     siting or supply signal, not bad luck.
+
+=================================================================
+END OF SOP-VBS-011 REVISION 4
+=================================================================

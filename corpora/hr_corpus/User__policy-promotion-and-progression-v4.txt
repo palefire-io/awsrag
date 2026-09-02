@@ -1,0 +1,143 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Promotion and Progression Policy
+=================================================================
+Document:      HR-POL-022
+Version:       4
+Effective:     2026-01-01
+Owner:         Denise Kaur, Reward and Benefits Manager
+Companion to:  User__career-framework-overview-v5.txt and the two levelling
+               guides
+
+-----------------------------------------------------------------
+1. THE WINDOWS
+-----------------------------------------------------------------
+  SPRING     Nominations close 15 March
+             Calibration late March / early April
+             Communicated by 30 April
+             Effective 1 May
+
+  AUTUMN     Nominations close 15 September
+             Calibration late September / early October
+             Communicated by 31 October
+             Effective 1 November
+
+Two windows were introduced in version 4. One a year meant someone who reached
+the bar in February waited eleven months, which was neither fair nor good for
+retention.
+
+-----------------------------------------------------------------
+2. WHO CAN BE NOMINATED
+-----------------------------------------------------------------
+2.1  Anyone. You may nominate yourself and you do not need your manager's
+     permission to be considered.
+
+2.2  There is no minimum time in level. Time served is not evidence and its
+     absence is not a disqualification. Two people have been promoted within
+     ten months of joining and both were correct decisions.
+
+2.3  Being on family leave, long-term sick leave or a sabbatical does not
+     remove you from consideration. Cases are assessed on the work done, and
+     an absence is not counted against you.
+
+2.4  Being on a performance support plan does normally preclude a promotion in
+     that window.
+
+-----------------------------------------------------------------
+3. WHAT A CASE CONTAINS
+-----------------------------------------------------------------
+Two pages, no more. Longer cases do not do better.
+
+  1. Which level, and which levelling guide.
+  2. Three to five concrete examples of work at the next level. Specific
+     enough that someone outside the team can evaluate them. "Led the
+     migration" is not an example; "led the HL7 interface migration for the
+     Manchester network, including the decision to defer the FHIR path, which
+     avoided a revalidation the customer could not have absorbed before their
+     UKAS visit" is.
+  3. Evidence of the "how" as well as the "what".
+  4. What others say. Two or three named colleagues who have seen the work.
+
+3.1  Your manager writes it. You should see it before it is submitted and you
+     are entitled to say "that is not the strongest example of my work".
+
+-----------------------------------------------------------------
+4. CALIBRATION
+-----------------------------------------------------------------
+4.1  All cases in a job family go to a panel chaired by the relevant Director,
+     with the People team present.
+
+4.2  The panel tests whether the evidence supports the level, and whether the
+     bar is consistent with cases from other teams.
+
+4.3  THERE IS NO QUOTA. If eleven cases meet the bar, eleven people are
+     promoted. Budget constrains the pay review, not the level. In the autumn
+     2025 window, 14 of 19 cases were approved.
+
+4.4  The People team reviews outcomes for pattern by gender, ethnicity,
+     part-time status and family leave.
+
+-----------------------------------------------------------------
+5. HEARING THE OUTCOME
+-----------------------------------------------------------------
+5.1  From your manager, in person.
+
+5.2  If the answer is no, you are entitled to know specifically what was
+     missing and what would need to be different. "Not this time" is not an
+     acceptable answer and you should push back if you get one.
+
+5.3  If the panel thought the case was close, you will be told that too.
+
+5.4  If your manager did not put your case forward and you believe it should
+     have gone, tell the People team. We will look at it. This happens once or
+     twice a year and has twice resulted in a case being heard.
+
+-----------------------------------------------------------------
+6. PAY ON PROMOTION
+-----------------------------------------------------------------
+6.1  You move to the new band. Entering below the midpoint of a new band is
+     normal and is not a comment on you.
+
+6.2  A promotion always carries a pay increase, including where your current
+     pay already sits inside the new band.
+
+6.3  Promotion increases are separate from the annual review and are not
+     netted off against it.
+
+6.4  Typical promotion increases at Veridia run between 8% and 16% depending
+     on the gap between your current pay and the new band. Where a promotion
+     would require a very large jump, we may stage it over two steps within
+     twelve months, and if we do, we tell you the second step and the date in
+     writing at the time.
+
+-----------------------------------------------------------------
+7. WHAT WE DO NOT DO
+-----------------------------------------------------------------
+  - Promote to retain someone with a competing offer. Pay may be addressed
+    separately; a level is not.
+  - Promote in place of fixing a pay problem.
+  - Give a title instead of a level.
+  - Hold a promotion because of headcount or budget. The level reflects the
+    work; the pay is a separate conversation.
+
+-----------------------------------------------------------------
+8. LATERAL MOVES
+-----------------------------------------------------------------
+8.1  Moving between the IC and management tracks at L4 is lateral. Same band,
+     same pay, no demotion.
+
+8.2  Moving between functions at the same level is lateral. See
+     User__policy-internal-mobility-and-secondments.txt.
+
+8.3  Stepping back from management to an IC role is a legitimate and
+     respectable choice. Three people have done it and all three are still
+     here.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+denise.kaur@veridiabio.com | people@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

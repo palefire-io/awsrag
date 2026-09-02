@@ -1,0 +1,194 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Frequently Asked Questions
+=================================================================
+Document:      HR-GDE-030
+Version:       11
+Updated:       2026-06-30
+Owner:         Ollie Kettering, People Operations Coordinator
+Audience:      All employees
+
+Updated quarterly from what people actually ask us. If your question is not
+here, ask people@veridiabio.com and it may appear next quarter.
+
+-----------------------------------------------------------------
+PAY AND REWARD
+-----------------------------------------------------------------
+Q: What band am I in and where do I sit in it?
+A: Ask your manager. You are entitled to know both, and to know the range for
+   your own level. If you do not get a straight answer, ask Denise Kaur and
+   you will get one.
+
+Q: Why are pay bands not published to everyone?
+A: This is explained in full at User__career-framework-overview-v5.txt section
+   8, including our acknowledgement that it is a compromise. It is reviewed
+   annually.
+
+Q: When does pay change?
+A: 1 January for the annual review. Promotions take effect 1 May or
+   1 November. Off-cycle adjustments happen but are rare and need Chief People
+   Officer approval.
+
+Q: I got a Strong review and no pay rise. Why?
+A: Most often because you sit at or near the top of your band. Your manager
+   should have explained this. If they did not, ask them, and if you still do
+   not understand it ask Denise Kaur.
+
+Q: I have a competing offer. What should I do?
+A: Tell your manager before you resign, not after. Veridia does not routinely
+   make counter-offers and a promotion will not be created to retain you, but
+   if your pay is genuinely wrong we would rather fix it than lose you.
+
+Q: Am I allowed to discuss my pay with colleagues?
+A: Yes. Nothing in your contract prevents it and any clause purporting to
+   would be unenforceable. We would rather you had accurate information than
+   inaccurate assumptions.
+
+-----------------------------------------------------------------
+LEAVE
+-----------------------------------------------------------------
+Q: Do the days between Christmas and New Year come out of my entitlement?
+A: Yes. The offices close but those are your days. This is the single most
+   misunderstood line in any of our policies.
+
+Q: Can I book leave in my probation period?
+A: Yes, from day one.
+
+Q: How much notice do I need to give?
+A: See the annual leave policy. Those are requests, not conditions. If you
+   need a day tomorrow, ask for a day tomorrow.
+
+Q: My manager refused my leave. Can they do that?
+A: Only for a genuine operational reason, which they must state, and they
+   must offer alternative dates. "We are busy" is not a reason. Tell the
+   People team if you think it is being used as one.
+
+Q: What happens to leave I have not taken by 31 December?
+A: UK: up to 5 days carry to 31 March. Switzerland: managed actively by Lena
+   Hofstetter because Swiss law works differently.
+
+-----------------------------------------------------------------
+BEING UNWELL
+-----------------------------------------------------------------
+Q: Do I need a doctor's note?
+A: UK: not for the first 7 calendar days. Switzerland: from the 4th
+   consecutive day.
+
+Q: Do I have to tell my manager what is wrong with me?
+A: No. "I am unwell" is a complete answer.
+
+Q: Does my manager see my occupational health report?
+A: Only with your consent, and you see it first and may comment on it before
+   it is released.
+
+Q: Is mental ill health treated the same as physical illness?
+A: Yes, in certification, in pay and in how it is managed.
+
+Q: Will using the EAP show up anywhere?
+A: No. Veridia receives anonymous aggregate numbers only and is never told
+   that you personally used it.
+
+-----------------------------------------------------------------
+WORKING PATTERN
+-----------------------------------------------------------------
+Q: How many days do I have to be in the office?
+A: Two for most office-based roles, agreed within your team. Some roles are
+   site-dependent and some are field-based; the hybrid working policy is
+   honest about which.
+
+Q: Can I work from abroad?
+A: Up to 20 working days a year with approval, 4 weeks' notice. The approval
+   is about tax and social security, not trust.
+
+Q: Can I go part-time or compressed hours?
+A: Ask. 17 of 18 formal flexible working requests in 2025 were approved.
+
+Q: Is anyone monitoring whether I am at my desk?
+A: No. We do not use activity tracking software and will not.
+
+-----------------------------------------------------------------
+CAREER
+-----------------------------------------------------------------
+Q: How do I get promoted?
+A: See the career framework and your levelling guide. Two windows a year, no
+   quota, and you can nominate yourself.
+
+Q: Do I have to manage people to progress past L3?
+A: No. That was true until version 5 of the framework and it was the most
+   common complaint in the 2024 survey. There is now an IC track at L4 and
+   above on the same band.
+
+Q: Can I apply for an internal role without telling my manager?
+A: Yes. Please tell them before the final stage.
+
+Q: Can my manager block my internal move?
+A: No. They can ask for a handover period.
+
+-----------------------------------------------------------------
+LEAVING AND JOINING
+-----------------------------------------------------------------
+Q: What is my notice period?
+A: In your contract. Do not rely on memory - it varies by level and by
+   country.
+
+Q: What happens to my share options when I leave?
+A: Read your option agreement. There is normally a 90-day window to exercise
+   vested options and it cannot be extended. This is the thing leavers most
+   often get wrong.
+
+Q: Can I come back after leaving?
+A: Yes. No waiting period. Four of our 2025 hires were former employees.
+
+Q: Will my manager see my exit interview?
+A: Not attributably, and not without your explicit agreement.
+
+-----------------------------------------------------------------
+COMPANY QUESTIONS
+-----------------------------------------------------------------
+Q: How many people work at Veridia?
+A: 318 as at 31 December 2025. About two thirds in the UK, one third in Basel,
+   plus a small number of fully remote colleagues elsewhere.
+
+Q: Is Veridia profitable?
+A: Revenue was GBP 42M in FY2025. We are Series D funded and financial
+   performance is covered at the quarterly all-hands, where you can ask Gary
+   Pemberton directly.
+
+Q: What is the FSN-2025-003 thing everyone mentions in induction?
+A: A reagent recall in February 2025. A batch of lyse reagent developed a
+   fault producing spurious white cell flags on the VeriScan 400. We recalled
+   21 lots. It comes up in induction because of how it was found - a customer
+   said "this does not look right" and a support engineer took it seriously -
+   and because of what we changed afterwards.
+
+Q: There are rumours about an acquisition. Is something happening?
+A: We are asked some version of this most quarters, and it has come up more
+   often in the last few months.
+
+   Veridia does not comment on market speculation, and the People team is not
+   in a position to confirm or deny anything of that kind. What we can tell
+   you is this: if anything were ever to happen that affected people's jobs,
+   employees would be told properly and directly by the Executive Committee,
+   not through the grapevine, and there are legal obligations about
+   consultation that we would follow.
+
+   If you hear something that worries you, ask your manager or ask us. We will
+   tell you what we can, including when the answer is that we cannot say
+   anything. We would rather do that than pretend we have not heard the
+   question.
+
+Q: Where do I find a policy?
+A: Intranet, People section. Every policy lists its owner, and the owner would
+   rather you asked them than guessed.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+people@veridiabio.com | +44 1223 496 190
+Ollie Kettering - ollie.kettering@veridiabio.com
+Rachel Duffy (UK) - rachel.duffy@veridiabio.com
+Lena Hofstetter (Switzerland) - lena.hofstetter@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

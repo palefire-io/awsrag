@@ -1,0 +1,83 @@
+Ticket ID: VBST-4185
+Status: Closed (unable to reproduce, customer unresponsive)
+Priority: P3-Medium
+Created: 2025-09-02 14:25 UTC
+Product: VeriPrep SP-1 / VeriScan 400
+Customer: Massachusetts Coastal Medical Center (ACC-1248)
+Reported by: Dr Laura Feinberg, Director of Laboratory Medicine
+             lfeinberg@mcmc.org | +1 508 555 0147
+Assigned to: Aisha Rahman (Support Engineering L2)
+Serial: SP1-R2-0061 / VS4P-0808
+Firmware: SP-1 2.3.0 / VeriScan 4.3.0
+
+--- Thread ---
+
+[2025-09-02 14:25] Dr Laura Feinberg (Director of Laboratory Medicine):
+Intermittent P-405, LAN connection to VeriScan timeout, on the SP-1. Maybe
+three or four times a week. The link recovers on its own within a minute or
+two but samples in flight go to the exception rack and have to be re-presented.
+
+Our network team say there is no packet loss and no issue on their side.
+
+[2025-09-02 17:40] Aisha Rahman (Support Engineering L2):
+Dr Feinberg, thank you. Intermittent LAN drops that self-recover are usually
+one of: DHCP lease renewal on the analyser, a switch port flapping,
+spanning-tree reconvergence, or an IP conflict.
+
+Please can you tell me:
+- Are the SP-1 and the analyser on static IPs or DHCP?
+- If DHCP, what is the lease time?
+- Are they on the same switch and the same VLAN?
+- Does the timing of the drops correlate with anything - time of day, day of
+  week?
+- Can you export the SP-1 event log for the last 30 days?
+
+[2025-09-05 09:15] Dr Laura Feinberg (Director of Laboratory Medicine):
+Both DHCP. Network team says lease is 8 hours. Same VLAN, different switches.
+
+I'll ask for the event log.
+
+[2025-09-05 11:30] Aisha Rahman (Support Engineering L2):
+8-hour DHCP lease is my prime suspect. When the analyser renews, if it gets a
+different address the SP-1's cached endpoint is stale and you get P-405 until
+discovery re-runs. That would give you drops clustered around multiples of 8
+hours from whenever the leases were issued - which often looks random until
+you plot it.
+
+Recommendation regardless of what the log shows: put both on static IPs, or
+DHCP reservations if the network team prefers. This is in the SP-1 datasheet
+as a strong recommendation for exactly this reason.
+
+[2025-09-15 10:00] Aisha Rahman (Support Engineering L2):
+Following up - haven't had the event log. Have you been able to get it?
+
+[2025-09-29 09:30] Aisha Rahman (Support Engineering L2):
+Second follow-up. Dr Feinberg, if the static IP change has been made and
+resolved the issue, do let me know and I'll close this. If it hasn't, I'd
+still like the event log.
+
+[2025-10-20 11:00] Aisha Rahman (Support Engineering L2):
+Third attempt. Called +1 508 555 0147, reached the laboratory, left a message
+with a staff member. Also emailed.
+
+[2025-11-12 14:00] Aisha Rahman (Support Engineering L2):
+No response in ten weeks across four contact attempts.
+
+Checking telemetry from the account: the SP-1 and the analyser have both been
+reporting from fixed addresses since 2025-09-18, which suggests the site did
+make the static IP change and did not tell us. No P-405 events appear in the
+uploaded telemetry since 2025-09-19.
+
+Closing as unable to reproduce with the probable resolution being the static
+IP change. I have not confirmed this with the customer and I am recording that
+explicitly rather than claiming a resolution I did not verify.
+
+Account manager (Ben Whittle) notified so he can raise it at the next review.
+
+--- Resolution ---
+NOT CONFIRMED. Symptom consistent with DHCP lease renewal invalidating the
+SP-1's cached analyser endpoint. Static IP recommended.
+Telemetry indicates the site moved to fixed addresses on 2025-09-18 and P-405
+events ceased on 2025-09-19, but the customer did not respond to four contact
+attempts over ten weeks and the event log was never supplied.
+Closed as unable to reproduce. Root cause inferred, not established.

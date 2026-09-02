@@ -1,0 +1,36 @@
+site,function,department,headcount,contractors,avg_salary_gbp,total_salary_cost_gbp,employer_oncost_pct,total_employment_cost_gbp,avg_tenure_years,voluntary_turnover_pct,female_pct,union_covered,veridia_equivalent_function,overlap_assessment,data_confidence
+Warrington UK,Manufacturing,Assembly,58,0,31200,1809600,18.4,2142566,3.2,19.0,34,No,None - Veridia does not assemble in UK,None,High
+Warrington UK,Manufacturing,Test and Commissioning,22,0,34800,765600,18.4,906470,4.1,14.0,23,No,None,None,High
+Warrington UK,Manufacturing,Stores and Logistics,17,0,26400,448800,18.4,531379,5.8,12.0,29,No,Partial - Veridia Cambridge stores,Low,High
+Warrington UK,R&D,Mechanical Engineering,26,0,52400,1362400,18.4,1613082,7.4,6.0,19,No,Partial - Veridia has no dedicated mech eng team,None - ACQUISITION RATIONALE,High
+Warrington UK,R&D,Software and Controls,19,0,58600,1113400,18.4,1318266,6.1,11.0,21,No,Overlap - Veridia Engineering,Medium,High
+Warrington UK,R&D,Systems and Integration,11,0,55200,607200,18.4,718925,5.9,9.0,18,No,Overlap - Veridia Engineering,Medium,High
+Warrington UK,Field Service,Field Engineering,18,34,41800,752400,18.4,890842,3.4,26.0,6,No,DIRECT OVERLAP - Veridia Field Service,High,Medium - contractor status unresolved
+Warrington UK,Field Service,Service Desk,9,0,29600,266400,18.4,315418,2.8,31.0,44,No,DIRECT OVERLAP - Veridia Support,High,High
+Warrington UK,Commercial,Sales,21,3,46200,970200,18.4,1148717,3.1,29.0,33,No,DIRECT OVERLAP - Veridia Commercial,High,High
+Warrington UK,Commercial,Marketing,6,2,42800,256800,18.4,304051,2.4,33.0,67,No,DIRECT OVERLAP - Veridia Marketing,High,High
+Warrington UK,Commercial,Bids and Tenders,7,0,38400,268800,18.4,318259,4.2,14.0,71,No,Partial,Medium,High
+Warrington UK,Quality,Quality Assurance,12,0,44600,535200,18.4,633677,5.1,8.0,50,No,Overlap - Veridia QA Basel,Medium,High
+Warrington UK,Quality,Regulatory Affairs,4,1,51800,207200,18.4,245325,3.8,25.0,75,No,DIRECT OVERLAP - Veridia Regulatory,High,High
+Warrington UK,Corporate,Finance,11,0,45400,499400,18.4,591290,4.6,18.0,64,No,DIRECT OVERLAP - Veridia Finance,High,High
+Warrington UK,Corporate,HR,4,0,42300,169200,18.4,200333,1.2,50.0,100,No,DIRECT OVERLAP - Veridia People,High,High
+Warrington UK,Corporate,IT,6,4,44100,264600,18.4,313286,3.3,17.0,17,No,DIRECT OVERLAP - Veridia IT,High,High
+Warrington UK,Corporate,Facilities,5,0,28800,144000,18.4,170496,6.7,0.0,20,No,Partial,Low,High
+Warrington UK,Corporate,Executive and Board,9,0,118000,1062000,18.4,1257408,8.9,0.0,22,No,DIRECT OVERLAP - Veridia ExCo,High,High
+Wroclaw PL,Manufacturing,Machining,62,0,19400,1202800,20.8,1452982,3.9,31.0,18,Yes,None - unique capability,None - ACQUISITION RATIONALE,Medium
+Wroclaw PL,Manufacturing,Sub-assembly,38,0,17800,676400,20.8,817091,3.1,34.0,42,Yes,None,None,Medium
+Wroclaw PL,Manufacturing,Quality Control,14,0,22600,316400,20.8,382211,4.8,21.0,50,Yes,Partial - Veridia QC Basel,Low,Medium
+Wroclaw PL,Manufacturing,Stores and Logistics,11,0,16200,178200,20.8,215266,4.2,27.0,36,Yes,None,None,Medium
+Wroclaw PL,R&D,Design Support,9,0,28400,255600,20.8,308765,5.1,11.0,33,Yes,Partial,Low,Medium
+Wroclaw PL,Corporate,Site Administration,11,3,21800,239800,20.8,289678,6.3,18.0,73,Yes,Partial,Low,Medium
+TOTAL,,,410,47,,14372200,,17185683,4.1,22.0,28,145 covered,,,
+,,,,,,,,,,,,,,,
+NOTES ON THIS DATA,,,,,,,,,,,,,,,
+1. Source: Narwhal HRIS extract dated 2026-03-31 supplied in the data room, reconciled against the FY2025 statutory accounts and against payroll. HEADCOUNT DOES NOT RECONCILE EXACTLY ACROSS THE THREE SOURCES - the HRIS shows 410, payroll shows 413 and the accounts imply 417. Narwhal management attribute the difference to leavers not closed in the HRIS and to two employees on unpaid leave. We have accepted 410 for modelling with a stated uncertainty of plus or minus 7.,,,,,,,,,,,,,
+2. The 34 field service contractors are shown in the contractor column and are NOT in headcount. They are very likely employees at law - see UNI-DD-HR-001 section 5. If reclassified, Narwhal UK headcount rises to 299 and the employment cost rises by approximately GBP 1.6M per annum on Narwhal terms, or GBP 2.1M on Veridia terms.,,,,,,,,,,,,,
+3. Employer on-cost: UK 18.4% (employer NIC, pension at 4%, apprenticeship levy, insurances). Poland 20.8% (ZUS employer contributions, PFRON, PPK). Both exclude the DB pension deficit recovery contributions of GBP 1.15M per annum, which are a company cost not an employment cost.,,,,,,,,,
+4. Polish salaries converted at GBP 1 = PLN 5.12, the rate in the transaction model. A 10% currency movement changes the Polish employment cost by approximately GBP 0.35M.,,,,,,,,,,,,,,
+5. Female percentage at Wroclaw machining (18%) and Warrington field engineering (6%) are the two lowest figures in the business. Veridia's own field service figure is 11%, so this is an industry pattern rather than a Narwhal one, but the combined entity would be worse than Veridia alone on this measure.,,,,,,,,,,,,,
+6. OVERLAP ASSESSMENT is an input to the role overlap model (UNI-DD-HR-005) and is NOT a redundancy proposal. No decision has been taken. No individual has been identified. This column must not be circulated outside the deal team and must not be shown to anyone at Narwhal.,,,,,,,,,,,,,,,
+7. The two functions marked ACQUISITION RATIONALE - Warrington mechanical engineering and Wroclaw machining - are the capability being bought. Any synergy model that reduces headcount in either has misunderstood the transaction.,,,,,,,,,,,,,,,
+8. DATA CONFIDENCE reflects the quality of the underlying HRIS records. Polish records are rated Medium because the Wroclaw site operates a separate local system reconciled to the group HRIS quarterly by hand.,,,,,,,,,,,,,,,

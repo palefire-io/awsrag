@@ -1,0 +1,95 @@
+Ticket ID: VBST-4301
+Status: Resolved
+Priority: P2-High
+Created: 2025-12-02 08:55 UTC
+Product: VeriScan 400
+Customer: Alderley Diagnostics Ltd (ACC-1152)
+Reported by: Marcus Ollerenshaw, Laboratory Director
+Assigned to: Owen Trask (Support Engineer L1) -> Kasia Nowak (FSE)
+Serial: VS4-0918
+Firmware: 4.3.1
+
+--- Thread ---
+
+[2025-12-02 08:55] Marcus Ollerenshaw (Laboratory Director):
+E-207 flow cell background high. Extended Clean twice, no improvement.
+Background WBC sitting at 0.31-0.35.
+
+Before you ask: reagent lots are D5-2025-0211 and L3-2025-0510, both current,
+both fitted last week, neither on any notice. I checked. Learned that lesson
+in February.
+
+[2025-12-02 10:10] Owen Trask (Support Engineer L1):
+Appreciated, and that saves us a day.
+
+Two Extended Cleans without improvement is the point at which SOP-VBS-001
+section 5.3 says stop and escalate, so you've done the right thing.
+
+Most likely the flow cell needs replacing - VS4-OPT-220, GBP 725, not a
+user-fit part. Before I book that, one question: has anything unusual gone
+through the instrument? A very lipaemic sample, a sample with a fixative in it,
+anything mislabelled?
+
+[2025-12-02 11:30] Marcus Ollerenshaw (Laboratory Director):
+Now you mention it, we had a batch from a private client three weeks ago that
+turned out to be in the wrong tubes. Citrate rather than EDTA. About 20
+samples before we spotted it.
+
+Would that do it?
+
+[2025-12-02 13:00] Owen Trask (Support Engineer L1):
+It could contribute. Citrate isn't corrosive to the flow cell but the samples
+would have behaved oddly through the lyse step and could have left protein
+deposit that's now baked on. Twenty samples is enough.
+
+Booking Kasia. She'll bring a flow cell and fit it if the cleaning she tries on
+site doesn't recover it.
+
+[2025-12-09 16:00] Kasia Nowak (Field Service Engineer):
+Attended (FSV-2025-0447).
+
+Tried first: extended soak of the flow cell with RGT-CL for 45 minutes, then
+three Extended Clean cycles. Background came down to 0.24 but not below the
+0.20 limit and drifted back to 0.29 within two hours.
+
+Flow cell VS4-OPT-220 replaced. Old cell inspected - visible film on the
+optical faces, brownish, resistant to RGT-CL. Consistent with protein deposit
+rather than cellular debris.
+
+Post-replacement: background WBC 0.06, 0.07, 0.05 across three cycles. Optical
+calibration passed. QC both levels in range. Carryover 0.3%.
+
+Discussed the citrate incident with the customer. Advised that a sample type
+check at booking-in is the control, and that if it happens again the instrument
+should have an Extended Clean immediately rather than three weeks later.
+
+Time on site 3.5 hours.
+
+[2025-12-10 09:00] Marcus Ollerenshaw (Laboratory Director):
+Running well. Background where it should be.
+
+Invoice query - is this warranty or are we paying?
+
+[2025-12-10 11:15] Owen Trask (Support Engineer L1):
+Chargeable, I'm afraid. The instrument is out of warranty and your contract is
+Bronze, which covers labour at a reduced rate but not parts. The flow cell is
+GBP 725 plus the visit at the Bronze rate.
+
+I'll also be honest that the citrate incident makes this contamination rather
+than failure, which would put it outside a parts warranty even if you had one.
+
+If it helps, Peter Doyle can look at what a Silver contract would cost you.
+For a two-instrument site doing your volume, the maths on parts cover is worth
+running.
+
+[2025-12-10 12:00] Marcus Ollerenshaw (Laboratory Director):
+Understood, no argument. Ask Peter to send me the Silver numbers.
+
+--- Resolution ---
+Root cause: protein deposit on the flow cell optical faces, probably from
+approximately 20 citrate-anticoagulated samples run in error three weeks
+earlier. Not recoverable by cleaning.
+Actions: flow cell VS4-OPT-220 replaced (FSV-2025-0447); background and
+carryover verified; customer advised on sample type checks and on immediate
+cleaning after a known contamination event.
+Chargeable - out of warranty, Bronze contract, contamination not failure.

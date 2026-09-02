@@ -1,0 +1,73 @@
+From: Ruth Amankwah <dpo@veridiabio.com>
+To: Isabelle Renard <i.renard@cerba-ouest.fr>
+CC: Camille Roux <camille.roux@veridiabio.com>
+Date: Fri, 27 Feb 2026 15:20:44 +0000
+Subject: RE: Hebergement des donnees de sante / health data hosting - VeriConnect
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Ms Renard,
+
+Thank you for your question about French health data hosting requirements. I
+want to give you a complete answer including the part that is unhelpful.
+
+> Nous devons confirmer que VeriConnect est conforme aux exigences
+> d'hebergement de donnees de sante (HDS) applicables en France.
+
+The direct answer: Veridia does not hold HDS certification, and neither does
+AWS eu-west-1 as we consume it for the VeriConnect service.
+
+The longer answer, which I think matters for your assessment:
+
+1. AWS itself holds HDS certification for certain of its services and regions,
+   including eu-west-3 (Paris). VeriConnect is not currently deployed in
+   eu-west-3 and our architecture is not currently within the scope of an HDS
+   certification.
+
+2. Whether HDS applies to VeriConnect in your specific configuration depends on
+   what VeriConnect holds for you and in what capacity. If your deployment is
+   what we call topology A - instruments report directly to your own LIS and
+   VeriConnect receives a parallel copy for QC and fleet management - then the
+   question is whether that parallel copy constitutes hosting of health data on
+   behalf of a French health establishment. I am not qualified to answer that
+   question under French law and I am not going to pretend otherwise. Your DPO
+   and your legal counsel will need to form a view.
+
+3. What we can offer today:
+   - Hosting in eu-central-1 (Frankfurt) or eu-west-2 (London) as well as
+     eu-west-1 (Ireland), on Enterprise tier with VeriGuard. None of these is
+     France.
+   - Our full technical and organisational measures documentation.
+   - ISO 27001:2022 certification (GB-ISMS-2024-0417).
+   - SOC 2 Type II report under NDA.
+   - A data processing agreement with the EU standard contractual clauses where
+     relevant.
+   - Pseudonymisation of patient identifiers, which materially changes what
+     VeriConnect holds. If your instruments are configured not to transmit
+     direct identifiers to VeriConnect - which is supported, and which several
+     customers do specifically for this reason - then the data VeriConnect
+     holds may fall outside the scope of the question entirely. This is worth
+     exploring before the compliance question, because it may dissolve it.
+
+4. What we cannot offer: HDS certification, or a deployment in eu-west-3, on
+   any timeline I can commit to. There is internal discussion about French
+   market requirements and I am not going to represent that discussion to you
+   as a plan.
+
+I would suggest a call between your DPO, your legal counsel, myself and Camille
+Roux. If the answer is that VeriConnect cannot be used in your configuration
+without HDS certification, I would rather establish that clearly than have you
+discover it during an inspection.
+
+I should add: you are the third French customer to raise this in eighteen
+months. I am recording each of them, and the accumulated weight of that is the
+most useful thing I can do to move our internal position.
+
+Kind regards,
+
+Ruth Amankwah
+Data Protection Officer
+Veridia BioSystems Ltd
+dpo@veridiabio.com | +44 1223 496 155
+41 Hurst Way, Cambridge CB4 0WS
+Veridia BioSystems Ltd is registered with the UK Information Commissioner's
+Office, registration number ZA884170.

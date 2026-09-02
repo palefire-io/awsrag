@@ -1,0 +1,73 @@
+=====================================================
+VERIDIA BIOSYSTEMS - PRODUCT BULLETIN
+=====================================================
+Reference: VBB-0067
+Date Issued: 2026-04-21
+Type: Feature Release
+Affected Products: VeriScan 400 / 400 Pro firmware 4.4.0; VeriConnect 6.2
+
+SUBJECT: Firmware 4.4.0 and VeriConnect 6.2 - IVDR result labelling, FHIR R4
+         beta, revised temperature enforcement
+
+-----------------------------------------------------
+FIRMWARE 4.4.0 (2026-04-21)
+-----------------------------------------------------
+1. IVDR labelling data in the result header
+   Outbound results now carry the device Basic UDI-DI and the applicable
+   conformity route in the message header, populated from the instrument's
+   registration record. This supports customer traceability obligations under
+   IVDR Article 10. The fields are informational and do not alter result
+   values.
+
+2. Revised ambient temperature enforcement
+   W-031 is now raised outside 18-32 C, aligning firmware behaviour with the
+   published specification revised in VBB-0052 (April 2025). Sites that have
+   been operating between 15-18 C or 32-35 C without warnings will begin to
+   see W-031. This is expected and is not a change in instrument behaviour
+   other than the warning threshold.
+
+3. Reagent lot exposure export
+   The instrument can now export a per-lot record of which samples were
+   processed under which reagent lot, in CSV form, for the last 400 days.
+   This was built in response to the retrospective review burden reported by
+   customers during FSN-2025-003 and is available on both models.
+
+-----------------------------------------------------
+VERICONNECT 6.2 (2026-04-21)
+-----------------------------------------------------
+1. FHIR R4 result bundle export - BETA
+   VeriConnect can emit results as FHIR R4 DiagnosticReport and Observation
+   resources alongside the existing HL7 v2 path. Requires Enterprise tier.
+
+   NOT FOR DIAGNOSTIC USE. The FHIR export is a beta feature and has not been
+   validated as part of the device's conformity assessment. Laboratories must
+   continue to use the HL7 v2 path for clinical reporting. Veridia will
+   confirm the validation status of the FHIR path in a future bulletin.
+
+2. QC chart annotation
+   Reagent lot changes, firmware updates and calibrations are now overlaid on
+   Levey-Jennings charts as vertical annotations. Requested by 31 customers
+   since 2025; the FW 4.2.1 timestamp episode was the most cited reason.
+
+3. Retrospective reagent lot exposure report promoted from beta to general
+   availability on Professional tier and above.
+
+4. SSO metadata auto-refresh interval configurable per tenant (default 6
+   hours, minimum 1 hour). See VBB-0044.
+
+-----------------------------------------------------
+DEPRECATIONS
+-----------------------------------------------------
+  - The "Generic" LIS profile, which omits OBX-14, is deprecated and will be
+    removed in firmware 5.0. Sites still using it should migrate to the
+    "HL7 2.5.1 Standard" profile. See lookup-hl7-message-mapping.csv.
+  - VeriConnect API v1 is deprecated. v2 has been available since 2024-09.
+    v1 will be withdrawn 2027-04-30.
+  - TLS 1.2 remains supported; TLS 1.0 and 1.1 were removed in 6.0 (2024).
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Tom Reeves, Product Manager VeriConnect - tom.reeves@veridiabio.com
+Gavin Tuck, Firmware Lead - gavin.tuck@veridiabio.com
+=====================================================

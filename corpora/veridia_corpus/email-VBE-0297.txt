@@ -1,0 +1,82 @@
+From: Marcus Chen <marcus.chen@veridiabio.com>
+To: Priya Sundaram <ps2119@cam.ac.uk>
+CC: Dr Elena Marchetti <elena.marchetti@veridiabio.com>
+Date: Tue, 17 Mar 2026 11:30:52 +0000
+Subject: RE: MPhil research - request for technical information on flagging algorithms
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Ms Sundaram,
+
+Thank you for a well-judged email. Taking your points in order.
+
+1. FLAG TAXONOMY. Yes, happily. This is in our Instructions for Use, which is
+   not confidential, and I will send you the relevant section. The validated
+   flag set covers morphological suspicion (blast, immature granulocyte,
+   atypical lymphocyte), distributional abnormality (scatter pattern outside
+   expected envelope), analytical interference (platelet clump, nucleated red
+   cells, lipaemia, cold agglutinin) and instrument condition (background,
+   carryover). Each has a defined trigger condition, though the numerical
+   thresholds are confidential.
+
+2. REAL-WORLD FLAG RATES. This is the interesting part of your question and
+   the honest answer is that we hold this data and have never published it.
+
+   VeriConnect telemetry gives us flag rates across several hundred
+   instruments. The distribution is wider than I would have guessed before I
+   looked: the interquartile range across sites for overall differential flag
+   rate is roughly 3.5 to 9 per cent, with a long tail above that which is
+   almost entirely explained by case mix (haematology-oncology centres flag
+   far more) and by sites that have not tuned their thresholds.
+
+   I would need to ask about sharing aggregated data with you. It would need
+   to be properly anonymised and I would want Elena's agreement, which is why
+   she is copied. I think there is a reasonable chance the answer is yes, in
+   which case I would want it done as a proper collaboration with an agreed
+   scope rather than as an informal data dump.
+
+3. THE ADVISORY FLAGS. The bulletin you found (VBB-0061) is a customer
+   bulletin. It is not secret and if it is publicly indexed that is our
+   configuration rather than your trespass. Cite it if it is useful.
+
+   Your question about how we decide which side of the line a flag falls on is
+   the best question in your email and I will answer it properly.
+
+   The short version: a flag enters the validated set when we can demonstrate
+   its performance against a reference method on a specimen population that
+   covers the intended use, and when we have committed to that performance in
+   the technical documentation. Advisory flags are ones where the underlying
+   signal is real and useful but where either the reference standard is
+   contested (what exactly is a "fragment", and would two haematologists
+   agree), or the specimen population needed to characterise it is hard to
+   assemble because the condition is rare.
+
+   BLAST? is the interesting case. It is a genuinely useful signal and it is
+   advisory rather than validated because the consequence of a validated blast
+   flag is that laboratories will, correctly, build workflow around it, and the
+   evidence we would need to support that is a much higher bar than the
+   evidence needed to show the signal exists.
+
+4. INTERVIEW. Yes. I will do it myself, and if you want the R&D side as well I
+   can probably bring someone. 45 minutes is fine; I would suggest an hour
+   because you will have follow-up questions and it is inefficient to do this
+   twice.
+
+A suggestion, offered as someone who has watched a lot of people study this
+badly. The most useful thing you could do for the field is not to characterise
+flag rates - people do that - but to characterise what laboratories DO with a
+flag. In our data, the same flag at two sites produces a film at one and a
+comment at the other, and the difference is local policy, staffing and the time
+of day. The workload consequence you are interested in lives in that decision,
+not in the flag.
+
+I am also going to say something that may be useful and may be unwelcome. Your
+email says you have nothing to offer in return. That is not true. Nobody inside
+a manufacturer can publish an independent analysis of our own false positive
+rates and have it believed. You can.
+
+Best regards,
+
+Marcus Chen
+QC Applications Specialist
+Veridia BioSystems Ltd
+marcus.chen@veridiabio.com | +44 1223 496 118

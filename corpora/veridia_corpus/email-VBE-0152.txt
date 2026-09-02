@@ -1,0 +1,63 @@
+From: Dr Nadia Haddad <nadia.haddad@nhs.net>
+To: support@veridiabio.com
+CC: Tom Reeves <tom.reeves@veridiabio.com>
+Date: Thu, 6 Mar 2025 08:12:33 +0000
+Subject: RE: RE: VBST-3902 - QC chart timestamps - what do we tell our assessor?
+X-Mailer: Apple Mail (2.3774.600.62)
+
+Good morning,
+
+Following up on ticket VBST-3902, which is technically resolved but has left us
+with a documentation problem.
+
+Our UKAS assessment is in June. Our Levey-Jennings charts for February and the
+first part of March show points at times when we know the QC was not run. We
+have the instrument records showing the true times, and we have your
+explanation, but what we do not yet have is anything on Veridia letterhead
+that an assessor can read.
+
+The bulletin VBB-0041 helps and I have filed it. What it does not do is speak
+to our specific instruments over our specific period.
+
+Could you provide a short statement covering:
+
+- that instruments VS4P-0503 and VS4P-0511 ran firmware 4.2.1 between 3
+  February and 4 March 2025
+- that during that period the HL7 timestamps emitted by those instruments
+  drifted forward, with the magnitude bounded by instrument uptime
+- that the analyte values are unaffected
+- that the instrument-local records are the accurate record of QC timing for
+  that period
+- that the defect was corrected in firmware 4.2.3
+
+I appreciate this is a small ask on top of everything else. It is the
+difference between a finding and a note.
+
+> On 21 Mar 2025, at 09:30, Gavin Tuck <gavin.tuck@veridiabio.com> wrote:
+>
+> Dr Haddad - firmware 4.2.3 released and bulletin VBB-0041 issued. The
+> bulletin covers everything you asked for: affected fields, mechanism, drift
+> magnitude by uptime, and confirmation that result values are unaffected.
+>
+> We can also supply a per-instrument drift reconstruction for your historical
+> data if that would help your assessor.
+
+Yes to the reconstruction, thank you, and this statement in addition if
+possible.
+
+Regards,
+
+Dr Nadia Haddad
+Consultant Haematologist
+Clinical Lead, Haematology
+Royal Free London NHS Foundation Trust
+Pond Street, London NW3 2QG
+020 7794 0500 ext 33412
+
+--
+This message may contain confidential information. If you are not the intended
+recipient please inform the sender that you have received the message in error
+before deleting it. Please do not disclose, copy or distribute information in
+this email or take any action in reliance on its contents. NHSmail is the
+secure email and directory service available for NHS staff. This email may be
+monitored in accordance with Trust policy.

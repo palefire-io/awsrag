@@ -1,0 +1,113 @@
+Ticket ID: VBST-4110
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-06-18 08:30 UTC
+Product: VeriLyse RGT-D5 / VeriScan 400
+Customer: Greater Manchester Pathology Network (ACC-1042)
+Reported by: Suneet Kaur, Senior BMS, Manchester Royal Infirmary site
+             suneet.kaur@gmpn.nhs.uk
+Assigned to: Hannah Bright (Support Engineer) -> Olu Adeyemi (Reagent
+             Manufacturing Lead)
+Serial: VS4-0779
+Firmware: 4.2.3
+
+--- Thread ---
+
+[2025-06-18 08:30] Suneet Kaur (Senior BMS):
+Second E-311 cartridge seal breach in a fortnight on VS4-0779, both on RGT-D5.
+The first one we put down to bad luck. Two feels like a pattern.
+
+Both cartridges were from lot D5-2025-0158. Both leaked a small amount into
+the reagent bay when removed.
+
+[2025-06-18 10:15] Hannah Bright (Support Engineer):
+Two in a fortnight from the same lot is worth investigating properly.
+
+Please:
+- photograph both cartridges, particularly the septum and the collar
+- photograph the reagent bay and the cartridge port on the instrument
+- quarantine both cartridges, don't discard
+- tell me how many cartridges from that lot you have and whether any others
+  show anything
+
+Also: who fits the cartridges, and are they using a tool or hand-tightening?
+
+[2025-06-18 14:40] Suneet Kaur (Senior BMS):
+Photos attached (6). We have 4 more from that lot, all unopened, no visible
+damage.
+
+Cartridges are hand-fitted by whoever is on the bench. No tool. We were told
+at install to press until it seats and not to over-tighten.
+
+[2025-06-19 09:20] Hannah Bright (Support Engineer):
+Photos are helpful. The septum on both shows an oval rather than circular
+puncture, which usually indicates the cartridge was rocked during removal or
+was seated slightly off-axis. But the collar on one of them also shows a
+hairline crack that I don't think removal would cause.
+
+Passing to Olu Adeyemi in reagent manufacturing. This might be handling,
+might be the cartridge, might be transit.
+
+[2025-06-20 11:00] Olu Adeyemi (Reagent Manufacturing Lead):
+Looked at the photos. The hairline crack on the collar of cartridge 2 is
+consistent with an impact rather than with fitting - it runs radially from the
+outer edge, which is what you get from a drop or a crush, not from
+over-torquing, which cracks circumferentially.
+
+Question for the site: how are your reagent cartons stored and moved between
+your central store and the bench? Any chance they've been stacked more than
+three high or moved on a trolley over a threshold?
+
+D5-2025-0158 had 5,000 units and this is the only complaint against it, which
+argues against a manufacturing issue.
+
+[2025-06-20 15:30] Suneet Kaur (Senior BMS):
+Ah. Our central store stacks reagent cartons six high because of space. And
+they come over on a trolley with a step at the loading bay door.
+
+That will be it, won't it.
+
+[2025-06-24 16:00] Kasia Nowak (Field Service Engineer):
+Attended (FSV-2025-0284). Inspected the instrument reagent bay and cartridge
+port - no damage, no misalignment, port seal in good condition. No instrument
+fault.
+
+Inspected the central store with the site's stores supervisor. Cartons stacked
+six high against a maximum of three marked on the carton. Trolley route
+crosses a 40 mm threshold at the loading bay.
+
+Opened and inspected the four remaining cartridges from D5-2025-0158: one has
+a hairline collar crack not visible through the carton. Quarantined it.
+
+So: three damaged cartridges out of six from one delivery, all with impact
+damage, and a storage and handling route that would explain it.
+
+Recommendations left with the stores supervisor and with Suneet:
+- observe the max stack height marked on the carton
+- inspect cartridges for collar cracks before fitting, as part of SOP-VBS-002
+  section 4.4
+- ramp or re-route the trolley path
+
+Time on site 2.0 hours.
+
+[2025-06-25 09:15] Olu Adeyemi (Reagent Manufacturing Lead):
+Confirming from Basel: retained samples from D5-2025-0158 pass drop and crush
+testing. No manufacturing defect identified. The lot remains released.
+
+Three replacement cartridges are being sent at no charge as a goodwill
+gesture, since the site had no way of knowing about the stack height limit
+beyond a symbol on a carton that nobody reads.
+
+I've asked packaging to make the stack height limit more prominent.
+
+[2025-06-25 11:00] Suneet Kaur (Senior BMS):
+Fair enough, and thank you for the replacements. Stores have restacked to
+three high and estates are putting a ramp at the bay door.
+
+--- Resolution ---
+Root cause: impact damage to cartridge collars from storage stacked six high
+(limit three) and trolley transit over a 40 mm threshold. No manufacturing
+defect; no instrument fault (FSV-2025-0284).
+Actions: storage and handling corrected; pre-fit inspection reinforced against
+SOP-VBS-002 s.4.4; three replacement cartridges supplied as goodwill; carton
+stack-height marking to be made more prominent.

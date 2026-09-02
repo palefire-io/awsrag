@@ -1,0 +1,124 @@
+Ticket ID: VBST-4003
+Status: Resolved
+Priority: P1-Critical
+Created: 2025-03-11 07:31 UTC
+Product: VeriConnect / VeriGuard
+Customer: Guy's and St Thomas' NHS Foundation Trust (ACC-1270)
+Reported by: Dr Oliver Kingsmill, Clinical Director of Pathology
+             oliver.kingsmill@gstt.nhs.uk
+CC: Helena Marsh, Quality and Regulatory Lead
+Assigned to: Owen Trask (L1) -> Yusuf Demir (Cloud Ops) -> Tom Reeves
+VeriConnect tenant: gstt.vericonnect.veridiabio.com
+Tier: Enterprise + VeriGuard
+
+--- Thread ---
+
+[2025-03-11 07:31] Dr Oliver Kingsmill (Clinical Director):
+VeriConnect login failing for all users across all four of our laboratory
+sites. Error VC-4412. Approximately 180 users affected.
+
+[2025-03-11 07:52] Owen Trask (Support Engineer L1):
+Acknowledged, P1. Multiple sites affected, incident declared, Cloud Operations
+engaged.
+
+Your analysers and your LIS interface are unaffected - results continue to
+flow. This is VeriConnect login only.
+
+[2025-03-11 08:50] Yusuf Demir (Cloud Operations):
+Root cause is a stale cached copy of your identity provider's SAML signing
+certificate on our side. Your IdP rotated the certificate this morning and we
+are rejecting the new signatures.
+
+Fixing tenant by tenant. You are fourth in the queue, approximately 30
+minutes.
+
+[2025-03-11 09:05] Helena Marsh (Quality and Regulatory Lead):
+Two questions while we wait.
+
+1. Is this a security incident? I need to know whether to notify anyone
+   internally within the hour.
+2. What happens to our VeriGuard audit trail during a period when nobody can
+   log in? We are audited on the completeness of that trail.
+
+[2025-03-11 09:24] Yusuf Demir (Cloud Operations):
+1. No. This is an availability incident. The failure mode is that we are
+   refusing to accept authentication assertions we cannot cryptographically
+   verify. Nothing has been accessed by anyone unauthorised, no data has been
+   exposed and no data has been altered or lost. If our assessment changes I
+   will tell you immediately, but I do not expect it to.
+
+2. The audit trail is complete. Every failed authentication is logged with
+   reason code VC-4412 and is visible under Audit > Authentication. What you
+   will see is an absence of user-activity events during the window, because
+   there was no user activity - people could not log in to do anything. That
+   is a gap in activity, not a gap in logging, and the two are different
+   things. The advisory we issue will document the window so you can reference
+   it in an evidence pack.
+
+[2025-03-11 09:41] Helena Marsh (Quality and Regulatory Lead):
+That is exactly what I needed. Thank you for distinguishing between the two -
+most vendors would not have.
+
+[2025-03-11 10:07] Yusuf Demir (Cloud Operations):
+GSTT metadata refreshed. Please test.
+
+[2025-03-11 10:19] Dr Oliver Kingsmill (Clinical Director):
+Access restored across all four sites. Thank you.
+
+[2025-03-11 10:40] Helena Marsh (Quality and Regulatory Lead):
+Please confirm in writing:
+- incident start and end times, UTC
+- number of failed authentications for our tenant
+- confirmation of no unauthorised access and no data loss
+- what you are changing so it does not recur
+
+We will need it for our incident file.
+
+[2025-03-21 09:15] Tom Reeves (Product Manager, VeriConnect):
+Ms Marsh - VBB-0044 issued today. It contains the incident window
+(07:12-11:06 UTC on 2025-03-11), the impact, the confirmation you asked for
+and the remediation.
+
+Tenant-specific figures for GSTT:
+- Your outage window: 07:15 to 10:07 UTC (2h 52m)
+- Failed authentication attempts on your tenant: 1,104
+- Unauthorised access: none
+- Data lost, altered or exposed: none
+- Instruments affected: none
+- Results delayed to LIS: none
+
+Remediation: automatic IdP metadata refresh (deployed 14 March), alerting on
+SSO failure rate and metadata staleness (18 March), mandatory break-glass
+provisioning at onboarding (19 March), bulk refresh tooling (2 April), status
+page automation and a 30-minute first-communication target (April).
+
+Post-incident review VBI-0094 is available under NDA.
+
+[2025-03-21 14:30] Helena Marsh (Quality and Regulatory Lead):
+Received and filed. Please send VBI-0094 under our existing NDA.
+
+One outstanding item: we do not have break-glass accounts. Please help us set
+them up.
+
+[2025-04-02 11:00] Tom Reeves (Product Manager, VeriConnect):
+Break-glass accounts created for GSTT: two, named to Dr Kingsmill and to the
+lead BMS, TOTP enrolled, excluded from SSO enforcement, tested, credentials
+lodged. Six-monthly test scheduled.
+
+[2025-07-22 17:00] Marta Oliveira (Field Service Engineer):
+Follow-on visit (FSV-2025-0312). GSTT migrated identity provider tenants as
+part of an unrelated trust IT programme. Re-integrated SSO using the
+auto-refresh path. Tested with 12 accounts across three roles. No issues.
+
+Break-glass accounts re-tested during the visit - both worked. Site had done
+the six-monthly test in June independently, which is the first time I have
+seen a customer actually do it.
+
+Time on site 2.0 hours.
+
+--- Resolution ---
+Root cause: stale cached SAML IdP metadata (see VBI-0094).
+Actions: metadata refreshed 10:07 UTC; VBB-0044 and tenant-specific figures
+supplied for the customer's incident file; break-glass accounts created and
+tested; SSO re-integration verified at FSV-2025-0312 after a later IdP
+migration.

@@ -1,0 +1,177 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Induction Agenda - Week One
+=================================================================
+Document:      HR-GDE-004
+Version:       7
+Effective:     2026-02-01
+Owner:         Ollie Kettering, People Operations Coordinator
+Audience:      New starters and their managers
+Cohorts:       Monthly, first Monday. Off-cycle starters join the next cohort
+               for days 2 to 4 and do day 1 and day 5 with their own team.
+
+-----------------------------------------------------------------
+DAY 1 - MONDAY - SETTLING IN
+-----------------------------------------------------------------
+10:00   Welcome and coffee                        People team
+        No presentations. Just meeting the people you will see every day.
+
+10:30   Laptop, accounts, MFA setup               IT (Sanjay Bhatt)
+        Bring photo ID. Set up your authenticator before you leave the room;
+        chasing this later costs everyone a fortnight.
+
+11:30   Site tour and health and safety induction  Facilities
+        Cambridge and Basel only. Fire exits, first aiders, lab access rules,
+        what the alarms mean. Remote starters get a recorded version and a
+        home workstation self-assessment instead.
+
+12:30   Lunch with your team                      Your manager
+        On the company.
+
+14:00   Your manager: what the first month is     Your manager
+        Goals for month one. What good looks like at day 30. Who you should
+        meet. Which of the many things you have already been told you can
+        safely forget.
+
+15:00   Code of conduct and speak-up              People team
+        Short. The point of it is that you leave knowing you can raise a
+        concern and how.
+
+15:45   Meet your buddy                           Your buddy
+        Informal. They will suggest a weekly slot.
+
+16:15   Finish. Genuinely. Go home.
+
+-----------------------------------------------------------------
+DAY 2 - TUESDAY - WHAT WE MAKE
+-----------------------------------------------------------------
+09:30   Veridia: the nine-year version             Dr Alistair Vance, CEO
+        Founded 2016 in Cambridge. Basel site from 2019. Series D. About 320
+        people. What we set out to do and what we have actually done, which
+        are not the same story.
+
+10:30   The products, for everyone                 Marcus Chen, QC Applications
+        Non-technical and hands-on. You will see a VeriScan 400 run a sample.
+        - VeriScan 400 and 400 Pro: benchtop haematology analysers. A full
+          blood count and a five-part differential. The Pro adds reticulocyte
+          counting and body fluid mode.
+        - VeriPrep SP-1: automated sample preparation. Decaps, identifies,
+          aliquots, sorts.
+        - VeriLyse RGT-series: the reagent cartridges the analysers consume.
+        - VeriConnect: cloud platform for results, QC charting and fleet
+          management.
+        - VeriGuard: the security and compliance module on top of it.
+
+12:00   Lunch
+
+13:00   Who buys it and why                        Peter Doyle, Sales UK North
+        NHS hospital trusts, private pathology labs, European reference
+        laboratories, a few US academic centres. How a laboratory actually
+        buys a analyser, which takes eighteen months and involves a tender.
+
+14:00   From sample to result                      Marcus Chen
+        Follow one tube from a ward to a reported result. Where our products
+        sit in that chain and, importantly, where they do not.
+
+15:30   Q&A, no question too basic                 Marcus Chen, Peter Doyle
+
+-----------------------------------------------------------------
+DAY 3 - WEDNESDAY - QUALITY AND REGULATORY
+-----------------------------------------------------------------
+MANDATORY FOR EVERY EMPLOYEE. Finance, marketing, People team, everyone. If
+your manager tells you to skip it, forward them this line.
+
+09:30   Why we are regulated                       Sarah Lindgren, Regulatory
+        What an in-vitro diagnostic medical device is. What CE, UKCA and IVDR
+        mean. Why a haematology analyser is Class C and what that obliges us
+        to do.
+
+10:45   The quality management system               Simone Buehler, QA (Basel,
+                                                    joining remotely)
+        ISO 13485 in plain language. Why we write things down. What a
+        controlled document is and why you cannot just edit one.
+
+12:00   Lunch
+
+13:00   When something goes wrong                   James Okafor, VP Support
+        A worked example, using a real case from our own history: the RGT-L3
+        reagent recall of February 2025 (FSN-2025-003). A customer noticed
+        something, a support engineer took it seriously, and a field safety
+        notice followed seventeen days later.
+
+        The point of the session is not the chemistry. It is that the whole
+        thing started with one person believing a customer who said "this
+        does not look right", and that two earlier reports had been closed as
+        instrument faults before anyone joined the dots.
+
+14:30   Your personal obligations                   Sarah Lindgren
+        What to do if you ever believe a Veridia product is unsafe or is not
+        performing as it should. Who to tell. What we will do. What we will
+        not do, which is retaliate - see the speak-up policy.
+
+15:30   Complaint handling and vigilance in outline James Okafor
+
+-----------------------------------------------------------------
+DAY 4 - THURSDAY - SECURITY, DATA AND CUSTOMERS
+-----------------------------------------------------------------
+09:30   Information security                        Yusuf Demir, Cloud Ops
+        Acceptable use, phishing, device security, what to do if you lose a
+        laptop. Practical rather than theoretical.
+
+11:00   Data protection                             Ruth Amankwah, DPO
+        What personal data we hold and why. The difference between being a
+        controller and a processor, which matters because for customer patient
+        data we are the processor and the laboratory is the controller.
+        What patient data VeriConnect does and does not hold.
+
+12:00   Lunch
+
+13:00   Customer confidentiality                    Sunita Raval, General
+                                                    Counsel
+        Why you must not discuss a named customer outside the company, on
+        social media, or at a conference bar. Includes what to do when a
+        customer tells you something commercially sensitive.
+
+14:00   Working with the NHS                        Fiona Hargreaves, Sales
+        How trusts are structured, what procurement looks like, why a
+        purchase order number matters more than you think, and why an
+        accreditation assessment date is a hard deadline.
+
+15:00   Systems walkthrough                         Ollie Kettering
+        Expenses, holiday booking, the intranet, where policies live.
+
+-----------------------------------------------------------------
+DAY 5 - FRIDAY - YOUR TEAM
+-----------------------------------------------------------------
+Owned by your manager, not the People team. Typically:
+
+  - Team ways of working, tools, rituals
+  - Access to the systems you actually need
+  - Meeting the people you will work with most
+  - Your first piece of real work, sized to be finishable
+
+15:30   People team check-in                        Rachel Duffy or
+                                                    Lena Hofstetter
+        Fifteen minutes. How was the week? What was missing? What did we say
+        that made no sense? This is where most improvements to this agenda
+        have come from.
+
+-----------------------------------------------------------------
+NOTES FOR MANAGERS
+-----------------------------------------------------------------
+  - You must be present for days 1 and 5 or formally delegate to a named
+    deputy. Do not book leave across a new starter's first week.
+  - Set the month one goals before the starter's first day, not during it.
+  - Do not give a new starter production work in week one. It does not speed
+    anything up.
+  - Book their day 30 review now.
+
+-----------------------------------------------------------------
+CONTACT
+-----------------------------------------------------------------
+Ollie Kettering - ollie.kettering@veridiabio.com - +44 1223 496 194
+people@veridiabio.com
+
+=================================================================
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

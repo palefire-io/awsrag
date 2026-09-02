@@ -1,0 +1,147 @@
+Ticket ID: VBST-3925
+Status: Resolved
+Priority: P3-Medium
+Created: 2025-03-03 09:22 UTC
+Product: VeriScan 400 Pro
+Customer: Guy's and St Thomas' NHS Foundation Trust (ACC-1270)
+Reported by: Helena Marsh, Quality and Regulatory Lead, Pathology
+             helena.marsh@gstt.nhs.uk | 020 7188 7188 ext 54120
+Assigned to: Sarah Lindgren (Regulatory Affairs Manager)
+Serial: multiple (fleet query)
+Firmware: 4.2.1
+
+--- Thread ---
+
+[2025-03-03 09:22] Helena Marsh (Quality and Regulatory Lead):
+This is a regulatory query rather than a technical fault, so please route it
+appropriately.
+
+We have been informed by your support team that firmware 4.2.1 causes result
+timestamps transmitted to our LIS to be incorrect by up to tens of minutes,
+and that the defect has been present since 3 February.
+
+My question is why this is being handled as a technical bulletin rather than
+as a field safety notice, and whether it has been reported to the MHRA.
+
+A timestamp on a clinical record is part of the record. If it is wrong, the
+record is wrong. I would like to understand your reasoning, and I would like it
+in writing, because I will have to justify our position to our own governance
+committee and potentially to UKAS.
+
+[2025-03-03 14:50] Sarah Lindgren (Regulatory Affairs Manager):
+Ms Marsh, thank you for putting this directly. I would rather answer a
+challenge like this properly than have it go unasked.
+
+Our reasoning, and I will set it out fully so you can test it.
+
+The reportability criterion under the UK MDR and under IVDR Article 82 is
+whether the event has led, might have led, or might lead to death or serious
+deterioration in health. It is a harm criterion, not a correctness criterion.
+A defect can produce an incorrect record without meeting it.
+
+Our assessment (documented in health hazard evaluation QA-HHE-2025-004,
+6 March):
+
+1. Analyte values are unaffected. The measurement path has no dependency on
+   the timestamp assembly. We verified this by re-analysing 500 archived
+   results from an affected instrument against their transmitted values;
+   all identical.
+
+2. The error is always forward - a result appears more recent than it is,
+   never older. The failure mode is therefore not "a clinician believes a
+   stale result is current", which would be the concerning direction.
+
+3. Where the LIS supplies a collection time with the order, OBR-7 passes
+   through unaltered and is not affected. Only instrument-supplied times
+   drift.
+
+4. The magnitude is bounded by instrument uptime and resets on power cycle.
+
+5. For the harm pathway to be realised, a clinician would need to be relying
+   on the precise minute of a full blood count's collection or reporting time
+   to make a decision that would differ if the time were tens of minutes
+   earlier. We could not construct a credible haematology scenario in which
+   that is true. In a different discipline - a troponin series, say, where
+   timing between samples drives interpretation - our answer might well be
+   different.
+
+On that basis the assessment was "not reportable as an incident", and the
+corrective action is being communicated as a technical bulletin with a
+mandatory update recommendation. The rationale is recorded in our complaint
+register whether or not we report, which is itself a requirement.
+
+To answer your direct question: it has not been reported to the MHRA as an
+incident. The MHRA has not been notified of a field safety corrective action
+because we have not determined one to be necessary.
+
+I will send you this in a formal letter on headed paper, and I am content for
+you to share it with UKAS or your governance committee.
+
+Two further things:
+- I would encourage you to disagree with us if you do. If your assessment is
+  that this is reportable from your side as a user, you are entitled to report
+  it to the MHRA independently and we will not object or obstruct.
+- The bulletin (VBB-0041) will state the affected fields, the mechanism and
+  the bounds, so you have the technical basis to make your own judgement.
+
+[2025-03-04 11:30] Helena Marsh (Quality and Regulatory Lead):
+Thank you. That is a considerably better answer than I expected and the
+reasoning holds together.
+
+I note point 5 in particular - the acknowledgement that the answer would
+differ in another discipline is the sort of thing that tells me the assessment
+was actually done rather than assumed.
+
+Two follow-ups:
+1. Please do send the formal letter.
+2. Our instruments are on auto-update. I have discovered this in the course of
+   this query and I am not happy about it. Who authorised software changes to
+   a Class C device in our estate without a change control record on our side?
+
+[2025-03-04 15:20] Sarah Lindgren (Regulatory Affairs Manager):
+Letter will be with you this week.
+
+On your second point - that is a fair and uncomfortable question and it is not
+mine to answer alone. Tom Reeves, who owns VeriConnect, is copied.
+
+The short version: auto-update on the General channel is a tenant setting,
+enabled during your onboarding in 2022, and Veridia has treated it as
+authorisation. I can see why you would not regard a setting configured three
+years ago as informed consent to a specific change.
+
+[2025-03-05 09:40] Tom Reeves (Product Manager, VeriConnect):
+Ms Marsh - agreed, and this is the second site to raise it in a fortnight.
+
+Immediate: I can switch your tenant to manual approval today if you'd like
+(Fleet > Firmware > Update Policy, or I can do it). Your instruments then take
+nothing without an explicit decision from a named user, which is recorded.
+
+Longer term: I've raised that firmware deployment should notify tenant
+administrators regardless of policy, and that the auto-update setting should
+be re-confirmed periodically rather than set once at onboarding. Neither
+exists today. I'm not going to pretend there's a date.
+
+[2025-03-05 10:15] Helena Marsh (Quality and Regulatory Lead):
+Please switch us to manual approval.
+
+And please do pursue the notification change. A device manufacturer changing
+the software on a diagnostic instrument in an NHS trust with no notification to
+anyone in that trust is going to be somebody's serious finding eventually, and
+it would be better if it were not ours.
+
+[2025-03-21 16:00] Sarah Lindgren (Regulatory Affairs Manager):
+Formal letter sent 2025-03-07, receipt acknowledged. VBB-0041 issued
+2025-03-19. Tenant switched to manual firmware approval 2025-03-05.
+
+Closing. Ms Marsh, thank you for the challenge - the exchange has been added
+to our reportability decision file as a worked example, with your trust
+anonymised.
+
+--- Resolution ---
+Regulatory query, not a technical fault. Reportability determination for
+VBI-0091 upheld: not reportable as an incident under UK MDR / IVDR Art. 82 on
+a harm-criterion basis. Rationale supplied to customer in a formal letter.
+Secondary outcome: customer tenant switched to manual firmware approval;
+product feedback raised on deployment notification and periodic re-consent to
+auto-update.
+See also: VBI-0091 section 5.5, VBB-0041, VBST-3910.

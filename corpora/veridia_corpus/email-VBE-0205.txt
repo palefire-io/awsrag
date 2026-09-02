@@ -1,0 +1,77 @@
+From: Bernd Kaltenbrunner <b.kaltenbrunner@synlab-nordwest.de>
+To: Camille Roux <camille.roux@veridiabio.com>
+CC: Dr Elena Marchetti <elena.marchetti@veridiabio.com>
+Date: Mon, 9 Feb 2026 09:41:28 +0100
+Subject: Anfrage / RFQ - expansion at Hamburg site, 6 x VeriScan 400 Pro
+X-Mailer: Microsoft Outlook 16.0
+
+Dear Camille,
+
+Following our conversation at Medlab, I would like a formal quotation for the
+expansion of our Hamburg reference laboratory.
+
+Requirement:
+  6 x VeriScan 400 Pro with 50-position autoloader
+  2 x VeriPrep SP-1 (r2)
+  VeriConnect Enterprise, existing tenant, additional instrument licences
+  VeriGuard - we do not have this today and would like it costed
+  Installation, IQ/OQ and training for 14 staff
+  5-year Platinum service contract
+
+Volumes for consumable projection:
+  CBC + 5-part differential      approximately 340,000 per annum
+  Reticulocyte                   approximately 22,000 per annum
+  Body fluid                     approximately 3,500 per annum
+
+Several specific questions, some of which are commercial and some technical.
+
+1. Throughput. Your datasheet states 80 samples/hr for CBC + DIFF and 62 for
+   CBC + DIFF + RET. Our workload is approximately 6 per cent reticulocyte. Can
+   your applications team model the sustained mixed throughput for us rather
+   than leaving us to interpolate? We are sizing the instrument count from it
+   and if we are wrong we are wrong by an instrument.
+
+2. Advisory flags. VBB-0061 describes the extended flagging in firmware 4.3.0
+   as research use only and notes a throughput penalty. Two questions: is there
+   a timeline for these flags being brought into the validated set, and does
+   the throughput penalty apply per sample or only to samples where a flag
+   fires?
+
+3. IVDR. What is the current status of the Class C assessment with Notified
+   Body 0086? I ask each supplier this at each quotation and I record the
+   answers. Your answer in September 2025 was "submitted January 2025,
+   assessment in progress". If that is still the answer in February 2026 I
+   would like to understand what the holdup is, and I would rather hear it
+   from you than infer it.
+
+4. Data residency. Our group policy requires German or EU hosting. eu-central-1
+   Frankfurt is listed as available on Enterprise with VeriGuard. Please
+   confirm this includes backups and the audit trail, and confirm the process
+   and downtime for migrating our existing eu-west-1 tenant.
+
+5. SP-1r2. We have three r1 units at Basel that have given us reliable service
+   because our tube stock happens to be within the r1 band. For the new Hamburg
+   units, is there any reason to prefer r1 if we could source it more cheaply,
+   or is r2 now the only option? I ask because our procurement will ask.
+
+6. Trade-in. We have two VeriScan 200 units at Hamburg approaching end of
+   support. What allowance is available and until when?
+
+Finally, a commercial point I will make directly. Synlab Nordwest has been a
+Veridia customer since 2019 and we have 12 instruments. The RGT-L3 recall in
+February 2025 affected us at two sites and the handling was, on the whole,
+good. The firmware timestamp problem in the same quarter affected us less
+because our instruments are power cycled nightly, but we noticed.
+
+Two significant product problems in one quarter is the kind of thing a
+procurement committee remembers when a competitor is in the room. I am telling
+you this because I would rather Veridia won this expansion on its merits and
+knew what it was up against, than lost it and wondered why.
+
+Mit freundlichen Gruessen,
+
+Bernd Kaltenbrunner
+Laborleiter
+Synlab Nordwest GmbH
+Ausschlaeger Billdeich 66, 20539 Hamburg
+b.kaltenbrunner@synlab-nordwest.de | +49 40 5555 0182

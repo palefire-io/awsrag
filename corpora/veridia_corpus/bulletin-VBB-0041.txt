@@ -1,0 +1,111 @@
+=====================================================
+VERIDIA BIOSYSTEMS - FIRMWARE BULLETIN
+=====================================================
+Reference: VBB-0041
+Date Issued: 2025-03-19
+Type: Mandatory Firmware Update
+Affected Product: VeriScan 400 Pro (primary), VeriScan 400 (precautionary)
+Affected Firmware: 4.2.1 and 4.2.2
+Remedy Firmware: 4.2.3
+Related documents: VBI-0091 (investigation report), log-firmware-releases.csv
+
+SUBJECT: HL7 result timestamp drift under firmware 4.2.1 - update to 4.2.3
+
+-----------------------------------------------------
+SUMMARY
+-----------------------------------------------------
+Firmware 4.2.1, released on 2025-02-03, contains a defect that causes the
+timestamps written into outbound HL7 ORU^R01 messages to drift forward relative
+to real time. The drift accumulates while the instrument remains powered and is
+reset by a power cycle. Measured drift reached 47 minutes after 14 days of
+continuous uptime on the reference instrument.
+
+Firmware 4.2.2 (2025-02-27) was an incomplete correction and was withdrawn on
+2025-03-03. Any instrument running 4.2.2 must also be updated.
+
+Firmware 4.2.3 corrects the defect in full and is available now.
+
+-----------------------------------------------------
+WHICH FIELDS ARE AFFECTED
+-----------------------------------------------------
+  OBR-7   Observation Date/Time            AFFECTED (primary symptom)
+  OBX-14  Date/Time of the Observation     AFFECTED
+  OBR-22  Results Rpt/Status Change D/T    AFFECTED
+  MSH-7   Date/Time of Message             AFFECTED (smaller magnitude)
+
+The on-screen result timestamp, the printed report timestamp and the instrument
+audit log are NOT affected. They are generated from a different clock read.
+This is why the discrepancy is often first noticed as a mismatch between the
+instrument display and the LIS or VeriConnect record.
+
+Numeric analyte values are NOT affected. This is a timestamp defect only. No
+result value has been altered.
+
+-----------------------------------------------------
+HOW THE DEFECT PRESENTS
+-----------------------------------------------------
+  - VeriConnect QC charts show points plotted ahead of when the QC was
+    actually run, and Levey-Jennings x-axis ordering may interleave
+    incorrectly where instruments have different uptimes.
+  - LIS turnaround time reports show implausible or negative intervals between
+    collection and result.
+  - Some LIS middleware rejects messages where OBR-7 is in the future relative
+    to the receiving system's clock. Sites have reported these as E-503
+    (HL7 ACK not received).
+  - Delta checks against previous results may behave unexpectedly where the LIS
+    orders results by OBR-7.
+
+VeriScan 400 (non-Pro) instruments running 4.2.1 exhibit the same code path but
+a much smaller drift (typically under 90 seconds over 14 days) because the
+result assembly cycle is shorter. The update is nonetheless recommended for all
+instruments on 4.2.1 or 4.2.2.
+
+-----------------------------------------------------
+ACTION REQUIRED
+-----------------------------------------------------
+1. Identify affected instruments. In VeriConnect: Fleet > Instruments, filter
+   Firmware = 4.2.1 or 4.2.2. On a standalone instrument: Settings > About.
+
+2. Update to firmware 4.2.3.
+   VeriConnect Professional/Enterprise: Fleet > Firmware > Deploy, select
+   4.2.3, choose instruments, schedule outside testing hours. Requires the
+   firmware.deploy permission (Enterprise tier).
+   Standalone: download 4.2.3 from the customer portal to a FAT32 USB stick,
+   Service > Firmware > Update from USB. Do not power cycle during the update
+   or E-512 will be raised.
+
+3. As an interim measure before the update can be scheduled, power cycle the
+   affected instrument at the start of each working day. This resets the
+   accumulated drift to zero and holds the error under approximately 4 minutes
+   for a normal working day.
+
+4. Review historical data if turnaround time or QC timing is used for
+   accreditation evidence. Veridia can supply a per-instrument drift
+   reconstruction on request; contact support with the instrument serial number
+   and the date range. Instruments enrolled in VeriConnect since 4.2.3 report
+   drift telemetry automatically.
+
+5. No action is required in respect of previously reported patient results.
+   Result values are unaffected. Where a laboratory judges that a corrected
+   timestamp is required for a specific record, results may be re-transmitted
+   with result status C from the instrument's result archive.
+
+-----------------------------------------------------
+ROOT CAUSE (SUMMARY)
+-----------------------------------------------------
+Full detail is in VBI-0091. In brief: the 4.2.1 refactor of the HL7 timestamp
+assembly routine replaced a direct read of the real-time clock with an
+accumulator seeded at boot and advanced by the result-cycle scheduler tick. The
+scheduler tick is nominally 100 ms but is extended by optical integration on
+the Pro's reticulocyte and extended-flagging paths, so the accumulator advanced
+faster than wall-clock time. The defect was not detected in verification
+because the automated HL7 conformance suite runs against a freshly booted
+instrument and completes in under 40 minutes.
+
+-----------------------------------------------------
+CONTACT
+-----------------------------------------------------
+Gavin Tuck, Firmware Lead - gavin.tuck@veridiabio.com
+Tom Reeves, Product Manager VeriConnect - tom.reeves@veridiabio.com
+Support: support@veridiabio.com | +44 1223 496 100
+=====================================================

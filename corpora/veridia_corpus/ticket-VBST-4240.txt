@@ -1,0 +1,107 @@
+Ticket ID: VBST-4240
+Status: Resolved
+Priority: P2-High
+Created: 2025-10-08 13:15 UTC
+Product: VeriGuard / VeriConnect
+Customer: Universitaetsspital Basel - Haematologie (ACC-1190)
+Reported by: Dr Stefan Ruettimann, Leitender Arzt
+Assigned to: Tom Reeves (Product Manager, VeriConnect)
+Tier: Enterprise + VeriGuard
+
+--- Thread ---
+
+[2025-10-08 13:15] Dr Stefan Ruettimann (Leitender Arzt):
+During our internal access review we found that eleven users hold the
+lab_manager role who should hold biomedical_scientist. They can therefore edit
+our Westgard rule configuration.
+
+Nobody has done so - I have checked the audit trail. But it should not have
+been possible.
+
+I would like to understand how this happened, because we did not do it
+manually.
+
+[2025-10-08 16:40] Tom Reeves (Product Manager, VeriConnect):
+Investigating. Your tenant uses SCIM provisioning with group-to-role mapping
+from your identity provider, so my first suspicion is the mapping rather than
+anything in VeriConnect.
+
+Can you tell me the IdP group membership of one of the eleven?
+
+[2025-10-09 08:30] Dr Stefan Ruettimann (Leitender Arzt):
+Example user is in groups: HAEM-LAB-STAFF, HAEM-SENIOR, USB-ALL-STAFF.
+
+[2025-10-09 11:15] Tom Reeves (Product Manager, VeriConnect):
+Found it, and it is a configuration problem rather than a defect, though the
+configuration was easy to get wrong.
+
+Your role mapping has:
+  HAEM-LAB-STAFF   -> lab_technician
+  HAEM-SENIOR      -> lab_manager
+  USB-ALL-STAFF    -> (no mapping)
+
+When a user matches more than one mapping, VeriConnect grants the union of the
+mapped roles and effectively the highest privilege wins. Your eleven users are
+in HAEM-SENIOR, which was created by your IT team in June for a mailing list
+purpose and happens to contain your senior BMS staff - who are senior, but are
+not laboratory managers.
+
+So the mapping is doing what it was told. What it was told does not match what
+you meant.
+
+[2025-10-09 13:20] Dr Stefan Ruettimann (Leitender Arzt):
+That is our error then, at least in part. Though I would say that "highest
+privilege wins" on multiple matches is a surprising default and is not stated
+anywhere I looked.
+
+How do we fix it, and how do we stop it happening again?
+
+[2025-10-09 15:00] Tom Reeves (Product Manager, VeriConnect):
+Agreed on the default - it is documented in the API reference and nowhere a
+human would look. I'm raising that.
+
+To fix:
+1. Change the HAEM-SENIOR mapping to biomedical_scientist. Or better, ask your
+   IT team for a purpose-built group (HAEM-LAB-MANAGERS) and map that to
+   lab_manager, leaving HAEM-SENIOR unmapped. Mapping a group that exists for
+   another purpose will bite you again.
+2. Re-run SCIM sync. The eleven users will drop to the correct role at their
+   next sync, within an hour.
+3. Run an access review afterwards to confirm.
+
+To prevent recurrence:
+- Enable the VeriGuard periodic access review with attestation, six-monthly.
+  You found this manually, which is good, but it should not depend on someone
+  deciding to look.
+- Consider separation-of-duties enforcement, which is on by default in
+  VeriGuard but can be overridden. Let me check whether yours is overridden.
+
+[2025-10-09 16:10] Tom Reeves (Product Manager, VeriConnect):
+Checked - separation of duties is NOT overridden on your tenant, which is why
+none of the eleven could both authorise results and configure QC charts
+simultaneously. That control did its job even though the role assignment was
+wrong.
+
+[2025-10-13 09:45] Dr Stefan Ruettimann (Leitender Arzt):
+IT created HAEM-LAB-MANAGERS with four members. Mapping updated. SCIM synced.
+All eleven now show biomedical_scientist. Access review scheduled six-monthly
+with attestation enabled.
+
+I am satisfied. Please do pursue the documentation point - the union-of-roles
+behaviour should be in the administrator documentation, not the API reference.
+
+[2025-10-14 10:00] Tom Reeves (Product Manager, VeriConnect):
+Raised. SOP-VBS-004 will carry a worked example of group mapping in its next
+revision, including the multiple-match behaviour.
+
+Closing. Thank you for finding this yourselves - the access review that caught
+it is exactly the control we recommend and most sites don't run.
+
+--- Resolution ---
+Root cause: SCIM group-to-role mapping pointed at an IdP group created for an
+unrelated purpose; multiple-match behaviour grants the union of mapped roles,
+which is documented only in the API reference.
+Actions: purpose-built IdP group created and mapped; SCIM re-synced; periodic
+access review with attestation enabled.
+Product feedback: document multiple-match role resolution in administrator
+documentation and SOP-VBS-004.

@@ -1,0 +1,59 @@
+Ticket ID: VBST-4128
+Status: Resolved
+Priority: P4-Low
+Created: 2025-07-08 15:40 UTC
+Product: VeriLyse RGT-L3
+Customer: Belfast Health and Social Care Trust (ACC-1134)
+Reported by: Sean McAllister, Senior BMS
+Assigned to: Owen Trask (Support Engineer L1)
+
+--- Thread ---
+
+[2025-07-08 15:40] Sean McAllister (Senior BMS):
+Quick question rather than a fault. We've got an L3 cartridge that's been on
+board 88 days and the instrument is warning us. If we take it off and put it
+back on next week does the 90 days restart?
+
+Also we have two unopened cartridges that expire in September, can we get an
+extension if they're stored properly?
+
+[2025-07-08 16:20] Owen Trask (Support Engineer L1):
+Hi Sean, both good questions and both answers are no, but here's why.
+
+1. The 90-day on-board clock starts at first pierce and does not stop. Taking
+   the cartridge off doesn't pause it - the reagent has been exposed to air
+   and to the septum puncture and continues to degrade whether it's on the
+   instrument or on a shelf. The instrument tracks it from the pierce
+   timestamp on the RFID tag, so it will still show 88 days when you put it
+   back and it will hit E-304 on day 90 regardless.
+
+2. Unopened shelf life extensions aren't something we grant. The 18-month
+   figure comes from real-time stability data and there's no mechanism for
+   case-by-case extension.
+
+Practical advice: 88 days is close enough that I'd change it now rather than
+run into an E-304 mid-batch. And for the September stock, if you can't use it
+by then, tell your account manager - sometimes we can swap short-dated stock
+for longer-dated at another site that will get through it.
+
+[2025-07-08 16:35] Sean McAllister (Senior BMS):
+Grand, that's clear. Didn't know about the swap option, I'll ring Callum.
+
+One more - the instrument shows a countdown now which it didn't used to. Is
+that new?
+
+[2025-07-09 08:50] Owen Trask (Support Engineer L1):
+It came in with firmware 4.3.0 - reagent on-board countdown, and the low
+shelf-life warning W-035 moved from 3 days to 7. You must have been updated
+recently.
+
+Full list of what's in 4.3.0 is in bulletin VBB-0061 if you want it.
+
+[2025-07-09 09:10] Sean McAllister (Senior BMS):
+Cheers, that explains it. Closing.
+
+--- Resolution ---
+Customer enquiry, no fault. Clarified that the 90-day on-board clock runs from
+first pierce and does not pause, and that unopened shelf life is not
+extendable. Short-dated stock swap route explained. Reagent countdown feature
+attributed to firmware 4.3.0 (VBB-0061).

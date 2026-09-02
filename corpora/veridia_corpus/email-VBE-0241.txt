@@ -1,0 +1,72 @@
+From: Ian Bracewell <ian.bracewell@coch.nhs.uk>
+To: Peter Doyle <peter.doyle@veridiabio.com>
+CC: Deborah Cannock <deborah.cannock@coch.nhs.uk>
+Date: Mon, 2 Jun 2025 14:05:18 +0100
+Subject: Contract renewal August 2025 - preliminary discussion
+X-Mailer: Microsoft Outlook 16.0
+
+Peter,
+
+Our contract comes up on 31 August. Deborah Cannock in procurement is copied
+and will lead the commercial side, but I wanted to open the technical
+conversation first.
+
+Where we are:
+- 2 x VeriScan 400 (VS4-0402 and VS4-0409)
+- VeriConnect Essentials
+- Silver support
+
+What has changed since we last renewed:
+- Our volume is up about 18 per cent, mostly GP work following a service
+  reconfiguration.
+- We had the reagent recall in February (FSN-2025-003) which cost us a
+  fortnight of disruption and a retrospective review of 1,847 samples.
+- We have started getting asked about reticulocyte counts by our renal team,
+  which we currently refer out.
+- Our UKAS assessment is in November and I am going through everything with
+  fresh eyes.
+
+Questions for you:
+
+1. RETICULOCYTES. We referred this out for years and it was fine. The renal
+   team's volume is growing and referral turnaround is now the bottleneck. What
+   would a 400 Pro cost as a third instrument, and what would it cost to
+   replace one of the 400s with a Pro? I would like both numbers because I do
+   not know which case I can make.
+
+   Rough volume: 25 to 40 reticulocytes a week currently referred, likely 60 if
+   we brought it in house and the renal team stopped rationing requests.
+
+2. VERICONNECT TIER. Essentials is starting to pinch. The specific things I
+   want are longer QC chart history, scheduled export, and the reagent lot
+   exposure report - the last one directly because of February. What does
+   Professional cost for two instruments, and what would it cost for three?
+
+3. SUPPORT TIER. Silver gives us next-business-day. In February we had an
+   engineer within a week, which was fine, but we were lucky. What does Gold
+   cost and what would it actually get us that Silver does not?
+
+4. THE FEBRUARY QUESTION. I am going to ask this and you can decide how to
+   answer it. We spent roughly 60 scientist hours on the recall retrospective
+   review, plus consultant time. Is there anything Veridia does for customers
+   in that position at renewal? I am not making it a condition and I will renew
+   either way. But my department manager asked me whether I had asked, and I
+   would rather be able to say I did.
+
+I would like to get the technical shape agreed by mid-July so Deborah has time
+to do the commercial part properly.
+
+Regards,
+
+Ian Bracewell
+Principal Biomedical Scientist
+Haematology
+Countess of Chester Hospital NHS Foundation Trust
+Liverpool Road, Chester CH2 1UL
+ian.bracewell@coch.nhs.uk | 01244 365 8821
+
+--
+This email is confidential and intended solely for the use of the individual to
+whom it is addressed. If you are not the intended recipient, be advised that
+you have received this email in error and that any use, dissemination,
+forwarding, printing or copying is strictly prohibited.

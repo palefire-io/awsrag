@@ -1,0 +1,215 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** RESTRICTED - INTERNAL WORKING ANALYSIS - NOT FOR PUBLICATION ***
+Gender Pay Gap 2025 - Internal Analysis and Draft Findings
+=================================================================
+Document:      HR-MGR-021
+Status:        DRAFT 3 - working document
+Snapshot date: 5 April 2025
+Prepared by:   Denise Kaur, Reward and Benefits Manager
+Reviewed by:   Naomi Okonjo-Bright, Chief People Officer
+Circulation:   CPO, CFO, CEO, People team. NOT the published report.
+
+THE PUBLISHED REPORT IS A SEPARATE DOCUMENT. This working analysis contains
+individual-level findings, function-level breakdowns below the publication
+threshold, and candid assessment. It must not be circulated beyond the
+distribution list and must not be quoted externally.
+
+-----------------------------------------------------------------
+1. HEADLINE FIGURES (UK, 214 relevant employees)
+-----------------------------------------------------------------
+  Mean hourly gap        11.4%   (2024: 12.9%, 2023: 14.1%)
+  Median hourly gap       9.8%   (2024: 11.2%, 2023: 12.8%)
+  Mean bonus gap         18.2%   (2024: 21.4%)
+  Median bonus gap       12.1%   (2024: 15.0%)
+  Received a bonus       Women 94.2%, Men 95.8%
+
+  Quartile distribution (women as % of quartile)
+    Upper quartile              31%
+    Upper middle quartile       42%
+    Lower middle quartile       53%
+    Lower quartile              61%
+
+Direction of travel is right. Rate of change is slow: at 1.5 percentage points
+a year the mean gap closes around 2033.
+
+-----------------------------------------------------------------
+2. DECOMPOSITION - WHERE THE GAP ACTUALLY COMES FROM
+-----------------------------------------------------------------
+This is the section that matters and it is why this document exists.
+
+  Component                                      Contribution to mean gap
+  --------------------------------------------   ------------------------
+  Level distribution (more men at L4+)                    6.9 pp
+  Function distribution (more men in premium
+    families: software, firmware, cloud, field)           3.2 pp
+  Within-level, within-function residual                  1.1 pp
+  Part-time and hours effects                             0.2 pp
+                                                          -------
+  Total                                                  11.4 pp
+
+2.1  Roughly 89% of the gap is structural - who is at what level and in what
+     function. About 11% is a residual we cannot explain by level, function,
+     tenure in level or performance outcome.
+
+2.2  THE 1.1% RESIDUAL IS THE PART WE CAN ACT ON DIRECTLY AND IT IS NOT ZERO.
+     Expressed differently: across 214 UK employees, women are paid on average
+     GBP 640 a year less than men doing the same job at the same level with
+     comparable performance and tenure.
+
+-----------------------------------------------------------------
+3. WHERE THE RESIDUAL CONCENTRATES
+-----------------------------------------------------------------
+Function-level residuals. Populations under 10 are shown for internal purposes
+only and MUST NOT be published - individuals would be identifiable.
+
+  Function                 n(F)  n(M)  Residual gap  Assessment
+  -----------------------  ----  ----  ------------  ------------------------
+  Regulatory Affairs          6     4      -3.2%     ACTION REQUIRED
+  Support Engineering        11    18      -2.4%     ACTION REQUIRED
+  Quality                     9     7      -1.4%     Monitor
+  People, Finance, Legal     12     5      -0.9%     Within noise
+  Commercial                  9    12      -0.6%     Within noise
+  Applications                5     6      -0.4%     Within noise
+  Field Service               4    32      +0.8%     Within noise (small n)
+  Software and Firmware       7    22      +0.3%     Within noise
+  Manufacturing (CH)         14    11      -0.7%     Within noise
+
+3.1  REGULATORY AFFAIRS, -3.2%. Six women, four men, all L2 to L3. The gap
+     traces to starting salaries: three of the four men were hired between
+     2021 and 2023 when we were still asking candidates their current salary,
+     and negotiated up from their stated figure. Two of the women were
+     internal moves from Quality and took the band minimum. We stopped asking
+     about current salary in 2023 and started publishing ranges in adverts in
+     2024, which addresses the mechanism going forward but does nothing for
+     the people already affected.
+
+3.2  SUPPORT ENGINEERING, -2.4%. Eleven women, eighteen men. The gap is
+     concentrated in L2, where four women sit between the 0.88 and 0.94
+     compa-ratio and no man does. Reviewing individual histories, the pattern
+     is that the men in the equivalent band position received off-cycle
+     adjustments following competing offers and the women did not. Three of
+     the four have never asked for a pay review.
+
+3.3  The field service +0.8% is not meaningful at n=4 and should not be
+     presented as a positive finding.
+
+-----------------------------------------------------------------
+4. INDIVIDUAL CORRECTIONS PROPOSED
+-----------------------------------------------------------------
+Nine individuals identified as being materially below where the model predicts
+for their level, function, tenure and performance, with no explanation
+available. Total cost GBP 31,400 annualised.
+
+  Employee  Name                 Function    Level  Current   Proposed   Uplift
+  --------  -------------------  ----------  -----  --------  ---------  ------
+  VB-0088   Sarah Lindgren       Regulatory  L3     54,000    55,728     3.2%
+  VB-0274   Helena Nkemelu       Regulatory  L2     37,000    38,184     3.2%
+  VB-0156   Aisha Rahman         Support     L3     51,000    52,224     2.4%
+  VB-0211   Hannah Bright        Support     L2     38,500    39,424     2.4%
+  VB-0251   Farida Bello         Support     L2     34,500    35,328     2.4%
+  VB-0182   Rachel Duffy         People      L3     52,000    52,988     1.9%
+  VB-0301   [withheld - CH]      Quality     L2     -         -          1.4%
+  VB-0308   [withheld - CH]      Mfg         L1     -         -          1.4%
+  VB-0288   Maya Rothbury        Engineering L2     47,000    47,564     1.2%
+
+4.1  Corrections are funded centrally and applied IN ADDITION to the annual
+     review allocation. They are not drawn from function budgets.
+
+4.2  RECOMMENDATION, and this is the point on which Denise Kaur and Naomi
+     Okonjo-Bright currently disagree: Denise's view is that affected
+     employees should be told explicitly that a pay equity analysis identified
+     a discrepancy and it has been corrected. Naomi's view is that the
+     individual framing invites a question about historical loss that we
+     cannot answer without inviting an equal pay claim, and that the neutral
+     framing ("analysis identified your salary as below where it should be")
+     is both true and sufficient.
+
+     The neutral framing has been adopted for 2026. Denise has asked that her
+     dissent be recorded. It is recorded here.
+
+4.3  LEGAL NOTE from Sunita Raval, 2025-11-18: the corrections are the right
+     thing to do and reduce risk overall. There is a residual exposure in
+     that a corrected employee could argue historical underpayment for a
+     period of up to six years. The exposure is materially lower with the
+     correction made than without it. Sunita's advice is to proceed and to
+     avoid any written characterisation of the correction as remedying
+     discrimination, because that is not what the data shows at individual
+     level.
+
+-----------------------------------------------------------------
+5. STRUCTURAL ACTIONS - THE 89%
+-----------------------------------------------------------------
+The residual is fixable with money. The structural gap is not, and will not
+move until the distribution changes.
+
+  5.1  L4+ female representation is 34%. Every promotion to L4 for three
+       cycles has been analysed; the pass rate for women and men at L4 is
+       statistically indistinguishable (68% vs 71%, n=41). THE PROBLEM IS
+       NOMINATION RATE, NOT SUCCESS RATE. Women were nominated at 0.71 times
+       the rate of men relative to eligible population.
+
+  5.2  That points at managers, not at panels. Actions: nomination rates by
+       manager are now reported to Directors; self-nomination has been made
+       explicit in the framework and the FAQ; the People team reviews the
+       eligible-but-not-nominated list before each window.
+
+  5.3  Premium function distribution. Software, firmware, cloud and field
+       service carry a market premium of 8-10% and are 76% male. This is a
+       hiring pipeline problem. Field service at 11% female has not moved in
+       three years despite advert changes.
+
+  5.4  The L4 individual contributor track, introduced in framework v5, should
+       help. The prior structure required people to manage to progress, and
+       our data shows women at L3 declining management moves at a higher rate
+       than men - most commonly citing the incompatibility of the on-call and
+       travel burden with caring responsibilities.
+
+  5.5  Secondary carer leave increased to 8 weeks for 2026. The evidence that
+       secondary carer leave shifts the long-run distribution of care is
+       strong, and the distribution of care is the mechanism behind most of
+       the progression gap. This is the highest-leverage intervention in the
+       list and it will take a decade to show up in this analysis.
+
+-----------------------------------------------------------------
+6. WHAT WE ARE NOT GOING TO PUBLISH
+-----------------------------------------------------------------
+  - Function-level breakdowns where n < 10. Individuals identifiable.
+  - The individual correction list.
+  - The nomination rate ratio of 0.71. Denise recommended publishing it as the
+    single most informative number in the analysis. Naomi's decision is to
+    hold it for one further cycle to establish whether it is a trend or a
+    year, and to publish it in the 2026 report with two years of data. Denise
+    has accepted this.
+  - The disagreement recorded at 4.2.
+
+The published report will contain the statutory figures, the quartile
+distribution, the decomposition at a high level, and the actions. It will not
+be a promotional document. Draft with the CPO.
+
+-----------------------------------------------------------------
+7. ETHNICITY AND DISABILITY PAY GAPS
+-----------------------------------------------------------------
+Not statutorily required and not currently published.
+
+Ethnicity: disclosure rate 81%. Mean gap between employees reporting an ethnic
+minority background and white employees is 4.9%. The population at L4+ is
+small enough (n=7) that a function-level decomposition is not statistically
+meaningful. Recommendation: publish the headline from 2027 once two further
+years of data exist.
+
+Disability: disclosure rate 68%, which is too low to analyse responsibly. The
+low disclosure rate is itself the finding and is discussed in
+User__policy-equity-diversity-inclusion-v3.txt section 8.
+
+-----------------------------------------------------------------
+DISTRIBUTION AND HANDLING
+-----------------------------------------------------------------
+Denise Kaur, Naomi Okonjo-Bright, Alistair Vance, Gary Pemberton, Sunita
+Raval (section 4.3 only). Not to be forwarded. Not to be stored outside the
+People team drive.
+
+=================================================================
+RESTRICTED - INTERNAL WORKING ANALYSIS
+Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

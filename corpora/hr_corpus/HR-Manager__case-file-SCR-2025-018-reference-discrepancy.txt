@@ -1,0 +1,215 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+*** RESTRICTED - PEOPLE TEAM AND CPO ONLY ***
+Pre-Employment Screening Case File
+=================================================================
+Case reference:   SCR-2025-018
+Opened:           2025-06-24
+Closed:           2025-07-21
+Case owner:       Tobias Frankl, Talent Acquisition Lead
+Escalated to:     Naomi Okonjo-Bright, Chief People Officer
+Legal input:      Sunita Raval, General Counsel
+Candidate:        Adrian Mowbray-Cass
+Date of birth:    04/04/1985
+Role offered:     Senior Regulatory Affairs Manager, L4
+Function:         Regulatory Affairs
+Hiring manager:   Sarah Lindgren, Regulatory Affairs Manager
+Offer made:       2025-05-30, GBP 82,000 plus L4 benefits
+Screening level:  Level 2 (Enhanced - regulated role)
+Provider:         Vetted Assurance Ltd
+Outcome:          OFFER WITHDRAWN 2025-07-21
+Discrepancy
+grade:            C
+
+-----------------------------------------------------------------
+1. SUMMARY
+-----------------------------------------------------------------
+Three material discrepancies were identified in the candidate's employment
+history, professional registration and qualifications. Each was put to the
+candidate with the evidence and he was given a full opportunity to respond.
+His responses did not resolve the discrepancies and, in one instance,
+introduced a further inconsistency.
+
+The offer was withdrawn with Chief People Officer approval on 2025-07-21. The
+candidate was in employment throughout and had not resigned.
+
+-----------------------------------------------------------------
+2. WHAT THE CANDIDATE CLAIMED
+-----------------------------------------------------------------
+From his CV and application, and repeated at interview on 2025-05-14:
+
+  2.1  Senior Regulatory Affairs Manager, Calderfield Diagnostics Ltd,
+       March 2021 to present.
+  2.2  Regulatory Affairs Manager, Northmoor Medical Devices Ltd,
+       June 2016 to February 2021.
+  2.3  MSc Regulatory Affairs, University of Hertfordshire, 2015.
+  2.4  "TOPRA registered" - stated on the CV under professional membership.
+  2.5  At interview, described leading the IVDR transition submission for a
+       Class C device at Calderfield, which was the single most relevant piece
+       of experience for our role and was material to the decision to offer.
+
+-----------------------------------------------------------------
+3. WHAT SCREENING FOUND
+-----------------------------------------------------------------
+3.1  CALDERFIELD DIAGNOSTICS LTD. Confirmed employment, but as Regulatory
+     Affairs Officer from 2021-03-08 to 2023-11-30, and as Senior Regulatory
+     Affairs Officer from 2023-12-01. NOT Senior Regulatory Affairs Manager,
+     and the employment was continuing, so "to present" was accurate.
+
+     Calderfield HR confirmed in writing on 2025-06-19 that they hold no
+     record of the candidate having held a manager-grade role.
+
+3.2  NORTHMOOR MEDICAL DEVICES LTD. The company was dissolved in 2019.
+     Companies House record: company number 09441207, incorporated 2015-01-14,
+     dissolved via compulsory strike-off 2019-08-06. The claimed employment
+     ran to February 2021, which is 18 months after the company ceased to
+     exist.
+
+3.3  MSc REGULATORY AFFAIRS, UNIVERSITY OF HERTFORDSHIRE, 2015. The university
+     confirmed on 2025-06-27 that it holds no record of the candidate
+     completing the programme. It confirmed he had ENROLLED on the MSc
+     Regulatory Affairs programme in September 2013 and had exited with a
+     Postgraduate Certificate in 2014. A PGCert is a genuine and respectable
+     qualification. It is not an MSc.
+
+3.4  TOPRA REGISTRATION. TOPRA (The Organisation for Professionals in
+     Regulatory Affairs) confirmed no current or lapsed membership in that
+     name.
+
+3.5  REFERENCES. Two provided. The Calderfield reference was returned and was
+     satisfactory in content but described his role as Senior Regulatory
+     Affairs Officer, consistent with 3.1. The second referee, given as a
+     former line manager at Northmoor, could not be contacted - the email
+     address bounced and the mobile number was unobtainable. Vetted Assurance
+     could find no professional footprint for the named individual.
+
+-----------------------------------------------------------------
+4. PUTTING IT TO THE CANDIDATE
+-----------------------------------------------------------------
+4.1  Tobias Frankl wrote to the candidate on 2025-07-01 setting out each
+     finding with the evidence, and offering a call. This is the standard
+     process and is not optional.
+
+4.2  Call held 2025-07-04. Present: Adrian Mowbray-Cass, Tobias Frankl,
+     Rachel Duffy (note taker). The candidate was told at the outset that the
+     purpose was to hear his account and that no decision had been taken.
+
+4.3  His responses:
+
+     On the job title: he said that "Senior Regulatory Affairs Officer and
+     Senior Regulatory Affairs Manager are the same job in most companies" and
+     that he had used the title he thought we would recognise. He accepted the
+     formal title was Officer.
+
+     On Northmoor: he said the dissolution date was a Companies House error and
+     that the business "continued trading informally" after strike-off, with
+     him continuing to be paid. Asked whether he could provide payslips, a P60
+     or an employment contract for the period after August 2019, he said he
+     would look. Nothing was subsequently provided.
+
+     On the MSc: he said he had "completed the taught element" and had always
+     intended to submit the dissertation. Asked directly whether he held an
+     MSc, he said no. Asked why the CV said MSc, he said it was "shorthand".
+
+     On TOPRA: he said the membership had lapsed "years ago" and that he had
+     not updated the CV. TOPRA confirmed no record of membership ever having
+     existed. This was put to him. He said TOPRA's records must be wrong.
+
+     On the IVDR submission: he said he had "worked on" the submission as part
+     of a team. Asked whether he had led it, he said he had led "elements".
+     The Calderfield reference, which named the person who led that submission,
+     names someone else.
+
+4.4  Rachel Duffy's contemporaneous note: "He was not evasive and he was not
+     hostile. He answered every question. The difficulty is that each answer
+     reframed the original claim as something narrower, and by the end of the
+     call none of the five claims stood as originally made. When I put that to
+     him he said 'everyone rounds up on a CV'."
+
+-----------------------------------------------------------------
+5. ASSESSMENT
+-----------------------------------------------------------------
+5.1  Considered individually, item 3.1 alone might have been survivable. Title
+     inflation is common and the underlying experience was real.
+
+5.2  It is the pattern that is decisive. Five claims, of which one is
+     unverifiable and four are demonstrably inaccurate in the same direction.
+
+5.3  MATERIALITY TO THIS ROLE SPECIFICALLY. This is a Regulatory Affairs
+     appointment at L4. The postholder would sign submissions to a Notified
+     Body, would represent Veridia to the MHRA and to Swissmedic, and would
+     make reportability determinations under the vigilance system. Sarah
+     Lindgren's assessment, provided in writing on 2025-07-09: "The whole
+     function rests on being believed. If I put someone in front of BSI whose
+     own CV overstates their qualifications, and it emerges later, it does not
+     just end that person. It calls into question every document with their
+     name on it."
+
+5.4  Sunita Raval's advice, 2025-07-11: the offer is conditional on
+     satisfactory screening, the condition has not been met, and withdrawal is
+     contractually straightforward. She advised that the withdrawal letter
+     state the factual findings and avoid any characterisation of intent -
+     Veridia can say what it found and that it does not meet the condition,
+     without asserting dishonesty. She also noted the candidate remained in
+     employment and had not resigned, materially reducing any reliance
+     argument.
+
+-----------------------------------------------------------------
+6. DECISION
+-----------------------------------------------------------------
+6.1  Offer withdrawn. Approved by Naomi Okonjo-Bright, 2025-07-18. Letter
+     issued 2025-07-21.
+
+6.2  The letter set out each of the four verifiable findings, stated that the
+     conditional offer was withdrawn because the screening condition had not
+     been satisfied, and offered a right to respond within 14 days.
+
+6.3  The candidate responded on 2025-07-29, disputing the TOPRA finding only
+     and accepting the others. Naomi Okonjo-Bright reviewed and upheld the
+     decision on 2025-08-05. No further contact.
+
+-----------------------------------------------------------------
+7. LEARNING
+-----------------------------------------------------------------
+7.1  The claimed IVDR experience was the single most influential factor in the
+     hiring decision and was not verifiable by any check in our standard
+     screening. It emerged only because the reference happened to name the
+     person who actually led the work.
+
+     RECOMMENDATION, adopted: for L4 and above in regulated functions, the
+     reference request now asks the referee to confirm the candidate's role on
+     the specific projects the candidate cited at interview, by name. Adopted
+     into the screening guide at version 5.
+
+7.2  Northmoor's dissolution was discoverable in ninety seconds on Companies
+     House and would have been found before interview if anyone had looked.
+     Recommendation, adopted: for L4 and above, a Companies House existence
+     check on all claimed employers is run at shortlist stage rather than at
+     offer stage.
+
+7.3  Timing. The offer was made on 30 May and withdrawn on 21 July - seven
+     weeks. That is too long to leave a candidate in limbo, and we were
+     fortunate he had not resigned. Recommendation, adopted: where a Grade C
+     finding arises, the candidate is contacted within 5 working days and
+     asked directly whether they have given notice.
+
+7.4  Sarah Lindgren asked whether Veridia should tell Calderfield Diagnostics
+     that their employee had misrepresented his role. Sunita Raval's advice
+     was no: we have no duty to do so, the information came to us through a
+     screening process with its own lawful basis, and passing it on would be a
+     disclosure the candidate did not consent to and could not have
+     anticipated. No disclosure was made.
+
+-----------------------------------------------------------------
+RETENTION AND ACCESS
+-----------------------------------------------------------------
+Retained 6 months from decision under the unsuccessful-candidate rule, EXCEPT
+that this file is retained for 6 years under a documented legitimate interest
+in defending any claim arising from the withdrawal. Retention decision by
+Sunita Raval, 2025-08-05. Candidate informed of the retention in the
+withdrawal letter.
+Access: Naomi Okonjo-Bright, Tobias Frankl, Rachel Duffy, Sunita Raval.
+
+=================================================================
+RESTRICTED. Veridia BioSystems Ltd | Registered in England No. 10483726
+=================================================================

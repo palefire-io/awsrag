@@ -1,0 +1,171 @@
+Ticket ID: VBST-3910
+Status: Resolved
+Priority: P2-High
+Created: 2025-02-21 08:19 UTC
+Product: VeriScan 400 Pro / VeriConnect
+Customer: University Hospitals Birmingham NHS FT (ACC-1146)
+Reported by: Dr Priyanka Vaidya, Consultant Haematologist
+             priyanka.vaidya@uhb.nhs.uk | 0121 371 2000 ext 18820
+CC: Jason Okonkwo, Pathology Informatics Manager, jason.okonkwo@uhb.nhs.uk
+Assigned to: Aisha Rahman (Support Engineering L2)
+Serial: VS4P-0447, VS4P-0452
+Firmware: 4.2.1
+
+--- Thread ---
+
+[2025-02-21 08:19] Jason Okonkwo (Pathology Informatics Manager):
+Our middleware (Cirdan Ultra, host 10.112.44.7) is rejecting a proportion of
+ORU messages from two VeriScan 400 Pro analysers with "OBR-7 observation
+datetime is in the future". The analysers then raise E-503.
+
+We're also getting negative turnaround times in our TAT reporting for messages
+that do get through - collected at 09:15, resulted at 09:02 type of thing.
+
+Started sometime in the last two to three weeks. Nothing changed on our side.
+Middleware version unchanged since November.
+
+Rejection rate is currently about 8% of messages from VS4P-0447 and about 3%
+from VS4P-0452.
+
+[2025-02-21 09:05] Aisha Rahman (Support Engineering L2):
+Jason, thank you - that's a precise report.
+
+I think I know what this is. We have another site reporting timestamps ahead
+of real time on VeriScan 400 Pro instruments, and the pattern there is that
+the error grows with instrument uptime.
+
+Please confirm:
+- firmware version on both (Settings > About)
+- uptime on both
+- whether the instrument display shows the correct time
+
+[2025-02-21 09:40] Jason Okonkwo (Pathology Informatics Manager):
+Both on 4.2.1.
+VS4P-0447 uptime 22 days. VS4P-0452 uptime 9 days.
+Display time correct on both, checked against the domain clock.
+
+The rejection rates track the uptimes, don't they.
+
+[2025-02-21 10:15] Aisha Rahman (Support Engineering L2):
+They do. And it explains why your middleware is rejecting rather than
+accepting bad data - it's validating OBR-7 against its own clock and refusing
+anything in the future, which is the correct behaviour and has protected you
+from the worst of it.
+
+This is a firmware defect in 4.2.1, now under investigation as VBI-0091. The
+HL7 timestamp is derived from a counter that runs fast on the Pro. The
+instrument display reads the clock directly, which is why it's right.
+
+Result values are not affected. No number you have received is wrong; the
+times attached to them are.
+
+Immediate options:
+a) power cycle both instruments daily - holds the error to a few minutes and
+   should stop the rejections;
+b) roll back to firmware 4.2.0 - removes the defect entirely.
+
+I'd suggest (a) today and (b) as soon as we can get an engineer to you.
+
+[2025-02-21 10:50] Dr Priyanka Vaidya (Consultant Haematologist):
+Priyanka Vaidya, clinical lead here.
+
+I want to understand the clinical exposure before we go further. If OBR-7 is
+wrong, and OBR-7 is what our EPR displays as the collection time, then
+clinicians looking at a result in the EPR have been shown a collection time
+that could be up to - what, half an hour? - later than the truth. Over what
+period?
+
+[2025-02-21 11:35] Aisha Rahman (Support Engineering L2):
+Straight answers.
+
+Magnitude: on a Pro at 22 days uptime, we would expect on the order of 60-75
+minutes of drift. Our reference instrument measured 47 minutes at 14 days.
+It's larger than I'd like.
+
+Period: firmware 4.2.1 was released on 3 February. Your instruments will have
+taken it around then, so about three weeks.
+
+Direction: always forward. The displayed collection time is later than the
+true collection time, never earlier. So a result appears more recent than it
+is.
+
+Important caveat on OBR-7 specifically: where your LIS sends a collection time
+with the order, the instrument passes that value through unaltered and it is
+NOT affected. It's only where the instrument has to supply the time itself
+that the drift appears. Jason will know which applies at your site - it may
+be that your ward-collected samples with a booked-in collection time are
+completely unaffected and only your analyser-timed samples are involved.
+
+OBR-22, the result time, is affected regardless.
+
+[2025-02-21 12:20] Jason Okonkwo (Pathology Informatics Manager):
+We do send collection time on orders from the order comms system, which is the
+majority. Analyser-supplied OBR-7 applies to add-on tests and to samples
+booked in at the bench, which is maybe 15% of workload.
+
+So the clinical exposure is narrower than we feared but not zero.
+
+[2025-02-21 14:00] Dr Priyanka Vaidya (Consultant Haematologist):
+That's manageable. I'd still like it in writing.
+
+Power cycling both from tonight. Please get us the rollback.
+
+[2025-03-12 17:10] Kasia Nowak (Field Service Engineer):
+Attended (FSV-2025-0180). Both Pro instruments rolled back to 4.2.0. QC run
+and accepted on both.
+
+Verified after 8 hours uptime: OBR-7 within 3 seconds of the instrument
+display on both. Jason confirmed zero message rejections since the rollback.
+
+Site has 11 instruments total but only these two are Pro and only these two
+were affected to a noticeable degree. Their four VeriScan 400s on 4.2.1 were
+drifting by under 90 seconds, which their middleware tolerates.
+
+Left VBB-0041 draft summary with the site (bulletin not yet issued at time of
+visit). Time on site 4.5 hours.
+
+[2025-03-19 10:00] Aisha Rahman (Support Engineering L2):
+VBB-0041 issued today with firmware 4.2.3. It states the affected fields,
+the mechanism, the drift magnitude and that result values are unaffected -
+Dr Vaidya, that's your document.
+
+Recommend updating both Pro instruments and the four 400s to 4.2.3 at your
+convenience.
+
+[2025-03-24 09:30] Jason Okonkwo (Pathology Informatics Manager):
+All six updated to 4.2.3 over the weekend. TAT reporting sane again. No
+rejections. Closing from our side.
+
+One piece of feedback: it would have been useful to be told that a firmware
+update had been pushed to our instruments at all. We didn't know 4.2.1 had
+landed until you told us. We're Enterprise tier and firmware deployment is
+supposed to be under our control.
+
+[2025-03-24 11:15] Tom Reeves (Product Manager, VeriConnect):
+Jason, that's a fair challenge and I've looked into it.
+
+Your tenant has auto-update enabled for the General channel, which was set
+during onboarding in 2023 and has not been reviewed since. That's why 4.2.1
+arrived without a decision from you. It's a supported configuration but it is
+not the one I would recommend for an Enterprise site with a validated LIS
+interface.
+
+I'd suggest switching to manual approval - Fleet > Firmware > Update Policy.
+Happy to walk through it.
+
+Separately, I've raised internally that a firmware deployment should generate
+a notification to tenant admins regardless of the update policy. It doesn't
+today.
+
+[2025-03-24 13:40] Jason Okonkwo (Pathology Informatics Manager):
+Switching to manual approval. And yes, please do push the notification point -
+"we changed the software on your diagnostic device and told nobody" is not a
+great look.
+
+--- Resolution ---
+Root cause: VeriScan firmware 4.2.1 HL7 timestamp accumulator defect
+(VBI-0091). Middleware correctly rejected future-dated OBR-7.
+Actions: daily power cycle as interim; rollback to 4.2.0 (FSV-2025-0180);
+update to 4.2.3; VBB-0041 supplied.
+Secondary outcome: tenant firmware update policy changed to manual approval;
+product feedback raised on firmware deployment notifications.

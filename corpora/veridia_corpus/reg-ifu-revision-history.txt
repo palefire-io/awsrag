@@ -1,0 +1,144 @@
+=================================================================
+VERIDIA BIOSYSTEMS - DOCUMENT CONTROL RECORD
+=================================================================
+Title:        Instructions for Use - Revision History
+Document Ref: REG-IFU-HIST-002
+Revision:     2
+Date:         2026-05-11
+Maintained by: Sarah Lindgren, Regulatory Affairs Manager
+
+Scope: Revision history of the Instructions for Use for the VeriScan 400 and
+VeriScan 400 Pro (IFU-VS400, common document covering both models), and for
+the VeriLyse reagent range.
+
+Purpose: laboratories are required to hold the current IFU and, in many quality
+systems, to record when a revision was received and what changed. This document
+supports that. It is not a substitute for the IFU itself.
+
+-----------------------------------------------------------------
+IFU-VS400 - VERISCAN 400 AND 400 PRO
+-----------------------------------------------------------------
+
+REVISION 8   Issued 2026-04-21   Current
+  Reason:    Firmware 4.4.0 release; IVDR labelling data
+  Sections changed:
+    s.3 (Symbols)        Basic UDI-DI symbol added
+    s.7 (Installation)   Ambient range enforcement note updated - W-031 now
+                         raised outside 18-32 C from firmware 4.4.0
+    s.11 (Results)       New subsection on IVDR labelling data in the result
+                         header
+    s.13 (Maintenance)   Reagent lot exposure export described
+    s.18 (Error codes)   No change to codes; applies_to column corrected for
+                         E-215 (400 Pro only, previously shown as Both)
+  Note: the E-215 correction was a documentation error present since revision
+  4. E-215 has never been raisable on a VeriScan 400, which has no laser. No
+  customer was affected but the error had propagated into two customer SOPs
+  that we know of.
+
+REVISION 7   Issued 2025-05-22   Superseded
+  Reason:    Operating temperature range revision (VBB-0052); firmware 4.2.3
+  Sections changed:
+    s.4 (Specifications) Ambient operating range 15-35 C changed to 18-32 C
+    s.7 (Installation)   Siting guidance expanded - measure at the instrument,
+                         not the room thermostat; examples of siting that
+                         causes local heating
+    s.11 (Results)       Note added on HL7 timestamp fields and the firmware
+                         4.2.1 defect, with reference to VBB-0041
+    s.12 (Quality control) Requirement for full QC after a firmware update
+                         made explicit
+    s.14 (Reagents)      RGT-L3 formulation revision C/D note added
+  This is the revision that carries the temperature change. Laboratories
+  holding revision 6 or earlier hold the superseded 15-35 C figure.
+
+REVISION 6   Issued 2024-10-08   Superseded
+  Reason:    Firmware 4.1.2; W-031 ambient warning introduced
+  Sections changed:
+    s.18 (Error codes)   W-031 added
+    s.12 (Quality control) Minor clarification on control material mixing
+
+REVISION 5   Issued 2024-07-22   Superseded
+  Reason:    Firmware 4.1.0; body fluid mode (400 Pro)
+  Sections changed:
+    s.2 (Intended use)   Body fluid intended use added for the 400 Pro,
+                         including the exclusions
+    s.9 (Operation)      New section on body fluid mode including the
+                         three-background-cycle requirement
+    s.12 (Quality control) Body fluid QC requirements
+    s.18 (Error codes)   E-711, E-715 added; E-307 added
+
+REVISION 4   Issued 2024-03-04   Superseded
+  Reason:    Firmware 4.0.0; unified platform build
+  Sections changed:
+    Substantial revision throughout. The 400 and 400 Pro IFUs were merged
+    into a single document at this revision, with model-specific content
+    marked. This merge is the origin of the E-215 applies_to error corrected
+    in revision 8.
+    s.11 (Results)       HL7 v2.5.1 export documented
+    s.18 (Error codes)   E-118, E-408, E-412, E-503, E-507 added
+
+REVISION 3   Issued 2023-06-14   Superseded
+REVISION 2   Issued 2022-09-30   Superseded
+REVISION 1   Issued 2021-11-05   Original issue
+
+-----------------------------------------------------------------
+IFU-RGT - VERILYSE REAGENT RANGE
+-----------------------------------------------------------------
+
+REVISION 6   Issued 2025-06-03   Current
+  Reason:    RGT-L3 formulation revision D (VBB-0047)
+  Changes:   Composition table updated for revision D dual buffer system;
+             lot numbering scheme with revision suffix documented; label
+             identification band (blue = rev D, grey = rev C) described;
+             reference to FSN-2025-003 added to the RGT-L3 section stating
+             the recalled lot range; accelerated stability data updated.
+
+REVISION 5   Issued 2025-01-08   Superseded
+  Reason:    RGT-RT formulation revision B (FSN-2024-006)
+  Changes:   RGT-RT composition updated; storage changed to 2-8 C protected
+             from light; on-board life stated as 60 days; mandatory
+             recalibration at stain lot change made explicit; revision A
+             withdrawal referenced.
+
+REVISION 4   Issued 2024-08-19   Superseded
+  Reason:    RFID lot verification
+  Changes:   Instruction added to verify that the lot displayed by the
+             instrument matches the cartridge label, and what to do if it
+             does not.
+
+REVISION 3   Issued 2023-11-02   Superseded
+REVISION 2   Issued 2022-06-17   Superseded
+REVISION 1   Issued 2021-11-05   Original issue
+
+-----------------------------------------------------------------
+DISTRIBUTION AND CUSTOMER OBLIGATIONS
+-----------------------------------------------------------------
+1. The current IFU is supplied with each instrument and each reagent shipment,
+   and is available from the customer portal at www.veridiabio.com/ifu.
+
+2. Revised IFUs are distributed to registered customer contacts by email and
+   are announced in VeriConnect under Notifications > Documents.
+
+3. Where a revision changes a specification or an instruction with operational
+   effect - revisions 7 and 8 of IFU-VS400, revisions 5 and 6 of IFU-RGT -
+   Veridia also issues a bulletin. A bulletin without an IFU revision is
+   advisory; an IFU revision is a change to the controlled instructions.
+
+4. Laboratories should:
+   - hold the current revision;
+   - withdraw superseded revisions from circulation, including copies on
+     intranets and in local SOPs;
+   - record receipt and review of each revision;
+   - assess whether local SOPs referencing the IFU require amendment.
+
+5. KNOWN ISSUE WITH SUPERSEDED DOCUMENTS. Veridia is aware that superseded
+   revisions remain in circulation at a number of sites, most significantly
+   IFU-VS400 revision 6 and datasheet DS-VS400-002, both of which carry the
+   15-35 C ambient range. Several support tickets in 2025 originated from
+   customers working to the superseded figure. Where a customer contract,
+   tender response or validation report cites the superseded figure, Veridia
+   will honour it for the purposes of that document but recommends operating
+   to the current range.
+
+=================================================================
+Veridia BioSystems Ltd. | Registered in England No. 10483726
+=================================================================
