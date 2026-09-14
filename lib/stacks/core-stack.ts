@@ -83,6 +83,10 @@ export class CoreStack extends cdk.Stack {
       databaseName: 'postgres',
       allocatedStorage: 20,
       storageType: rds.StorageType.GP3,
+      // CDK defaults this to false when no KMS key is given. Encrypts the volume,
+      // its snapshots and its automated backups under the account's aws/rds key.
+      // Cannot be turned on in place later -- it forces instance replacement.
+      storageEncrypted: true,
       publiclyAccessible: false,
       multiAz: false,
       backupRetention: cdk.Duration.days(1),
