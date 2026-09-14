@@ -57,6 +57,12 @@ export class AgentSiloStack extends cdk.Stack {
     new ssm.StringParameter(this, 'DatabaseParam', { parameterName: `${prefix}/database`, stringValue: database });
     new ssm.StringParameter(this, 'BucketParam', { parameterName: `${prefix}/bucket`, stringValue: bucket.bucketName });
     new ssm.StringParameter(this, 'PromptModuleParam', { parameterName: `${prefix}/prompt-module`, stringValue: config.promptModule });
+    // shown on the empty chat screen, so a new silo introduces itself without a frontend rebuild
+    new ssm.StringParameter(this, 'DescriptionParam', { parameterName: `${prefix}/description`, stringValue: config.description });
+    new ssm.StringParameter(this, 'SampleQueriesParam', {
+      parameterName: `${prefix}/sample-queries`,
+      stringValue: JSON.stringify(config.sampleQueries),
+    });
     new ssm.StringParameter(this, 'RedactParam', { parameterName: `${prefix}/redact`, stringValue: String(config.redactPii ?? true) });
     // which ingest workflow applies -- the vector indexer branches on this to decide
     // whether a newly-ingested document is auto-tagged and persisted, or staged in

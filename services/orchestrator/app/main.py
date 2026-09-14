@@ -80,7 +80,15 @@ async def list_models(user: UserContext = Depends(require_user)) -> dict:
     return {
         "object": "list",
         "data": [
-            {"id": a.id, "object": "model", "created": 0, "owned_by": "cloudrag", "name": a.display_name}
+            {
+                "id": a.id,
+                "object": "model",
+                "created": 0,
+                "owned_by": "cloudrag",
+                "name": a.display_name,
+                "description": a.description,
+                "sample_queries": a.sample_queries,
+            }
             for a in app.state.registry.list()
             if _permitted(user, a)
         ],

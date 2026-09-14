@@ -19,6 +19,8 @@ _TTL_SECONDS = 30
 class AgentInfo:
     id: str
     display_name: str
+    description: str
+    sample_queries: list[str]
     database: str
     prompt_module: str
     llm_model_id: str
@@ -68,6 +70,8 @@ class AgentRegistry:
             agents[agent_id] = AgentInfo(
                 id=agent_id,
                 display_name=fields.get("display-name", agent_id),
+                description=fields.get("description", ""),
+                sample_queries=json.loads(fields.get("sample-queries", "[]")),
                 database=fields["database"],
                 prompt_module=fields.get("prompt-module", "default"),
                 llm_model_id=fields.get("llm-model-id") or self._settings.default_llm_model_id,

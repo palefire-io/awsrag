@@ -129,7 +129,14 @@ export function App() {
         </div>
 
         {view === 'chat' && activeAgent ? (
-          <Chat key={activeAgent.id} token={token} agentId={activeAgent.id} agentName={activeAgent.name} />
+          <Chat
+            key={activeAgent.id}
+            token={token}
+            agentId={activeAgent.id}
+            agentName={activeAgent.name}
+            description={activeAgent.description}
+            sampleQueries={activeAgent.sampleQueries}
+          />
         ) : view === 'admin' ? (
           <Admin token={token} />
         ) : (

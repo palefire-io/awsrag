@@ -6,6 +6,8 @@ export interface Message {
 export interface ModelInfo {
   id: string;
   name: string;
+  description: string;
+  sampleQueries: string[];
 }
 
 export interface AgentSummary {
@@ -39,7 +41,14 @@ export async function listModels(token: string): Promise<ModelInfo[]> {
   const res = await fetch('/v1/models', { headers: authHeaders(token) });
   if (!res.ok) throw await apiError(res, 'failed to list specialists');
   const data = await res.json();
-  return data.data.map((m: { id: string; name: string }) => ({ id: m.id, name: m.name }));
+  return data.data.map((m: {
+    id: string; name: string; description?: string; sample_queries?: string[];
+  }) => ({
+    id: m.id,
+    name: m.name,
+    description: m.description ?? '',
+    sampleQueries: m.sample_queries ?? [],
+  }));
 }
 
 /** Streams assistant text deltas from the SSE chat-completions response. */

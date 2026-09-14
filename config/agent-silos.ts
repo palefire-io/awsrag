@@ -55,6 +55,18 @@ export interface AgentSiloConfig {
   id: string;
   /** Shown in the chat UI's model list. */
   displayName: string;
+  /** One paragraph shown above the composer before the first message: what this
+   *  specialist knows about, and where its answers come from. */
+  description: string;
+  /**
+   * Starter questions offered as one-click prompts on the empty chat screen.
+   *
+   * Each MUST be answerable at the silo's most junior role. A sample that only a
+   * senior role can answer makes a junior user's first interaction "I don't have
+   * that information", which reads as the product being broken rather than as
+   * access control working.
+   */
+  sampleQueries: string[];
   /** Key into the orchestrator's prompt registry (services/orchestrator/app/prompts). */
   promptModule: string;
   /** This silo's role enum (e.g. `VeridiaRole`, `HrRole`) — pass the enum object itself. */
@@ -88,6 +100,17 @@ export const agentSilos: AgentSiloConfig[] = [
   {
     id: 'veridia',
     displayName: 'Veridia',
+    description:
+      "Product, support and regulatory knowledge for Veridia BioSystems' diagnostic "
+      + 'instruments — VeriScan analysers, VeriPrep sample prep, VeriLyse reagents and '
+      + 'VeriConnect integration. Answers come from support tickets, service bulletins, '
+      + 'specifications, error-code tables and regulatory filings.',
+    sampleQueries: [
+      'What does error code E-101 mean on a VeriScan 400?',
+      'Which reagent lots were affected by FSN-2025-003?',
+      'Is VeriLyse RGT-D5 compatible with the VeriScan 200?',
+      'What is our IVDR transition status?',
+    ],
     promptModule: 'default',
     roles: VeridiaRole,
     ingestWorkflow: IngestWorkflow.AllUser,
@@ -96,6 +119,18 @@ export const agentSilos: AgentSiloConfig[] = [
   {
     id: 'hr',
     displayName: 'HR Assistant',
+    description:
+      'HR policy, benefits and procedures for Veridia BioSystems. What it can show you '
+      + 'depends on your role — everyone sees policies and handbooks; HR managers also see '
+      + 'case files, pay data and screening records; the exec team additionally sees '
+      + 'transaction material.',
+    // all four resolve to User__ documents, so they answer for every HR role
+    sampleQueries: [
+      'How much annual leave do I get?',
+      'What is the probation period in Switzerland?',
+      'How does the employee referral scheme work?',
+      'What does private medical insurance cover?',
+    ],
     promptModule: 'hr',
     roles: HrRole,
     ingestWorkflow: IngestWorkflow.UIMediated,

@@ -364,6 +364,106 @@ button {
   max-width: 32ch;
 }
 
+/* first-contact screen: what this specialist knows, and four ways in */
+.intro {
+  margin: auto;
+  max-width: 34rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.55rem;
+  padding: 1rem 0 2rem;
+}
+
+.intro-avatar {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--agent-accent, var(--ink-muted));
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.intro-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0.1rem 0 0;
+  color: var(--ink);
+}
+
+.intro-desc {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 44ch;
+  text-wrap: pretty;
+}
+
+.intro-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0.85rem 0 0;
+}
+
+.intro-samples {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.sample {
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  text-align: left;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.sample:hover:not(:disabled) {
+  background: var(--agent-tint, var(--surface-sunken));
+  border-color: var(--agent-accent, var(--border));
+  transform: translateX(2px);
+}
+
+.sample:focus-visible {
+  outline: 2px solid var(--agent-accent, var(--ink));
+  outline-offset: 2px;
+}
+
+.sample:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sample {
+    transition: none;
+  }
+  .sample:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
 .message-row {
   display: flex;
   gap: 0.6rem;

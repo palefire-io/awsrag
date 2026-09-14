@@ -2,7 +2,13 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { streamChat, type Message } from './api';
 import { themeFor } from './theme';
 
-export function Chat({ token, agentId, agentName }: { token: string; agentId: string; agentName: string }) {
+export function Chat({ token, agentId, agentName, description, sampleQueries }: {
+  token: string;
+  agentId: string;
+  agentName: string;
+  description: string;
+  sampleQueries: string[];
+}) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
@@ -13,11 +19,12 @@ export function Chat({ token, agentId, agentName }: { token: string; agentId: st
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const send = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!input.trim() || busy) return;
+  // shared by the composer and the one-click sample prompts, so a starter question
+  // sends immediately rather than only filling the box
+  const submit = async (text: string) => {
+    if (!text.trim() || busy) return;
 
-    const history = [...messages, { role: 'user' as const, content: input }];
+    const history = [...messages, { role: 'user' as const, content: text }];
     setMessages([...history, { role: 'assistant', content: '' }]);
     setInput('');
     setBusy(true);
@@ -37,11 +44,40 @@ export function Chat({ token, agentId, agentName }: { token: string; agentId: st
     }
   };
 
+  const send = (e: FormEvent) => {
+    e.preventDefault();
+    void submit(input);
+  };
+
   return (
     <div className="chat">
       <div className="messages">
         {messages.length === 0 && (
-          <p className="messages-empty">Ask {agentName} anything from its knowledge base.</p>
+          <div className="intro">
+            <span className="intro-avatar">{monogram}</span>
+            <h2 className="intro-name">{agentName}</h2>
+            <p className="intro-desc">
+              {description || `Ask ${agentName} anything from its knowledge base.`}
+            </p>
+            {sampleQueries.length > 0 && (
+              <>
+                <p className="intro-label">Try asking</p>
+                <div className="intro-samples">
+                  {sampleQueries.map((query) => (
+                    <button
+                      key={query}
+                      type="button"
+                      className="sample"
+                      disabled={busy}
+                      onClick={() => void submit(query)}
+                    >
+                      {query}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         )}
         {messages.map((m, i) => (
           <div key={i} className={`message-row ${m.role}`}>
