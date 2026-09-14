@@ -33,10 +33,20 @@ npm run demo:creds
 # 5. open the URL, sign in, pick a specialist, ask it something
 ```
 
-Sign in as different demo users to watch role filtering work: `veridia-user` sees only the
-Veridia specialist, `both-silos-user` sees both, `hr-manager-plus` sees more HR documents
-than `hr-user` does, and `superuser` sees everything plus the **Admin** tab — where the
-HR documents from step 3 are waiting to be assigned roles and published.
+Sign in as different demo users to watch the two access layers work. They are separate
+mechanisms, and only the first is visible straight away.
+
+**The silo gate, immediately.** `veridia-user` sees only the Veridia specialist in the
+sidebar; `hr-user` sees only the HR one; `both-silos-user` sees both, because cross-silo
+access needs one grant per silo. `superuser` sees everything, plus the **Admin** tab.
+
+**The document filter, once you publish.** The HR corpus from step 3 is queued for review,
+not yet searchable — that is what `UIMediated` means. As `superuser`, open **Admin** and
+publish some HR documents to `HR-Manager` only and others to `HR-User`. After that,
+`hr-manager-plus` (which holds both roles) retrieves strictly more than `hr-user` does.
+That difference is the per-document `allowed_roles` filter, which is independent of the
+silo gate above. Veridia needs none of this: its `AllUser` workflow tags every document
+with the silo's full role set at ingest, so it answers as soon as step 3 finishes.
 
 To inspect the data directly:
 
@@ -118,10 +128,13 @@ CDK_STAGE=dev npx cdk deploy CloudRAG-dev-agent-hr     # one agent silo
 
 ## Uploading sample docs
 
-You can load the sample corpora with the following:
+You can load the sample corpora with the following. The `--` is required: npm 7+ needs it
+to pass the agent id through to the script rather than swallowing it.
 
-npm run corpus:import veridia # this will be available for RAG immediately
-npm run corpus:import hr      # this will be placed in the review queue in the UI before hitting the vector database
+```bash
+npm run corpus:import -- veridia   # AllUser silo: searchable immediately
+npm run corpus:import -- hr        # UIMediated silo: queued for review in the Admin tab first
+```
 
 
 
