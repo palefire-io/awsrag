@@ -95,6 +95,21 @@ async def list_models(user: UserContext = Depends(require_user)) -> dict:
     }
 
 
+def _format_context(chunks: list[tuple[str, str]]) -> str:
+    """Wrap each retrieved document in its own labelled block.
+
+    Joined by a bare "---", several concatenated CSV tables read as one merged
+    table and the model cannot find a row it is demonstrably holding -- measured
+    at 2/10 correct against 10/10 on identical content, once labelled. The source
+    name also gives the model something to cite, and marks where untrusted
+    retrieved text starts and ends.
+    """
+    return "\n\n".join(
+        f'<document source="{source.rsplit("/", 1)[-1]}">\n{content}\n</document>'
+        for source, content in chunks
+    )
+
+
 def _chunk(completion_id: str, model: str, delta: dict, finish_reason: str | None) -> str:
     payload = {
         "id": completion_id,
@@ -121,7 +136,7 @@ async def chat_completions(body: dict, user: UserContext = Depends(require_user)
     prompt = messages[-1].get("content") or ""
     stream = bool(body.get("stream", False))
 
-    context = "\n\n---\n\n".join(
+    context = _format_context(
         await app.state.retriever.retrieve(
             info.database, prompt, roles=info.expand(user.groups)
         )

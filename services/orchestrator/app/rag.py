@@ -54,8 +54,10 @@ class Retriever:
 
         return await asyncio.to_thread(_invoke)
 
-    async def retrieve(self, database: str, text: str, roles: list[str] | None = None) -> list[str]:
-        """Return the top-k most similar `content` chunks visible to `roles`.
+    async def retrieve(
+        self, database: str, text: str, roles: list[str] | None = None
+    ) -> list[tuple[str, str]]:
+        """Return the top-k most similar (source_id, content) pairs visible to `roles`.
 
         A document is visible only where its `allowed_roles` overlaps the caller's,
         so an empty or NULL `allowed_roles` matches nobody. It used to mean "public",
@@ -70,7 +72,7 @@ class Retriever:
         pool = await self._get_pool(database)
         try:
             rows = await pool.fetch(
-                "SELECT content FROM embeddings "
+                "SELECT source_id, content FROM embeddings "
                 "WHERE allowed_roles && $3::text[] "
                 "   OR $4 = ANY($3::text[]) "
                 "ORDER BY embedding <=> $1::vector LIMIT $2",
@@ -79,7 +81,7 @@ class Retriever:
         except asyncpg.exceptions.UndefinedTableError:
             logger.warning("embeddings table missing in %s; answering without retrieval", database)
             return []
-        return [r["content"] for r in rows if r["content"]]
+        return [(r["source_id"], r["content"]) for r in rows if r["content"]]
 
     async def publish(self, database: str, source_id: str, content: str,
                        embedding: list[float], allowed_roles: list[str]) -> None:
