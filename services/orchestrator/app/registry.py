@@ -23,6 +23,27 @@ class AgentInfo:
     prompt_module: str
     llm_model_id: str
     roles: list[str]
+    role_ladder: list[str]
+
+    def expand(self, groups: list[str]) -> list[str]:
+        """Add every role the caller's own roles outrank.
+
+        `role_ladder` is ordered most junior first, so holding a role grants
+        everything declared before it -- an HR-Exec-Team holder also sees
+        HR-Manager and HR-User documents. Seniority is resolved here, at query
+        time, which is why a document only ever stores the *minimum* role that
+        may see it: rewriting the ladder changes visibility immediately, with no
+        need to re-tag stored rows.
+
+        Roles outside the ladder (`Superuser`, or another silo's) pass straight
+        through. A silo with no ladder gets the caller's groups unchanged.
+        """
+        if not self.role_ladder:
+            return list(groups)
+        ranks = [self.role_ladder.index(g) for g in groups if g in self.role_ladder]
+        if not ranks:
+            return list(groups)
+        return sorted(set(groups) | set(self.role_ladder[: max(ranks) + 1]))
 
 
 class AgentRegistry:
@@ -51,6 +72,7 @@ class AgentRegistry:
                 prompt_module=fields.get("prompt-module", "default"),
                 llm_model_id=fields.get("llm-model-id") or self._settings.default_llm_model_id,
                 roles=json.loads(fields.get("roles", "[]")),
+                role_ladder=json.loads(fields.get("role-ladder", "[]")),
             )
         return agents
 

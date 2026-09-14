@@ -71,6 +71,22 @@ export class AgentSiloStack extends cdk.Stack {
       parameterName: `${prefix}/roles`,
       stringValue: JSON.stringify(Object.values(config.roles)),
     });
+    // seniority ladder + ingest-time classification, both consumed downstream:
+    // the orchestrator expands a caller's roles by the ladder at query time, and
+    // the indexer resolves a filename prefix to a role at ingest time.
+    if (config.roleLadder?.length) {
+      new ssm.StringParameter(this, 'RoleLadderParam', {
+        parameterName: `${prefix}/role-ladder`,
+        stringValue: JSON.stringify(config.roleLadder),
+      });
+    }
+    if (config.autoClassifyPrefixes && Object.keys(config.autoClassifyPrefixes).length) {
+      new ssm.StringParameter(this, 'AutoClassifyParam', {
+        parameterName: `${prefix}/auto-classify`,
+        stringValue: JSON.stringify(config.autoClassifyPrefixes),
+      });
+    }
+
     if (config.llmModelId) {
       new ssm.StringParameter(this, 'LlmModelIdParam', { parameterName: `${prefix}/llm-model-id`, stringValue: config.llmModelId });
     }

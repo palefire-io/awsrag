@@ -1,0 +1,73 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Working From Abroad Policy (DRAFT)
+=================================================================
+Document:      HR-POL-031
+Version:       1 (DRAFT - not yet approved, do not circulate)
+Drafted:       2026-04-02
+Owner:         Rachel Duffy, HR Business Partner
+Reviewers:     Naomi Okonjo-Bright (CPO), Simone Buehler (Legal, CH)
+Applies to:    All employees, once approved. UK and Switzerland provisions
+               differ and both are stated.
+
+-----------------------------------------------------------------
+1. PURPOSE
+-----------------------------------------------------------------
+1.1  This policy sets out when an employee may work temporarily from a
+     country other than their contractual country of employment, and what
+     approvals are required first.
+
+1.2  It does not create a right to work abroad. Every request is subject to
+     tax, social security, immigration and data protection review, and any
+     one of those may make a request impossible to approve.
+
+-----------------------------------------------------------------
+2. WHAT IS COVERED
+-----------------------------------------------------------------
+2.1  Short stays: up to 20 working days in a rolling 12 months, in a single
+     country, while remaining tax resident in your home country.
+
+2.2  Anything longer, or spanning more than one country, is treated as an
+     international assignment and falls outside this policy. Speak to your
+     HR Business Partner before making any commitment.
+
+2.3  Holiday during which you do not work is not covered by this policy. You
+     do not need permission to take annual leave abroad.
+
+-----------------------------------------------------------------
+3. APPROVAL ROUTE
+-----------------------------------------------------------------
+3.1  Raise the request in Workday at least 30 calendar days before travel.
+
+3.2  Your line manager confirms the work is practicable remotely and that
+     the team can cover core hours.
+
+3.3  People Operations then runs the tax and social security check. For
+     Switzerland-based employees this includes an A1 certificate assessment.
+
+3.4  Requests involving access to production customer data are additionally
+     reviewed by Information Security, because data residency commitments in
+     some customer contracts restrict where that data may be accessed from.
+     See the Data Residency FAQ in the product corpus.
+
+-----------------------------------------------------------------
+4. WHAT WE CANNOT APPROVE
+-----------------------------------------------------------------
+4.1  Countries subject to trade sanctions, or where Veridia has no legal
+     entity and the stay would create one (permanent establishment risk).
+
+4.2  Stays that would take you over a host country's tax residency threshold.
+
+4.3  Roles requiring physical presence: laboratory, field service and
+     manufacturing roles are excluded.
+
+-----------------------------------------------------------------
+5. OPEN QUESTIONS FOR REVIEWERS
+-----------------------------------------------------------------
+5.1  Should the 20-day allowance be pro-rated for part-time employees?
+5.2  Legal to confirm whether the A1 process applies to UK employees
+     travelling to Switzerland post-2021.
+5.3  Decide whether unapproved working abroad is a conduct matter under the
+     Code of Conduct, or handled informally at first instance.
+
+Comments to rachel.duffy@veridiabiosystems.example by 2026-04-30.

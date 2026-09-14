@@ -1,6 +1,8 @@
-# CloudRAG infra
+# CloudRAG Proof-of-Concept
 
-CDK TypeScript app that hosts several **specialist RAG agents** for one client, in their AWS account. Per stage (`dev`/`prod`) it synthesizes:
+This application demonstrates a private cloud-native RAG stack. It is *not* production-ready at this time and is intended for the moment as a teaching tool to learn about the essential components of a complete solution. In particular please note that there is no chunking of documents with only one vector per file and consequently files larger than 2000 chars will not be successfully ingested. That said...
+
+This is a CDK TypeScript app that hosts several **specialist RAG agents** for one client, in their AWS account. Per stage (`dev`/`prod`) it synthesizes:
 
 * `CloudRAGCore-{stage}` — the shared **Core** data plane (`lib/stacks/core-stack.ts`): one isolated VPC, one RDS Postgres instance (which hosts one database per agent), one ingest queue + dead-letter queue, one vector indexer, one Comprehend redactor, a DynamoDB staging table for documents awaiting role review, and a provisioner that creates each agent's database on demand.
 * `CloudRAGAuth-{stage}` — the shared **Auth** tier (`lib/stacks/auth-stack.ts`): a Cognito User Pool minting the role claims the orchestrator filters retrieval by, one Cognito Group per role declared across every silo, and (dev only) a set of demo users. See [Roles & authentication](#roles--authentication).
@@ -40,13 +42,17 @@ mechanisms, and only the first is visible straight away.
 sidebar; `hr-user` sees only the HR one; `both-silos-user` sees both, because cross-silo
 access needs one grant per silo. `superuser` sees everything, plus the **Admin** tab.
 
-**The document filter, once you publish.** The HR corpus from step 3 is queued for review,
-not yet searchable — that is what `UIMediated` means. As `superuser`, open **Admin** and
-publish some HR documents to `HR-Manager` only and others to `HR-User`. After that,
-`hr-manager-plus` (which holds both roles) retrieves strictly more than `hr-user` does.
-That difference is the per-document `allowed_roles` filter, which is independent of the
-silo gate above. Veridia needs none of this: its `AllUser` workflow tags every document
-with the silo's full role set at ingest, so it answers as soon as step 3 finishes.
+**The document filter, immediately too.** Most of the HR corpus is pre-classified by filename
+prefix, so `hr-user` answers from policy documents straight away while `hr-manager` also sees
+case files and pay data — seniority is transitive, so `hr-exec-team` sees everything. Veridia
+works the same way via its `AllUser` workflow.
+
+**The review queue, once you publish.** Six HR documents carry no role prefix and are therefore
+staged rather than indexed — a draft policy, a pension FAQ, an engagement survey, a manager
+guide, a remuneration committee note and a health-related case file. As `superuser`, open
+**Admin**: none of them is retrievable by anyone until you assign a role and publish. They are
+deliberately a spread, from obviously all-staff to obviously restricted, so the classification
+decision is a real one.
 
 To inspect the data directly:
 
@@ -227,6 +233,13 @@ Access is checked in **two independent layers**, in this order:
    array overlaps nothing, so it is visible to **nobody** — "everyone in this silo" is said
    explicitly, by naming that silo's full role set.
 
+   A silo may also declare a **`roleLadder`** (most junior first), which makes seniority
+   transitive: with `[HR-User, HR-Manager, HR-Exec-Team]`, anything visible to `HR-User` is also
+   visible to `HR-Manager` and `HR-Exec-Team`, and anything visible to `HR-Manager` is also visible
+   to `HR-Exec-Team`. The ladder is applied **when a query runs, not when a document is stored**, so
+   a document only ever records the *minimum* role that may see it. Rewriting the ladder changes
+   visibility immediately, with no need to re-tag a single row.
+
 `Superuser` bypasses both layers.
 
 * **Roles are per-silo**, declared as a string enum right next to that silo's config entry in
@@ -246,7 +259,14 @@ Access is checked in **two independent layers**, in this order:
   * `UIMediated` — staged in a DynamoDB table instead of being written to Postgres at all;
     reviewed on the app's **Admin** tab (visible only to `Superuser`), where checking roles and
     clicking Publish inserts it into that silo's `embeddings` table with the chosen roles (or
-    Discard drops it).
+    Discard drops it). Because the ladder makes seniority transitive, check the *most junior*
+    role that should see the document, not every role.
+
+    A `UIMediated` silo may declare **`autoClassifyPrefixes`** to skip that review for documents
+    that are already classified. A file named `<Prefix>__<slug>.<ext>` whose prefix is in the map
+    is persisted immediately with that single role; anything with an unrecognised prefix, or none,
+    still goes to the queue. The HR corpus uses this: 65 of its 71 files are pre-classified, and
+    the remaining 6 exist precisely so the review queue has something in it.
 * **Dev-only demo users** — the Auth stack seeds one Cognito user per (silo, role) pair (e.g.
   `hr-manager`, `veridia-user`), plus `superuser`, plus the multi-role identities declared in
   [`config/agent-silos.ts`](config/agent-silos.ts) (`both-silos-user`, `both-silos-exec`,

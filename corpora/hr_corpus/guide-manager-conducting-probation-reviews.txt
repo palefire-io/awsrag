@@ -1,0 +1,74 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Manager Guide: Conducting Probation Reviews
+=================================================================
+Document:      HR-GDE-018
+Version:       2
+Effective:     2026-01-12
+Owner:         Rachel Duffy, HR Business Partner
+Audience:      People managers only. This guide contains the decision
+               thresholds and is not published to the employee handbook.
+Companion:     HR-POL-004 Probationary Period Policy (all-employee version)
+
+-----------------------------------------------------------------
+1. WHY THIS GUIDE EXISTS
+-----------------------------------------------------------------
+1.1  The employee-facing policy tells people what happens and when. It
+     deliberately does not tell them how we weigh the decision, because that
+     would invite the process to be gamed.
+
+1.2  Use this guide alongside the policy. Where the two appear to conflict,
+     the policy governs what you tell the employee and this guide governs
+     how you reach the decision.
+
+-----------------------------------------------------------------
+2. THE DAY 90 CHECKPOINT
+-----------------------------------------------------------------
+2.1  Day 90 is a substantive decision point, not a formality. By then you
+     should be able to answer: would I hire this person again, knowing what
+     I now know?
+
+2.2  If the answer is no, do not defer to month six hoping it resolves. In
+     the last two years every probation failure we reviewed had a documented
+     day 90 concern that was not acted on.
+
+2.3  Three outcomes are available: confirm, extend once by up to three
+     months with a written improvement plan, or terminate within the
+     probationary notice period.
+
+-----------------------------------------------------------------
+3. WHEN TO EXTEND RATHER THAN TERMINATE
+-----------------------------------------------------------------
+3.1  Extend where the shortfall is capability that is plausibly closeable in
+     the time available, and where the employee has had clear feedback.
+
+3.2  Do not extend where the concern is conduct, honesty, or a pattern of
+     unexplained absence. Those are not capability matters and extension
+     sends the wrong signal.
+
+3.3  Do not extend twice. A second extension has never resulted in a
+     confirmed appointment in our records and creates real legal exposure.
+
+-----------------------------------------------------------------
+4. BEFORE YOU ACT - MANDATORY CHECKS
+-----------------------------------------------------------------
+4.1  Speak to your HR Business Partner before any termination decision. This
+     is not optional and protects you as much as the company.
+
+4.2  Check for any live occupational health referral, reasonable adjustment
+     request, grievance, or pregnancy or family leave notification. Any of
+     these changes the process materially and HR must be involved first.
+
+4.3  Check the employee's start date against the correct jurisdiction. Swiss
+     probation is three months by default with seven days' notice; the UK
+     arrangement is six months. Applying the wrong one is the single most
+     common error we see.
+
+-----------------------------------------------------------------
+5. RECORD KEEPING
+-----------------------------------------------------------------
+5.1  Write up each review within two working days, in Workday, in the
+     employee's own words where you are recording what they said.
+
+5.2  Assume everything you write will be read back to you in a tribunal.
+     Write accurately, and only about performance.

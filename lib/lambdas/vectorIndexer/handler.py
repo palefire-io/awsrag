@@ -81,8 +81,16 @@ def handler(event, context):
             state = IngestState.EMBEDDED
 
             if agent["ingest_workflow"] == "UIMediated":
-                _register_pending(agent["id"], source_id, content, embedding)
-                state = IngestState.REGISTERED
+                role = _classify(agent, source_id)
+                if role is None:
+                    _register_pending(agent["id"], source_id, content, embedding)
+                    state = IngestState.REGISTERED
+                else:
+                    # pre-classified by filename: store the MINIMUM role that may see
+                    # it. Seniority is applied at query time, so no need to enumerate
+                    # every senior role here.
+                    _persist(agent["database"], source_id, content, embedding, [role])
+                    state = IngestState.PERSISTED
             else:
                 roles = agent["roles"]
                 # An empty allowed_roles array reads as PUBLIC to the retrieval
@@ -132,6 +140,24 @@ def _extract_source(record):
     raise ValueError("message is neither an S3 event nor an {agent,id,text} payload")
 
 
+def _classify(agent, source_id):
+    """Role implied by a `<Prefix>__` filename, or None if a human must decide.
+
+    The corpus names every pre-classified document `<Prefix>__<slug>.<ext>` and the
+    slug never contains a double underscore, so splitting on the first one is
+    unambiguous (see corpora/hr_corpus/manifest.json). An unrecognised or absent
+    prefix returns None, which routes the document to the review queue.
+    """
+    mapping = agent.get("auto_classify")
+    if not mapping:
+        return None
+    filename = source_id.rsplit("/", 1)[-1]
+    prefix, separator, _ = filename.partition("__")
+    if not separator:
+        return None
+    return mapping.get(prefix)
+
+
 def _routes_now():
     """(by_bucket, by_id) routing maps from the SSM agent registry, cached with a TTL."""
     global _routes, _routes_at
@@ -152,6 +178,7 @@ def _routes_now():
                 "redact": redact,
                 "ingest_workflow": fields.get("ingest-workflow", "AllUser"),
                 "roles": json.loads(fields.get("roles", "[]")),
+                "auto_classify": json.loads(fields.get("auto-classify", "{}")),
             }
             by_id[agent_id] = entry
             if "bucket" in fields:

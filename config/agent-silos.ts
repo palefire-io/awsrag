@@ -65,6 +65,23 @@ export interface AgentSiloConfig {
   llmModelId?: string;
   /** Optional per-agent PII redaction toggle (defaults to true). */
   redactPii?: boolean;
+  /**
+   * Seniority, ordered MOST JUNIOR FIRST: holding a role grants everything
+   * declared before it. With `[User, Manager, Exec]`, an Exec sees Manager and
+   * User documents too.
+   *
+   * Applied when a query runs, not when a document is ingested, so a document
+   * stores only the *minimum* role that may see it. Rewriting this ladder
+   * changes who sees what immediately, with no need to re-tag stored rows.
+   */
+  roleLadder?: string[];
+  /**
+   * Filename prefix -> role, for silos that classify documents on ingest.
+   * The corpus names pre-classified files `<Prefix>__<slug>.<ext>`; a file whose
+   * prefix is listed here is persisted straight away with that single role, and
+   * anything unrecognised is staged for a human instead (see IngestWorkflow).
+   */
+  autoClassifyPrefixes?: Record<string, string>;
 }
 
 export const agentSilos: AgentSiloConfig[] = [
@@ -74,6 +91,7 @@ export const agentSilos: AgentSiloConfig[] = [
     promptModule: 'default',
     roles: VeridiaRole,
     ingestWorkflow: IngestWorkflow.AllUser,
+    roleLadder: [VeridiaRole.User, VeridiaRole.ExecTeam],
   },
   {
     id: 'hr',
@@ -81,6 +99,14 @@ export const agentSilos: AgentSiloConfig[] = [
     promptModule: 'hr',
     roles: HrRole,
     ingestWorkflow: IngestWorkflow.UIMediated,
+    roleLadder: [HrRole.User, HrRole.HRManager, HrRole.ExecTeam],
+    // The corpus prefixes predate the per-silo role namespacing, so this map is
+    // what reconciles "Exec-Team__" on disk with the "HR-Exec-Team" group.
+    autoClassifyPrefixes: {
+      'User': HrRole.User,
+      'HR-Manager': HrRole.HRManager,
+      'Exec-Team': HrRole.ExecTeam,
+    },
   },
 ];
 

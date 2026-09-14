@@ -1,0 +1,66 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Reasonable Adjustment Request - Case Note
+=================================================================
+Case reference: ADJ-2026-009
+Opened:         2026-03-09
+Case owner:     Rachel Duffy, HR Business Partner
+Employee:       Tom Reeves, Field Service Engineer, Northern region
+Employee no:    VB-4471
+Date of birth:  1988-11-02
+Contact:        tom.reeves@veridiabiosystems.example / 07700 900418
+Manager:        Yusuf Demir, Field Service Manager
+Status:         Open - awaiting occupational health report
+
+-----------------------------------------------------------------
+1. REQUEST
+-----------------------------------------------------------------
+1.1  The employee requested adjustments on 2026-03-06 following a diagnosis
+     confirmed in February 2026. He has consented to HR and his line manager
+     being informed of the functional impact, but not of the diagnosis
+     itself. That consent is recorded in Workday and must be respected.
+
+1.2  The functional impact as described by the employee: reduced capacity for
+     sustained driving, fatigue in the latter part of long shifts, and a need
+     for predictable breaks.
+
+-----------------------------------------------------------------
+2. ADJUSTMENTS REQUESTED
+-----------------------------------------------------------------
+2.1  Cap on single-day driving distance, suggested at 120 miles.
+2.2  Regional call allocation weighted toward sites within 90 minutes.
+2.3  No on-call rota for an initial six-month period.
+2.4  Flexibility to take a 20-minute break at need rather than at fixed times.
+
+-----------------------------------------------------------------
+3. IMMEDIATE ACTIONS TAKEN
+-----------------------------------------------------------------
+3.1  2026-03-09: items 2.3 and 2.4 implemented immediately as interim
+     measures pending the occupational health report. Neither has a cost
+     implication and delaying them would not have been reasonable.
+
+3.2  2026-03-09: occupational health referral raised with Dr Elena Marchetti
+     via the OH provider. Appointment scheduled 2026-03-27.
+
+3.3  2026-03-10: manager briefed on functional impact only. Manager confirmed
+     he has not been told and does not wish to be told the diagnosis.
+
+-----------------------------------------------------------------
+4. OPEN ISSUES
+-----------------------------------------------------------------
+4.1  Items 2.1 and 2.2 have a real service-coverage implication for the
+     Northern region, which currently runs two engineers. Yusuf Demir has
+     flagged that a sustained cap may require a third headcount or a
+     redrawn territory. This is a resourcing question, not a reason to
+     refuse the adjustment, and should be escalated as such.
+
+4.2  Confirm whether the on-call exclusion affects the shift allowance. If it
+     does, the allowance should be protected for the six-month period; an
+     adjustment that costs the employee money is not an adjustment.
+
+-----------------------------------------------------------------
+5. REVIEW
+-----------------------------------------------------------------
+5.1  Review on receipt of the OH report, and in any event by 2026-04-10.
+5.2  This case note contains health information. Do not circulate beyond the
+     case owner, the People Director and the OH provider.

@@ -1,0 +1,67 @@
+=================================================================
+VERIDIA BIOSYSTEMS - PEOPLE TEAM
+Engagement Pulse H1 2026 - Results Summary
+=================================================================
+Document:      HR-RPT-026
+Version:       1 (final)
+Fieldwork:     2026-02-03 to 2026-02-17
+Responses:     612 of 761 invited (80.4%)
+Owner:         Ruth Amankwah, Reward Manager
+Prepared by:   Aisha Rahman, People Analytics
+Note:          Team-level breakdowns below reach groups as small as six
+               respondents. Free-text is verbatim. Handle accordingly and do
+               not forward outside the People team without checking first.
+
+-----------------------------------------------------------------
+1. HEADLINES
+-----------------------------------------------------------------
+1.1  Overall engagement index 71 (H2 2025: 68). The three-point rise is
+     driven almost entirely by the Commercial function.
+
+1.2  eNPS +14 (H2 2025: +4). Detractors fell from 24% to 18%.
+
+1.3  Two items fell. "I understand how my pay is decided" dropped to 44%
+     favourable (H2 2025: 51%), the lowest score in the survey. "I have the
+     tools I need to do my job" fell to 58% in Field Service.
+
+-----------------------------------------------------------------
+2. BY FUNCTION
+-----------------------------------------------------------------
+Function              n    Index   Change   Lowest-scoring item
+Commercial          184      78      +9     Pay transparency (47%)
+Engineering         142      73      +2     Career progression (55%)
+Operations          121      70      -1     Workload (52%)
+Field Service        68      61      -4     Tools and equipment (58%)
+Quality & Reg        52      74      +3     Headcount (61%)
+People, Fin, Legal   45      75      +1     Pay transparency (49%)
+
+2.1  Field Service is the clear outlier and has now declined for three
+     consecutive cycles. It is also the only function where "I would
+     recommend Veridia as a place to work" is below 50%.
+
+-----------------------------------------------------------------
+3. FREE-TEXT THEMES
+-----------------------------------------------------------------
+3.1  Pay transparency dominates, 147 mentions. The common thread is not the
+     amount but the absence of explanation: people cannot see how a band is
+     set or what moves them through it.
+
+3.2  Field Service tooling, 61 mentions, concentrated on van stock and the
+     diagnostic laptop refresh that slipped from Q4.
+
+3.3  Hybrid working, 44 mentions, largely positive; the complaints are about
+     inconsistent application between managers rather than the policy.
+
+-----------------------------------------------------------------
+4. RECOMMENDED ACTIONS
+-----------------------------------------------------------------
+4.1  Publish the levelling guides and band midpoints to all employees. The
+     guides already exist and are currently manager-only; that is the
+     cheapest available intervention on the lowest-scoring item.
+
+4.2  Field Service tooling: bring the laptop refresh forward and report
+     back to that function specifically, by name, within one cycle.
+
+4.3  Do not run another pulse before acting. Two consecutive surveys without
+     visible follow-through is the most reliable way to depress the response
+     rate permanently.

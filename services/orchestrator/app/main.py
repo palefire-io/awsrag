@@ -114,7 +114,9 @@ async def chat_completions(body: dict, user: UserContext = Depends(require_user)
     stream = bool(body.get("stream", False))
 
     context = "\n\n---\n\n".join(
-        await app.state.retriever.retrieve(info.database, prompt, roles=user.groups)
+        await app.state.retriever.retrieve(
+            info.database, prompt, roles=info.expand(user.groups)
+        )
     )
     history = to_message_history(messages[:-1])
     deps = Deps(context=context)
