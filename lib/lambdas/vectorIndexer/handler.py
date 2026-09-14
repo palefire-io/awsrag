@@ -84,7 +84,13 @@ def handler(event, context):
                 _register_pending(agent["id"], source_id, content, embedding)
                 state = IngestState.REGISTERED
             else:
-                _persist(agent["database"], source_id, content, embedding, ["User"])
+                roles = agent["roles"]
+                # An empty allowed_roles array reads as PUBLIC to the retrieval
+                # filter, so a silo with no registered roles must fail to the DLQ
+                # rather than quietly publishing the document to everyone.
+                if not roles:
+                    raise ValueError(f"agent {agent['id']!r} has no roles registered")
+                _persist(agent["database"], source_id, content, embedding, roles)
                 state = IngestState.PERSISTED
 
             logger.info(json.dumps({"agent": agent["id"], "database": agent["database"],
@@ -145,6 +151,7 @@ def _routes_now():
                 "database": fields["database"],
                 "redact": redact,
                 "ingest_workflow": fields.get("ingest-workflow", "AllUser"),
+                "roles": json.loads(fields.get("roles", "[]")),
             }
             by_id[agent_id] = entry
             if "bucket" in fields:

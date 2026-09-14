@@ -24,7 +24,7 @@ from .agent import Deps, build_agent, to_message_history
 from .auth import UserContext, require_user
 from .config import get_settings
 from .prompts import get_prompt
-from .rag import Retriever
+from .rag import SUPERUSER, Retriever
 from .registry import AgentInfo, AgentRegistry
 
 settings = get_settings()
@@ -57,18 +57,32 @@ def _agent_for(info: AgentInfo):
     return agent
 
 
+def _permitted(user: UserContext, info: AgentInfo) -> bool:
+    """Whether a caller may use this silo at all.
+
+    Distinct from rag.py's per-document `allowed_roles` filter: that decides
+    which documents are visible *within* a silo, and never gated reaching the
+    silo in the first place. A silo that registered no roles is reachable only
+    by a Superuser -- fail closed rather than open.
+    """
+    if SUPERUSER in user.groups:
+        return True
+    return bool(set(user.groups) & set(info.roles))
+
+
 @app.get("/healthz")
 async def healthz() -> dict:
     return {"status": "ok"}
 
 
 @app.get("/v1/models")
-async def list_models(_: UserContext = Depends(require_user)) -> dict:
+async def list_models(user: UserContext = Depends(require_user)) -> dict:
     return {
         "object": "list",
         "data": [
             {"id": a.id, "object": "model", "created": 0, "owned_by": "cloudrag", "name": a.display_name}
             for a in app.state.registry.list()
+            if _permitted(user, a)
         ],
     }
 
@@ -88,7 +102,9 @@ def _chunk(completion_id: str, model: str, delta: dict, finish_reason: str | Non
 async def chat_completions(body: dict, user: UserContext = Depends(require_user)):
     model = body.get("model")
     info = app.state.registry.get(model) if model else None
-    if info is None:
+    # 404 rather than 403: a silo the caller has no role in shouldn't be
+    # distinguishable from one that doesn't exist.
+    if info is None or not _permitted(user, info):
         raise HTTPException(status_code=404, detail=f"unknown agent/model: {model!r}")
 
     messages = body.get("messages", [])

@@ -5,7 +5,7 @@ import { CoreStack } from '../lib/stacks/core-stack';
 import { AppStack } from '../lib/stacks/app-stack';
 import { AgentSiloStack } from '../lib/stacks/agent-silo-stack';
 import { AuthStack } from '../lib/stacks/auth-stack';
-import { agentSilos } from '../config/agent-silos';
+import { agentSilos, demoIdentities } from '../config/agent-silos';
 
 const stage = process.env.CDK_STAGE ?? 'dev';
 
@@ -38,6 +38,7 @@ const auth = new AuthStack(app, `CloudRAGAuth-${stage}`, {
   tags,
   stage,
   agentSilos,
+  demoIdentities,
 });
 
 // multi-agent orchestrator + chat/admin SPA

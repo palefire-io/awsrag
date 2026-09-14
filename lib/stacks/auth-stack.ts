@@ -5,7 +5,7 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Provider } from 'aws-cdk-lib/custom-resources';
 import { Construct } from 'constructs';
-import { AgentSiloConfig } from '../../config/agent-silos';
+import { AgentSiloConfig, DemoIdentity } from '../../config/agent-silos';
 
 // dev-only demo accounts: fixed, deliberately simple/shared password. No real data
 // sits behind these, so this is a demo convenience, not a security boundary.
@@ -14,13 +14,16 @@ const DEMO_PASSWORD = 'Demo1234!';
 export interface AuthStackProps extends cdk.StackProps {
   stage: string;
   agentSilos: AgentSiloConfig[];
+  /** Dev-only demo logins holding more than one role. */
+  demoIdentities: DemoIdentity[];
 }
 
 /**
  * Cognito User Pool that mints the role claims the orchestrator filters RAG results
- * by. One Cognito Group per unique role name declared across every Agent Silo
- * (deduped — e.g. "Exec-Team" is one group even though multiple silos declare it),
- * plus "Superuser". No Hosted UI/custom domain: this is a POC with no owned domain,
+ * by. One Cognito Group per role name declared across every Agent Silo, plus
+ * "Superuser". Role names are namespaced per silo (see config/agent-silos.ts), so
+ * each group grants access to exactly one silo -- an identity needing two silos
+ * holds two groups. No Hosted UI/custom domain: this is a POC with no owned domain,
  * so the orchestrator verifies tokens itself (PyJWT + this pool's JWKS) instead of
  * using ALB-native Cognito auth, which requires an HTTPS listener with an ACM cert
  * (ACM can't certify AWS-owned hostnames like *.elb.amazonaws.com).
@@ -31,7 +34,7 @@ export class AuthStack extends cdk.Stack {
 
   constructor(scope: Construct, id: string, props: AuthStackProps) {
     super(scope, id, props);
-    const { stage, agentSilos } = props;
+    const { stage, agentSilos, demoIdentities } = props;
     const isProd = stage === 'prod';
 
     this.userPool = new cognito.UserPool(this, 'UserPool', {
@@ -47,8 +50,8 @@ export class AuthStack extends cdk.Stack {
       generateSecret: false,
     });
 
-    // one Cognito Group per unique role name across every silo, plus Superuser --
-    // "User"/"Exec-Team" etc. are shared groups even though >1 silo declares them.
+    // one Cognito Group per role name across every silo, plus Superuser. Names are
+    // silo-namespaced, so the Set only guards against a duplicate declaration.
     const roleNames = new Set<string>(['Superuser']);
     for (const silo of agentSilos) {
       for (const role of Object.values(silo.roles)) roleNames.add(role);
@@ -61,15 +64,18 @@ export class AuthStack extends cdk.Stack {
     new cdk.CfnOutput(this, 'UserPoolId', { value: this.userPool.userPoolId });
     new cdk.CfnOutput(this, 'UserPoolClientId', { value: this.userPoolClient.userPoolClientId });
 
-    // dev-only demo users: one per (silo, role) pair, plus one superuser, all
-    // sharing the one fixed password above. Never created for prod.
+    // dev-only demo users: one per (silo, role) pair, one superuser, plus the
+    // multi-role identities from config/agent-silos.ts -- all sharing the one fixed
+    // password above. Never created for prod.
     if (!isProd) {
       const users = [
         { username: 'superuser', groups: ['Superuser'] },
+        // role values are globally unique now, so they need no silo prefix
         ...agentSilos.flatMap((silo) => Object.values(silo.roles).map((role) => ({
-          username: `${silo.id}-${slug(role)}`,
+          username: slug(role),
           groups: [role],
         }))),
+        ...demoIdentities,
       ];
 
       const provisionerFn = new lambda.Function(this, 'DemoUsersProvisionerFunction', {

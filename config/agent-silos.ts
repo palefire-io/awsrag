@@ -24,9 +24,8 @@ export enum Role {
 
 /** How a silo's ingested documents get their `allowed_roles`. */
 export enum IngestWorkflow {
-  /** Every document is auto-tagged with that silo's `User` role — visible to anyone
-   *  holding at least `User`, not to Unauthenticated callers. Requires the silo's
-   *  role enum to include a role named exactly `User`. */
+  /** Every document is auto-tagged with *every* role the silo declares — visible to
+   *  anyone holding at least one of them, not to Unauthenticated callers. */
   AllUser = 'AllUser',
   /** Documents are staged in DynamoDB (not written to the vector database) until an
    *  admin UI (not built yet) picks which roles can see them. */
@@ -38,16 +37,17 @@ export enum IngestWorkflow {
 // the `allowed_roles` filter. Keys are just TS identifiers (no spaces allowed); values
 // carry the real display/group name. Cognito group names may not contain spaces (must
 // match `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`), so use hyphens instead. A name reused across
-// silos (e.g. "Exec-Team") is still just one shared Cognito Group.
+// silos would make a grant in one silo silently confer access in the other, so values
+// are namespaced per silo ("Veridia-User", "HR-User") and must stay globally unique.
 export enum VeridiaRole {
-  User = 'User',
-  ExecTeam = 'Exec-Team',
+  User = 'Veridia-User',
+  ExecTeam = 'Veridia-Exec-Team',
 }
 
 export enum HrRole {
-  User = 'User',
+  User = 'HR-User',
   HRManager = 'HR-Manager',
-  ExecTeam = 'Exec-Team',
+  ExecTeam = 'HR-Exec-Team',
 }
 
 export interface AgentSiloConfig {
@@ -82,4 +82,27 @@ export const agentSilos: AgentSiloConfig[] = [
     roles: HrRole,
     ingestWorkflow: IngestWorkflow.UIMediated,
   },
+];
+
+/** A dev-only demo login. */
+export interface DemoIdentity {
+  username: string;
+  groups: string[];
+}
+
+/**
+ * Dev-only demo identities holding more than one role.
+ *
+ * The per-(silo, role) accounts the Auth stack derives show a single role's view.
+ * These show what happens when roles combine — the only way to see that cross-silo
+ * access now needs an explicit grant per silo, and that roles union within a silo
+ * rather than overriding one another.
+ */
+export const demoIdentities: DemoIdentity[] = [
+  // the same nominal role in both silos — two grants now, where one used to do
+  { username: 'both-silos-user', groups: [VeridiaRole.User, HrRole.User] },
+  // the case that used to be a single shared 'Exec-Team' group
+  { username: 'both-silos-exec', groups: [VeridiaRole.ExecTeam, HrRole.ExecTeam] },
+  // two roles inside one silo: sees HR-User *and* HR-Manager documents
+  { username: 'hr-manager-plus', groups: [HrRole.User, HrRole.HRManager] },
 ];
