@@ -4,7 +4,7 @@ CDK TypeScript app that hosts several **specialist RAG agents** for one client, 
 
 * `CloudRAGCore-{stage}` — the shared **Core** data plane (`lib/stacks/core-stack.ts`): one isolated VPC, one RDS Postgres instance (which hosts one database per agent), one ingest queue + dead-letter queue, one vector indexer, one Comprehend redactor, a DynamoDB staging table for documents awaiting role review, and a provisioner that creates each agent's database on demand.
 * `CloudRAGAuth-{stage}` — the shared **Auth** tier (`lib/stacks/auth-stack.ts`): a Cognito User Pool minting the role claims the orchestrator filters retrieval by, one Cognito Group per role declared across every silo, and (dev only) a set of demo users. See [Roles & authentication](#roles--authentication).
-* `CloudRAG-{stage}` — the shared **App** tier (`lib/stacks/app-stack.ts`): one multi-agent orchestrator (FastAPI + Pydantic AI) that also serves the chat + admin single-page app directly. The orchestrator surfaces every agent as a selectable model and routes each chat to that agent's database + prompt module. See [The chat application](#the-chat-application).
+* `CloudRAG-{stage}` — the shared **App** tier (`lib/stacks/app-stack.ts`): one multi-agent orchestrator (FastAPI + Pydantic AI) that also serves the chat + admin single-page app directly. The orchestrator surfaces each agent the caller has a role in as a selectable model, and routes each chat to that agent's database + prompt module. See [The chat application](#the-chat-application).
 * `CloudRAG-{stage}-agent-{id}` — one **Agent Silo** per specialist (`lib/stacks/agent-silo-stack.ts`): an ingest bucket, a provisioned `agent_<id>` database, and an SSM registry entry. No compute of its own. Declared in [`config/agent-silos.ts`](config/agent-silos.ts) — see [Agent Silos](#agent-silos).
 
 The App and Agent Silo stacks depend on Core (the App peers to the Core VPC; each Agent Silo uses the Core queue and provisioner) and on Auth (the App verifies caller tokens against the Cognito pool), so Core and Auth deploy first.
@@ -176,7 +176,8 @@ CREATE TABLE embeddings (
   id bigserial PRIMARY KEY,
   source_id text UNIQUE NOT NULL,
   content text,
-  embedding vector(1024),          -- Titan Text Embeddings v2
+  embedding vector(1024),                      -- Titan Text Embeddings v2
+  allowed_roles text[] NOT NULL DEFAULT '{}',  -- role gate; empty array = visible to nobody
   created_at timestamptz DEFAULT now()
 );
 CREATE INDEX embeddings_embedding_hnsw ON embeddings USING hnsw (embedding vector_cosine_ops);
@@ -188,38 +189,60 @@ The App stack is one multi-agent orchestrator that also serves the chat + admin 
 directly — there's no separate frontend service:
 
 ```
-Browser (SPA, logged into Cognito) → public ALB → Orchestrator (FastAPI + Pydantic AI)
-                                                     │ every route requires the caller's own
-                                                     │ Cognito token (X-Cognito-Token header)
-                                                     │ pick agent = pick model
-                                                     ├─ embed query (Titan v2)
-                                                     ├─ top-k retrieve from agent_<id>,   (over VPC peering)
-                                                     │  filtered by the caller's roles
-                                                     └─ Gemma 3 4B on Bedrock (Converse, IAM)  (via NAT)
+Browser (SPA, logged into Cognito)
+   │ HTTPS
+   ▼
+CloudFront  (TLS terminates here, default *.cloudfront.net cert)
+   │ HTTP + secret X-Origin-Verify header
+   ▼
+ALB  (default action 403 — its own hostname is not a way in)
+   │
+   ▼
+Orchestrator (FastAPI + Pydantic AI)
+   │ every route requires the caller's own
+   │ Cognito token (X-Cognito-Token header)
+   │ pick agent = pick model
+   ├─ silo gate: caller must hold a role this silo declares
+   ├─ embed query (Titan v2)
+   ├─ top-k retrieve from agent_<id>,   (over VPC peering)
+   │  filtered per document by the caller's roles
+   └─ Gemma 3 4B on Bedrock (Converse, IAM)  (via NAT)
 ```
 
-* **Orchestrator** — `services/orchestrator/`, an OpenAI-compatible API (`/v1/models`, `/v1/chat/completions`, streaming and non-streaming) plus an admin API (`/api/admin/*`, see below). `/v1/models` lists each Agent Silo (read from SSM); a chat request routes by the `model` field to that agent's database (filtered by the caller's Cognito roles) and prompt module (for behaviour), then answers with Gemma 3 (or the agent's `llmModelId`) via Bedrock Converse — IAM auth, no API key.
+* **Orchestrator** — `services/orchestrator/`, an OpenAI-compatible API (`/v1/models`, `/v1/chat/completions`, streaming and non-streaming) plus an admin API (`/api/admin/*`, see below). `/v1/models` lists only the Agent Silos the caller holds a role in (read from SSM); naming any other silo in a chat request returns 404 rather than 403, so its existence isn't confirmed. A permitted request routes by the `model` field to that agent's database (filtered again, per document, by the caller's Cognito roles) and prompt module (for behaviour), then answers with Gemma 3 (or the agent's `llmModelId`) via Bedrock Converse — IAM auth, no API key.
 * **Frontend** — `services/orchestrator/frontend/`, a small React + Vite single-page app, built in a Docker multi-stage build and served by the orchestrator itself (`/`, mounted last so it can't shadow any API route). No Cognito Hosted UI (no owned domain for this POC): the login screen calls Cognito's `InitiateAuth` directly from the browser.
-* **Networking** — the App VPC (`10.1.0.0/16`, public + private-with-NAT) is peered to the isolated Core VPC (`10.0.0.0/16`) for Postgres; Bedrock, DynamoDB, and Cognito are reached over NAT. The ALB is public, but every route is gated at the application layer (a valid Cognito token; `Superuser` for `/api/admin/*`) rather than by network placement.
+* **Networking** — the App VPC (`10.1.0.0/16`, public + private-with-NAT) is peered to the isolated Core VPC (`10.0.0.0/16`) for Postgres; Bedrock, DynamoDB, and Cognito are reached over NAT. Viewers reach **CloudFront** over HTTPS, which forwards to the ALB over HTTP carrying a secret `X-Origin-Verify` header; the ALB's default action is a 403, so the load balancer's own public hostname is not a way around TLS. Beyond that, every route is gated at the application layer (a valid Cognito token; a role in the silo; `Superuser` for `/api/admin/*`) rather than by network placement.
 
 After `cdk deploy`, the App stack outputs `AppUrl` — open it, sign in (see [Roles & authentication](#roles--authentication) for demo credentials), pick a specialist, and chat. Ingest into that agent first (above) so retrieval has something to return; with no data the agent still answers, just without grounding.
 
 ## Roles & authentication
 
-Retrieval is filtered by role: each document's `allowed_roles` (a `text[]` column on `embeddings`)
-must overlap the caller's Cognito groups, or be empty/`NULL` (nothing tags it that way by default
-— see ingest workflows below). The `Superuser` role always bypasses the filter.
+Access is checked in **two independent layers**, in this order:
+
+1. **The silo gate** — *can you use this agent at all?* The caller must hold at least one role the
+   silo declares. Silos you hold no role in are omitted from `/v1/models`, and naming one in a chat
+   request returns 404 rather than 403, so their existence isn't confirmed.
+2. **The document filter** — *which documents inside it can you see?* A document's `allowed_roles`
+   (a `text[]` column on `embeddings`) must overlap the caller's Cognito groups. An empty or `NULL`
+   array overlaps nothing, so it is visible to **nobody** — "everyone in this silo" is said
+   explicitly, by naming that silo's full role set.
+
+`Superuser` bypasses both layers.
 
 * **Roles are per-silo**, declared as a string enum right next to that silo's config entry in
   `config/agent-silos.ts` (e.g. `VeridiaRole`, `HrRole`) — a role's string value *is* its Cognito
-  Group name, so no id/translation layer exists anywhere. A name declared by more than one silo
-  (e.g. `"Exec-Team"`) is still just one shared Cognito Group. Two roles are global, fixed
-  sentinels (the `Role` enum, also in `config/agent-silos.ts`): `Unauthenticated` (no/invalid
-  token — never an actual group) and `Superuser` (bypasses every silo's filter).
+  Group name, so no id/translation layer exists anywhere. Values are **namespaced per silo**
+  (`Veridia-User`, `HR-User`, `HR-Manager`) and must stay globally unique: a name shared between
+  two silos would make a grant in one silently confer access in the other. Someone who needs both
+  silos holds one group from each — see the `both-silos-*` demo identities. Two roles are global,
+  fixed sentinels (the `Role` enum, also in `config/agent-silos.ts`): `Unauthenticated` (no/invalid
+  token — never an actual group) and `Superuser` (bypasses both layers above).
 * **Ingest workflow** — each silo's `ingestWorkflow` decides how a newly-ingested document gets
   its `allowed_roles`:
-  * `AllUser` — auto-tagged with that silo's `User` role (so it's visible to anyone holding at
-    least `User`, not to `Unauthenticated` callers).
+  * `AllUser` — auto-tagged with that silo's **entire** role set, so it is visible to anyone who
+    can reach the silo at all. The indexer reads that list from the SSM registry rather than
+    hardcoding a role name, and fails the message to the DLQ if a silo registers none — an empty
+    tag would mean "nobody", never "everyone".
   * `UIMediated` — staged in a DynamoDB table instead of being written to Postgres at all;
     reviewed on the app's **Admin** tab (visible only to `Superuser`), where checking roles and
     clicking Publish inserts it into that silo's `embeddings` table with the chosen roles (or
@@ -260,4 +283,4 @@ npm run deploy:dev    # ~20-30 min (RDS is the long pole)
 npm run destroy:dev   # ~15-20 min
 ```
 
-Idle run-rate for the shared `dev` stacks is roughly **$4/day** (1 Fargate task, 1 ALB, 1 NAT gateway, 4 VPC interface endpoints, the RDS instance), plus per-agent buckets/databases and the (stopped-by-default) DB bastion's EBS volume (all negligible) and usage-based Bedrock tokens. `destroy` deletes the RDS with no final snapshot, so ingested data is lost — expected for a disposable environment.
+Idle run-rate for the shared `dev` stacks is roughly **$4/day** (1 Fargate task, 1 ALB, 1 CloudFront distribution, 1 NAT gateway, 4 VPC interface endpoints, the RDS instance), plus per-agent buckets/databases and the (stopped-by-default) DB bastion's EBS volume (all negligible) and usage-based Bedrock tokens. `destroy` deletes the RDS with no final snapshot, so ingested data is lost — expected for a disposable environment.
