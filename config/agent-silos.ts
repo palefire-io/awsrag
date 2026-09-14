@@ -50,6 +50,19 @@ export enum HrRole {
   ExecTeam = 'HR-Exec-Team',
 }
 
+/** A starter question on the empty chat screen, optionally gated by role. */
+export interface SampleQuery {
+  /** The question, offered as a one-click prompt. */
+  query: string;
+  /**
+   * Minimum role that can actually get an answer. Omit to offer it to anyone who
+   * can reach the silo. Resolved through `roleLadder`, exactly as a document's
+   * `allowed_roles` is -- so an Exec-Team holder is offered the HR-Manager and
+   * User samples too.
+   */
+  minRole?: string;
+}
+
 export interface AgentSiloConfig {
   /** Stable slug — becomes the model id, database name (`agent_<id>`), SSM key, and stack id. */
   id: string;
@@ -61,12 +74,14 @@ export interface AgentSiloConfig {
   /**
    * Starter questions offered as one-click prompts on the empty chat screen.
    *
-   * Each MUST be answerable at the silo's most junior role. A sample that only a
-   * senior role can answer makes a junior user's first interaction "I don't have
-   * that information", which reads as the product being broken rather than as
-   * access control working.
+   * Each MUST be answerable by the role it is offered to -- a sample the caller
+   * cannot get an answer to makes their first interaction "I don't have that
+   * information", which reads as the product being broken rather than as access
+   * control working. `minRole` is what keeps that true per tier: the orchestrator
+   * only offers a restricted sample to someone who actually holds that role, so
+   * the list itself demonstrates the permission model.
    */
-  sampleQueries: string[];
+  sampleQueries: SampleQuery[];
   /** Key into the orchestrator's prompt registry (services/orchestrator/app/prompts). */
   promptModule: string;
   /** This silo's role enum (e.g. `VeridiaRole`, `HrRole`) — pass the enum object itself. */
@@ -105,11 +120,14 @@ export const agentSilos: AgentSiloConfig[] = [
       + 'instruments — VeriScan analysers, VeriPrep sample prep, VeriLyse reagents and '
       + 'VeriConnect integration. Answers come from support tickets, service bulletins, '
       + 'specifications, error-code tables and regulatory filings.',
+    // No role-gated samples here on purpose: Veridia's AllUser workflow tags every
+    // document with the silo's full role set, so nothing in it is exec-only. An
+    // exec-only sample would imply a boundary this silo does not have.
     sampleQueries: [
-      'What does error code E-101 mean on a VeriScan 400?',
-      'Which reagent lots were affected by FSN-2025-003?',
-      'Is VeriLyse RGT-D5 compatible with the VeriScan 200?',
-      'What is our IVDR transition status?',
+      { query: 'What does error code E-101 mean on a VeriScan 400?' },
+      { query: 'Which reagent lots were affected by FSN-2025-003?' },
+      { query: 'Is VeriLyse RGT-D5 compatible with the VeriScan 200?' },
+      { query: 'What is our IVDR transition status?' },
     ],
     promptModule: 'default',
     roles: VeridiaRole,
@@ -124,12 +142,16 @@ export const agentSilos: AgentSiloConfig[] = [
       + 'depends on your role — everyone sees policies and handbooks; HR managers also see '
       + 'case files, pay data and screening records; the exec team additionally sees '
       + 'transaction material.',
-    // all four resolve to User__ documents, so they answer for every HR role
+    // Tiered on purpose -- the starter questions are themselves a demonstration of
+    // the role model. Each resolves to a document at or below that role's tier.
     sampleQueries: [
-      'How much annual leave do I get?',
-      'What is the probation period in Switzerland?',
-      'How does the employee referral scheme work?',
-      'What does private medical insurance cover?',
+      { query: 'How much annual leave do I get?' },
+      { query: 'What is the probation period in Switzerland?' },
+      { query: 'What does private medical insurance cover?' },
+      { query: 'What are the 2026 salary bands for the UK?', minRole: HrRole.HRManager },
+      { query: 'Summarise the open employee relations cases.', minRole: HrRole.HRManager },
+      { query: 'What is Project Unicorn, and what stage has it reached?', minRole: HrRole.ExecTeam },
+      { query: 'Who is on the key person retention plan?', minRole: HrRole.ExecTeam },
     ],
     promptModule: 'hr',
     roles: HrRole,

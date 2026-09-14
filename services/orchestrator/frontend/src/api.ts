@@ -3,11 +3,18 @@ export interface Message {
   content: string;
 }
 
+/** A starter prompt. `minRole` is present only when the question is role-gated,
+ *  and the server has already filtered the list to what this caller can answer. */
+export interface SampleQuery {
+  query: string;
+  minRole?: string;
+}
+
 export interface ModelInfo {
   id: string;
   name: string;
   description: string;
-  sampleQueries: string[];
+  sampleQueries: SampleQuery[];
 }
 
 export interface AgentSummary {
@@ -42,7 +49,7 @@ export async function listModels(token: string): Promise<ModelInfo[]> {
   if (!res.ok) throw await apiError(res, 'failed to list specialists');
   const data = await res.json();
   return data.data.map((m: {
-    id: string; name: string; description?: string; sample_queries?: string[];
+    id: string; name: string; description?: string; sample_queries?: SampleQuery[];
   }) => ({
     id: m.id,
     name: m.name,

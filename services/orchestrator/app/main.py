@@ -75,6 +75,21 @@ async def healthz() -> dict:
     return {"status": "ok"}
 
 
+def _samples_for(user: UserContext, info: AgentInfo) -> list[dict]:
+    """Starter questions this caller can actually get an answer to.
+
+    A sample carrying `minRole` is offered only to someone who holds that role,
+    resolved through the same ladder documents use. So the list is itself a
+    demonstration of the permission model: an exec is offered questions a junior
+    user never sees, and every question offered is one the caller can answer.
+    """
+    held = set(info.expand(user.groups))
+    return [
+        s for s in info.sample_queries
+        if SUPERUSER in user.groups or not s.get("minRole") or s["minRole"] in held
+    ]
+
+
 @app.get("/v1/models")
 async def list_models(user: UserContext = Depends(require_user)) -> dict:
     return {
@@ -87,7 +102,7 @@ async def list_models(user: UserContext = Depends(require_user)) -> dict:
                 "owned_by": "cloudrag",
                 "name": a.display_name,
                 "description": a.description,
-                "sample_queries": a.sample_queries,
+                "sample_queries": _samples_for(user, a),
             }
             for a in app.state.registry.list()
             if _permitted(user, a)

@@ -20,7 +20,7 @@ class AgentInfo:
     id: str
     display_name: str
     description: str
-    sample_queries: list[str]
+    sample_queries: list[dict]
     database: str
     prompt_module: str
     llm_model_id: str

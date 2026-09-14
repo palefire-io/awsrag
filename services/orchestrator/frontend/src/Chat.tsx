@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { streamChat, type Message } from './api';
+import { streamChat, type Message, type SampleQuery } from './api';
 import { themeFor } from './theme';
 
 export function Chat({ token, agentId, agentName, description, sampleQueries }: {
@@ -7,7 +7,7 @@ export function Chat({ token, agentId, agentName, description, sampleQueries }: 
   agentId: string;
   agentName: string;
   description: string;
-  sampleQueries: string[];
+  sampleQueries: SampleQuery[];
 }) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -63,15 +63,18 @@ export function Chat({ token, agentId, agentName, description, sampleQueries }: 
               <>
                 <p className="intro-label">Try asking</p>
                 <div className="intro-samples">
-                  {sampleQueries.map((query) => (
+                  {sampleQueries.map((s) => (
                     <button
-                      key={query}
+                      key={s.query}
                       type="button"
                       className="sample"
                       disabled={busy}
-                      onClick={() => void submit(query)}
+                      onClick={() => void submit(s.query)}
                     >
-                      {query}
+                      <span>{s.query}</span>
+                      {/* shown only on role-gated questions: makes it visible that this
+                          one is available because of who you signed in as */}
+                      {s.minRole && <span className="sample-role">{s.minRole}</span>}
                     </button>
                   ))}
                 </div>

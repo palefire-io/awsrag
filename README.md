@@ -47,6 +47,14 @@ prefix, so `hr-user` answers from policy documents straight away while `hr-manag
 case files and pay data — seniority is transitive, so `hr-exec-team` sees everything. Veridia
 works the same way via its `AllUser` workflow.
 
+**The starter questions themselves.** The empty chat screen offers one-click prompts, and
+that list is filtered by who you are: `hr-user` gets 3, `hr-manager` gets 5, `hr-exec-team`
+gets 7. The restricted ones carry a role badge, so it is visible that you were offered them
+because of the role you hold — sign in as `hr-user` and the Project Unicorn question simply
+isn't there. Every question offered is one that caller can actually get an answer to; a
+prompt that returned "I don't have that information" would read as the product being broken
+rather than as access control working.
+
 **The review queue, once you publish.** Six HR documents carry no role prefix and are therefore
 staged rather than indexed — a draft policy, a pension FAQ, an engagement survey, a manager
 guide, a remuneration committee note and a health-related case file. As `superuser`, open

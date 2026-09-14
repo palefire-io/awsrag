@@ -430,6 +430,10 @@ button {
   font-size: 0.88rem;
   line-height: 1.45;
   text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
   color: var(--ink);
   background: var(--surface);
   border: 1px solid var(--border);
@@ -453,6 +457,25 @@ button {
 .sample:disabled {
   opacity: 0.55;
   cursor: default;
+}
+
+/* only appears on role-gated questions -- the point is that you can see WHY you
+   were offered this one, not just that you were */
+.sample-role {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  padding: 0.16rem 0.4rem;
+  border-radius: 4px;
+  color: var(--agent-accent, var(--ink-muted));
+  background: var(--agent-tint, var(--surface-sunken));
+  border: 1px solid transparent;
+}
+
+.sample:hover:not(:disabled) .sample-role {
+  border-color: var(--agent-accent, var(--border));
 }
 
 @media (prefers-reduced-motion: reduce) {
