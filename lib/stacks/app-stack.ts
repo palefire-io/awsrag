@@ -1,10 +1,13 @@
 import * as path from 'path';
 import * as cdk from 'aws-cdk-lib';
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as ecs from 'aws-cdk-lib/aws-ecs';
 import * as ecsPatterns from 'aws-cdk-lib/aws-ecs-patterns';
 import { Platform } from 'aws-cdk-lib/aws-ecr-assets';
+import * as elbv2 from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as logs from 'aws-cdk-lib/aws-logs';
 import * as secretsmanager from 'aws-cdk-lib/aws-secretsmanager';
@@ -134,6 +137,69 @@ export class AppStack extends cdk.Stack {
     });
     orchestrator.targetGroup.configureHealthCheck({ path: '/healthz' });
 
+    // Proves a request arrived via our CloudFront distribution. The value is
+    // generated at deploy time and referenced indirectly, so it never appears
+    // in this repo or in the synthesized template.
+    const originVerify = new secretsmanager.Secret(this, 'OriginVerifySecret', {
+      description: `Shared secret proving a request reached the ${stage} ALB via CloudFront`,
+      generateSecretString: { passwordLength: 40, excludePunctuation: true },
+    });
+    const originVerifyValue = originVerify.secretValue.unsafeUnwrap();
+
+    // TLS terminates here. ACM can't issue a certificate for an AWS-owned ALB
+    // hostname, but CloudFront serves every distribution under its own
+    // *.cloudfront.net certificate -- so a POC with no domain still gets HTTPS
+    // without buying anything. The ALB stays HTTP, reachable only as an origin.
+    const distribution = new cloudfront.Distribution(this, 'OrchestratorCdn', {
+      comment: `CloudRAG ${stage} orchestrator`,
+      defaultBehavior: {
+        origin: new origins.LoadBalancerV2Origin(orchestrator.loadBalancer, {
+          protocolPolicy: cloudfront.OriginProtocolPolicy.HTTP_ONLY,
+          customHeaders: { 'X-Origin-Verify': originVerifyValue },
+          // SSE chat deltas must keep flowing; this bounds the gap between
+          // bytes, not the total length of a streamed completion.
+          readTimeout: cdk.Duration.seconds(60),
+          keepaliveTimeout: cdk.Duration.seconds(60),
+        }),
+        viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+        // the SPA POSTs to /v1/chat/completions and DELETEs from /api/admin/*
+        allowedMethods: cloudfront.AllowedMethods.ALLOW_ALL,
+        // Every response is per-caller -- retrieval is filtered by the caller's
+        // own Cognito roles. Caching any of it at the edge would hand one
+        // user's answers to the next one.
+        cachePolicy: cloudfront.CachePolicy.CACHING_DISABLED,
+        // forwards the caller's X-Cognito-Token; drops Host so the ALB still
+        // sees its own hostname
+        originRequestPolicy: cloudfront.OriginRequestPolicy.ALL_VIEWER_EXCEPT_HOST_HEADER,
+        // adds HSTS, X-Content-Type-Options, frame and referrer policy
+        responseHeadersPolicy: cloudfront.ResponseHeadersPolicy.SECURITY_HEADERS,
+      },
+      httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
+      priceClass: isProd
+        ? cloudfront.PriceClass.PRICE_CLASS_ALL
+        : cloudfront.PriceClass.PRICE_CLASS_100,
+    });
+
+    // Deny by default: the ALB's own public hostname stops being a way around
+    // TLS. Only requests carrying the secret header -- i.e. those relayed by
+    // the distribution above -- reach the orchestrator.
+    new elbv2.ApplicationListenerRule(this, 'AllowCloudFrontOnly', {
+      listener: orchestrator.listener,
+      priority: 1,
+      conditions: [elbv2.ListenerCondition.httpHeader('X-Origin-Verify', [originVerifyValue])],
+      action: elbv2.ListenerAction.forward([orchestrator.targetGroup]),
+    });
+    // The ECS pattern already set a forward default; addAction() would try to
+    // set a second one, so override the L1 property directly.
+    (orchestrator.listener.node.defaultChild as elbv2.CfnListener).defaultActions = [{
+      type: 'fixed-response',
+      fixedResponseConfig: {
+        statusCode: '403',
+        contentType: 'text/plain',
+        messageBody: 'Direct load balancer access is not permitted. Use the CloudFront endpoint.',
+      },
+    }];
+
     // task role: Bedrock (any foundation model, for per-agent overrides + Titan), the
     // shared DB secret, the Core + agent SSM registries, and the pending-documents table
     orchestrator.taskDefinition.taskRole.addToPrincipalPolicy(new iam.PolicyStatement({
@@ -158,7 +224,7 @@ export class AppStack extends cdk.Stack {
     pendingDocumentsTable.grantReadWriteData(orchestrator.taskDefinition.taskRole);
 
     new cdk.CfnOutput(this, 'AppUrl', {
-      value: `http://${orchestrator.loadBalancer.loadBalancerDnsName}/`,
+      value: `https://${distribution.distributionDomainName}/`,
       description: 'Open this URL in a browser to chat, or review documents on the Admin tab (Superuser role)',
     });
   }
