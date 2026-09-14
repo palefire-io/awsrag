@@ -10,7 +10,7 @@ no duplicate connection pools.
 
 from boto3.dynamodb.conditions import Key
 from fastapi import APIRouter, Depends, HTTPException, Request
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from .auth import require_superuser
 from .config import get_settings
@@ -20,7 +20,10 @@ settings = get_settings()
 
 
 class PublishBody(BaseModel):
-    roles: list[str]
+    # At least one role, always. Publishing with none used to mean "visible to
+    # everyone" rather than "visible to no one" -- the opposite of what unchecking
+    # every box looks like it does.
+    roles: list[str] = Field(min_length=1)
 
 
 @router.get("/config")

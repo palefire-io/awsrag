@@ -61,10 +61,14 @@ def _bootstrap_schema(database: str) -> None:
         "CREATE INDEX IF NOT EXISTS embeddings_embedding_hnsw "
         "ON embeddings USING hnsw (embedding vector_cosine_ops)"
     )
-    # per-document role gate: NULL/empty = public. Values are role names (which are
-    # literally Cognito Group names, e.g. "User", "HR-Manager") -- retrieval treats a
-    # missing/empty array as visible to everyone.
-    conn.run("ALTER TABLE embeddings ADD COLUMN IF NOT EXISTS allowed_roles text[]")
+    # per-document role gate. Values are role names (which are literally Cognito Group
+    # names, e.g. "Veridia-User", "HR-Manager"). Retrieval requires an overlap with the
+    # caller's roles, so an empty array is visible to NOBODY -- "everyone in this silo"
+    # is said by naming that silo's full role set.
+    conn.run(
+        "ALTER TABLE embeddings ADD COLUMN IF NOT EXISTS "
+        "allowed_roles text[] NOT NULL DEFAULT '{}'"
+    )
     conn.close()
 
 

@@ -57,9 +57,13 @@ class Retriever:
     async def retrieve(self, database: str, text: str, roles: list[str] | None = None) -> list[str]:
         """Return the top-k most similar `content` chunks visible to `roles`.
 
-        A doc with no `allowed_roles` (NULL/empty) is public. The "Superuser" role
-        always bypasses the filter, regardless of the doc's tagging. `roles` are plain
-        Cognito Group names (see config/agent-silos.ts) -- no id/translation step.
+        A document is visible only where its `allowed_roles` overlaps the caller's,
+        so an empty or NULL `allowed_roles` matches nobody. It used to mean "public",
+        which made a forgotten tag the most dangerous kind of mistake. "Everyone in
+        this silo" is now said explicitly, by tagging with the silo's full role set --
+        what the AllUser ingest workflow does. The "Superuser" role still bypasses the
+        filter entirely. `roles` are plain Cognito Group names (see
+        config/agent-silos.ts) -- no id/translation step.
         """
         embedding = await self.embed(text)
         vector_literal = "[" + ",".join(repr(float(x)) for x in embedding) + "]"
@@ -67,8 +71,7 @@ class Retriever:
         try:
             rows = await pool.fetch(
                 "SELECT content FROM embeddings "
-                "WHERE allowed_roles IS NULL OR allowed_roles = '{}' "
-                "   OR allowed_roles && $3::text[] "
+                "WHERE allowed_roles && $3::text[] "
                 "   OR $4 = ANY($3::text[]) "
                 "ORDER BY embedding <=> $1::vector LIMIT $2",
                 vector_literal, self._settings.rag_top_k, roles or [], SUPERUSER,

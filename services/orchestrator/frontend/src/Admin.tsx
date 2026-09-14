@@ -116,7 +116,14 @@ export function Admin({ token }: { token: string }) {
             })}
           </div>
           <div className="actions">
-            <button className="publish" disabled={busy === doc.sourceId} onClick={() => publish(doc.sourceId)}>
+            <button
+              className="publish"
+              disabled={busy === doc.sourceId || !selected[doc.sourceId]?.size}
+              title={!selected[doc.sourceId]?.size
+                ? 'Choose at least one role that can see this document'
+                : undefined}
+              onClick={() => publish(doc.sourceId)}
+            >
               Publish
             </button>
             <button className="discard" disabled={busy === doc.sourceId} onClick={() => discard(doc.sourceId)}>
