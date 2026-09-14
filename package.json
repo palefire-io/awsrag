@@ -18,7 +18,8 @@
     "silos:orphans": "ts-node scripts/silos-orphans.ts",
     "corpus:import": "ts-node scripts/import-corpus.ts",
     "db:connect": "ts-node scripts/db-connect.ts",
-    "db:cloudshell": "ts-node scripts/db-cloudshell.ts"
+    "db:cloudshell": "ts-node scripts/db-cloudshell.ts",
+    "demo:creds": "ts-node scripts/demo-credentials.ts"
    },
   "devDependencies": {
     "@types/jest": "^29.5.12",

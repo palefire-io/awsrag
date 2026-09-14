@@ -3,13 +3,10 @@ import * as cdk from 'aws-cdk-lib';
 import * as cognito from 'aws-cdk-lib/aws-cognito';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as secretsmanager from 'aws-cdk-lib/aws-secretsmanager';
 import { Provider } from 'aws-cdk-lib/custom-resources';
 import { Construct } from 'constructs';
 import { AgentSiloConfig, DemoIdentity } from '../../config/agent-silos';
-
-// dev-only demo accounts: fixed, deliberately simple/shared password. No real data
-// sits behind these, so this is a demo convenience, not a security boundary.
-const DEMO_PASSWORD = 'Demo1234!';
 
 export interface AuthStackProps extends cdk.StackProps {
   stage: string;
@@ -78,6 +75,23 @@ export class AuthStack extends cdk.Stack {
         ...demoIdentities,
       ];
 
+      // One generated password shared by every demo user. Generated at deploy time
+      // and passed to the provisioner BY ARN, so the value never lands in the
+      // CloudFormation template (readable via cloudformation:GetTemplate) or in a
+      // stack output. Retrieve it with `npm run demo:creds`.
+      const demoPassword = new secretsmanager.Secret(this, 'DemoPassword', {
+        description: `Shared password for the ${stage} demo Cognito users`,
+        generateSecretString: {
+          passwordLength: 20,
+          // Cognito's default policy wants upper, lower, digit and symbol; without
+          // this the generated value can miss one and AdminSetUserPassword fails.
+          requireEachIncludedType: true,
+          // quotes and backslashes survive copy-paste badly
+          excludeCharacters: '"\'\\`',
+        },
+        removalPolicy: cdk.RemovalPolicy.DESTROY,
+      });
+
       const provisionerFn = new lambda.Function(this, 'DemoUsersProvisionerFunction', {
         runtime: lambda.Runtime.PYTHON_3_12,
         handler: 'handler.handler',
@@ -94,21 +108,27 @@ export class AuthStack extends cdk.Stack {
         ],
         resources: [this.userPool.userPoolArn],
       }));
+      demoPassword.grantRead(provisionerFn);
 
       const provider = new Provider(this, 'DemoUsersProvider', { onEventHandler: provisionerFn });
       const demoUsers = new cdk.CustomResource(this, 'DemoUsers', {
         serviceToken: provider.serviceToken,
         properties: {
           Users: JSON.stringify(users),
-          Password: DEMO_PASSWORD,
+          PasswordSecretArn: demoPassword.secretArn,
         },
       });
       // groups must exist before users are added to them
       for (const group of groups) demoUsers.node.addDependency(group);
+      demoUsers.node.addDependency(demoPassword);
 
       new cdk.CfnOutput(this, 'DemoUsernames', {
         value: users.map((u) => u.username).join(', '),
-        description: `Shared password for every demo user: ${DEMO_PASSWORD}`,
+        description: 'Run `npm run demo:creds` for the shared password and the app URL',
+      });
+      new cdk.CfnOutput(this, 'DemoPasswordSecretArn', {
+        value: demoPassword.secretArn,
+        description: 'Secret holding the shared demo password (see `npm run demo:creds`)',
       });
     }
   }

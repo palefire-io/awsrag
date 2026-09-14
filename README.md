@@ -9,6 +9,47 @@ CDK TypeScript app that hosts several **specialist RAG agents** for one client, 
 
 The App and Agent Silo stacks depend on Core (the App peers to the Core VPC; each Agent Silo uses the Core queue and provisioner) and on Auth (the App verifies caller tokens against the Cognito pool), so Core and Auth deploy first.
 
+## Quickstart
+
+Assumes the prerequisites in [Requirements](#requirements) are in place — AWS credentials
+for **eu-west-1**, Node ≥ 20, a running Docker daemon, a bootstrapped account, and
+`.env.dev` filled in.
+
+```bash
+# 1. install
+npm install
+
+# 2. deploy every stack for the dev stage (~20-30 min; RDS is the long pole).
+#    Each stack asks for IAM/security approval separately, so expect several prompts.
+npm run deploy:dev
+
+# 3. load the sample corpora
+npm run corpus:import -- veridia   # AllUser silo: searchable immediately
+npm run corpus:import -- hr        # UIMediated silo: queued for review in the Admin tab
+
+# 4. get the app URL, the demo usernames and the shared password
+npm run demo:creds
+
+# 5. open the URL, sign in, pick a specialist, ask it something
+```
+
+Sign in as different demo users to watch role filtering work: `veridia-user` sees only the
+Veridia specialist, `both-silos-user` sees both, `hr-manager-plus` sees more HR documents
+than `hr-user` does, and `superuser` sees everything plus the **Admin** tab — where the
+HR documents from step 3 are waiting to be assigned roles and published.
+
+To inspect the data directly:
+
+```bash
+npm run db:connect            # bastion + tunnel + psql, in one command
+# then, in psql:
+\l                            # list databases -- one agent_<id> per silo
+\c agent_veridia              # switch to a silo
+SELECT source_id, allowed_roles FROM embeddings LIMIT 10;
+```
+
+When you're done, `npm run destroy:dev` removes everything billable.
+
 ## Requirements
 
 Before the first deploy, make sure all of the following are in place — the deploy will otherwise fail, or succeed but fail at runtime:
@@ -63,8 +104,8 @@ Because the frontend, VPC, and NAT are **shared**, adding an agent costs only a 
 npm run deploy:dev
 CDK_STAGE=prod npm run deploy:prod
 # the app url will be in the final outputs with the name CloudRAG-dev.AppUrl
-# the usernames superuser, veridia-user, veridia-exec-team, hr-user, hr-hr-manager, hr-exec-team will be created
-# the password in dev will be Demo1234! for all users
+# dev also creates a set of demo Cognito users sharing one generated password --
+# run `npm run demo:creds` afterwards to print the url, the usernames and the password
 
 
 # or deploy stacks individually
@@ -171,11 +212,17 @@ must overlap the caller's Cognito groups, or be empty/`NULL` (nothing tags it th
     clicking Publish inserts it into that silo's `embeddings` table with the chosen roles (or
     Discard drops it).
 * **Dev-only demo users** — the Auth stack seeds one Cognito user per (silo, role) pair (e.g.
-  `hr-hr-manager`, `veridia-user`) plus `superuser`, all sharing one password: `Demo1234!`. Never
-  created for `prod`. Listed in the `DemoUsernames` output after deploy.
+  `hr-manager`, `veridia-user`), plus `superuser`, plus the multi-role identities declared in
+  [`config/agent-silos.ts`](config/agent-silos.ts) (`both-silos-user`, `both-silos-exec`,
+  `hr-manager-plus`) that exist to show roles combining. Never created for `prod`. All share one
+  password, generated at deploy time into Secrets Manager — run **`npm run demo:creds`** to print
+  the app URL, the usernames and that password.
 
-> ⚠️ The demo users' shared, hardcoded password is a deliberate POC convenience — fine because
-> nothing behind it is real data. Don't reuse this pattern anywhere real credentials matter.
+> ⚠️ These are shared, long-lived accounts on a publicly reachable endpoint, and one of them is
+> `superuser`, which bypasses every document filter. The generated password keeps the credential
+> out of the CloudFormation template and out of stack outputs, but it does not make the accounts
+> safe — don't put anything real behind them, and don't carry this pattern into a deployment that
+> holds real data.
 
 ## Useful commands
 
@@ -186,6 +233,7 @@ must overlap the caller's Cognito groups, or be empty/`NULL` (nothing tags it th
 * `npm run silos:orphans`   list agent stacks deployed but no longer in the config
 * `npm run corpus:import -- <agentId>`   upload `corpora/<agentId>_corpus/` into that silo's ingest bucket
 * `npm run db:connect`   start the DB bastion, tunnel, and `psql` in one command; stops the bastion on disconnect (see [Connecting to the database](#connecting-to-the-database))
+* `npm run demo:creds`   print the app URL, demo usernames and shared password for a stage (dev only)
 * `npm run db:cloudshell`   print CloudShell VPC environment setup + a connect one-liner instead (no standing infrastructure)
 * `npx cdk diff` / `npx cdk synth`   diff against, or emit, the synthesized templates
 
